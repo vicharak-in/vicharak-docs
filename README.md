@@ -5,6 +5,7 @@ Uses sphinx and rst.
 ## Compile and View
 
 ```
+pip install sphinxawesome-theme --pre
 make html
 $BROWSER build/html/index.html
 ```
