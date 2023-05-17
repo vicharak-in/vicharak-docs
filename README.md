@@ -20,3 +20,4 @@ index.html and index.rst side-by-side and compare for better understanding.
 - [sphinx doc](https://www.sphinx-doc.org/en/master/index.html)
 - [rst primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#restructuredtext-primer)
 - [rst cheatsheet](https://bashtage.github.io/sphinx-material/rst-cheatsheet/rst-cheatsheet.html)
+- [Theme config](https://sphinxawesome.xyz)
