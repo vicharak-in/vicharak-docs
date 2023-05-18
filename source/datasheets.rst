@@ -3,7 +3,7 @@
 Datasheets
 ===========
 
-`Here is a sample pdf document <_static/anatomy-of-mm.pdf>`_
+`Download Rockchip RK3399 Datasheet <_static/RK3399-datasheet-V1p8.pdf>`_
 
 **Requirements**:
 
