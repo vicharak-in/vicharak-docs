@@ -15,6 +15,8 @@ Welcome to Vaaman's documentation!
    vaaman-sdk
    vaaman-applications
    get-help
+   linux-document
+   processor-datasheet
 
 Indices and tables
 ==================
