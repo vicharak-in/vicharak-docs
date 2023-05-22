@@ -64,7 +64,7 @@ Overview
 
 		2 x 3.3V power pin
 	FPGA Features
-		Efinix® T85F324 device in a 324-ball FineLine BGA package.
+		Efinix® T120F324 device in a 324-ball FineLine BGA package.
 		
 		DRAM Chip DDR3 SDRAM 4Gbit 256Mx16 1.35V/1.5V.
 		
@@ -84,9 +84,9 @@ Overview
 		
 		40-pin GPIO header supported with 12-pin 1 PMOD and 2 LVDS lane or 25 GPIOs.
 		
-		10, 20, 25, 30, 50, and 74.25 MHz oscillators for T85F324 PLL input.
+		10, 20, 25, 30, 50, and 74.25 MHz oscillators for T120F324 PLL input.
 		
-		4 User LEDs on T85F324 bank 2F.
+		4 User LEDs on T120F324 bank 2F.
 
 3. Link to :ref:`getting started <getting-started>`
 4. Link to :ref:`vaaman applications <vaaman-applications>`
