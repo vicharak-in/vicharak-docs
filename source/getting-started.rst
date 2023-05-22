@@ -22,4 +22,4 @@ how it can be accessed
 Where to go from here
 ---------------------
     - :ref:`Vaaman Application <vaaman-applications>`
-    - :ref:`datasheets <datasheets>`
+    - :ref:`Downloads <Downloads>`
