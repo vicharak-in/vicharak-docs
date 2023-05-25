@@ -13,7 +13,7 @@ author = 'Vicharak'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ['breathe']
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -68,3 +68,11 @@ class PatchedHTMLTranslator(HTMLTranslator):
 
 def setup(app):
     app.set_translator('html', PatchedHTMLTranslator)
+
+html_theme_options = {
+    "logo_light": "_static/vicharak-logo-light.svg",
+    "logo_dark": "_static/vicharak-logo-dark.svg"
+}
+
+breathe_projects = {"drm_fpga_write": "/home/metal/dev/vaaman-doc/xml/"}
+breathe_default_project = "drm_fpga_write"
