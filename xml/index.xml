@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
+  <compound refid="structfpga__frame" kind="struct"><name>fpga_frame</name>
+    <member refid="structfpga__frame_1a28e987b840a5fe31218a85f93ce8e191" kind="variable"><name>sof</name></member>
+    <member refid="structfpga__frame_1ab457931460236678215ee1222a68064d" kind="variable"><name>pkt_id</name></member>
+    <member refid="structfpga__frame_1a46b166db7a76431e0c7eaacf8b95405c" kind="variable"><name>dtype</name></member>
+    <member refid="structfpga__frame_1afbc53217b21747b642baac9e8faaae49" kind="variable"><name>dlen</name></member>
+    <member refid="structfpga__frame_1a3183ba95d4b53add2cac4727bee68b81" kind="variable"><name>phl_id</name></member>
+    <member refid="structfpga__frame_1a03f10087190618ef0c1f1dc2f418f364" kind="variable"><name>reserved</name></member>
+    <member refid="structfpga__frame_1a841fbce2ac4ae7e001d300a0b781a1c6" kind="variable"><name>data</name></member>
+    <member refid="structfpga__frame_1a2f9d28d1077d627b225b9994ed4f53e9" kind="variable"><name>eof</name></member>
+  </compound>
+  <compound refid="structmodeset__dev" kind="struct"><name>modeset_dev</name>
+    <member refid="structmodeset__dev_1a85fc5f42e2a286b47a47303072ed95f4" kind="variable"><name>next</name></member>
+    <member refid="structmodeset__dev_1aadfb9a98346716f51ae22b3ca34d9219" kind="variable"><name>width</name></member>
+    <member refid="structmodeset__dev_1a746243c40935e71ad22382b8f2d3321f" kind="variable"><name>height</name></member>
+    <member refid="structmodeset__dev_1a388ee672b4647cde49889b638e41c073" kind="variable"><name>stride</name></member>
+    <member refid="structmodeset__dev_1aac2dde8906b7dfe3f9fda85a28ea9ab5" kind="variable"><name>size</name></member>
+    <member refid="structmodeset__dev_1ae2b819fd1ab918aa8e9c391bb2bf8d88" kind="variable"><name>handle</name></member>
+    <member refid="structmodeset__dev_1a242edaff8fd092860eee857ada97d47b" kind="variable"><name>map</name></member>
+    <member refid="structmodeset__dev_1aac9c00cf9f01bc34319e603af2b89a7d" kind="variable"><name>mode</name></member>
+    <member refid="structmodeset__dev_1a3278e2dc23bacb50de87d6a035094d08" kind="variable"><name>fb</name></member>
+    <member refid="structmodeset__dev_1a39ad37247d6709852eb4c35404e531c2" kind="variable"><name>conn</name></member>
+    <member refid="structmodeset__dev_1abb6f395b82f70e54a4bac8895fc24223" kind="variable"><name>crtc</name></member>
+    <member refid="structmodeset__dev_1a3e128dd16ebad222901e40a06e348d26" kind="variable"><name>saved_crtc</name></member>
+  </compound>
+  <compound refid="a_8c" kind="file"><name>a.c</name>
+    <member refid="a_8c_1aa8d77f7293c11a2e550235f4480d56cb" kind="function"><name>print_message_function</name></member>
+    <member refid="a_8c_1a51af30a60f9f02777c6396b8247e356f" kind="function"><name>main</name></member>
+    <member refid="a_8c_1a6f10ceaec45c138a609e4e38f0f185e6" kind="function"><name>write_to_buf</name></member>
+  </compound>
+  <compound refid="b_8cpp" kind="file"><name>b.cpp</name>
+    <member refid="b_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="custom_8c" kind="file"><name>custom.c</name>
+    <member refid="custom_8c_1a369266c24eacffb87046522897a570d5" kind="define"><name>_GNU_SOURCE</name></member>
+    <member refid="custom_8c_1a906c69494fba4d4a9531c49a5b6f17b3" kind="variable"><name>modeset_list</name></member>
+    <member refid="custom_8c_1a59c3c0424bd670eaf105eab4bd8a6cc6" kind="function"><name>modeset_find_crtc</name></member>
+    <member refid="custom_8c_1accec59b68fd75d43d3aa3d1d80cdcf6e" kind="function"><name>modeset_create_fb</name></member>
+    <member refid="custom_8c_1a998c621b0e784d074b081dc45e7ad28c" kind="function"><name>modeset_setup_dev</name></member>
+    <member refid="custom_8c_1ad494b17fa480f84dcea8887e29e4404a" kind="function"><name>modeset_open</name></member>
+    <member refid="custom_8c_1a25c89fc27750d9fd6fda727f56a919f9" kind="function"><name>modeset_prepare</name></member>
+    <member refid="custom_8c_1aff3e1705f94f2daaa8ca93e1fb8cbd3e" kind="function"><name>modeset_draw</name></member>
+    <member refid="custom_8c_1a01a43259503d7f4c73ed7f4fef5b26ef" kind="function"><name>modeset_cleanup</name></member>
+    <member refid="custom_8c_1a46eb715bcd62c391aa6d47e2d5c29d89" kind="function"><name>str_reverse_in_place</name></member>
+    <member refid="custom_8c_1ab08d7243c96a9f4b3480f1c6ceaff720" kind="function"><name>fpga_write</name></member>
+    <member refid="custom_8c_1a53c12871eb7119edede16615813de8a7" kind="function"><name>next_color</name></member>
+  </compound>
+  <compound refid="custom_8h" kind="file"><name>custom.h</name>
+  </compound>
+  <compound refid="modeset_8c" kind="file"><name>modeset.c</name>
+    <member refid="modeset_8c_1a369266c24eacffb87046522897a570d5" kind="define"><name>_GNU_SOURCE</name></member>
+    <member refid="modeset_8c_1a906c69494fba4d4a9531c49a5b6f17b3" kind="variable"><name>modeset_list</name></member>
+    <member refid="modeset_8c_1a59c3c0424bd670eaf105eab4bd8a6cc6" kind="function"><name>modeset_find_crtc</name></member>
+    <member refid="modeset_8c_1accec59b68fd75d43d3aa3d1d80cdcf6e" kind="function"><name>modeset_create_fb</name></member>
+    <member refid="modeset_8c_1a998c621b0e784d074b081dc45e7ad28c" kind="function"><name>modeset_setup_dev</name></member>
+    <member refid="modeset_8c_1ad494b17fa480f84dcea8887e29e4404a" kind="function"><name>modeset_open</name></member>
+    <member refid="modeset_8c_1a25c89fc27750d9fd6fda727f56a919f9" kind="function"><name>modeset_prepare</name></member>
+    <member refid="modeset_8c_1a9278ade9dcf57539263a91c8508aefae" kind="function"><name>modeset_draw</name></member>
+    <member refid="modeset_8c_1a01a43259503d7f4c73ed7f4fef5b26ef" kind="function"><name>modeset_cleanup</name></member>
+    <member refid="modeset_8c_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+    <member refid="modeset_8c_1a53c12871eb7119edede16615813de8a7" kind="function"><name>next_color</name></member>
+  </compound>
+  <compound refid="read_8c" kind="file"><name>read.c</name>
+    <member refid="read_8c_1afc8348ca41ea819eeb340bed7f6f6b7d" kind="function"><name>exec</name></member>
+    <member refid="read_8c_1a6778223b30caa309a1a8f08dde19a02b" kind="function"><name>xprintf</name></member>
+    <member refid="read_8c_1a6e211c1b94afa73753915c01554534bc" kind="function"><name>check_frame</name></member>
+    <member refid="read_8c_1a2d767db7233a8d9dd6969dcc38829ebd" kind="function"><name>create_frame</name></member>
+    <member refid="read_8c_1aa883a176448ea5eab810fa3276f0453c" kind="function"><name>fpga_read</name></member>
+  </compound>
+  <compound refid="read_8h" kind="file"><name>read.h</name>
+    <member refid="read_8h_1a22c7f61c2f0fa6b1943548e838055cec" kind="define"><name>CHAR_SIZE</name></member>
+    <member refid="read_8h_1aa883a176448ea5eab810fa3276f0453c" kind="function"><name>fpga_read</name></member>
+    <member refid="read_8h_1a6778223b30caa309a1a8f08dde19a02b" kind="function"><name>xprintf</name></member>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="test_8c" kind="file"><name>test.c</name>
+    <member refid="test_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="try_8c" kind="file"><name>try.c</name>
+    <member refid="try_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="write_8c" kind="file"><name>write.c</name>
+    <member refid="write_8c_1a369266c24eacffb87046522897a570d5" kind="define"><name>_GNU_SOURCE</name></member>
+    <member refid="write_8c_1a52fe323f74d52ba4d14202067c2daecd" kind="define"><name>MEASURE_TIME</name></member>
+    <member refid="write_8c_1a1e9f6813e46e0acd2273cbadb9d4b932" kind="define"><name>VAAMAN_CARD_NAME</name></member>
+    <member refid="write_8c_1adb545dcc8311a00161cd258bd19a0813" kind="define"><name>VAAMAN_eDP_OBJECT_ID</name></member>
+    <member refid="write_8c_1a906c69494fba4d4a9531c49a5b6f17b3" kind="variable"><name>modeset_list</name></member>
+    <member refid="write_8c_1ad494b17fa480f84dcea8887e29e4404a" kind="function"><name>modeset_open</name></member>
+    <member refid="write_8c_1a59c3c0424bd670eaf105eab4bd8a6cc6" kind="function"><name>modeset_find_crtc</name></member>
+    <member refid="write_8c_1accec59b68fd75d43d3aa3d1d80cdcf6e" kind="function"><name>modeset_create_fb</name></member>
+    <member refid="write_8c_1a998c621b0e784d074b081dc45e7ad28c" kind="function"><name>modeset_setup_dev</name></member>
+    <member refid="write_8c_1a25c89fc27750d9fd6fda727f56a919f9" kind="function"><name>modeset_prepare</name></member>
+    <member refid="write_8c_1aec57de8c322e3882221a1f35418a589e" kind="function"><name>write_to_buf</name></member>
+    <member refid="write_8c_1aaf2bb5bc4dd2d81d94ccb60851b6c565" kind="function"><name>write_to_buf1</name></member>
+    <member refid="write_8c_1ab778e3496be0164cba1da31a71a7e4aa" kind="function"><name>write_to_buf2</name></member>
+    <member refid="write_8c_1aeb800b3751d0817d3ede11bfe7a1bed3" kind="function"><name>write_to_buf3</name></member>
+    <member refid="write_8c_1a2305961104745ebbc6ef6caa99d83ba0" kind="function"><name>write_to_buf4</name></member>
+    <member refid="write_8c_1a8816bd940274bc3b68955cb02b5f6a3f" kind="function"><name>write_to_buf5</name></member>
+    <member refid="write_8c_1aff3e1705f94f2daaa8ca93e1fb8cbd3e" kind="function"><name>modeset_draw</name></member>
+    <member refid="write_8c_1a01a43259503d7f4c73ed7f4fef5b26ef" kind="function"><name>modeset_cleanup</name></member>
+    <member refid="write_8c_1ab08d7243c96a9f4b3480f1c6ceaff720" kind="function"><name>fpga_write</name></member>
+  </compound>
+  <compound refid="write_8h" kind="file"><name>write.h</name>
+    <member refid="write_8h_1ab08d7243c96a9f4b3480f1c6ceaff720" kind="function"><name>fpga_write</name></member>
+  </compound>
+  <compound refid="md_README" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

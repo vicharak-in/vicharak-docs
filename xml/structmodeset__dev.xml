@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="structmodeset__dev" kind="struct" language="C++" prot="public">
+    <compoundname>modeset_dev</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmodeset__dev_1a85fc5f42e2a286b47a47303072ed95f4" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structmodeset__dev" kindref="compound">modeset_dev</ref> *</type>
+        <definition>struct modeset_dev * modeset_dev::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>modeset_dev::next</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="148" column="19" bodyfile="custom.c" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1aadfb9a98346716f51ae22b3ca34d9219" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t modeset_dev::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>modeset_dev::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="150" column="10" bodyfile="custom.c" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1a746243c40935e71ad22382b8f2d3321f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t modeset_dev::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>modeset_dev::height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="151" column="10" bodyfile="custom.c" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1a388ee672b4647cde49889b638e41c073" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t modeset_dev::stride</definition>
+        <argsstring></argsstring>
+        <name>stride</name>
+        <qualifiedname>modeset_dev::stride</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="152" column="10" bodyfile="custom.c" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1aac2dde8906b7dfe3f9fda85a28ea9ab5" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t modeset_dev::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>modeset_dev::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="153" column="10" bodyfile="custom.c" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1ae2b819fd1ab918aa8e9c391bb2bf8d88" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t modeset_dev::handle</definition>
+        <argsstring></argsstring>
+        <name>handle</name>
+        <qualifiedname>modeset_dev::handle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="154" column="10" bodyfile="custom.c" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1a242edaff8fd092860eee857ada97d47b" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t * modeset_dev::map</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <qualifiedname>modeset_dev::map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="155" column="9" bodyfile="custom.c" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1aac9c00cf9f01bc34319e603af2b89a7d" prot="public" static="no" mutable="no">
+        <type>drmModeModeInfo</type>
+        <definition>drmModeModeInfo modeset_dev::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>modeset_dev::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="157" column="17" bodyfile="custom.c" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1a3278e2dc23bacb50de87d6a035094d08" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t modeset_dev::fb</definition>
+        <argsstring></argsstring>
+        <name>fb</name>
+        <qualifiedname>modeset_dev::fb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="158" column="10" bodyfile="custom.c" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1a39ad37247d6709852eb4c35404e531c2" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t modeset_dev::conn</definition>
+        <argsstring></argsstring>
+        <name>conn</name>
+        <qualifiedname>modeset_dev::conn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="159" column="10" bodyfile="custom.c" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1abb6f395b82f70e54a4bac8895fc24223" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t modeset_dev::crtc</definition>
+        <argsstring></argsstring>
+        <name>crtc</name>
+        <qualifiedname>modeset_dev::crtc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="160" column="10" bodyfile="custom.c" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmodeset__dev_1a3e128dd16ebad222901e40a06e348d26" prot="public" static="no" mutable="no">
+        <type>drmModeCrtc *</type>
+        <definition>drmModeCrtc * modeset_dev::saved_crtc</definition>
+        <argsstring></argsstring>
+        <name>saved_crtc</name>
+        <qualifiedname>modeset_dev::saved_crtc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="custom.c" line="161" column="13" bodyfile="custom.c" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>modeset_dev</label>
+        <link refid="structmodeset__dev"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="custom.c" line="147" column="1" bodyfile="custom.c" bodystart="147" bodyend="162"/>
+    <listofallmembers>
+      <member refid="structmodeset__dev_1a39ad37247d6709852eb4c35404e531c2" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>conn</name></member>
+      <member refid="structmodeset__dev_1abb6f395b82f70e54a4bac8895fc24223" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>crtc</name></member>
+      <member refid="structmodeset__dev_1a3278e2dc23bacb50de87d6a035094d08" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>fb</name></member>
+      <member refid="structmodeset__dev_1ae2b819fd1ab918aa8e9c391bb2bf8d88" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>handle</name></member>
+      <member refid="structmodeset__dev_1a746243c40935e71ad22382b8f2d3321f" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>height</name></member>
+      <member refid="structmodeset__dev_1a242edaff8fd092860eee857ada97d47b" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>map</name></member>
+      <member refid="structmodeset__dev_1aac9c00cf9f01bc34319e603af2b89a7d" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>mode</name></member>
+      <member refid="structmodeset__dev_1a85fc5f42e2a286b47a47303072ed95f4" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>next</name></member>
+      <member refid="structmodeset__dev_1a3e128dd16ebad222901e40a06e348d26" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>saved_crtc</name></member>
+      <member refid="structmodeset__dev_1aac2dde8906b7dfe3f9fda85a28ea9ab5" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>size</name></member>
+      <member refid="structmodeset__dev_1a388ee672b4647cde49889b638e41c073" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>stride</name></member>
+      <member refid="structmodeset__dev_1aadfb9a98346716f51ae22b3ca34d9219" prot="public" virt="non-virtual"><scope>modeset_dev</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

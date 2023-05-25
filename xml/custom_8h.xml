@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="custom_8h" kind="file" language="C++">
+    <compoundname>custom.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="test_8c" local="yes">test.c</includedby>
+    <includedby refid="try_8c" local="yes">try.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>custom.h</label>
+        <link refid="custom_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//int<sp/>fpga_write(uint8_t*<sp/>argv,<sp/>uint32_t<sp/>dlen);</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="custom.h"/>
+  </compounddef>
+</doxygen>

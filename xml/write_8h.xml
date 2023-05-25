@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="write_8h" kind="file" language="C++">
+    <compoundname>write.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>write.h</label>
+        <link refid="write_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="write_8h_1ab08d7243c96a9f4b3480f1c6ceaff720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fpga_write</definition>
+        <argsstring>(uint8_t *argv, uint32_t dlen)</argsstring>
+        <name>fpga_write</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>dlen</declname>
+        </param>
+        <briefdescription>
+<para>Write data to FPGA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Firstname Lastname</para>
+</simplesect>
+FPGA write function <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>argument list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="write.h" line="19" column="5" bodyfile="custom.c" bodystart="544" bodyend="604" declfile="write.h" declline="19" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>write functions </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>FPGA_WRITE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FPGA_WRITE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="write_8h_1ab08d7243c96a9f4b3480f1c6ceaff720" kindref="member">fpga_write</ref>(uint8_t*<sp/>argv,<sp/>uint32_t<sp/>dlen);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="write.h"/>
+  </compounddef>
+</doxygen>

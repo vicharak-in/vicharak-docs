@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="structfpga__frame" kind="struct" language="C++" prot="public">
+    <compoundname>fpga_frame</compoundname>
+    <includes refid="read_8h" local="no">read.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfpga__frame_1a28e987b840a5fe31218a85f93ce8e191" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fpga_frame::sof</definition>
+        <argsstring></argsstring>
+        <name>sof</name>
+        <qualifiedname>fpga_frame::sof</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="read.h" line="25" column="5" bodyfile="read.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfpga__frame_1ab457931460236678215ee1222a68064d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fpga_frame::pkt_id</definition>
+        <argsstring></argsstring>
+        <name>pkt_id</name>
+        <qualifiedname>fpga_frame::pkt_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="read.h" line="26" column="5" bodyfile="read.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfpga__frame_1a46b166db7a76431e0c7eaacf8b95405c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fpga_frame::dtype</definition>
+        <argsstring></argsstring>
+        <name>dtype</name>
+        <qualifiedname>fpga_frame::dtype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="read.h" line="27" column="5" bodyfile="read.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfpga__frame_1afbc53217b21747b642baac9e8faaae49" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fpga_frame::dlen</definition>
+        <argsstring></argsstring>
+        <name>dlen</name>
+        <qualifiedname>fpga_frame::dlen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="read.h" line="28" column="5" bodyfile="read.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfpga__frame_1a3183ba95d4b53add2cac4727bee68b81" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fpga_frame::phl_id</definition>
+        <argsstring></argsstring>
+        <name>phl_id</name>
+        <qualifiedname>fpga_frame::phl_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="read.h" line="29" column="5" bodyfile="read.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfpga__frame_1a03f10087190618ef0c1f1dc2f418f364" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fpga_frame::reserved</definition>
+        <argsstring></argsstring>
+        <name>reserved</name>
+        <qualifiedname>fpga_frame::reserved</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="read.h" line="30" column="5" bodyfile="read.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfpga__frame_1a841fbce2ac4ae7e001d300a0b781a1c6" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* fpga_frame::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>fpga_frame::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="read.h" line="31" column="6" bodyfile="read.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfpga__frame_1a2f9d28d1077d627b225b9994ed4f53e9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fpga_frame::eof</definition>
+        <argsstring></argsstring>
+        <name>eof</name>
+        <qualifiedname>fpga_frame::eof</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="read.h" line="32" column="5" bodyfile="read.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>FPGA frame data struct. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="read.h" line="24" column="1" bodyfile="read.h" bodystart="24" bodyend="33"/>
+    <listofallmembers>
+      <member refid="structfpga__frame_1a841fbce2ac4ae7e001d300a0b781a1c6" prot="public" virt="non-virtual"><scope>fpga_frame</scope><name>data</name></member>
+      <member refid="structfpga__frame_1afbc53217b21747b642baac9e8faaae49" prot="public" virt="non-virtual"><scope>fpga_frame</scope><name>dlen</name></member>
+      <member refid="structfpga__frame_1a46b166db7a76431e0c7eaacf8b95405c" prot="public" virt="non-virtual"><scope>fpga_frame</scope><name>dtype</name></member>
+      <member refid="structfpga__frame_1a2f9d28d1077d627b225b9994ed4f53e9" prot="public" virt="non-virtual"><scope>fpga_frame</scope><name>eof</name></member>
+      <member refid="structfpga__frame_1a3183ba95d4b53add2cac4727bee68b81" prot="public" virt="non-virtual"><scope>fpga_frame</scope><name>phl_id</name></member>
+      <member refid="structfpga__frame_1ab457931460236678215ee1222a68064d" prot="public" virt="non-virtual"><scope>fpga_frame</scope><name>pkt_id</name></member>
+      <member refid="structfpga__frame_1a03f10087190618ef0c1f1dc2f418f364" prot="public" virt="non-virtual"><scope>fpga_frame</scope><name>reserved</name></member>
+      <member refid="structfpga__frame_1a28e987b840a5fe31218a85f93ce8e191" prot="public" virt="non-virtual"><scope>fpga_frame</scope><name>sof</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
