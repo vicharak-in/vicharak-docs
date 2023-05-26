@@ -30,6 +30,7 @@ html_static_path = ['_static']
 from sphinx.writers.html import HTMLTranslator
 from docutils import nodes
 from docutils.nodes import Element
+import os
 
 class PatchedHTMLTranslator(HTMLTranslator):
 
@@ -74,5 +75,5 @@ html_theme_options = {
     "logo_dark": "_static/vicharak-logo-dark.svg"
 }
 
-breathe_projects = {"drm_fpga_write": "/home/metal/dev/vaaman-doc/xml/"}
+breathe_projects = {"drm_fpga_write": os.getcwd() + "/../xml/"}
 breathe_default_project = "drm_fpga_write"
