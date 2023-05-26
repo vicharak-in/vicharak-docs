@@ -1,19 +1,35 @@
-# Vaaman's Documentation
+# Vicharak Vaaman Documentation
 
-Uses sphinx and rst.
+reStructuredText/Markdown preferred documentation, generated using [Sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html).
 
-## Compile and View
 
+## Prerequisites
+
+**ArchLinux based distributions**
+```bash
+sudo pacman -S python python-pip python-sphinx python-breathe
 ```
+
+**Ubuntu/Debian based distributions**
+```bash
+sudo apt install -y python3 python3-pip python3-sphinx python3-breathe
+```
+
+
+## How to compile and visualize
+
+```bash
 pip install sphinxawesome-theme --pre
-make html
-$BROWSER build/html/index.html
+make html -j$(nproc --all)
+${BROWSER} build/html/index.html
 ```
+
 
 ## Edit
 
 `source/index.rst` is the index file, it contains the table of content. Open
 index.html and index.rst side-by-side and compare for better understanding.
+
 
 ## Resources
 
