@@ -8,18 +8,19 @@ reStructuredText/Markdown preferred documentation, generated using [Sphinx](http
 **ArchLinux based distributions**
 ```bash
 sudo pacman -S python python-pip python-sphinx python-breathe
+pip install sphinxawesome-theme --pre
 ```
 
 **Ubuntu/Debian based distributions**
 ```bash
 sudo apt install -y python3 python3-pip python3-sphinx python3-breathe
+pip install sphinxawesome-theme --pre
 ```
 
 
 ## How to compile and visualize
 
 ```bash
-pip install sphinxawesome-theme --pre
 make html -j$(nproc --all)
 ${BROWSER} build/html/index.html
 ```
