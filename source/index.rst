@@ -14,6 +14,7 @@ Welcome to Vaaman's documentation!
    Downloads
    vaaman-sdk
    vaaman-applications
+   vaaman-linux/index
    get-help
    linux-document
 
