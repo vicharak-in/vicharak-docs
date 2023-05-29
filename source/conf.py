@@ -6,19 +6,24 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+from sphinx.writers.html import HTMLTranslator
+from docutils import nodes
+from docutils.nodes import Element
+import os
+
+
 project = 'Vaaman'
-copyright = '2023, Vicharak'
+copyright = '2023, Vicharak Computers LLP'
 author = 'Vicharak'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['breathe']
+extensions = ['breathe', 'myst_parser']
+source_suffix = ['.rst', '.md']
 
 templates_path = ['_templates']
 exclude_patterns = []
-
-
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -26,11 +31,6 @@ exclude_patterns = []
 html_theme = 'sphinxawesome_theme'
 html_static_path = ['_static']
 
-
-from sphinx.writers.html import HTMLTranslator
-from docutils import nodes
-from docutils.nodes import Element
-import os
 
 class PatchedHTMLTranslator(HTMLTranslator):
 
@@ -62,13 +62,15 @@ class PatchedHTMLTranslator(HTMLTranslator):
         if 'target' in node:
             atts['target'] = node['target']
         self.body.append(self.starttag(node, 'a', '', **atts))
- 
+
         if node.get('secnumber'):
             self.body.append(('%s' + self.secnumber_suffix) %
                              '.'.join(map(str, node['secnumber'])))
 
+
 def setup(app):
     app.set_translator('html', PatchedHTMLTranslator)
+
 
 html_theme_options = {
     "logo_light": "_static/vicharak-logo-light.svg",
