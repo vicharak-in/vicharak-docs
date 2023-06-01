@@ -10,16 +10,22 @@ from sphinx.writers.html import HTMLTranslator
 from docutils import nodes
 from docutils.nodes import Element
 import os
+import sys
 
+sys.path.insert(0, os.path.abspath("_themes"))
 
-project = 'Vaaman'
+project = 'Vicharak'
 copyright = '2023, Vicharak Computers LLP'
 author = 'Vicharak'
+version = "0.1"
+
+html_theme = 'sphinxawesome_theme'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['breathe', 'myst_parser']
+# extensions += ["sphinxawesome_theme.docsearch", "sphinxawesome.highlighting"]
 source_suffix = ['.rst', '.md']
 
 templates_path = ['_templates']
@@ -28,8 +34,18 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinxawesome_theme'
+# -- Documentation for adding theme to local directory
+# https://sphinxawesome.xyz/how-to/add/
+
+
 html_static_path = ['_static']
+html_title = "Vicharak"
+# html_theme_path = ["_themes"]
+# exclude_patterns = ["_themes"]
+
+
+
+
 
 
 class PatchedHTMLTranslator(HTMLTranslator):
