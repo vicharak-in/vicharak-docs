@@ -34,15 +34,11 @@ or, if you already have a local copy
 ```
 	cd path/to/vaaman-doc
     git fetch main
-    git checkout origin/main
 ```
+You are on detached head now.
 
 ### 2. Make Changes 
 
-Create a branch with your name. If it already exists, omit the `-b` flag.
-```
-    git checkout -b <your_name>
-```
 
 Edit rst files in source/ directory. Learn about rst [here](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#restructuredtext-primer).
 
@@ -63,6 +59,11 @@ If satisfied, add+commit them
 ```
 
 ### 3. Push
+
+Create a branch with your name. If it does not already exists.
+```
+    git checkout -b <your_name>
+```
 
 Push your changes to your branch.
 ```
