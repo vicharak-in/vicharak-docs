@@ -34,15 +34,10 @@ or, if you already have a local copy
 ```
 	cd path/to/vaaman-doc
     git fetch main
-    git checkout origin/main
 ```
 
 ### 2. Make Changes 
 
-Create a branch with your name. If it already exists, omit the `-b` flag.
-```
-    git checkout -b <your_name>
-```
 
 Edit rst files in source/ directory. Learn about rst [here](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#restructuredtext-primer).
 
@@ -64,36 +59,12 @@ If satisfied, add+commit them
 
 ### 3. Push
 
-Push your changes to your branch.
-```
-    git push -u origin HEAD:<your_name>
-```
-
-Edit rst files in source/ directory. Learn about rst [here](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#restructuredtext-primer).
-
-Create and enter the virtual environment.
-```
-    pipenv update
-    pipenv shell 
-```
-Make your changes now and build/view them
-```
-    make html -j $(nproc)
-    ${BROWSER} build/html/index.html
-```
-If satisfied, add+commit them
-```
-    git add <changed_files>
-    git commit
-```
-
-### 3. Create a branch with your name
-
-Create a branch with your name. If it already exists, skip this process.
+Create a branch with your name. If it already exists, skip this step.
 ```
     git checkout -b <your_name>
 ```
-and push your changes to this branch.
+
+Push your changes to your branch.
 ```
     git push -u origin HEAD:<your_name>
 ```
