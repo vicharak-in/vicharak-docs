@@ -1,0 +1,40 @@
+name: Build and Deploy Vaaman Documentation
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pipenv'
+    - name: Installing pipenv
+      run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+
+    - run: pipenv install --python 3.11
+    - run: pipenv update
+    - run: pipenv run make html
+
+    - name: Copying build/html/ to remote server
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSPHRASE }}
+        source: README.md
+        target: public_html/vicharak.in/docs/vaaman/
+
+    - name: Copying html files to index directory
+      uses: fifsky/ssh-action@master
+      with:
+        command: |
+          cd public_html/vicharak.in/docs/vaaman/
+          cp -r build/html/* ./
+        host: ${{ secrets.HOST }}
+        user: ${{ secrets.USERNAME }}
+        pass: ${{ secrets.PASSPHRASE }}
