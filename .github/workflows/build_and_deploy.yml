@@ -1,3 +1,7 @@
+# TODO:
+# 1. do not use ssh-action, copy files to the right directory only with scp-action
+# 2. check caching of dependencies, whether they are being reinstalled or not
+
 name: Build and Deploy Vaaman Documentation
 on:
   push:
