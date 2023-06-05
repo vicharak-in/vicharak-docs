@@ -20,30 +20,65 @@ sudo apt install -y python3 python3-pip python3-pipenv
 
 ---
 
-## How to compile and visualize
+## Editing Guide
 
-1. **Update your python pipenv**
+### 1. Clone 
 
-```bash
-pipenv update
+Clone local version of the repository. 
+```
+    git clone https://github.com/vicharak-in/vaaman-doc
+    cd vaaman-doc
+    git checkout main
+```
+or, if you already have a local copy
+```
+	cd path/to/vaaman-doc
+    git fetch main
+    git checkout origin/main
 ```
 
-2. **Enter the virtual pipenv shell**
-```bash
-pipenv shell
+### 2. Make Changes 
+
+Create a branch with your name. If it already exists, omit the `-b` flag.
+```
+    git checkout -b <your_name>
 ```
 
-3. **Compile the source files and view it on browser**
-```bash
-make html -j$(nproc --all)
-${BROWSER} build/html/index.html
+Edit rst files in source/ directory. Learn about rst [here](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#restructuredtext-primer).
+
+Create and enter the virtual environment.
 ```
----
+    pipenv update
+    pipenv shell 
+```
+Make your changes now and build/view them
+```
+    make html -j $(nproc)
+    ${BROWSER} build/html/index.html
+```
+If satisfied, add+commit them
+```
+    git add <changed_files>
+    git commit
+```
 
-## Edit
+### 3. Push
 
-`source/index.rst` is the index file, it contains the table of content.
-Open index.html and index.rst side-by-side and compare for better understanding.
+Push your changes to your branch.
+```
+    git push -u origin HEAD:<your_name>
+```
+
+### 4. Create a pull request
+
+#### With a web browser 
+1. Go to https://github.com/vicharak-in/vaaman-doc > 
+2. Click on pull request 
+3. Click on the branch name you wish to commit
+4. Create pull request
+
+#### With `gh` cli
+
 
 ---
 
