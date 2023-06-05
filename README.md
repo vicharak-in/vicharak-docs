@@ -61,11 +61,11 @@ If satisfied, add+commit them
 
 Create a branch with your name. If it already exists, omit the `-b` flag.
 ```
-    git checkout --set-upstream origin -b <your_name>
+    git checkout -b <your_name>
 ```
 and push your changes to this branch.
 ```
-    git push origin HEAD:<your_name>
+    git push -u origin HEAD:<your_name>
 ```
 
 ### 4. Create a pull request
