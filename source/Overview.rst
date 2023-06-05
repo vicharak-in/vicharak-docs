@@ -3,9 +3,7 @@
 Overview
 ========
 
-Testing build_and_deploy
-
-Testing 2
+Testing pull requests
 
 1. What is Vaaman
 
