@@ -93,7 +93,7 @@ Testing 2
 		
 		4 User LEDs on T120F324 bank 2F.
 
-3. Link to :ref:`getting started <getting-started>`
-4. Link to :ref:`vaaman applications <vaaman-applications>`
-5. Link to :ref:`Downloads <Downloads>`
+Link to :ref:`getting started <getting-started>`
+Link to :ref:`vaaman applications <vaaman-applications>`
+Link to :ref:`Downloads <Downloads>`
 
