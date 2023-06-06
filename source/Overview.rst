@@ -3,11 +3,8 @@
 Overview
 ========
 
-Testing build_and_deploy
-
-Testing 2
-
-1. What is Vaaman
+What is Vaaman
+--------------
 
 	.. |text_vaaman| replace:: The Vaaman Single Board Computer (SBC) combines the RK3399 processor and Efinix Trion T120 FPGA. It offers a powerful yet energy-efficient computing solution for various applications. The RK3399 processor provides high performance and low power consumption, while the Trion T120 FPGA allows for customizable hardware acceleration. With its compact size, the Vaaman SBC is suitable for space-constrained environments and offers a range of connectivity options. Overall, it empowers developers to create innovative solutions that require both processing power and hardware customization. 
 
@@ -21,7 +18,8 @@ Testing 2
 		| |image_vaaman| + |text_vaaman| +
 		+----------------+---------------+
 
-2. Features
+Features
+--------
 
 	The Vaaman Single Board Computer (SBC) offers a range of hardware features, including:
 
@@ -93,7 +91,7 @@ Testing 2
 		
 		4 User LEDs on T120F324 bank 2F.
 
-3. Link to :ref:`getting started <getting-started>`
-4. Link to :ref:`vaaman applications <vaaman-applications>`
-5. Link to :ref:`Downloads <Downloads>`
+Link to :ref:`getting started <getting-started>`
+Link to :ref:`vaaman applications <vaaman-applications>`
+Link to :ref:`Downloads <Downloads>`
 
