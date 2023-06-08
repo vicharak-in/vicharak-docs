@@ -1,6 +1,7 @@
 # Vicharak Vaaman Documentation
 
 reStructuredText/Markdown preferred documentation, generated using [Sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html).
+webp images assets only!
 
 ---
 
@@ -15,7 +16,8 @@ sudo pacman -S python python-pip python-pipenv
 
 **Ubuntu/Debian based distributions**
 ```bash
-sudo apt install -y python3 python3-pip python3-pipenv
+sudo apt install -y python3 python3-pip
+pip install pipenv
 ```
 
 ---
@@ -41,6 +43,7 @@ If there already exists a local clone then do this instead
 ```
 cd path/to/vaaman-doc
 git fetch origin main
+git checkout FETCH_HEAD
 ```
 
 ### 2. Modifying and updating the source
@@ -62,11 +65,19 @@ View the updated documentation site on your local computer using
 ${BROWSER} build/html/index.html
 ```
 
-If the changes are satisfied then, ==git add + commit== them
+If the changes are satisfied then, **git add and git commit**.
+While commiting make sure to write a well described commit message and commit title.
+
+Some examples:
+- vaaman-doc: Introduce documentation for fgpa write.
+- README: Add usage documentation for windows users.
+- vaaman-doc: linux: Document different vaaman kernel revisions.
+
 ```
 git add <changed_files>
 git commit
 ```
+To check the list of modified files: `git status`.
 
 ### 3. Pushing the modifications
 
@@ -82,7 +93,7 @@ Confirm the branch using `git branch -a`.
 
 If your branch already exists then directly push your changes over to your branch.
 ```
-    git push -u origin HEAD:<your_name>
+git push -u origin HEAD:<your_name>
 ```
 Example: `git push origin HEAD:utsav`
 
@@ -98,7 +109,9 @@ Reviewing can include typo/spelling errors, indentation errors, compilation erro
 3. Click on the branch name you wish to commit
 4. Create pull request
 
-**Creating pull request using `gh` cli**
+**Creating pull request using github cli (`gh` tool)**
+
+Make sure you have pushed the commits to your branch and also check if your current branch is proper.
 
 ```
 gh pr create -R https://github.com/vicharak-in/vaaman-doc
