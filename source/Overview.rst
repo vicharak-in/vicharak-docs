@@ -18,6 +18,20 @@ What is Vaaman
 		| |image_vaaman| + |text_vaaman| +
 		+----------------+---------------+
 
+Who is Vaaman For?
+------------------
+
+Vaaman is useful to a wide range of users, these include but are not limited to:
+
+* **Software Developers**: A significant portion of the user base consists of software developers who utilize the SBC's FPGA capabilities to optimize software performance, accelerate computations, and explore hardware acceleration.
+
+* **Researchers**: Vaaman with its FPGA attracts researchers who leverage its potential for implementing custom algorithms, conducting experiments, and prototyping novel solutions. The FPGA serves as a valuable tool for their research endeavors.
+
+* **Hardware Designers**: The SBC appeals to hardware designers as it provides a platform for developing and testing hardware designs. They can use the FPGA to prototype and verify their designs efficiently, enabling rapid iterations.
+
+* **Hobbyist Users**: The SBC also attracts ordinary users with an interest in tinkering and learning about cutting-edge technologies. They can utilize the SBC's versatility for various projects such as robotics, home automation, and DIY electronics.
+
+
 Features
 --------
 
