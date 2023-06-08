@@ -30,7 +30,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSPHRASE }}
-        source: README.md
+        source: build/
         target: public_html/vicharak.in/docs/vaaman/
 
     - name: Copying html files to index directory
