@@ -8,11 +8,11 @@ Turning it on
 
 - PD Adapter + PD cable required with operating 12V/5A (12V Input only!) 
 
-        .. image:: images/Power_option.png
+        .. image:: images/Power_option.webp
          :width: 800
 - Boot from SDcard
 
-        .. image:: images/SDcard.png
+        .. image:: images/SDcard.webp
          :width: 800
 
     To make an SD card bootable, follow these steps:
@@ -31,17 +31,17 @@ Turning it on
 
 - Boot from eMMC (Remove SDcard if inserted)
 
-        .. image:: images/eMMC_boot.png
+        .. image:: images/eMMC_boot.webp
          :width: 800     
 
 - When the power cable is connected, the red LED will be activated, and you can observe its illumination in the image displayed below.
 
-        .. image:: images/Power_LED.png
+        .. image:: images/Power_LED.webp
          :width: 800
 
 Once the booting process is finished, you will notice the activation of the blue LED, indicated by a blinking pattern, as demonstrated in the image provided below.
 
-        .. image:: images/User_LEDs.png
+        .. image:: images/User_LEDs.webp
          :width: 800 
 
 How it can be accessed
@@ -49,12 +49,12 @@ How it can be accessed
 
     - *Micro HDMI*: Vaaman SBC is equipped with a micro HDMI port, which allows for easy connection to a display. By using a micro HDMI to HDMI cable or adapter, users can connect Vaaman to a monitor or TV with an HDMI input. This enables direct visual access to the graphical user interface (GUI) or command-line interface (CLI) on the connected display.
 
-        .. image:: images/HDMI_Option.png
+        .. image:: images/HDMI_Option.webp
          :width: 800
 
     - *Serial*: Vaaman also provides a serial interface, typically in the form of UART (Universal Asynchronous Receiver-Transmitter) pins. Users can access the system's console or terminal interface by connecting to these serial pins using a serial cable or adapter. This method is often used for debugging, troubleshooting, or accessing the system when other interfaces are not available.
 
-        .. image:: images/USB_Serial.png
+        .. image:: images/USB_Serial.webp
          :width: 800
 
         When accessing Vaaman SBC through the serial interface, it is important to configure the serial parameters correctly. For RK3399-based systems, the following parameters are typically used:
@@ -71,7 +71,7 @@ How it can be accessed
 
         For Windows users, you can download PuTTY, :https://www.putty.org/
 
-        .. image:: images/Putty_step.png
+        .. image:: images/Putty_step.webp
          :width: 800
 
         To use serial debugging on Ubuntu
@@ -102,7 +102,7 @@ How it can be accessed
 
                 By using either of these methods, you will be able to access the configuration settings in GTKTerm, where you can make adjustments to the port settings for your serial connection, as shown in the image below:
 
-        .. image:: images/GTKTerm.png
+        .. image:: images/GTKTerm.webp
          :width: 800
 
     - SSH: Vaaman supports SSH (Secure Shell), which allows for secure remote access to the system. By establishing an SSH connection, users can remotely connect to Vaaman from another device, such as a computer or smartphone, over a network. This method provides a secure command-line interface to administer, configure, and execute commands on the Vaaman SBC.
