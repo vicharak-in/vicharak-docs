@@ -25,7 +25,6 @@ html_theme = 'sphinxawesome_theme'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['breathe', 'myst_parser']
-# extensions += ["sphinxawesome_theme.docsearch", "sphinxawesome.highlighting"]
 source_suffix = ['.rst', '.md']
 
 templates_path = ['_templates']
@@ -42,10 +41,6 @@ html_static_path = ['_static']
 html_title = "Vicharak"
 # html_theme_path = ["_themes"]
 # exclude_patterns = ["_themes"]
-
-
-
-
 
 
 class PatchedHTMLTranslator(HTMLTranslator):
