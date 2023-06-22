@@ -12,12 +12,17 @@ webp images assets only!
 **ArchLinux based distributions**
 ```bash
 sudo pacman -S python python-pip python-pipenv
+pip install pre-commit
+
+pre-commit install
 ```
 
 **Ubuntu/Debian based distributions**
 ```bash
 sudo apt install -y python3 python3-pip
-pip install pipenv
+pip install pipenv pre-commit
+
+pre-commit install
 ```
 
 ---
@@ -31,6 +36,9 @@ For example a person dedicated for `linux kernel` should not commit changes for 
 If the changes are important then instead create a **patch** for the changes and send that patch over to the designated maintainer to pick and merge on his/her branch.
 
 This will allow this repository to be conflictless and easy to maintain.
+
+A [pre-commit](https://pre-commit.com) implementation has been added to keep the source code neat and formatted.
+This pre-commit will not allow you to commit until you fix all the formatting issues from your code.
 
 ### 1. Cloning the repository
 
@@ -46,7 +54,18 @@ git fetch origin main
 git checkout FETCH_HEAD
 ```
 
-### 2. Modifying and updating the source
+### 2. Compile vaaman-doc from source
+
+Enter the python virtual environment using pipenv.
+```
+pipenv update
+pipenv shell
+```
+
+Finally Enter the make command to build the sphinx documentation.
+`make html -j$(nproc --all)`
+
+### 3. Modifying and updating the source
 
 Edit rst files in source/ directory as per your requirements and changes.
 
