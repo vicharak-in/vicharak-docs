@@ -1,8 +1,7 @@
 .. _vaaman-applications:
 
-Vaaman Applications
-====================
+#####################
+ Vaaman Applications
+#####################
 
-asjhdlakjshdlakjsh
-jahslkdja
-sjahdlksj
+asjhdlakjshdlakjsh jahslkdja sjahdlksj

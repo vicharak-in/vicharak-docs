@@ -2,6 +2,6 @@ Struct list
 ===========
 
 .. toctree::
-   :glob:
+    :glob:
 
-   struct/*
+    struct/*

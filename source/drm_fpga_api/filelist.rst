@@ -2,6 +2,6 @@ File list
 =========
 
 .. toctree::
-   :glob:
+    :glob:
 
-   file/*
+    file/*
