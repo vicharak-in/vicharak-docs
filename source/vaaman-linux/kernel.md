@@ -1,1 +1,0 @@
-# Vaaman linux kernel guide
