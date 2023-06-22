@@ -1,3 +1,4 @@
 build/
 
+Pipfile.lock
 *.doctree
