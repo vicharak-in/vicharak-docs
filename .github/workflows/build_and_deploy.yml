@@ -16,13 +16,10 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-        cache: 'pipenv'
     - name: Installing pipenv
-      run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
-
-    - run: pipenv install --python 3.11
-    - run: pipenv update
-    - run: pipenv run make html
+      run: python3 -m pip install pipenv
+    - name: Build docs
+      run: pipenv update && pipenv run make html -j$(nproc --all)
 
     - name: Copying build/html/ to remote server
       uses: appleboy/scp-action@v0.1.4
