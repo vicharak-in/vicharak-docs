@@ -1,9 +1,9 @@
-.. _get-help:
+.. _getting-help:
 
-Get Help
-=========
+Getting Help
+============
 
-- instructions on how and where to get help
+- Instructions on how and where to get help
 
 * Default template for issues/questions
 

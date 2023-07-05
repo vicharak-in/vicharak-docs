@@ -10,6 +10,8 @@ breathe = "*"
 myst-parser = "*"
 sphinx = "*"
 sphinxawesome_theme = "*"
+sphinx-togglebutton = "*"
+sphinx-design = "*"
 
 [requires]
 python_version = "3"

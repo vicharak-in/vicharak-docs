@@ -5,22 +5,34 @@
 
 Welcome to Vaaman's documentation!
 ==================================
+The **Vaaman Single Board Computer** (SBC) combines the RK3399 processor and Efinix Trion T120 FPGA. It offers a powerful yet energy-efficient computing solution for various applications. The RK3399 processor provides high performance and low power consumption, while the Trion T120 FPGA allows for customizable hardware acceleration.
+
+With its compact size, the Vaaman SBC is suitable for space-constrained environments and offers a range of connectivity options.
+Overall, it empowers developers to create innovative solutions that require both processing power and hardware customization.
+
+.. image:: images/Vaaman-top.webp
+    :width: 50%
+    :align: left
+
+.. note::
+   Check out the :doc:`overview` for a quick introduction to Vaaman, and the :doc:`getting-started` guide to get started with Vaaman.
+
+.. note::
+   We welcome contributions and bug reports through our `GitHub repository <https://github.com/vicharak-in/vaaman-doc>`_. See the :doc:`contributing` guide and :doc:`getting-help` for more information.
 
 .. toctree::
-   :maxdepth: 2
+   :glob:
+   :maxdepth: 1
+   :caption: Notes
 
-   Overview
-   getting-started
-   Downloads
-   vaaman-sdk
-   vaaman-applications
-   vaaman-linux/index
-   get-help
-   linux-document
+   Overview <overview>
+   Getting Started <getting-started>
+   Getting Help <getting-help>
+   Vaaman SDK Documentation <vaaman-sdk>
+   Vaaman Application Documentation <vaaman-applications>
+   Vaaman Linux Documentation <vaaman-linux/index>
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree:: downloads
+   :glob:
+   :maxdepth: 1
+   :caption: Downloads

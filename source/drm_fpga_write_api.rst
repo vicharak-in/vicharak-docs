@@ -1,5 +1,7 @@
 .. _drm_fpga_write_api:
 
+:orphan:
+
 .. toctree::
    :glob:
 

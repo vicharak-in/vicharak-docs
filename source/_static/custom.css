@@ -1,0 +1,13 @@
+.contents .caption,
+.contents .topic-title,
+.toctree-wrapper .caption,
+.toctree-wrapper .topic-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+#content ul:not(.search) p,
+#content ul:not(.search) > li {
+  margin-top: 0.9rem;
+}
