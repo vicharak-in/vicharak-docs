@@ -38,6 +38,8 @@ myst_enable_extensions = [
     "colon_fence",
     # Enable definition lists
     "deflist",
+    # Enable linkify extension
+    "linkify",
     # Automatically convert standard quotations
     # to their opening/closing variants
     "smartquotes",
