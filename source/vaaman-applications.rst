@@ -2,7 +2,3 @@
 
 Vaaman Applications
 ====================
-
-asjhdlakjshdlakjsh
-jahslkdja
-sjahdlksj
