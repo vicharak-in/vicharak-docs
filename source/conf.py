@@ -52,7 +52,7 @@ source_suffix = [".rst", ".md"]
 
 # Set templates and exclude patterns
 templates_path = ["_templates"]
-exclude_patterns = ["build"]
+exclude_patterns = ["_build"]
 
 # HTML settings
 html_theme = "sphinxawesome_theme"
