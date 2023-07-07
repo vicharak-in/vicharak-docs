@@ -20,6 +20,10 @@ Vaaman is useful to a wide range of users, these include but are not limited to:
 **Hobbyist Users**:
     The SBC also attracts ordinary users with an interest in tinkering and learning about cutting-edge technologies. They can utilize the SBC's versatility for various projects such as robotics, home automation, and DIY electronics.
 
+Block Diagram
+-------------
+
+.. image:: images/block_diagram.webp
 
 Features
 --------
