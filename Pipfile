@@ -9,10 +9,11 @@ verify_ssl = true
 breathe = "*"
 myst-parser = "*"
 sphinx = "*"
-sphinxawesome_theme = "*"
-sphinx-togglebutton = "*"
 sphinx-design = "*"
+sphinx-favicon = "*"
 sphinx-tabs = "*"
+sphinx-togglebutton = "*"
+sphinxawesome_theme = "*"
 
 [requires]
 python_version = "3"
