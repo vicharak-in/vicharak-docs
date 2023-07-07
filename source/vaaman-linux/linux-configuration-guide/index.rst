@@ -5,7 +5,7 @@ Linux Configuration Guide is a collection of Linux configuration guides and tuto
 These guides are written in a way that even a beginner can follow them.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :caption: Configuration Guides
 
     Vicharak Linux Configuration Utility <vicharak-config-tool>

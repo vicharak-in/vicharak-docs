@@ -1,5 +1,3 @@
-{#vicharak-config-tool}
-
 # Vicharak Linux Configuration Tool
 
 Vicharak linux systems includes **vicharak-config** tool which is purely written
@@ -8,7 +6,7 @@ using shell scripts that allows users to configure and setup their linux system 
 It provides a **TUI** interface to configure different linux specific configurations.
 Use `sudo vicharak-config` to get started.
 
-It is supported on all debian based systems such as Debian buster/bullseye,
+It is supported on all Debian based systems such as Debian buster/bullseye,
 Ubuntu focal/jammy and other third party systems such as Armbian.
 
 :::{admonition} **Fact**
@@ -17,14 +15,14 @@ vicharak-config also has a systemd service that is use configure system
 prior to system boot and after the system boots.
 :::
 
-:::{admonition} **Vicharak Config TUI**
+::::{admonition} **Vicharak Config TUI**
 :class: dropdown
 
 ```bash
 ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
 │ Please select an option below:                                                           │
 │                                                                                          │
-│                                   System Maintaince                                      │
+│                                   System Maintenance                                      │
 │                                   Hardware                                               │
 │                                   Overlays                                               │
 │                                   Connectivity                                           │
@@ -50,7 +48,7 @@ prior to system boot and after the system boots.
 :::{note}
 The above menu might be shown differently depending on the terminal style.
 :::
-:::
+::::
 
 ## How to navigate around vicharak-config
 
@@ -61,26 +59,28 @@ The above menu might be shown differently depending on the terminal style.
 - **Enter** key is used to confirm the corresponding option.
 - **ESC** key is used to do back to previous menu.
 
+(#available-features)=
+
 ## Available Features
 
-- [System maintainance](#vc-system-maintainance)
+- [System maintenance](#system-maintenance)
   Update packages and bootloader.
-- [Hardware configuration](#vc-hardware)
+- [Hardware configuration](#hardware)
   Capture camera frame, Enable LEDs, Change thermal governor, DSI mirroring
-- [Overlays](#vc-overlays)
+- [Overlays](#overlays)
   Enable DTBO overlays, Build third-party DTBO
-- [Connectivity](#vc-connectivity)
+- [Connectivity](#connectivity)
   Configure network using **nmtui**
-- [Advanced Options](#vc-advanced-options)
+- [Advanced Options](#advanced-options)
   Install GPU library and enable OpenGL support
-- [User Settings](#vc-user-settings)
+- [User Settings](#user-settings)
   Change system password and hostname
-- [Localization](#vc-localization)
-  Change Timezone/Locale/Keyboard and Wi-Fi Country
+- [Localization](#localization)
+  Change Timezone/Locale/Keyboard and WiFi Country
 
-{#vc-system-maintainance}
+(#system-maintenance)=
 
-### System Maintainance
+### System Maintenance
 
 This feature allows you to update the packages and bootloader.
 
@@ -89,7 +89,7 @@ This feature allows you to update the packages and bootloader.
 - Update bootloader: This option allows you to update the bootloader. It uses
   `setup.sh` installed from `vicharak-firmware` package to update the bootloader.
 
-{#vc-hardware}
+(#hardware)=
 
 ### Hardware
 
@@ -104,7 +104,7 @@ This feature allows you to configure different hardware options.
 - DSI mirroring: This option allows you to enable/disable DSI mirroring.
   It uses `vicharak-config` to enable/disable DSI mirroring.
 
-{#vc-overlays}
+(#overlays)=
 
 ### Overlays
 
@@ -116,7 +116,7 @@ This feature allows you to configure different overlays options.
 - Build third-party DTBO: This option allows you to build the third-party DTBO.
   It builds and installs the dtbo using the `device-tree-compiler` utility.
 
-{#vc-connectivity}
+(#connectivity)=
 
 ### Connectivity
 
@@ -124,7 +124,7 @@ This feature allows you to configure different connectivity options.
 
 - Configure network: This option allows you to configure network using `nmtui`.
 
-{#vc-advanced-options}
+(#advanced-options)=
 
 ### Advanced Options
 
@@ -142,7 +142,7 @@ This feature allows you to configure different advanced options.
   Example: `gl4es supertuxkart`
   :::
 
-{#vc-user-settings}
+(#user-settings)=
 
 ### User Settings
 
@@ -153,7 +153,7 @@ This feature allows you to configure different user settings.
 - Change hostname: This option allows you to change the system hostname.
   It uses `hostnamectl` to change the system hostname.
 
-{#vc-localization}
+(#localization)=
 
 ### Localization
 
