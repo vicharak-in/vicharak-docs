@@ -3,145 +3,193 @@
 Getting Started
 ================
 
-Turning it on
---------------
+Turning board on
+----------------
 
-- PD Adapter + PD cable required with operating 12V/5A (12V Input only!) 
+- **PD Adapter + PD cable** required with operating 12V/5A
 
-        .. image:: images/Power_option.webp
-         :width: 800
-- Boot from SDcard
+.. danger::
+    12V Power Input only!
 
-        .. image:: images/SDcard.webp
-         :width: 800
+.. image:: images/Power_option.webp
+   :width: 50%
 
-    To make an SD card bootable, follow these steps:
+----------------
 
-        1. Format the SD card using a suitable file system (such as FAT32).
+Booting from SDcard
+^^^^^^^^^^^^^^^^^^^
 
-        2. Obtain the bootable image or operating system files for your desired platform.
+.. image:: images/SDcard.webp
+   :width: 50%
 
-        3. Use a disk imaging tool (e.g., Etcher, Win32 Disk Imager) to write the bootable image onto the SD card.
+**To make an SD card bootable, follow these steps:**
 
-        4. Safely eject the SD card from your computer.
+1. Format the SD card using a suitable file system (such as FAT32).
+2. Obtain the bootable image or operating system files for your desired platform.
+3. Use a disk imaging tool (e.g., Etcher, Win32 Disk Imager) to write the bootable image onto the SD card.
+4. Safely eject the SD card from your computer.
+5. Insert the bootable SD card into the target device.
+6. Power on the device to initiate the boot process from the SD card.
 
-        5. Insert the bootable SD card into the target device.
+Booting from eMMC
+^^^^^^^^^^^^^^^^^
 
-        6. Power on the device to initiate the boot process from the SD card.
+.. warning::
+   Remove SDcard if inserted
 
-- Boot from eMMC (Remove SDcard if inserted)
+.. image:: images/eMMC_boot.webp
+    :width: 50%
 
-        .. image:: images/eMMC_boot.webp
-         :width: 800     
+- When the power cable is connected, the **red LED** will be activated, and you can observe its illumination in the image displayed below.
 
-- When the power cable is connected, the red LED will be activated, and you can observe its illumination in the image displayed below.
+.. image:: images/Power_LED.webp
+    :width: 50%
 
-        .. image:: images/Power_LED.webp
-         :width: 800
+Once the booting process is finished, you will notice the activation of the **blue LED**, indicated by a blinking pattern, as demonstrated in the image provided below.
 
-Once the booting process is finished, you will notice the activation of the blue LED, indicated by a blinking pattern, as demonstrated in the image provided below.
+.. image:: images/User_LEDs.webp
+    :width: 50%
 
-        .. image:: images/User_LEDs.webp
-         :width: 800 
 
-How it can be accessed
-^^^^^^^^^^^^^^^^^^^^^^
+----------------
 
-    - *Micro HDMI*: Vaaman SBC is equipped with a micro HDMI port, which allows for easy connection to a display. By using a micro HDMI to HDMI cable or adapter, users can connect Vaaman to a monitor or TV with an HDMI input. This enables direct visual access to the graphical user interface (GUI) or command-line interface (CLI) on the connected display.
+How to access your Vaaman board
+-------------------------------
 
-        .. image:: images/HDMI_Option.webp
-         :width: 800
+Using Micro HDMI
+^^^^^^^^^^^^^^^^
 
-    - *Serial*: Vaaman also provides a serial interface, typically in the form of UART (Universal Asynchronous Receiver-Transmitter) pins. Users can access the system's console or terminal interface by connecting to these serial pins using a serial cable or adapter. This method is often used for debugging, troubleshooting, or accessing the system when other interfaces are not available.
+Vaaman SBC is equipped with a micro HDMI port, which allows for easy connection to a display. By using a micro HDMI to HDMI cable or adapter, users can connect Vaaman to a monitor or TV with an HDMI input. This enables direct visual access to the graphical user interface (GUI) or command-line interface (CLI) on the connected display.
 
-        .. image:: images/USB_Serial.webp
-         :width: 800
+.. image:: images/HDMI_Option.webp
+    :width: 50%
 
-        When accessing Vaaman SBC through the serial interface, it is important to configure the serial parameters correctly. For RK3399-based systems, the following parameters are typically used:
+Using Serial Console
+^^^^^^^^^^^^^^^^^^^^
 
-        Baud rate: 1500000
+Vaaman also provides a serial interface, typically in the form of UART (Universal Asynchronous Receiver-Transmitter) pins. Users can access the system's console or terminal interface by connecting to these serial pins using a serial cable or adapter. This method is often used for debugging, troubleshooting, or accessing the system when other interfaces are not available.
 
-        Data bit: 8
-        
-        Stop bit: 1
-        
-        Parity check: none
-        
-        Flow control: none
+.. image:: images/USB_Serial.webp
+    :width: 50%
 
-        For Windows users, you can download PuTTY, :https://www.putty.org/
+.. note::
+    When accessing Vaaman SBC through the serial interface, it is important to configure the serial parameters correctly. For RK3399-based systems, the following parameters are typically used:
 
-        .. image:: images/Putty_step.webp
-         :width: 800
+    Baud rate: `1500000`
 
-        To use serial debugging on Ubuntu
+    Data bit: `8`
 
-            1. Open a terminal on your Ubuntu machine. You can do this by searching for "Terminal" in the applications menu or by using the shortcut Ctrl+Alt+T.
+    Stop bit: `1`
 
-            2. Update the package list to ensure you have the latest package information. In the terminal, run the following command:
+    Parity check: `none`
 
-                sudo apt update
+    Flow control: `none`
 
-            3. Install GTKTerm by running the following command:
+.. tip::
+    For Windows users, you can download `PuTTY <https://www.putty.org/>`_, to access the serial console.
 
-                sudo apt install gtkterm
+.. image:: images/Putty_step.webp
+    :width: 50%
 
-            4. After the installation is complete, connect your Vaaman SBC to your Ubuntu machine using a serial cable. Ensure that the cable is properly connected to the appropriate serial port on both devices.
+**To use serial debugging on Ubuntu**
 
-            5. Run GTKTerm by executing the following command:
+1. Open a terminal on your Ubuntu machine.
 
-                sudo gtkterm
+.. tip::
+    You can do this by searching for **"terminal"** in the applications menu or by using the shortcut **Ctrl+Alt+T**.
 
-            6. To access the configuration settings for GTKTerm, you can follow either of these methods:
+2. Update the package list to ensure you have the latest package information. In the terminal, run the following command:
 
-                1. Click on the "Configuration" menu and select "Port."
+::
 
-                    OR
+    sudo apt update
 
-                2. Press Ctrl+Shift+S.
+3. Install **GTKTerm** by running the following command:
 
-                By using either of these methods, you will be able to access the configuration settings in GTKTerm, where you can make adjustments to the port settings for your serial connection, as shown in the image below:
+::
 
-        .. image:: images/GTKTerm.webp
-         :width: 800
+    sudo apt install gtkterm
 
-    - SSH: Vaaman supports SSH (Secure Shell), which allows for secure remote access to the system. By establishing an SSH connection, users can remotely connect to Vaaman from another device, such as a computer or smartphone, over a network. This method provides a secure command-line interface to administer, configure, and execute commands on the Vaaman SBC.
+4. After the installation is complete, connect your Vaaman SBC to your Ubuntu machine using a serial cable.
 
-        1. Install OpenSSH server by executing the following command:
+.. note::
+    Ensure that the cable is properly connected to the appropriate serial port on both devices.
 
-            sudo apt install openssh-server
+5. Run **GTKTerm** by executing the following command:
 
-        2. Once OpenSSH is installed, it should start automatically. You can verify its status by running:
+::
 
-            sudo systemctl status ssh
+    sudo gtkterm
 
-            If it is active and running, you should see a "active (running)" message.
+6. To access the configuration settings for GTKTerm, you can follow either of these methods:
 
-        3. Next, install Avahi-daemon to enable local name resolution. Run the following command:
+Click on the **"Configuration"** menu and select **"Port"**.
 
-            sudo apt install avahi-daemon
+OR
 
-        4. After the installation, Avahi-daemon should start automatically. Verify its status by running:
+Press **Ctrl+Shift+S**.
 
-            sudo systemctl status avahi-daemon
+By using either of these methods, you will be able to access the configuration settings in GTKTerm, where you can make adjustments to the port settings for your serial connection, as shown in the image below:
 
-            Ensure that it is active and running.
+.. image:: images/GTKTerm.webp
+    :width: 50%
 
-        To access Vaaman SBC through SSH, you can use either of the following commands:
+Using SSH
+^^^^^^^^^
 
-        5. SSH using the IP address:
+Vaaman supports **SSH (Secure Shell)**, which allows for secure remote access to the system. By establishing an SSH connection, users can remotely connect to Vaaman from another device, such as a computer or smartphone, over a network. This method provides a secure command-line interface to administer, configure, and execute commands on the Vaaman SBC.
 
-                ssh username@ip_address
+1. Install **OpenSSH server** by executing the following command:
 
-                Replace "username" with the appropriate username for Vaaman and "ip_address" with the actual IP address assigned to Vaaman on the network.
+::
 
-        6. SSH using the PC name (hostname):
+    sudo apt install openssh-server
 
-            ssh username@pc-name.local
+2. Once **OpenSSH** is installed, it should start automatically. You can verify its status by running:
 
-            Replace "username" with the appropriate username for Vaaman and "pc-name" with the actual PC name assigned to Vaaman on the network.
+::
+
+    sudo systemctl status ssh
+
+.. note::
+    If it is active and running, you should see a **active (running)** message.
+
+3. Next, install **Avahi-daemon** to enable local name resolution. Run the following command:
+
+::
+
+    sudo apt install avahi-daemon
+
+4. After the installation, **Avahi-daemon** should start automatically. Verify its status by running:
+
+::
+
+    sudo systemctl status avahi-daemon
+
+.. note::
+    Ensure that it is active and running by checking for the **active (running)** message.
+
+**To access Vaaman SBC through SSH, you can use either of the following commands:**
+
+5. SSH using the IP address:
+
+::
+
+    ssh username@ip_address
+
+.. tip::
+    Replace **"username"** with the appropriate username for Vaaman and **"ip_address"** with the actual IP address assigned to Vaaman on the network.
+
+6. SSH using the PC name (hostname):
+
+::
+
+    ssh username@pc-name.local
+
+.. tip::
+    Replace **"username"** with the appropriate username for Vaaman and **"pc-name"** with the actual PC name assigned to Vaaman on the network.
 
 Where to go from here
 ---------------------
-    - :ref:`Vaaman Application <vaaman-applications>`
-    - :ref:`Downloads <Downloads>`
+- :ref:`Vaaman Application <vaaman-applications>`
+- :ref:`Downloads <Downloads>`

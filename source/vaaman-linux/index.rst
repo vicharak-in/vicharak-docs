@@ -1,27 +1,22 @@
-.. Sphinx with Markdown documentation master file, created by
-   sphinx-quickstart on Thu Oct  6 19:07:54 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Vaaman Linux Documentation
-================================================
+==========================
 
-This is the documentation for the Vicharak Vaaman Linux Specific Documentation.
+This documentation pertains to the specific documentation for Vicharak Vaaman Linux. It encompasses information about the development, configuration, and usage of the Vaaman Linux Operating System.
+
+**Guide to Linux Development**
+This guide focuses on the creation of the Vaaman Linux Operating System. It includes instructions on developing components like the bootloader, kernel, and rootfs.
+
+**Guide to Linux Configuration**
+This guide provides information on configuring the Vaaman Linux Operating System. It covers the tools and scripts used to configure elements such as the bootloader, kernel, and rootfs.
+
+**Guide to Linux Usage**
+This guide provides instructions on how to use the Vaaman Linux Operating System. It includes user-specific configurations and tutorials for the Vaaman Linux Operating System.
+
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Contents:
 
-    kernel
-    u-boot
-    android12
-    debian11
-    ubuntu2204
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+    linux-development-guide/index
+    linux-configuration-guide/index
+    linux-usage-guide/index
