@@ -23,6 +23,8 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx_design",
+    "sphinx_favicon",
+    "sphinx_tabs.tabs",
     "sphinx_togglebutton",
     "sphinxawesome_theme",
 ]
@@ -36,6 +38,8 @@ myst_enable_extensions = [
     "colon_fence",
     # Enable definition lists
     "deflist",
+    # Enable linkify extension
+    "linkify",
     # Automatically convert standard quotations
     # to their opening/closing variants
     "smartquotes",
@@ -69,6 +73,19 @@ html_theme_options = {
     "logo_dark": "_static/vicharak-logo-dark.svg",
     "show_breadcrumbs": True,
 }
+# HTML favicon
+html_favicon = "_static/favicon.ico"
+
+favicons = [
+    "android-chrome-192x192.png",
+    "android-chrome-512x512.png",
+    "apple-touch-icon.png",
+    "favicon-16x16.png",
+    "favicon-32x32.png",
+    "favicon.ico",
+    "mstile-150x150.png",
+    "safari-pinned-tab.svg",
+]
 
 # Breathe extension settings
 breathe_projects = {"drm_fpga_write": os.getcwd() + "/../xml/"}
