@@ -70,7 +70,7 @@ html_static_path = ["_static"]
 html_title = "Vicharak"
 # CSS files to include
 html_css_files = [
-    "custom.css",
+    "css/custom.css",
 ]
 # Theme options
 html_theme_options = {
