@@ -79,27 +79,27 @@ html_static_path = ["_static"]
 html_title = "Vicharak"
 # CSS files to include
 html_css_files = [
-    "custom.css",
+    "css/custom.css",
 ]
 # Theme options
 html_theme_options = {
     # sphinxawesome_theme options
-    "logo_light": "_static/vicharak-logo-light.svg",
-    "logo_dark": "_static/vicharak-logo-dark.svg",
+    "logo_light": "_static/images/vicharak-logo-light.svg",
+    "logo_dark": "_static/images/vicharak-logo-dark.svg",
     "show_breadcrumbs": True,
 }
 # HTML favicon
-html_favicon = "_static/favicon.ico"
+html_favicon = "_static/images/favicon.ico"
 
 favicons = [
-    "android-chrome-192x192.png",
-    "android-chrome-512x512.png",
-    "apple-touch-icon.png",
-    "favicon-16x16.png",
-    "favicon-32x32.png",
-    "favicon.ico",
-    "mstile-150x150.png",
-    "safari-pinned-tab.svg",
+    "images/android-chrome-192x192.png",
+    "images/android-chrome-512x512.png",
+    "images/apple-touch-icon.png",
+    "images/favicon-16x16.png",
+    "images/favicon-32x32.png",
+    "images/favicon.ico",
+    "images/mstile-150x150.png",
+    "images/safari-pinned-tab.svg",
 ]
 
 # Breathe extension settings
