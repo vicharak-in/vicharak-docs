@@ -32,7 +32,7 @@ Use `git clone --depth=1` to shallow clone the repository
 
 ### Download the source code from github
 
-![vicharak-uboot-github](../../_static/vicharak-uboot-github.webp)
+![vicharak-uboot-github](../../_static/images/vicharak-uboot-github.webp)
 
 **Follow the steps in above image or else try downloading from terminal.**
 

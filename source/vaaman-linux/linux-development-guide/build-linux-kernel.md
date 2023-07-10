@@ -28,7 +28,7 @@ git clone https://github.com/vicharak-in/linux-kernel -b <branch>
 
 ### Download the kernel as zip
 
-![vicharak-linux-kernel-github](../../_static/vicharak-linux-kernel-github.webp)
+![vicharak-linux-kernel-github](../../_static/images/vicharak-linux-kernel-github.webp)
 
 **Follow the steps in above image or else try downloading from terminal.**
 
