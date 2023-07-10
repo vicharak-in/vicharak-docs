@@ -18,5 +18,8 @@ help:
 %: Makefile
 	sphinx-build -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
+spelling:
+	sphinx-build -b spelling "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
 clean:
 	rm -rf ${BUILDDIR}

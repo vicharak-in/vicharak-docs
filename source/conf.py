@@ -27,7 +27,16 @@ extensions = [
     "sphinx_tabs.tabs",
     "sphinx_togglebutton",
     "sphinxawesome_theme",
+    "sphinxcontrib.spelling",
 ]
+
+# Spelling extension settings
+spelling_ignore_contributor_names = True
+spelling_ignore_pypi_package_names = True
+spelling_show_suggestions = True
+spelling_show_whole_line = True
+spelling_word_list_filename = "spelling_wordlist.txt"
+spelling_exclude_patterns = ["drm_fpga_api/**", "drm_fpga_write/**", "_build/**"]
 
 # Enable colon fence for code blocks
 myst_enable_extensions = [

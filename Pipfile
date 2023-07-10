@@ -15,6 +15,7 @@ sphinx-favicon = "*"
 sphinx-tabs = "*"
 sphinx-togglebutton = "*"
 sphinxawesome_theme = "*"
+sphinxcontrib-spelling = "*"
 
 [requires]
 python_version = "3"
