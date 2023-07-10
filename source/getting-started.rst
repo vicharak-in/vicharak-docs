@@ -16,8 +16,8 @@ Turning board on
 
 ----------------
 
-Booting from SDcard
-^^^^^^^^^^^^^^^^^^^
+Booting from SD Card
+^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/SDcard.webp
    :width: 50%
@@ -35,7 +35,7 @@ Booting from eMMC
 ^^^^^^^^^^^^^^^^^
 
 .. warning::
-   Remove SDcard if inserted
+   Remove SD Card if inserted
 
 .. image:: images/eMMC_boot.webp
     :width: 50%
