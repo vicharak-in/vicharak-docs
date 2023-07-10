@@ -16,9 +16,9 @@ Vaaman Downloads
 
 
 **Vaaman Pinouts Guide**
-    `Download Pinouts <_static/Vaaman0.3_Pinout_Guide_Rev0.1.pdf>`_
+    `Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.1.pdf>`_
 
-    `RK3399 GPIO Numbers Counts <_static/RK3399_GPIO_NUMBERS_Rev0.1.xlsx>`_
+    `RK3399 GPIO Numbers Counts <_static/files/RK3399_GPIO_NUMBERS_Rev0.1.xlsx>`_
 
 **Mechanical Information**
     Dimensions: `85mm x 85mm`
@@ -28,4 +28,4 @@ Vaaman Downloads
     Mounting holes: 4x M2.5 holes for easy installation
 
 **Step File (Compression: 7z)**
-    `Download Vaaman 3D File <_static/Vaaman_3D_file_V0.3.step.7z>`_
+    `Download Vaaman 3D File <_static/files/Vaaman_3D_file_V0.3.step.7z>`_
