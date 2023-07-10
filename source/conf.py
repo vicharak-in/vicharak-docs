@@ -49,7 +49,13 @@ myst_enable_extensions = [
     "tasklist",
 ]
 
-suppress_warnings = ["myst.header"]
+# Enable MyST implicit header references
+myst_heading_anchors = 4
+
+# Convert MyST titles to header
+myst_title_to_header = True
+
+suppress_warnings = ["myst.header", "myst.xref_missing"]
 
 # Source file parsers
 source_suffix = [".rst", ".md"]
