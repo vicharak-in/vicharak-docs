@@ -23,6 +23,7 @@ if errorlevel 9009 (
 )
 
 if "%1" == "" goto help
+if "%1" == "spelling" goto spelling
 
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 goto end
@@ -30,5 +31,10 @@ goto end
 :help
 %SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 
+:spelling
+echo "Spellchecker is disabled for windows"
+echo "https://github.com/pyenchant/pyenchant/issues/306"
+goto end
+%SPHINXBUILD% -b spelling %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 :end
 popd
