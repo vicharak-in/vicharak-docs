@@ -58,6 +58,9 @@ myst_enable_extensions = [
     "tasklist",
 ]
 
+sphinx_tabs_valid_builders = ["linkcheck"]
+sphinx_tabs_disable_tab_closing = True
+
 # Enable MyST implicit header references
 myst_heading_anchors = 4
 

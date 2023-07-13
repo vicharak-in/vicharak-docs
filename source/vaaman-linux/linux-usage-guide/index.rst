@@ -1,7 +1,8 @@
 Linux Usage Guide
 =================
 
-This guide is intended to help you get started with Linux on your Vicharak Board.
+This guide provides instructions on how to use the Vaaman Linux Operating System. It includes user-specific configurations and tutorials for the Vaaman Linux Operating System.
+This guide will get you started with the Vaaman Linux Operating System. You will learn how to install the Vaaman Linux Operating System on your device, how to configure it, and how to use it.
 
 .. toctree::
     :maxdepth: 2

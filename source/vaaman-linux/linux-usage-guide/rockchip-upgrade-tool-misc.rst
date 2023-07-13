@@ -6,6 +6,7 @@ Flash different images using Linux_Upgrade_Tool
 .. attention:: **Pre-requisites**
 
     1. You need to have the **Linux_Upgrade_Tool** on your host machine.
+        `Download Linux_Upgrade_Tool <#>`_ the tool and extract it.
 
     2. You need to load the **rk3399_loader_v1.xx.xxx.bin** file to the board.
 
@@ -41,7 +42,7 @@ or
 
     ./upgrade_tool wl 16384 u-boot.img
 
-or if you used `update firmware` method to flash system image, you can use
+or if you used **Rockchip updateimg firmware** method to flash system image, you can use
 
 ::
 
@@ -60,7 +61,7 @@ or
 
     ./upgrade_tool wl 24576 trust.img
 
-or if you used `update firmware` method to flash system image, you can use
+or if you used **Rockchip updateimg firmware** method to flash system image, you can use
 
 ::
 
@@ -79,7 +80,7 @@ or
 
     ./upgrade_tool wl 32768 misc.img
 
-or if you used `update firmware` method to flash system image, you can use
+or if you used **Rockchip updateimg firmware** method to flash system image, you can use
 
 ::
 
@@ -98,7 +99,7 @@ or
 
     ./upgrade_tool wl 40960 boot.img
 
-or if you used `update firmware` method to flash system image, you can use
+or if you used **Rockchip updateimg firmware** method to flash system image, you can use
 
 ::
 
@@ -117,7 +118,7 @@ or
 
     ./upgrade_tool wl 174080 recovery.img
 
-or if you used `update firmware` method to flash system image, you can use
+or if you used **Rockchip updateimg firmware** method to flash system image, you can use
 
 ::
 
@@ -135,7 +136,7 @@ or
 
     ./upgrade_tool wl 241664 backup.img
 
-or if you used `update firmware` method to flash system image, you can use
+or if you used **Rockchip updateimg firmware** method to flash system image, you can use
 
 ::
 
