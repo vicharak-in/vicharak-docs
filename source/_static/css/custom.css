@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Inter');
-@import url('https://fonts.googleapis.com/css?family=Manrope');
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url("https://fonts.googleapis.com/css?family=Manrope");
 
 body {
   font-family: "Manrope", "Inter", sans-serif;
@@ -17,4 +17,8 @@ body {
 #content ul:not(.search) p,
 #content ul:not(.search) > li {
   margin-top: 0.9rem;
+}
+
+.container {
+  max-width: 100%;
 }
