@@ -1,8 +1,7 @@
 Linux Configuration Guide
 =========================
 
-Linux Configuration Guide is a collection of Linux configuration guides and tutorials.
-These guides are written in a way that even a beginner can follow them.
+This guide provides information on configuring the Vaaman Linux Operating System. It covers the tools and scripts used to configure elements such as the bootloader, kernel, and rootfs.
 
 .. toctree::
     :maxdepth: 2

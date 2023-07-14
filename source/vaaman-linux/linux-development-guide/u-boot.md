@@ -9,18 +9,20 @@ Vicharak provides two different source for u-boot:
 There are separate methods to compile and flash u-boot for these above sources.
 :::
 
-## Installing the system dependencies
+## Build Vendor specific u-boot
+
+### Installing the system dependencies
 
 ```bash
 sudo apt-get install build-essential python libssl-dev git-core \
 gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler gcc-aarch64-linux-gnu mtools parted pv
 ```
 
-## Getting the source
+### Getting the source
 
 The source code for u-boot has been published to our [GitHub organisation](https://github.com/vicharak-in).
 
-### Clone the repository using git
+#### Clone the repository using git
 
 ```bash
 git clone https://github.com/vicharak/u-boot-vicharak
@@ -30,7 +32,7 @@ git clone https://github.com/vicharak/u-boot-vicharak
 Use `git clone --depth=1` to shallow clone the repository
 :::
 
-### Download the source code from github
+#### Download the source code from github
 
 ![vicharak-uboot-github](../../_static/images/vicharak-uboot-github.webp)
 
@@ -42,15 +44,13 @@ wget https://github.com/vicharak-in/u-boot-vicharak/archive/refs/heads/master.zi
 unzip u-boot-vicharak-master.zip
 ```
 
-## Building u-boot
+### Compiling u-boot
 
-### Enter the u-boot directory
+#### Enter the u-boot directory
 
 ```bash
 cd <u-boot-directory>
 ```
-
-### Compile u-boot
 
 #### Compile using Rockchip u-boot script
 
@@ -86,13 +86,13 @@ trust.img
 rk3399_loader_v1.xx.xxx.bin
 :::
 
-## How to flash or update u-boot
+## How to flash or upgrade u-boot
 
 Once you have successfully compiled the u-boot. You are now ready to flash it on your vaaman board.
 
 For Vicharak EMMC builds you can follow the `Linux Upgrade Tool` guide
 :::{admonition} Refer to
-[Flash u-boot to eMMC](../linux-usage-guide/rockchip-upgrade-tool-misc.rst#flashing-u-boot-img)
+[Flash u-boot to eMMC using upgrade_tool](../linux-usage-guide/rockchip-upgrade-tool-misc.rst)
 :::
 
 or
@@ -129,6 +129,37 @@ Finally reboot the board.
 sudo reboot
 ```
 
+## Verify the u-boot version
+
+After rebooting the board, you can verify the u-boot version using `version` command.
+
+```bash
+version
+```
+
+or
+
+There will be a version string printed on the console during boot up.
+
+```bash
+U-Boot 2017.09-ge629234bf25-230427 #vicharak (Jul 11 2023 - 16:43:11 +0530)
+```
+
+### Enter the u-boot shell or command prompt
+
+Vaaman's u-boot is configured for development purpose.
+It will allow you 3 seconds to enter the u-boot shell before booting the kernel.
+
+Press **CTRL+C** to enter the u-boot shell.
+
+```{tip}
+Set `CONFIG_BOOTDELAY` to `0` in `configs/rk3399-vaaman_defconfig` to disable the delay.
+
+And recompile the u-boot.
+```
+
 :::{seealso}
 [How to build linux kernel](./build-linux-kernel.md)
+
+[How to use rockchip upgrade tool](../linux-usage-guiderrockchip-develop-guide.md)
 :::

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+@import url('https://fonts.googleapis.com/css?family=Manrope');
+
+body {
+  font-family: "Manrope", "Inter", sans-serif;
+}
+
 .contents .caption,
 .contents .topic-title,
 .toctree-wrapper .caption,
