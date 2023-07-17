@@ -9,6 +9,14 @@ set SPHINXBUILD=sphinx-build
 set SOURCEDIR=source
 set BUILDDIR=_build
 
+if "%VIRTUAL_ENV%" == "" (
+    del Pipfile.lock
+	python -m pipenv update
+	python -m pipenv shell
+
+	goto end
+)
+
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
 	echo.
@@ -36,5 +44,9 @@ echo "Spellchecker is disabled for windows"
 echo "https://github.com/pyenchant/pyenchant/issues/306"
 goto end
 %SPHINXBUILD% -b spelling %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
+
 :end
+if not "%VIRTUAL_ENV%" == "" (
+	exit /b 0
+)
 popd

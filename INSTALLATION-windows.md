@@ -21,6 +21,9 @@ pip install pipenv
 
 ### Install the dependencies inside python virtual environment
 
+> :warning: You can also directly use ./make.bat to setup virtualenv on your windows terminal. \
+> Skip the following steps below if you are using ./make.bat to setup virtualenv
+
 Use following command to setup python virtual environment for building **vaaman-doc**.
 ```bash
 python -m pipenv update
