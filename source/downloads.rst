@@ -18,7 +18,7 @@ Data-sheets
 
 Vaaman Pin-outs Guide
 ^^^^^^^^^^^^^^^^^^^^^
-`Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.1.pdf>`_
+`Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.2.pdf>`_
 
 :doc:`Vaaman GPIO Numbers Count <rk3399-gpio-numbers-count>`
 
