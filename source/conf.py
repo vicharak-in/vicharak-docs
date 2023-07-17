@@ -5,6 +5,7 @@
 import os
 import sys
 from datetime import date
+from sphinxawesome_theme.postprocess import Icons
 
 sys.path.insert(0, os.path.abspath("_themes"))
 
@@ -93,6 +94,8 @@ html_theme_options = {
 }
 # HTML favicon
 html_favicon = "_static/images/favicon.ico"
+# HTML Permalinks icon
+html_permalinks_icon = Icons.permalinks_icon
 
 favicons = [
     "images/android-chrome-192x192.png",
