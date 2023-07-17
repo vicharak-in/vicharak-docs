@@ -14,6 +14,18 @@ body {
   padding-top: 1.5rem;
 }
 
+.contents ul,
+.toctree-wrapper ul {
+  list-style-type: disc !important;
+  margin-left: 1.5rem !important;
+}
+.contents ul li a.reference,
+.toctree-wrapper ul li a.reference {
+  font-weight: 500 !important;
+  font-size: 1.1rem;
+  padding-left: 0.5rem;
+}
+
 #content ul:not(.search) p,
 #content ul:not(.search) > li {
   margin-top: 0.9rem;
