@@ -16,7 +16,6 @@ prior to system boot and after the system boots.
 :::
 
 ::::{admonition} **Vicharak Config TUI**
-:class: dropdown
 
 ```bash
 ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
@@ -59,7 +58,7 @@ The above menu might be shown differently depending on the terminal style.
 - **Enter** key is used to confirm the corresponding option.
 - **ESC** key is used to do back to previous menu.
 
-(#available-features)=
+(available-features)=
 
 ## Available Features
 
@@ -78,7 +77,7 @@ The above menu might be shown differently depending on the terminal style.
 - [Localization](#localization)
   Change Timezone/Locale/Keyboard and WiFi Country
 
-(#system-maintenance)=
+(system-maintenance)=
 
 ### System Maintenance
 
@@ -89,7 +88,7 @@ This feature allows you to update the packages and bootloader.
 - Update bootloader: This option allows you to update the bootloader. It uses
   `setup.sh` installed from `vicharak-firmware` package to update the bootloader.
 
-(#hardware)=
+(hardware)=
 
 ### Hardware
 
@@ -104,7 +103,7 @@ This feature allows you to configure different hardware options.
 - DSI mirroring: This option allows you to enable/disable DSI mirroring.
   It uses `vicharak-config` to enable/disable DSI mirroring.
 
-(#overlays)=
+(overlays)=
 
 ### Overlays
 
@@ -116,7 +115,7 @@ This feature allows you to configure different overlays options.
 - Build third-party DTBO: This option allows you to build the third-party DTBO.
   It builds and installs the dtbo using the `device-tree-compiler` utility.
 
-(#connectivity)=
+(connectivity)=
 
 ### Connectivity
 
@@ -124,7 +123,7 @@ This feature allows you to configure different connectivity options.
 
 - Configure network: This option allows you to configure network using `nmtui`.
 
-(#advanced-options)=
+(advanced-options)=
 
 ### Advanced Options
 
@@ -142,7 +141,7 @@ This feature allows you to configure different advanced options.
   Example: `gl4es supertuxkart`
   :::
 
-(#user-settings)=
+(user-settings)=
 
 ### User Settings
 
@@ -153,7 +152,7 @@ This feature allows you to configure different user settings.
 - Change hostname: This option allows you to change the system hostname.
   It uses `hostnamectl` to change the system hostname.
 
-(#localization)=
+(localization)=
 
 ### Localization
 

@@ -69,7 +69,7 @@ It may be used in the future as a backup for recovery, similar to Android (detai
 
 #### rootfs
 
-This partition stores the rootfs.img compiled by buildroot, debian or ubuntu rootfs and is read-only.
+This partition stores the rootfs.img compiled by buildroot, Debian or Ubuntu rootfs and is read-only.
 
 #### userdata
 

@@ -21,5 +21,12 @@ help:
 spelling:
 	sphinx-build -b spelling "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
+mdspell:
+ifeq (, $(shell which mdspell))
+	$(error "No mdspell package installed, consider installing it with 'npm install -g markdown-spellcheck'")
+endif
+
+	find source -type f -name \*.md -exec mdspell - {} \;
+
 clean:
 	rm -rf ${BUILDDIR}

@@ -3,6 +3,67 @@
 Vaaman Downloads
 ================
 
+OS Images
+^^^^^^^^^
+
+Android 12.1
+------------
+
+`Vaaman Android Image <http://24.199.117.173/linux-system-images/vaaman/android/>`_
+
+
+Debian 11
+---------
+
+`Vaaman Debian Image <http://24.199.117.173/linux-system-images/vaaman/debian/>`_
+
+Ubuntu 20.04
+------------
+
+`Vaaman Ubuntu Image <http://24.199.117.173/linux-system-images/vaaman/ubuntu/>`_
+
+Community Images
+----------------
+
+**Coming Soon**
+
+.. note::
+    The images are compressed using XZ. You can use `7zip <https://www.7-zip.org/>`_ or `WinRAR <https://www.win-rar.com/>`_ to extract the file.
+
+    |
+
+    For **Linux**, you can use the following command to extract the image:
+
+    .. code-block:: console
+
+       xz -d <image_name>.xz
+
+|
+
+.. seealso::
+   How to flash the image to the board: :doc:`Flashing the image <vaaman-linux/linux-usage-guide/rockchip-develop-guide>`
+
+   :doc:`Vaaman Debian and Ubuntu Guide <vaaman-linux/linux-usage-guide/debian-ubuntu-guide>`
+
+OS Utilities
+^^^^^^^^^^^^
+
+.. list-table::
+    :widths: 25 100
+    :header-rows: 1
+
+    * - **Utility**
+      - **Download Link**
+
+    * - Rockchip Linux Upgrade Tool
+      - https://github.com/vicharak-in/Linux_Upgrade_Tool
+
+    * - Rockchip Android Tool
+      - https://github.com/vicharak-in/Android_Tool
+
+    * - Balena Etcher
+      - https://github.com/balena-io/etcher/releases
+
 Data-sheets
 ^^^^^^^^^^^
 `Rockchip RK3399 Datasheet <https://www.rockchip.fr/RK3399%20datasheet%20V1.8.pdf>`_
@@ -24,15 +85,33 @@ Vaaman Pin-outs Guide
 
 Mechanical Information
 ^^^^^^^^^^^^^^^^^^^^^^
-Dimensions: `85mm x 85mm`
 
-Weight: --- grams
+.. list-table::
+    :widths: 25 100
+    :header-rows: 1
 
-Mounting holes: 4x M2.5 holes for easy installation
+    * - **Property**
+      - **Value**
+
+    * - Dimensions
+      - 85mm x 85mm
+
+    * - Weight
+      - X grams
+
+    * - Mounting holes
+      - 4x M2.5 holes for easy installation
 
 Step File
 ^^^^^^^^^
 `Download Vaaman 3D File <_static/files/Vaaman_3D_file_V0.3.step.7z>`_
 
 .. note::
-   The step file is compressed using 7zip. You can use `7zip <https://www.7-zip.org/>`_ to extract the file.
+   The step file is compressed using 7zip. You can use `7zip <https://www.7-zip.org/>`_ or `WinRAR <https://www.win-rar.com/>`_ to extract the file.
+
+|
+
+.. seealso::
+   How to :ref:`Contribute to Vaaman <contributing>`
+
+   :ref:`Frequently asked questions <faq>`

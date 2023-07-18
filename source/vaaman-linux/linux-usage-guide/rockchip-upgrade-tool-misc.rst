@@ -6,7 +6,7 @@ Flash different images using Linux_Upgrade_Tool
 .. attention:: **Pre-requisites**
 
     1. You need to have the **Linux_Upgrade_Tool** on your host machine.
-        `Download Linux_Upgrade_Tool <#>`_ the tool and extract it.
+        Download `Linux_Upgrade_Tool <https://github.com/vicharak-in/Linux_Upgrade_Tool>`_.
 
     2. You need to load the **rk3399_loader_v1.xx.xxx.bin** file to the board.
 

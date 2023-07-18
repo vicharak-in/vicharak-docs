@@ -1,3 +1,5 @@
+.. _vaaman-linux:
+
 .. Vicharak master file, created by
    sphinx-quickstart on Tue May  9 19:32:34 2023.
    You can adapt this file completely to your liking, but it should at least
@@ -5,29 +7,22 @@
 
 Welcome to Vaaman's documentation!
 ==================================
-The **Vaaman Single Board Computer** (SBC) combines the RK3399 processor and Efinix Trion T120 FPGA. It offers a powerful yet energy-efficient computing solution for various applications. The RK3399 processor provides high performance and low power consumption, while the Trion T120 FPGA allows for customizable hardware acceleration.
+The **Vaaman Single Board Computer** (SBC) combines the **RK3399** processor and **Efinix Trion T120** FPGA. It offers a powerful yet energy-efficient computing solution for various applications. The RK3399 processor provides high performance and low power consumption, while the Trion T120 FPGA allows for customizable hardware acceleration.
 
-With its compact size, the Vaaman SBC is suitable for space-constrained environments and offers a range of connectivity options.
-Overall, it empowers developers to create innovative solutions that require both processing power and hardware customization.
+With its compact size, the Vaaman SBC is suitable for `space-constrained` environments and offers a range of `connectivity options`. Overall, it empowers developers to create innovative solutions that require both processing power and hardware customization.
 
 .. image:: images/Vaaman-top.webp
     :width: 50%
     :align: left
 
-.. note::
-   Check out the :doc:`overview` for a quick introduction to Vaaman, and the :doc:`getting-started` guide to get started with Vaaman.
-
-.. note::
-   We welcome contributions and bug reports through our `GitHub repository <https://github.com/vicharak-in/vaaman-doc>`_. See the :doc:`contributing` guide and :doc:`getting-help` for more information.
-
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: Notes
+   :caption: Contents
 
    Overview <overview>
    Getting Started <getting-started>
-   Getting Help <getting-help>
+   Frequently Asked Questions <faq>
    Vaaman SDK Documentation <vaaman-sdk>
    Vaaman Application Documentation <vaaman-applications>
    Vaaman Linux Documentation <vaaman-linux/index>
@@ -36,3 +31,8 @@ Overall, it empowers developers to create innovative solutions that require both
    :glob:
    :maxdepth: 1
    :caption: Downloads
+
+.. note::
+   We welcome contributions and bug reports through our `GitHub repository <https://github.com/vicharak-in/>`_.
+
+   See the :doc:`contributing` guide and :doc:`faq` for more information.
