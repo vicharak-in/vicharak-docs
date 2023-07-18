@@ -59,8 +59,10 @@ myst_enable_extensions = [
     "tasklist",
 ]
 
+# Sphinx Tabs extension settings
 sphinx_tabs_valid_builders = ["linkcheck"]
 sphinx_tabs_disable_tab_closing = True
+sphinx_tabs_disable_css_loading = True
 
 # Enable MyST implicit header references
 myst_heading_anchors = 4
@@ -83,7 +85,10 @@ html_static_path = ["_static"]
 html_title = "Vicharak"
 # CSS files to include
 html_css_files = [
+    "https://fonts.googleapis.com/css?family=inter:400,400i,700,700i&display=swap",
+    "https://fonts.googleapis.com/css?family=Manropes:400,700&display=swap",
     "css/custom.css",
+    "css/sphinx-tabs.css",
 ]
 # Theme options
 html_theme_options = {
