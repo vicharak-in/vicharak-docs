@@ -1,11 +1,13 @@
-
 Fi
+JTAG
 LocationID
 SoC
 Wi
 api
 armbian
 avahi
+balena
+bitstream
 bootable
 buildroot
 config
@@ -19,6 +21,7 @@ dtbo
 dtbs
 dts
 eMMC
+efinity
 efinix
 extlinux
 fpga
@@ -41,6 +44,7 @@ rockchip
 rockusb
 rootfs
 sdcard
+spi
 struct
 sudo
 toolchain

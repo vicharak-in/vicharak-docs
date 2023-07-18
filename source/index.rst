@@ -11,7 +11,7 @@ The **Vaaman Single Board Computer** (SBC) combines the **RK3399** processor and
 
 With its compact size, the Vaaman SBC is suitable for `space-constrained` environments and offers a range of `connectivity options`. Overall, it empowers developers to create innovative solutions that require both processing power and hardware customization.
 
-.. image:: images/Vaaman-top.webp
+.. image:: _static/images/Vaaman-top.webp
     :width: 50%
     :align: left
 
@@ -26,11 +26,17 @@ With its compact size, the Vaaman SBC is suitable for `space-constrained` enviro
    Vaaman SDK Documentation <vaaman-sdk>
    Vaaman Application Documentation <vaaman-applications>
    Vaaman Linux Documentation <vaaman-linux/index>
+   Vaaman FPGA Programming Documentation <vaaman-fpga>
 
 .. toctree:: downloads
    :glob:
    :maxdepth: 1
    :caption: Downloads
+
+.. toctree:: accessories
+   :glob:
+   :maxdepth: 1
+   :caption: Accessories
 
 .. note::
    We welcome contributions and bug reports through our `GitHub repository <https://github.com/vicharak-in/>`_.

@@ -5,32 +5,27 @@ Vaaman Downloads
 
 OS Images
 ^^^^^^^^^
+.. list-table::
+    :widths: 25 100
+    :header-rows: 1
 
-Android 12.1
-------------
+    * - **Operating System**
+      - **Download Link**
 
-`Vaaman Android Image <http://24.199.117.173/linux-system-images/vaaman/android/>`_
+    * - Android 12.1
+      - http://24.199.117.173/linux-system-images/vaaman/android/
 
+    * - Debian 11
+      - http://24.199.117.173/linux-system-images/vaaman/debian
 
-Debian 11
----------
+    * - Ubuntu 20.04
+      - http://24.199.117.173/linux-system-images/vaaman/ubuntu
 
-`Vaaman Debian Image <http://24.199.117.173/linux-system-images/vaaman/debian/>`_
-
-Ubuntu 20.04
-------------
-
-`Vaaman Ubuntu Image <http://24.199.117.173/linux-system-images/vaaman/ubuntu/>`_
-
-Community Images
-----------------
-
-**Coming Soon**
+    * - Community Images
+      - Coming Soon
 
 .. note::
     The images are compressed using XZ. You can use `7zip <https://www.7-zip.org/>`_ or `WinRAR <https://www.win-rar.com/>`_ to extract the file.
-
-    |
 
     For **Linux**, you can use the following command to extract the image:
 
@@ -56,13 +51,20 @@ OS Utilities
       - **Download Link**
 
     * - Rockchip Linux Upgrade Tool
-      - https://github.com/vicharak-in/Linux_Upgrade_Tool
+      - `V2.1 <https://github.com/vicharak-in/Linux_Upgrade_Tool>`_
 
     * - Rockchip Android Tool
-      - https://github.com/vicharak-in/Android_Tool
+      - `V1.0 <https://github.com/vicharak-in/Android_Tool>`_
 
     * - Balena Etcher
-      - https://github.com/balena-io/etcher/releases
+      - `V1.18.11 <https://github.com/balena-io/etcher/releases/tag/v1.18.11>`_
+
+FPGA Sample Bitstream and HEX files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`Simple LED Blink Demo HEX file <_static/files/sample_led_blink_t120_demo_hex.zip>`_
+
+`Simple LED Blink Demo BIT file <_static/files/sample_led_blink_t120_demo_bit.zip>`_
 
 Data-sheets
 ^^^^^^^^^^^
@@ -81,7 +83,7 @@ Vaaman Pin-outs Guide
 ^^^^^^^^^^^^^^^^^^^^^
 `Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.2.pdf>`_
 
-:doc:`Vaaman GPIO Numbers Count <rk3399-gpio-numbers-count>`
+:ref:`rk3399-gpio-numbers-count`
 
 Mechanical Information
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -115,3 +117,5 @@ Step File
    How to :ref:`Contribute to Vaaman <contributing>`
 
    :ref:`Frequently asked questions <faq>`
+
+   :ref:`Vaaman FPGA Programming <vaaman-fpga>`
