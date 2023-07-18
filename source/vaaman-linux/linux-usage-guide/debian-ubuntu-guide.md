@@ -56,7 +56,7 @@ To access Vaaman SBC through the serial interface, you will need the following:
 
 :::
 
-:::{image} ../../images/USB_Serial.webp
+:::{image} ../../_static/images/vaaman-serial-uart-pins.webp
 :width: 50%
 :::
 

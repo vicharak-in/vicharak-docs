@@ -52,53 +52,65 @@ To boot the board into MaskROM mode, follow the steps below:
 
 You can use the **Vicharak pogo pin** to boot into MaskROM mode.
 
-:::{image} ../../_static/images/vaaman-maskrom-mode.webp
+:::{image} ../../\_static/images/vaaman-maskrom-mode.webp
 :width: 50%
 :::
 ::::
 
-3. After shorting the `eMMC CLK` to `GND`, You can now release the `M` pin.
+3. After shorting the `eMMC CLK` to `GND`, You can now release the Pogo pin.
+
+4. Confirm that the board is in MaskROM mode by running the following command:
+
+:::{card} sudo ./upgrade_tool ld
+
+```bash
+List of rockusb connected(1)
+
+DevNo=1 Vid=0x2207,Pid=0x330c,LocationID=7143 Mode=Maskrom SerialNo=
+```
+
+:::
 
 ---
 
 ::::{admonition} **Linux Upgrade Tool Usage**
 :class: dropdown
 
-```bash
+```text
 ---------------------Tool Usage ---------------------
-Help:             H
-Version:          V
-Log:              LG
+Help:               H
+Version:            V
+Log:                LG
 ------------------Upgrade Command ------------------
 ChooseDevice:		CD
-ListDevice:		LD
+ListDevice:		    LD
 SwitchDevice:		SD
 UpgradeFirmware:	UF <Firmware> [-noreset]
 UpgradeLoader:		UL <Loader> [-noreset] [FLASH|EMMC|SPINOR|SPINAND]
 DownloadImage:		DI <-p|-b|-k|-s|-r|-m|-u|-t|-re image>
 DownloadBoot:		DB <Loader>
-EraseFlash:		EF <Loader|firmware>
+EraseFlash:		    EF <Loader|firmware>
 PartitionList:		PL
-WriteSN:		SN <serial number>
-ReadSN:			RSN
-ReadComLog:		RCL <File>
-CreateGPT:		GPT <Input Parameter> <Output Gpt>
+WriteSN:		    SN <serial number>
+ReadSN:			    RSN
+ReadComLog:		    RCL <File>
+CreateGPT:		    GPT <Input Parameter> <Output Gpt>
 SwitchStorage:		SSD
 ----------------Professional Command -----------------
-TestDevice:		TD
+TestDevice:		    TD
 ResetDevice:		RD [subcode]
-ResetPipe:		RP [pipe]
+ResetPipe:		    RP [pipe]
 ReadCapability:		RCB
 ReadFlashID:		RID
 ReadFlashInfo:		RFI
 ReadChipInfo:		RCI
 ReadSecureMode:		RSM
 WriteSector:		WS  <BeginSec> <PageSizeK> <PageSpareB> <File>
-ReadLBA:		RL  <BeginSec> <SectorLen> [File]
-WriteLBA:		WL  <BeginSec> [SizeSec] <File>
-EraseLBA:		EL  <BeginSec> <EraseCount>
-EraseBlock:		EB <CS> <BeginBlock> <BlokcLen> [--Force]
-RunSystem:		RUN <uboot_addr> <trust_addr> <boot_addr> <uboot> <trust> <boot>
+ReadLBA:		    RL  <BeginSec> <SectorLen> [File]
+WriteLBA:		    WL  <BeginSec> [SizeSec] <File>
+EraseLBA:		    EL  <BeginSec> <EraseCount>
+EraseBlock:		    EB <CS> <BeginBlock> <BlokcLen> [--Force]
+RunSystem:		    RUN <uboot_addr> <trust_addr> <boot_addr> <uboot> <trust> <boot>
 -------------------------------------------------------
 ```
 
@@ -225,8 +237,6 @@ Download Image... (12%)
 :::
 
 :::{seealso}
-[Rockchip Linux Upgrade Tool](#linux-upgrade-tool)
-
 [Debian and Ubuntu Guide](#debian-ubuntu-guide)
 
 [Frequently Asked Questions](#faq)

@@ -11,13 +11,13 @@ Turning board on
 .. danger::
     12V Power Input only!
 
-.. image:: images/Power_option.webp
+.. image:: _static/images/Power_option.webp
    :width: 50%
 
 Booting from SD Card
 ====================
 
-.. image:: images/SDcard.webp
+.. image:: _static/images/vaaman-sdcard-insert.webp
    :width: 50%
 
 **To make an SD card bootable, follow these steps:**
@@ -26,11 +26,11 @@ Booting from SD Card
 2. Obtain the bootable image or operating system files for your desired platform.
 
 .. note::
-    For Vaaman SBC, you can download the latest bootable image from the `Downloads <Downloads>`_ page.
+    For Vaaman SBC, you can download the latest bootable image from the :ref:`downloads` page.
 
 3. Use a disk imaging tool (e.g., Etcher, Win32 Disk Imager) to write the bootable image onto the SD card.
 4. Safely eject the SD card from your computer.
-5. Insert the bootable SD card into the target device.
+5. Insert the bootable SD card into the SD-Card socket.
 6. Power on the device to initiate the boot process from the SD card.
 
 .. note::
@@ -40,26 +40,43 @@ Booting from SD Card
 Booting from eMMC
 =================
 
-
 .. warning::
    Remove SD Card if inserted
 
 .. image:: _static/images/vaaman-maskrom-mode.webp
     :width: 50%
 
-- When the power cable is connected, the **red LED** will be activated, and you can observe its illumination in the image displayed below.
+.. note::
+   | Make sure you have flashed the eMMC with the latest image.
+   | You can find the latest image on the `Downloads <downloads>`_ page.
+   | Flashing instructions can be found in the :doc:`Linux Usage Guide <vaaman-linux/linux-usage-guide/index>`.
 
-.. image:: images/Power_LED.webp
+When the power cable is connected, the **red LED** will be activated, and you can observe its illumination in the image displayed below.
+
+.. image:: _static/images/vaaman-power-led.webp
     :width: 50%
 
 Once the booting process is finished, you will notice the activation of the **blue LED**, indicated by a blinking pattern, as demonstrated in the image provided below.
 
-.. image:: images/User_LEDs.webp
+.. image:: _static/images/vaaman-leds.webp
     :width: 50%
 
 .. note::
     | Check out the :doc:`Linux Usage Guide <vaaman-linux/linux-usage-guide/index>` for more information.
 
+
+Booting from NVMe
+=================
+
+To connect an NVMe drive to Vaaman, follow the steps shown in the image below:
+
+.. image:: _static/images/vaaman-nvme-pcie-interface.webp
+   :width: 800
+
+Place the NVMe board on top of Vaaman and secure it by tightening the nuts.
+
+.. image:: _static/images/vaaman-nvme-module.webp
+   :width: 50%
 
 How to access your Vaaman board
 ===============================
@@ -69,7 +86,7 @@ Using Micro HDMI
 
 Vaaman SBC is equipped with a micro HDMI port, which allows for easy connection to a display. By using a micro HDMI to HDMI cable or adapter, users can connect Vaaman to a monitor or TV with an HDMI input. This enables direct visual access to the graphical user interface (GUI) or command-line interface (CLI) on the connected display.
 
-.. image:: images/HDMI_Option.webp
+.. image:: _static/images/vaaman-hdmi.webp
     :width: 50%
 
 .. _using-serial-console:
@@ -112,7 +129,7 @@ To access Vaaman SBC through the serial interface, you will need the following:
      - Pin 10 (GPIO4_C3)
      - UART2DBG_RX
 
-.. image:: images/USB_Serial.webp
+.. image:: _static/images/vaaman-serial-uart-pins.webp
     :width: 50%
 
 .. note::
@@ -133,7 +150,7 @@ To access Vaaman SBC through the serial interface, you will need the following:
 
 **Serial Console Program**
 
-.. image:: images/Putty_step.webp
+.. image:: _static/images/Putty_step.webp
     :width: 50%
 
 
@@ -206,3 +223,5 @@ To access Vaaman SBC through SSH, you can use either of the following commands:
     :ref:`Downloads <Downloads>`
 
     :doc:`Vaaman Linux Documentation <vaaman-linux/index>`
+
+    :doc:`Vaaman FPGA Documentation <vaaman-fpga>`

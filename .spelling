@@ -108,6 +108,7 @@ dtbs
 misc.img
 boot.img
 recovery.img
+maskrom
  - source/vaaman-linux/linux-development-guide/linux-kernel.md
 20.04
 11
@@ -143,6 +144,8 @@ rockimg
 rk3399_loader_xxx.bin
 0
 some_gpt_image
+50
+some_update_image
  - source/vaaman-linux/linux-usage-guide/debian-ubuntu-guide.md
 12345
 CP2102
@@ -163,6 +166,7 @@ USB_Serial.webp
 50
 dfl
 ip_address
+vaaman-serial-uart-pins
  - source/vaaman-linux/linux-usage-guide/custom-linux-kernel.md
 4
 4.4

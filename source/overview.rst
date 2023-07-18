@@ -21,8 +21,8 @@ Vaaman is useful to a wide range of users, these include but are not limited to:
 Block Diagram
 -------------
 
-.. image:: images/block_diagram.webp
-    :width: 100%
+.. image:: _static/images/block_diagram.webp
+   :width: 100%
 
 Features
 --------
