@@ -291,8 +291,8 @@ and can be used to flash the firmware to the eMMC of the development board or an
 ```
 
 
-```{seealso} Learn more about the Rockchip paramater.txt file\
-[Rockchip paramater.txt](./rockchip-parameter-file.md)
+```{seealso} Learn more about the Rockchip parameter.txt file\
+[Rockchip parameter.txt](./rockchip-parameter-file.md)
 ```
 
 ````
@@ -303,7 +303,7 @@ and can be used to flash the firmware to the eMMC of the development board or an
 
 Vicharak provides another method to pack the firmware into a single image.
 This script uses the RAW image format,
-and can be used to flash the firmware to the eMMC of the development board or any SD Card using
+and can be used to flash the firmware to the eMMC of the development board or any SD-Card using
 the `dd` command or using `Balena Etcher` tool.
 
 ```{seealso}

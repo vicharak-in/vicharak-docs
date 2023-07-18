@@ -1,10 +1,10 @@
 .. _getting-started:
 
 Getting Started
-================
+###############
 
 Turning board on
-----------------
+****************
 
 - **PD Adapter + PD cable** required with operating 12V/5A
 
@@ -14,10 +14,8 @@ Turning board on
 .. image:: images/Power_option.webp
    :width: 50%
 
-----------------
-
 Booting from SD Card
-^^^^^^^^^^^^^^^^^^^^
+====================
 
 .. image:: images/SDcard.webp
    :width: 50%
@@ -26,18 +24,27 @@ Booting from SD Card
 
 1. Format the SD card using a suitable file system (such as FAT32).
 2. Obtain the bootable image or operating system files for your desired platform.
+
+.. note::
+    For Vaaman SBC, you can download the latest bootable image from the `Downloads <Downloads>`_ page.
+
 3. Use a disk imaging tool (e.g., Etcher, Win32 Disk Imager) to write the bootable image onto the SD card.
 4. Safely eject the SD card from your computer.
 5. Insert the bootable SD card into the target device.
 6. Power on the device to initiate the boot process from the SD card.
 
+.. note::
+    | For Linux users, you can use the **dd** command to write the image to the SD card.
+    | Check out the :doc:`Linux Usage Guide <vaaman-linux/linux-usage-guide/index>` for more information.
+
 Booting from eMMC
-^^^^^^^^^^^^^^^^^
+=================
+
 
 .. warning::
    Remove SD Card if inserted
 
-.. image:: images/eMMC_boot.webp
+.. image:: _static/images/vaaman-maskrom-mode.webp
     :width: 50%
 
 - When the power cable is connected, the **red LED** will be activated, and you can observe its illumination in the image displayed below.
@@ -50,24 +57,60 @@ Once the booting process is finished, you will notice the activation of the **bl
 .. image:: images/User_LEDs.webp
     :width: 50%
 
+.. note::
+    | Check out the :doc:`Linux Usage Guide <vaaman-linux/linux-usage-guide/index>` for more information.
 
-----------------
 
 How to access your Vaaman board
--------------------------------
+===============================
 
 Using Micro HDMI
-^^^^^^^^^^^^^^^^
+----------------
 
 Vaaman SBC is equipped with a micro HDMI port, which allows for easy connection to a display. By using a micro HDMI to HDMI cable or adapter, users can connect Vaaman to a monitor or TV with an HDMI input. This enables direct visual access to the graphical user interface (GUI) or command-line interface (CLI) on the connected display.
 
 .. image:: images/HDMI_Option.webp
     :width: 50%
 
-Using Serial Console
-^^^^^^^^^^^^^^^^^^^^
+.. _using-serial-console:
 
-Vaaman also provides a serial interface, typically in the form of UART (Universal Asynchronous Receiver-Transmitter) pins. Users can access the system's console or terminal interface by connecting to these serial pins using a serial cable or adapter. This method is often used for debugging, troubleshooting, or accessing the system when other interfaces are not available.
+Using Serial Console
+--------------------
+
+Vaaman also provides a serial interface, typically in the form of UART (Universal Asynchronous Receiver-Transmitter) pins.
+
+Users can access the system's console or terminal interface by connecting to these serial pins using a serial cable or adapter. This method is often used for debugging, troubleshooting, or accessing the system when other interfaces are not available.
+
+|
+
+**Preparation**
+
+To access Vaaman SBC through the serial interface, you will need the following:
+
+- A USB to TTL serial cable or adapter `CP2102 USB to TTL Convertor <https://www.amazon.com/HiLetgo-CP2102-Converter-Adapter-Downloader/dp/B00LODGRV8/ref=sr_1_8?keywords=usb+to+ttl+adapter&qid=1689597979&sprefix=usb+to+tt%2Caps%2C293&sr=8-8>`_
+
+**Hardware Setup**
+
+1. Connect the USB to TTL serial cable or adapter to your computer.
+
+2. Connect the serial cable or adapter to the Vaaman SBC.
+
+.. list-table::
+   :widths: 20 40 130
+   :header-rows: 1
+
+   * - **Serial FTDI Pin**
+     - **Header GPIO Pin**
+     - **Schematic Name**
+   * - GND
+     - Pin 6
+     - GND
+   * - TX
+     - Pin 8 (GPIO4_C4)
+     - UART2DBG_TX
+   * - RX
+     - Pin 10 (GPIO4_C3)
+     - UART2DBG_RX
 
 .. image:: images/USB_Serial.webp
     :width: 50%
@@ -88,90 +131,58 @@ Vaaman also provides a serial interface, typically in the form of UART (Universa
 .. tip::
     For Windows users, you can download `PuTTY <https://www.putty.org/>`_, to access the serial console.
 
+**Serial Console Program**
+
 .. image:: images/Putty_step.webp
     :width: 50%
 
-**To use serial debugging on Ubuntu**
 
-1. Open a terminal on your Ubuntu machine.
-
-.. tip::
-    You can do this by searching for **"terminal"** in the applications menu or by using the shortcut **Ctrl+Alt+T**.
-
-2. Update the package list to ensure you have the latest package information. In the terminal, run the following command:
-
-::
-
-    sudo apt update
-
-3. Install **GTKTerm** by running the following command:
-
-::
-
-    sudo apt install gtkterm
-
-4. After the installation is complete, connect your Vaaman SBC to your Ubuntu machine using a serial cable.
-
-.. note::
-    Ensure that the cable is properly connected to the appropriate serial port on both devices.
-
-5. Run **GTKTerm** by executing the following command:
-
-::
-
-    sudo gtkterm
-
-6. To access the configuration settings for GTKTerm, you can follow either of these methods:
-
-Click on the **"Configuration"** menu and select **"Port"**.
-
-OR
-
-Press **Ctrl+Shift+S**.
-
-By using either of these methods, you will be able to access the configuration settings in GTKTerm, where you can make adjustments to the port settings for your serial connection, as shown in the image below:
-
-.. image:: images/GTKTerm.webp
-    :width: 50%
+.. note:: Linux Users check out the :ref:`linux-uart-serial-console` for more information.
 
 Using SSH
-^^^^^^^^^
+---------
 
 Vaaman supports **SSH (Secure Shell)**, which allows for secure remote access to the system. By establishing an SSH connection, users can remotely connect to Vaaman from another device, such as a computer or smartphone, over a network. This method provides a secure command-line interface to administer, configure, and execute commands on the Vaaman SBC.
 
-1. Install **OpenSSH server** by executing the following command:
+**Install OpenSSH server**
 
-::
+You can install both OpenSSH components on Windows devices using the **Windows Settings**.
 
-    sudo apt install openssh-server
+To install the OpenSSH components, follow these steps:
 
-2. Once **OpenSSH** is installed, it should start automatically. You can verify its status by running:
+1. Open the Settings menu and click on Apps, then select **Optional Features**.
+2. Look through the list to check if OpenSSH is already installed. If it's not, at the top of the page, click on **Add a feature** and then:
+    - Find OpenSSH Client and click on Install.
+    - Find OpenSSH Server and click on Install.
+3. After the installation process is complete, go back to **Apps and Optional Features** to verify that **OpenSSH** is listed.
+4. Open the Services desktop app. (`Click on Start, type services.msc in the search box, and then click on the Service app or press ENTER.`)
+5. In the details pane, double-click on **OpenSSH SSH Server**.
+6. On the General tab, choose **Automatic** from the Startup type drop-down menu.
+7. To start the service, click on **Start**.
 
-::
 
-    sudo systemctl status ssh
+**Verify OpenSSH server**
 
-.. note::
-    If it is active and running, you should see a **active (running)** message.
+Once installed, you can connect to **OpenSSH Server** from a Windows device with the **OpenSSH client** installed.
+From a PowerShell prompt, run the following command.
 
-3. Next, install **Avahi-daemon** to enable local name resolution. Run the following command:
+.. code-block:: powershell
 
-::
+    ssh username@ip_address
 
-    sudo apt install avahi-daemon
+Example:
 
-4. After the installation, **Avahi-daemon** should start automatically. Verify its status by running:
+.. code-block:: powershell
 
-::
+    ssh vicharak@192.168.29.69
 
-    sudo systemctl status avahi-daemon
+**Access Vaaman SBC through SSH**
 
-.. note::
-    Ensure that it is active and running by checking for the **active (running)** message.
+To access Vaaman SBC through SSH, you can use either of the following commands:
 
-**To access Vaaman SBC through SSH, you can use either of the following commands:**
+|
 
-5. SSH using the IP address:
+1. SSH using the IP address
 
 ::
 
@@ -180,7 +191,7 @@ Vaaman supports **SSH (Secure Shell)**, which allows for secure remote access to
 .. tip::
     Replace **"username"** with the appropriate username for Vaaman and **"ip_address"** with the actual IP address assigned to Vaaman on the network.
 
-6. SSH using the PC name (hostname):
+2. SSH using the PC name (hostname)
 
 ::
 
@@ -189,7 +200,9 @@ Vaaman supports **SSH (Secure Shell)**, which allows for secure remote access to
 .. tip::
     Replace **"username"** with the appropriate username for Vaaman and **"pc-name"** with the actual PC name assigned to Vaaman on the network.
 
-Where to go from here
----------------------
-- :ref:`Vaaman Application <vaaman-applications>`
-- :ref:`Downloads <Downloads>`
+.. seealso::
+    :ref:`Vaaman Applications <vaaman-applications>`
+
+    :ref:`Downloads <Downloads>`
+
+    :doc:`Vaaman Linux Documentation <vaaman-linux/index>`

@@ -8,7 +8,7 @@ This guide will get you started with the Vaaman Linux Operating System. You will
     :maxdepth: 2
     :caption: User Guides
 
-    Vicharak Debian OS Guide <debian-guide>
+    Vicharak Debian and Ubuntu OS Guide <debian-ubuntu-guide>
     Rockchip DevelopTool Guide <rockchip-develop-guide>
     How to flash FPGA firmware to SPI Flash <spi-configure>
     How to use custom linux kernel <custom-linux-kernel>

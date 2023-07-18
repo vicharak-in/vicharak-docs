@@ -1,5 +1,3 @@
-.. _overview:
-
 Overview
 ========
 
@@ -24,6 +22,7 @@ Block Diagram
 -------------
 
 .. image:: images/block_diagram.webp
+    :width: 100%
 
 Features
 --------
@@ -31,26 +30,29 @@ Features
 The Vaaman Single Board Computer (SBC) offers a range of hardware features, including:
 
 .. list-table::
-   :widths: 15 10
+   :widths: 10 50
    :header-rows: 1
 
-   * - Type
-     - Feature
+   * - **Type**
+     - **Feature**
    * - Display
-     - | 1 x HDMI 2.0 (Micro), Support maximum 4K@60Hz display
-       | 1 x MIPI, Support 2560x1600@60fps output with dual channel.
+     - | 1 x HDMI 2.0 (Micro), Support maximum 4K\@60Hz display
+       | 1 x MIPI, Support 2560x1600\@60fps output with dual channel
+       | 1 x USB-C DP, Support maximum 4K\@60Hz display
    * - Audio
      - 3.5mm jack with mic
    * - Ethernet
      - 10/100/1000Mbps Ethernet (Realtek RTL8211E)
    * - Camera
-     - MIPI CSI 2 lanes via FPC connector, support up to 800MP camera
+     - MIPI CSI 2 lanes via FPC connector, support up to 800MB/s bandwidth
    * - Wireless
-     - Integrated WiFi Combo Module (6222B-SRC) WiFi 2.4G+5G WiFi 2T2R BT5.0
+     - Integrated RTL8822CS Wi-Fi and BT Combo Module (6222B-SRC) WiFi 2.4G+5G WiFi 2T2R BT5.0
    * - PCIe
      - PCIe Interface via FPC connector
    * - USB
-     - 2x USB2.0 HOST, 1x USB3.0, 1x USB3.0 Type-C
+     - | 2x USB2.0 HOST
+       | 1x USB3.0 HOST/OTG
+       | 1x USB Type-C (USB3.0 / DP Alt mode)
    * - RTC
      - Support RTC, on-board backup battery interface
    * - I/O
@@ -78,5 +80,11 @@ The Vaaman Single Board Computer (SBC) offers a range of hardware features, incl
        | 10, 20, 25, 30, 50, and 74.25 MHz oscillators for T120F324 PLL input.
        | 4 User LEDs on T120F324 bank 2F.
 
-.. note::
-    Check out :ref:`Getting Started with Vicharak Vaaman <getting-started>`. Also, have a look at :ref:`Vaaman Application Documentation <vaaman-applications>` and :ref:`Downloads section <Downloads>`
+.. seealso::
+    :ref:`Getting Started <getting-started>` with Vicharak Vaaman
+
+    :ref:`Vaaman Application Documentation <vaaman-applications>`
+
+    :ref:`Downloads section <downloads>`
+
+    :doc:`Vaaman Linux Documentation <vaaman-linux/index>`

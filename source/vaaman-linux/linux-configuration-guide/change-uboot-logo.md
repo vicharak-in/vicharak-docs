@@ -5,7 +5,7 @@
 - Prepare your new logo.
 
 :::{attention}
-Ensure that your logo is in the BMP (Bitmap) format, with a color depth of 24 bits (RGB).
+Ensure that your logo is in the BMP (Bitmap) format, with a colour depth of 24 bits (RGB).
 The logo size should be less than 1MB to fit within the constraints of U-Boot.
 :::
 
@@ -14,7 +14,7 @@ The logo size should be less than 1MB to fit within the constraints of U-Boot.
 :::{tip}
 If your logo is not already in the correct format,
 you can use an image editing software like GIMP or Photo-shop to convert it.
-Open the logo in the software, adjust the color depth to 24 bits, and save it in BMP format.
+Open the logo in the software, adjust the colour depth to 24 bits, and save it in BMP format.
 :::
 
 - Access the U-Boot source code: Obtain the U-Boot source code for Vaaman from Vicharak [U-Boot GitHub repository](https://github.com/vicharak-in/u-boot-vicharak).

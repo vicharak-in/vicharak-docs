@@ -72,7 +72,7 @@ So, for that just ignore using `cat` to copy vaaman specific configs inside .con
 make O=out ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu -j$(nproc --all)
 ```
 
-**Upon successfull compilation, confirm that you have following files.**
+**Upon successful compilation, confirm that you have following files.**
 
 - out/arch/arm64/boot/dts/rockchip/rk3399-vaaman-linux.dtb
 - out/arch/arm64/boot/Image

@@ -32,7 +32,7 @@ git clone https://github.com/vicharak/u-boot-vicharak
 Use `git clone --depth=1` to shallow clone the repository
 :::
 
-#### Download the source code from github
+#### Download the source code from GitHub
 
 ![vicharak-uboot-github](../../_static/images/vicharak-uboot-github.webp)
 
@@ -90,14 +90,14 @@ rk3399_loader_v1.xx.xxx.bin
 
 Once you have successfully compiled the u-boot. You are now ready to flash it on your vaaman board.
 
-For Vicharak EMMC builds you can follow the `Linux Upgrade Tool` guide
+For Vicharak eMMC builds you can follow the `Linux Upgrade Tool` guide
 :::{admonition} Refer to
 [Flash u-boot to eMMC using upgrade_tool](../linux-usage-guide/rockchip-upgrade-tool-misc.rst)
 :::
 
 or
 
-You can manually flash the images using unix `dd` utility.
+You can manually flash the images using UNIX `dd` utility.
 
 **Primary loader <idbloader>**
 
@@ -161,5 +161,5 @@ And recompile the u-boot.
 :::{seealso}
 [How to build linux kernel](./build-linux-kernel.md)
 
-[How to use rockchip upgrade tool](../linux-usage-guiderrockchip-develop-guide.md)
+[How to use rockchip upgrade tool](#rockchip-develop-guide.md)
 :::
