@@ -1,3 +1,5 @@
+(build-u-boot)=
+
 # Build Vicharak Vaaman U-Boot from source
 
 :::{note}
@@ -86,6 +88,8 @@ trust.img
 rk3399_loader_v1.xx.xxx.bin
 :::
 
+(flash-u-boot)=
+
 ## How to flash or upgrade u-boot
 
 Once you have successfully compiled the u-boot. You are now ready to flash it on your vaaman board.
@@ -159,7 +163,7 @@ And recompile the u-boot.
 ```
 
 :::{seealso}
-[How to build linux kernel](./build-linux-kernel.md)
+[How to build linux kernel](#build-linux-kernel)
 
-[How to use rockchip upgrade tool](#rockchip-develop-guide.md)
+[How to use rockchip upgrade tool](#rockchip-develop-tool)
 :::

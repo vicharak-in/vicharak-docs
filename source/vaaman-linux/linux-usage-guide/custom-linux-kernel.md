@@ -14,6 +14,8 @@ It has provided support for Linux Kernel 4.4, 4.19 and 5.10.
 [How to build linux kernel from source guide](../linux-development-guide/build-linux-kernel.md)
 :::
 
+(flash-custom-kernel)=
+
 ## How to flash compiled linux kernel
 
 ### Copy the compiled kernel image to the device

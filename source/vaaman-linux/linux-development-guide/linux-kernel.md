@@ -1,3 +1,5 @@
+(build-linux-kernel)=
+
 # Build Vicharak Kernel from source
 
 Vicharak Provides multiple revision of Linux kernels for Vaaman board.
@@ -100,9 +102,9 @@ Set the specific driver that you want to build as module to `CONFIG_<XXXX>=m` in
 :::
 
 :::{seealso}
-[How to compile u-boot from source](./build-u-boot.md)
+[How to compile u-boot from source](#build-u-boot)
 
-[How to flash compiled kernel](../linux-usage-guide/custom-linux-kernel.md#how-to-flash-compiled-kernel)
+[How to flash compiled kernel](#flash-custom-kernel)
 
-[How to flash u-boot](./u-boot.md#how-to-flash-or-upgrade-u-boot)
+[How to flash u-boot](#flash-u-boot)
 :::
