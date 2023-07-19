@@ -174,3 +174,9 @@ vaaman-serial-uart-pins
 5.10.
 kerneldeb
 update_defconfig
+ - source/vaaman-linux/linux-usage-guide/windows-rkdevtool.md
+DriverAssistant
+windows-usb-driver-assistant-run-anyway
+windows-usb-driver-assistant-install
+50
+windows-usb-driver-assistant-install-finished
