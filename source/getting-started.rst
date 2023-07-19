@@ -4,7 +4,7 @@ Getting Started
 ###############
 
 Turning board on
-****************
+================
 
 - **PD Adapter + PD cable** required with operating 12V/5A
 
@@ -13,6 +13,31 @@ Turning board on
 
 .. image:: _static/images/Power_option.webp
    :width: 50%
+
+Boot Modes Description
+======================
+
+Vaaman SBC is pre-installed with **Debian 11** (`Bullseye`) and supports multiple boot modes, including `SD- Card`, `eMMC`, and `NVMe`.
+If users wants to run different operating systems, they need to use the corresponding firmware to program the board.
+
+The boot priority of Vaaman SBC is as follows:
+
+1. NVMe
+2. SD Card
+3. eMMC
+
+`NVMe` is the highest priority, followed by `SD-Card` and `eMMC`. So, if you have an NVMe drive connected to Vaaman SBC, it will boot from the NVMe drive. If there is no NVMe drive connected, it will boot from the SD-Card. If there is no SD card inserted, it will boot from the eMMC.
+
+.. tip::
+    | If the accident happened during the flashing or upgrading process, you can use the maskrom mode to recover the board. Check out the :ref:`Maskrom Mode <maskrom-mode>` section for more information.
+
+Firmware Download
+=================
+
+For Vaaman SBC, you can download the latest bootable image from the :ref:`downloads` page.
+
+.. note::
+    | For more information on how to flash the image to the eMMC or SD-Card, check out the :doc:`Linux Usage Guide <vaaman-linux/linux-usage-guide/index>`.
 
 Booting from SD Card
 ====================
@@ -25,9 +50,6 @@ Booting from SD Card
 1. Format the SD card using a suitable file system (such as FAT32).
 2. Obtain the bootable image or operating system files for your desired platform.
 
-.. note::
-    For Vaaman SBC, you can download the latest bootable image from the :ref:`downloads` page.
-
 3. Use a disk imaging tool (e.g., Etcher, Win32 Disk Imager) to write the bootable image onto the SD card.
 4. Safely eject the SD card from your computer.
 5. Insert the bootable SD card into the SD-Card socket.
@@ -35,7 +57,7 @@ Booting from SD Card
 
 .. note::
     | For Linux users, you can use the **dd** command to write the image to the SD card.
-    | Check out the :doc:`Linux Usage Guide <vaaman-linux/linux-usage-guide/index>` for more information.
+    | Check out the :ref:`rockchip-develop-tool` for more information.
 
 Booting from eMMC
 =================
@@ -43,13 +65,15 @@ Booting from eMMC
 .. warning::
    Remove SD Card if inserted
 
+.. _maskrom-mode:
+
 .. image:: _static/images/vaaman-maskrom-mode.webp
     :width: 50%
 
 .. note::
    | Make sure you have flashed the eMMC with the latest image.
    | You can find the latest image on the `Downloads <downloads>`_ page.
-   | Flashing instructions can be found in the :doc:`Linux Usage Guide <vaaman-linux/linux-usage-guide/index>`.
+   | Flashing instructions can be found in the :ref:`rockchip-develop-tool`.
 
 When the power cable is connected, the **red LED** will be activated, and you can observe its illumination in the image displayed below.
 
@@ -77,6 +101,25 @@ Place the NVMe board on top of Vaaman and secure it by tightening the nuts.
 
 .. image:: _static/images/vaaman-nvme-module.webp
    :width: 50%
+
+.. note::
+   | Flashing instructions can be found in the :ref:`rockchip-develop-tool`.
+
+Vaaman Boot modes
+=================
+
+.. list-table::
+   :widths: 20 40
+   :header-rows: 1
+
+   * - **Boot Mode**
+     - **Description**
+   * - Normal Mode
+     - Normal boot mode is the default boot mode. In this mode, the board boots from the `eMMC` or `SD-Card`. Each partition loads in order and enters the system normally.
+   * - Loader Mode
+     - Loader mode is used to upgrade the `bootloader`. In this mode, the bootloader will wait for the host command for `firmware upgrade`. On success, the board boots from the `eMMC` or `SD-Card`, and the board enters the system normally.
+   * - Maskrom Mode
+     - Maskrom mode is used to `repair` the board. In a situation where the bootloader is damaged, the board can enter the maskrom mode. In general, there is no need to enter `Maskrom` mode. In this mode, the bootrom code waits for the host to transmit the bootloader code through the USB-C port, load and run it.
 
 How to access your Vaaman board
 ===============================
