@@ -6,9 +6,9 @@ Frequently Asked Questions
 How to take logs
 ----------------
 
-.. tabs::
+.. tab-set::
 
-    .. tab:: Windows
+    .. tab-item:: Windows
 
         - Connect the device to the PC and use the :ref:`Serial Console Tool <using-serial-console>` to open the serial port of the device.
 
@@ -26,7 +26,7 @@ How to take logs
         .. note::
             If the device is not booting up, then take the logs from the serial port tool and attach it to the issue.
 
-    .. tab:: Linux
+    .. tab-item:: Linux
 
         - Connect the device to the PC and use the :ref:`linux-uart-serial-console` to open the serial port of the device.
 
