@@ -1,13 +1,13 @@
 .. _vaaman-sdk:
 
-Vaaman SDK
-===========
+############
+ Vaaman SDK
+############
 
 Software Development with Vaaman
 
-API Docs
---------
+**********
+ API Docs
+**********
 
-- See api doc for :ref:`drm_fpga_write  <drm_fpga_write_api>`
-
-
+-  See api doc for :ref:`drm_fpga_write <drm_fpga_write_api>`

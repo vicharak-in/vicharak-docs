@@ -1,14 +1,19 @@
-Linux Usage Guide
-=================
+###################
+ Linux Usage Guide
+###################
 
-This guide provides instructions on how to use the Vaaman Linux Operating System. It includes user-specific configurations and tutorials for the Vaaman Linux Operating System.
-This guide will get you started with the Vaaman Linux Operating System. You will learn how to install the Vaaman Linux Operating System on your device, how to configure it, and how to use it.
+This guide provides instructions on how to use the Vaaman Linux
+Operating System. It includes user-specific configurations and tutorials
+for the Vaaman Linux Operating System. This guide will get you started
+with the Vaaman Linux Operating System. You will learn how to install
+the Vaaman Linux Operating System on your device, how to configure it,
+and how to use it.
 
 .. toctree::
-    :maxdepth: 2
-    :caption: User Guides
+   :maxdepth: 2
+   :caption: User Guides
 
-    Vicharak Debian and Ubuntu OS Guide <debian-ubuntu-guide>
-    Rockchip DevelopTool Guide <rockchip-develop-guide>
-    How to flash FPGA firmware to SPI Flash <spi-configure>
-    How to use custom linux kernel <custom-linux-kernel>
+   Vicharak Debian and Ubuntu OS Guide <debian-ubuntu-guide>
+   Rockchip DevelopTool Guide <rockchip-develop-guide>
+   How to flash FPGA firmware to SPI Flash <spi-configure>
+   How to use custom linux kernel <custom-linux-kernel>
