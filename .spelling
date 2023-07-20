@@ -109,6 +109,9 @@ misc.img
 boot.img
 recovery.img
 maskrom
+spl
+manjaro
+png
  - source/vaaman-linux/linux-development-guide/linux-kernel.md
 20.04
 11
@@ -180,3 +183,8 @@ windows-usb-driver-assistant-run-anyway
 windows-usb-driver-assistant-install
 50
 windows-usb-driver-assistant-install-finished
+ - source/vaaman-linux/linux-development-guide/u-boot.md
+build-u-boot
+flash-u-boot
+1
+2
