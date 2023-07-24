@@ -10,19 +10,19 @@ OS Images
     :header-rows: 1
 
     * - **Operating System**
-      - **Download Link**
+      - **Variant**
 
-    * - Android 12.1
-      - http://24.199.117.173/linux-system-images/vaaman/android/
+    * - Android
+      - `Android 12.1 <http://24.199.117.173/linux-system-images/vaaman/android/>`_
 
-    * - Debian 11
-      - http://24.199.117.173/linux-system-images/vaaman/debian
+    * - Debian
+      - `Bullseye <http://24.199.117.173/linux-system-images/vaaman/debian>`_
 
-    * - Ubuntu 20.04
-      - http://24.199.117.173/linux-system-images/vaaman/ubuntu
+    * - Ubuntu
+      - `Focal 20.04 <http://24.199.117.173/linux-system-images/vaaman/ubuntu>`_
 
     * - Community Images
-      - Coming Soon
+      - **Coming Soon**
 
 .. note::
     The images are compressed using XZ. You can use `7zip <https://www.7-zip.org/>`_ or `WinRAR <https://www.win-rar.com/>`_ to extract the file.
@@ -53,18 +53,30 @@ OS Utilities
     * - Rockchip Linux Upgrade Tool
       - `V2.1 <https://github.com/vicharak-in/Linux_Upgrade_Tool>`_
 
-    * - Rockchip Android Tool
-      - `V1.0 <https://github.com/vicharak-in/Android_Tool>`_
+    * - Rockchip RkDevTool
+      - `V2.96 <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/RKDevTool_Release_v2.96.zip>`_
+
+    * - Rockchip Windows Drivers
+      - `V5.12 <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/DriverAssitant_v5.12.zip>`_
 
     * - Balena Etcher
       - `V1.18.11 <https://github.com/balena-io/etcher/releases/tag/v1.18.11>`_
 
-FPGA Sample Bitstream and HEX files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FPGA Sample files
+^^^^^^^^^^^^^^^^^
 
-`Simple LED Blink Demo HEX file <_static/files/sample_led_blink_t120_demo_hex.zip>`_
+.. list-table::
+    :widths: 25 100
+    :header-rows: 1
 
-`Simple LED Blink Demo BIT file <_static/files/sample_led_blink_t120_demo_bit.zip>`_
+    * - **FPGA flash file type**
+      - **Download Link**
+
+    * - Hex file
+      - `Simple LED Blink Hex Demo <_static/files/sample_led_blink_t120_demo_hex.zip>`_
+
+    * - Bitstream file
+      - `Simple LED Blink Bit Demo <_static/files/sample_led_blink_t120_demo_bit.zip>`_
 
 Data-sheets
 ^^^^^^^^^^^
