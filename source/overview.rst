@@ -32,6 +32,7 @@ The Vaaman Single Board Computer (SBC) offers a range of hardware features, incl
 .. list-table::
    :widths: 10 50
    :header-rows: 1
+   :class: feature-table
 
    * - **Type**
      - **Feature**

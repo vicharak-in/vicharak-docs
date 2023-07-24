@@ -8,7 +8,7 @@ orphan: true
 
 ```{list-table}
 :header-rows: 1
-:class: kernel-status-table
+:class: feature-table
 
 * - Hardware
   - Kernel 4.4

@@ -33,6 +33,6 @@ body {
   max-width: 100%;
 }
 
-.kernel-status-table td:first-child {
+.feature-table td:first-child {
   font-weight: 600;
 }
