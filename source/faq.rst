@@ -58,3 +58,16 @@ For reporting a bug, please follow the following template:
 
 .. TODO: Add the template for reporting a bug
    Improve how to report a bug section
+
+RkDeveloptool Crashes on Windows
+--------------------------------
+
+If the RkDeveloptool crashes on Windows, then please follow the following steps:
+
+1. Make sure you have the latest version of the RkDeveloptool installed on your PC.
+
+2. Make sure you have the mentoined `DriversAssistant <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/DriverAssitant_v5.12.zip>`_ drivers installed on your PC.
+
+3. Uninstall old **RkDeveloptool** and **DriversAssistant** from your PC. Then install the latest version of **RkDeveloptool** and **DriversAssistant**.
+
+4. If the above steps do not solve the issue, then please report the issue to the `Rockchip tools <https://github.com/vicharak-in/rockchip-tools>`_ repository.
