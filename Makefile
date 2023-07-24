@@ -17,10 +17,10 @@ spelling:
 	sphinx-build -b spelling "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 mdspell:
-	ifeq (, $(shell which mdspell))
+ifeq (, $(shell which mdspell))
 		$(error "No mdspell package installed, consider installing it with 'npm install -g markdown-spellcheck'")
-	endif
-	find source -type f -name \*.md -exec mdspell - {} \;
+endif
+	find source -type f -name \*.md -exec mdspell -n -a -x - {} \;
 
 clean:
 	rm -rf ${BUILDDIR}

@@ -10,7 +10,7 @@ How to take logs
 
     .. tab-item:: Windows
 
-        - Connect the device to the PC and use the :ref:`Serial Console Tool <using-serial-console>` to open the serial port of the device.
+        - Connect the device to the PC and use the :ref:`Serial Console Tool <serial-console>` to open the serial port of the device.
 
         - Once the serial port is opened, Take the kernel and user space logs by running the following commands in the serial port tool.
 
@@ -66,7 +66,7 @@ If the RkDeveloptool crashes on Windows, then please follow the following steps:
 
 1. Make sure you have the latest version of the RkDeveloptool installed on your PC.
 
-2. Make sure you have the mentoined `DriversAssistant <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/DriverAssitant_v5.12.zip>`_ drivers installed on your PC.
+2. Make sure you have the mentioned `DriversAssistant <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/DriverAssitant_v5.12.zip>`_ drivers installed on your PC.
 
 3. Uninstall old **RkDeveloptool** and **DriversAssistant** from your PC. Then install the latest version of **RkDeveloptool** and **DriversAssistant**.
 

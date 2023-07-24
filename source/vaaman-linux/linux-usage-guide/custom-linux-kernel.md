@@ -56,7 +56,7 @@ sudo dd if=boot.img of=/dev/mmcblkXp4 status=progress; sync
 :::{note}
 Here `mmcblkXp4` is the boot partition of the device. Replace `X` with the device number
 
-0. SD-Card
+0. SD-card
 1. eMMC
 
 :::

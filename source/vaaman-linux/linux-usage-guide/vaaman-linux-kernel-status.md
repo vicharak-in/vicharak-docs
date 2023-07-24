@@ -70,7 +70,7 @@ orphan: true
   - Not Working
   - Not Working
 
-* - SD Card (SDMMC)
+* - SD-card (SDMMC)
   - Working
   - Working
   - Working

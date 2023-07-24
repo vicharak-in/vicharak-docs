@@ -1,13 +1,6 @@
+(vicharak-config-tool)=
+
 # Vicharak Linux Configuration Tool
-
-Vicharak linux systems includes **vicharak-config** tool which is purely written
-using shell scripts that allows users to configure and setup their linux system configuration.
-
-It provides a **TUI** interface to configure different linux specific configurations.
-Use `sudo vicharak-config` to get started.
-
-It is supported on all Debian based systems such as Debian buster/bullseye,
-Ubuntu focal/jammy and other third party systems such as Armbian.
 
 :::{admonition} **Fact**
 :class: tip
@@ -63,19 +56,25 @@ The above menu might be shown differently depending on the terminal style.
 ## Available Features
 
 - [System maintenance](#system-maintenance)
-  Update packages and bootloader.
+  : Update packages and bootloader.
+
 - [Hardware configuration](#hardware)
-  Capture camera frame, Enable LEDs, Change thermal governor, DSI mirroring
+  : Capture camera frame, Enable LEDs, Change thermal governor, DSI mirroring.
+
 - [Overlays](#overlays)
-  Enable DTBO overlays, Build third-party DTBO
+  : Enable DTBO overlays, Build third-party DTBO.
+
 - [Connectivity](#connectivity)
-  Configure network using **nmtui**
+  : Configure network using **nmtui**.
+
 - [Advanced Options](#advanced-options)
-  Install GPU library and enable OpenGL support
+  : Install `Mali GPU` library and enable `OpenGL` support.
+
 - [User Settings](#user-settings)
-  Change system password and hostname
+  : Change system password and hostname
+
 - [Localization](#localization)
-  Change Timezone/Locale/Keyboard and WiFi Country
+  : Change Time-Zone/Locale/Keyboard and Wi-Fi Country
 
 (system-maintenance)=
 
@@ -83,10 +82,13 @@ The above menu might be shown differently depending on the terminal style.
 
 This feature allows you to update the packages and bootloader.
 
-- Update packages: This option allows you to update the packages that are installed
-  on the system. It uses `apt-get` to update the packages.
-- Update bootloader: This option allows you to update the bootloader. It uses
-  `setup.sh` installed from `vicharak-firmware` package to update the bootloader.
+- Update packages
+  : This option allows you to update the packages that are installed on the
+  system. It uses `apt-get` to update the packages.
+
+- Update bootloader
+  : This option allows you to update the bootloader. It uses `setup.sh`
+  installed from `vicharak-firmware` package to update the bootloader.
 
 (hardware)=
 
@@ -94,14 +96,21 @@ This feature allows you to update the packages and bootloader.
 
 This feature allows you to configure different hardware options.
 
-- Capture camera frame: This option allows you to capture the camera frame using
-  `v4l2-ctl`. It uses `v4l2-ctl` to capture the camera frame.
-- Enable LEDs: This option allows you to enable/disable the LEDs. It changes the
-  leds trigger by echoing the specific trigger to the LED sysfs.
-- Change thermal governor: This option allows you to change the thermal governor.
-  It changes thermal governor by echoing to the specific sysfs.
-- DSI mirroring: This option allows you to enable/disable DSI mirroring.
-  It uses `vicharak-config` to enable/disable DSI mirroring.
+- Capture camera frame
+  : This option allows you to capture the camera frame using `v4l2-ctl`.
+  It uses `v4l2-ctl` to capture the camera frame.
+
+- Enable LEDs
+  : This option allows you to enable/disable the LEDs. It changes the leds
+  triggers by echoing the specific trigger to the LED sysfs.
+
+- Change thermal governor
+  : This option allows you to change the thermal governor. It changes thermal
+  governor by echoing to the specific sysfs.
+
+- DSI mirroring
+  : This option allows you to enable/disable DSI mirroring. It uses
+  `vicharak-config` to enable/disable DSI mirroring.
 
 (overlays)=
 
@@ -109,11 +118,14 @@ This feature allows you to configure different hardware options.
 
 This feature allows you to configure different overlays options.
 
-- Enable DTBO overlays: This option allows you to enable/disable the DTBO overlays.
-  It uses `update-uboot` script installed inside rootfs to enable or disable the specific
-  dtbo overlay from extlinux configuration.
-- Build third-party DTBO: This option allows you to build the third-party DTBO.
-  It builds and installs the dtbo using the `device-tree-compiler` utility.
+- Enable DTBO overlays
+  : This option allows you to enable/disable the DTBO overlays. It uses
+  `uboot-update` script installed inside rootfs to enable or disable the
+  specific dtbo overlay from extlinux configuration.
+
+- Build third-party DTBO
+  : This option allows you to build the third-party DTBO. It builds and installs
+  the dtbo using the `device-tree-compiler` utility.
 
 (connectivity)=
 
@@ -121,7 +133,8 @@ This feature allows you to configure different overlays options.
 
 This feature allows you to configure different connectivity options.
 
-- Configure network: This option allows you to configure network using `nmtui`.
+- Configure network
+  : This option allows you to configure network using `nmtui`.
 
 (advanced-options)=
 
@@ -129,8 +142,8 @@ This feature allows you to configure different connectivity options.
 
 This feature allows you to configure different advanced options.
 
-- Install GPU library:
-  This option allows you to install Mali GPU library and enable OpenGL support.
+- Install GPU library
+  : This option allows you to install Mali GPU library and enable OpenGL support.
 
   It uses `apt install` to install the mali library from `userdata` partition
   and enables the `gl4es` library support for converting OpenGL-ES context to OpenGL.
@@ -147,10 +160,13 @@ This feature allows you to configure different advanced options.
 
 This feature allows you to configure different user settings.
 
-- Change system password: This option allows you to change the system password.
-  It uses `passwd` to change the system password.
-- Change hostname: This option allows you to change the system hostname.
-  It uses `hostnamectl` to change the system hostname.
+- Change system password
+  : This option allows you to change the system password. It uses `passwd` to
+  change the system password.
+
+- Change hostname
+  : This option allows you to change the system hostname. It uses `hostnamectl`
+  to change the system hostname.
 
 (localization)=
 
@@ -158,6 +174,9 @@ This feature allows you to configure different user settings.
 
 This feature allows you to configure different localization options.
 
-- Change Timezone: This option allows you to change the system timezone.
-  It uses `timedatectl` to change the system timezone.
-- Change Locale: It will generate the new locale as per the selection.
+- Change Time-Zone
+  : This option allows you to change the system Time-Zone. It uses `timedatectl`
+  to change the system Time-Zone.
+
+- Change Locale
+  : It will generate the new locale as per the selection.

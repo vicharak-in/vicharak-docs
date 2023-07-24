@@ -3,10 +3,10 @@
 ############################
 
 |
-|  This documentation pertains to the specific documentation for
-   Vicharak Vaaman Linux.
-|  It encompasses information about the development, configuration, and
-   usage of the Vaaman Linux Operating System.
+|     This documentation pertains to the specific documentation for
+      Vicharak Vaaman Linux.
+|     It encompasses information about the development, configuration,
+      and usage of the Vaaman Linux Operating System.
 
 .. toctree::
    :maxdepth: 2

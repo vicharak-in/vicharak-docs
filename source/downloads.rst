@@ -38,7 +38,7 @@ OS Images
 .. seealso::
    How to flash the image to the board: :doc:`Flashing the image <vaaman-linux/linux-usage-guide/rockchip-develop-guide>`
 
-   :doc:`Vaaman Debian and Ubuntu Guide <vaaman-linux/linux-usage-guide/debian-ubuntu-guide>`
+   :doc:`Vaaman Linux Start Guide <vaaman-linux/linux-usage-guide/linux-start-guide>`
 
 OS Utilities
 ^^^^^^^^^^^^

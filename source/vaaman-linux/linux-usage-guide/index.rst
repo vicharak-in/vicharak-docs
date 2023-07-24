@@ -13,7 +13,7 @@ and how to use it.
    :maxdepth: 2
    :caption: User Guides
 
-   Vicharak Debian and Ubuntu OS Guide <debian-ubuntu-guide>
+   Vicharak Linux Start Guide <linux-start-guide>
    Rockchip DevelopTool Guide <rockchip-develop-guide>
    How to flash FPGA firmware to SPI Flash <spi-configure>
    How to use custom linux kernel <custom-linux-kernel>
