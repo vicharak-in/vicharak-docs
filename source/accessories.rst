@@ -4,51 +4,70 @@
  Vaaman Accessories
 ####################
 
-*******************************************
- Power Delivery (PD) Adapter with PD Cable
-*******************************************
+************************
+ In the box accessories
+************************
 
-.. image:: _static/images/vaaman-buy-pd-adapter.webp
-   :width: 25%
+.. grid:: 1 1 2 2
 
-*************
- NVMe Module
-*************
+    .. grid-item-card:: Power Delivery (PD) Adapter with PD Cable
+       :link: accessory-pd-adapter
+       :link-type: doc
+       :shadow: md
 
-.. image:: _static/images/vaaman-buy-nvme-module.webp
-   :width: 25%
+       12V-5A Power Delivery (PD) Adapter with PD Cable for Vaaman
 
-*****************************
- Wi-Fi and Bluetooth Antenna
-*****************************
+    .. grid-item-card:: Wi-Fi and Bluetooth Antenna
+       :link: accessory-wifi-antenna
+       :link-type: doc
+       :shadow: md
 
-.. image:: _static/images/vaaman-buy-wifi-antenna.webp
-   :width: 25%
+       Wi-Fi and Bluetooth Antenna for Vaaman
 
-***********
- Heat-Sink
-***********
+    .. grid-item-card:: Heat-Sink
+       :link: accessory-heatsink
+       :link-type: doc
+       :shadow: md
 
-.. image:: _static/images/vaaman-buy-heatsink.webp
-   :width: 25%
-
-**************************
- USB to TTL Serial Module
-**************************
-
-.. image:: _static/images/vaaman-buy-usb-serial-module.webp
-   :width: 25%
+       Heat-Sink for Vaaman
 
 **********************
- UART Expansion Board
+ Optional Accessories
 **********************
 
-.. image:: _static/images/vaaman-buy-uart-expansion-board.webp
-   :width: 25%
+.. grid:: 1 1 2 2
 
-****************************
- Raspberry Pi Camera Module
-****************************
+    .. grid-item-card:: USB to TTL Serial Module
+       :link: accessory-usb-serial-module
+       :link-type: doc
+       :shadow: md
 
-.. image:: _static/images/vaaman-buy-rpi-camera-module.webp
-   :width: 25%
+       USB to TTL Serial Module for Vaaman
+
+    .. grid-item-card:: M.2 Expansion board
+       :link: accessory-m2-expansion-board
+       :link-type: doc
+       :shadow: md
+
+       M.2 Expansion board for Vaaman
+
+    .. grid-item-card:: UART Expansion board
+       :link: accessory-uart-expansion-board
+       :link-type: doc
+       :shadow: md
+
+       20 UART Expansion board for Vaaman
+
+    .. grid-item-card:: Raspberry Pi Camera Module
+       :link: accessory-raspi-cam
+       :link-type: doc
+       :shadow: md
+
+       IMX219 and OV5647 Camera Module for Vaaman
+
+    .. grid-item-card:: USB-C to USB-A cable
+       :link: accessory-usb-c-to-usb-a
+       :link-type: doc
+       :shadow: md
+
+       USB-C to USB-A cable for Vaaman
