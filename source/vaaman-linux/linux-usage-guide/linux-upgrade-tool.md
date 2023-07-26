@@ -1,7 +1,7 @@
 # Linux Upgrade Tool
 
 Rockchip's **Linux Upgrade tool** is a proprietary solution developed by the company for flashing images onto
-various storage devices such as `SPI`, `eMMC`, `SD Card`, and more.
+various storage devices such as `SPI`, `eMMC`, `SD-card`, and more.
 Unlike open-source [rkdeveloptool](https://github.com/rockchip-linux/rkdeveloptool) software,
 this tool does not provide access to its source code.
 
@@ -32,6 +32,8 @@ For other Linux distributions, please refer to the following table for the equiv
 ```bash
 git clone https://github.com/vicharak-in/Linux_Upgrade_Tool
 ```
+
+(boot-into-maskrom-mode)=
 
 ---
 
@@ -128,13 +130,13 @@ sudo ./upgrade_tool ef
 
 ::::
 
-### Flashing RAW image using Linux_Upgrade_Tool
+## Flashing RAW image using Linux_Upgrade_Tool
 
 :::{tip}
 RAW images can be flashed to any storage device using the `dd` command or the `Linux_Upgrade_Tool`.
 :::
 
-#### Check for connected devices
+### Check for connected devices
 
 :::{card} sudo ./upgrade_tool ld
 
@@ -146,7 +148,7 @@ DevNo=1 Vid=0x2207,Pid=0x330c,LocationID=7143 Mode=Maskrom SerialNo=
 
 :::
 
-#### Flash the loader binary
+### Flash the loader binary
 
 :::{card} sudo ./upgrade_tool db rk3399_loader_xxx.bin
 
@@ -156,7 +158,7 @@ Download boot ok.
 
 :::
 
-#### Flash the RAW GPT image to storage device
+### Flash the RAW GPT Image to storage device
 
 :::{danger}
 Make sure to flash the loader first to the storage device.
@@ -176,7 +178,7 @@ Write LBA OK.
 
 :::
 
-#### Reboot the device
+### Reboot the device
 
 :::{card} sudo ./upgrade_tool rd
 
@@ -200,7 +202,7 @@ If you encounter **Reset Device Fail!** then try to manually reboot using the po
 
 {#flash-update-img}
 
-### Flash eMMC image using (upgrade firmware) method
+## Flash eMMC Image using (upgrade firmware) method
 
 :::{card} sudo ./upgrade_tool uf <some_update_image>.img
 
@@ -237,7 +239,7 @@ Download Image... (12%)
 :::
 
 :::{seealso}
-[Debian and Ubuntu Guide](#debian-ubuntu-guide)
+[Vaaman Linux starting guide](linux-start-guide.md)
 
 [Frequently Asked Questions](#faq)
 :::

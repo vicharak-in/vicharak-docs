@@ -32,3 +32,11 @@ body {
 .container {
   max-width: 100%;
 }
+
+.feature-table td:first-child {
+  font-weight: 600;
+}
+
+.sd-shadow-md {
+    box-shadow: 0 0.2rem 0.5rem var(--sd-color-shadow) !important;
+}

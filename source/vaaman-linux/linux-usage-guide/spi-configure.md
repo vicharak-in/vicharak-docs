@@ -12,7 +12,7 @@ For flashing to SPI flash, Vicharak has modified a utility called `flashcp`.
 
 `sudo flashcp <hexfile>.hex`
 
-## Configuring Fpga to use SPI Flash
+## Configuring FPGA to use SPI Flash
 
 For configuring FPGA to use SPI Flash use the following command:
 

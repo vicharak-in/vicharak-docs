@@ -9,6 +9,7 @@ avahi
 balena
 bitstream
 bootable
+bootrom
 buildroot
 config
 cpp
@@ -20,11 +21,14 @@ dtb
 dtbo
 dtbs
 dts
+eDP
 eMMC
 efinity
 efinix
 extlinux
 fpga
+gtk
+hantro
 hostname
 idbloader
 idblock
@@ -32,12 +36,15 @@ img
 libudev
 libusb
 linux
+manjaro
 maskrom
 mbps
 minicom
 modeset
 nproc
+panfrost
 pid
+pre
 realtek
 rk
 rockchip
@@ -55,5 +62,6 @@ userdata
 userspace
 vaaman
 ver
+verisilicon
 vicharak
 vid

@@ -284,7 +284,7 @@ The packed firmware image will be located in the `rockdev/pack/` directory.
 
 Rockchip provides a tool called `Linux_Pack_Firmware` to pack the firmware into a single image.
 It uses Rockchip's own image format,
-and can be used to flash the firmware to the eMMC of the development board or any SD Card using the tools provided by Rockchip.
+and can be used to flash the firmware to the eMMC of the development board or any SD-card using the tools provided by Rockchip.
 
 ```bash
 ./build.sh updateimg
@@ -303,7 +303,7 @@ and can be used to flash the firmware to the eMMC of the development board or an
 
 Vicharak provides another method to pack the firmware into a single image.
 This script uses the RAW image format,
-and can be used to flash the firmware to the eMMC of the development board or any SD-Card using
+and can be used to flash the firmware to the eMMC of the development board or any SD-card using
 the `dd` command or using `Balena Etcher` tool.
 
 ```{seealso}

@@ -1,6 +1,11 @@
-# Vicharak Debian Guide
+(linux-start-guide)=
 
-## Account Management
+# Vicharak Linux Start Guide
+
+Vicharak Provides multiple linux distributions for Vaaman SBC such as Debian, Ubuntu, Armbian, etc.
+This guide will help you to get started with Vicharak linux systems.
+
+## System Management
 
 ### Set host name and password
 
@@ -13,25 +18,61 @@ username: vicharak
 password: 12345
 :::
 
+### Vicharak Configuration Tool
+
+Vicharak linux systems includes **vicharak-config** tool which is purely written
+using shell scripts that allows users to configure and setup their linux system configuration.
+
+It provides a **TUI** interface to configure different linux specific configurations.
+Use `sudo vicharak-config` to get started.
+
+It is supported on all Debian based systems such as Debian buster/bullseye,
+Ubuntu focal/jammy and other third party systems such as Armbian.
+
 :::{admonition} Refer to
-[**vicharak-config**](#user-settings) to change hostname and password.
+:class: tip
+[**Vicharak config tool guide**](#vicharak-config-tool) for more detailed information.
 :::
+
+### Set up automatic Wi-Fi connection on boot
+
+In the following example, we will set up automatic Wi-Fi connection on boot for the
+**wlan0** interface. This will be useful if you are using a headless system. That means
+you will not need to connect a monitor, keyboard, or mouse to your system to connect to Wi-Fi.
+
+**1. Edit the `/userdata/before.txt` file and add the following lines:**
+
+```text
+connect-wi-fi <network name> <password>
+```
+
+Example:
+
+```text
+connect-wi-fi my-wifi-network my-wifi-password
+```
+
+**2. Reboot the system.**
+
+---
+
+## Debugging
 
 (linux-uart-serial-console)=
 
-## UART Serial Console
+### UART Serial Console
 
 :::{admonition} Windows users refer to
 Getting Started with Vaaman [**UART Serial Console**](../../getting-started.rst#using-serial-console)
 :::
 
-### Preparation
+#### Preparation
 
-To access Vaaman SBC through the serial interface, you will need the following:
+To access Vaaman SBC through the serial interface, A USB to TTL serial cable or adapter is required.
 
-- A USB to TTL serial cable or adapter [CP2102 USB to TTL Convertor](https://www.amazon.com/HiLetgo-CP2102-Converter-Adapter-Downloader/dp/B00LODGRV8/ref=sr_1_8?keywords=usb+to+ttl+adapter&qid=1689597979&sprefix=usb+to+tt%2Caps%2C293&sr=8-8)
+[Get arduino compatible FTDI from here](https://amzn.eu/d/hctdJnp)
 
-### Hardware Setup
+#### Hardware Setup
 
 1. Connect the USB to TTL serial cable or adapter to your computer.
 
@@ -41,45 +82,53 @@ To access Vaaman SBC through the serial interface, you will need the following:
 :widths: 20 40 130
 :header-rows: 1
 
-*   - **Serial FTDI Pin**
-    - **Header GPIO Pin**
-    - **Schematic Name**
-*   - GND
-    - Pin 6
-    - GND
-*   - TX
-    - Pin 8 (GPIO4_C4)
-    - UART2DBG_TX
-*   - RX
-    - Pin 10 (GPIO4_C3)
-    - UART2DBG_RX
+- - **Serial FTDI Pin**
+  - **Header GPIO Pin**
+  - **Schematic Name**
+- - GND
+  - Pin 6
+  - GND
+- - TX
+  - Pin 8 (GPIO4_C4)
+  - UART2DBG_TX
+- - RX
+  - Pin 10 (GPIO4_C3)
+  - UART2DBG_RX
 
 :::
 
-:::{image} ../../_static/images/vaaman-serial-uart-pins.webp
+:::{image} ../../\_static/images/vaaman-serial-uart-pins.webp
 :width: 50%
 :::
 
-### Install GTKTerm
+(minicom-guide)=
 
-You can install GTKTerm by executing the following command:
+#### Serial Console Programs
+
+:::::{tab-set}
+
+::::{tab-item} GTK-Term (GUI)
+
+#### Install GTK-Term
+
+You can install GTK-Term by executing the following command:
 
 |       Debian/Ubuntu        |           Fedora           |        Arch Linux        |
 | :------------------------: | :------------------------: | :----------------------: |
 |     `sudo apt update`      |     `sudo dnf update`      |    `sudo pacman -Syu`    |
 | `sudo apt install gtkterm` | `sudo dnf install gtkterm` | `sudo pacman -S gtkterm` |
 
-### Setting up GTKTerm
+#### Setting up GTK-Term
 
-Run **GTKTerm** by executing the following command:
+Run **GTK-Term** by executing the following command:
 
 ```bash
 sudo gtkterm
 ```
 
-### Configure GTKTerm
+#### Configure GTK-Term
 
-To access the configuration settings for GTKTerm,
+To access the configuration settings for GTK-Term,
 you can follow either of these methods:
 
 Click on the **Configuration** menu and select **Port**.
@@ -88,10 +137,10 @@ OR
 
 Press **Ctrl+Shift+S**.
 
-By using either of these methods, you will be able to access the configuration settings in GTKTerm,
+By using either of these methods, you will be able to access the configuration settings in GTK-Term,
 where you can make adjustments to the port settings for your serial connection, as shown in the image below:
 
-:::{image} ../../_static/images/gtkterm-configuration.webp
+:::{image} ../../\_static/images/gtkterm-configuration.webp
 :width: 50%
 :::
 
@@ -99,7 +148,12 @@ where you can make adjustments to the port settings for your serial connection, 
 Ensure that the cable is properly connected to the appropriate serial port on both devices.
 :::
 
-### Install Minicom
+::::
+
+::::{tab-item} Minicom (CLI)
+:selected: true
+
+#### Install Minicom
 
 For Linux we will use Minicom. Install it with:
 
@@ -114,7 +168,7 @@ For other Linux distributions, please refer to the following table for the equiv
 |     `sudo apt update`      |     `sudo dnf update`      |    `sudo pacman -Syu`    |
 | `sudo apt install minicom` | `sudo dnf install minicom` | `sudo pacman -S minicom` |
 
-### Setting up Minicom
+#### Setting up Minicom
 
 - Connect the USB to UART converter to your computer and run the following command to find the port name:
 
@@ -122,7 +176,7 @@ For other Linux distributions, please refer to the following table for the equiv
 sudo minicom -s
 ```
 
-#### Select **Serial port setup** and press Enter.
+**Select `Serial port setup` and press Enter.**
 
 ```text
             +-----[configuration]------+
@@ -139,7 +193,7 @@ sudo minicom -s
 
 ```
 
-#### Change the port name to the one you found in the previous step.
+**Change the port name to the one you found in the previous step.**
 
 For example, if the port name is `/dev/modem`, then change it to `/dev/ttyUSB0`.
 
@@ -163,7 +217,7 @@ For example, if the port name is `/dev/modem`, then change it to `/dev/ttyUSB0`.
             +--------------------------+
 ```
 
-#### Configure baud rate of serial console according to your USB-UART converter.
+**Configure baud rate of serial console according to your USB-UART converter.**
 
 Configure and Press **Enter** to save the settings.
 
@@ -187,7 +241,7 @@ Configure and Press **Enter** to save the settings.
             +---------+------------------------------------+
 ```
 
-#### Select **Save setup as dfl** and press Enter.
+**Select `Save setup as dfl` and press Enter.**
 
 ```text
             +-----[configuration]------+
@@ -203,7 +257,7 @@ Configure and Press **Enter** to save the settings.
             +--------------------------+
 ```
 
-#### Save the settings as a different profile
+**Save the settings as a different profile**
 
 If you want to save the settings as a different profile, select Save setup as.. and press Enter.
 
@@ -221,7 +275,7 @@ If you want to save the settings as a different profile, select Save setup as.. 
             +--------------------------+
 ```
 
-#### Select **Exit** and press Enter
+**Select `Exit` and press Enter**
 
 ```text
             +-----[configuration]------+
@@ -255,8 +309,11 @@ Press CTRL-A Z for help on special keys
 
 - [**Tera Term**](https://ttssh2.osdn.jp/index.html.en)
 
-- [**GTKTerm**](https://github.com/Jeija/gtkterm)
+- [**GTK-Term**](https://github.com/Jeija/gtkterm)
   :::
+
+::::
+:::::
 
 ## SSH Tutorial
 
@@ -282,19 +339,19 @@ This guide will cover the installation of default `openssh-server`.
 
 ### SSH Server Configuration
 
-#### Enable SSH service to start on boot
+**Enable SSH service to start on boot**
 
 ```bash
 sudo systemctl enable ssh
 ```
 
-#### Start SSH service
+**Start SSH service**
 
 ```bash
 sudo systemctl start ssh
 ```
 
-#### Check SSH service status
+**Check SSH service status**
 
 ```bash
 sudo systemctl status ssh
@@ -304,13 +361,13 @@ sudo systemctl status ssh
 If it is active and running, you should see a **active (running)** message.
 :::
 
-#### Check SSH service port
+**Check SSH service port**
 
 ```bash
 sudo netstat -tulpn | grep ssh
 ```
 
-#### Avahi-daemon installation and configuration
+**Avahi-daemon installation and configuration**
 
 You can install **Avahi-daemon** using the following commands:
 
@@ -332,7 +389,7 @@ sudo systemctl start avahi-daemon
 sudo systemctl status avahi-daemon
 ```
 
-#### Access Vaaman SBC through SSH
+**Access Vaaman SBC through SSH**
 
 **you can use either of the following commands:**
 

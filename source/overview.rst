@@ -32,6 +32,7 @@ The Vaaman Single Board Computer (SBC) offers a range of hardware features, incl
 .. list-table::
    :widths: 10 50
    :header-rows: 1
+   :class: feature-table
 
    * - **Type**
      - **Feature**
@@ -81,7 +82,8 @@ The Vaaman Single Board Computer (SBC) offers a range of hardware features, incl
        | 4 User LEDs on T120F324 bank 2F.
 
 .. seealso::
-    :ref:`Getting Started <getting-started>` with Vicharak Vaaman
+
+    :ref:`Getting Started  with Vicharak Vaaman <getting-started>`
 
     :ref:`Vaaman Application Documentation <vaaman-applications>`
 

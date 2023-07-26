@@ -5,12 +5,13 @@
 Rockchip offers the [**RKDevTool**](#windows-rkdevtool) as a fundamental development tool for Windows,
 and [**Linux Upgrade Tool**](#linux-upgrade-tool) for Linux and mac-OS.
 
-This tool is used to upgrade the firmware of Rockchip SoCs and it is the primary tool
-used for flashing **Vaaman Linux** images to the eMMC or other storage devices on the
-Vaaman SBC.
+This tool is used to upgrade or flash the firmware on Rockchip SoCs and it is the primary tool
+used for flashing **Vaaman Linux** images to the eMMC, SD-Card, or other storage devices.
 
-This tool supports following features:
+````{admonition} This tool supports following features:
+:class: tip
 
+```
 - Downloading firmware
 - Erasing flash
 - Writing firmware
@@ -22,6 +23,8 @@ This tool supports following features:
 - Upgrading firmware
 
 And many more.
+```
+````
 
 ```{toctree}
 ---
