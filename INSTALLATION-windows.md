@@ -1,3 +1,5 @@
+# Windows Installation Guide
+
 ## Prerequisites
 
 ### Install Python from Microsoft Store
@@ -13,6 +15,7 @@ To install python on Windows you can:
 ### Install pipenv using pip
 
 For installing `pipenv` on your system use the following command.
+
 ```bash
 pip install pipenv
 ```
@@ -25,6 +28,7 @@ pip install pipenv
 > Skip the following steps below if you are using ./make.bat to setup virtualenv
 
 Use following command to setup python virtual environment for building **vaaman-doc**.
+
 ```bash
 python -m pipenv update
 ```
@@ -34,6 +38,7 @@ python -m pipenv update
 ### Enter the python virtual environment
 
 Use following command to enter python virtual environment.
+
 ```bash
 python -m pipenv shell
 ```
