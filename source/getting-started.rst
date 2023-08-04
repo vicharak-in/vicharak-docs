@@ -410,7 +410,8 @@ Vaaman Boot modes
    * - Loader Mode
      - Loader mode is used to upgrade the `bootloader`. In this mode, the bootloader will wait for the host command for `firmware upgrade`. On success, the board boots from the `eMMC` or `SD-card`, and the board enters the system normally.
    * - Maskrom Mode
-     - Maskrom mode is used to `repair` the board. In a situation where the bootloader is damaged, the board can enter the maskrom mode. In general, there is no need to enter `Maskrom` mode. In this mode, the bootrom code waits for the host to transmit the bootloader code through the USB-C port, load and run it.
+     - | Maskrom mode is used to `repair` the board. In a situation where the bootloader is damaged, the board can enter the maskrom mode. In general, there is no need to enter `Maskrom` mode. In this mode, the bootrom code waits for the host to transmit the bootloader code through the USB-C port, load and run it.
+       | Learn more are maskrom mode :ref:`here <vaaman-maskrom-mode>`.
 
 .. seealso::
     :ref:`Vaaman Applications <vaaman-applications>`
