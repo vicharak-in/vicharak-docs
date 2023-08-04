@@ -1,42 +1,41 @@
 # This action does the following:
 # 1. Installs pipenv via python-pip
 # 2. Installs dependencies according to Pipfile
-# 3. Builds the documentation 
+# 3. Builds the documentation
 # 4. Uses scp to copy the build files (html) to remote server
 
-
 name: Build and Deploy Vaaman Documentation
-on:
-  push:
-    branches: 
-      - main
-      - staging
+# on:
+#   push:
+#     branches:
+#       - main
+#       - staging
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    # Install dependencies and build the docs
-    - uses: actions/checkout@v3
-    - name: Setting Up Python Version 
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-    - name: Installing pipenv
-      run: |
-        python3 -m pip install --upgrade pip
-        pip install pipenv
-    - name: Installing Dependencies and Building Docs
-      run: pipenv update &&  pipenv run make html -j$(nproc --all)
+      # Install dependencies and build the docs
+      - uses: actions/checkout@v3
+      - name: Setting Up Python Version
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Installing pipenv
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install pipenv
+      - name: Installing Dependencies and Building Docs
+        run: pipenv update &&  pipenv run make html -j$(nproc --all)
 
-    # Copy it to the server
-    - name: Copying build/html/ to remote server
-      uses: appleboy/scp-action@v0.1.4
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSPHRASE }}
-        strip_components: 2
-        overwrite: true
-        source: _build/html/
-        target: public_html/vicharak.in/docs/vaaman/
+      # Copy it to the server
+      - name: Copying build/html/ to remote server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSPHRASE }}
+          strip_components: 2
+          overwrite: true
+          source: _build/html/
+          target: public_html/vicharak.in/docs/vaaman/

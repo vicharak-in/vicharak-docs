@@ -38,5 +38,35 @@ body {
 }
 
 .sd-shadow-md {
-    box-shadow: 0 0.2rem 0.5rem var(--sd-color-shadow) !important;
+  box-shadow: 0 0.2rem 0.5rem var(--sd-color-shadow) !important;
+}
+
+.green {
+  background-color: green;
+  color: #fff;
+}
+
+.black {
+  color: #fff;
+  background-color: #333;
+}
+
+.blue {
+  color: #fff;
+  background-color: blue;
+}
+
+.yellow {
+  color: #000;
+  background-color: yellow;
+}
+
+.red {
+  color: #000;
+  background-color: red;
+}
+
+.orange {
+  color: #000;
+  background-color: orange;
 }

@@ -49,15 +49,11 @@ To boot the board into MaskROM mode, follow the steps below:
 
 2. Short the `eMMC CLK` on the board to `GND` using a **tweezer** or a **jumper wire**.
 
-::::{admonition} **Vicharak Pogo Pin**
+:::{admonition} **Alternative Options to boot into MaskROM mode**
 :class: tip
 
-You can use the **Vicharak pogo pin** to boot into MaskROM mode.
-
-:::{image} ../../\_static/images/vaaman-maskrom-mode.webp
-:width: 50%
+You can Refer to the [Alternative MaskROM boot modes](#vaaman-maskrom-mode) for more information.
 :::
-::::
 
 3. After shorting the `eMMC CLK` to `GND`, You can now release the Pogo pin.
 

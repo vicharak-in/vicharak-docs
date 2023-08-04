@@ -95,7 +95,7 @@ Vaaman Pin-outs Guide
 ^^^^^^^^^^^^^^^^^^^^^
 `Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.2.pdf>`_
 
-:ref:`rk3399-gpio-numbers-count`
+:ref:`vaaman-gpio-description`
 
 Mechanical Information
 ^^^^^^^^^^^^^^^^^^^^^^

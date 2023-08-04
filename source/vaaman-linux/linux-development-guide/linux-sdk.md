@@ -25,19 +25,38 @@ You host system needs to be either Debian bullseye (11) or Ubuntu Jammy (20.04) 
 ```bash
 sudo apt-get update
 
-sudo apt-get install repo git-core gitk git-gui gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler \
-gcc-aarch64-linux-gnu mtools parted libudev-dev libusb-1.0-0-dev python-linaro-image-tools \
-linaro-image-tools gcc-arm-linux-gnueabihf libssl-dev liblz4-tool genext2fs lib32stdc++6 \
-gcc-aarch64-linux-gnu g+conf autotools-dev libsigsegv2 m4 intltool libdrm-dev curl sed make \
-binutils build-essential gcc g++ bash patch gzip bzip2 perl tar cpio python unzip rsync file bc wget \
-libncurses5 libqt4-dev libglib2.0-dev libgtk2.0-dev libglade2-dev cvs git mercurial rsync openssh-client \
-subversion asciidoc w3m dblatex graphviz python-matplotlib libssl-dev texinfo fakeroot \
-libparse-yapp-perl default-jre patchutils swig chrpath diffstat gawk
+asciidoc autotools-dev bash bc binutils bison build-essential bzip2 chrpath cpio curl \
+cvs dblatex default-jre device-tree-compiler diffstat expect-dev fakeroot file flex g++ gawk gcc \
+gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf g+conf genext2fs git git-core git-gui \
+gitk graphviz gzip intltool lib32stdc++6 libdrm-dev libglade2-dev libglib2.0-dev
+libgtk2.0-dev liblz4-tool libncurses5 libparse-yapp-perl libsigsegv2 libssl-dev libudev-dev \
+libusb-1.0-0-dev m4 make mercurial mtools openssh-client parted patch patchutils perl python \
+qemu-user-static rsync sed subversion swig tar texinfo u-boot-tools unzip w3m wget
+```
+
+**Installing Google's repo tool**
+
+**repo** tool is required to sync the manifests for cloning entire `linux SDK` on your local computer.
+
+```bash
+curl https://storage.googleapis.com/git-repo-downloads/repo > repo
+chmod a+rx repo
+sudo mv repo /usr/local/bin
 ```
 
 ### Getting the sources
 
-TODO: Manifest setup here!
+repo init --no-tags --no-clone-bundle -u <url> -b <branch> -m <manifest>
+
+:::{tip}
+You can also shallow clone entire SDK using `--depth=1` option.
+Use the following command to sync the source with shallow history:
+
+```bash
+repo init --depth=1 --no-tags --no-clone-bundle -u <url> -b <branch> -m <manifest>
+```
+
+:::
 
 ### Syncing the source
 
