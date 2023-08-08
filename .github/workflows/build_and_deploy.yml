@@ -5,11 +5,11 @@
 # 4. Uses scp to copy the build files (html) to remote server
 
 name: Build and Deploy Vaaman Documentation
-# on:
-#   push:
-#     branches:
-#       - main
-#       - staging
+on:
+  push:
+    branches:
+      - main
+      - staging
 
 jobs:
   build:
@@ -28,14 +28,15 @@ jobs:
       - name: Installing Dependencies and Building Docs
         run: pipenv update &&  pipenv run make html -j$(nproc --all)
 
-      # Copy it to the server
+          # Copy it to the server
       - name: Copying build/html/ to remote server
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSPHRASE }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          key: ${{ secrets.DIGITALOCEAN_PRIVATE_KEY }}
           strip_components: 2
           overwrite: true
           source: _build/html/
-          target: public_html/vicharak.in/docs/vaaman/
+          target: /var/www/html/docs/
