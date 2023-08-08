@@ -78,8 +78,8 @@ FPGA Sample files
     * - Bitstream file
       - `Simple LED Blink Bit Demo <_static/files/sample_led_blink_t120_demo_bit.zip>`_
 
-Data-sheets
-^^^^^^^^^^^
+SoC Documents
+^^^^^^^^^^^^^
 
 .. list-table::
    :widths: 25 100
@@ -102,6 +102,9 @@ Data-sheets
 
    * - Rockchip RK3399 TRM V1.4 Part1
      - `V1.4 Part1 <https://opensource.rock-chips.com/images/e/ee/Rockchip_RK3399TRM_V1.4_Part1-20170408.pdf>`_
+
+   * - Rockchip SoC and BSP Documents
+     - `GitHub <https://github.com/vicharak-in/rockchip-docs>`_
 
 Vaaman Pin-outs Guide
 ^^^^^^^^^^^^^^^^^^^^^
