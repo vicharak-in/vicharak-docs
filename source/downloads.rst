@@ -13,13 +13,13 @@ OS Images
       - **Variant**
 
     * - Android
-      - `Android 12.1 <http://24.199.117.173/linux-system-images/vaaman/android/>`_
+      - `Android 12.1 <http://downloads.vicharak.in/android/>`_
 
     * - Debian
-      - `Bullseye <http://24.199.117.173/linux-system-images/vaaman/debian>`_
+      - `Bullseye 11 <http://downloads.vicharak.in/debian>`_
 
     * - Ubuntu
-      - `Focal 20.04 <http://24.199.117.173/linux-system-images/vaaman/ubuntu>`_
+      - `Focal 20.04 <http://downloads.vicharak.in/ubuntu>`_
 
     * - Community Images
       - **Coming Soon**
@@ -36,9 +36,9 @@ OS Images
 |
 
 .. seealso::
-   How to flash the image to the board: :doc:`Flashing the image <vaaman-linux/linux-usage-guide/rockchip-develop-guide>`
+   How to flash the image to the board using :doc:`vaaman-linux/linux-usage-guide/rockchip-develop-guide`
 
-   :doc:`Vaaman Linux Start Guide <vaaman-linux/linux-usage-guide/linux-start-guide>`
+   Also check :doc:`vaaman-linux/linux-usage-guide/linux-start-guide`
 
 OS Utilities
 ^^^^^^^^^^^^
@@ -78,24 +78,37 @@ FPGA Sample files
     * - Bitstream file
       - `Simple LED Blink Bit Demo <_static/files/sample_led_blink_t120_demo_bit.zip>`_
 
-Data-sheets
-^^^^^^^^^^^
-`Rockchip RK3399 Datasheet <https://www.rockchip.fr/RK3399%20datasheet%20V1.8.pdf>`_
+SoC Documents
+^^^^^^^^^^^^^
 
-`Efinix Trion T120 Datasheet <https://www.efinixinc.com/docs/trion120-ds-v3.4.pdf>`_
+.. list-table::
+   :widths: 25 100
+   :header-rows: 1
 
-`Rockchip RK3399 TRM V1.3 Part1 <https://rockchip.fr/Rockchip%20RK3399%20TRM%20V1.3%20Part1.pdf>`_
+   * - **File**
+     - **Download Link**
 
-`Rockchip RK3399 TRM V1.3 Part2 <https://rockchip.fr/Rockchip%20RK3399%20TRM%20V1.3%20Part2.pdf>`_
+   * - Rockchip RK3399 Datasheet
+     - `V1.8 <https://rockchip.fr/RK3399%20datasheet%20V1.8.pdf>`_
 
-`Rockchip RK3399 TRM V1.4 Part1 <https://opensource.rock-chips.com/images/e/ee/Rockchip_RK3399TRM_V1.4_Part1-20170408.pdf>`_
+   * - Efinix Trion T120 Datasheet
+     - `V3.4 <https://www.efinixinc.com/docs/trion120-ds-v3.4.pdf>`_
 
+   * - Rockchip RK3399 TRM V1.3 Part1
+     - `V1.3 Part1 <https://rockchip.fr/Rockchip%20RK3399%20TRM%20V1.3%20Part1.pdf>`_
+
+   * - Rockchip RK3399 TRM V1.3 Part2
+     - `V1.3 Part2 <https://rockchip.fr/Rockchip%20RK3399%20TRM%20V1.3%20Part2.pdf>`_
+
+   * - Rockchip RK3399 TRM V1.4 Part1
+     - `V1.4 Part1 <https://opensource.rock-chips.com/images/e/ee/Rockchip_RK3399TRM_V1.4_Part1-20170408.pdf>`_
+
+   * - Rockchip SoC and BSP Documents
+     - `GitHub <https://github.com/vicharak-in/rockchip-docs>`_
 
 Vaaman Pin-outs Guide
 ^^^^^^^^^^^^^^^^^^^^^
 `Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.2.pdf>`_
-
-:ref:`vaaman-gpio-description`
 
 Mechanical Information
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -121,13 +134,21 @@ Step File
 `Download Vaaman 3D File <_static/files/Vaaman_3D_file_V0.3.step.7z>`_
 
 .. note::
-   The step file is compressed using 7zip. You can use `7zip <https://www.7-zip.org/>`_ or `WinRAR <https://www.win-rar.com/>`_ to extract the file.
+    The step file is compressed using 7zip. You can use `7zip`_ or `WinRAR`_ to extract the file.
+
+    For **Linux**, you can use the following command to extract the image:
+
+    .. code-block:: console
+
+       7z x <image_name>.7z
 
 |
 
 .. seealso::
-   How to :ref:`Contribute to Vaaman <contributing>`
+   :ref:`Contributing to Vaaman <contributing>`
 
-   :ref:`Frequently asked questions <faq>`
+   :ref:`Frequently Asked Questions <faq>`
 
-   :ref:`Vaaman FPGA Programming <vaaman-fpga>`
+   :ref:`Vaaman FPGA Programming Guide <vaaman-fpga>`
+
+   :doc:`Vaaman Linux Guide <vaaman-linux/index>`
