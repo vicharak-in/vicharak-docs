@@ -44,6 +44,8 @@ Not all functions can be used at the same time. Only one function can be used
 or assigned to a GPIO at a time.
 :::
 
+### SoC GPIOs Header
+
 | GPIO number | Function2 |  Function1   |   GPIO   |             Pin#             |            Pin#             |   GPIO   |              Function1              | Function2  | GPIO number |
 | :---------: | :-------: | :----------: | :------: | :--------------------------: | :-------------------------: | :------: | :---------------------------------: | :--------: | :---------: |
 |             |           |    +3.3V     |          | <div class='yellow'>1</div>  |  <div class='red'>2</div>   |          |                +5.0V                |            |             |
@@ -84,6 +86,31 @@ or assigned to a GPIO at a time.
   **115200bps, 500000bps, 1500000bps,** and more.
 
 :::
+
+### FGPA Header
+
+|  Function   |     GPIO     |             Pin#             |             Pin#             |     GPIO     |  Function   |
+| :---------: | :----------: | :--------------------------: | :--------------------------: | :----------: | :---------: |
+|    +5.0V    |              |   <div class='red'>1</div>   | <div class='yellow'>2</div>  |              |    +3.3V    |
+|    +5.0V    |              |   <div class='red'>3</div>   | <div class='yellow'>4</div>  |              |    +3.3V    |
+| GPIO T_RX P | GPIOT_RX28_P |  <div class='green'>5</div>  |  <div class='green'>6</div>  | GPIOT_RX28_N | GPIO T_RX N |
+|    GPIO     |   GPIO_73    |  <div class='green'>7</div>  |  <div class='green'>8</div>  |   GPIO_75    |    GPIO     |
+|    GPIO     |   GPIO_173   |  <div class='green'>9</div>  | <div class='green'>10</div>  |   GPIO_72    |    GPIO     |
+|    GPIO     |   GPIO_174   | <div class='green'>11</div>  | <div class='green'>12</div>  |   GPIO_178   |    GPIO     |
+|     LED     |  USER_LEDS3  | <div class='orange'>13</div> | <div class='green'>14</div>  |   GPIO_183   |    GPIO     |
+|     LED     |  USER_LEDS2  | <div class='orange'>15</div> | <div class='orange'>16</div> |  USER_LED0   |     LED     |
+|    GPIO     |   GPIO_63    | <div class='green'>17</div>  | <div class='orange'>18</div> |  USER_LED1   |     LED     |
+|     GND     |              | <div class='black'>19</div>  | <div class='black'>20</div>  |              |     GND     |
+|     GND     |              | <div class='black'>21</div>  | <div class='black'>22</div>  |              |     GND     |
+|  RX CLK N   | RX29_CLK2_N  |  <div class='blue'>23</div>  |  <div class='blue'>24</div>  | RX29_CLK2_P  |  RX CLK P   |
+|     CDI     |     CDI6     |  <div class='blue'>25</div>  | <div class='black'>26</div>  |              |     GND     |
+|     GND     |              | <div class='black'>27</div>  | <div class='black'>28</div>  |              |     GND     |
+|    GPIO     |   GPIO_168   | <div class='green'>29</div>  | <div class='green'>30</div>  |   GPIO_187   |    GPIO     |
+|    GPIO     |   GPIO_17    | <div class='green'>31</div>  |  <div class='blue'>32</div>  |     CDI7     |     CDI     |
+|     CDI     |     CDI5     |  <div class='blue'>33</div>  | <div class='green'>34</div>  |   GPIO_66    |    GPIO     |
+|     CDI     |     CDI4     |  <div class='blue'>35</div>  | <div class='green'>36</div>  |   GPIO_62    |    GPIO     |
+|     GND     |              | <div class='black'>37</div>  | <div class='black'>38</div>  |              |     GND     |
+|    +3.3V    |              | <div class='yellow'>39</div> | <div class='yellow'>40</div> |              |    +3.3V    |
 
 ## GPIO Numbers translation
 
