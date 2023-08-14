@@ -70,3 +70,16 @@ body {
   color: #000;
   background-color: orange;
 }
+
+:target {
+  animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: hsla(50, 100%, 50%, 0.3);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
