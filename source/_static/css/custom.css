@@ -1,5 +1,5 @@
 body {
-  font-family: "Manrope", "Inter", sans-serif;
+  font-family: "Inter", "Manrope", sans-serif !important;
 }
 
 .contents .caption,
@@ -69,4 +69,17 @@ body {
 .orange {
   color: #000;
   background-color: orange;
+}
+
+:target {
+  animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: hsla(50, 100%, 50%, 0.3);
+  }
+  100% {
+    background-color: transparent;
+  }
 }

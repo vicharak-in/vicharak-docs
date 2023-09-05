@@ -79,8 +79,7 @@ html_static_path = ["_static"]
 html_title = "Vicharak"
 # CSS files to include
 html_css_files = [
-    "https://fonts.googleapis.com/css?family=inter:400,400i,700,700i&display=swap",
-    "https://fonts.googleapis.com/css?family=Manropes:400,700&display=swap",
+    "css/fonts.css",
     "css/custom.css",
 ]
 # Theme options
