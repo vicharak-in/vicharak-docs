@@ -37,7 +37,8 @@ that require both processing power and hardware customization.
    Vaaman Application Documentation <vaaman-applications>
    Vaaman Linux Documentation <vaaman-linux/index>
    Vaaman FPGA Programming Documentation <vaaman-fpga>
-
+   Vaaman Remote Upload Documentation <vaaman-remote-upload>
+   
 .. toctree::
    :glob:
    :maxdepth: 1
