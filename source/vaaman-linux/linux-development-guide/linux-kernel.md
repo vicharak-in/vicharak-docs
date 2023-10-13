@@ -2,9 +2,12 @@
 
 # Build Vicharak Kernel from source
 
-Vicharak Provides multiple revision of Linux kernels for Vaaman board.
-:::{admonition} Please Refer to
-[Types of kernels available for Vaaman](../linux-usage-guide/custom-linux-kernel.md#types-of-kernels-available-for-vaaman)
+Vicharak provides multiple revisions of Linux kernels for Vaaman board. There
+are several differences across the revisions, mostly bug fixes and upstream
+improvements. But, the hardware functionality is the same.
+
+:::{admonition} Please Refer to the types of kernels available for
+[Vaaman for more information](#available-custom-kernel-types)
 :::
 
 ## Build Linux Kernel
@@ -12,25 +15,30 @@ Vicharak Provides multiple revision of Linux kernels for Vaaman board.
 ### Installing the system dependencies
 
 ```bash
+sudo apt-get update
+
 sudo apt-get install build-essential python libssl-dev git-core \
-gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler gcc-aarch64-linux-gnu mtools parted pv
+gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler \
+gcc-aarch64-linux-gnu mtools parted pv
 ```
 
 :::{warning}
-It is recommended to use **Ubuntu 20.04** and Higher or **Debian 11** and Higher environment for building.
+It is recommended to use **Ubuntu 20.04** and Higher or **Debian 11**
+and Higher environment for building.
 :::
 
 ### Getting the kernel source
 
-Download the kernel source from [Vicharak's GitHub](https://github.com/vicharak-in/linux-kernel)
+Download the kernel source from
+[Vicharak's GitHub](https://github.com/vicharak-in/linux-kernel)
 
-#### Using Git Clone
+#### Download using Git Clone
 
 ```bash
 git clone https://github.com/vicharak-in/linux-kernel -b <branch>
 ```
 
-#### Download the kernel as zip
+#### Download the kernel as archive
 
 ![vicharak-linux-kernel-github](../../_static/images/vicharak-linux-kernel-github.webp)
 
@@ -39,7 +47,7 @@ git clone https://github.com/vicharak-in/linux-kernel -b <branch>
 ```bash
 wget https://github.com/vicharak-in/linux-kernel/archive/refs/heads/master.zip
 
-unzip linuz-kernel-master.zip
+unzip linuz-kernel-master.zip -d vicharak-linux-kernel
 ```
 
 ### Compiling the Linux kernel
@@ -47,16 +55,38 @@ unzip linuz-kernel-master.zip
 #### Enter the kernel directory
 
 ```bash
-cd <kernel_diretory>
+cd vicharak-linux-kernel
 ```
 
 #### Compile Rockchip Linux config
 
 ```bash
+export CROSS_COMPILE=aarch64-linux-gnu-
+
 make O=out ARCH=arm64 rockchip_linux_defconfig
 ```
 
+:::{tip} You can also use custom toolchain for compilation.
+
+1. Clone your custom toolchain from the internet.
+
+2. Export LD_LIBRARY_PATH and PATH variables
+
+```bash
+export LD_LIBRARY_PATH=<path-to-custom-toolchain>/lib:$LD_LIBRARY_PATH
+export PATH=<path-to-custom-toolchain>/bin:$PATH
+```
+
+3. Build the kernel using the normal steps
+   :::
+
 #### Copy vaaman specific configs to .config
+
+```bash
+./scripts/kconfig/merge_config.sh -m out/.config arch/arm64/configs/rk3399_vaaman.config
+```
+
+or
 
 ```bash
 cat arch/arm64/configs/rk3399_vaaman.config >> out/.config
@@ -65,7 +95,8 @@ cat arch/arm64/configs/rk3399_vaaman.config >> out/.config
 :::{warning}
 On Vaaman kernel version 4.4 you will not have `arch/arm64/configs/rk3399_vaaman.config`.
 
-So, for that just ignore using `cat` to copy vaaman specific configs inside .config.
+So, for that just ignore using the above commands for merging vaaman specific
+configs inside .config.
 :::
 
 #### Finally compile the kernel
@@ -76,18 +107,33 @@ make O=out ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu -j$(nproc --all)
 
 **Upon successful compilation, confirm that you have following files.**
 
+:::{card}
+
 - out/arch/arm64/boot/dts/rockchip/rk3399-vaaman-linux.dtb
 - out/arch/arm64/boot/Image
+  :::
 
 :::{warning}
-On Vaaman kernel version 4.4 you will not have `out/arch/arm64/boot/dts/rockchip/rk3399-vaaman-linux.dtb`.
+On Vaaman kernel version 4.4 you will not have
+`out/arch/arm64/boot/dts/rockchip/rk3399-vaaman-linux.dtb`.
 Instead you might find `rk3399-vaaman.dtb` which is perfectly fine to use.
 :::
 
 ## Vicharak's Kernel build script
 
+**To enable support for Vicharak kernel build scripts, use the following command:**
+
+```bash
+git submodule update --init
+```
+
+:::{note}
+Git submodule seemed to be best approach to enable support for Vicharak kernel build scripts.
+It allows haslefree updates to the kernel source.
+:::
+
 :::{admonition} Refer to
-[Vicharak kernel building script](../linux-usage-guide/custom-linux-kernel.md#vicharak-kernel-script)
+[Vicharak kernel building script](#vicharak-kernel-script)
 to compile and test the kernel with ease.
 :::
 

@@ -1,6 +1,19 @@
 (build-u-boot)=
 
-# Build Vicharak Vaaman U-Boot from source
+# U-Boot (Universal Boot Loader)
+
+## What actually is u-boot?
+
+U-Boot `Das U-Boot` is an open-source bootloader that can be used on various
+platforms such as ARM, X86, MIPS, RISC-V and many more.
+It is the Universal Boot Loader project and is actually used to boot the
+Linux kernel in your Vicharak board.
+
+:::{note}
+More information can be found [here](https://en.wikipedia.org/wiki/Das_U-Boot).
+:::
+
+## Build Vicharak Vaaman U-Boot from source
 
 :::{note}
 Vicharak provides two different source for u-boot:
@@ -17,12 +30,14 @@ There are separate methods to compile and flash u-boot for these above sources.
 
 ```bash
 sudo apt-get install build-essential python libssl-dev git-core \
-gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler gcc-aarch64-linux-gnu mtools parted pv
+    gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler \
+    gcc-aarch64-linux-gnu mtools parted pv
 ```
 
 ### Getting the source
 
-The source code for u-boot has been published to our [GitHub organisation](https://github.com/vicharak-in).
+The source code for u-boot has been published to our
+[GitHub organisation](https://github.com/vicharak-in).
 
 #### Clone the repository using git
 
@@ -60,20 +75,43 @@ cd <u-boot-directory>
 ./make.sh rk3399-vaaman
 ```
 
+or
+
 #### Compile using Vicharak u-boot script
 
 ```bash
-./build-uboot.sh vaaman
+git submodule update --init
+
+./vicharak/build.sh vicharak/rk3399-vaaman.mk
+./vicharak/build.sh -b
 ```
 
-Output files will be inside `vaaman/` folder. Make sure `idbloader`, `u-boot` and `trust` images are there.
+:::{tip}
+Vicharak u-boot script is recommended for ease of use
 
-#### Compile manually using commands
+The script is located in `vicharak/build.sh` and basic operations are as follows:
 
-```bash
-make ARCH=arm rk3399-vaaman_defconfig
-make ARCH=arm CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc --all)
+```text
+    ─────────────────────────────────────────────────────────────────────
+              Vicharak U-Boot Build Script - Usage Guide
+    ─────────────────────────────────────────────────────────────────────
+     Usage: ./vicharak/build.sh [OPTIONS]
+
+     Available Options:
+      lunch            | -l    : Prepare the environment for the chosen device
+      info             | -i    : Display current u-boot setup details
+      clean            | -c    : Remove u-boot build artifacts
+      build            | -b    : Compile the u-boot for the chosen device
+      ubootdeb         | -B    : Generate a Debian package for the u-boot
+      update_defconfig | -u    : Update the u-boot configuration with the latest changes
+      help             | -h    : Display this usage guide
+    ─────────────────────────────────────────────────────────────────────
 ```
+
+:::
+
+Output files will be inside current folder.
+Make sure `idbloader`, `u-boot` and `trust` images are there.
 
 :::{card} Confirm these files in the current directory
 
@@ -88,27 +126,48 @@ trust.img
 rk3399_loader_v1.xx.xxx.bin
 :::
 
+:::{tip}
+For Vendor u-boot source there is an option to build debian package as well.
+
+Use the following command to build a debian package of the uboot.
+
+```bash
+./vicharak/build.sh -B
+```
+
+or
+
+```bash
+dpkg-buildpackage -b -rfakeroot -us -uc -a arm64
+```
+
+:::
+
 ### Compile Mainline u-boot
 
 #### Installing the required system dependencies
 
 ```bash
-sudo apt-get install build-essential python libssl-dev git-core libgnutls28-dev \
-gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler gcc-aarch64-linux-gnu mtools parted pv
+sudo apt-get install build-essential python libssl-dev git-core \
+    libgnutls28-dev gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler \
+    gcc-aarch64-linux-gnu mtools parted pv
 ```
 
 #### Getting the Mainline u-boot source
 
-The source code for u-boot has been published to our [GitHub organisation](https://github.com/vicharka-in/u-boot-vicharak/tree/vicharak-mainline).
-Clone the repository using git
+The source code for u-boot has been published to our
+[GitHub organisation](https://github.com/vicharka-in/u-boot-vicharak/tree/vicharak-mainline).
+
+#### Clone the repository using git
 
 ```bash
-git clone https://github.com/vicharka-in/u-boot-vicharak -b vicharak-mainline
+git clone https://github.com/vicharak-in/u-boot-vicharak -b vicharak-mainline
 ```
 
 #### Compile ARM trusted firmware and u-boot
 
-Clone the ARM trusted firmware source code from [GitHub](https://github.com/arm-trusted-firmware/arm-trusted-firmware) and compile it.
+Clone the ARM trusted firmware source code from
+[GitHub](https://github.com/arm-trusted-firmware/arm-trusted-firmware) and compile it.
 
 ```bash
 cd arm-trusted-firmware

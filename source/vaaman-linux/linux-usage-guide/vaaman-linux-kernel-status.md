@@ -2,8 +2,6 @@
 orphan: true
 ---
 
-(vaaman-kernel-status)=
-
 # Vaaman Kernel Status
 
 ```{list-table}
@@ -67,7 +65,7 @@ orphan: true
 * - USB-C DP
   - Working
   - Working
-  - Not Working
+  - Working
   - Not Working
 
 * - SD-card (SDMMC)
@@ -90,8 +88,8 @@ orphan: true
 
 * - PCIe
   - Working
-  - Not tested
-  - Not tested
+  - Working
+  - Working
   - Not tested
 
 * - Interrupt Controller (GIC)
@@ -121,7 +119,7 @@ orphan: true
 * - ES8316 Audio
   - Working
   - Working
-  - Not tested
+  - Working
   - Not tested
 
 * - HDMI Audio
@@ -211,7 +209,6 @@ orphan: true
 * - FPGA (MIPI RX-TX Communication)
   - Working
   - Working
+  - Partially Working (SPI rockchip issues)
   - Not Working
-  - Not Working
-
 ```

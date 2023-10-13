@@ -75,6 +75,8 @@ DevNo=1 Vid=0x2207,Pid=0x330c,LocationID=7143 Mode=Maskrom SerialNo=
 :class: dropdown
 
 ```text
+$ sudo ./upgrade_tool
+
 ---------------------Tool Usage ---------------------
 Help:               H
 Version:            V

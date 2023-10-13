@@ -4,9 +4,7 @@
  Flash different images using Linux_Upgrade_Tool
 #################################################
 
-.. attention::
-
-   **Pre-requisites**
+.. attention:: **Pre-requisites**
 
    #. You need to have the **Linux_Upgrade_Tool** on your host machine.
          Download `Linux_Upgrade_Tool
@@ -19,168 +17,113 @@
 
       ./upgrade_tool db rk3399_loader_v1.xx.xxx.bin
 
-***************************************
- Flashing idbloader.img or idblock.bin
-***************************************
+
+.. list-table:: Partitions and Offsets
+   :widths: 40 60
+   :header-rows: 1
+
+   * - Partition
+     - Offset
+
+   * - uboot
+     - 0x04000
+
+   * - trust
+     - 0x06000
+
+   * - misc
+     - 0x08000
+
+   * - boot (bootable)
+     - 0x0a000
+
+   * - recovery
+     - 0x4a000
+
+   * - backup
+     - 0x5a000
+
+   * - userdata
+     - 0x6a000
+
+   * - rootfs (grow)
+     - 0xea000
+
+You can use the above table to flash different images using Linux_Upgrade_Tool or Window RKDevTool
 
 .. code::
 
-   ./upgrade_tool wl 0x40 idbloader.img
+    ./upgrade_tool wl <offset> <image name>
 
-or
+    # Example
+    ./upgrade_tool wl 0x4000 idbloader.img
 
-.. code::
+.. list-table:: Flashing Firmware Images
+   :widths: 20 80
+   :header-rows: 1
 
-   ./upgrade_tool wl 64 idbloader.img
+   * - Image Name
+     - Flashing Command
 
-*********************
- Flashing u-boot.img
-*********************
+   * - idbloader.img
+     - ``./upgrade_tool wl 0x40 idbloader.img`` or
 
-.. code::
+       ``./upgrade_tool wl 64 idbloader.img``
 
-   ./upgrade_tool wl 0x4000 u-boot.img
+   * - u-boot.img
+     - ``./upgrade_tool wl 0x4000 u-boot.img`` or
 
-or
+       ``./upgrade_tool wl 16384 u-boot.img`` or
 
-.. code::
+       (using Rockchip updateimg firmware)
+       ``./upgrade_tool di -u u-boot.img``
 
-   ./upgrade_tool wl 16384 u-boot.img
+   * - trust.img
+     - ``./upgrade_tool wl 0x6000 trust.img`` or
 
-or if you used **Rockchip updateimg firmware** method to flash system
-image, you can use
+       ``./upgrade_tool wl 24576 trust.img`` or
 
-.. code::
+       (using Rockchip updateimg firmware)
+       ``./upgrade_tool di -t trust.img``
 
-   ./upgrade_tool di -u u-boot.img
+   * - misc.img
+     - ``./upgrade_tool wl 0x8000 misc.img`` or
 
-********************
- Flashing trust.img
-********************
+       ``./upgrade_tool wl 32768 misc.img`` or
 
-.. code::
+       (using Rockchip updateimg firmware)
+       ``./upgrade_tool di -m misc.img``
 
-   ./upgrade_tool wl 0x6000 trust.img
+   * - boot.img
+     - ``./upgrade_tool wl 0xa000 boot.img`` or
 
-or
+       ``./upgrade_tool wl 40960 boot.img`` or
 
-.. code::
+       (using Rockchip updateimg firmware)
+       ``./upgrade_tool di -b boot.img``
 
-   ./upgrade_tool wl 24576 trust.img
+   * - recovery.img
+     - ``./upgrade_tool wl 0x2a000 recovery.img`` or
 
-or if you used **Rockchip updateimg firmware** method to flash system
-image, you can use
+       ``./upgrade_tool wl 174080 recovery.img`` or
 
-.. code::
+       (using Rockchip updateimg firmware)
+       ``./upgrade_tool di -r recovery.img``
 
-   ./upgrade_tool di -t trust.img
+   * - backup.img
+     - ``./upgrade_tool wl 0x3a000 backup.img`` or
 
-*******************
- Flashing misc.img
-*******************
+       ``./upgrade_tool wl 241664 backup.img`` or
 
-.. code::
+       (using Rockchip updateimg firmware)
+       ``./upgrade_tool di -k backup.img``
 
-   ./upgrade_tool wl 0x8000 misc.img
+   * - userdata.img
+     - ``./upgrade_tool wl 0x4a000 userdata.img`` or
 
-or
+       ``./upgrade_tool wl 307200 userdata.img``
 
-.. code::
+   * - rootfs.img
+     - ``./upgrade_tool wl 0xca000 rootfs.img`` or
 
-   ./upgrade_tool wl 32768 misc.img
-
-or if you used **Rockchip updateimg firmware** method to flash system
-image, you can use
-
-.. code::
-
-   ./upgrade_tool di -m misc.img
-
-*******************
- Flashing boot.img
-*******************
-
-.. code::
-
-   ./upgrade_tool wl 0xa000 boot.img
-
-or
-
-.. code::
-
-   ./upgrade_tool wl 40960 boot.img
-
-or if you used **Rockchip updateimg firmware** method to flash system
-image, you can use
-
-.. code::
-
-   ./upgrade_tool di -b boot.img
-
-***********************
- Flashing recovery.img
-***********************
-
-.. code::
-
-   ./upgrade_tool wl 0x2a000 recovery.img
-
-or
-
-.. code::
-
-   ./upgrade_tool wl 174080 recovery.img
-
-or if you used **Rockchip updateimg firmware** method to flash system
-image, you can use
-
-.. code::
-
-   ./upgrade_tool di -r recovery.img
-
-Flashing backup.img
-
-.. code::
-
-   ./upgrade_tool wl 0x3a000 backup.img
-
-or
-
-.. code::
-
-   ./upgrade_tool wl 241664 backup.img
-
-or if you used **Rockchip updateimg firmware** method to flash system
-image, you can use
-
-.. code::
-
-   ./upgrade_tool di -k backup.img
-
-***********************
- Flashing userdata.img
-***********************
-
-.. code::
-
-   ./upgrade_tool wl 0x4a000 userdata.img
-
-or
-
-.. code::
-
-   ./upgrade_tool wl 307200 userdata.img
-
-*********************
- Flashing rootfs.img
-*********************
-
-.. code::
-
-   ./upgrade_tool wl 0xca000 rootfs.img
-
-or
-
-.. code::
-
-   ./upgrade_tool wl 81920 rootfs.img
+       ``./upgrade_tool wl 81920 rootfs.img``
