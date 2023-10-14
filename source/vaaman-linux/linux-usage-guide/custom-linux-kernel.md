@@ -72,7 +72,7 @@ debian package for the linux kernel.
 sudo apt install linux-image-rk3399-vaaman-XXXXXX.deb
 ```
 
-After successfull installation you can safely reboot your board.
+After successful installation you can safely reboot your board.
 
 ### Reboot the device
 
@@ -177,7 +177,7 @@ Select device: 1
     Device DTB: rk3399-vaaman-linux
     Device compiler: Clang
     Build kernel modules: Yes
-    Build Debian package: No
+    Build debian package: No
 --------------------------------------------------------------------------------
     Build script for Vicharak kernel
     Usage: ./build.sh [OPTIONS]
@@ -187,7 +187,7 @@ Select device: 1
       clean                	Cleanup the kernel build files
       kernel               	Build linux kernel image
       dtbs                 	Build linux dtbs
-      kerneldeb            	Build linux kernel Debian package
+      kerneldeb            	Build linux kernel debian package
       update_defconfig     	Update defconfig with latest changes
       help                 	Show this help
 
@@ -251,7 +251,7 @@ make[1]: Leaving directory '/home/vicharak/vicharak/kernel_rockchip_linux_vichar
 :::
 
 **kerneldeb**
-: Builds the linux kernel Debian package.
+: Builds the linux kernel debian package.
 
 :::{card} ./build.sh kerneldeb
 
@@ -307,7 +307,7 @@ make[1]: Leaving directory '/home/vicharak/vicharak/kernel_rockchip_linux_vichar
       clean                	Cleanup the kernel build files
       kernel               	Build linux kernel image
       dtbs                 	Build linux dtbs
-      kerneldeb            	Build linux kernel Debian package
+      kerneldeb            	Build linux kernel debian package
       update_defconfig     	Update defconfig with latest changes
       help                 	Show this help
 

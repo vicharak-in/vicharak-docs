@@ -129,7 +129,7 @@ git submodule update --init
 
 :::{note}
 Git submodule seemed to be best approach to enable support for Vicharak kernel build scripts.
-It allows haslefree updates to the kernel source.
+It allows carefree updates to the kernel source.
 :::
 
 :::{admonition} Refer to

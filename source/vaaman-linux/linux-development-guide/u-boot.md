@@ -102,7 +102,7 @@ The script is located in `vicharak/build.sh` and basic operations are as follows
       info             | -i    : Display current u-boot setup details
       clean            | -c    : Remove u-boot build artifacts
       build            | -b    : Compile the u-boot for the chosen device
-      ubootdeb         | -B    : Generate a Debian package for the u-boot
+      ubootdeb         | -B    : Generate a debian package for the u-boot
       update_defconfig | -u    : Update the u-boot configuration with the latest changes
       help             | -h    : Display this usage guide
     ─────────────────────────────────────────────────────────────────────

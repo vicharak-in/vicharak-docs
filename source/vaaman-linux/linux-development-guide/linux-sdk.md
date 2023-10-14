@@ -133,7 +133,6 @@ export RK_ROOTFS_IMG=xxxx/xxxx.img
 ```
 
 ```
-
 ````
 
 #### Building the Ubuntu firmware
@@ -213,7 +212,6 @@ export RK_ROOTFS_IMG=xxxx/xxxx.img
 ```
 
 ```
-
 ````
 
 #### Building the Debian firmware
@@ -313,7 +311,6 @@ and can be used to flash the firmware to the eMMC of the development board or an
 ```{seealso} Learn more about the Rockchip parameter.txt file\
 [Rockchip parameter.txt](./rockchip-parameter-file.md)
 ```
-
 ````
 
 ---
@@ -334,11 +331,9 @@ the `dd` command or using `Balena Etcher` tool.
 ```
 
 ```{admonition} References
-
 For more information about the `Linux_Pack_Firmware` tool, please refer to the following link.\
 [Linux_Pack_Firmware](../linux-usage-guide/rockchip-develop-guide.md)
 
 Also check out the following link for\
 [How to flash the firmware]()
-
 ```
