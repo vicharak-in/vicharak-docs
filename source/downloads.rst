@@ -108,7 +108,7 @@ SoC Documents
 
 Vaaman Pin-outs Guide
 ^^^^^^^^^^^^^^^^^^^^^
-`Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.2.pdf>`_
+`Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_
 
 Mechanical Information
 ^^^^^^^^^^^^^^^^^^^^^^
