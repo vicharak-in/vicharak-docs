@@ -7,13 +7,18 @@
 Vicharak offers four version of linux kernels for Vaaman board.
 Each kernel is based on a different version of the Linux kernel.
 
+These kernel revisions are based on the sources of Rockchip RK3399 SoC with
+necessary changes and optimizations for Vaaman.
+
 Rockchip is responsible for updating the `RK3399` SoC support in the
 Linux kernel. It has provided support for Linux Kernel **4.4, 4.19 and 5.10**.
+Additionally Vicharak also supports the Mainline Linux Kernel as well.
 
-Check the below table for the list of kernels available for Vaaman and the
-status of each kernel.
-
-[Vaaman Kernel Status](./vaaman-linux-kernel-status.md)
+:::{warning}
+Some of the kernel versions might not contain all the features supported or required by Vaaman.
+Please take a look at the [Vaaman Kernel Status](vaaman-kernel-status) table
+for the status of the different kernels available for Vaaman.
+:::
 
 :::{admonition} Refer to
 [How to build linux kernel from source guide](../linux-development-guide/linux-kernel.md)

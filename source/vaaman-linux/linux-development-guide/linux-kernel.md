@@ -47,7 +47,8 @@ git clone https://github.com/vicharak-in/linux-kernel -b <branch>
 ```bash
 wget https://github.com/vicharak-in/linux-kernel/archive/refs/heads/master.zip
 
-unzip linuz-kernel-master.zip -d vicharak-linux-kernel
+unzip master.zip
+mv linux-kernel-master linux-kernel
 ```
 
 ### Compiling the Linux kernel
@@ -55,7 +56,7 @@ unzip linuz-kernel-master.zip -d vicharak-linux-kernel
 #### Enter the kernel directory
 
 ```bash
-cd vicharak-linux-kernel
+cd linux-kernel
 ```
 
 #### Compile Rockchip Linux config
@@ -93,10 +94,11 @@ cat arch/arm64/configs/rk3399_vaaman.config >> out/.config
 ```
 
 :::{warning}
-On Vaaman kernel version 4.4 you will not have `arch/arm64/configs/rk3399_vaaman.config`.
+When using Vaaman kernel version **4.4**, please note that the file
+`arch/arm64/configs/rk3399_vaaman.config` will not be available.
 
-So, for that just ignore using the above commands for merging vaaman specific
-configs inside .config.
+Consequently, you should refrain from using the provided commands to merge
+Vaaman-specific configurations into the .config file.
 :::
 
 #### Finally compile the kernel
