@@ -87,6 +87,7 @@ kerneldeb
 update_defconfig
 init
 gpios
+submodule
  - source/vaaman-linux/linux-development-guide/u-boot.md
 build-u-boot
 idbloader.img
@@ -95,6 +96,7 @@ flash-u-boot
  - source/vaaman-linux/linux-development-guide/linux-kernel.md
 modules_install
 INSTALL_MOD_DIR
+LD_LIBRARY_PATH
  - source/vaaman-linux/linux-development-guide/linux-sdk.md
 RK_UBOOT_DEFCONFIG
 RK_KERNEL_DEFCONFIG
@@ -211,3 +213,5 @@ GPIO_66
 GPIO_62
 RX29_CLK2_N
 1500000bps
+ - source/vaaman-linux/linux-usage-guide/custom-linux-kernel.md
+dd

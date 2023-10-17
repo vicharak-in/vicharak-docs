@@ -1,19 +1,37 @@
 # How to use custom linux kernel
 
+(available-custom-kernel-types)=
+
 ## Types of kernels available for Vaaman
 
-Vicharak offers 4 types of kernels for Vaaman board. Each kernel is based on a different version of the Linux kernel. Rockchip is responsible for updating the `RK3399` SoC support in the Linux kernel.
-It has provided support for Linux Kernel 4.4, 4.19 and 5.10.
+Vicharak offers four version of linux kernels for Vaaman board.
+Each kernel is based on a different version of the Linux kernel.
 
-[Vaaman Kernel Status](vaaman-kernel-status) table shows the status of the different kernels available for Vaaman.
+These kernel revisions are based on the sources of Rockchip RK3399 SoC with
+necessary changes and optimizations for Vaaman.
+
+Rockchip is responsible for updating the `RK3399` SoC support in the
+Linux kernel. It has provided support for Linux Kernel **4.4, 4.19 and 5.10**.
+Additionally Vicharak also supports the Mainline Linux Kernel as well.
+
+:::{warning}
+Some of the kernel versions might not contain all the features supported or required by Vaaman.
+Please take a look at the [Vaaman Kernel Status](vaaman-kernel-status) table
+for the status of the different kernels available for Vaaman.
+:::
 
 :::{admonition} Refer to
-[How to build linux kernel from source guide](../linux-development-guide/build-linux-kernel.md)
+[How to build linux kernel from source guide](../linux-development-guide/linux-kernel.md)
 :::
 
 (flash-custom-kernel)=
 
 ## How to flash compiled linux kernel
+
+::::{tab-set}
+:::{tab-item} Simple Copy Image method
+
+<br/>
 
 ### Copy the compiled kernel image to the device
 
@@ -26,14 +44,15 @@ scp out/modules_rk3399_vaaman.tar.gz <user>@<device-ip>:~/
 
 ### Flash the kernel image
 
-ssh into the device or open the terminal on the device and run the following commands
+1. **ssh** login into the device or open the terminal on the device running linux
+   system and run the following commands
 
 ```bash
 sudo cp Image /boot/Image
 sudo cp rk3399-vaaman-linux.dtb /boot/rk3399-vaaman-linux.dtb
 ```
 
-Copy modules to the device
+2. Copy modules to the device
 
 ```bash
 sudo tar -xvf modules_rk3399_vaaman.tar.gz -C /
@@ -45,28 +64,55 @@ sudo tar -xvf modules_rk3399_vaaman.tar.gz -C /
 sudo reboot
 ```
 
----
+:::
 
-Alternatively, you can also flash the boot image using the following commands
+:::{tab-item} Installing as a debian package
+
+#### You can install the linux kernel as a debian package
+
+Vicharak has created a custom package configuration for building a fully functional
+debian package for the linux kernel.
+
+```bash
+sudo apt install linux-image-rk3399-vaaman-XXXXXX.deb
+```
+
+After successful installation you can safely reboot your board.
+
+### Reboot the device
+
+```bash
+sudo reboot
+```
+
+:::
+
+:::{tab-item} Flashing using **dd** tool
+
+#### You can also flash the boot image using the following commands
+
+<br />
 
 ```bash
 sudo dd if=boot.img of=/dev/mmcblkXp4 status=progress; sync
 ```
 
-:::{note}
+```{note}
 Here `mmcblkXp4` is the boot partition of the device. Replace `X` with the device number
 
 0. SD-card
 1. eMMC
+```
 
 :::
+::::
 
 :::{seealso}
 For flashing the boot image using Rockchip upgrade tool refer to
 [Rockchip Linux Upgrade Tool](./rockchip-upgrade-tool-misc.rst)
 :::
 
-(#vicharak-kernel-script)=
+(vicharak-kernel-script)=
 
 ## Introduction to Vicharak kernel building script
 
@@ -136,7 +182,7 @@ Select device: 1
     Device DTB: rk3399-vaaman-linux
     Device compiler: Clang
     Build kernel modules: Yes
-    Build Debian package: No
+    Build debian package: No
 --------------------------------------------------------------------------------
     Build script for Vicharak kernel
     Usage: ./build.sh [OPTIONS]
@@ -146,7 +192,7 @@ Select device: 1
       clean                	Cleanup the kernel build files
       kernel               	Build linux kernel image
       dtbs                 	Build linux dtbs
-      kerneldeb            	Build linux kernel Debian package
+      kerneldeb            	Build linux kernel debian package
       update_defconfig     	Update defconfig with latest changes
       help                 	Show this help
 
@@ -210,7 +256,7 @@ make[1]: Leaving directory '/home/vicharak/vicharak/kernel_rockchip_linux_vichar
 :::
 
 **kerneldeb**
-: Builds the linux kernel Debian package.
+: Builds the linux kernel debian package.
 
 :::{card} ./build.sh kerneldeb
 
@@ -266,7 +312,7 @@ make[1]: Leaving directory '/home/vicharak/vicharak/kernel_rockchip_linux_vichar
       clean                	Cleanup the kernel build files
       kernel               	Build linux kernel image
       dtbs                 	Build linux dtbs
-      kerneldeb            	Build linux kernel Debian package
+      kerneldeb            	Build linux kernel debian package
       update_defconfig     	Update defconfig with latest changes
       help                 	Show this help
 

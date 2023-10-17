@@ -82,16 +82,20 @@ To access Vaaman SBC through the serial interface, A USB to TTL serial cable or 
 :widths: 20 40 130
 :header-rows: 1
 
-- - **Serial FTDI Pin**
+-
+  - **Serial FTDI Pin**
   - **Header GPIO Pin**
   - **Schematic Name**
-- - GND
+-
+  - GND
   - Pin 6
   - GND
-- - TX
+-
+  - TX
   - Pin 8 (GPIO4_C4)
   - UART2DBG_TX
-- - RX
+-
+  - RX
   - Pin 10 (GPIO4_C3)
   - UART2DBG_RX
 
@@ -179,18 +183,17 @@ sudo minicom -s
 **Select `Serial port setup` and press Enter.**
 
 ```text
-            +-----[configuration]------+
-            | Filenames and paths      |
-            | File transfer protocols  |
-            | **Serial port setup**    |
-            | Modem and dialing        |
-            | Screen and keyboard      |
-            | Save setup as dfl        |
-            | Save setup as..          |
-            | Exit                     |
-            | Exit from Minicom        |
-            +--------------------------+
-
++-----[configuration]------+
+| Filenames and paths      |
+| File transfer protocols  |
+| **Serial port setup**    |
+| Modem and dialing        |
+| Screen and keyboard      |
+| Save setup as dfl        |
+| Save setup as..          |
+| Exit                     |
+| Exit from Minicom        |
++--------------------------+
 ```
 
 **Change the port name to the one you found in the previous step.**
@@ -198,23 +201,23 @@ sudo minicom -s
 For example, if the port name is `/dev/modem`, then change it to `/dev/ttyUSB0`.
 
 ```text
-    +-----------------------------------------------------------------------+
-    | A -    Serial Device      : /dev/ttyUSB0                              |
-    | B - Lockfile Location     : /var/lock                                 |
-    | C -   Callin Program      :                                           |
-    | D -  Callout Program      :                                           |
-    | E -    Bps/Par/Bits       : 115200 8N1                                |
-    | F - Hardware Flow Control : Yes                                       |
-    | G - Software Flow Control : No                                        |
-    |                                                                       |
-    |    Change which setting?                                              |
-    +-----------------------------------------------------------------------+
-            | Screen and keyboard      |
-            | Save setup as dfl        |
-            | Save setup as..          |
-            | Exit                     |
-            | Exit from Minicom        |
-            +--------------------------+
++-----------------------------------------------------------------------+
+| A -    Serial Device      : /dev/ttyUSB0                              |
+| B - Lockfile Location     : /var/lock                                 |
+| C -   Callin Program      :                                           |
+| D -  Callout Program      :                                           |
+| E -    Bps/Par/Bits       : 115200 8N1                                |
+| F - Hardware Flow Control : Yes                                       |
+| G - Software Flow Control : No                                        |
+|                                                                       |
+|    Change which setting?                                              |
++-----------------------------------------------------------------------+
+        | Screen and keyboard      |
+        | Save setup as dfl        |
+        | Save setup as..          |
+        | Exit                     |
+        | Exit from Minicom        |
+        +--------------------------+
 ```
 
 **Configure baud rate of serial console according to your USB-UART converter.**
@@ -222,39 +225,39 @@ For example, if the port name is `/dev/modem`, then change it to `/dev/ttyUSB0`.
 Configure and Press **Enter** to save the settings.
 
 ```text
-    +-----------------+---------[Comm Parameters]----------+----------------+
-    | A -    Serial De|                                    |                |
-    | B - Lockfile Loc|     Current: 1500000 8N1           |                |
-    | C -   Callin Pro| Speed            Parity      Data  |                |
-    | D -  Callout Pro| A: <next>        L: None     S: 5  |                |
-    | E -    Bps/Par/B| B: <prev>        M: Even     T: 6  |                |
-    | F - Hardware Flo| C:   9600        N: Odd      U: 7  |                |
-    | G - Software Flo| D:  38400        O: Mark     V: 8  |                |
-    |                 | E: 115200        P: Space          |                |
-    |    Change which |                                    |                |
-    +-----------------| Stopbits                           |----------------+
-            | Screen a| W: 1             Q: 8-N-1          |
-            | Save set| X: 2             R: 7-E-1          |
-            | Save set|                                    |
-            | Exit    |                                    |
-            | Exit fro| Choice, or <Enter> to exit?        |
-            +---------+------------------------------------+
++-----------------+---------[Comm Parameters]----------+----------------+
+| A -    Serial De|                                    |                |
+| B - Lockfile Loc|     Current: 1500000 8N1           |                |
+| C -   Callin Pro| Speed            Parity      Data  |                |
+| D -  Callout Pro| A: <next>        L: None     S: 5  |                |
+| E -    Bps/Par/B| B: <prev>        M: Even     T: 6  |                |
+| F - Hardware Flo| C:   9600        N: Odd      U: 7  |                |
+| G - Software Flo| D:  38400        O: Mark     V: 8  |                |
+|                 | E: 115200        P: Space          |                |
+|    Change which |                                    |                |
++-----------------| Stopbits                           |----------------+
+        | Screen a| W: 1             Q: 8-N-1          |
+        | Save set| X: 2             R: 7-E-1          |
+        | Save set|                                    |
+        | Exit    |                                    |
+        | Exit fro| Choice, or <Enter> to exit?        |
+        +---------+------------------------------------+
 ```
 
 **Select `Save setup as dfl` and press Enter.**
 
 ```text
-            +-----[configuration]------+
-            | Filenames and paths      |
-            | File transfer protocols  |
-            | Serial port setup        |
-            | Modem and dialing        |
-            | Screen and keyboard      |
-            | **Save setup as dfl**    |
-            | Save setup as..          |
-            | Exit                     |
-            | Exit from Minicom        |
-            +--------------------------+
++-----[configuration]------+
+| Filenames and paths      |
+| File transfer protocols  |
+| Serial port setup        |
+| Modem and dialing        |
+| Screen and keyboard      |
+| **Save setup as dfl**    |
+| Save setup as..          |
+| Exit                     |
+| Exit from Minicom        |
++--------------------------+
 ```
 
 **Save the settings as a different profile**
@@ -262,33 +265,33 @@ Configure and Press **Enter** to save the settings.
 If you want to save the settings as a different profile, select Save setup as.. and press Enter.
 
 ```text
-            +-----[configuration]------+
-            | Filenames and paths      |
-            | File transfer protocols  |
-            | Serial port setup        |
-            | Modem and dialing        |
-            | Screen and keyboard      |
-            | Save setup as dfl        |
-            | **Save setup as..**      |
-            | Exit                     |
-            | Exit from Minicom        |
-            +--------------------------+
++-----[configuration]------+
+| Filenames and paths      |
+| File transfer protocols  |
+| Serial port setup        |
+| Modem and dialing        |
+| Screen and keyboard      |
+| Save setup as dfl        |
+| **Save setup as..**      |
+| Exit                     |
+| Exit from Minicom        |
++--------------------------+
 ```
 
 **Select `Exit` and press Enter**
 
 ```text
-            +-----[configuration]------+
-            | Filenames and paths      |
-            | File transfer protocols  |
-            | Serial port setup        |
-            | Modem and dialing        |
-            | Screen and keyboard      |
-            | Save setup as dfl        |
-            | Save setup as..          |
-            | **Exit**                 |
-            | Exit from Minicom        |
-            +--------------------------+
++-----[configuration]------+
+| Filenames and paths      |
+| File transfer protocols  |
+| Serial port setup        |
+| Modem and dialing        |
+| Screen and keyboard      |
+| Save setup as dfl        |
+| Save setup as..          |
+| **Exit**                 |
+| Exit from Minicom        |
++--------------------------+
 ```
 
 On successful configuration, you will see the following screen:
@@ -396,7 +399,7 @@ sudo systemctl status avahi-daemon
 > SSH using the IP address
 
 ```bash
-    ssh username@ip_address
+ssh username@ip_address
 ```
 
 :::{tip}
@@ -407,7 +410,7 @@ actual IP address assigned to Vaaman on the network.
 > SSH using the PC name (hostname)
 
 ```bash
-    ssh username@pc-name.local
+ssh username@pc-name.local
 ```
 
 :::{tip}

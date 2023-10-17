@@ -9,6 +9,7 @@ avahi
 balena
 bitstream
 bootable
+bootloader
 bootrom
 buildroot
 config
@@ -53,11 +54,13 @@ rootfs
 sdcard
 spi
 struct
+submodule
 sudo
 toolchain
 trion
 txt
 uboot
+updateimg
 userdata
 userspace
 vaaman
@@ -65,3 +68,5 @@ ver
 verisilicon
 vicharak
 vid
+xea
+yocto

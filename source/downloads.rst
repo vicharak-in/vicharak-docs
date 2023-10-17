@@ -88,10 +88,10 @@ SoC Documents
    * - **File**
      - **Download Link**
 
-   * - Rockchip RK3399 Datasheet
+   * - Rockchip RK3399 Data-sheet
      - `V1.8 <https://rockchip.fr/RK3399%20datasheet%20V1.8.pdf>`_
 
-   * - Efinix Trion T120 Datasheet
+   * - Efinix Trion T120 Data-sheet
      - `V3.4 <https://www.efinixinc.com/docs/trion120-ds-v3.4.pdf>`_
 
    * - Rockchip RK3399 TRM V1.3 Part1

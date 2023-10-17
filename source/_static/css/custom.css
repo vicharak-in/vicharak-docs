@@ -1,85 +1,89 @@
 body {
-  font-family: "Inter", "Manrope", sans-serif !important;
+	font-family: "Inter", "Manrope", sans-serif !important;
 }
 
 .contents .caption,
 .contents .topic-title,
 .toctree-wrapper .caption,
 .toctree-wrapper .topic-title {
-  font-weight: 600;
-  font-size: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+	font-weight: 600;
+	font-size: 1.5rem;
+	padding-top: 1.5rem;
+	padding-bottom: 0.5rem;
 }
 
 .contents ul,
 .toctree-wrapper ul {
-  list-style-type: disc !important;
-  margin-left: 1.5rem !important;
+	list-style-type: disc !important;
+	margin-left: 1.5rem !important;
 }
 .contents ul li a.reference,
 .toctree-wrapper ul li a.reference {
-  font-weight: 500 !important;
-  font-size: 1.1rem;
-  padding-left: 0.5rem;
+	font-weight: 500 !important;
+	font-size: 1.1rem;
+	padding-left: 0.5rem;
 }
 
 #content ul:not(.search) p,
 #content ul:not(.search) > li {
-  margin-top: 0.9rem;
+	margin-top: 0.9rem;
 }
 
 .container {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 .feature-table td:first-child {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 .sd-shadow-md {
-  box-shadow: 0 0.2rem 0.5rem var(--sd-color-shadow) !important;
+	box-shadow: 0 0.2rem 0.5rem var(--sd-color-shadow) !important;
 }
 
 .green {
-  background-color: green;
-  color: #fff;
+	background-color: green;
+	color: #fff;
 }
 
 .black {
-  color: #fff;
-  background-color: #333;
+	color: #fff;
+	background-color: #333;
 }
 
 .blue {
-  color: #fff;
-  background-color: blue;
+	color: #fff;
+	background-color: blue;
 }
 
 .yellow {
-  color: #000;
-  background-color: yellow;
+	color: #000;
+	background-color: yellow;
 }
 
 .red {
-  color: #000;
-  background-color: red;
+	color: #000;
+	background-color: red;
 }
 
 .orange {
-  color: #000;
-  background-color: orange;
+	color: #000;
+	background-color: orange;
 }
 
 :target {
-  animation: highlight 1s ease;
+	animation: highlight 1s ease;
 }
 
 @keyframes highlight {
-  0% {
-    background-color: hsla(50, 100%, 50%, 0.3);
-  }
-  100% {
-    background-color: transparent;
-  }
+	0% {
+		background-color: hsla(50, 100%, 50%, 0.3);
+	}
+	100% {
+		background-color: transparent;
+	}
+}
+
+.highlight > pre {
+	padding-left: 1rem;
 }
