@@ -81,7 +81,8 @@ via USB. This mode can be entered through multiple ways on Vaaman board.
         3. Quickly press ``CTRL + b`` to interrupt the boot process and force
            the device to enter Maskrom mode.
 
-        4. The device should now be in maskrom mode.
+        4. The device should now be in maskrom mode. The LEDs on the board
+           should turn off.
 
         .. dropdown:: Success Logs
 
@@ -108,7 +109,8 @@ via USB. This mode can be entered through multiple ways on Vaaman board.
 
         4. Run the ``rbrom`` command to enter maskrom mode.
 
-        5. The device should now be in maskrom mode.
+        5. The device should now be in maskrom mode. The LEDs on the board
+           should turn off.
 
         .. dropdown:: Success Logs
 
@@ -127,7 +129,8 @@ via USB. This mode can be entered through multiple ways on Vaaman board.
         2. Quickly press recovery key to interrupt the boot process and force
            the device to enter Maskrom mode.
 
-        3. The device should now be in maskrom mode.
+        3. The device should now be in maskrom mode. The LEDs on the board
+           should turn off.
 
         .. dropdown:: Success Logs
 
