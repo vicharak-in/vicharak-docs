@@ -18,3 +18,4 @@ and how to use it.
    How to flash FPGA firmware to SPI Flash <spi-configure>
    How to use custom linux kernel <custom-linux-kernel>
    U-Boot USB Mass Storage (UMS) mode <u-boot-ums>
+   Vaaman GPIO Programming Guide <../../vaaman-gpio-description>
