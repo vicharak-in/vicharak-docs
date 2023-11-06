@@ -60,6 +60,7 @@ toolchain
 trion
 txt
 uboot
+ums
 updateimg
 userdata
 userspace

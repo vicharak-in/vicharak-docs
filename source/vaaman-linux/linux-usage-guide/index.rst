@@ -17,3 +17,4 @@ and how to use it.
    Rockchip DevelopTool Guide <rockchip-develop-guide>
    How to flash FPGA firmware to SPI Flash <spi-configure>
    How to use custom linux kernel <custom-linux-kernel>
+   U-Boot USB Mass Storage (UMS) mode <u-boot-ums>
