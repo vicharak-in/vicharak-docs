@@ -14,6 +14,7 @@ and how to use it.
    :caption: User Guides
 
    Vicharak Linux Start Guide <linux-start-guide>
+   Rockchip MaskROM mode Guide <../../vaaman-maskrom-mode>
    Rockchip DevelopTool Guide <rockchip-develop-guide>
    How to flash FPGA firmware to SPI Flash <spi-configure>
    How to use custom linux kernel <custom-linux-kernel>

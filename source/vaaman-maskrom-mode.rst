@@ -6,18 +6,46 @@
  Vaaman Maskrom Mode
 #####################
 
-Maskrom Mode is a special mode that allows the device to be programmed
-via USB. This mode can be entered through multiple ways on Vaaman board.
+The Vicharak Vaaman board is equipped with Maskrom mode, a distinctive
+operational state that empowers the CPU to receive commands via the USB OTG port.
+Maskrom mode is particularly valuable for programming and configuring the device
+through USB connectivity.
 
-1. Manually shorting the pads using the pogo pin.
-2. Interrupting the boot process by pressing ``rbrom`` shortcut key from serial console using keyboard.
-3. Enter maskrom mode from u-boot by running ``rbrom`` command from serial console.
-4. Pressing the recovery key to enter maskrom mode.
+In Maskrom mode, the Vaaman board can be accessed through multiple pathways,
+allowing users flexibility in how they enter this specialized mode.
+This mode serves as a bridge between your computer and the board,
+facilitating firmware updates, system configurations, and other critical operations.
+
+When operating in Maskrom mode, it's essential to follow the specific steps
+provided in this guide to ensure a seamless and successful experience.
+
+This guide will walk you through the various methods for entering Maskrom mode
+on the Vicharak Vaaman board, empowering you to harness the full potential of
+this versatile single board computer.
+
+
+Pre-Requisites
+---------------
+
+- Vicharak Vaaman board
+- Type-C Power Delivery Adapter
+- USB to TTL Serial Converter (FTDI or PL2303) (optional)
+- 2 x USB-C to USB-A Male Cable
+- SD-card or NVMe drive (optional as eMMC is already provided)
+
+
+Methods to enter Maskrom mode
+-------------------------------
+
+- Manually shorting the pads using the pogo pin.
+- Interrupting the boot process by pressing ``rbrom`` shortcut key from serial console using keyboard.
+- Enter maskrom mode from u-boot by running ``rbrom`` command from serial console.
+- Pressing the recovery key to enter maskrom mode.
 
 .. note::
     The ``rbrom`` command is only available in u-boot version 2017.09 or
-    later. If you are using an older version of u-boot, you can use the
-    ``rbrom`` command from the u-boot binary provided in the ``tools``
+    later. If you are using an older version of u-boot or mainline u-boot, then
+    you might not be able to enter maskrom mode.
 
 .. tab-set::
 
@@ -28,10 +56,17 @@ via USB. This mode can be entered through multiple ways on Vaaman board.
 
         1. Press the Pogo pin to the pads and continue to hold it.
 
-        2. Connect the USB cable to the board and power it on using the
+        .. warning
+
+            Make sure that the SD-Card or NVMe drive is not inserted in the
+            board. You may not be able to enter maskrom mode if other storage
+            media is inserted.
+
+        2. Connect the USB-C cable to the board and power it on using the
             power delivery.
 
         3. Release the Pogo pin after the device enumerates on the host.
+            :ref:`Check out Linux Upgrade tool for more details <boot-into-maskrom-mode>`
 
         4. The device should now be in maskrom mode.
 
@@ -59,9 +94,6 @@ via USB. This mode can be entered through multiple ways on Vaaman board.
                 [167826.482781] usb 7-1.4.4: SerialNumber: rockchip
                 [167992.118283] usb 7-1.4.4: USB disconnect, device number 124
 
-        .. error::
-            Remove the SD-Card or NVMe drive from the board.
-
         .. note::
             If you are not able to enter Maskrom mode on the first try then,
             Reattach the Pogo pin and press the reset key.
@@ -70,19 +102,22 @@ via USB. This mode can be entered through multiple ways on Vaaman board.
 
     .. tab-item:: Interrupting boot process
 
-        1. Connect the USB cable to the board and power it on using the
-           power delivery.
+        1. Connect the USB-C cable to the board and your host computer.
 
-        2. Connect the TTL serial converter to the board and your host computer.
+        2. Connect the USB to TTL serial converter to the board and your
+           host computer.
 
         .. image:: _static/images/vaaman-serial-uart-pins.webp
            :width: 50%
 
-        3. Quickly press ``CTRL + b`` to interrupt the boot process and force
+        3. Power on the board using the power delivery adapter. Open the serial
+           console on your host computer.
+
+        4. Quickly press ``CTRL + b`` to interrupt the boot process and force
            the device to enter Maskrom mode.
 
-        4. The device should now be in maskrom mode. The LEDs on the board
-           should turn off.
+        5. The device should now be in maskrom mode. Confirm it when the
+           LEDs on the board have turned off.
 
         .. dropdown:: Success Logs
 
@@ -96,21 +131,23 @@ via USB. This mode can be entered through multiple ways on Vaaman board.
 
     .. tab-item:: U-Boot
 
-        1. Connect the USB cable to the board and power it on using the
-           power delivery.
+        1. Connect the USB-C cable to the board and your host computer.
 
-        2. Connect the TTL serial converter to the board and your host computer.
+        2. Connect the USB to TTL serial converter to the board and your
+           host computer.
 
         .. image:: _static/images/vaaman-serial-uart-pins.webp
            :width: 50%
 
-        3. Interrupt the boot process by pressing ``CTRL + c`` on the serial
+        3. Power on the board using the power delivery adapter.
+
+        4. Interrupt the boot process by pressing ``CTRL + c`` on the serial
             console on your host computer.
 
-        4. Run the ``rbrom`` command to enter maskrom mode.
+        5. Run the ``rbrom`` command to enter maskrom mode.
 
-        5. The device should now be in maskrom mode. The LEDs on the board
-           should turn off.
+        6. The device should now be in maskrom mode. Confirm it when the
+           LEDs on the board have turned off.
 
         .. dropdown:: Success Logs
 
@@ -129,8 +166,8 @@ via USB. This mode can be entered through multiple ways on Vaaman board.
         2. Quickly press recovery key to interrupt the boot process and force
            the device to enter Maskrom mode.
 
-        3. The device should now be in maskrom mode. The LEDs on the board
-           should turn off.
+        3. The device should now be in maskrom mode. Confirm it when the
+           LEDs on the board have turned off.
 
         .. dropdown:: Success Logs
 
@@ -141,3 +178,7 @@ via USB. This mode can be entered through multiple ways on Vaaman board.
                 List of rockusb connected(1)
                 DevNo=1	Vid=0x2207,Pid=0x330c,LocationID=7144	Mode=Maskrom	SerialNo=
 
+.. seealso::
+        :ref:`Vaaman Linux starting guide <linux-start-guide>`
+
+        :ref:`Frequently Asked Questions <faq>`
