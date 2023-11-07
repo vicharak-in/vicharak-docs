@@ -6,6 +6,30 @@ orphan: true
 
 # Vaaman GPIO Description
 
+Vicharak Vaaman board features a 40-pin GPIO (General-Purpose Input/Output)
+header that provides flexible options for connecting and controlling external
+devices. Through software settings, you can configure these pins as either
+input or output, making them adaptable for various applications.
+
+Out of the 40 pins on the header, 27 are dedicated GPIO pins. These GPIO pins
+can also be repurposed for SPI (Serial Peripheral Interface),
+UART (Universal Asynchronous Receiver-Transmitter), and
+I2C (Inter-Integrated Circuit) functions.
+
+This versatility opens up a wide array of possibilities for interfacing with
+different components and facilitating communication with other devices.
+
+:::{tip}
+**What? you want more GPIOs?**
+
+Fear not, we have a solution for you. Vaaman board has additional 40-FPGA GPIOs
+available to the user.\
+These GPIOs are accessible from the FPGA and can be configured to be used inside
+your project and applications
+:::
+
+<!-- TODO: Add FPGA GPIO user guide and description -->
+
 ## GPIO Voltage Level
 
 RK3399 SoC has three multiple GPIO voltage levels. Below table shows the
@@ -15,19 +39,23 @@ voltage level of vaaman GPIOs.
 :widths: 20 40 80
 :header-rows: 1
 
-- - GPIO
+-
+  - GPIO
   - Voltage Level
   - Tolerance
 
-- - ADC_IN0
+-
+  - ADC_IN0
   - 1.8V
   - ~1.98V
 
-- - GPIO3_C0 (Pin 32)
+-
+  - GPIO3_C0 (Pin 32)
   - 3.3V
   - ~3.46V
 
-- - Other GPIOs
+-
+  - Other GPIOs
   - 3.0V
   - ~3.15V
 
@@ -71,13 +99,12 @@ or assigned to a GPIO at a time.
 
 :::{note}
 
-- The default function of pins marked in <span class="orange">orange</span> is
-  specific to this board. For example, pin 3 and 5 cannot be used as GPIOs
+- The default function of pins marked in <span class="orange">orange</span> are
+  specific to this board. For example, Pins 3 and 5 cannot be used as GPIOs
   because they are connected to the I2C bus and are already in use.
 - All pins, except those for power supply, are directly connected to the
   System-on-Chip (SoC).
 - **Pin 7** is directly connected to the `MIPI CSI` pin on the board.
-- `UART2` is enabled as U-boot and Linux serial console by default.
   Instructions to use UART2 as serial console can be found in
   [Serial Console](#serial-console), and to disable it, refer to
   [Vicharak Config Device tree overlays](#vicharak-config-device-tree-overlays)
@@ -161,3 +188,9 @@ or assigned to a GPIO at a time.
 | <div class="yellow">D5</div> |   29   |     | <div class="green">D5</div> |   61   |     | <div class="blue">D5</div> |   93   |     | <div class="red">D5</div> |  125   |     | <div class="orange">D5</div> |  157   |
 | <div class="yellow">D6</div> |   30   |     | <div class="green">D6</div> |   62   |     | <div class="blue">D6</div> |   94   |     | <div class="red">D6</div> |  126   |     | <div class="orange">D6</div> |  158   |
 | <div class="yellow">D7</div> |   31   |     | <div class="green">D7</div> |   63   |     | <div class="blue">D7</div> |   95   |     | <div class="red">D7</div> |  127   |     | <div class="orange">D7</div> |  159   |
+
+<!-- TODO: Add FPGA GPIO user guide and description -->
+
+:::{seealso}
+[Configure 40-Pin header using vicharak-config utility](#vicharak-config-device-tree-overlays)
+:::
