@@ -96,5 +96,5 @@ computer, making it convenient for tasks that involve transferring or writing da
 :::{warning}
 Do not insert SD-Card when after you previously entered UMS mode from eMMC. U-Boot will crash in such case.
 
-Always do a reset the board before switching the storage for UMS mode.
+Always reset the board before switching the storage for UMS mode.
 :::

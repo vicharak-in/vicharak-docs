@@ -6,22 +6,21 @@
  Vaaman Maskrom Mode
 #####################
 
-The Vicharak Vaaman board is equipped with Maskrom mode, a distinctive
-operational state that empowers the CPU to receive commands via the USB OTG port.
-Maskrom mode is particularly valuable for programming and configuring the device
-through USB connectivity.
+The Vicharak Vaaman board has a special mode called "Maskrom mode."
+In this mode, the board can receive commands through a USB connection.
+This is useful for tasks like programming and setting up the device.
 
 In Maskrom mode, the Vaaman board can be accessed through multiple pathways,
 allowing users flexibility in how they enter this specialized mode.
 This mode serves as a bridge between your computer and the board,
 facilitating firmware updates, system configurations, and other critical operations.
 
-When operating in Maskrom mode, it's essential to follow the specific steps
-provided in this guide to ensure a seamless and successful experience.
+When you're in Maskrom mode, it's important to follow the steps in this guide
+carefully to make sure everything goes smoothly.
 
-This guide will walk you through the various methods for entering Maskrom mode
-on the Vicharak Vaaman board, empowering you to harness the full potential of
-this versatile single board computer.
+This guide will explain how to put your Vicharak Vaaman board into Maskrom mode
+using different methods. This will help you make the most of this versatile
+single board computer, even if you're new to these things.
 
 
 Pre-Requisites

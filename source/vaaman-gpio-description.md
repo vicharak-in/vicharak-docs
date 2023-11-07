@@ -20,13 +20,15 @@ This versatility opens up a wide array of possibilities for interfacing with
 different components and facilitating communication with other devices.
 
 :::{tip}
-**What you want more GPIOs?**
+**What? you want more GPIOs?**
 
 Fear not, we have a solution for you. Vaaman board has additional 40-FPGA GPIOs
 available to the user.\
 These GPIOs are accessible from the FPGA and can be configured to be used inside
 your project and applications
 :::
+
+<!-- TODO: Add FPGA GPIO user guide and description -->
 
 ## GPIO Voltage Level
 
