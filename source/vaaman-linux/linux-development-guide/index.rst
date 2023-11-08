@@ -8,8 +8,8 @@ kernel, and rootfs.
 
 U-Boot (Universal Bootloader)
 ------------------------------
-U-Boot, or the Universal Bootloader, plays a crucial role in booting the
-Linux kernel on your target hardware. It provides essential features for
+U-Boot, or the Universal Bootloader, plays an important role in booting the
+Linux kernel on your Vicharak board. It provides essential features for
 initializing hardware and loading the kernel.
 
 Linux Kernel
