@@ -1,7 +1,7 @@
 # How to use custom linux kernel
 
 :::{important}
-[Read the linux developement guide first](#build-linux-kernel)
+[Read the linux development guide first](#build-linux-kernel)
 :::
 
 (flash-custom-kernel)=

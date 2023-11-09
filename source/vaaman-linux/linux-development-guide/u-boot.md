@@ -10,7 +10,7 @@ It is the Universal Boot Loader project and is actually used to boot the
 Linux kernel in your Vicharak board.
 
 :::{note}
-More information on u-boot can be found on [u-boot wikipedia](https://en.wikipedia.org/wiki/Das_U-Boot).
+More information on u-boot can be found on [u-boot Wikipedia](https://en.wikipedia.org/wiki/Das_U-Boot).
 :::
 
 (mainline-u-boot-important)=
@@ -23,7 +23,7 @@ Vicharak provides two different sources of u-boot for the Vaaman board.
      additional features including Vaaman board support.
 
 **2. Mainline u-boot**
-   - Mainline u-boot is the upstreamed u-boot maintained by Open-source
+   - Mainline u-boot is the upstream u-boot maintained by Open-source
      developers. It contains the bleeding edge features, SoC improvements and bug fixes.
 
 There are separate methods to compile and flash u-boot for these above sources.

@@ -1,31 +1,75 @@
-# Build Linux SDK from source
+# Linux SDK
 
-Vicharak Linux SDK is based on Rockchip Linux SDK.
-It is a collection of tools and scripts to build Linux rootfs image for Vicharak boards.
+Working with Vicharak computer boards is very easy as we provide all the
+necessary source, tools and scripts required to build your own Linux systems.
 
-Vicharak provides two different sources for Linux rootfs images.
+## Build Linux SDK from source
 
-1. Debian bullseye (11)
-2. Ubuntu Jammy (20.04)
+The Vicharak Linux SDK is based on SDK provided by Rockchip hence, it follows
+the conditions and criteria of Rockchip.
+
+Vicharak provides multiple different sources for building your own Linux images.
+Take a look at the table below:
+
+:::{list-table}
+:header-rows: 1
+:class: feature-table
+
+* - Linux distribution
+  - Version
+
+* - Debian
+  - Bullseye (11)
+
+* - Ubuntu
+  - Focal (20.04)
+
+* - Ubuntu
+  - Jammy (22.04)
+
+* - Yocto
+  - Kirkstone (4.0)
+
+* - Yocto
+  - Mickledore (4.2)
+
+* - Buildroot
+  - None
+
+* - Android
+  - 12.1
+
+:::
 
 These sources are available at [Vicharak GitHub](https://github.com/vicharak-in)
 
-## Build Vaaman Linux SDK
-
 ### Installing the package dependencies for environment setup
 
-```{admonition} Prerequisites
-:class: warning
-
-You host system needs to be either Debian bullseye (11) or Ubuntu Jammy (20.04) to build the rootfs image.
+```{warning}
+It is recommended to either use **Debian bullseye (11)** or
+**Ubuntu focal (20.04)** to build the rootfs image.
 ```
+
+#### Install source control tools
+
+Building Vicharak linux systems requires both **Git** (For source code management)
+and **Repo** (Google-built repository management tool).
+
+Please take a look at [Android's source controls tools setup](https://source.android.com/docs/setup/download)
+as we follow the same for building Vicharak's Linux systems.
+
+#### Install package dependencies
+
+:::{important}
+Make sure you have properly installed `repo` tool before proceeding.
+:::
 
 **The following packages are required to build the rootfs image.**
 
 ```bash
-sudo apt-get update
+sudo apt-get update -y
 
-asciidoc autotools-dev bash bc binutils bison build-essential bzip2 chrpath cpio curl \
+sudo apt install -y asciidoc autotools-dev bash bc binutils bison build-essential bzip2 chrpath cpio curl \
 cvs dblatex default-jre device-tree-compiler diffstat expect-dev fakeroot file flex g++ gawk gcc \
 gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf g+conf genext2fs git git-core git-gui \
 gitk graphviz gzip intltool lib32stdc++6 libdrm-dev libglade2-dev libglib2.0-dev
@@ -34,19 +78,96 @@ libusb-1.0-0-dev m4 make mercurial mtools openssh-client parted patch patchutils
 qemu-user-static rsync sed subversion swig tar texinfo u-boot-tools unzip w3m wget
 ```
 
-**Installing Google's repo tool**
+:::{note}
+The above packages might not be available to install on your system. Please
+try to find the alternatives or solution from the internet.
 
-**repo** tool is required to sync the manifests for cloning entire `linux SDK` on your local computer.
-
-```bash
-curl https://storage.googleapis.com/git-repo-downloads/repo > repo
-chmod a+rx repo
-sudo mv repo /usr/local/bin
-```
+If you still are unable to install the packages, please contact us through [issues section](#)
+:::
 
 ### Getting the sources
 
-repo init --no-tags --no-clone-bundle -u <url> -b <branch> -m <manifest>
+We have structured our Linux development source code in the same way as the
+official Android sources. i.e. we have various manifests with different
+branches for different releases of our supported Linux distributions and products.
+**repo** tool will take care of the source code syncing and updating.
+
+Take a look at the following table to get the latest sources.
+
+
+| Manifest          | Tag      | URL                                                |
+|-------------------|-----------------|----------------------------------------------------|
+| Debian bullseye   | debian-bullseye-v1.1.1 | https://github.com/vicharak-in/linux-manifests/tree/debian-bullseye   |
+| Ubuntu Focal      | ubuntu-focal-v1.1.1  | https://github.com/vicharak-in/linux-manifests/tree/ubuntu-focal      |
+| Ubuntu Jammy      | ubuntu-jammy-v1.1.1  | https://github.com/vicharak-in/linux-manifests/tree/ubuntu-jammy      |
+| Yocto Kirkstone   | yocto-kirkstone-v1.0.0 | https://github.com/vicharak-in/linux-manifests/tree/yocto-kirkstone   |
+| Yocto Mickledore  | yocto-mickledore-v1.0.0 | https://github.com/vicharak-in/linux-manifests/tree/yocto-mickledore  |
+| Buildroot         | buildroot-v1.0.0    | https://github.com/vicharak-in/linux-manifests/tree/buildroot         |
+| Android 12.1      | android-12.1-v1.0.0  | https://github.com/vicharak-in/linux-manifests/tree/android-12.1      |
+
+#### Cloning the source
+
+To clone the latest sources, use the following command.
+
+::::{tab-set}
+
+:::{tab-item} Debian bullseye (11)
+
+```bash
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b debian-bullseye -m rk3399-vaaman.xml
+```
+
+:::
+
+:::{tab-item} Ubuntu Focal (20.04)
+
+```bash
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b ubuntu-focal -m rk3399-vaaman.xml
+```
+
+:::
+
+:::{tab-item} Ubuntu Jammy (22.04)
+
+```bash
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b ubuntu-jammy -m rk3399-vaaman.xml
+```
+
+:::
+
+:::{tab-item} Yocto Kirkstone (4.0)
+
+```bash
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b yocto-kirkstone -m rk3399-vaaman.xml
+```
+
+:::
+
+:::{tab-item} Yocto Mickledore (4.2)
+
+```bash
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b yocto-mickledore -m rk3399-vaaman.xml
+```
+
+:::
+
+:::{tab-item} Buildroot
+
+```bash
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b buildroot -m rk3399-vaaman.xml
+```
+
+:::
+
+:::{tab-item} Android 12.1
+
+```bash
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b android-12.1 -m rk3399-vaaman.xml
+```
+
+:::
+
+::::
 
 :::{tip}
 You can also shallow clone entire SDK using `--depth=1` option.
@@ -55,40 +176,48 @@ Use the following command to sync the source with shallow history:
 ```bash
 repo init --depth=1 --no-tags --no-clone-bundle -u <url> -b <branch> -m <manifest>
 ```
-
 :::
 
-### Syncing the source
+#### Syncing the source
+
+To download the code sources from the repositories to your local machine, use the following command.
 
 ```bash
-repo sync --no-tags --no-clone-bundle -j$(nproc)
+repo sync -j$(nproc)
 ```
 
-### Compile Linux SDK
+### Building the Linux SDK
 
 ::::{tab-set}
 
-:::{tab-item} Vaaman Ubuntu Jammy (20.04)
+:::{tab-item} Ubuntu Focal (20.04)
 :selected:
 
-The configuration file for Vaaman Ubuntu Jammy (20.04) is located at `device/rockchip/rk3399/vaaman-rk3399-ubuntu.mk`
+After successful syncing of the source, you are now ready to build the Linux SDK.
+
+Enter the SDK source directory, and confirm that your have a `build.sh` file in the current directory.
 
 #### Source the Ubuntu configuration file
+
+The configuration file for Ubuntu Focal (20.04) is located at `device/rockchip/rk3399/vaaman-rk3399-ubuntu.mk`
 
 ```bash
 ./build.sh device/rockchip/rk3399/vaaman-rk3399-ubuntu.mk
 ```
 
-To ensure successful configuration, `the device/rockchip/.BoardConfig.mk` will be linked to the effective configuration file.
-It is recommended to verify the file to confirm the success of the configuration.
+To ensure successful configuration, the `device/rockchip/.BoardConfig.mk` will
+be linked to the effective configuration file. It is recommended to verify
+the file to confirm the success of the configuration.
 
-Please note that `rk3399-vaaman-ubuntu.mk` is the configuration file obtained after compiling the Ubuntu firmware.
-Users can also create new configuration files based on this reference to customize the firmware according to their requirements.
+Please note that `rk3399-vaaman-ubuntu.mk` is the configuration file created by
+Vicharak for reference. Users can also create their own new configuration files
+based on this reference to customize the firmware according to their requirements.
 
 ````{admonition} Important configuration details:
 :class: tip
 
-(If you intend to create your own firmware, you might need to modify the following configuration information.)
+(If you intend to create your own firmware, you might need to modify the
+following configuration information.)
 
 #### Compile the uboot configuration file
 
@@ -118,21 +247,38 @@ export RK_KERNEL_DTS=rk3399-vaaman-linux
 export RK_PARAMETER=parameter-vaaman-debian.txt
 ```
 
-#### Package file for make update image
+#### Package file for generting eMMC update image
 
 ```bash
 # packagefile for make update image
 export RK_PACKAGE_FILE=rk3399-ubuntu-package-file
 ```
 
-#### The root file system image path
+```bash
+# Rootfs linux distribution
+export RK_ROOTFS_SYSTEM=ubuntu
+```
+
+```bash
+# Ubuntu version (focal or jammy)
+export RK_UBUNTU_VERSION=focal
+```
+
+```bash
+# Default desktop environment for Ubuntu (xfce, gnome, mate, base)
+export UBUNTU_FLAVOR=xfce
+```
 
 ```bash
 # rootfs image path
-export RK_ROOTFS_IMG=xxxx/xxxx.img
+export RK_ROOTFS_IMG=ubuntu/ubuntu-focal.img
 ```
 
+```bash
+# DTBO overlays to enable on boot
+export VICHARKA_BOOT_ENABLE_OVERLAYS=""
 ```
+
 ````
 
 #### Building the Ubuntu firmware
@@ -143,26 +289,134 @@ After the configuration is complete, you can start compiling the firmware.
 ./build.sh
 ```
 
-The compiled firmware will be located in the `rockdev` directory.
+The compiled firmware will be located in the `rockdev/pack` directory.
 
 :::
 
-:::{tab-item} Vaaman Debian bullseye (11)
+:::{tab-item} Ubuntu Jammy (22.04)
 
-The configuration file for Vaaman Debian bullseye (11) is located at `device/rockchip/rk3399/vaaman-rk3399-debian.mk`
+After successful syncing of the source, you are now ready to build the Linux SDK.
+
+Enter the sdk source directory, and confirm that your have a `build.sh` file in the current directory.
+
+#### Source the Ubuntu configuration file
+
+The configuration file for Ubuntu Jammy (22.04) is located at `device/rockchip/rk3399/vaaman-rk3399-ubuntu.mk`
+
+Open the configuration file and change the `RK_UBUNTU_VERSION` to `jammy`
+
+```bash
+./build.sh device/rockchip/rk3399/vaaman-rk3399-ubuntu.mk
+```
+
+To ensure successful configuration, the `device/rockchip/.BoardConfig.mk` will
+be linked to the effective configuration file. It is recommended to verify
+the file to confirm the success of the configuration.
+
+Please note that `rk3399-vaaman-ubuntu.mk` is the configuration file created by
+Vicharak for reference. Users can also create their own new configuration files
+based on this reference to customize the firmware according to their requirements.
+
+````{admonition} Important configuration details:
+:class: tip
+
+(If you intend to create your own firmware, you might need to modify the
+following configuration information.)
+
+#### Compile the uboot configuration file
+
+```bash
+# U-boot defconfig
+export RK_UBOOT_DEFCONFIG=rk3399-vaaman
+```
+
+#### Compile the kernel configuration file
+
+```bash
+# Kernel defconfig
+export RK_KERNEL_DEFCONFIG=rockchip_linux_defconfig
+```
+
+#### Compile the kernel DTS used by kernel
+
+```bash
+# Kernel DTS
+export RK_KERNEL_DTS=rk3399-vaaman-linux
+```
+
+#### Partitioning information (very important)
+
+```bash
+# parameter for GPT table
+export RK_PARAMETER=parameter-vaaman-debian.txt
+```
+
+#### Package file for generting eMMC update image
+
+```bash
+# packagefile for make update image
+export RK_PACKAGE_FILE=rk3399-ubuntu-package-file
+```
+
+```bash
+# Rootfs linux distribution
+export RK_ROOTFS_SYSTEM=ubuntu
+```
+
+```bash
+# Ubuntu version (focal or jammy)
+export RK_UBUNTU_VERSION=jammy
+```
+
+```bash
+# Default desktop environment for Ubuntu (xfce, gnome, mate, base)
+export UBUNTU_FLAVOR=xfce
+```
+
+```bash
+# rootfs image path
+export RK_ROOTFS_IMG=ubuntu/ubuntu-jammy.img
+```
+
+```bash
+# DTBO overlays to enable on boot
+export VICHARKA_BOOT_ENABLE_OVERLAYS=""
+```
+
+````
+
+#### Building the Ubuntu firmware
+
+After the configuration is complete, you can start compiling the firmware.
+
+```bash
+./build.sh
+```
+
+The compiled firmware will be located in the `rockdev/pack` directory.
+
+:::
+
+:::{tab-item} Debian bullseye (11)
+
+After successful syncing of the source, you are now ready to build the Linux SDK.
+
+Enter the SDK source directory, and confirm that your have a `build.sh` file in the current directory.
 
 #### Source the Debian configuration file
+
+The configuration file for Vaaman Debian bullseye (11) is located at `device/rockchip/rk3399/vaaman-rk3399-debian.mk`
 
 ```bash
 ./build.sh device/rockchip/rk3399/vaaman-rk3399-debian.mk
 ```
 
-To ensure successful configuration, `the device/rockchip/.BoardConfig.mk` will be linked to the effective configuration file.
+To ensure successful configuration, the `device/rockchip/.BoardConfig.mk` will be linked to the effective configuration file.
 It is recommended to verify the file to confirm the success of the configuration.
 
-Please note that `rk3399-vaaman-debian.mk` is the configuration file obtained after compiling the Debian firmware.
-
-Users can also create new configuration files based on this reference to customize the firmware according to their requirements.
+Please note that `rk3399-vaaman-debian.mk` is the configuration file created by
+Vicharak for reference. Users can also create their own new configuration files
+based on this reference to customize the firmware according to their requirements.
 
 ````{admonition} Important configuration details:
 :class: tip
@@ -204,13 +458,29 @@ export RK_PARAMETER=parameter-vaaman-debian.txt
 export RK_PACKAGE_FILE=rk3399-debian-package-file
 ```
 
-#### The root file system image path
+```bash
+# Rootfs linux distribution
+export RK_ROOTFS_SYSTEM=debian
+```
+
+```bash
+# Debian version (bullseye)
+export RK_DEBIAN_VERSION=bullseye
+```
+
+```bash
+# Default desktop environment for Debian (lxde, xfce, gnome, mate, base)
+export DEBIAN_FLAVOR=lxde
+```
 
 ```bash
 # rootfs image path
-export RK_ROOTFS_IMG=xxxx/xxxx.img
+export RK_ROOTFS_IMG=debian/linaro-rootfs.img
 ```
 
+```bash
+# DTBO overlays to enable on boot
+export VICHARKA_BOOT_ENABLE_OVERLAYS=""
 ```
 ````
 
@@ -222,12 +492,203 @@ After the configuration is complete, you can start compiling the firmware.
 ./build.sh
 ```
 
-The compiled firmware will be located in the `rockdev` directory.
+The compiled firmware will be located in the `rockdev/pack` directory.
+:::
+
+:::{tab-item} Buildroot
+
+After successful syncing of the source, you are now ready to build the Linux SDK.
+
+Enter the sdk source directory, and confirm that your have a `build.sh` file in the current directory.
+
+### Source the Buildroot configuration file
+
+The configuration file for Buildroot is located at `device/rockchip/rk3399/vaaman-rk3399-buildroot.mk`
+
+```bash
+./build.sh device/rockchip/rk3399/vaaman-rk3399-buildroot.mk
+```
+
+To ensure successful configuration, the `device/rockchip/.BoardConfig.mk` will
+be linked to the effective configuration file. It is recommended to verify
+the file to confirm the success of the configuration.
+
+Please note that `rk3399-vaaman-buildroot.mk` is the configuration file created by
+Vicharak for reference. Users can also create their own new configuration files
+based on this reference to customize the firmware according to their requirements.
+
+````{admonition} Important configuration details:
+:class: tip
+
+(If you intend to create your own firmware, you might need to modify the following configuration information.)
+
+#### Compile the uboot configuration file
+
+```bash
+# U-boot defconfig
+export RK_UBOOT_DEFCONFIG=rk3399-vaaman
+```
+
+#### Compile the kernel configuration file
+
+```bash
+# Kernel defconfig
+export RK_KERNEL_DEFCONFIG=rockchip_linux_defconfig
+```
+
+#### Compile the kernel DTS used by kernel
+
+```bash
+# Kernel DTS
+export RK_KERNEL_DTS=rk3399-vaaman-linux
+```
+
+#### Partitioning information (very important)
+
+```bash
+# parameter for GPT table
+export RK_PARAMETER=parameter-vaaman-debian.txt
+```
+
+#### Package file for make update image
+
+```bash
+# packagefile for make update image
+export RK_PACKAGE_FILE=rk3399-debian-package-file
+```
+
+```bash
+# Rootfs linux distribution
+export RK_ROOTFS_SYSTEM=buildroot
+```
+
+```bash
+# rootfs image path
+export RK_ROOTFS_IMG=buildroot/rootfs.img
+```
+
+```bash
+# DTBO overlays to enable on boot
+export VICHARKA_BOOT_ENABLE_OVERLAYS=""
+```
+
+````
+
+#### Building the Buildroot firmware
+
+After the configuration is complete, you can start compiling the firmware.
+
+```bash
+./build.sh
+```
+
+The compiled firmware will be located in the `rockdev/pack` directory.
+
+:::
+
+:::{tab-item} Android 12.1
+
+After successful syncing of the source, you are now ready to build the Linux SDK.
+
+Enter the SDK source directory, and confirm that your have a `build.sh` file in the current directory.
+
+### Source the Android 12.1 environment setup
+
+```bash
+source build/envsetup.sh
+```
+
+The device specific configuration file for Android 12.1 is located at `device/rockchip/rk3399/vaaman.mk`
+
+#### Lunch the device configuration
+
+```bash
+lunch vaaman-userdebug
+```
+
+### Building the Android 12.1 firmware
+
+After the configuration is complete, you can start compiling the firmware.
+
+```bash
+./build.sh -UACKup
+```
+
+```{note}
+`build.sh` is the firmware build script that can be used to interactively build the firmware.
+It can accept command line arguments to customize the build process.
+
+- -U -> Build U-Boot
+- -A -> Build Android
+- -C -> Build kernel using clang compiler
+- -K -> Build kernel
+- -u -> Build rockchip update image
+- -p -> Pack the firmware
+
+```
+
+After the firmware is compiled, you can find an `update.img` file inside `rockdev/pack`
+
+:::
+
+:::{tab-item} Yocto (Kirkstone/Mickledore)
+
+After successful syncing of the source, you are now ready to build the Linux SDK.
+
+Enter the SDK source directory, and confirm that your have a `build.sh` file
+in the current directory.
+
+### Source the Yocto environment setup
+
+Use the following command to source the Yocto environment for bitbake to work.
+
+```bash
+source oe-init-build-env
+```
+
+### Building the Yocto firmware
+
+After the configuration is complete, you can start compiling the firmware.
+
+```bash
+bitbake core-image-minimal
+```
+
+````{tip}
+
+As of this moment there are multiple different recipes available for building
+the Yocto firmware.
+
+```{list-table}
+:header-rows: 1
+:class: feature-table
+
+* - Recipe
+  - Description
+
+* - core-image-minimal
+  - Build the minimal server image
+
+* - core-image-sato
+  - Build a minimal X11 image
+
+* - core-image-full
+  - Build a full server image
+
+* - core-image-weston
+  - Build a minimal wayland image
+```
+````
+
 :::
 
 ::::
 
 ### Partial compilation feature
+
+:::{warning}
+This feature is only supported on Vicharak Debian, Ubuntu and Buildroot systems.
+:::
 
 If you only need to compile a certain part of the firmware.
 Use the following command to compile the corresponding part of the firmware.
@@ -237,6 +698,17 @@ Use the following command to compile the corresponding part of the firmware.
 ```bash
 ./build.sh kernel
 ```
+
+:::{tip}
+There are multiple ways to build kernel on Vicharak build system.
+
+* Extlinux based boot image
+  - `./build.sh extboot`
+
+* Linux kernel as debian package
+  - `./build.sh kerneldeb`
+
+:::
 
 #### U-boot
 
@@ -263,7 +735,7 @@ Use the following command to compile the corresponding part of the firmware.
 
 Before packing the firmware, you need to make sure that the firmware has been compiled successfully.
 
-```
+```text
 ls -l
 
 ├── boot.img -> ~/vicharak/linux_sdk/kernel/boot.img
@@ -272,9 +744,9 @@ ls -l
 ├── misc.img -> ~/vicharak/linux_sdk/device/rockchip/rockimg/wipe_all-misc.img
 ├── parameter.txt -> ~/vicharak/linux_sdk/device/rockchip/RK3399/parameter-ubuntu.txt
 ├── recovery.img -> ~/vicharak/linux_sdk/buildroot/output/rockchip_rk3399_recovery/images/recovery.img
-├── rootfs.img -> ~/vicharak/linux_sdk/ubuntu/ubuntu-focal.img
+├── rootfs.img -> ~/vicharak/linux_sdk/ubuntu/ubuntu-focal.img # or ubuntu-jammy.img or linaro-rootfs.img
 ├── trust.img -> ~/vicharak/linux_sdk/u-boot/trust.img
-├── uboot.img -> ~/vicharak/linux_sdk/u-boot:/uboot.img
+├── uboot.img -> ~/vicharak/linux_sdk/u-boot/uboot.img
 └── userdata.img
 ```
 ````
@@ -315,12 +787,12 @@ and can be used to flash the firmware to the eMMC of the development board or an
 
 ---
 
-### Vicharak RAW Image
+### Vicharak RAW (GPT) Image
 
 Vicharak provides another method to pack the firmware into a single image.
-This script uses the RAW image format,
-and can be used to flash the firmware to the eMMC of the development board or any SD-card using
-the `dd` command or using `Balena Etcher` tool.
+This script uses the GPT image format, and can be used to flash the firmware to
+any supported storage media (SD-Card, eMMC or NVMe) using the basic linux
+utility such as `dd` or even using `Balena Etcher` tool.
 
 ```{seealso}
 [How to use Balena Etcher](#how-to-use-balena-etcher)
