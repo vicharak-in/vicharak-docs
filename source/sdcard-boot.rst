@@ -1,6 +1,6 @@
-.. _booting-from-sd-card:
-
 :orphan:
+
+.. _booting-from-sd-card:
 
 Booting from SD-card
 ====================

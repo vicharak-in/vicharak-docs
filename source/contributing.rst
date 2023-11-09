@@ -1,6 +1,6 @@
-.. _contributing:
-
 :orphan:
+
+.. _contributing:
 
 ##############
  Contribution
