@@ -9,8 +9,8 @@
       and usage of the Linux Operating System on Vaaman.
 
 .. toctree::
-   :maxdepth: 2
    :caption: List of Guides
+   :titlesonly:
 
    linux-development-guide/index
    linux-configuration-guide/index

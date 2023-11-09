@@ -88,11 +88,17 @@ html_theme_options = {
     "logo_light": "_static/images/vicharak-logo-light.svg",
     "logo_dark": "_static/images/vicharak-logo-dark.svg",
     "show_breadcrumbs": True,
+    "show_prev_next": True,
 }
 # HTML favicon
 html_favicon = "_static/images/favicon.ico"
 # HTML Permalinks icon
 html_permalinks_icon = Icons.permalinks_icon
+
+html_baseurl = "https://docs.vicharak.in/"
+html_sidebars = {
+  "**": ["sidebar_main_nav_links.html", "sidebar_toc.html"]
+}
 
 favicons = [
     "images/android-chrome-192x192.png",

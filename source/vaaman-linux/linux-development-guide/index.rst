@@ -26,8 +26,8 @@ and cross-compiling software for your embedded system. We will demonstrate
 how to build your own Debian, Ubuntu, Yocto or Android system.
 
 .. toctree::
-   :maxdepth: 2
    :caption: Development Guide
+   :titlesonly:
 
    U-Boot <u-boot>
    Linux Kernel <linux-kernel>

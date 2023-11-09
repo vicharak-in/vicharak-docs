@@ -10,8 +10,8 @@ the Vaaman Linux Operating System on your device, how to configure it,
 and how to use it.
 
 .. toctree::
-   :maxdepth: 2
    :caption: User Guides
+   :titlesonly:
 
    Vicharak Linux Start Guide <linux-start-guide>
    Rockchip MaskROM mode Guide <../../vaaman-maskrom-mode>
