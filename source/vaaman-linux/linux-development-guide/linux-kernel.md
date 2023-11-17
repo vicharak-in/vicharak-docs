@@ -35,7 +35,7 @@ Additionally Vicharak has introduced the support for the Mainline Linux Kernel.
   - https://github.com/vicharak-in/linux-kernel/tree/vaaman-4.19
 
 * - Kernel 5.10
-  - Stable
+  - Stable (Recommended)
   - https://github.com/vicharak-in/linux-kernel/tree/vicharak-5.10
 
 * - Kernel Mainline
@@ -48,7 +48,6 @@ Some of the kernel versions might not contain all the features supported or requ
 Please take a look at the [Vaaman Kernel Status](vaaman-kernel-status) table
 for the status of the different kernels available for Vaaman.
 :::
-
 
 ## Build Linux Kernel
 
