@@ -44,6 +44,12 @@ orphan: true
   - Working
   - Working
 
+* - LEDs
+  - Working
+  - Working
+  - Working
+  - Working
+
 * - USB2
   - Working
   - Working
@@ -66,7 +72,7 @@ orphan: true
   - Working
   - Working
   - Working
-  - Not Working
+  - Not Tested
 
 * - SD-card (SDMMC)
   - Working
@@ -209,6 +215,6 @@ orphan: true
 * - FPGA (MIPI RX-TX Communication)
   - Working
   - Working
-  - Partially Working (SPI rockchip issues)
+  - Working
   - Not Working
 ```

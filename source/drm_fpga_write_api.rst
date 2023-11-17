@@ -1,6 +1,6 @@
-.. _drm_fpga_write_api:
-
 :orphan:
+
+.. _drm_fpga_write_api:
 
 .. toctree::
    :glob:

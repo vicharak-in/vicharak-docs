@@ -4,13 +4,13 @@
 
 |
 |     This documentation pertains to the specific documentation for
-      Vicharak Vaaman Linux.
+      Linux on the Vaaman board.
 |     It encompasses information about the development, configuration,
-      and usage of the Vaaman Linux Operating System.
+      and usage of the Linux Operating System on Vaaman.
 
 .. toctree::
-   :maxdepth: 2
    :caption: List of Guides
+   :titlesonly:
 
    linux-development-guide/index
    linux-configuration-guide/index

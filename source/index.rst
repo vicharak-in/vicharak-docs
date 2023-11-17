@@ -6,6 +6,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. rst-class:: lead
+
 ####################################
  Welcome to Vaaman's documentation!
 ####################################
@@ -27,8 +29,8 @@ that require both processing power and hardware customization.
 
 .. toctree::
    :glob:
-   :maxdepth: 1
    :caption: Contents
+   :titlesonly:
 
    Overview <overview>
    Getting Started <getting-started>
@@ -38,18 +40,18 @@ that require both processing power and hardware customization.
    Vaaman Linux Documentation <vaaman-linux/index>
    Vaaman FPGA Programming Documentation <vaaman-fpga>
    Vaaman Remote Upload Documentation <vaaman-remote-upload>
-   
+
 .. toctree::
    :glob:
-   :maxdepth: 1
+   :titlesonly:
    :caption: Downloads
 
    downloads
 
 .. toctree::
    :glob:
-   :maxdepth: 1
    :caption: Accessories
+   :titlesonly:
 
    accessories
 

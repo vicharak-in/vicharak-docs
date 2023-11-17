@@ -88,11 +88,26 @@ update_defconfig
 init
 gpios
 submodule
+multimediacard
+ums
+debian
+yocto
+kirkstone
+mickledore
+rockdev
  - source/vaaman-linux/linux-development-guide/u-boot.md
 build-u-boot
 idbloader.img
 rk3399_loader_v1.xx.xxx.bin
 flash-u-boot
+mainline-u-boot-important
+7zip
+mmcblk
+mmcblkX
+rm
+resizepart
+dd
+u-boot-rockchip
  - source/vaaman-linux/linux-development-guide/linux-kernel.md
 modules_install
 INSTALL_MOD_DIR
@@ -112,6 +127,31 @@ wipe_all-misc
 rockchip_rk3399_recovery
 userdata.img
 u
+debian-bullseye-v1
+ubuntu-focal-v1
+ubuntu-jammy-v1
+yocto-kirkstone-v1
+yocto-mickledore-v1
+buildroot-v1
+android-12
+1-v1
+RK_ROOTFS_SYSTEM
+RK_UBUNTU_VERSION
+xfce
+UBUNTU_FLAVOR
+VICHARKA_BOOT_ENABLE_OVERLAYS
+packbuild.shdevice
+mkRK_UBUNTU_VERSIONjammydevice
+RK_DEBIAN_VERSION
+lxde
+DEBIAN_FLAVOR
+linaro-rootfs
+bitbake
+core-image-sato
+core-image-weston
+wayland
+extboot
+updateimg
  - source/vaaman-linux/linux-configuration-guide/change-uboot-logo.md
 logo.h
  - source/vaaman-linux/linux-usage-guide/linux-start-guide.md
@@ -213,5 +253,9 @@ GPIO_66
 GPIO_62
 RX29_CLK2_N
 1500000bps
+40-pin
+40-FPGA
  - source/vaaman-linux/linux-usage-guide/custom-linux-kernel.md
 dd
+ - source/vaaman-linux/linux-usage-guide/u-boot-ums.md
+u-boot-ums-mode

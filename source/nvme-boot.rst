@@ -1,6 +1,6 @@
-.. _booting-from-nvme:
-
 :orphan:
+
+.. _booting-from-nvme:
 
 #########################
  Booting from NVMe drive
