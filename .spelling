@@ -95,6 +95,9 @@ yocto
 kirkstone
 mickledore
 rockdev
+shellcheck
+rk3399_vaaman
+nvme
  - source/vaaman-linux/linux-development-guide/u-boot.md
 build-u-boot
 idbloader.img
@@ -108,10 +111,15 @@ rm
 resizepart
 dd
 u-boot-rockchip
+v2017.09
+v2023.11
+idblock.binuboot.imgtrust.imgrk3399_loader_v1.xx.xxx.binidblock.binuboot.imgtrust.imgLinux
  - source/vaaman-linux/linux-development-guide/linux-kernel.md
 modules_install
 INSTALL_MOD_DIR
 LD_LIBRARY_PATH
+7zip
+dd
  - source/vaaman-linux/linux-development-guide/linux-sdk.md
 RK_UBOOT_DEFCONFIG
 RK_KERNEL_DEFCONFIG
@@ -259,3 +267,26 @@ RX29_CLK2_N
 dd
  - source/vaaman-linux/linux-usage-guide/u-boot-ums.md
 u-boot-ums-mode
+ - source/vaaman-linux/linux-usage-guide/vicharak-kernel-building-script.md
+SPDX-License-Identifier
+Utsav
+Balar
+DEVICE_NAME
+DEVICE_DTB_FILE
+DEVICE_DEFCONFIG
+rockchip_linux_defconfig
+DEVICE_CONFIG_FRAGMENT
+rk3399_vaaman.config
+DEVICE_ARCH
+DEVICE_KERNEL_IMAGE_FILE
+OUT_DIR
+DEVICE_DTB_DIR
+PERF_BUILD
+CLANG_BUILD
+MODULES_BUILD
+DEB_BUILD
+PACK_KERNEL_BUILD
+DEVICE_CLANG_VERSION
+ - source/vaaman-linux/linux-configuration-guide/vicharak-config-tool.md
+40-Pin
+40-pin

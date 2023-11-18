@@ -8,39 +8,34 @@ vicharak-config also has a systemd service that is use configure system
 prior to system boot and after the system boots.
 :::
 
-::::{admonition} **Vicharak Config TUI**
+:::{admonition} **Vicharak Config TUI**
 
-```bash
-┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
-│ Please select an option below:                                                           │
-│                                                                                          │
-│                                   System Maintenance                                      │
-│                                   Hardware                                               │
-│                                   Overlays                                               │
-│                                   Connectivity                                           │
-│                                   Advanced Options                                       │
-│                                   User Settings                                          │
-│                                   Localization                                           │
-│                                   About                                                  │
-│                                                                                          │
-│                                                                                          │
-│                                                                                          │
-│                                                                                          │
-│                                                                                          │
-│                                                                                          │
-│                                                                                          │
-│                                                                                          │
-│                                                                                          │
-│                                                                                          │
-│                         <Ok>                             <Cancel>                        │
-│                                                                                          │
-└──────────────────────────────────────────────────────────────────────────────────────────┘
+```text
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│ Please select an option below:                                                             │
+│                                                                                            │
+│                                    System Maintaince                                       │
+│                                    Hardware                                                │
+│                                    Overlays                                                │
+│                                    Connectivity                                            │
+│                                    Advanced Options                                        │
+│                                    User Settings                                           │
+│                                    Localization                                            │
+│                                    About                                                   │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                         <Ok>                             <Cancel>                          │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-:::{note}
+```{note}
 The above menu might be shown differently depending on the terminal style.
+```
+
 :::
-::::
 
 ## How to navigate around vicharak-config
 
@@ -56,19 +51,20 @@ The above menu might be shown differently depending on the terminal style.
 ## Available Features
 
 - [System maintenance](#system-maintenance)
-  : Update packages and bootloader.
+  : Update system packages.
 
 - [Hardware configuration](#hardware)
-  : Capture camera frame, Enable LEDs, Change thermal governor, DSI mirroring.
+  : Capture Camera stream, Enable LEDs, Change thermal governor, DSI mirroring
+  and 40-Pin header status.
 
 - [Overlays](#overlays)
-  : Enable DTBO overlays, Build third-party DTBO.
+  : Enable/Disable DTBO overlays, Build third-party DTBO, Reset Overlays to default.
 
 - [Connectivity](#connectivity)
   : Configure network using **nmtui**.
 
 - [Advanced Options](#advanced-options)
-  : Install `Mali GPU` library and enable `OpenGL` support.
+  : Install `Mali GPU` library and enable `OpenGL` emulation support.
 
 - [User Settings](#user-settings)
   : Change system password and hostname
@@ -82,13 +78,52 @@ The above menu might be shown differently depending on the terminal style.
 
 This feature allows you to update the packages and bootloader.
 
-- Update packages
-  : This option allows you to update the packages that are installed on the
-  system. It uses `apt-get` to update the packages.
+```text
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│ Please select an option below:                                                             │
+│                                                                                            │
+│                                    **System Maintaince**                                   │
+│                                    Hardware                                                │
+│                                    Overlays                                                │
+│                                    Connectivity                                            │
+│                                    Advanced Options                                        │
+│                                    User Settings                                           │
+│                                    Localization                                            │
+│                                    About                                                   │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                         <Ok>                             <Cancel>                          │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+```
 
-- Update bootloader
-  : This option allows you to update the bootloader. It uses `setup.sh`
-  installed from `vicharak-firmware` package to update the bootloader.
+#### System Update
+
+This option allows you to update the firmware packages that are installed on the
+system. It uses `apt-get` to update these packages to their latest versions.
+
+```text
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│ System Maintaince                                                                          │
+│                                                                                            │
+│                                      **System Update**                                     │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                         <Ok>                             <Cancel>                          │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+```
 
 (hardware)=
 
@@ -96,27 +131,283 @@ This feature allows you to update the packages and bootloader.
 
 This feature allows you to configure different hardware options.
 
-- Capture camera frame
-  : This option allows you to capture the camera frame using `v4l2-ctl`.
-  It uses `v4l2-ctl` to capture the camera frame.
+```text
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│ Please select an option below:                                                             │
+│                                                                                            │
+│                                    System Maintaince                                       │
+│                                    **Hardware**                                            │
+│                                    Overlays                                                │
+│                                    Connectivity                                            │
+│                                    Advanced Options                                        │
+│                                    User Settings                                           │
+│                                    Localization                                            │
+│                                    About                                                   │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                         <Ok>                             <Cancel>                          │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+```
 
-- Enable LEDs
-  : This option allows you to enable/disable the LEDs. It changes the leds
-  triggers by echoing the specific trigger to the LED sysfs.
+#### Video capture devices
 
-- Change thermal governor
-  : This option allows you to change the thermal governor. It changes thermal
-  governor by echoing to the specific sysfs.
+This option allows you to capture the camera frame using `v4l2-ctl`.
+It uses `v4l2-ctl` to capture the camera frame.
 
-- DSI mirroring
-  : This option allows you to enable/disable DSI mirroring. It uses
-  `vicharak-config` to enable/disable DSI mirroring.
+```text
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│ Manage on-board hardware                                                                   │
+│                                                                                            │
+│                             **Video capture devices**                                      │
+│                             GPIO LEDs                                                      │
+│                             Thermal governor                                               │
+│                             Configure DSI display mirroring                                │
+│                             40-pin GPIO                                                    │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                         <Ok>                             <Cancel>                          │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### GPIO LEDs
+
+This option allows you to enable/disable the LEDs. It changes the leds
+triggers by echoing the specific trigger to the LED sysfs.
+
+```text
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│ Manage on-board hardware                                                                   │
+│                                                                                            │
+│                             Video capture devices                                          │
+│                             **GPIO LEDs**                                                  │
+│                             Thermal governor                                               │
+│                             Configure DSI display mirroring                                │
+│                             40-pin GPIO                                                    │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                         <Ok>                             <Cancel>                          │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+
+- Select any LED to enable/disable/modify its trigger
+
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│ Below are the available LEDs and their triggers.                                           │
+│ Select any to update their trigger.                                                        │
+│                                                                                            │
+│    [*] :power [default-on]                                                                 │
+│    [ ] :status [heartbeat]                                                                 │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                         <Ok>                             <Cancel>                          │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+
+- Select the LED trigger from the list of available LED triggers.
+
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│ Please select the new trigger:                                                             │
+│                                                                                            │
+│    ( ) kbd-shiftllock                                                                      │
+│    ( ) kbd-shiftrlock                                                                  ▒   │
+│    ( ) kbd-ctrlllock                                                                       │
+│    ( ) kbd-ctrlrlock                                                                   ▒   │
+│    ( ) mmc2                                                                            ▒   │
+│    ( ) timer                                                                           ▒   │
+│    ( ) oneshot                                                                         ▒   │
+│    (*) disk-activity                                                                   ▒   │
+│    ( ) disk-read                                                                       ▒   │
+│    ( ) disk-write                                                                          │
+│                                                                                            │
+│                                                                                            │
+│                         <Ok>                             <Cancel>                          │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+
+- Upon succesful completion, LED trigger will be updated.
+
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│                                                                                            │
+│ LED trigger has been updated.                                                              │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                           <Ok>                                             │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Change thermal governor
+
+This option allows you to change the thermal governor. It changes thermal
+governor by echoing to the specific sysfs.
+
+```text
+- Select thermal governor
+
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│ Please select the thermal governor.                                                        │
+│ Recommendation: fanless or DC fan => power_allocator | PWM fan => step_wise                │
+│                                                                                            │
+│    ( ) power_allocator                                                                     │
+│    ( ) user_space                                                                          │
+│    (*) step_wise                                                                           │
+│    ( ) fair_share                                                                          │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                         <Ok>                             <Cancel>                          │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+
+- Upon succesful completion, thermal governor will be updated.
+
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│                                                                                            │
+│ Thermal governor has been updated.                                                         │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                           <Ok>                                             │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### DSI mirroring
+
+: This option allows you to enable/disable DSI mirroring. It uses
+`vicharak-config` to enable/disable DSI mirroring.
+
+#### 40-Pin GPIO header
+
+This option allows you to enable/disable 40-pin GPIO header. Additionally,
+it can be used to check the current state of the 40-pin GPIO header.
+
+```text
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│ Please select the test case:                                                               │
+│                                                                                            │
+│                                  Set all GPIO to High                                      │
+│                                  Set all GPIO to Low                                       │
+│                                  **Get all GPIO state**                                    │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                         <Ok>                             <Cancel>                          │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌────────────────────┤ VICHARAK_CONFIG ├───────────────────────┐
+│ Following is the current reading of all supported GPIO pins  │
+│                                                              │
+│                                                              │
+│ 0: Low | 1: High | E: Error                                  │
+│                                                              │
+│ State  Pin  State                                            │
+│        1 2                                                   │
+│        3 4                                                   │
+│        5 6                                                   │
+│ 1      7 8      1                                            │
+│        9 10     1                                            │
+│ 0     11 12     0                                            │
+│ 0     13 14                                                  │
+│ 0     15 16     0                                            │
+│       17 18     0                                            │
+│       19 20                                                  │
+│       21 22     0                                            │
+│       23 24                                                  │
+│       25 26                                                  │
+│ 1     27 28     1                                            │
+│ 1     29 30                                                  │
+│ 1     31 32     1                                            │
+│ 1     33 34                                                  │
+│ 0     35 36     0                                            │
+│ 0     37 38     0                                            │
+│       39 40     0                                            │
+│                                                              │
+│       <Ok>                <Cancel>                           │
+└──────────────────────────────────────────────────────────────┘
+```
 
 (overlays)=
 
 ### Overlays
 
 This feature allows you to configure different overlays options.
+
+:::{warning}
+
+```text
+┌────────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+│                                                                                            │
+│ WARNING                                                                                    │
+│                                                                                            │
+│ Overlays, by its nature, require "hidden" knowledge about the running device tree.         │
+│ While major breakage is unlikely, this does mean that after kernel update, the overlay may │
+│ cease to work.                                                                             │
+│                                                                                            │
+│ If you accept the risk, select Yes to continue.                                            │
+│ Otherwise, select No to go back to previous menu.                                          │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                                                                                            │
+│                          <Yes>                             <No>                            │
+│                                                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+:::
 
 - Enable DTBO overlays
   : This option allows you to enable/disable the DTBO overlays. It uses

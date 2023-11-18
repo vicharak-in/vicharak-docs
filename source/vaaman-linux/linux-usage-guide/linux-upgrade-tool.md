@@ -1,12 +1,16 @@
-# Linux Upgrade Tool
+# Linux Upgrade Tool (upgrade_tool)
 
-Rockchip's **Linux Upgrade tool** is a proprietary solution developed by the company for flashing images onto
-various storage devices such as `SPI`, `eMMC`, `SD-card`, and more.
-Unlike open-source [rkdeveloptool](https://github.com/rockchip-linux/rkdeveloptool) software,
+## What is Linux Upgrade Tool
+
+Rockchip's **Linux Upgrade tool** is a proprietary solution developed by
+Rockchip for flashing images onto various storage devices such as `SPI`,
+`eMMC`, `SD-card`, and more. Unlike open-source
+[rkdeveloptool](https://github.com/rockchip-linux/rkdeveloptool) software,
 this tool does not provide access to its source code.
 
 Instead, it is distributed solely in **binary executable** form,
-allowing users to utilize the provided executable files for the purpose of flashing images onto their desired storage devices.
+allowing users to utilize the provided executable files for the purpose of
+flashing images onto their desired storage devices.
 
 ## How to use Linux Upgrade Tool
 
@@ -119,19 +123,48 @@ You can use the above command by using `sudo ./upgrade_tool` prefix before any o
 
 **For example to erase flash:**
 
+1. Setup the device into MaskROM mode. Refer to the [How to enter Maskrom Mode](#booting-the-board-into-maskrom-mode) for more details.
+2. Run the following command to check if the device is in MaskROM mode:
+
+:::{card} sudo ./upgrade_tool ld
+
 ```bash
-sudo ./upgrade_tool db <loader path>
-sudo ./upgrade_tool ef
+List of rockusb connected(1)
+
+DevNo=1 Vid=0x2207,Pid=0x330c,LocationID=7143 Mode=Maskrom SerialNo=
+```
+
+:::
+
+3. Run the following command to erase the flash:
+
+```bash
+sudo ./upgrade_tool ef <firmware file>
+```
+
+Example:
+
+```bash
+sudo ./upgrade_tool ef V1.0.2311.000-vicharak-debian-bullseye-xfce-emmc.img
 ```
 
 :::
 
 ::::
 
-## Flashing RAW image using Linux_Upgrade_Tool
+:::{important} Understand the firmware file formats before flashing
+
+See the [**Firmware File Formats**](#firmware-file-formats)
+:::
+
+## Flashing RAW Image (Raw firmware) using upgrade_tool
 
 :::{tip}
-RAW images can be flashed to any storage device using the `dd` command or the `Linux_Upgrade_Tool`.
+RAW images can be flashed to any storage devices such as SD card, NVMe or eMMC
+using the `dd` command or the `Linux_Upgrade_Tool`.
+
+In the following example we will use the `dd` command to flash the RAW image
+to the on-board eMMC on Vicharak Vaaman.
 :::
 
 ### Check for connected devices
@@ -146,7 +179,7 @@ DevNo=1 Vid=0x2207,Pid=0x330c,LocationID=7143 Mode=Maskrom SerialNo=
 
 :::
 
-### Flash the loader binary
+### Flash the miniloader loader binary
 
 :::{card} sudo ./upgrade_tool db rk3399_loader_xxx.bin
 
@@ -156,7 +189,7 @@ Download boot ok.
 
 :::
 
-### Flash the RAW GPT Image to storage device
+### Writing the RAW GPT Image (Raw Firmware) to the storage device
 
 :::{danger}
 Make sure to flash the loader first to the storage device.
@@ -167,7 +200,7 @@ Make sure to flash the loader first to the storage device.
 Example:
 
 ```bash
-sudo ./upgrade_tool wl 0 Vicharak_Vaaman_RAW_debian_bullseye_XFCE_beta_v0.1.0_08072023.img
+sudo ./upgrade_tool wl 0 V1.0.2311.000-vicharak-debian-bullseye-xfce-raw.img
 ```
 
 ```bash
@@ -189,25 +222,31 @@ Reset Device Success!
 :::
 
 :::{tip}
-If you encounter **Reset Device Fail!** then try to manually reboot using the power button on the board.
+If you encounter **Reset Device Fail!** then try to manually reboot using the
+power button on the board or else try removing and re-inserting the USB
+power cable.
 :::
 
 ---
 
 :::{tip}
-**Alternatively you can directly flash update image to eMMC using `upgrade firmware` method.**
+**Alternatively you can directly flash update image to eMMC using
+`RK Firmware` method.**
+
+`RK Firmware` method can be used to flash the firmware to the eMMC of the
+development board or any SD-card using the tools provided by Rockchip.
 :::
 
 {#flash-update-img}
 
-## Flash eMMC Image using (upgrade firmware) method
+## Flash eMMC Image using (RK Firmware) method
 
-:::{card} sudo ./upgrade_tool uf <some_update_image>.img
+:::{card} sudo ./upgrade_tool uf <some_rockchip_image>.img
 
 Example:
 
 ```bash
-sudo ./upgrade_tool uf Vicharak_Vaaman_EMMC_debian_bullseye_XFCE_beta_v0.1.0_03072023.img
+sudo ./upgrade_tool uf V1.0.2311.000-vicharak-debian-bullseye-xfce-emmc.img
 ```
 
 ```bash
@@ -234,10 +273,12 @@ Download Firmware Start
 Download Image... (12%)
 ```
 
+Once the flash is complete, the board will reboot automatically.
+
 :::
 
 :::{seealso}
 [Vaaman Linux starting guide](linux-start-guide.md)
 
-[Frequently Asked Questions](#faq)
+[Frequently Asked Questions](../../faq.rst)
 :::
