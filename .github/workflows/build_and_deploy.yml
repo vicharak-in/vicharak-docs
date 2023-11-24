@@ -26,7 +26,7 @@ jobs:
           python3 -m pip install --upgrade pip
           pip install pipenv
       - name: Installing Dependencies and Building Docs
-        run: pipenv update &&  pipenv run make html -j$(nproc --all)
+        run: pipenv update && pipenv run make dirhtml -j$(nproc --all)
 
           # Copy it to the server
       - name: Copying build/html/ to remote server
@@ -38,5 +38,5 @@ jobs:
           key: ${{ secrets.DIGITALOCEAN_PRIVATE_KEY }}
           strip_components: 2
           overwrite: true
-          source: _build/html/
+          source: _build/dirhtml/
           target: /var/www/html/docs/
