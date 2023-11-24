@@ -107,7 +107,7 @@ or assigned to a GPIO at a time.
 - **Pin 7** is directly connected to the `MIPI CSI` pin on the board.
   Instructions to use UART2 as serial console can be found in
   [Serial Console](#serial-console), and to disable it, refer to
-  [Vicharak Config Device tree overlays](#vicharak-config-device-tree-overlays)
+  [Vicharak Config Device tree overlays](#vicharak-config-overlays)
   section.
 - Both `UART2` and `UART4` support a wide range of baud rates, including
   **115200bps, 500000bps, 1500000bps,** and more.
@@ -148,9 +148,11 @@ or assigned to a GPIO at a time.
   [PMOD](https://reference.digilentinc.com/reference/pmod/pmod) page for more
   information.
 - LVDS/GPIO pins can either be used as GPIOs or as LVDS pins. To use them as
-  GPIOs, refer to [Vicharak FPGA LVDS](#/).
+  GPIOs, refer to [Vicharak FPGA LVDS]().
   section.
 - CDI can be normally used as GPIOs.
+
+<!-- TODO: FPGA LVDS guide -->
 
 ## GPIO Numbers translation
 
@@ -192,5 +194,5 @@ or assigned to a GPIO at a time.
 <!-- TODO: Add FPGA GPIO user guide and description -->
 
 :::{seealso}
-[Configure 40-Pin header using vicharak-config utility](#vicharak-config-device-tree-overlays)
+[Configure 40-Pin header using vicharak-config utility](#vicharak-config-overlays)
 :::

@@ -310,7 +310,7 @@ Press CTRL-A Z for help on special keys
 
 - [**PuTTY**](https://www.putty.org/)
 
-- [**Tera Term**](https://ttssh2.osdn.jp/index.html.en)
+- [**Tera Term**](https://osdn.net/projects/ttssh2/releases/)
 
 - [**GTK-Term**](https://github.com/Jeija/gtkterm)
   :::

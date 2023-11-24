@@ -46,33 +46,33 @@ The above menu might be shown differently depending on the terminal style.
 - **Enter** key is used to confirm the corresponding option.
 - **ESC** key is used to do back to previous menu.
 
-(available-features)=
+(vicharak-config-available-features)=
 
 ## Available Features
 
-- [System maintenance](#system-maintenance)
+- [System maintenance](#vicharak-config-system-maintenance)
   : Update system packages.
 
-- [Hardware configuration](#hardware)
+- [Hardware configuration](#vicharak-config-hardware)
   : Capture Camera stream, Enable LEDs, Change thermal governor, DSI mirroring
   and 40-Pin header status.
 
-- [Overlays](#overlays)
+- [Overlays](#vicharak-config-overlays)
   : Enable/Disable DTBO overlays, Build third-party DTBO, Reset Overlays to default.
 
-- [Connectivity](#connectivity)
+- [Connectivity](#vicharak-config-connectivity)
   : Configure network using **nmtui**.
 
-- [Advanced Options](#advanced-options)
+- [Advanced Options](#vicharak-config-advanced-options)
   : Install `Mali GPU` library and enable `OpenGL` emulation support.
 
-- [User Settings](#user-settings)
+- [User Settings](#vicharak-config-user-settings)
   : Change system password and hostname
 
-- [Localization](#localization)
+- [Localization](#vicharak-config-localization)
   : Change Time-Zone/Locale/Keyboard and Wi-Fi Country
 
-(system-maintenance)=
+(vicharak-config-system-maintenance)=
 
 ### System Maintenance
 
@@ -125,7 +125,7 @@ system. It uses `apt-get` to update these packages to their latest versions.
 └────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-(hardware)=
+(vicharak-config-hardware)=
 
 ### Hardware
 
@@ -378,7 +378,7 @@ it can be used to check the current state of the 40-pin GPIO header.
 └──────────────────────────────────────────────────────────────┘
 ```
 
-(overlays)=
+(vicharak-config-overlays)=
 
 ### Overlays
 
@@ -418,7 +418,7 @@ This feature allows you to configure different overlays options.
   : This option allows you to build the third-party DTBO. It builds and installs
   the dtbo using the `device-tree-compiler` utility.
 
-(connectivity)=
+(vicharak-config-connectivity)=
 
 ### Connectivity
 
@@ -427,7 +427,7 @@ This feature allows you to configure different connectivity options.
 - Configure network
   : This option allows you to configure network using `nmtui`.
 
-(advanced-options)=
+(vicharak-config-advanced-options)=
 
 ### Advanced Options
 
@@ -445,7 +445,7 @@ This feature allows you to configure different advanced options.
   Example: `gl4es supertuxkart`
   :::
 
-(user-settings)=
+(vicharak-config-user-settings)=
 
 ### User Settings
 
@@ -459,7 +459,7 @@ This feature allows you to configure different user settings.
   : This option allows you to change the system hostname. It uses `hostnamectl`
   to change the system hostname.
 
-(localization)=
+(vicharak-config-localization)=
 
 ### Localization
 

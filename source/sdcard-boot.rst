@@ -16,7 +16,7 @@ Using a suitable file system (such as FAT32 or EXT4) format the SD-card.
 
     .. tab-item:: Windows
 
-        1. Insert the **SD-card** into your computer.
+        1. Insert the **SD-card** into your computer. Use a USB-to-SD adapter if required.
 
         2. Open the **File Explorer** and right-click on the SD-card.
 
@@ -32,7 +32,7 @@ Using a suitable file system (such as FAT32 or EXT4) format the SD-card.
 
             .. tab-item:: Gnome Disks (GUI)
 
-                1. Insert the **SD-card** into your computer.
+                1. Insert the **SD-card** into your computer. Use USB-to-SD adapter if required.
 
                 2. Open the **Disks** application if you are using a GUI.
 
@@ -46,7 +46,7 @@ Using a suitable file system (such as FAT32 or EXT4) format the SD-card.
 
             .. tab-item:: GNU parted (CLI)
 
-                1. Insert the **SD-card** into your computer.
+                1. Insert the **SD-card** into your computer. Use USB-to-SD adapter if required.
 
                 2. Open the **terminal** and run the following command to list the available disks:
 
@@ -54,6 +54,10 @@ Using a suitable file system (such as FAT32 or EXT4) format the SD-card.
 
                     sudo parted /dev/sdX
 
+                .. note::
+                   | You can use the **lsblk** command to list the available disks.
+                   | In the above command, sd**X** is the name of the Storage drive.
+                   | **`X`** is the number of the Storage drive, it starts from a.
 
                 .. image:: _static/images/parted-overview.webp
                    :width: 50%
@@ -101,6 +105,11 @@ Using a suitable file system (such as FAT32 or EXT4) format the SD-card.
                 .. code-block:: console
 
                     sudo fdisk /dev/sdX
+
+                .. note::
+                    | You can use the **lsblk** command to list the available disks.
+                    | In the above command, sd**X** is the name of the Storage drive.
+                    | **`X`** is the number of the Storage drive, it starts from a.
 
                 3. Press **d** to delete the existing partition. Do this for all the partitions.
 
@@ -176,7 +185,9 @@ For demonstration purposes, we will use the **Balena Etcher tool** to write the 
 
         .. note::
             | Replace **/path/to/image** with the path to the image file.
-            | Replace **sdX** with the correct SD-card.
+            | You can use the **lsblk** command to list the available disks.
+            | In the above command, sd**X** is the name of the Storage drive.
+            | **`X`** is the number of the Storage drive, it starts from a.
 
         2. Wait for the writing process to complete.
 

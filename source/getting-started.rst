@@ -335,7 +335,7 @@ Running the Serial Console Program
     .. tab-item:: TeraTerm (GUI)
 
         1. Download and install the
-            `TeraTerm <https://ttssh2.osdn.jp/index.html.en>`_ program.
+            `TeraTerm <https://osdn.net/projects/ttssh2/releases/>`_ program.
 
         2. Open the TeraTerm program and configure the serial parameters.
 

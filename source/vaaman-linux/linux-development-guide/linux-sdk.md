@@ -790,7 +790,7 @@ any supported storage media (SD-Card, eMMC or NVMe) using the basic linux
 utility such as `dd` or even using `Balena Etcher` tool.
 
 ```{seealso}
-[How to use Balena Etcher](#how-to-use-balena-etcher)
+[How to use Balena Etcher](#write-the-image-to-the-sd-card)
 ```
 
 ```bash
