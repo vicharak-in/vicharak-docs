@@ -1,6 +1,6 @@
 # Windows RKDevTool
 
-<!-- TODO: Rewrite this with better explaination (https://docs.radxa.com/en/rock5/rock5a/getting-started/rkdevtool) -->
+<!-- TODO: Rewrite this with better explanation (https://docs.radxa.com/en/rock5/rock5a/getting-started/rkdevtool) -->
 
 ## Pre-Requisites
 
