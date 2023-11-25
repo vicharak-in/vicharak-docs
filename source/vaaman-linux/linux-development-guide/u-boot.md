@@ -324,9 +324,24 @@ sudo dd if=idblock.bin of=/dev/sdb seek=64; sync
 The block device `/dev/sdb` may be different as per the number of storage devices
 connected to your PC.
 
-Confirm the block device using `parted /dev/sda<X>`.
+To check the block device of the SD-Card, run `dmesg -Hw` in a terminal and,
+plug the SD-Card into your PC. You will see something similar to:
 
-Alternatively, you can use `lsblk` to find the block device.
+```text
+[20104.826747] usb 7-1.4.3: new high-speed USB device number 41 using xhci_hcd
+[20104.909195] usb 7-1.4.3: New USB device found, idVendor=2207, idProduct=0010, bcdDevice= 2.23
+[20104.909211] usb 7-1.4.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[20104.909214] usb 7-1.4.3: Product: USB download gadget
+...
+[20104.914797] usb-storage 7-1.4.3:1.0: USB Mass Storage device detected
+[20104.914916] scsi host7: usb-storage 7-1.4.3:1.0
+[20105.940727] scsi 7:0:0:0: Direct-Access     Linux    UMS disk 0       ffff PQ: 0 ANSI: 2
+...
+[20105.947385]  sdc: sdc1 sdc2 sdc3 sdc4 sdc5 sdc6 sdc7 sdc8
+[20105.947726] sd 7:0:0:0: [sdc] Attached SCSI removable disk
+```
+
+Confirm the block device using `parted /dev/sd<X>` or `lsblk`.
 ```
 
 **U-boot proper (uboot)**
@@ -360,9 +375,15 @@ sudo dd if=idblock.bin of=/dev/nvme0n1 seek=64; sync
 The block device `/dev/nvme0n1` may be different as per the number of storage devices
 connected to your PC.
 
-Confirm the block device using `parted /dev/nvme0n1`.
+To check the block device of the NVMe, run `dmesg -Hw` in a terminal and,
+plug the NVMe into your PC. You will see something similar to:
 
-Alternatively, you can use `lsblk` to find the block device.
+```text
+[  23232.759738] nvme nvme1: 32/0/0 default/read/poll queues
+[  23232.763741]  nvme0n1: p1 p2 p3
+```
+
+Confirm the block device using `parted /dev/nvme<X>n1` or `lsblk`.
 ```
 
 **U-boot proper (uboot)**
@@ -537,9 +558,24 @@ sudo dd if=u-boot-rockchip.bin of=/dev/sdb seek=64; sync
 The block device `/dev/sdb` may be different as per the number of storage devices
 connected to your PC.
 
-Confirm the block device using `parted /dev/sdb`.
+To check the block device of the SD-Card, run `dmesg -Hw` in a terminal and,
+plug the SD-Card into your PC. You will see something similar to:
 
-Alternatively, you can use `lsblk` to find the block device.
+```text
+[20104.826747] usb 7-1.4.3: new high-speed USB device number 41 using xhci_hcd
+[20104.909195] usb 7-1.4.3: New USB device found, idVendor=2207, idProduct=0010, bcdDevice= 2.23
+[20104.909211] usb 7-1.4.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[20104.909214] usb 7-1.4.3: Product: USB download gadget
+...
+[20104.914797] usb-storage 7-1.4.3:1.0: USB Mass Storage device detected
+[20104.914916] scsi host7: usb-storage 7-1.4.3:1.0
+[20105.940727] scsi 7:0:0:0: Direct-Access     Linux    UMS disk 0       ffff PQ: 0 ANSI: 2
+...
+[20105.947385]  sdc: sdc1 sdc2 sdc3 sdc4 sdc5 sdc6 sdc7 sdc8
+[20105.947726] sd 7:0:0:0: [sdc] Attached SCSI removable disk
+```
+
+Confirm the block device using `parted /dev/sd<X>` or `lsblk`.
 ```
 
 :::
@@ -571,29 +607,39 @@ into one partition.
 **Delete the trust partition**
 
 ```bash
-sudo parted /dev/mmcblkX rm 2
+sudo parted /dev/mmcblk1 rm 2
 ```
 
 **Resize the u-boot partition**
 
 ```bash
-sudo parted /dev/mmcblkX resizepart 1 100%
+sudo parted /dev/mmcblk1 resizepart 1 100%
 ```
 
 **Flash the TPL/SPL combined image**
 
 ```bash
-sudo dd if=u-boot-rockchip.bin of=/dev/mmcblkX seek=64; sync
+sudo dd if=u-boot-rockchip.bin of=/dev/mmcblk1 seek=64; sync
 ```
 ````
 
 ```{warning}
-The block device `/dev/mmcblk1` may be different as per the number of storage devices
-connected to your PC.
+On Vicharak Vaaman `eMMC` will always be at `/dev/mmcblk1` if you are using
+Vicharak provided kernel and u-boot images.
 
-Confirm the block device using `parted /dev/mmcblkX`.
+If you are using your own kernel and u-boot images then you may need to
+change the block device in the above commands.
 
-Alternatively, you can use `lsblk` to find the block device.
+To check the block device of the eMMC, run `dmesg | grep mmcblk` in a terminal.
+The result should be something similar to:
+
+```text
+[    9.740081] mmc1: new HS400 Enhanced strobe MMC card at address 0001
+[    9.741057] mmcblk1: mmc1:0001 BJTD4R 29.1 GiB
+[    9.741306] mmcblk1boot0: mmc1:0001 BJTD4R partition 1 4.00 MiB
+[    9.741619] mmcblk1boot1: mmc1:0001 BJTD4R partition 2 4.00 MiB
+[    9.742187] mmcblk1rpmb: mmc1:0001 BJTD4R partition 3 4.00 MiB, chardev (235:0)
+[    9.749068]  mmcblk1: p1 p2 p3 p4 p5 p6 p7 p8
 ```
 
 :::
@@ -614,9 +660,15 @@ sudo dd if=u-boot-rockchip.bin of=/dev/nvme0n1 seek=64; sync
 The block device `/dev/nvme0n1` may be different as per the number of storage devices
 connected to your PC.
 
-Confirm the block device using `parted /dev/nvme0n1`.
+To check the block device of the NVMe, run `dmesg -Hw` in a terminal and,
+plug the NVMe into your PC. You will see something similar to:
 
-Alternatively, you can use `lsblk` to find the block device.
+```text
+[  23232.759738] nvme nvme1: 32/0/0 default/read/poll queues
+[  23232.763741]  nvme0n1: p1 p2 p3
+```
+
+Confirm the block device using `parted /dev/nvme<X>n1` or `lsblk`.
 ```
 
 :::
