@@ -4,151 +4,145 @@ Vaaman Downloads
 ================
 
 OS Images
-^^^^^^^^^
+---------
+
 .. list-table::
     :widths: 25 100
     :header-rows: 1
 
-    * - **Operating System**
+    - - **Operating System**
       - **Variant**
-
-    * - Android
+    - - Android
       - `Android 12.1 <http://downloads.vicharak.in/android/>`_
-
-    * - Debian
+    - - Debian
       - `Bullseye 11 <http://downloads.vicharak.in/debian>`_
-
-    * - Ubuntu
+    - - Ubuntu
       - `Focal 20.04 <http://downloads.vicharak.in/ubuntu>`_
-
-    * - Community Images
+    - - Community Images
       - **Coming Soon**
 
 .. note::
-    The images are compressed using XZ. You can use `7zip <https://www.7-zip.org/>`_ or `WinRAR <https://www.win-rar.com/>`_ to extract the file.
+
+    The images are compressed using XZ. You can use `7zip <https://www.7-zip.org/>`_ or
+    `WinRAR <https://www.win-rar.com/>`_ to extract the file.
 
     For **Linux**, you can use the following command to extract the image:
 
     .. code-block:: console
 
-       xz -d <image_name>.xz
+        xz -d <image_name>.xz
 
 |
 
 .. seealso::
-   How to flash the image to the board using :doc:`vaaman-linux/linux-usage-guide/rockchip-develop-guide`
 
-   Also check :doc:`vaaman-linux/linux-usage-guide/linux-start-guide`
+    How to flash the image to the board using
+    :doc:`vaaman-linux/linux-usage-guide/rockchip-develop-guide`
+
+    Also check :doc:`vaaman-linux/linux-usage-guide/linux-start-guide`
 
 OS Utilities
-^^^^^^^^^^^^
+------------
 
 .. list-table::
     :widths: 25 100
     :header-rows: 1
 
-    * - **Utility**
+    - - **Utility**
       - **Download Link**
-
-    * - Rockchip Linux Upgrade Tool
+    - - Rockchip Linux Upgrade Tool
       - `V2.1 <https://github.com/vicharak-in/Linux_Upgrade_Tool>`_
-
-    * - Rockchip RkDevTool
-      - `V2.96 <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/RKDevTool_Release_v2.96.zip>`_
-
-    * - Rockchip Windows Drivers
-      - `V5.12 <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/DriverAssitant_v5.12.zip>`_
-
-    * - Balena Etcher
+    - - Rockchip RkDevTool
+      - `V2.96
+        <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/RKDevTool_Release_v2.96.zip>`_
+    - - Rockchip Windows Drivers
+      - `V5.12
+        <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/DriverAssitant_v5.12.zip>`_
+    - - Balena Etcher
       - `V1.18.11 <https://github.com/balena-io/etcher/releases/tag/v1.18.11>`_
 
 FPGA Sample files
-^^^^^^^^^^^^^^^^^
+-----------------
 
 .. list-table::
     :widths: 25 100
     :header-rows: 1
 
-    * - **FPGA flash file type**
+    - - **FPGA flash file type**
       - **Download Link**
-
-    * - Hex file
+    - - Hex file
       - `Simple LED Blink Hex Demo <_static/files/sample_led_blink_t120_demo_hex.zip>`_
-
-    * - Bitstream file
+    - - Bitstream file
       - `Simple LED Blink Bit Demo <_static/files/sample_led_blink_t120_demo_bit.zip>`_
 
 SoC Documents
-^^^^^^^^^^^^^
-
-.. list-table::
-   :widths: 25 100
-   :header-rows: 1
-
-   * - **File**
-     - **Download Link**
-
-   * - Rockchip RK3399 Data-sheet
-     - `V1.8 <https://rockchip.fr/RK3399%20datasheet%20V1.8.pdf>`_
-
-   * - Efinix Trion T120 Data-sheet
-     - `V3.4 <https://www.efinixinc.com/docs/trion120-ds-v3.4.pdf>`_
-
-   * - Rockchip RK3399 TRM V1.3 Part1
-     - `V1.3 Part1 <https://rockchip.fr/Rockchip%20RK3399%20TRM%20V1.3%20Part1.pdf>`_
-
-   * - Rockchip RK3399 TRM V1.3 Part2
-     - `V1.3 Part2 <https://rockchip.fr/Rockchip%20RK3399%20TRM%20V1.3%20Part2.pdf>`_
-
-   * - Rockchip RK3399 TRM V1.4 Part1
-     - `V1.4 Part1 <https://opensource.rock-chips.com/images/e/ee/Rockchip_RK3399TRM_V1.4_Part1-20170408.pdf>`_
-
-   * - Rockchip SoC and BSP Documents
-     - `GitHub <https://github.com/vicharak-in/rockchip-docs>`_
-
-Vaaman Pin-outs Guide
-^^^^^^^^^^^^^^^^^^^^^
-`Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_
-
-Mechanical Information
-^^^^^^^^^^^^^^^^^^^^^^
+-------------
 
 .. list-table::
     :widths: 25 100
     :header-rows: 1
 
-    * - **Property**
+    - - **File**
+      - **Download Link**
+    - - Rockchip RK3399 Data-sheet
+      - `V1.8 <https://rockchip.fr/RK3399%20datasheet%20V1.8.pdf>`_
+    - - Efinix Trion T120 Data-sheet
+      - `V3.4 <https://www.efinixinc.com/docs/trion120-ds-v3.4.pdf>`_
+    - - Rockchip RK3399 TRM V1.3 Part1
+      - `V1.3 Part1 <https://rockchip.fr/Rockchip%20RK3399%20TRM%20V1.3%20Part1.pdf>`_
+    - - Rockchip RK3399 TRM V1.3 Part2
+      - `V1.3 Part2 <https://rockchip.fr/Rockchip%20RK3399%20TRM%20V1.3%20Part2.pdf>`_
+    - - Rockchip RK3399 TRM V1.4 Part1
+      - `V1.4 Part1
+        <https://opensource.rock-chips.com/images/e/ee/Rockchip_RK3399TRM_V1.4_Part1-20170408.pdf>`_
+    - - Rockchip SoC and BSP Documents
+      - `GitHub <https://github.com/vicharak-in/rockchip-docs>`_
+
+Vaaman Pin-outs Guide
+---------------------
+
+`Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_
+
+Mechanical Information
+----------------------
+
+.. list-table::
+    :widths: 25 100
+    :header-rows: 1
+
+    - - **Property**
       - **Value**
-
-    * - Dimensions
+    - - Dimensions
       - 85mm x 85mm
-
-    * - Weight
+    - - Weight
       - X grams
-
-    * - Mounting holes
+    - - Mounting holes
       - 4x M2.5 holes for easy installation
 
 Step File
-^^^^^^^^^
+---------
+
 `Download Vaaman 3D File <_static/files/Vaaman_3D_file_V0.3.step.7z>`_
 
 .. note::
-    The step file is compressed using 7zip. You can use `7zip`_ or `WinRAR`_ to extract the file.
+
+    The step file is compressed using 7zip. You can use 7zip_ or WinRAR_ to extract the
+    file.
 
     For **Linux**, you can use the following command to extract the image:
 
     .. code-block:: console
 
-       7z x <image_name>.7z
+        7z x <image_name>.7z
 
 |
 
 .. seealso::
-   :ref:`Contributing to Vaaman <contributing>`
 
-   :ref:`Frequently Asked Questions <faq>`
+    :ref:`Contributing to Vaaman <contributing>`
 
-   :ref:`Vaaman FPGA Programming Guide <vaaman-fpga>`
+    :ref:`Frequently Asked Questions <faq>`
 
-   :doc:`Vaaman Linux Guide <vaaman-linux/index>`
+    :ref:`Vaaman FPGA Programming Guide <vaaman-fpga>`
+
+    :doc:`Vaaman Linux Guide <vaaman-linux/index>`

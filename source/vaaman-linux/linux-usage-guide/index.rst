@@ -17,6 +17,7 @@ and how to use it.
    Rockchip MaskROM mode Guide <../../vaaman-maskrom-mode>
    Rockchip DevelopTool Guide <rockchip-develop-guide>
    How to flash FPGA firmware to SPI Flash <spi-configure>
-   How to use custom linux kernel <custom-linux-kernel>
+   How to flash different Rockchip images using upgrade tool <rockchip-upgrade-tool-misc>
+   How to use Vicharak kernel building scripts <vicharak-kernel-building-script>
    U-Boot USB Mass Storage (UMS) mode <u-boot-ums>
    Vaaman GPIO Programming Guide <../../vaaman-gpio-description>

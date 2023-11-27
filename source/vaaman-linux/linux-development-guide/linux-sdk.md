@@ -15,28 +15,32 @@ Take a look at the table below:
 :header-rows: 1
 :class: feature-table
 
-* - Linux distribution
+-
+  - Linux distribution
   - Version
 
-* - Debian
+-
+  - Debian
   - Bullseye (11)
 
-* - Ubuntu
+-
+  - Ubuntu
   - Focal (20.04)
 
-* - Ubuntu
+-
+  - Ubuntu
   - Jammy (22.04)
 
-* - Yocto
-  - Kirkstone (4.0)
-
-* - Yocto
+-
+  - Yocto
   - Mickledore (4.2)
 
-* - Buildroot
+-
+  - Buildroot
   - None
 
-* - Android
+-
+  - Android
   - 12.1
 
 :::
@@ -69,14 +73,19 @@ Make sure you have properly installed `repo` tool before proceeding.
 ```bash
 sudo apt-get update -y
 
-sudo apt install -y asciidoc autotools-dev bash bc binutils bison build-essential bzip2 chrpath cpio curl \
-cvs dblatex default-jre device-tree-compiler diffstat expect-dev fakeroot file flex g++ gawk gcc \
-gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf g+conf genext2fs git git-core git-gui \
-gitk graphviz gzip intltool lib32stdc++6 libdrm-dev libglade2-dev libglib2.0-dev
-libgtk2.0-dev liblz4-tool libncurses5 libparse-yapp-perl libsigsegv2 libssl-dev libudev-dev \
-libusb-1.0-0-dev m4 make mercurial mtools openssh-client parted patch patchutils perl python \
-qemu-user-static rsync sed subversion swig tar texinfo u-boot-tools unzip w3m wget
+sudo apt install -y asciidoc autotools-dev bash bc binutils bison \
+build-essential bzip2 chrpath cpio curl cvs dblatex default-jre \
+device-tree-compiler diffstat expect-dev fakeroot file flex g++ gawk gcc \
+gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf g+conf genext2fs git git-core \
+git-gui gitk graphviz gzip intltool lib32stdc++6 libdrm-dev libglade2-dev \
+libglib2.0-dev libgtk2.0-dev liblz4-tool libncurses5 libparse-yapp-perl \
+libsigsegv2 libssl-dev libudev-dev libusb-1.0-0-dev m4 make mercurial mtools \
+openssh-client parted patch patchutils perl python3 python-is-python3 \
+qemu-user-static rsync sed subversion swig tar texinfo u-boot-tools unzip w3m \
+wget
 ```
+
+<!-- TODO: Fix when the issues section is available -->
 
 :::{note}
 The above packages might not be available to install on your system. Please
@@ -94,16 +103,14 @@ branches for different releases of our supported Linux distributions and product
 
 Take a look at the following table to get the latest sources.
 
-
-| Manifest          | Tag      | URL                                                |
-|-------------------|-----------------|----------------------------------------------------|
-| Debian bullseye   | debian-bullseye-v1.1.1 | https://github.com/vicharak-in/linux-manifests/tree/debian-bullseye   |
-| Ubuntu Focal      | ubuntu-focal-v1.1.1  | https://github.com/vicharak-in/linux-manifests/tree/ubuntu-focal      |
-| Ubuntu Jammy      | ubuntu-jammy-v1.1.1  | https://github.com/vicharak-in/linux-manifests/tree/ubuntu-jammy      |
-| Yocto Kirkstone   | yocto-kirkstone-v1.0.0 | https://github.com/vicharak-in/linux-manifests/tree/yocto-kirkstone   |
-| Yocto Mickledore  | yocto-mickledore-v1.0.0 | https://github.com/vicharak-in/linux-manifests/tree/yocto-mickledore  |
-| Buildroot         | buildroot-v1.0.0    | https://github.com/vicharak-in/linux-manifests/tree/buildroot         |
-| Android 12.1      | android-12.1-v1.0.0  | https://github.com/vicharak-in/linux-manifests/tree/android-12.1      |
+| Manifest         | Tag                 | URL                                                                                |
+| ---------------- | ------------------- | ---------------------------------------------------------------------------------- |
+| Debian bullseye  | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/master       |
+| Ubuntu Focal     | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/master       |
+| Ubuntu Jammy     | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/master       |
+| Yocto Mickledore | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/master       |
+| Buildroot        | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/master       |
+| Android 12.1     | android-12.1-v1.0.0 | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/android-12.1 |
 
 #### Cloning the source
 
@@ -114,7 +121,7 @@ To clone the latest sources, use the following command.
 :::{tab-item} Debian bullseye (11)
 
 ```bash
-repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b debian-bullseye -m rk3399-vaaman.xml
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/rockchip-linux-manifests -b master
 ```
 
 :::
@@ -122,7 +129,7 @@ repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-ma
 :::{tab-item} Ubuntu Focal (20.04)
 
 ```bash
-repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b ubuntu-focal -m rk3399-vaaman.xml
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/rockchip-linux-manifests -b master
 ```
 
 :::
@@ -130,15 +137,7 @@ repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-ma
 :::{tab-item} Ubuntu Jammy (22.04)
 
 ```bash
-repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b ubuntu-jammy -m rk3399-vaaman.xml
-```
-
-:::
-
-:::{tab-item} Yocto Kirkstone (4.0)
-
-```bash
-repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b yocto-kirkstone -m rk3399-vaaman.xml
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/rockchip-linux-manifests -b master
 ```
 
 :::
@@ -146,7 +145,7 @@ repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-ma
 :::{tab-item} Yocto Mickledore (4.2)
 
 ```bash
-repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b yocto-mickledore -m rk3399-vaaman.xml
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/rockchip-linux-manifests -b master
 ```
 
 :::
@@ -154,7 +153,7 @@ repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-ma
 :::{tab-item} Buildroot
 
 ```bash
-repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b buildroot -m rk3399-vaaman.xml
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/rockchip-linux-manifests -b master
 ```
 
 :::
@@ -162,8 +161,10 @@ repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-ma
 :::{tab-item} Android 12.1
 
 ```bash
-repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/linux-manifests -b android-12.1 -m rk3399-vaaman.xml
+repo init --no-tags --no-clone-bundle -u https://github.com/vicharak-in/rockchip-linux-manifests -b android-12.1 -m rk3399-vaaman.xml
 ```
+
+<!-- TODO: Fix when Android manifest is available -->
 
 :::
 
@@ -176,6 +177,7 @@ Use the following command to sync the source with shallow history:
 ```bash
 repo init --depth=1 --no-tags --no-clone-bundle -u <url> -b <branch> -m <manifest>
 ```
+
 :::
 
 #### Syncing the source
@@ -278,7 +280,6 @@ export RK_ROOTFS_IMG=ubuntu/ubuntu-focal.img
 # DTBO overlays to enable on boot
 export VICHARKA_BOOT_ENABLE_OVERLAYS=""
 ```
-
 ````
 
 #### Building the Ubuntu firmware
@@ -382,7 +383,6 @@ export RK_ROOTFS_IMG=ubuntu/ubuntu-jammy.img
 # DTBO overlays to enable on boot
 export VICHARKA_BOOT_ENABLE_OVERLAYS=""
 ```
-
 ````
 
 #### Building the Ubuntu firmware
@@ -571,7 +571,6 @@ export RK_ROOTFS_IMG=buildroot/rootfs.img
 # DTBO overlays to enable on boot
 export VICHARKA_BOOT_ENABLE_OVERLAYS=""
 ```
-
 ````
 
 #### Building the Buildroot firmware
@@ -624,61 +623,9 @@ It can accept command line arguments to customize the build process.
 - -K -> Build kernel
 - -u -> Build rockchip update image
 - -p -> Pack the firmware
-
 ```
 
 After the firmware is compiled, you can find an `update.img` file inside `rockdev/pack`
-
-:::
-
-:::{tab-item} Yocto (Kirkstone/Mickledore)
-
-After successful syncing of the source, you are now ready to build the Linux SDK.
-
-Enter the SDK source directory, and confirm that your have a `build.sh` file
-in the current directory.
-
-### Source the Yocto environment setup
-
-Use the following command to source the Yocto environment for bitbake to work.
-
-```bash
-source oe-init-build-env
-```
-
-### Building the Yocto firmware
-
-After the configuration is complete, you can start compiling the firmware.
-
-```bash
-bitbake core-image-minimal
-```
-
-````{tip}
-
-As of this moment there are multiple different recipes available for building
-the Yocto firmware.
-
-```{list-table}
-:header-rows: 1
-:class: feature-table
-
-* - Recipe
-  - Description
-
-* - core-image-minimal
-  - Build the minimal server image
-
-* - core-image-sato
-  - Build a minimal X11 image
-
-* - core-image-full
-  - Build a full server image
-
-* - core-image-weston
-  - Build a minimal wayland image
-```
-````
 
 :::
 
@@ -702,10 +649,10 @@ Use the following command to compile the corresponding part of the firmware.
 :::{tip}
 There are multiple ways to build kernel on Vicharak build system.
 
-* Extlinux based boot image
+- Extlinux based boot image
   - `./build.sh extboot`
 
-* Linux kernel as debian package
+- Linux kernel as debian package
   - `./build.sh kerneldeb`
 
 :::
@@ -757,6 +704,54 @@ After the firmware is compiled, you can use the following command to pack the fi
 ./mkfirmware.sh
 ```
 
+(firmware-file-formats)=
+
+:::{important}
+
+## Understanding Firmware Formats
+
+There are two primary types of firmware formats you'll encounter:
+
+1. **Raw Firmware:**
+   - **Description:** Raw Firmware is essentially a direct copy of your storage device, capturing every bit of data as is.
+   - **Flashing Tools:**
+     - _For SD Card:_
+       - **GUI Tools:**
+         - `SDCard Installer` (Linux/Windows/MacOS)
+         - `Balena Etcher` (Linux/Windows/MacOS)
+       - **CLI Tool:**
+         - `dd` (Linux)
+     - _For eMMC:_
+       - **GUI Tool:**
+         - `AndroidTool/RKDevTool` (Windows)
+       - **CLI Tools:**
+         - `upgrade_tool` (Linux/MacOS)
+         - `rkdeveloptool` (Linux)
+
+2. **RK Firmware:**
+   - **Description:** RK Firmware comes in Rockchip's proprietary format. Specific tools provided by Rockchip are used to flash this firmware onto eMMC or SD Card.
+   - **Flashing Tools:**
+     - _For SD Card:_
+       - **GUI Tool:**
+         - `SD Firmware Tool` (Windows)
+     - _For eMMC:_
+       - **GUI Tool:**
+         - `AndroidTool/RKDevTool` (Windows)
+       - **CLI Tool:**
+         - `upgrade_tool` (Linux)
+
+**Partition Image:**
+
+- **Description:** Partition Image refers to segmented images of different
+  parts of the firmware, such as boot.img, kernel.img, and system.img.
+  These components are assembled like pieces of a puzzle to form a complete Android system.
+
+- **Usage:**
+  - Place each specific image (e.g., kernel.img) into its corresponding
+    partition on the SD card or eMMC to construct the complete Android system.
+
+:::
+
 ### Pack the firmware into a single image
 
 ````{admonition} Important
@@ -769,7 +764,7 @@ If the partition information is incorrect, the firmware will not be able to boot
 
 The packed firmware image will be located in the `rockdev/pack/` directory.
 
-##### Rockhip Pack Firmware Image
+##### Rockhip Pack Firmware Image (RK Firmware)
 
 Rockchip provides a tool called `Linux_Pack_Firmware` to pack the firmware into a single image.
 It uses Rockchip's own image format,
@@ -787,7 +782,7 @@ and can be used to flash the firmware to the eMMC of the development board or an
 
 ---
 
-### Vicharak RAW (GPT) Image
+### Vicharak RAW (GPT) Image (Raw Firmware)
 
 Vicharak provides another method to pack the firmware into a single image.
 This script uses the GPT image format, and can be used to flash the firmware to
@@ -795,17 +790,15 @@ any supported storage media (SD-Card, eMMC or NVMe) using the basic linux
 utility such as `dd` or even using `Balena Etcher` tool.
 
 ```{seealso}
-[How to use Balena Etcher](#how-to-use-balena-etcher)
+[How to use Balena Etcher](#write-the-image-to-the-sd-card)
 ```
 
 ```bash
 ./build.sh rawimg
 ```
 
-```{admonition} References
-For more information about the `Linux_Pack_Firmware` tool, please refer to the following link.\
-[Linux_Pack_Firmware](../linux-usage-guide/rockchip-develop-guide.md)
-
-Also check out the following link for\
-[How to flash the firmware]()
+```{admonition} More information
+For more information about the `Linux_Pack_Firmware` tool or how to flash
+firmware on to your board, please refer to the following link.\
+[Rockchip Development Guide](../linux-usage-guide/rockchip-develop-guide.md)
 ```

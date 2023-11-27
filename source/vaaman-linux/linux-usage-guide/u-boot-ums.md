@@ -12,13 +12,14 @@ USB drive or SD card to your computer.
 This mode is useful for tasks like transferring files, flashing firmware,
 or writing disk images to the device's storage.
 
-Now, here are the steps for booting into UMS mode from either internal storage
-or an SD card:
+Now, here are the steps for booting into UMS mode from either internal eMMC
+storage or SD card:
 
-## Booting into UMS Mode from Internal Storage:
+## Booting into UMS Mode from Internal eMMC Storage:
 
 - Connect the device to a PC using a USB cable.
-- Connect the FTDI to your board and to the Host computer.
+- Connect the Serial to TTL converter (FTDI) to your board and to the Host
+  computer.
 - Open the serial monitor application on your Host computer.
 
 :::{note}
@@ -31,7 +32,7 @@ More more information on Serial monitor application check out
 - Quickly press `Ctrl + c` to enter the U-Boot console.
 - From U-Boot console type `ums 1 mmc <dev number>`, where <dev number> is the device number for MMC card.
 
-:::{dropdown} Help ums
+:::{dropdown} Click here to check ums help command
 
 ```text
 => help ums (U-Boot cmdline)
@@ -52,9 +53,10 @@ MMC device number is pre-configured from kernel device tree.
 - `mmc1` is the device number for eMMC.
   :::
 
-- The device will automatically boot into UMS mode, allowing you to share its internal storage like a USB drive.
+- The device will automatically boot into UMS mode, allowing you to share its
+  internal storage like a USB drive.
 
-:::{dropdown} Success Logs from UMS
+:::{dropdown} Click here to check success logs from UMS
 
 ```text
 => ums 1 mmc 1
@@ -63,9 +65,10 @@ UMS: LUN 0, dev 1, hwpart 0, sector 0x0, count 0x3a3e000
 
 :::
 
-- Check kernel logs on your Host computer and you should be able to see new Storage device added.
+- Check kernel logs on your Host computer, and you should be able to see a new
+  Storage device added.
 
-:::{dropdown} Successful Logs from host kernel
+:::{dropdown} Click here to see successful logs from host kernel
 
 ```text
 [20104.826747] usb 7-1.4.3: new high-speed USB device number 41 using xhci_hcd
@@ -90,11 +93,41 @@ UMS: LUN 0, dev 1, hwpart 0, sector 0x0, count 0x3a3e000
 
 :::{note}
 With UMS mode, you can easily access and manage the device's storage from your
-computer, making it convenient for tasks that involve transferring or writing data to the device.
+computer, making it convenient for tasks that involve transferring or writing
+data to the device.
+:::
+
+After successfully entering UMS mode, you should be able to access your eMMC
+from your host computer. You are now ready to flash or copy different things
+to your Vicharak board's eMMC using your PC.
+
+Check using `lsblk` command to find the eMMC storage; it should appear as `sdX`
+where `X` is an alphabetic letter (e.g., `sdc`).
+
+Check using `parted /dev/sdc` to list the various partitions available on the
+eMMC.
+
+:::{tip}
+You can directly mount the eMMC `boot` and `root` partition on your host computer.
+
+1. Find the partition that you want to mount. (assuming `/dev/sdc4` is the
+   `boot` partition).
+
+2. Use the linux `mount` command to access your partition.
+
+   ```bash
+   mkdir -p mountpoint
+   mount /dev/sdb1 mountpoint
+   ```
+
+3. You can change the kernel images directly just by copying them to `mountpoint`
+   folder.
+
 :::
 
 :::{warning}
-Do not insert SD-Card when after you previously entered UMS mode from eMMC. U-Boot will crash in such case.
+Do not insert SD-Card when after you previously entered UMS mode from eMMC.
+U-Boot might crash in such case.
 
 Always reset the board before switching the storage for UMS mode.
 :::
