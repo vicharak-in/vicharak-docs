@@ -105,11 +105,11 @@ Take a look at the following table to get the latest sources.
 
 | Manifest         | Tag                 | URL                                                                                |
 | ---------------- | ------------------- | ---------------------------------------------------------------------------------- |
-| Debian bullseye  | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/master       |
-| Ubuntu Focal     | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/master       |
-| Ubuntu Jammy     | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/master       |
-| Yocto Mickledore | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/master       |
-| Buildroot        | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/master       |
+| Debian bullseye  | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-linux-manifests/tree/master       |
+| Ubuntu Focal     | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-linux-manifests/tree/master       |
+| Ubuntu Jammy     | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-linux-manifests/tree/master       |
+| Yocto Mickledore | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-linux-manifests/tree/master       |
+| Buildroot        | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-linux-manifests/tree/master       |
 | Android 12.1     | android-12.1-v1.0.0 | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/android-12.1 |
 
 #### Cloning the source
@@ -201,10 +201,10 @@ Enter the SDK source directory, and confirm that your have a `build.sh` file in 
 
 #### Source the Ubuntu configuration file
 
-The configuration file for Ubuntu Focal (20.04) is located at `device/rockchip/rk3399/vaaman-rk3399-ubuntu.mk`
+The configuration file for Ubuntu Focal (20.04) is located at `device/rockchip/rk3399/vicharak-vaaman-ubuntu.mk`
 
 ```bash
-./build.sh device/rockchip/rk3399/vaaman-rk3399-ubuntu.mk
+./build.sh device/rockchip/rk3399/vicharak-vaaman-ubuntu.mk
 ```
 
 To ensure successful configuration, the `device/rockchip/.BoardConfig.mk` will
@@ -302,12 +302,12 @@ Enter the sdk source directory, and confirm that your have a `build.sh` file in 
 
 #### Source the Ubuntu configuration file
 
-The configuration file for Ubuntu Jammy (22.04) is located at `device/rockchip/rk3399/vaaman-rk3399-ubuntu.mk`
+The configuration file for Ubuntu Jammy (22.04) is located at `device/rockchip/rk3399/vicharak-vaaman-ubuntu.mk`
 
 Open the configuration file and change the `RK_UBUNTU_VERSION` to `jammy`
 
 ```bash
-./build.sh device/rockchip/rk3399/vaaman-rk3399-ubuntu.mk
+./build.sh device/rockchip/rk3399/vicharak-vaaman-ubuntu.mk
 ```
 
 To ensure successful configuration, the `device/rockchip/.BoardConfig.mk` will
@@ -405,10 +405,10 @@ Enter the SDK source directory, and confirm that your have a `build.sh` file in 
 
 #### Source the Debian configuration file
 
-The configuration file for Vaaman Debian bullseye (11) is located at `device/rockchip/rk3399/vaaman-rk3399-debian.mk`
+The configuration file for Vaaman Debian bullseye (11) is located at `device/rockchip/rk3399/vicharak-vaaman-debian.mk`
 
 ```bash
-./build.sh device/rockchip/rk3399/vaaman-rk3399-debian.mk
+./build.sh device/rockchip/rk3399/vicharak-vaaman-debian.mk
 ```
 
 To ensure successful configuration, the `device/rockchip/.BoardConfig.mk` will be linked to the effective configuration file.
@@ -503,10 +503,10 @@ Enter the sdk source directory, and confirm that your have a `build.sh` file in 
 
 ### Source the Buildroot configuration file
 
-The configuration file for Buildroot is located at `device/rockchip/rk3399/vaaman-rk3399-buildroot.mk`
+The configuration file for Buildroot is located at `device/rockchip/rk3399/vicharak-vaaman-buildroot.mk`
 
 ```bash
-./build.sh device/rockchip/rk3399/vaaman-rk3399-buildroot.mk
+./build.sh device/rockchip/rk3399/vicharak-vaaman-buildroot.mk
 ```
 
 To ensure successful configuration, the `device/rockchip/.BoardConfig.mk` will
