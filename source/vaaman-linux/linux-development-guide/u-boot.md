@@ -343,6 +343,30 @@ plug the SD-Card into your PC. You will see something similar to:
 
 Confirm the block device using `parted /dev/sd<X>` or `lsblk`.
 ```
+vicharak ~ > sudo parted /dev/sdc
+GNU Parted 3.6
+Using /dev/sdc
+Welcome to GNU Parted! Type 'help' to view a list of commands.
+(parted) p                                                                
+Model: Mass Storage Device (scsi)
+Disk /dev/sdc: 15.9GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags: 
+
+Number  Start   End     Size    File system  Name      Flags
+ 1      8389kB  12.6MB  4194kB               uboot
+ 2      12.6MB  16.8MB  4194kB               trust
+ 3      16.8MB  21.0MB  4194kB               misc
+ 4      21.0MB  155MB   134MB   ext4         boot      legacy_boot
+ 5      155MB   189MB   33.6MB               recovery
+ 6      189MB   222MB   33.6MB               backup
+ 7      222MB   491MB   268MB   ext4         userdata
+ 8      491MB   15.9GB  15.4GB  ext4         rootfs
+
+(parted) quit                                                             
+vicharak ~ >                                                              
+```
 
 **U-boot proper (uboot)**
 

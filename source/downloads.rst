@@ -13,11 +13,11 @@ OS Images
     - - **Operating System**
       - **Variant**
     - - Android
-      - `Android 12.1 <http://downloads.vicharak.in/android/>`_
+      - `Android 12.1 <http://downloads.vicharak.in/vicharak-vaaman/android/>`_
     - - Debian
-      - `Bullseye 11 <http://downloads.vicharak.in/debian>`_
+      - `Bullseye 11 <http://downloads.vicharak.in/vicharak-vaaman/debian>`_
     - - Ubuntu
-      - `Focal 20.04 <http://downloads.vicharak.in/ubuntu>`_
+      - `Focal 20.04 <http://downloads.vicharak.in/vicharak-vaaman/ubuntu>`_
     - - Community Images
       - **Coming Soon**
 
