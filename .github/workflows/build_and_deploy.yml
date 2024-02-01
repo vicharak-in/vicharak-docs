@@ -30,7 +30,7 @@ jobs:
 
           # Copy it to the server
       - name: Copying build/html/ to remote server
-        uses: appleboy/scp-action@v0.1.4
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
