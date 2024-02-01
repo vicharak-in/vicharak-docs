@@ -22,7 +22,7 @@ and select trion family  and fpga T120F324. Timing model C4 would be automatical
    :width: 100%
 
 
-In the design tab you can select the your HDL, verilog ,systemverilog and VHDL are supported. Default is verilog.
+In the design tab you can select  your prefereable  HDL. Verilog ,systemverilog and VHDL are supported. Default is verilog.
 You can also add your rtl code while the creation of project and specify the top module.
 
 .. image:: ../_static/images/Assign_Top_Mod_Verilog_Version.webp

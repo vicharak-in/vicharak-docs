@@ -13,7 +13,7 @@ for installing the shortcut in your desktop directory then run this script :
 Efinity Quick Start
 *********************************
 
-For lunching the Efinity Graphical User interface (GUI), Double click on the desktop icon.
+For launching the Efinity Graphical User interface (GUI), Double click on the desktop icon.
 
 or 
 
