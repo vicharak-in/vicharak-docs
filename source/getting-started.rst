@@ -108,8 +108,12 @@ What else do you need?
     | The items listed above are not included in the box.
     | You can purchase them from the :ref:`accessories` page.
 
-Available Boot Modes
-====================
+
+Getting Started with eMMC
+=========================
+
+Turning board on
+----------------
 
 Vaaman comes pre-loaded with **Debian 11** (``Bullseye``) operating system on
 its ``eMMC`` (embedded MultiMediaCard) storage, and it offers support for various
@@ -128,21 +132,6 @@ eMMC storage.
 For the purpose of this guide, we will focus on the ``eMMC`` storage and the
 pre-installed ``Debian 11 (Bullseye)``, omitting detailed instructions for
 ``NVMe`` and ``SD-card`` boot configurations.
-
-.. tip::
-   **If you wish to boot the board using NVMe or SD-card.**
-   **You can refer to:**
-
-   :doc:`sdcard-boot`
-
-   :doc:`nvme-boot`
-
-Getting Started with eMMC
-=========================
-
-Turning board on
-----------------
-
 Connect the PD cable to the Vaaman board and the PD adapter to the power socket.
 Once the power is connected, the board will automatically turn on.
 
@@ -193,6 +182,23 @@ configuration.
    | This is necessary because the system requires configuration adjustments
    | before you proceed to the next step. Taking the time to allow the system to
    | finish restarting ensures that it is fully set up for the subsequent tasks.
+
+Available Boot Modes
+====================
+
+
+
+Booting from SD card
+--------------------
+To boot from SD card, please follow below document.
+
+    :doc:`sdcard-boot`
+
+Booting from NVMe drive
+-----------------------
+To boot from NVMe, please follow below document.
+
+     :doc:`nvme-boot`
 
 How to access your Vaaman board ?
 =================================
@@ -438,30 +444,6 @@ Example:
 	For Linux users, use the following command:
 	``ip a``
 
-Set up automatic Wi-Fi connection on boot
-`````````````````````````````````````````
-
-In the following example, we will set up automatic Wi-Fi connection on boot
-for the **wlan0** interface. This will be useful if you are using a
-headless system. That means you will not need to connect a monitor, keyboard,
-or mouse to your system to connect to WiFi.
-
-**1. Edit the ** ``/usr/lib/vicharak-config/conf.d/before.txt`` ** file and add
-the following lines:**
-
-::
-
-    connect-wi-fi <network name> <password>
-
-Example:
-
-::
-
-    connect-wi-fi vicharak_5g vcaa_g123
-
-**2. Reboot the system.**
-
-
 Accessing Vaaman through SSH
 ````````````````````````````
 
@@ -492,6 +474,29 @@ To access Vaaman through SSH, you can use either of the following commands:
 
     For Linux users, you can find your username using ``whoami`` command and,
     hostname using ``cat /etc/hostname``
+
+4. Set up automatic Wi-Fi connection on boot
+--------------------------------------------
+
+In the following example, we will set up automatic Wi-Fi connection on boot
+for the **wlan0** interface. This will be useful if you are using a
+headless system. That means you will not need to connect a monitor, keyboard,
+or mouse to your system to connect to WiFi.
+
+**1. Edit the ** ``/usr/lib/vicharak-config/conf.d/before.txt`` ** file and add
+the following lines:**
+
+::
+
+    connect-wi-fi <network name> <password>
+
+Example:
+
+::
+
+    connect-wi-fi vicharak_5g vcaa_g123
+
+**2. Reboot the system.**
 
 Vaaman Boot modes
 =================
