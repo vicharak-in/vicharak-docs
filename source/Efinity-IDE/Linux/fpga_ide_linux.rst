@@ -19,6 +19,10 @@ Go to the /bin directory and run the following command to setup your IDE
 
    source setup.sh
 
+.. Note::
+   In some version of ubuntu  after running this command terminal may throw core aborted error.
+   This due  missing dev files of libxcb libraries.You can simply install them via `sudo apt install`.
+
 .. tip::
    Write the above command  at the end of your .bashrc file to avoid writing it every time you start.
 
