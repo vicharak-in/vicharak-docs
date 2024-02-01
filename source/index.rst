@@ -38,6 +38,7 @@ that require both processing power and hardware customization.
    Vaaman SDK Documentation <vaaman-sdk>
    Vaaman Application Documentation <vaaman-applications>
    Vaaman Linux Documentation <vaaman-linux/index>
+   Vaaman FPGA IDE  <Efinity-IDE/index>
    Vaaman FPGA Programming Documentation <vaaman-fpga>
    Vaaman Remote Upload Documentation <vaaman-remote-upload>
 
