@@ -1,3 +1,4 @@
+===================
 How to use Debugger 
 ===================
 
@@ -43,7 +44,11 @@ Create a Debug Profile:
 9. The software prompts for recompilation. Click OK.
 10. Perform a full compile.
 
-Program FPGA:
+
+==============================
+Programming  FPGA for debugger 
+==============================
+
 
 1. Launch the Debugger by choosing Tools > Open Debugger. 
 
@@ -63,7 +68,9 @@ Program FPGA:
 
 
 
-Observing Probed Signals in Debugger:
+====================================
+Observing Probed Signals in Debugger
+====================================
 
 1. Initiate Debugger connection.
 2. In Trigger Setup tab, add desired nets.

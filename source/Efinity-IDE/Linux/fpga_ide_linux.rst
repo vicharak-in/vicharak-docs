@@ -13,29 +13,32 @@ Run the following command on your terminal to extract the downloaded folder cont
 
    tar -xvf downloaded_folder_name.tar.bz2
 
-Go to the /bin directory and run the following command to setup your IDE
+cd <efinix-folder>/bin/ directory and run the following command to setup your IDE
 
 .. code-block:: shell
 
    source setup.sh
 
 .. Note::
+
    In some version of ubuntu  after running this command terminal may throw core aborted error.
-   This due  missing dev files of libxcb libraries.You can simply install them via `sudo apt install`.
+   This due  missing dev files of libxcb libraries.You can simply install them via 
+  
+.. code-block:: shell
+        
+   sudo apt install libxcb*
 
 .. tip::
    Write the above command  at the end of your .bashrc file to avoid writing it every time you start.
 
-For Installation of drivers , from the /bin directory run:
+For Installation of drivers , from the <efinix-folder>/bin directory run:
 
 .. code-block:: shell
 
    sudo ./install_usb_driver.sh
+   
+   After setting up just writing efinity on your terminal will start the efinity software.
 
-
-
-After setting up just writing efinity on your terminal will start the efinity software.
-
-for detailed information about `softwatre guide <https://www.efinixinc.com/docs/efinity-ug-v13.1.pdf>`_.
+For  detailed information: see  `software guide <https://www.efinixinc.com/docs/efinity-ug-v13.1.pdf>`_.
 
 
