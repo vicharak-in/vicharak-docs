@@ -1,6 +1,6 @@
-############################
- FPGA IDE Documentation
-############################
+######
+ FPGA
+######
 
 
      This documentation pertains to the specific documentation for
@@ -11,9 +11,5 @@
 .. toctree::
    :caption: List of Guides
    
-
-   Linux/index
-   Windows/index
-   Installing Simulation Tool<simulation_tool>
-   Starting with IDE<start>
-   How to Use Debugger<debugger>
+   efinix/index
+  
