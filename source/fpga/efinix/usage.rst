@@ -213,7 +213,7 @@ Manual Debugger
 ***************
 
 
-Create Debugger Profile: 
+Create Debugger Profile
 ************************
 
 To configure Virtual I/O and Logic Analyzer debug cores in a profile:
@@ -227,7 +227,7 @@ To configure Virtual I/O and Logic Analyzer debug cores in a profile:
 7. Close the debugger.
 
 
-Add Debug core in your project:  
+Add Debug core in your project 
 *******************************
 
 To integrate debug code into your project and compile it:
@@ -240,7 +240,7 @@ To integrate debug code into your project and compile it:
 6. Compile the design.
 
 
-Programm the FPGA:  
+Programm the FPGA  
 ******************
 
 To program the FPGA:
@@ -251,7 +251,7 @@ To program the FPGA:
 4. Initiate programming by clicking Start Programming, and monitor programming messages in the console.
 
 
-Run the Debugger:  
+Run the Debugger 
 *****************
 
 Observing Probed Signals in Debugger:
