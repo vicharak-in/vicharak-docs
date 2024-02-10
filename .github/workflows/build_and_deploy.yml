@@ -18,7 +18,7 @@ jobs:
       # Install dependencies and build the docs
       - uses: actions/checkout@v4
       - name: Setting Up Python Version
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - name: Installing pipenv
@@ -30,7 +30,7 @@ jobs:
 
           # Copy it to the server
       - name: Copying build/html/ to remote server
-        uses: appleboy/scp-action@v0.1.4
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}

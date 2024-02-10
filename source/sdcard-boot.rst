@@ -29,6 +29,58 @@ Using a suitable file system (such as FAT32 or EXT4) format the SD-card.
     .. tab-item:: Linux
 
         .. tab-set::
+            .. tab-item:: Ubuntu Disks (GUI)
+
+                1. Insert the **SD-card** into your computer. Use USB-to-SD adapter if required.
+
+                2. Open the **Disks** application if you are using a GUI.
+
+                .. image:: _static/images/Disks-overview.webp
+                   :width: 50%
+
+                |
+
+                3. Select the SD-card from the left panel.
+
+                .. image:: _static/images/Didsk-sdcard-show.webp
+                   :width: 50%
+
+                |
+
+                4. if partition is already present in SD Card then, Click on the **Delete selected partition** icon and select **Delete Partition**.
+
+                .. image:: _static/images/Delete-selected-partition.webp
+                   :width: 50%
+
+                |
+                
+                5. After Deleting **All partition** we can see something like below.
+
+                .. image:: _static/images/deleted-all-patrtition-in-sdcard.webp
+                   :width: 50%
+
+                |
+
+                6. Click on **Next** button.
+
+                .. image:: _static/images/Disk-next.webp
+                   :width: 50%
+
+                |
+
+                7. Select the desired file system (e.g., FAT32) and click **Create**.
+
+                .. image:: _static/images/create-format-of-ext4.webp
+                   :width: 50%
+
+                |
+
+                8. After the successful completion of the process, the **SD card** is formatted with the selected partition.
+
+                .. image:: _static/images/format-complate.webp
+                   :width: 50%
+
+                |
 
             .. tab-item:: Gnome Disks (GUI)
 
