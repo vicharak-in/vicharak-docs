@@ -28,7 +28,8 @@ extensions = [
     "sphinx_togglebutton",
     "sphinxawesome_theme",
     "sphinxcontrib.spelling",
-]
+    "sphinx_tabs.tabs"
+    ]
 
 # Spelling extension settings
 spelling_ignore_contributor_names = True
