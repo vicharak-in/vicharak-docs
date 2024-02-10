@@ -1,4 +1,4 @@
-.. _vaaman fpga:  ../../vaaman-fpga.html
+.. _efinix_usage:
 
 Starting with efinity IDE
 =========================
@@ -124,7 +124,7 @@ generated containing all the generated files at each step.
 .. image:: ../../_static/images/auto_flow.webp
    :width: 100%
 
-Now follow the steps  on `vaaman fpga`_  to dump your  generated bitstream on FPGA.
+Now follow the steps  on :ref:`vaaman-fpga`  to dump your  generated bitstream on FPGA.
 
 
 ===================
