@@ -1,5 +1,5 @@
 ===========
-Vaaman Fpga 
+Vaaman FPGA 
 ===========
 
 .. toctree::

@@ -68,7 +68,7 @@ clock and generate the desired frequency via PLL.
 
 
 
-While creating the gpio block for source clock you need to change its connectio type from normal to PLL_CLK_IN. and give this pin any crystall oscillator
+While creating the gpio block for source clock you need to change its connection  type from normal to PLL_CLK_IN. and give this pin any crystall oscillator
 in resouce assigner.
 
 .. image:: ../../_static/images/create_pll_gpio.webp
@@ -89,7 +89,7 @@ as per your convenience. Here you have to mention your actual clock input which 
    :width: 100%
 
 
-Navigate to the resource assigner to map the pins on board. You can refer to `datasheet <../_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_. for mapping. By entering the 
+Navigate to the resource assigner to map the pins on board. You can refer to `pinout guide  </_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_ for mapping. By entering the 
 package pin the rest of the colums would be to auto-fill
 
 .. image:: ../../_static/images/Assign_Pins.webp
