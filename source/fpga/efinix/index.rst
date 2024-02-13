@@ -10,4 +10,3 @@ Efinix
    
    Installation<install>
    Usage<usage>
- 
