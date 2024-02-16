@@ -6,4 +6,4 @@ Vaaman FPGA
 
    Installation<install>
    Usage<usage>
-   Project Details<fpga_project_demo>
+   Example Programs<fpga_project_demo>
