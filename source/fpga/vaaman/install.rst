@@ -1,3 +1,5 @@
+.. _vaaman_fpga_install:
+
 ============
 Installation 
 ============
