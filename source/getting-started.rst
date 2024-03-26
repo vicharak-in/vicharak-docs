@@ -54,7 +54,7 @@ What else do you need?
     purchase it separately. This is essential for the initial setup process
     when you need to connect the Vaaman to a monitor.
 
-    `Get cable from here <https://amzn.eu/d/9OHoLZ7>`_
+ 
 
 **2. USB Keyboard and Mouse**
     A USB keyboard and mouse are required to interact with the Vaaman.
@@ -62,15 +62,14 @@ What else do you need?
     This is essential for the initial setup process when you need to interact
     with the Vaaman using the display.
 
-    `Get the combo from here <https://amzn.eu/d/97mZY2c>`_
-
+ 
 **3. Monitor with HDMI input**
     A monitor with HDMI input is required to connect the Vaaman.
     The monitor is not included in the box, and you need to purchase it
     separately. This is essential for the initial setup process when you need
     to connect the Vaaman to a monitor.
 
-    `Get 1080p monitor from here <https://amzn.eu/d/doCOT5P>`_
+ 
 
 **4. USB-C to USB-A Male cable (optional)**
     A USB-C to USB-A Male cable is required to connect the Vaaman to your
@@ -78,7 +77,7 @@ What else do you need?
     the Vaaman to your computer.
     This is essential for the configuration and development process.
 
-    `Buy from here <https://amzn.eu/d/efC0NtA>`_
+ 
 
 **5. SD-card (optional)**
     An SD-card is required to flash the Vaaman with the latest image.
@@ -87,7 +86,7 @@ What else do you need?
     Get at least a 16GB SD-card. We recommend using a good quality SD-card that
     supports **UHS-I** interface and has a read speed of at least 100MB/s.
 
-    `Get 32GB UHS-I card from here <https://amzn.eu/d/48KqdA5>`_
+ 
 
 **6. Internet Connection (optional)**
     An internet connection is required to download the latest image and
