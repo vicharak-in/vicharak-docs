@@ -93,8 +93,7 @@ Hardware Connections
 Locate the 10-pin headers on the Vaaman board. These can be found from
 the schematic.
 
-Ensure the Vaaman board is powered off and disconnected from the power
-supply.
+Ensure the Vaaman board is powered On.
 
 Connect the USB-to-JTAG Module to the Vaaman board.
 
