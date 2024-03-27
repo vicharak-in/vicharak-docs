@@ -101,7 +101,6 @@ What else do you need?
     computer to access the serial console. This is optional and is only
     required if you want to access the serial console for debugging purposes.
 
-    Get Vaaman compatible FTDI from the `Vaaman Store <#>`_
 
 .. note::
     | The items listed above are not included in the box.
