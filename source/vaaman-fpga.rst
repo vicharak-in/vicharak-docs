@@ -35,7 +35,7 @@ Connect the USB-to-SPI Module to the Vaaman board.
 While connecting the Programmer module, make sure to follow the
 indicated color code as shown in the image.
 
-.. image:: _static/images/FPGA_JTAG_PROG.webp
+.. image:: _static/images/FPGA_SPI_PROG.webp
    :width: 50%
 
 Download the HEX file
@@ -100,7 +100,7 @@ Connect the USB-to-JTAG Module to the Vaaman board.
 While connecting the Programmer module, make sure to follow the
 indicated color code as shown in the image.
 
-.. image:: _static/images/FPGA_SPI_PROG.webp
+.. image:: _static/images/FPGA_JTAG_PROG.webp
    :width: 50%
 
 Download the BIT file
