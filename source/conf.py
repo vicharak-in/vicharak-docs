@@ -29,6 +29,7 @@ extensions = [
     "sphinxawesome_theme",
     "sphinxcontrib.spelling",
     "sphinx_tabs.tabs"
+
     ]
 
 # Spelling extension settings
