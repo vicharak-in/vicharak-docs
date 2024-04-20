@@ -39,7 +39,7 @@ Vaaman Camera Guide
 
     You can also install cheese application using command by opening terminal ``(Ctrl + Alt + T)``.
 
-        .. code::
+        .. code-block::
         
             sudo apt-get update
             sudo apt-get install cheese
@@ -150,14 +150,14 @@ Setup
         
             To Install Vim:
             
-            .. code::
+            .. code-block::
         
                 sudo apt update
                 sudo apt install vim
             
             To Install Gedit:
 
-            .. code::
+            .. code-block::
                 
                 sudo apt update
                 sudo apt-get install gedit
@@ -175,7 +175,7 @@ Setup
 
              for Debian-based systems (like Ubuntu):   
 
-             .. code::
+             .. code-block::
 
                         sudo apt update
                         sudo apt install python3-pip
@@ -184,7 +184,7 @@ Setup
         
              for Debian-based systems (like Ubuntu):
              
-             .. code::
+             .. code-block::
 
                         pip install opencv-python
         
@@ -198,7 +198,7 @@ Setup
         3. Copy this below content into the file and paste it by pressing ``Ctrl + Shift + v``, then press ``Esc`` and to save this file, type ``:wq``.
 
         
-           .. code::
+           .. code-block::
 
                         # !/bin/env python3
                         import cv2
@@ -219,7 +219,7 @@ Setup
 
         6. Run Python program using the following command:
 
-           .. code::
+           .. code-block::
 
                         python3 <file_name>.py
 

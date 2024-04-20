@@ -14,13 +14,13 @@ Steps For Testing And Cloning The Project
 
 For the LED blinking project:
 
-.. code::
+.. code-block::
 
   git clone https://github.com/vicharak-in/LED_BLINKING_DEMO
 
 For the UART demo project:
 
-.. code::
+.. code-block::
 
   git clone https://github.com/vicharak-in/UART_RX_TX_DEMO
 

@@ -28,8 +28,8 @@ extensions = [
     "sphinx_togglebutton",
     "sphinxawesome_theme",
     "sphinxcontrib.spelling",
-    "sphinx_tabs.tabs"
-
+    "sphinx_tabs.tabs",
+    "sphinxawesome_theme.highlighting"
     ]
 
 # Spelling extension settings
