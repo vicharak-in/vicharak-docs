@@ -451,7 +451,7 @@ To access Vaaman through SSH, you can use either of the following commands:
 
 1. SSH using the IP address
 
-.. code::
+.. code-block::
 
     ssh username@ip_address
 
@@ -462,7 +462,7 @@ To access Vaaman through SSH, you can use either of the following commands:
 
 2. SSH using the PC name (hostname)
 
-.. code::
+.. code-block::
 
     ssh username@pc-name.local
 
