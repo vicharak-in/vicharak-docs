@@ -35,7 +35,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          key: ${{ secrets.DIGITALOCEAN_PRIVATE_KEY }}
           strip_components: 2
           overwrite: true
           source: _build/dirhtml/
