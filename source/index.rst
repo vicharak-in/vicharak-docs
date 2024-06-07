@@ -1,4 +1,4 @@
-.. _vaaman-linux:
+.. _vicharak-linux:
 
 ..
    Vicharak master file, created by
@@ -9,38 +9,44 @@
 .. rst-class:: lead
 
 ####################################
- Welcome to Vaaman's documentation!
+ Welcome to Vicharak's documentation!
 ####################################
 
-The **Vaaman Single Board Computer** (SBC) combines the **RK3399**
-processor and **Efinix Trion T120** FPGA. It offers a powerful yet
-energy-efficient computing solution for various applications. The RK3399
-processor provides high performance and low power consumption, while the
-Trion T120 FPGA allows for customizable hardware acceleration.
+Vicharak brings to you the powerful rk3399 based Vaaman and the highly advanced rk3588 based Axon single-board computers (SBCs).
+Designed for both hobbyists and professionals, these SBCs offer unparalleled performance and versatility for a wide range of
+applications including IoT, AI and multimedia processing.
 
-With its compact size, the Vaaman SBC is suitable for
-`space-constrained` environments and offers a range of `connectivity
-options`. Overall, it empowers developers to create innovative solutions
-that require both processing power and hardware customization.
+.. |vaaman_top| image:: _static/images/Vaaman-top.webp
+   :width: 100%
+   :alt: vaaman top
 
-.. image:: _static/images/Vaaman-top.webp
-   :width: 50%
-   :align: left
+.. |axon_top| image:: _static/images/rk3588-axon/axon-top.webp
+   :width: 100%
+   :alt: axon top
+
+.. grid:: 1 1 2 2
+
+    .. grid-item-card:: Vaaman SBC
+       :link: vaaman-home
+       :link-type: doc
+       :shadow: md
+
+       |vaaman_top|
+
+    .. grid-item-card:: Axon SBC
+       :link: vicharak_sbcs/axon/axon-home
+       :link-type: doc
+       :shadow: md
+
+       |axon_top|
 
 .. toctree::
    :glob:
    :caption: Contents
    :titlesonly:
 
-   Overview <overview>
-   Getting Started <getting-started>
-   Frequently Asked Questions <faq>
-   Vaaman SDK Documentation <vaaman-sdk>
-   Vaaman Application Documentation <vaaman-applications>
-   Vaaman Linux Documentation <vaaman-linux/index>
-   FPGA  <fpga/index>
-   Vaaman FPGA Programming Documentation <vaaman-fpga>
-   Vaaman Remote Upload Documentation <vaaman-remote-upload>
+   Vaaman SBC <vaaman-home>
+   Axon SBC <vicharak_sbcs/axon/axon-home>
 
 .. toctree::
    :glob:
@@ -48,6 +54,8 @@ that require both processing power and hardware customization.
    :caption: Downloads
 
    downloads
+   vicharak_sbcs/axon/axon-downloads
+
 
 .. toctree::
    :glob:
@@ -55,6 +63,7 @@ that require both processing power and hardware customization.
    :titlesonly:
 
    accessories
+   rk3588-axon/axon-accessories
 
 .. note::
 
