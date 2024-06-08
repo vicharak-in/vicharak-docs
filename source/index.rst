@@ -58,8 +58,7 @@ that require both processing power and hardware customization.
 
 .. note::
 
-   We welcome contributions and bug reports through our `GitHub
-   repository <https://github.com/vicharak-in/>`_.
+   We welcome feedback and bug reports through our `Support
+   discussion <https://discuss.vicharak.in>`_.
 
-   See the :doc:`contributing` guide and :doc:`faq` for more
-   information.
+   Visit :doc:`faq` for more information.
