@@ -63,7 +63,7 @@ applications including IoT, AI and multimedia processing.
    :titlesonly:
 
    accessories
-   rk3588-axon/axon-accessories
+   vicharak_sbcs/axon/axon-accessories
 
 .. note::
 
