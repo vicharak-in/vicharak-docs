@@ -42,7 +42,7 @@ Axon is designed to cater to a diverse audience, including but not limited to:
 Block Diagram
 -------------
 
-.. image:: ../../_static/images/rk3588-axon/axon-blockdiagram.webp
+.. image:: ../../_static/images/rk3588-axon/axon-v2-blockdiagram.webp
    :width: 100%
 
 Features
@@ -77,7 +77,7 @@ The Axon Single Board Computer (SBC) offers a range of hardware features, includ
      - | 4 X MIPI CSI [2 lanes] / 2 X MIPI CSI [4 lanes]  (2.5 Gbps)
        | 2 X MIPI DPHY RX [4 lane] (4.5 Gbps)
    * - PCIE     
-     - | 1 X PCIE Gen 3 [4 lane] with NVMe M2.0 M-key (8Gbps)
+     - | 1 X PCIE Gen 3 [4 lane] with NVMe M.2 M-key (8Gbps)
        | 2 X PCIE Gen 2 [1 lane] with FPC (5Gbps)
    * - SATA
      - | 1 X SATA3.0 [1 lane] with 22 pin standard connector
