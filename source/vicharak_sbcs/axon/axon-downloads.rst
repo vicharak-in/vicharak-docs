@@ -1,4 +1,4 @@
-.. _axon_downloads:
+.. _axon-downloads:
 
 Axon Downloads
 ================

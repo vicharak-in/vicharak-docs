@@ -1,4 +1,4 @@
-.. _axon_accessories:
+.. _axon-accessories:
 
 ####################
  Axon Accessories
