@@ -209,10 +209,10 @@ Hardware Setup
      - Pin 6
      - GND
    * - TX
-     - Pin 4 (GPIO0_B6)
+     - Pin 4 (GPIO0_B5)
      - UART2_TX_M0_DEBUG
    * - RX
-     - Pin 2 (GPIO0_B5)
+     - Pin 2 (GPIO0_B6)
      - UART2_RX_M0_DEBUG
 
 .. image:: ../../_static/images/rk3588-axon/axon-serial-uart-pins.webp

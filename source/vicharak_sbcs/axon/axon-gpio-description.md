@@ -61,8 +61,8 @@ or assigned to a GPIO at a time.
 
 | GPIO number |  Function3  |  Function2  |  Function1   |   GPIO   |             Pin#             |            Pin#             |   GPIO   |              Function1                       |  Function2   |  Function3   | GPIO number |
 | :---------: | :---------: | :---------: | :----------: | :------: | :--------------------------: | :-------------------------: | :------: | :------------------------------------------: | :----------: | :----------: |:-----------:|
-|             |             |             |     +12V     |          | <div class='red'>1</div>     | <div class='orange'>2</div> | GPIO0_B5 |  <div class='orange'>UART2_RX_M0_DEBUG</div> |              |              |    13       | 
-|             |             |             |     GND      |          | <div class='black'>3</div>   | <div class='orange'>4</div> | GPIO0_B6 |  <div class='orange'>UART2_TX_M0_DEBUG</div> |              |              |    14       |
+|             |             |             |     +12V     |          | <div class='red'>1</div>     | <div class='orange'>2</div> | GPIO0_B6 |  <div class='orange'>UART2_RX_M0_DEBUG</div> |              |              |    13       |
+|             |             |             |     GND      |          | <div class='black'>3</div>   | <div class='orange'>4</div> | GPIO0_B5 |  <div class='orange'>UART2_TX_M0_DEBUG</div> |              |              |    14       |
 |             |             |             |     +5V      |          | <div class='red'>5</div>     | <div class='black'>6</div>  |          |                 GND                          |              |              |             |
 |             |             |             |     +5V      |          | <div class='red'>7</div>     | <div class='black'>8</div>  |          |                 GND                          |              |              |             |
 |     81      |             | I2C2_SCL_M1 | UART1_CTSN_M0| GPIO2_C1 | <div class='green'>9</div>   | <div class='green'>10</div> | GPIO2_B6 |              UART1_RX_M0                     | I2C5_SCL_M4  |              |     78      |
