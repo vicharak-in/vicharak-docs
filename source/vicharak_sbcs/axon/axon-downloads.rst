@@ -115,6 +115,6 @@ Step File
 .. TODO: Update the respective links
 .. seealso::
 
-    :ref:`Frequently Asked Questions <#>`
+    :ref:`Frequently Asked Questions <axon-faq>`
 
     :doc:`Axon Linux Guide <#>`
