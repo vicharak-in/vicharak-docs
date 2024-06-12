@@ -299,7 +299,7 @@ Running the Serial Console Program
 
         .. note::
             Read minicom configuration from
-            :ref:`Linux Minicom guide <minicom-guide>`.
+            :ref:`Linux Minicom guide <axon-minicom-guide>`.
 
 .. _ssh:
 
