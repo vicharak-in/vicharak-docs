@@ -14,7 +14,7 @@ What's in the box?
 
 **1. Axon**
 
-**2. 12V/5A Power Adapter with PD cable**
+**2. PD cable**
 
 **3. Pre-installed eMMC**
 
@@ -140,7 +140,7 @@ connect the Axon to your computer using the USB-C port.
     Skip to the :ref:`Serial Console <axon-serial-console>` section.
 
     If you want to access the **Axon using SSH**,
-    Skip to the :ref:`SSH <ssh>` section.
+    Skip to the :ref:`SSH <axon-ssh>` section.
 
 
 .. TODO: Add axon start guide
@@ -231,7 +231,7 @@ Hardware Setup
 
 .. warning::
    |
-   | Durning the first boot you will see a warning on your serial console.
+   | During the first boot you will see a warning on your serial console.
    | So, please ensure that you wait for the system to complete its reboot.
    | This is necessary because the system requires configuration adjustments
    | before you proceed to the next step. Taking the time to allow the system to
@@ -239,159 +239,13 @@ Hardware Setup
 
 Running the Serial Console Program
 ``````````````````````````````````
+.. include:: ../common/common-serial-console-program.rst
 
-.. tab-set::
-
-    .. tab-item:: PuTTY (GUI)
-
-        1. Download and install the `PuTTY <https://www.putty.org/>`_ program.
-
-        2. Open the PuTTY program and configure the serial parameters as shown
-		   in the image below.
-
-        .. image:: ../../_static/images/Putty_step.webp
-           :width: 50%
-
-        3. Click on the **Open** button to open the serial console.
-
-        4. You will now be able to access the serial console.
-
-    .. tab-item:: TeraTerm (GUI)
-
-        1. Download and install the
-            `TeraTerm <https://osdn.net/projects/ttssh2/releases/>`_ program.
-
-        2. Open the TeraTerm program and configure the serial parameters.
-
-        - On the **Setup** menu, click on **Serial port**.
-        - Select the serial port number and configure the serial parameters
-          as shown in the image below.
-
-        .. image:: ../../_static/images/teraterm-configuration.webp
-           :width: 50%
-
-        3. Click on the **OK** button to open the serial console.
-
-        4. You will now be able to access the serial console.
-
-    .. tab-item:: Linux GTK-Term (GUI)
-
-        1. Install the GTK-Term program using the following command:
-
-        .. code-block:: bash
-
-            sudo apt-get install gtkterm
-
-        2. Open the GTK-Term program and configure the serial parameters.
-
-        - On the **File** menu, click on **Port**.
-        - Select the serial port number and configure the serial parameters as
-          shown in the image below.
-
-        .. image:: ../../_static/images/gtkterm-configuration.webp
-           :width: 50%
-
-        3. Click on the **OK** button to open the serial console.
-
-        4. You will now be able to access the serial console.
-
-    .. tab-item:: Minicom (CLI)
-
-        .. note::
-            Read minicom configuration from
-            :ref:`Linux Minicom guide <minicom-guide>`.
-
-.. _ssh:
-
+.. _axon-ssh:
 3. Using SSH
 -------------
 
-Axon supports **SSH (Secure Shell)**, which allows for secure remote access
-to the system. By establishing an SSH connection, users can remotely connect to
-Axon from another device, such as a computer or smartphone, over a network.
-This method provides a secure command-line interface to administer, configure,
-and execute commands on the Axon.
-
-Install OpenSSH server
-``````````````````````
-
-You can install both OpenSSH components on Windows devices using the
-**Windows Settings**.
-
-To install the OpenSSH components, follow these steps:
-
-1. Open the Settings menu and click on Apps, then select **Optional Features**.
-2. Look through the list to check if OpenSSH is already installed.
-   If it's not, at the top of the page, click on **Add a feature** and then:
-
-   - Find OpenSSH Client and click on Install.
-   - Find OpenSSH Server and click on Install.
-3. After the installation process is complete, go back to
-   **Apps and Optional Features** to verify that **OpenSSH** is listed.
-4. Open the Services desktop app. (``Click on Start, type services.msc in the
-   search box, and then click on the Service app or press ENTER.``)
-5. In the details pane, double-click on **OpenSSH SSH Server**.
-6. On the General tab, choose **Automatic** from the Startup type drop-down
-   menu.
-7. To start the service, click on **Start**.
-
-
-Verify OpenSSH server
-`````````````````````
-
-Once installed, you can connect to **OpenSSH Server** from a Windows device
-with the **OpenSSH client** installed.
-
-From a PowerShell prompt, run the following command.
-
-.. code-block:: powershell
-
-    ssh username@ip_address
-
-Example:
-
-.. code-block:: powershell
-
-    ssh vicharak@192.168.29.69
-
-.. tip::
-
-	To find your IP address on Windows, use the following command:
-	``ipconfig``
-
-	For Linux users, use the following command:
-	``ip a``
-
-Accessing Axon through SSH
-````````````````````````````
-
-To access Axon through SSH, you can use either of the following commands:
-
-|
-
-1. SSH using the IP address
-
-.. code-block::
-
-    ssh username@ip_address
-
-.. tip::
-    Replace **"username"** with the appropriate username for Axon and
-    **"ip_address"** with the actual IP address assigned to Axon on the
-    network.
-
-2. SSH using the PC name (hostname)
-
-.. code-block::
-
-    ssh username@pc-name.local
-
-.. tip::
-    Replace **"username"** with the appropriate username for Axon and
-    **"pc-name"** with the actual PC name assigned to Axon on the network.
-
-    For Linux users, you can find your username using ``whoami`` command and,
-    hostname using ``cat /etc/hostname``
+.. include:: ../common/common-ssh.rst
 
 4. Set up automatic Wi-Fi connection on boot
 --------------------------------------------

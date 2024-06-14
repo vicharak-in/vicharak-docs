@@ -137,4 +137,5 @@ or assigned to a GPIO at a time.
 
 :::{seealso}
 [Configure 30-Pin header using vicharak-config utility](#)
+**(Will be available soon)**
 :::

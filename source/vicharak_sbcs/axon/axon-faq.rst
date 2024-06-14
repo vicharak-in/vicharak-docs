@@ -45,6 +45,9 @@ How to take logs
         .. note::
             If the device is not booting up, then take the logs from the serial port tool and attach it to the issue.
 
+Does Axon have an FPGA?
+-------------------
+No
 
 How to report a bug
 -------------------
