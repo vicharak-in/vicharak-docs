@@ -29,7 +29,7 @@ How to take logs
 
     .. tab-item:: Linux
 
-        - Connect the device to the PC and use the :ref:`linux-uart-serial-console` to open the serial port of the device.
+        - Connect the device to the PC and use the :ref:`axon-linux-uart-serial-console` to open the serial port of the device.
 
         - Once the serial port is opened, Take the kernel and user space logs by running the following commands in the serial port tool.
 
@@ -45,6 +45,9 @@ How to take logs
         .. note::
             If the device is not booting up, then take the logs from the serial port tool and attach it to the issue.
 
+Does Axon have an FPGA?
+-------------------
+No
 
 How to report a bug
 -------------------
