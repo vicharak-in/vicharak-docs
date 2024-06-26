@@ -3,211 +3,129 @@
 Getting Started
 ###############
 
-For Vaaman, Vicharak has provided all the necessary accessories and
-information to get started with the board. This section will guide you through
-the initial setup process and provide you with the necessary information to get
-started with Vaaman.
+Vicharak provides all necessary accessories and information for setting up Vaaman. This section guides you through the initial setup.
 
 What's in the box?
 ==================
 
-**1. Vaaman**
-    The Vaaman is a single-board computer with on-board FPGA support.
-    It is powered by the Rockchip RK3399 SoC, which features a dual-core
-    Cortex-A72 processor and a quad-core Cortex-A53 processor. The board also
-    features a 4GB LPDDR4 RAM, 16GB eMMC storage, and a 40-pin GPIO header.
-    The board is pre-installed with Debian 11 (``Bullseye``) on its eMMC storage.
+1. **Vaaman**
+    - Single-board computer with on-board FPGA support.
+    - Powered by Rockchip RK3399 SoC (dual-core Cortex-A72 and quad-core Cortex-A53).
+    - 4GB LPDDR4 RAM, 16GB eMMC storage, 40-pin GPIO header.
+    - Pre-installed with Ubuntu 22 (``Jammy``).
 
-	FPGA, or Field Programmable Gate Array, is a programmable logic
-	processor that allows users to configure its functionality post
-	manufacturing. Having an on-board FPGA support provides immense flexibility,
-	enabling users to tailor the hardware's behavior according to their
-	specific needs.
-
-**2. 12V/5A Power Adapter with PD cable**
-    The 12V/5A Power Adapter with PD (Power Delivery) cable is used to supply
-    power to the Vaaman SBC. The PD cable connects the power adapter to the
-    Vaaman, ensuring stable and efficient power delivery.
-
-	Power Delivery is a technology that allows for higher power levels to be
-	delivered over a USB-C connection.
-
-**3. Pre-installed eMMC**
-    The Vaaman comes with a pre-installed eMMC storage, which is used to
-    store the operating system and other files.
-    The eMMC storage is pre-installed with Debian 11 (``Bullseye``).
-
-**4. Heat Sink and Fan**
-    The Vaaman comes with a heat sink and fan, As the board processes data and
-    executes tasks, it generates heat. The heat sink dissipates this heat,
-    preventing the board from overheating, while the fan enhances the cooling
-    process.
-
-	The heat sink and fan are attached to the board using the screws provided in the box.
+2. **12V/5A Power Adapter with PD Cable**
+    - Supplies power to Vaaman.
+    - Ensures stable and efficient power delivery via USB-C with Power Delivery technology.
 
 What else do you need?
 ======================
 
-**1. Micro HDMI to HDMI cable or adapter**
-    A good quality Micro HDMI to HDMI cable is required to connect the Vaaman
-    to a monitor. The cable is not included in the box, and you need to
-    purchase it separately. This is essential for the initial setup process
-    when you need to connect the Vaaman to a monitor.
-
- 
-
-**2. USB Keyboard and Mouse**
-    A USB keyboard and mouse are required to interact with the Vaaman.
-    We recommend using a wireless keyboard and mouse for easier access.
-    This is essential for the initial setup process when you need to interact
-    with the Vaaman using the display.
-
- 
-**3. Monitor with HDMI input**
-    A monitor with HDMI input is required to connect the Vaaman.
-    The monitor is not included in the box, and you need to purchase it
-    separately. This is essential for the initial setup process when you need
-    to connect the Vaaman to a monitor.
-
- 
-
-**4. USB-C to USB-A Male cable (optional)**
-    A USB-C to USB-A Male cable is required to connect the Vaaman to your
-    computer. This is optional and is only required if you want to connect
-    the Vaaman to your computer.
-    This is essential for the configuration and development process.
-
- 
-
-**5. SD-card (optional)**
-    An SD-card is required to flash the Vaaman with the latest image.
-    This is optional as we already provide eMMC storage option.
-
-    Get at least a 16GB SD-card. We recommend using a good quality SD-card that
-    supports **UHS-I** interface and has a read speed of at least 100MB/s.
-
- 
-
-**6. Internet Connection (optional)**
-    An internet connection is required to download the latest image and
-    packages. Use a LAN cable or the existing on-board Wi-Fi module to connect
-    the Vaaman to the internet.
-
-    This is optional as you can download the image and packages
-    from another computer and transfer them to the Vaaman.
-
-**7. USB to TTL Serial Cable (optional)**
-    A USB to TTL Serial Cable is required to connect the Vaaman to your
-    computer to access the serial console. This is optional and is only
-    required if you want to access the serial console for debugging purposes.
-
+- Micro HDMI to HDMI cable or adapter
+- USB Keyboard and Mouse
+- Monitor with HDMI input
+- USB-C to USB-A Male cable (optional)
+- SD-card (optional)
+- Internet Connection (optional)
+- USB to TTL Serial Cable (optional)
 
 .. note::
     | The items listed above are not included in the box.
     | You can purchase them from the :ref:`accessories` page.
 
 
-Getting Started with eMMC
-=========================
+.. _getting-started-emmc:
 
-Turning board on
-----------------
+Getting Started with Vaaman
+===========================
 
-Vaaman comes pre-loaded with **Debian 11** (``Bullseye``) operating system on
-its ``eMMC`` (embedded MultiMediaCard) storage, and it offers support for various
-boot modes, including ``SD-card`` and ``NVMe`` `(Non-Volatile Memory Express)`.
+Turning the Board On
+--------------------
 
-If users wish to explore different operating systems, they must utilize the
-appropriate firmware to program the board accordingly.
+1. **Connect Power:**
+    - Connect the PD cable to the Vaaman board.
+    - Plug the PD adapter into a power socket.
 
-In the boot priority, ``NVMe`` takes the highest precedence, followed by
-``SD-card`` and ``eMMC``. In practical terms, if there's an NVMe drive
-connected  to Vaaman, it will initiate the boot process from the NVMe drive.
-In the absence of an NVMe drive, the board will attempt to boot from an SD-card.
-Should there be no SD-card detected, the default boot destination becomes the
-eMMC storage.
+2. **Power Source:**
+    - Ensure you use the provided 12V/5A Power Adapter with PD cable.
+    - **Do not use a 5V power input.**
 
-For the purpose of this guide, we will focus on the ``eMMC`` storage and the
-pre-installed ``Debian 11 (Bullseye)``, omitting detailed instructions for
-``NVMe`` and ``SD-card`` boot configurations.
-Connect the PD cable to the Vaaman board and the PD adapter to the power socket.
-Once the power is connected, the board will automatically turn on.
+    .. danger::
+        | **12V Power Input only! Do not use 5V power input.**
+        | Using a 12V power input is crucial for the proper functioning of the Vaaman.
+        | The board is designed to operate with a 12V power supply, and using a 5V power
+        | input may lead to instability and potential damage.
 
-.. danger::
-    |
-    | **12V Power Input only! Do not use 5V power input.**
-    |
-    | Using a 12V power input is crucial for the proper functioning of the Vaaman.
-    | The board is designed to operate with a 12V power supply, and using a 5V power
-    | input may lead to instability and potential damage.
-    | Ensure that you use the provided 12V/5A Power Adapter with PD cable to
-    | power the Vaaman SBC.
+3. **Automatic Power On:**
+    - Once the power is connected, the board will automatically turn on.
+
+4. **Boot Priority:**
+    - **NVMe**: Highest precedence. If an NVMe drive is connected, the board boots from it.
+    - **SD-card**: If no NVMe drive, the board attempts to boot from an SD-card.
+    - **eMMC**: Default. If no NVMe drive or SD-card, the board boots from eMMC storage.
+
+    .. warning::
+       | **Remove SD-card if inserted**
+       | This ensures the board boots from the eMMC storage.
 
 .. image:: _static/images/Power_option.webp
    :width: 40%
+   :alt: Vaaman power connection
 
-Vaaman is pre-installed with Debian 11 (``Bullseye``) on its eMMC storage.
-So, when you power on the board, it will boot from the eMMC storage by default.
+Vaaman is pre-installed with Ubuntu 22 (``Jammy``) on its eMMC storage, so it will boot from the eMMC storage by default.
 
-.. warning::
-   Remove SD-card if inserted
 
-Verify the power LED
+Verify the Power LED
 --------------------
 
-Upon connecting the power cable, the activation of the **Red LED** serves as an
-immediate visual indicator of the board's power status. This LED signifies that
-the Vaaman is receiving power, and its illumination provides users with a
-tangible confirmation of the successful power connection.
+- **Red LED**: Indicates that Vaaman is receiving power.
+- Check the red LED for immediate visual confirmation of successful power connection.
 
 .. image:: _static/images/vaaman-power-led.webp
-    :width: 40%
+   :width: 40%
+   :alt: Vaaman power LED
 
-Verify the status LED
+Verify the Status LED
 ---------------------
 
-The activation of the **blue LED**, marked by a blinking pattern, signifies
-the completion of the booting process. This visual cue assures users that the
-Vaaman has successfully booted from its storage medium and is ready for further
-configuration.
+- **Blue LED**: Blinks to indicate the completion of the booting process.
+- Check the blue LED to ensure Vaaman has successfully booted and is ready for configuration.
 
-.. image:: _static/images/vaaman-leds.webp
-    :width: 40%
+.. image:: _static/images/vaaman-blue-led.webp
+   :width: 40%
+   :alt: Vaaman status LEDs
 
 .. warning::
-   |
    | Please ensure you wait for the system to complete its reboot.
-   | This is necessary because the system requires configuration adjustments
-   | before you proceed to the next step. Taking the time to allow the system to
-   | finish restarting ensures that it is fully set up for the subsequent tasks.
+   | The system requires configuration adjustments before you proceed to the next step.
+   | Allowing the system to finish restarting ensures it is fully set up for subsequent tasks.
 
 Available Boot Modes
 ====================
 
-
-
 Booting from SD card
 --------------------
-To boot from SD card, please follow below document.
+To boot from SD card, please follow the below document.
 
     :doc:`sdcard-boot`
 
 Booting from NVMe drive
 -----------------------
-To boot from NVMe, please follow below document.
+To boot from NVMe, please follow the below document.
 
      :doc:`nvme-boot`
 
-How to access your Vaaman board ?
-=================================
+.. _getting-started-access:
 
-There are multiple ways to access your Vaaman. You can connect the Vaaman
-SBC to a monitor using the **micro HDMI port**, or you can connect it to your
-computer headless using **SSH** or **serial console**.
+How to Access Your Vaaman Board?
+================================
 
-For the initial setup process, we recommend connecting the Vaaman to a
-monitor using the **micro HDMI port**. Once the initial setup is complete, you can
-connect the Vaaman to your computer using the USB-C port.
+There are multiple ways to access your Vaaman board:
+
+- Connect to a monitor using the **micro HDMI port**.
+- Connect headless to your computer using **SSH** or **serial console**.
+
+For the initial setup process, we recommend connecting the Vaaman to a monitor using the **micro HDMI port**. Once the initial setup is complete, you can connect the Vaaman to your computer using the USB-C port.
 
 .. note::
     If you want to access the **serial console**,
@@ -216,29 +134,25 @@ connect the Vaaman to your computer using the USB-C port.
     If you want to access the **Vaaman using SSH**,
     Skip to the :ref:`SSH <ssh>` section.
 
-1. Using Micro HDMI port
--------------------------
+1. Using Micro HDMI Port
+------------------------
 
-Vaaman is equipped with a **micro HDMI port**, which allows for easy
-connection to a display. By using a micro HDMI to HDMI cable or adapter, users
-can connect Vaaman to a monitor or TV with an HDMI input.
-
-This enables direct visual access to the graphical user interface (GUI) or
-command-line interface (CLI) on the connected display.
+- **Micro HDMI Port:** Connect Vaaman to a monitor or TV using a micro HDMI to HDMI cable or adapter.
+- **Benefits:** Provides direct visual access to the graphical user interface (GUI) or command-line interface (CLI).
 
 .. image:: _static/images/vaaman-hdmi.webp
-    :width: 50%
+   :width: 50%
+   :alt: Vaaman HDMI connection
 
 .. caution::
-   | Only single Video port is available on Vaaman board.
-   | Which means you can either use HDMI or DisplayPort or MIPI-DSI port at a
-     time.
+   | Only a single video port is available on the Vaaman board.
+   | You can use either HDMI, DisplayPort, or MIPI-DSI port at a time.
 
-   eDP port is already used internally for the MIPI to eDP bridge.
+**Steps:**
 
-Connect the Micro HDMI to HDMI cable to the Vaaman and the monitor.
-Once the cable is connected, the Vaaman will automatically detect the
-monitor and display the output.
+1. Connect the micro HDMI to HDMI cable to the Vaaman and the monitor.
+
+2. The Vaaman will automatically detect the monitor and display the output.
 
 .. admonition:: Check out Linux Start Guide
    :class: tip
@@ -251,31 +165,52 @@ monitor and display the output.
 2. Using Serial Console
 ------------------------
 
-Vaaman also provides a serial interface, typically in the form of UART
-(Universal Asynchronous Receiver-Transmitter) pins.
+- **Serial Console:** Access the system's console or terminal interface via UART (Universal Asynchronous Receiver-Transmitter) pins.
+- **Use Case:** Often used for debugging, troubleshooting, or accessing the system when other interfaces are not available.
 
-Users can access the system's console or terminal interface by connecting to
-these serial pins using a serial cable or adapter. This method is often used
-for debugging, troubleshooting, or accessing the system when other interfaces
-are not available.
+**Steps:**
+
+1. Connect to the serial pins using a serial cable or adapter.
+
+2. Access the system's console through the connected serial interface.
+
+.. _ssh:
+
+Default Login Credentials
+-------------------------
+
+- Username: **vicharak**
+- Password: **12345**
+
+These credentials are used for initial login via any access method (HDMI, SSH, Serial Console).
+
+3. Using SSH
+------------
+
+- **SSH Access:** Securely access Vaaman over a network.
+
+**Steps:**
+
+1. Ensure Vaaman is connected to the network.
+2. Open a terminal on your computer.
+3. Use the following command to connect: **ssh vicharak@<Vaaman_IP_address>**
+4. Enter the default password **12345** when prompted.
 
 Preparation
-```````````
+-----------
 
-To access Vaaman through the serial interface, you will need the following:
+To access Vaaman through the serial interface, you will need:
 
-- A computer with a serial terminal application installed
-  (such as PuTTY or minicom).
-- A USB to TTL serial cable or adapter (such as FTDI or PL2303).
-- Micro USB or USB-C cable.
-- A 4-pin jumper wire
+1. A computer with a serial terminal application installed, such as PuTTY or minicom.
+2. A USB to TTL serial cable or adapter (e.g., FTDI or PL2303).
+3. A Micro USB or USB-C cable.
+4. A 4-pin jumper wire.
 
 Hardware Setup
-``````````````
+--------------
 
 1. Connect the USB to TTL serial cable or adapter to your computer.
-
-2. Connect the serial cable or adapter to the Vaaman.
+2. Connect the serial cable or adapter to Vaaman using the following pin configurations:
 
 .. list-table::
    :widths: 20 40 130
@@ -298,24 +233,19 @@ Hardware Setup
 .. image:: _static/images/vaaman-serial-uart-pins.webp
    :width: 50%
 
-.. note::
-    When accessing Vaaman through the serial interface, it is important to
-    configure the serial parameters correctly. For RK3399-based systems,
-    the following parameters are typically used:
+Configuration
+--------------
 
-    | Baud rate: `1500000`
-    | Data bit: `8`
-    | Stop bit: `1`
-    | Parity check: `none`
-    | Flow control: `none`
+When accessing Vaaman through the serial interface, ensure the following serial parameters are set correctly for RK3399-based systems:
+
+- Baud rate: 1500000
+- Data bit: 8
+- Stop bit: 1
+- Parity check: none
+- Flow control: none
 
 .. warning::
-   |
-   | Durning the first boot you will see a warning on your serial console.
-   | So, please ensure that you wait for the system to complete its reboot.
-   | This is necessary because the system requires configuration adjustments
-   | before you proceed to the next step. Taking the time to allow the system to
-   | finish restarting ensures that it is fully set up for the subsequent tasks.
+   During the first boot, a warning may appear on your serial console. Allow the system to complete its reboot before proceeding. This ensures that the system is fully set up for subsequent tasks.
 
 Running the Serial Console Program
 ``````````````````````````````````
@@ -386,43 +316,33 @@ Running the Serial Console Program
 3. Using SSH
 -------------
 
-Vaaman supports **SSH (Secure Shell)**, which allows for secure remote access
-to the system. By establishing an SSH connection, users can remotely connect to
-Vaaman from another device, such as a computer or smartphone, over a network.
-This method provides a secure command-line interface to administer, configure,
-and execute commands on the Vaaman.
+Vaaman supports **SSH (Secure Shell)**, enabling secure remote access to the system. By establishing an SSH connection, users can remotely connect to Vaaman from another device over a network, such as a computer or smartphone. This method provides a secure command-line interface to administer, configure, and execute commands on Vaaman.
 
 Install OpenSSH server
-``````````````````````
+~~~~~~~~~~~~~~~~~~~~~~
 
-You can install both OpenSSH components on Windows devices using the
-**Windows Settings**.
+You can install both OpenSSH components on Windows devices using the **Windows Settings**.
 
 To install the OpenSSH components, follow these steps:
 
 1. Open the Settings menu and click on Apps, then select **Optional Features**.
-2. Look through the list to check if OpenSSH is already installed.
-   If it's not, at the top of the page, click on **Add a feature** and then:
+2. Check if OpenSSH is already installed. If not, at the top of the page, click on **Add a feature**, then:
 
-   - Find OpenSSH Client and click on Install.
-   - Find OpenSSH Server and click on Install.
-3. After the installation process is complete, go back to
-   **Apps and Optional Features** to verify that **OpenSSH** is listed.
-4. Open the Services desktop app. (``Click on Start, type services.msc in the
-   search box, and then click on the Service app or press ENTER.``)
+- Find OpenSSH Client and click on Install.
+- Find OpenSSH Server and click on Install.
+
+3. After installation, verify that OpenSSH is listed in **Apps and Optional Features**.
+4. Open the Services desktop app (Start > type services.msc in the search box > click on the Service app or press ENTER).
 5. In the details pane, double-click on **OpenSSH SSH Server**.
-6. On the General tab, choose **Automatic** from the Startup type drop-down
-   menu.
+6. On the General tab, choose **Automatic** from the Startup type drop-down menu.
 7. To start the service, click on **Start**.
 
-
 Verify OpenSSH server
-`````````````````````
+~~~~~~~~~~~~~~~~~~~~
 
-Once installed, you can connect to **OpenSSH Server** from a Windows device
-with the **OpenSSH client** installed.
+Once installed, you can connect to the OpenSSH Server from a Windows device with the OpenSSH client installed.
 
-From a PowerShell prompt, run the following command.
+From a PowerShell prompt, run the following command:
 
 .. code-block:: powershell
 
@@ -436,68 +356,54 @@ Example:
 
 .. tip::
 
-	To find your IP address on Windows, use the following command:
-	``ipconfig``
-
-	For Linux users, use the following command:
-	``ip a``
+    To find your IP address on Windows, use the following command: ``ipconfig``.
+    For Linux users, use the following command: ``ip a``.
 
 Accessing Vaaman through SSH
 ````````````````````````````
 
-To access Vaaman through SSH, you can use either of the following commands:
-
-|
+To access Vaaman via SSH, you can use either of the following commands:
 
 1. SSH using the IP address
 
-.. code-block::
+- Replace **ip_address** with the actual IP address assigned to Vaaman on the network.
 
-    ssh username@ip_address
+.. code-block:: bash
 
-.. tip::
-    Replace **"username"** with the appropriate username for Vaaman and
-    **"ip_address"** with the actual IP address assigned to Vaaman on the
-    network.
+    ssh vicharak@ip_address
+
 
 2. SSH using the PC name (hostname)
 
-.. code-block::
+- Replace **"pc-name"** with the actual PC name assigned to Vaaman on the network.
 
-    ssh username@pc-name.local
+.. code-block:: bash
+
+    ssh vicharak@pc-name.local
+
 
 .. tip::
-    Replace **"username"** with the appropriate username for Vaaman and
-    **"pc-name"** with the actual PC name assigned to Vaaman on the network.
-
-    For Linux users, you can find your username using ``whoami`` command and,
-    hostname using ``cat /etc/hostname``
+    The default username is **"vicharak"** and the default password is **"12345"**.
 
 4. Set up automatic Wi-Fi connection on boot
 --------------------------------------------
 
-In the following example, we will set up automatic Wi-Fi connection on boot
-for the **wlan0** interface. This will be useful if you are using a
-headless system. That means you will not need to connect a monitor, keyboard,
-or mouse to your system to connect to WiFi.
+1. Edit the ``/usr/lib/vicharak-config/conf.d/before.txt`` file.
 
-**1. Edit the ** ``/usr/lib/vicharak-config/conf.d/before.txt`` ** file and add
-the following lines:**
+   - Add the following line:
+     ```
+     connect-wi-fi <network name> <password>
+     ```
 
-::
+     Example:
+     ```
+     connect-wi-fi vicharak_5g vcaa_g123
+     ```
 
-    connect-wi-fi <network name> <password>
+2. Reboot the system.
 
-Example:
+- **Vaaman Boot modes**
 
-::
-
-    connect-wi-fi vicharak_5g vcaa_g123
-
-**2. Reboot the system.**
-
-Vaaman Boot modes
-=================
 
 .. list-table::
    :widths: 20 40
