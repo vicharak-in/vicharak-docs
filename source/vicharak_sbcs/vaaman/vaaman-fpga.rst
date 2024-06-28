@@ -23,12 +23,12 @@
            While connecting the Programmer module, make sure to follow the
            indicated color code as shown in the image.
         
-        .. image:: _static/images/FPGA_JTAG_PROG.webp
+        .. image:: ../../_static/images/FPGA_JTAG_PROG.webp
            :width: 50%
         
         2. Download the BIT file
         
-           Download the DEMO BIT file from the `Simple LED Blink Bit Demo <_static/files/sample_led_blink_t120_demo_bit.zip>`_
+           Download the DEMO BIT file from the `Simple LED Blink Bit Demo <../../_static/files/sample_led_blink_t120_demo_bit.zip>`_
         
            Unzip the downloaded file.
         
@@ -44,7 +44,7 @@
            -  Select the JTAG Programming mode.
            -  Start the programming process.
         
-        .. image:: _static/images/vaaman-efinity-programmer-jtag.webp
+        .. image:: ../../_static/images/vaaman-efinity-programmer-jtag.webp
            :width: 50%
         
            Wait for the programming to complete. When the programming is complete,
@@ -53,7 +53,7 @@
     .. tab-item:: Configure fpga from linux command
         
         - Download the HEX file
-        - Download the DEMO HEX file from `Simple LED Blink Hex Demo <_static/files/sample_led_blink_t120_demo_hex.zip>`_
+        - Download the DEMO HEX file from `Simple LED Blink Hex Demo <../../_static/files/sample_led_blink_t120_demo_hex.zip>`_
         - Unzip the downloaded file.
        
         - To program the FPGA from the command line, enter the command:
@@ -77,7 +77,7 @@ Vaaman board blinking.
 
 This indicates that the FPGA is configured with the bitstream.
 
-.. image:: _static/images/vaaman-fpga-user-leds.webp
+.. image:: ../../_static/images/vaaman-fpga-user-leds.webp
    :width: 50%
 
 .. tip::

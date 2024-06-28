@@ -4,7 +4,7 @@
  Wi-Fi and Bluetooth Antenna
 #############################
 
-.. image:: _static/images/accessory-wifi-antenna.webp
+.. image:: ../../../_static/images/accessory-wifi-antenna.webp
    :width: 40%
    :align: center
 

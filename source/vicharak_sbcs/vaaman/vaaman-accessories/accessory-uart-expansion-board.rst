@@ -4,7 +4,7 @@
  UART Expansion Board Module
 #############################
 
-.. image:: _static/images/accessory-uart-expansion-board.webp
+.. image:: ../../../_static/images/accessory-uart-expansion-board.webp
    :width: 40%
    :align: center
 
