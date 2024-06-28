@@ -4,7 +4,7 @@
  Power Delivery (PD) Adapter with PD cable
 ###########################################
 
-.. image:: _static/images/accessory-pd-adapter.webp
+.. image:: ../../../_static/images/accessory-pd-adapter.webp
    :width: 40%
    :align: center
 

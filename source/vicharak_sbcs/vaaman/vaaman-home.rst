@@ -23,7 +23,7 @@ With its compact size, the Vaaman SBC is suitable for
 options`. Overall, it empowers developers to create innovative solutions
 that require both processing power and hardware customization.
 
-.. image:: _static/images/Vaaman-top.webp
+.. image:: ../../_static/images/Vaaman-top.webp
    :width: 50%
    :align: left
 
@@ -32,15 +32,13 @@ that require both processing power and hardware customization.
    :caption: Contents
    :titlesonly:
 
-   Overview <overview>
-   Getting Started <getting-started>
-   Frequently Asked Questions <faq>
-   Vaaman SDK Documentation <vaaman-sdk>
-   Vaaman Application Documentation <vaaman-applications>
+   Overview <vaaman-overview>
+   Getting Started <vaaman-getting-started>
    Vaaman Linux Documentation <vaaman-linux/index>
    FPGA  <fpga/index>
    Vaaman FPGA Programming Documentation <vaaman-fpga>
    Vaaman Remote Upload Documentation <vaaman-remote-upload>
+   Frequently Asked Questions <vaaman-faq>
 
 .. note::
 
