@@ -27,7 +27,7 @@ applications including IoT, AI and multimedia processing.
 .. grid:: 1 1 2 2
 
     .. grid-item-card:: Vaaman SBC
-       :link: vaaman-home
+       :link: vicharak_sbcs/vaaman/vaaman-home
        :link-type: doc
        :shadow: md
 
@@ -45,7 +45,7 @@ applications including IoT, AI and multimedia processing.
    :caption: Contents
    :titlesonly:
 
-   Vaaman SBC <vaaman-home>
+   Vaaman SBC <vicharak_sbcs/vaaman/vaaman-home>
    Axon SBC <vicharak_sbcs/axon/axon-home>
 
 .. toctree::
@@ -53,17 +53,16 @@ applications including IoT, AI and multimedia processing.
    :titlesonly:
    :caption: Downloads
 
-   downloads
-   vicharak_sbcs/axon/axon-downloads
-
+   Vaaman Downloads <vicharak_sbcs/vaaman/vaaman-downloads>
+   Axon Downloads <vicharak_sbcs/axon/axon-downloads>
 
 .. toctree::
    :glob:
    :caption: Accessories
    :titlesonly:
 
-   accessories
-   vicharak_sbcs/axon/axon-accessories
+   Vaaman Accessories <vicharak_sbcs/vaaman/vaaman-accessories> 
+   Axon Accessories <vicharak_sbcs/axon/axon-accessories>
 
 .. note::
 
