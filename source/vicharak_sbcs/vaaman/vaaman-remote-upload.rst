@@ -34,7 +34,7 @@ Once you have obtained the IP address of your device, open your preferred web br
 
 ``http://192.168.29.11:8085``
 
-.. image:: _static/images/login_page.webp
+.. image:: ../../_static/images/login_page.webp
 
 After entering the URL, press Enter. You will be directed to the login page of the Vaaman Remote Upload application. If you are using the board for the first time, please note that the default username is ``vicharak``, and the default password is ``12345``.
 
@@ -46,13 +46,13 @@ After successfully logging in, you will be directed to the home page of Vaaman R
 
 Ensure that you have turned on the FPGA communication overlay from the "Vicharak Config".
 
-.. image:: _static/images/home_page.webp 
+.. image:: ../../_static/images/home_page.webp 
 
 To upload a HEX file from your computer, click on the "Browse" button.Once you've selected the file for upload, the uploading process will begin. You can monitor the progress of the file upload as it takes place.
 
-.. image:: _static/images/process_page.webp 
+.. image:: ../../_static/images/process_page.webp 
 
-.. image:: _static/images/processdone_page.webp
+.. image:: ../../_static/images/processdone_page.webp
 
 **Reading HEX Files:**
  

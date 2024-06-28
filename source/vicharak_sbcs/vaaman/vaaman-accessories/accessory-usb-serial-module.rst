@@ -4,7 +4,7 @@
  USB to TTL Serial Converter
 #############################
 
-.. image:: _static/images/accessory-usb-serial-module.webp
+.. image:: ../../../_static/images/accessory-usb-serial-module.webp
    :width: 40%
    :align: center
 

@@ -52,9 +52,9 @@ OS Utilities
       - **Download Link**
     - - Rockchip Linux Upgrade Tool
       - `V2.1 <https://github.com/vicharak-in/Linux_Upgrade_Tool>`_
-    - - Rockchip RkDevTool
-      - `V2.96
-        <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/RKDevTool_Release_v2.96.zip>`_
+    - - Rockchip Windows RkDevTool
+      - `V3.19
+        <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/RKDevTool_Release_v3.19.zip>`_
     - - Rockchip Windows Drivers
       - `V5.12
         <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/DriverAssitant_v5.12.zip>`_
@@ -71,9 +71,9 @@ FPGA Sample files
     - - **FPGA flash file type**
       - **Download Link**
     - - Hex file
-      - `Simple LED Blink Hex Demo <_static/files/sample_led_blink_t120_demo_hex.zip>`_
+      - `Simple LED Blink Hex Demo <../../_static/files/sample_led_blink_t120_demo_hex.zip>`_
     - - Bitstream file
-      - `Simple LED Blink Bit Demo <_static/files/sample_led_blink_t120_demo_bit.zip>`_
+      - `Simple LED Blink Bit Demo <../../_static/files/sample_led_blink_t120_demo_bit.zip>`_
 
 SoC Documents
 -------------
@@ -101,7 +101,7 @@ SoC Documents
 Vaaman Pin-outs Guide
 ---------------------
 
-`Download Pinouts <_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_
+`Download Pinouts <../../_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_
 
 Mechanical Information
 ----------------------
@@ -122,7 +122,7 @@ Mechanical Information
 Step File
 ---------
 
-`Download Vaaman 3D File <_static/files/Vaaman_3D_file_V0.3.step.7z>`_
+`Download Vaaman 3D File <../../_static/files/Vaaman_3D_file_V0.3.step.7z>`_
 
 .. note::
 
