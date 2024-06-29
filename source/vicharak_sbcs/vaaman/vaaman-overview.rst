@@ -36,8 +36,6 @@ The Vaaman Single Board Computer (SBC) offers a range of hardware features, incl
 
    * - **Type**
      - **Feature**
-   * - GPU
-     - | ARM Mali-T860 MP4
    * - Display
      - | 1 x HDMI 2.0 (Micro), Support maximum 4K\@60Hz display
        | 1 x MIPI, Support 2560x1600\@60fps output with dual channel
