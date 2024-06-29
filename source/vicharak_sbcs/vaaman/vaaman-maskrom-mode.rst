@@ -50,7 +50,7 @@ Methods to enter Maskrom mode
 
     .. tab-item:: Pogo pins
 
-        .. image:: _static/images/vaaman-maskrom-mode.webp
+        .. image:: ../../_static/images/rk3399-vaaman/vaaman-maskrom-mode.webp
             :width: 50%
 
         1. Press the Pogo pin to the pads and continue to hold it.
@@ -106,7 +106,7 @@ Methods to enter Maskrom mode
         2. Connect the USB to TTL serial converter to the board and your
            host computer.
 
-        .. image:: _static/images/vaaman-serial-uart-pins.webp
+        .. image:: ../../_static/images/rk3399-vaaman/vaaman-serial-uart-pins.webp
            :width: 50%
 
         3. Power on the board using the power delivery adapter. Open the serial
@@ -135,7 +135,7 @@ Methods to enter Maskrom mode
         2. Connect the USB to TTL serial converter to the board and your
            host computer.
 
-        .. image:: _static/images/vaaman-serial-uart-pins.webp
+        .. image:: ../../_static/images/rk3399-vaaman/vaaman-serial-uart-pins.webp
            :width: 50%
 
         3. Power on the board using the power delivery adapter.

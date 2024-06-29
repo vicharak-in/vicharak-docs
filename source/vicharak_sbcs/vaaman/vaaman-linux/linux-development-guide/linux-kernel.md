@@ -90,12 +90,12 @@ git clone https://github.com/vicharak-in/rockchip-linux-kernel -b master
 
 :::{tab-item} Using Web browser
 
-![vicharak-linux-kernel-github](../../_static/images/vicharak-linux-kernel-github.webp)
+![vicharak-linux-kernel-github](../../../../_static/images/rk3399-vaaman/vicharak-linux-kernel-github.webp)
 
 **Follow the steps in above image.**
 
 1. Open the [GitHub page](https://github.com/vicharak-in/rockchip-linux-kernel)
-   and click on the "<> Clone" button.
+   and click on the `< > Code` button.
 
 2. Select the "Download ZIP" option.
 
@@ -188,11 +188,10 @@ make O=out ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc --all)
 
 **Upon successful compilation, confirm that you have following files.**
 
-:::{card}
-
-- out/arch/arm64/boot/dts/rockchip/rk3399-vaaman-linux.dtb
-- out/arch/arm64/boot/Image
-  :::
+```bash
+out/arch/arm64/boot/dts/rockchip/rk3399-vaaman-linux.dtb
+out/arch/arm64/boot/Image
+```
 
 :::{warning}
 On Vaaman kernel version 4.4 you will not have
@@ -243,18 +242,20 @@ Set the specific driver that you want to build as module to `CONFIG_<XXXX>=m` in
 ## How to flash compiled Linux Kernel
 
 ::::{tab-set}
-:::{tab-item} Copy images to boot partition
 
-<br/>
+:::{tab-item} Copy images to boot partition
 
 ### Copy the compiled kernel images to the device
 
+<br/>
+
 ```bash
+
 scp out/arch/arm64/boot/Image <user>@<device-ip>:~/
 scp out/arch/arm64/boot/dts/rockchip/rk3399-vaaman-linux.dtb <user>@<device-ip>:~/
 scp -vr out/arch/arm64/boot/dts/rockchip/overlays <user>@<device-ip>:~/
-
 scp out/modules_rk3399_vaaman.tar.gz <user>@<device-ip>:~/
+
 ```
 
 ```{tip}

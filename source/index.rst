@@ -16,7 +16,7 @@ Vicharak brings to you the powerful rk3399 based Vaaman and the highly advanced 
 Designed for both hobbyists and professionals, these SBCs offer unparalleled performance and versatility for a wide range of
 applications including IoT, AI and multimedia processing.
 
-.. |vaaman_top| image:: _static/images/Vaaman-top.webp
+.. |vaaman_top| image:: _static/images/rk3399-vaaman/Vaaman-top.webp
    :width: 100%
    :alt: vaaman top
 

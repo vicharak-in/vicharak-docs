@@ -75,8 +75,7 @@ DevNo=1 Vid=0x2207,Pid=0x330c,LocationID=7143 Mode=Maskrom SerialNo=
 
 ---
 
-::::{admonition} **Linux Upgrade Tool Usage**
-:class: dropdown
+**Linux Upgrade Tool Usage**
 
 ```text
 $ sudo ./upgrade_tool
@@ -248,6 +247,8 @@ Example:
 ```bash
 sudo ./upgrade_tool uf V1.0.2311.000-vicharak-debian-bullseye-xfce-emmc.img
 ```
+---
+You will see this type of process: 
 
 ```bash
 [sudo] password for vicharak:

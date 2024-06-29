@@ -455,7 +455,7 @@ Vaaman's u-boot is configured for development purpose.
 It will allow you 3 seconds to enter the u-boot shell before booting the kernel.
 :::
 
-3. Quickly press **CTRL+c** when you see some logs starting to appear on the
+3. Quickly press ``CTRL+c`` when you see some logs starting to appear on the
    console.
 
 If you have followed the above steps successfully, you should be able to access
@@ -600,7 +600,7 @@ plug the SD-Card into your PC. You will see something similar to:
 ```
 
 Confirm the block device using `parted /dev/sd<X>` or `lsblk`.
-```
+
 
 :::
 
@@ -693,7 +693,6 @@ plug the NVMe into your PC. You will see something similar to:
 ```
 
 Confirm the block device using `parted /dev/nvme<X>n1` or `lsblk`.
-```
 
 :::
 
