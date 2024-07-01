@@ -110,7 +110,7 @@ Take a look at the following table to get the latest sources.
 | Ubuntu Jammy     | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-linux-manifests/tree/master       |
 | Yocto Mickledore | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-linux-manifests/tree/master       |
 | Buildroot        | V1.0.2311.000       | https://github.com/vicharak-in/rockchip-linux-manifests/tree/master       |
-| Android 12.1     | android-12.1-v1.0.0 | https://github.com/vicharak-in/rockchip-rockchip-linux-manifests/tree/android-12.1 |
+| Android 12.1     | android-12.1-v1.0.0 | https://github.com/vicharak-in/rockchip-linux-manifests/tree/android-12.1 |
 
 #### Cloning the source
 

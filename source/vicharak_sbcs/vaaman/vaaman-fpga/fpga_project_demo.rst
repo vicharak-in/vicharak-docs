@@ -41,18 +41,18 @@ please consult the Vaaman FPGA Installation Guide:
 
 4. Make sure to establish the correct wiring connections on the Vaaman board as
    depicted in the image below. To do so, refer to the `Download Pinouts
-   <../../_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_.
+   <../../../_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_.
 
  In the led blinking, GPIOR_188 for clock, 4 user leds are used for checking
  output, that is, GPIOT_RXN27, GPIOT_RXP27, GPIOT_RXP24, and GPIOT_RXN24.
 
-.. image:: ../../_static/images/led_blink.webp 
+.. image:: ../../../_static/images/led_blink.webp 
  
  In the UART test, GPIOR_188 sets the clock to 100 MHz and connects the UART RX
  to the Tx on the Vaaman board, which is GPIOL_62, as well as the UART Tx to the
  Rx on the Vaaman board, which is GPIOL_66.
  
-.. image:: ../../_static/images/uart_connection.webp
+.. image:: ../../../_static/images/uart_connection.webp
 
 
 5. Synthesize the design, follow the Efinity programmer steps for loading the

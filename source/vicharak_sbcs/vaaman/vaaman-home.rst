@@ -35,7 +35,7 @@ that require both processing power and hardware customization.
    Overview <vaaman-overview>
    Getting Started <vaaman-getting-started>
    Vaaman Linux Documentation <vaaman-linux/index>
-   FPGA  <fpga/index>
+   FPGA  <vaaman-fpga/index>
    Vaaman FPGA Programming Documentation <vaaman-fpga>
    Vaaman Remote Upload Documentation <vaaman-remote-upload>
    Frequently Asked Questions <vaaman-faq>

@@ -5,9 +5,9 @@ Installation
 ============
 
 
-.. tabs::
+.. tab-set::
         
-   .. tab:: linux
+   .. tab-item:: linux
 
       The FPGA used on vaaman is efinix's trion T120F324.Efinity IDE is used for  generating the bit/hex stream 
       of your RTL code to run in on FPGA.
@@ -17,7 +17,7 @@ Installation
       You can download the the software from `here <https://www.efinixinc.com/support/efinity.php>`_.
       (Efinity software provides a free liscense.To get a free license, register at efinix  `Support Center <https://www.efinixinc.com/support/index.php>`_. )
 
-      .. image:: ../../_static/images/reg.webp
+      .. image:: /_static/images/reg.webp
          :width: 100%
 
 
@@ -67,7 +67,7 @@ Installation
 
 
 
-   .. tab:: Windows
+   .. tab-item:: Windows
 
       Double-click the efinity_version.msi installer package and follow the on-screen instructions or,
 
@@ -143,7 +143,8 @@ Installation
          - Click Replace Driver.
       5. Close Zadig software. 
 
-   .. tab:: Simulation
+   .. tab-item:: Simulation
+      
       Install iVerilog, a free Verilog simulation tool, for compiling and simulating Verilog HDL source code.
 
       Download the simulator from `bleyer.org/icarus <bleyer.org/icarus>`_.
