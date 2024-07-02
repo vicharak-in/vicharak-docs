@@ -37,12 +37,12 @@
 
 .. grid:: 1 1 2 2
 
-    .. grid-item-card:: USB to TTL Serial Module
+    .. grid-item-card:: USB to UART Serial Module
        :link: vaaman-accessories/accessory-usb-serial-module
        :link-type: doc
        :shadow: md
 
-       USB to TTL Serial Module for Vaaman
+       USB to UART Serial Module for Vaaman
 
     .. grid-item-card:: M.2 Expansion board
        :link: vaaman-accessories/accessory-m2-expansion-board
