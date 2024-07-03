@@ -52,8 +52,8 @@ OS Utilities
     - - Rockchip Linux Upgrade Tool
       - `V2.1 <https://github.com/vicharak-in/Linux_Upgrade_Tool>`_
     - - Rockchip RkDevTool
-      - `V2.96
-        <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/RKDevTool_Release_v2.96.zip>`_
+      - `V3.19
+        <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/RKDevTool_Release_v3.19.zip>`_
     - - Rockchip Windows Drivers
       - `V5.12
         <https://github.com/vicharak-in/rockchip-tools/blob/master/windows/DriverAssitant_v5.12.zip>`_
