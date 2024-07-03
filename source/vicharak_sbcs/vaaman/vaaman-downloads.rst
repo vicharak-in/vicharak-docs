@@ -71,9 +71,9 @@ FPGA Sample files
     - - **FPGA flash file type**
       - **Download Link**
     - - Hex file
-      - `Simple LED Blink Hex Demo <../../_static/files/sample_led_blink_t120_demo_hex.zip>`_
+      - `Simple LED Blink Hex Demo </_static/files/sample_led_blink_t120_demo_hex.zip>`_
     - - Bitstream file
-      - `Simple LED Blink Bit Demo <../../_static/files/sample_led_blink_t120_demo_bit.zip>`_
+      - `Simple LED Blink Bit Demo </_static/files/sample_led_blink_t120_demo_bit.zip>`_
 
 SoC Documents
 -------------
@@ -101,7 +101,7 @@ SoC Documents
 Vaaman Pin-outs Guide
 ---------------------
 
-`Download Pinouts <../../_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_
+`Download Pinouts </_static/files/Vaaman0.3_Pinout_Guide_Rev0.3.pdf>`_
 
 Mechanical Information
 ----------------------
@@ -122,7 +122,14 @@ Mechanical Information
 Step File
 ---------
 
-`Download Vaaman 3D File <../../_static/files/Vaaman_3D_file_V0.3.step.7z>`_
+**Vaaman Board 3D File**
+
+`Download File </_static/files/Vaaman_3D_file_V0.3.step.7z>`_
+
+**Vaaman 3D Printed Case Files**
+
+`Download File </_static/files/Vaaman0p3_0p1_Case.zip>`_
+
 
 .. note::
 
