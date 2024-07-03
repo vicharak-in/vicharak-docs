@@ -76,7 +76,7 @@ SoC Documents
 Axon Pin-outs Guide
 ---------------------
 .. TODO: Add link for Axon 3D File
-`Download Pinouts <../../_static/files/axon_V0.2_Pinout_Guide.pptx>`_
+`Download Pinouts </_static/files/axon_V0.2_Pinout_Guide.pptx>`_
 
 Mechanical Information
 ----------------------
@@ -97,7 +97,7 @@ Mechanical Information
 Step File
 ---------
 .. TODO: Add link for Axon 3D File
-`Download Axon 3D File <../../_static/files/axon_V0.2_3D_file.step.zip>`_
+`Download Axon 3D File </_static/files/axon_V0.2_3D_file.step.zip>`_
 
 .. note::
 
