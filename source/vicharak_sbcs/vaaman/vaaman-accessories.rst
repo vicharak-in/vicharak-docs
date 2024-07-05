@@ -24,13 +24,6 @@
 
        Wi-Fi and Bluetooth Antenna for Vaaman
 
-    .. grid-item-card:: Heat-Sink
-       :link: vaaman-accessories/accessory-heatsink
-       :link-type: doc
-       :shadow: md
-
-       Heat-Sink for Vaaman
-
 **********************
  Optional Accessories
 **********************
@@ -50,6 +43,14 @@
        :shadow: md
 
        M.2 Expansion board for Vaaman
+
+    .. grid-item-card:: Heat-Sink
+       :link: vaaman-accessories/accessory-heatsink
+       :link-type: doc
+       :shadow: md
+
+       Heat-Sink for Vaaman
+
 
     .. grid-item-card:: UART Expansion board
        :link: vaaman-accessories/accessory-uart-expansion-board

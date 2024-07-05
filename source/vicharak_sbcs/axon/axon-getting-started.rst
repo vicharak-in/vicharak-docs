@@ -33,7 +33,7 @@ What else do you need?
 
 **6. Internet Connection (optional)**
 
-**7. USB to TTL Serial Cable (optional)**
+**7. USB to UART Serial Cable (optional)**
 
 .. note::
     | The items listed above are not included in the box.
@@ -187,13 +187,13 @@ To access Axon through the serial interface, you will need the following:
 
 - A computer with a serial terminal application installed
   (such as PuTTY or minicom).
-- A USB to TTL serial cable or adapter (such as FTDI or PL2303).
+- A USB to UART serial cable or adapter (such as FTDI or PL2303).
 - Micro USB or USB-C cable.
 
 Hardware Setup
 ``````````````
 
-1. Connect the USB to TTL serial cable or adapter to your computer.
+1. Connect the USB to UART serial cable or adapter to your computer.
 
 2. Connect the serial cable or adapter to Axon.
 

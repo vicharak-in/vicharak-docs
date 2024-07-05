@@ -51,7 +51,7 @@ To boot the board into MaskROM mode, follow the steps below:
 
 1. Connect the board to your computer using a **USB-C** cable.
 
-2. Short the `eMMC CLK` on the board to `GND` using a **tweezer** or a **jumper wire**.
+2. Short the `eMMC CLK` on the board to `GND` using [**Pogo Pin**](#vaaman-maskrom-mode) / **tweezer** / **jumper wire**.
 
 :::{admonition} **Alternative Options to boot into MaskROM mode**
 :class: tip
@@ -78,7 +78,7 @@ DevNo=1 Vid=0x2207,Pid=0x330c,LocationID=7143 Mode=Maskrom SerialNo=
 **Linux Upgrade Tool Usage**
 
 ```text
-$ sudo ./upgrade_tool
+sudo ./upgrade_tool
 
 ---------------------Tool Usage ---------------------
 Help:               H
