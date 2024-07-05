@@ -45,11 +45,11 @@ please consult the Vaaman FPGA Installation Guide:
 
 In the led blinking, GPIOR_188 for clock, 4 user leds are used for checking output, that is, GPIOT_RXN27, GPIOT_RXP27, GPIOT_RXP24, and GPIOT_RXN24.
 
-.. image:: /_static/images/led_blink.webp 
+.. image:: /_static/images/LED_BLINK.webp 
  
- In the UART test, GPIOR_188 sets the clock to 100 MHz and connects the UART RX
- to the Tx on the Vaaman board, which is GPIOL_62, as well as the UART Tx to the
- Rx on the Vaaman board, which is GPIOL_66.
+In the UART test, GPIOR_188 sets the clock to 100 MHz and connects the UART RX
+to the Tx on the Vaaman board, which is GPIOL_62, as well as the UART Tx to the
+Rx on the Vaaman board, which is GPIOL_66.
  
 .. image:: /_static/images/uart_connection.webp
      :width: 60%
