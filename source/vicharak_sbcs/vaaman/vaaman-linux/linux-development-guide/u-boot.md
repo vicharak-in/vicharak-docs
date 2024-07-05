@@ -94,12 +94,12 @@ Use `git clone --depth=1` to shallow clone the repository
 
 :::{tab-item} Using Web Browser
 
-![vicharak-uboot-github](../../_static/images/vicharak-uboot-github.webp)
+![vicharak-uboot-github](/_static/images/vicharak-uboot-github.webp)
 
 **Follow the steps in above image.**
 
 1. Open the [GitHub repository](https://github.com/vicharak-in/rockchip-linux-u-boot)
-   and click on the "<> Clone" button.
+   and click on the ``< > Code`` button.
 
 2. Click on the "Download ZIP" option.
 
@@ -297,7 +297,7 @@ Alternatively, you can use `lsblk` to find the block device.
 ```bash
 sudo dd if=uboot.img of=/dev/mmcblk1p1; sync
 ```
-
+\
 **Trust image (trust)**
 
 ```bash
@@ -367,13 +367,13 @@ Number  Start   End     Size    File system  Name      Flags
 (parted) quit                                                             
 vicharak ~ >                                                              
 ```
-
+\
 **U-boot proper (uboot)**
 
 ```bash
 sudo dd if=uboot.img of=/dev/sdb1; sync
 ```
-
+\
 **Trust image (trust)**
 
 ```bash
@@ -406,16 +406,16 @@ plug the NVMe into your PC. You will see something similar to:
 [  23232.759738] nvme nvme1: 32/0/0 default/read/poll queues
 [  23232.763741]  nvme0n1: p1 p2 p3
 ```
-
 Confirm the block device using `parted /dev/nvme<X>n1` or `lsblk`.
-```
 
+\
 **U-boot proper (uboot)**
 
 ```bash
 sudo dd if=uboot.img of=/dev/nvme0n1p1; sync
 ```
 
+\
 **Trust image (trust)**
 
 ```bash

@@ -283,13 +283,13 @@ export VICHARKA_BOOT_ENABLE_OVERLAYS=""
 ````
 
 #### Building the Ubuntu firmware
-
+\
 After the configuration is complete, you can start compiling the firmware.
 
 ```bash
 ./build.sh
 ```
-
+\
 The compiled firmware will be located in the `rockdev/pack` directory.
 
 :::
