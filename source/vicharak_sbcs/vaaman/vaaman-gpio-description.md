@@ -98,7 +98,6 @@ or assigned to a GPIO at a time.
 |             |           |     GND      |          | <div class='black'>39</div>  | <div class='green'>40</div> | GPIO4_A7 |              I2S1_SDO               |     135     |
 
 :::{note}
-
 - The default function of pins marked in <span class="orange">orange</span> are
   specific to this board. For example, Pins 3 and 5 cannot be used as GPIOs
   because they are connected to the I2C bus and are already in use.
@@ -111,7 +110,6 @@ or assigned to a GPIO at a time.
   section.
 - Both `UART2` and `UART4` support a wide range of baud rates, including
   **115200bps, 500000bps, 1500000bps,** and more.
-
 :::
 
 ### FGPA Header
@@ -139,7 +137,7 @@ or assigned to a GPIO at a time.
 |    GND    |              | <div class='black'>37</div>  | <div class='black'>38</div>  |              |    GND    |
 |   +3.3V   |              | <div class='yellow'>39</div> | <div class='yellow'>40</div> |              |   +3.3V   |
 
-::{note}
+:::{note}
 
 - The default function of pins marked in <span class="orange">orange</span> is
   specific to this board. For example, pin 13, 15, 16 and 16 are used as LEDs
@@ -151,6 +149,7 @@ or assigned to a GPIO at a time.
   GPIOs, refer to [Vicharak FPGA LVDS]().
   section.
 - CDI can be normally used as GPIOs.
+:::
 
 <!-- TODO: FPGA LVDS guide -->
 

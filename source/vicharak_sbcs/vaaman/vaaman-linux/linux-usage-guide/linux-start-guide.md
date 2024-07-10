@@ -68,13 +68,13 @@ Getting Started with Vaaman [**UART Serial Console**](../../getting-started.rst#
 
 #### Preparation
 
-To access Vaaman SBC through the serial interface, A USB to TTL serial cable or adapter is required.
+To access Vaaman SBC through the serial interface, A USB to UART serial cable or adapter is required.
 
 [Get arduino compatible FTDI from here](https://amzn.eu/d/hctdJnp)
 
 #### Hardware Setup
 
-1. Connect the USB to TTL serial cable or adapter to your computer.
+1. Connect the USB to UART serial cable or adapter to your computer.
 
 2. Connect the serial cable or adapter to the Vaaman SBC.
 

@@ -18,7 +18,7 @@ storage or SD card:
 ## Booting into UMS Mode from Internal eMMC Storage:
 
 - Connect the device to a PC using a USB cable.
-- Connect the Serial to TTL converter (FTDI) to your board and to the Host
+- Connect the Serial to UART converter (FTDI) to your board and to the Host
   computer.
 - Open the serial monitor application on your Host computer.
 

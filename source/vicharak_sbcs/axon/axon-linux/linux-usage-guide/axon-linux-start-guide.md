@@ -49,12 +49,12 @@ Vicharak provides multiple Linux distributions for Axon SBC such as Debian, Ubun
 
 #### Preparation
 
-- To access Axon SBC through the serial interface, a USB to TTL serial cable or adapter is required.
+- To access Axon SBC through the serial interface, a USB to UART serial cable or adapter is required.
 - [Get Arduino compatible FTDI from here](https://amzn.eu/d/hctdJnp).
 
 #### Hardware Setup
 
-1. Connect the USB to TTL serial cable or adapter to your computer.
+1. Connect the USB to UART serial cable or adapter to your computer.
 2. Connect the serial cable or adapter to the Axon SBC.
 
 | **Serial FTDI Pin** | **Header GPIO Pin**    | **Schematic Name** |

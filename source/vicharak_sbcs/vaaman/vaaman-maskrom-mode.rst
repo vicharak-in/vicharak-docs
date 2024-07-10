@@ -28,7 +28,7 @@ Pre-Requisites
 
 - Vicharak Vaaman board
 - Type-C Power Delivery Adapter
-- USB to TTL Serial Converter (FTDI or PL2303) (optional)
+- USB to UART Serial Converter (FTDI or PL2303) (optional)
 - 2 x USB-C to USB-A Male Cable
 - SD-card or NVMe drive (optional as eMMC is already provided)
 
@@ -50,10 +50,12 @@ Methods to enter Maskrom mode
 
     .. tab-item:: Pogo pins
 
-        .. image:: ../../_static/images/rk3399-vaaman/vaaman-maskrom-mode.webp
+        .. image:: /_static/images/rk3399-vaaman/vaaman-maskrom-mode.webp
             :width: 50%
 
-        1. Press the Pogo pin to the pads and continue to hold it.
+        1. Connect Power Delivery ``(PD)`` Cable to Vaaman and connect ``USB Type-C cable`` to the board. 
+         
+        2. Press the Pogo pin to the pads and continue to hold it.
 
         .. warning
 
@@ -61,15 +63,20 @@ Methods to enter Maskrom mode
             board. You may not be able to enter maskrom mode if other storage
             media is inserted.
 
-        2. Connect the USB-C cable to the board and power it on using the
-            power delivery.
+        3. Press ``Reset`` button on Vaaman.
 
-        3. Release the Pogo pin after the device enumerates on the host.
-            :ref:`Check out Linux Upgrade tool for more details <boot-into-maskrom-mode>`
+        4. Release the Pogo pin after the device enumerates on the host.
 
-        4. The device should now be in maskrom mode.
+        5. The device should now be in maskrom mode.
+	   You can check verify it by `Linux_Upgrade_Tool <http://github.com/vicharak-in/Linux_Upgrade_Tool>`_ whether device is in Maskrom or not using below command.  
 
-        .. dropdown:: Success Logs in dmesg
+	.. code-block::
+		
+		./upgrade_tool ld		
+
+        :ref:`Check out Linux Upgrade tool for more details <boot-into-maskrom-mode>`
+        
+	.. dropdown:: Success Logs in dmesg
 
             .. code-block::
 
@@ -95,7 +102,7 @@ Methods to enter Maskrom mode
 
         .. note::
             If you are not able to enter Maskrom mode on the first try then,
-            Reattach the Pogo pin and press the reset key.
+            Reattach the Pogo pin and press the reset key multiple times.
 
             Try this multiple times until you are able to enter Maskrom mode.
 
@@ -103,7 +110,7 @@ Methods to enter Maskrom mode
 
         1. Connect the USB-C cable to the board and your host computer.
 
-        2. Connect the USB to TTL serial converter to the board and your
+        2. Connect the USB to UART serial converter to the board and your
            host computer.
 
         .. image:: ../../_static/images/rk3399-vaaman/vaaman-serial-uart-pins.webp
@@ -132,7 +139,7 @@ Methods to enter Maskrom mode
 
         1. Connect the USB-C cable to the board and your host computer.
 
-        2. Connect the USB to TTL serial converter to the board and your
+        2. Connect the USB to UART serial converter to the board and your
            host computer.
 
         .. image:: ../../_static/images/rk3399-vaaman/vaaman-serial-uart-pins.webp

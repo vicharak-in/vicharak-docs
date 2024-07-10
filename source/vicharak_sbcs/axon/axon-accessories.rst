@@ -11,24 +11,24 @@
 .. grid:: 1 1 2 2
 
     .. grid-item-card:: Power Delivery (PD) Adapter with PD Cable
-       :link: accessory-pd-adapter
+       :link: axon-accessories/accessory-pd-adapter
        :link-type: doc
        :shadow: md
 
        12V-5A Power Delivery (PD) Adapter with PD Cable for Axon
 
     .. grid-item-card:: Wi-Fi and Bluetooth Antenna
-       :link: accessory-wifi-antenna
+       :link: axon-accessories/accessory-wifi-antenna
        :link-type: doc
        :shadow: md
 
        Wi-Fi and Bluetooth Antenna for Axon
-
+..
     .. grid-item-card:: Heat-Sink
        :link: accessory-heatsink
        :link-type: doc
        :shadow: md
-
+..
        Heat-Sink for Axon
 
 **********************

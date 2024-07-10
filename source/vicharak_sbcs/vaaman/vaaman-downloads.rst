@@ -126,10 +126,13 @@ Step File
 
 `Download File </_static/files/Vaaman_3D_file_V0.3.step.7z>`_
 
-**Vaaman 3D Printed Case Files**
+**Vaaman 3D Printed screw fit Case Files**
 
-`Download File </_static/files/Vaaman0p3_0p1_Case.zip>`_
+`Download File </_static/files/Vaaman0p3_0p1_screw_Case.zip>`_
 
+**Vaaman 3D Printed snap fit Case Files**
+
+`Download File </_static/files/Vaaman0p3_0p1_snap_Case.zip>`_
 
 .. note::
 
