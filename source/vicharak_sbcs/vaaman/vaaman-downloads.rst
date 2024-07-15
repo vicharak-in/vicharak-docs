@@ -128,7 +128,14 @@ Step File
 
 **Vaaman 3D Printed Case Files**
 
-`Download File </_static/files/Vaaman0p3_0p1_Case.zip>`_
+*Vaaman Enclosure Installation Guide*
+
+1. The Vaaman enclosure is a snap-fit design for easy installation.
+2. Simply slide the board in and close the case.
+3. For more stability and security, screw holes are provided.
+4. Use M3x12mm screws to firmly fasten the enclosure.
+
+`Download File </_static/files/Vaaman0p3_0p1_Case_150724.zip>`_
 
 .. note::
 
