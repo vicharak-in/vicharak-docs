@@ -14,13 +14,18 @@ What's in the box?
     - 4GB LPDDR4 RAM, 16GB eMMC storage, 40-pin GPIO header.
     - Pre-installed with Ubuntu 22 (``Jammy``).
 
-2. **12V/5A Power Adapter with PD Cable**
+2. **PD Cable**
     - Supplies power to Vaaman.
     - Ensures stable and efficient power delivery via USB-C with Power Delivery technology.
+
+3. **Wi-Fi and Bluetooth Antennas**
+    - Includes antennas for both Wi-Fi and Bluetooth connectivity.
+    - Ensures optimal wireless performance.
 
 What else do you need?
 ======================
 
+- 12V/5A Power Adapter
 - Micro HDMI to HDMI cable or adapter
 - USB Keyboard and Mouse
 - Monitor with HDMI input
@@ -28,6 +33,9 @@ What else do you need?
 - SD-card (optional)
 - Internet Connection (optional)
 - USB to UART Serial Cable (optional)
+
+.. warning:: 
+    | **You must attach the Wi-Fi antenna for proper Wi-Fi and the Bluetooth antenna for proper Bluetooth functionality on Vaaman.**
 
 .. note::
     | The items listed above are not included in the box.
@@ -38,6 +46,9 @@ What else do you need?
 
 Getting Started with Vaaman
 ===========================
+
+.. image:: ../../_static/images/rk3399-vaaman/vaaman_overview.webp
+   :alt: Vaaman Overview
 
 Turning the Board On
 --------------------

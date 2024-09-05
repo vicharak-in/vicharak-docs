@@ -17,13 +17,6 @@
 
        12V-5A Power Delivery (PD) Adapter with PD Cable for Vaaman
 
-    .. grid-item-card:: Wi-Fi and Bluetooth Antenna
-       :link: vaaman-accessories/accessory-wifi-antenna
-       :link-type: doc
-       :shadow: md
-
-       Wi-Fi and Bluetooth Antenna for Vaaman
-
 **********************
  Optional Accessories
 **********************
