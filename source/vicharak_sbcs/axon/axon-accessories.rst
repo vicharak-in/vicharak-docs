@@ -10,12 +10,12 @@
 .. TODO: Add respective Links
 .. grid:: 1 1 2 2
 
-    .. grid-item-card:: Power Delivery (PD) Adapter with PD Cable
-       :link: axon-accessories/accessory-pd-adapter
+    .. grid-item-card:: Power Delivery (PD) PD Cable
+       :link: ../common/common-accessories/pd-cable
        :link-type: doc
        :shadow: md
 
-       12V-5A Power Delivery (PD) Adapter with PD Cable for Axon
+       Power Delivery (PD) Cable for Axon
 
     .. grid-item-card:: Wi-Fi and Bluetooth Antenna
        :link: axon-accessories/accessory-wifi-antenna
