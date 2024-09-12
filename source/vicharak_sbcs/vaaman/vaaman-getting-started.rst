@@ -20,7 +20,7 @@ What's in the box?
 
 3. **Wi-Fi and Bluetooth Antennas**
     - Includes antennas for both Wi-Fi and Bluetooth connectivity.
-    - Ensures optimal wireless performance.
+    - These antennas ensure greater signal range and reliable connectivity for both Wi-Fi and Bluetooth devices.
 
 What else do you need?
 ======================
@@ -34,13 +34,16 @@ What else do you need?
 - Internet Connection (optional)
 - USB to UART Serial Cable (optional)
 
-.. warning:: 
-    | **You must attach the Wi-Fi antenna for proper Wi-Fi and the Bluetooth antenna for proper Bluetooth functionality on Vaaman.**
-
 .. note::
     | The items listed above are not included in the box.
     | You can purchase them from the :ref:`accessories` page.
 
+.. warning:: 
+    | **You must attach the Wi-Fi antenna for proper Wi-Fi functionality and the Bluetooth antenna for proper Bluetooth functionality on Vaaman.**
+    | **Refer to the images given below for correct connector locations.**
+    Connections:
+        - **Wi-Fi Antenna:** Connect to Wi-Fi antenna connector on reset key side.
+        - **Bluetooth Antenna:** Connect to BLE antenna connector on MIPI-DSI connector side.
 
 .. _getting-started-emmc:
 
