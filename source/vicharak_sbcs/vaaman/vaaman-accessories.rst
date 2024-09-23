@@ -10,12 +10,12 @@
 
 .. grid:: 1 1 2 2
 
-    .. grid-item-card:: Power Delivery (PD) Adapter with PD Cable
-       :link: vaaman-accessories/accessory-pd-adapter
+    .. grid-item-card:: Power Delivery (PD) Cable
+       :link: ../common/common-accessories/pd-cable
        :link-type: doc
        :shadow: md
 
-       12V-5A Power Delivery (PD) Adapter with PD Cable for Vaaman
+       Power Delivery Cable for Vaaman
 
 **********************
  Optional Accessories
