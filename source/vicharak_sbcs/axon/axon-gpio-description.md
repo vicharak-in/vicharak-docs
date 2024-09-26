@@ -59,28 +59,27 @@ or assigned to a GPIO at a time.
 
 ### Axon GPIOs Header
 
-| GPIO number |  Function3  |  Function2  |  Function1   |   GPIO   |             Pin#             |            Pin#             |   GPIO   |              Function1                       |  Function2   |  Function3   | GPIO number |
-| :---------: | :---------: | :---------: | :----------: | :------: | :--------------------------: | :-------------------------: | :------: | :------------------------------------------: | :----------: | :----------: |:-----------:|
-|             |             |             |     +12V     |          | <div class='red'>1</div>     | <div class='orange'>2</div> | GPIO0_B6 |  <div class='orange'>UART2_RX_M0_DEBUG</div> |              |              |    13       |
-|             |             |             |     GND      |          | <div class='black'>3</div>   | <div class='orange'>4</div> | GPIO0_B5 |  <div class='orange'>UART2_TX_M0_DEBUG</div> |              |              |    14       |
-|             |             |             |     +5V      |          | <div class='red'>5</div>     | <div class='black'>6</div>  |          |                 GND                          |              |              |             |
-|             |             |             |     +5V      |          | <div class='red'>7</div>     | <div class='black'>8</div>  |          |                 GND                          |              |              |             |
-|     81      |             | I2C2_SCL_M1 | UART1_CTSN_M0| GPIO2_C1 | <div class='green'>9</div>   | <div class='green'>10</div> | GPIO2_B6 |              UART1_RX_M0                     | I2C5_SCL_M4  |              |     78      |
-|     82      |             | I2C2_SDA_M1 | UART1_RTSN_M0| GPIO2_C0 | <div class='green'>11</div>  | <div class='green'>12</div> | GPIO2_B7 |              UART1_TX_M0                     | I2C5_SDA_M4  |              |     79      |
-|             |             |             |     GND      |          | <div class='black'>13</div>  | <div class='yellow'>14</div>|          |                 3.3V                         |              |              |             |
-|             |             |             |     GND      |          | <div class='black'>15</div>  | <div class='yellow'>16</div>|          |                 3.3V                         |              |              |             |
-|     56      | UART6_tX_M2 | SPI1_MISO_M2|  I2C7_SCL_M0 | GPIO1_D0 | <div class='green'>17</div>  | <div class='green'>18</div> | GPIO1_D1 |              I2C7_SDA_M0                     | SPI1_MOSI_M2 | UART6_RX_M2  |     57      |
-|     57      |   PWM1_M1   | SPI1_CS0_M2 |  UART4_RX_M0 | GPIO1_D3 | <div class='green'>19</div>  | <div class='green'>20</div> | GPIO1_D2 |              UART4_TX_M0                     | SPI1_CLK_M2  |   PWM0_M1    |     58      |
-|             |             |             |     GND      |          | <div class='black'>21</div>  | <div class='yellow'>22</div>|          |                 3.3V                         |              |              |             |
-|     74      |             |             |              | GPIO2_B3 | <div class='green'>23</div>  | <div class='black'>24</div> |          |                 GND                          |              |              |             |
-|             |             |             |     GND      |          | <div class='black'>25</div>  | <div class='black'>26</div> |          |                 GND                          |              |              |             |
-|             |             |             |   SARADC_4   |          | <div class='orange'>27</div> | <div class='orange'>28</div>|          |               SARADC_3                       |              |              |             |
-|             |             |             |   SARADC_1   |          | <div class='orange'>29</div> | <div class='orange'>30</div>|          |               SARADC_2                                      |              |             |
-
+| GPIO number |  Function4  |  Function3  |  Function2  |  Function1   | PWD/GND  |   GPIO   |             Pin#             |            Pin#              |   GPIO   | PWD/GND |                  Function1                   |  Function2   |  Function3   | Function4  | GPIO number |
+| :---------: | :---------: | :---------: | :---------: | :----------: | :-----:  | :------: | :--------------------------: | :--------------------------: | :------: | :-----: | :----------------------------------------:   | :----------: | :--------:   | :--------: | :---------: |
+|             |             |             |             |              |    12V   |          |<div class='red'>1</div>      |<div class='orange'>2</div>   | GPIO0_B6 |         | <div class='orange'>UART2_RX_M0(DEBUG)</div> |              |              |            |     14      |
+|             |             |             |             |              |    GND   |          |<div class='black'>3</div>    |<div class='orange'>4</div>   | GPIO0_B5 |         | <div class='orange'>UART2_TX_M0(DEBUG)</div> |              |              |            |     13      |
+|             |             |             |             |              |    5V    |          |<div class='red'>5</div>      |<div class='black'>6</div>    |          |   GND   |                                              |              |              |            |             |
+|             |             |             |             |              |    5V    |          |<div class='red'>7</div>      |<div class='black'>8</div>    |          |   GND   |                                              |              |              |            |             |
+|     81      |             |UART1_CTSN_M0| SPI1_MISO_M0| I2C2_SCL_M1  |          | GPIO2_C1 |<div class='green'>9</div>    |<div class='green'>10</div>   | GPIO2_B6 |         |                 UART1_RX_M0                  | I2C5_SCL_M4  |              |            |     78      |
+|     80      |             |UART1_RTSN_M0| SPI1_CLK_M0 | I2C2_SDA_M1  |          | GPIO2_C0 |<div class='green'>11</div>   |<div class='green'>12</div>   | GPIO2_B7 |         |                 UART1_TX_M0                  | I2C5_SDA_M4  |              |            |     79      |
+|     16      |  PWM1_M0    |             |             |              |          | GPIO0_C0 |<div class='green'>13</div>   |<div class='red'>14</div>     |          | 3.3V    |                                              |              |              |            |             |
+|             |             |             |             |              |    GND   |          |<div class='black'>15</div>   |<div class='red'>16</div>     |          | 3.3V    |                                              |              |              |            |             |
+|     56      |             | UART6_TX_M2 | SPI1_MISO_M2| I2C7_SCL_M0  |          | GPIO1_D0 |<div class='green'>17</div>   |<div class='green'>18</div>   | GPIO1_D1 |         |                 UART6_RX_M2                  | I2C7_SDA_M0  | SPI1_MOSI_M2 |            |     57      |
+|     59      |  PWM1_M1    | UART4_RX_M0 | SPI1_CS0_M2 | I2C1_SDA_M4  |          | GPIO1_D3 |<div class='green'>19</div>   |<div class='green'>20</div>   | GPIO1_D2 |         |                 UART4_TX_M0                  | I2C1_SCL_M4  | SPI1_CLK_M2  | PWM0_M1    |     58      |
+|             |             |             |             |              |    GND   |          |<div class='black'>21</div>   |<div class='red'>22</div>     |          | 3.3V    |                                              |              |              |            |             |
+|     43      |             |             |             |              |          | GPIO1_B3 |<div class='green'>23</div>   |<div class='red'>24</div>     |          | 1.8V    |                                              |              |              |            |             |
+|             |             |             |             |              |    GND   |          |<div class='black'>25</div>   |<div class='black'>26</div>   |          | GND     |                                              |              |              |            |             |
+|             |             |             |             |              |          | SARADC_4 |<div class='orange'>27</div>  |<div class='orange'>28</div>  | SARADC_3 |         |                                              |              |              |            |             |
+|             |             |             |             |              |          | SARADC_1 |<div class='orange'>29</div>  |<div class='orange'>30</div>  | SARADC_2 |         |                                              |              |              |            |             |
 
 <!-- TODO: Update Vicharak config and serial console suitable for Axon -->
 :::{note}
-***Need to change***
+
 - The default function of pins marked in <span class="orange">orange</span> are
   specific to this board. For example, Pins 27, 28, 29 and 30 cannot be used as GPIOs
   as they are SARADC pins.
