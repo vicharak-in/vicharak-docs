@@ -43,13 +43,13 @@ you will not need to connect a monitor, keyboard, or mouse to your system to con
 **1. Edit the `/userdata/before.txt` file and add the following lines:**
 
 ```text
-connect-wi-fi <network name> <password>
+connect_wi-fi <network name> <password>
 ```
 
 Example:
 
 ```text
-connect-wi-fi my-wifi-network my-wifi-password
+connect_wi-fi my-wifi-network my-wifi-password
 ```
 
 **2. Reboot the system.**
