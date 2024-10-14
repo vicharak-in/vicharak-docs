@@ -406,12 +406,12 @@ To access Vaaman via SSH, you can use either of the following commands:
 
    - Add the following line:
      ``
-     connect-wi-fi <network name> <password>
+     connect_wi-fi <network name> <password>
      ``
 
      Example:
      ``
-     connect-wi-fi vicharak_5g vcaa_g123
+     connect_wi-fi vicharak_5g vcaa_g123
      ``
 
 2. Reboot the system.
