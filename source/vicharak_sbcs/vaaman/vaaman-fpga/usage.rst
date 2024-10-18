@@ -3,6 +3,11 @@
 Starting with efinity IDE
 =========================
 
+Also Refer to : 
+ 1. `Efinity Software Installation Guide <https://www.efinixinc.com/docs/efinity-installation-v3.4.pdf>`_. 
+ 2. `Efinity Software User Guide <https://www.efinixinc.com/docs/efinity-ug-v14.1.pdf>`_. 
+ 3. `Efinix Support Home <https://www.efinixinc.com/support/docs.php?p=e>`_.
+
 
 **To run your code on  the FPGA, follow these steps:**
 
@@ -16,7 +21,7 @@ Starting with efinity IDE
 
 
 After starting the IDE click on files and create a project. Write your project name 
-and select trion family  and fpga T120F324. Timing model C4 would be automatically selected.
+and select trion family  and fpga T120F324. **Timing model should be selected as C3** .
 
 .. image:: /_static/images/Choose_Board.webp
    :width: 100%
@@ -31,7 +36,7 @@ You can also add your rtl code while the creation of project and specify the top
 
 In Dashboard , you can add/create your verilog files by right-clicking on design tab under your project.
 
-.. image:: /_static/images/Create_Desgin_File.webp
+.. image:: /_static/images/Create_Design_File.webp
    :width: 100%
 
 
@@ -130,6 +135,8 @@ Now follow the steps  on :ref:`vaaman-fpga`  to dump your  generated bitstream o
 ===================
 How to use Debugger 
 ===================
+Also Refer :
+`Efinix Debugger Guide <https://www.efinixinc.com/docs/efinity-tutorial-debugger-v1.2.pdf>`_.
 
 The Efinity software features a hardware Debugger, facilitating signal probing in FPGA designs through the JTAG interface.
 The Debugger encompasses two debug cores:
