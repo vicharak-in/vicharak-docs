@@ -230,7 +230,7 @@ This section guides you through the process of compiling and installing
 these modules for your Vaaman board.
 
 ```bash
-make O=out ARCH=arm64 modules_install INSTALL_MOD_DIR=out/modules -j$(nproc --all)
+make O=out ARCH=arm64 modules_install INSTALL_MOD_PATH=modules -j$(nproc --all)
 ```
 
 **Confirm the modules files in `out/modules/lib` folder**
@@ -253,7 +253,7 @@ Set the specific driver that you want to build as module to `CONFIG_<XXXX>=m` in
 
 scp out/arch/arm64/boot/Image <user>@<device-ip>:~/
 scp out/arch/arm64/boot/dts/rockchip/rk3399-vaaman-linux.dtb <user>@<device-ip>:~/
-scp -vr out/arch/arm64/boot/dts/rockchip/overlays <user>@<device-ip>:~/
+scp -r out/arch/arm64/boot/dts/rockchip/overlays <user>@<device-ip>:~/
 scp out/modules_rk3399_vaaman.tar.gz <user>@<device-ip>:~/
 
 ```
