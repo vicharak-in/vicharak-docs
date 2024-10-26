@@ -21,19 +21,21 @@ What's in the box?
 What else do you need?
 ======================
 
-**1. Micro HDMI to HDMI cable or adapter**
+**1. 12V/5A power adapter**
+
+**2. Micro HDMI to HDMI cable or adapter**
  
-**2. USB Keyboard and Mouse**
+**3. USB Keyboard and Mouse**
  
-**3. Monitor with HDMI input**
+**4. Monitor with HDMI input**
 
-**4. USB-C to USB-A Male cable (optional)**
+**5. USB-C to USB-A Male cable (optional)**
 
-**5. SD-card (optional)**
+**6. SD-card (optional)**
 
-**6. Internet Connection (optional)**
+**7. Internet Connection (optional)**
 
-**7. USB to UART Serial Cable (optional)**
+**8. USB to TTL Serial Cable (optional)**
 
 .. note::
     | The items listed above are not included in the box.
@@ -72,8 +74,6 @@ Once the power is connected, the board will automatically turn on.
     | Using a 12V power input is crucial for the proper functioning of the Axon.
     | The board is designed to operate with a 12V power supply, and using a 5V power
     | input may lead to instability and potential damage.
-    | Ensure that you use the provided 12V/5A Power Adapter with PD cable to
-    | power the Axon SBC.
 
 .. image:: ../../_static/images/rk3588-axon/axon-power-option.webp
    :width: 50%
