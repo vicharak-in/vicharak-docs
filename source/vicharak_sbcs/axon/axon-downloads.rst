@@ -17,7 +17,7 @@ OS Images
     - - Debian
       - **Coming Soon**
     - - Ubuntu
-      - **Coming Soon**
+      - `Jammy 22.04 <https://downloads.vicharak.in/vicharak-axon/>`_
     - - Community Images
       - **Coming Soon**
 
@@ -32,14 +32,12 @@ OS Images
 
         xz -d <image_name>.xz
 
-|
+
 
 .. seealso::
 
-    How to flash the image to the board using
-    :doc:`axon-linux/linux-usage-guide/rockchip-develop-guide`
+    `How to flash the image to the board using Rockchip Tool </vicharak_sbcs/vaaman/vaaman-linux/linux-usage-guide/rockchip-develop-guide>`_
 
-    Also check :doc:`axon-linux/linux-usage-guide/linux-start-guide`
 
 OS Utilities
 ------------
@@ -116,5 +114,3 @@ Step File
 .. seealso::
 
     :ref:`Frequently Asked Questions <axon-faq>`
-
-    :doc:`Axon Linux Guide <#>`

@@ -41,6 +41,10 @@ What else do you need?
     | The items listed above are not included in the box.
     | You can purchase them from the :ref:`axon-accessories` page.
 
+Axon OS Images
+============
+
+    :ref:`axon-downloads`
 
 Getting Started with eMMC
 =========================
