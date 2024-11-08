@@ -33,7 +33,7 @@ After the installation is complete, click on `OK` button to close the window.
 
 ### RKDevTool Installation
 
-Download the Rockchip [RKDevTool](https://github.com/vicharak-in/rockchip-tools/raw/master/windows/RKDevTool_Release_v2.96.zip) and unpack it.
+Download the Rockchip [RKDevTool](https://github.com/vicharak-in/rockchip-tools/raw/master/windows/RKDevTool_Release_v3.19.zip) and unpack it.
 
 Change Tool language to English.
 
