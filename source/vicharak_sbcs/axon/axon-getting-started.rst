@@ -12,11 +12,19 @@ started with Axon.
 What's in the box?
 ==================
 
-**1. Axon**
+1. **Axon**
+    - Single-board computer optimized for high-performance computing and AI.
+    - Powered by Rockchip RK3588 SoC (octa-core CPU: quad-core Cortex-A76 and quad-core Cortex-A55).
+    - 8GB LPDDR5 RAM, 32GB eMMC storage, 30-pin GPIO header.
+    - Pre-installed with Ubuntu 22 (Jammy).
 
-**2. PD cable**
+2. **PD Cable**
+    - Supplies power to Axon.
+    - Ensures stable and efficient power delivery via USB-C with Power Delivery technology.
 
-**3. Pre-installed eMMC**
+3. **Wi-Fi and Bluetooth Antennas**
+    - Includes antennas for both Wi-Fi and Bluetooth connectivity.
+    - These antennas ensure greater signal range and reliable connectivity for Wi-Fi and Bluetooth devices.
 
 What else do you need?
 ======================
