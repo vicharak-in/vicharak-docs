@@ -9,5 +9,6 @@
    :align: center
 
 Vicharak Vaaman comes with a Wi-Fi and Bluetooth antenna. The antenna is
-connected to the board via a U.FL connector. The antenna is a 2.4 GHz
-antenna and is compatible with 802.11 b/g/n Wi-Fi and Bluetooth 4.
+connected to the board via a U.FL connector. The antenna is a 
+bluetooth 2.4GHz and wifi 2.4Ghz, 5GHz, 5.8Ghz antenna and is 
+compatible with 802.11 b/g/n Wi-Fi and Bluetooth 5/5.2.
