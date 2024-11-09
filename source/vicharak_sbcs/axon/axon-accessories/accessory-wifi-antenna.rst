@@ -4,8 +4,8 @@
  Wi-Fi and Bluetooth Antenna
 #############################
 
-.. image:: ../../../_static/images/rk3399-vaaman/accessory-wifi-antenna.webp
-   :width: 40%
+.. image:: ../../../_static/images/rk3588-axon/accessory-wifi-antenna.webp
+   :width: 50%
    :align: center
 
 Vicharak Axon comes with a Wi-Fi and Bluetooth antenna. The antenna is

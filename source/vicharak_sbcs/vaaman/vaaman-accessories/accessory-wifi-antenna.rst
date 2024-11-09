@@ -5,7 +5,7 @@
 #############################
 
 .. image:: ../../../_static/images/rk3399-vaaman/accessory-wifi-antenna.webp
-   :width: 40%
+   :width: 50%
    :align: center
 
 Vicharak Vaaman comes with a Wi-Fi and Bluetooth antenna. The antenna is
