@@ -13,7 +13,7 @@ OS Images
     - - **Operating System**
       - **Variant**
     - - Android
-      - **Coming Soon**
+      - `Android 12 <https://downloads.vicharak.in/vicharak-axon/android/>`_
     - - Debian
       - **Coming Soon**
     - - Ubuntu
