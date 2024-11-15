@@ -16,6 +16,19 @@
        :shadow: md
 
        Power Delivery Cable for Vaaman
+    
+    .. grid-item-card:: Wi-Fi and Bluetooth Antenna
+       :link: vaaman-accessories/accessory-wifi-antenna
+       :link-type: doc
+       :shadow: md
+       
+       Wi-Fi and Bluetooth Antenna for Vaaman
+..
+    .. grid-item-card:: Heat-Sink
+       :link: accessory-heatsink
+       :link-type: doc
+       :shadow: md
+..
 
 **********************
  Optional Accessories
