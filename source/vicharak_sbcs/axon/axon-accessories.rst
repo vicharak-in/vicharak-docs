@@ -35,4 +35,11 @@
  Optional Accessories
 **********************
 
-**Coming Soon**
+.. grid:: 1 1 2 2
+
+    .. grid-item-card:: Raspberry Pi Camera Module
+       :link: axon-accessories/accessory-raspi-cam
+       :link-type: doc
+       :shadow: md
+
+       OV5647 Camera Module for Axon
