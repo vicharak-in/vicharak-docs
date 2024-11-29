@@ -44,13 +44,13 @@ Pre-Requisites
 Enable Overlays In Axon 
 ------------------------
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-mipi.webp
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-mipi-p.webp
     :width: 50%
 
 .. image::  ./../../../_static/images/rk3588-axon/axon-camera-pcb.webp
     :width: 50%
 
-Here, you can find which overlay should be turned on for each MIPI Connector.
+**Here, you can find which overlay should be turned on for each MIPI Connector.**
 
 .. image::  ./../../../_static/images/rk3588-axon/axon-camera-detail.webp
     :width: 50%
@@ -104,12 +104,12 @@ How to attach camare to Axon
 
 2. Attach Camera Module To FPC50 15 Pin 1mm Pitch Cable.
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-333.gif
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-3.gif
     :width: 40%
 
 3. Connect Camera To Vicharak CAM PCB Connector. 
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-33.gif
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-4.gif
     :width: 40%
 
    
@@ -121,8 +121,47 @@ How to attach camare to Axon
 
 5. After Using Camera, User can remove camera using twizer.
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-66.gif
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-6.gif
     :width: 40%
+
+
+For Single Camera 
+--------------
+
+Run Camera Using V4l2 Utility 
+------------------------------
+
+1. Use v4l2-ctl to capture camera frame data
+
+.. code-block::
+
+            v4l2-ctl --verbose -d /dev/video<camera_device_number> --set-fmt-video=width=1920,height=1080,pixelformat='NV12' --stream-mmap=4 --set-selection=target=crop,flags=0,top=0,left=0,width=1920,height=1080 --stream-to=sample.yuv
+
+.. note::
+        For Single Camera, Default Camera Number would be 11.
+        As you can verfiy by below process.
+
+        You can get <camera_device> Number by running below command :
+
+        ls -l /dev/video*
+
+        => /dev/video-camera0 -> video<camera_device>
+        e.g. - 11, 31 etc.
+ 
+2. Playing Captured File
+
+.. code-block::
+
+            ffplay -f rawvideo -video_size 1920x1080 -pix_fmt nv12 sample.yuv
+
+
+.. note::
+        If you don't have v4l2-ctl, then it can be installed by below command:
+
+        .. code-block::
+        
+            sudo apt update
+            sudo apt install v4l2-ctl
 
 Run Camera Using Python Script
 -------------------------------
@@ -175,11 +214,17 @@ Setup
                
    
 .. note::
+        For Single Camera, Default Camera Number would be 11.
+        As you can verfiy by below process.
+
         You can get <camera_device> Number by running below command :
 
         ls -l /dev/video*
 
+        => /dev/video-camera0 -> video<camera_device>
         e.g. - 11, 31 etc.
+        
+
 
 4. Open a terminal window(``Ctrl+Alt+T``).
 
@@ -194,7 +239,7 @@ Setup
 
 If you have multiple versions of Python installed, ensure you use ``python3`` to run the program for Python 3.x.
  
- 
+
 |
 **Troubleshooting**
 
@@ -208,11 +253,6 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
     sudo i2cdetect -y <i2c_bus_number>
  
  I2C Bus number is mentioned in Camera DTS node in device tree file
-
-- Camera Device can be find by :
-    
-.. note::
-    ls -l /dev/video*
 
 ..
     Enable Overlays In Axon / Axon
