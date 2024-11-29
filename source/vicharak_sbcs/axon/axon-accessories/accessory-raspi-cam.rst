@@ -47,24 +47,16 @@ Enable Overlays In Axon
 .. image::  ./../../../_static/images/rk3588-axon/axon-camera-mipi.webp
     :width: 50%
 
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-pcb.webp
+    :width: 50%
 
 Here, you can find which overlay should be turned on for each MIPI Connector.
 
-+---------------+-------+---------------+
-| **MIPI Connector**    | **Overlays**  |
-+---------------+-------+---------------+
-|     MIPI_DPHY_RX0     |   dcphy0      |
-+---------------+-------+---------------+
-|     MIPI_DPHY_RX1     |   dcphy1      |
-+---------------+-------+---------------+
-|     MIPI_CSI0_RX1     |   dphy1       |
-+---------------+-------+---------------+
-|     MIPI_CSI0_RX2     |   dphy2       |
-+---------------+-------+---------------+
-|     MIPI_CSI1_RX4     |   dphy4       |
-+---------------+-------+---------------+
-|     MIPI_CSI1_RX5     |   dphy5       |
-+---------------+-------+---------------+
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-detail.webp
+    :width: 50%
+
+.. note::
+    In Above Table, Full Mode can support 4 Lane Camera whereas Split mode can support 2 Lane Camera.
 
 
 **Steps to follow for Configuration**
@@ -92,7 +84,7 @@ Here, you can find which overlay should be turned on for each MIPI Connector.
 
 7. In order to enable your configuration, Restart your computer or Run command ``sudo reboot`` in terminal.
 
-.. note::
+.. danger::
    Make sure that whenever you are going to connect Camera, Device should be power off.
  
 
@@ -100,19 +92,24 @@ How to attach camare to Axon
 ----------------------------
 
 1. First, Connect Vicharak Flex Cable To Vicharak CAM PCB Connector.
-    
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-1.gif
+ 
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-start.gif
     :width: 40%
 
-   
-.. note::
+.. danger::
         Make sure to connect the Vicharak flex cable's AXON PCB side connector to the AXON board, and the display/camera side connector to the Vicharak CAM PCB.
+
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-2.gif
+    :width: 40%
 
 2. Attach Camera Module To FPC50 15 Pin 1mm Pitch Cable.
 
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-333.gif
+    :width: 40%
+
 3. Connect Camera To Vicharak CAM PCB Connector. 
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-3.gif
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-33.gif
     :width: 40%
 
    
@@ -124,7 +121,7 @@ How to attach camare to Axon
 
 5. After Using Camera, User can remove camera using twizer.
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-6.gif
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-66.gif
     :width: 40%
 
 Run Camera Using Python Script
