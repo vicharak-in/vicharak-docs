@@ -71,7 +71,7 @@ Connect the Vaaman board to the PC using the USB cable. You will see the
 If you don't see the `Found One LOADER Device` or `Found One MASKROM Device`
 message, then you need to put the Vaaman board in the `Loader Mode` or `Maskrom Mode`.
 
-Refer to the [How to enter Maskrom Mode](#booting-the-board-into-maskrom-mode) for more details.
+Refer to the [How to enter Maskrom Mode](#vaaman-maskrom-mode) for more details.
 :::
 
 ## Flash eMMC Image to Vaaman board
