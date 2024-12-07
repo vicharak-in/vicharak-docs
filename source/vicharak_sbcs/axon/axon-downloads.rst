@@ -101,6 +101,34 @@ Step File
 
 **Axon 3D Printed Case Files**
 
+- Axon Enclosure Installation Guide
+
+.. note::
+
+   The Axon enclosure combines a snap-fit design with screws for added stability, allowing secure and easy access to the board's components.
+
+- Installation Steps
+
+1. Insert the Board
+    - Slide the board into the bottom part of the enclosure.
+
+2. Fasten with Screws
+    - Use self-tapping screws with the following specifications:
+        - **Thread Diameter:** 2.7 mm
+        - **Height:** 12 mm
+    - Secure the screws gently to avoid overtightening, which can damage the board.
+
+3. Snap-Fit the Top Cover
+    - Slide and lock the top on the **right side**.
+    - Push down on the **left side** until it snaps into place.
+
+- Opening the Enclosure
+
+1. Locate the area labeled **"Press Here"** on the lid.
+2. Hold and press the lid at the labeled spot.
+3. Pull up gently to release the snap-fit and open the enclosure.
+
+
 `Download File </_static/files/Axon0p3_0p1_Case_071224.zip>`_
 
 .. note::
