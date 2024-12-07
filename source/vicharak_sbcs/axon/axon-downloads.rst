@@ -94,8 +94,14 @@ Mechanical Information
 
 Step File
 ---------
-.. TODO: Add link for Axon 3D File
-`Download Axon 3D File </_static/files/axon_V0.2_3D_file.step.zip>`_
+
+**Axon Board 3D File**
+
+`Download File </_static/files/AXON_3D_file_V0.3.step.7z>`_
+
+**Axon 3D Printed Case Files**
+
+`Download File </_static/files/Axon0p3_0p1_Case_071224.zip>`_
 
 .. note::
 
