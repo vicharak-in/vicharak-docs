@@ -124,12 +124,12 @@ Step File
 
 - Opening the Enclosure
 
-1. Locate the area labeled **"Press Here"** on the lid.
+1. Locate the area labeled **"PRESS & PULL"** on the lid.
 2. Hold and press the lid at the labeled spot.
 3. Pull up gently to release the snap-fit and open the enclosure.
 
 
-`Download File </_static/files/Axon0p3_0p1_Case_071224.zip>`_
+`Download File </_static/files/Axon0p3_0p2_Case_121224.zip>`_
 
 .. note::
 
