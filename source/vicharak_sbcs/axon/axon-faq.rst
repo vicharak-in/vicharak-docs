@@ -4,6 +4,7 @@ Frequently Asked Questions
 ==========================
 
 .. TODO: Add axon-linux-uart-serial-console (Axon Linux Usage Guide)
+
 How to take logs
 ----------------
 
@@ -46,7 +47,7 @@ How to take logs
             If the device is not booting up, then take the logs from the serial port tool and attach it to the issue.
 
 Does Axon have an FPGA?
--------------------
+-----------------------
 No
 
 How to report a bug

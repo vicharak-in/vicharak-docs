@@ -47,8 +47,8 @@
         .. image:: /_static/images/rk3399-vaaman/vaaman-efinity-programmer-jtag.webp
            :width: 50%
         
-           Wait for the programming to complete. When the programming is complete,
-           the FPGA will be configured with the bitstream.
+        Wait for the programming to complete. When the programming is complete,
+        the FPGA will be configured with the bitstream.
 
     .. tab-item:: Configure fpga from linux command
         

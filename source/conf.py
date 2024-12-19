@@ -38,7 +38,7 @@ spelling_ignore_pypi_package_names = True
 spelling_show_suggestions = True
 spelling_show_whole_line = True
 spelling_word_list_filename = "spelling_wordlist.txt"
-spelling_exclude_patterns = ["drm_fpga_api/**", "drm_fpga_write/**", "_build/**"]
+spelling_exclude_patterns = ["_build/**"]
 
 # Enable colon fence for code blocks
 myst_enable_extensions = [
@@ -77,7 +77,7 @@ exclude_patterns = ["_build"]
 
 # HTML settings
 html_theme = "sphinxawesome_theme"
-html_static_path = ["_static"]
+html_static_path = ["_static", "_static/images"]
 html_title = "Vicharak"
 # CSS files to include
 html_css_files = [
@@ -102,17 +102,13 @@ html_sidebars = {
   "**": ["sidebar_main_nav_links.html", "sidebar_toc.html"]
 }
 
-favicons = [
-    "images/android-chrome-192x192.png",
-    "images/android-chrome-512x512.png",
-    "images/apple-touch-icon.png",
-    "images/favicon-16x16.png",
-    "images/favicon-32x32.png",
-    "images/favicon.ico",
-    "images/mstile-150x150.png",
-    "images/safari-pinned-tab.svg",
-]
-
-# Breathe extension settings
-breathe_projects = {"drm_fpga_write": os.getcwd() + "/../xml/"}
-breathe_default_project = "drm_fpga_write"
+#favicons = [
+#    "images/android-chrome-192x192.png",
+#    "images/android-chrome-512x512.png",
+#    "images/apple-touch-icon.png",
+#    "images/favicon-16x16.png",
+#    "images/favicon-32x32.png",
+#    "images/favicon.ico",
+#    "images/mstile-150x150.png",
+#    "images/safari-pinned-tab.svg",
+#]

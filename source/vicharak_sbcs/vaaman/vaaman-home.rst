@@ -44,5 +44,3 @@ that require both processing power and hardware customization.
    We welcome contributions and bug reports through our `GitHub
    repository <https://github.com/vicharak-in/>`_.
 
-   See the :doc:`contributing` guide and :doc:`faq` for more
-   information.

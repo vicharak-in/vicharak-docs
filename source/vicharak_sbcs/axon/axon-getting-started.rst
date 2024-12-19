@@ -9,6 +9,7 @@ the initial setup process and provide you with the necessary information to get
 started with Axon.
 
 .. TODO: Modify this for Axon
+
 What's in the box?
 ==================
 
@@ -50,12 +51,12 @@ What else do you need?
     | You can purchase them from the :ref:`axon-accessories` page.
 
 Axon OS Images
-============
+==============
 
     :ref:`axon-downloads`
 
 Axon Button Guide
-========================
+=================
 
 .. image::  ../../_static/images/rk3588-axon/axon-button-guide.webp
     :width: 50%
@@ -79,6 +80,7 @@ Axon Button Guide
 
 .. note::
     | *To get Axon in MaskRom Mode*, Need to press reset button 2-3 times with holding boot button.
+
     `Watch Video tutorial to get Board in MaskRom Mode <https://www.youtube.com/watch?si=S16kUwBRBZ8dWCqf&v=rW-R1MJhBGA&feature=youtu.be>`_
 
 Getting Started with eMMC
@@ -157,6 +159,7 @@ Available Boot Modes
 
 
 .. TODO: Add Axon SD card boot doc
+
 Booting from SD card
 --------------------
 To boot from SD card, please follow below document.
@@ -164,6 +167,7 @@ To boot from SD card, please follow below document.
     :doc:`axon-sdcard-boot`
 
 .. TODO: Add suppoprt for Axon 
+
 How to access your Axon board ?
 =================================
 There are multiple ways to access your Axon. You can connect the Axon
@@ -181,8 +185,8 @@ connect the Axon to your computer using the USB-C port.
     If you want to access the **Axon using SSH**,
     Skip to the :ref:`SSH <axon-ssh>` section.
 
-
 .. TODO: Add axon start guide
+
 1. Using Micro HDMI port
 -------------------------
 
@@ -278,9 +282,11 @@ Hardware Setup
 
 Running the Serial Console Program
 ``````````````````````````````````
+
 .. include:: ../common/common-serial-console-program.rst
 
 .. _axon-ssh:
+
 3. Using SSH
 -------------
 
@@ -333,7 +339,6 @@ Axon Boot modes
          In general, there is no need to enter `Maskrom` mode.
          In this mode, the bootrom code waits for the host to transmit the
          bootloader code through the USB-C port, load and run it.
-       | :ref:`Learn more about maskrom mode <axon-maskrom-mode>`.
 
 .. seealso::
 

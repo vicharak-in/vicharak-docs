@@ -9,7 +9,7 @@
 .. rst-class:: lead
 
 ####################################
- Welcome to Vicharak's documentation!
+Welcome to Vicharak's documentation!
 ####################################
 
 Vicharak brings to you the powerful rk3399 based Vaaman and the highly advanced rk3588 based Axon single-board computers (SBCs).
@@ -44,6 +44,7 @@ applications including IoT, AI and multimedia processing.
    :glob:
    :caption: Contents
    :titlesonly:
+   :maxdepth: 1
 
    Vaaman SBC <vicharak_sbcs/vaaman/vaaman-home>
    Axon SBC <vicharak_sbcs/axon/axon-home>
@@ -68,5 +69,3 @@ applications including IoT, AI and multimedia processing.
 
    We welcome feedback and bug reports through our `Support
    discussion <https://discuss.vicharak.in>`_.
-
-   Visit :doc:`faq` for more information.

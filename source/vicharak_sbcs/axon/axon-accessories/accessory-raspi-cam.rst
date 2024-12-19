@@ -25,7 +25,6 @@ Pi Camera documentation
 Buy the `Raspberry Pi Camera Module v2
 <https://www.raspberrypi.com/products/camera-module-v2/>`_.
 
-|
 #######################
 Axon Camera Guide
 #######################
@@ -88,7 +87,7 @@ Enable Overlays In Axon
    Make sure that whenever you are going to connect Camera, Device should be power off.
  
 
-How to attach camare to Axon
+How to Attach Camera to Axon
 ----------------------------
 
 1. First, Connect Vicharak Flex Cable To Vicharak CAM PCB Connector.
@@ -126,7 +125,7 @@ How to attach camare to Axon
 
 
 For Single Camera 
---------------
+-----------------
 
 Run Camera Using V4l2 Utility 
 ------------------------------
@@ -186,9 +185,7 @@ for Debian-based systems (like Ubuntu):
             
 Setup
 ------
-    .. tab-set::
-    
-        .. tab-item:: 
+
 1. Open a terminal window(``Ctrl+Alt+T``).
 
 2. To create a (``.py``) file in vim editor, Run command ``vim <file_name>.py`` in terminal. 
@@ -240,9 +237,7 @@ Setup
 If you have multiple versions of Python installed, ensure you use ``python3`` to run the program for Python 3.x.
  
 
-|
 **Troubleshooting**
-
 
 - If you encounter any errors related to missing modules or libraries, ensure that Python and OpenCV are properly installed on your system.
 - If the camera frame does not open or the program does not behave as expected, check for any

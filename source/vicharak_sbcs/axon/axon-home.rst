@@ -24,19 +24,16 @@ The **Axon Board Computer** (SBC) is powered by rockchip's **RK3588**
    :titlesonly:
    :caption: Downloads
 
-   vicharak_sbcs/axon/axon-downloads
+   Axon Downloads <axon-downloads>
 
 .. toctree::
    :glob:
    :caption: Accessories
    :titlesonly:
    
-   vicharak_sbcs/axon/axon-accessories
+   Axon Accessories <axon-accessories>
 
 .. note::
 
    We welcome contributions and bug reports through our `GitHub
    repository <https://github.com/vicharak-in/>`_.
-
-   See the :doc:`contributing` guide and :doc:`faq` for more
-   information.

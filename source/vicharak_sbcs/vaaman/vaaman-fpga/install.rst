@@ -27,7 +27,6 @@ Installation
 	
        	 tar -xvf downloaded_folder_name.tar.bz2
 
-      |
       ``cd <efinix-folder>/bin/`` directory and run the following command to setup your IDE
 
       .. code-block::
@@ -48,17 +47,14 @@ Installation
        	 sudo apt install libxcb*
 
      
-      |
       For Installation of drivers , from the <efinix-folder>/bin directory run:
 
       .. code-block:: shell
 
        	 sudo ./install_usb_driver.sh
       
-      | 
       After setting up just writing efinity on your terminal will start the efinity software.
 
-      |
       For  detailed information: see  `software guide <https://www.efinixinc.com/docs/efinity-ug-v13.1.pdf>`_.
 
 
@@ -71,7 +67,7 @@ Installation
       .. code-block:: shell
 
        		 <installation directory>/bin/install_desktop.sh
-      |      
+
       **Efinity Quick Start**
 
       For launching the Efinity Graphical User interface (GUI), Double click on the desktop icon.
@@ -112,7 +108,6 @@ Installation
 
        	 efx_run.bat --help
 
-      |
       **Installing USB Drivers** 
 
       Download the Zadig software(version 2.7 or later) from `zadig.akeo.ie <https://zadig.akeo.ie/>`_.
@@ -151,7 +146,6 @@ Installation
     3. Optionally, add the path to GTKWave's bin folder to your System Variables path if necessary for correct launch.
     4. Execute gtkwave.exe found in the bin directory of the installation folder to run the program.
 
-    |
     **GTKWave Installation in Linux**
  
     For Linux users, use the following commands:

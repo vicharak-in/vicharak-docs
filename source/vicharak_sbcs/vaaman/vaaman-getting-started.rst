@@ -41,6 +41,7 @@ What else do you need?
 .. warning:: 
     | **You must attach the Wi-Fi antenna for proper Wi-Fi functionality and the Bluetooth antenna for proper Bluetooth functionality on Vaaman.**
     | **Refer to the images given below for correct connector locations.**
+
     Connections:
         - **Wi-Fi Antenna:** Connect to Wi-Fi antenna connector on reset key side.
         - **Bluetooth Antenna:** Connect to BLE antenna connector on MIPI-DSI connector side.
@@ -146,7 +147,7 @@ For the initial setup process, we recommend connecting the Vaaman to a monitor u
     Skip to the :ref:`Serial Console <serial-console>` section.
 
     If you want to access the **Vaaman using SSH**,
-    Skip to the :ref:`SSH <ssh>` section.
+    Skip to the :ref:`SSH <ssh_login>` section.
 
 1. Using Micro HDMI Port
 ------------------------
@@ -188,7 +189,7 @@ For the initial setup process, we recommend connecting the Vaaman to a monitor u
 
 2. Access the system's console through the connected serial interface.
 
-.. _ssh:
+.. _ssh_login:
 
 Default Login Credentials
 -------------------------
@@ -333,7 +334,7 @@ Running the Serial Console Program
 Vaaman supports **SSH (Secure Shell)**, enabling secure remote access to the system. By establishing an SSH connection, users can remotely connect to Vaaman from another device over a network, such as a computer or smartphone. This method provides a secure command-line interface to administer, configure, and execute commands on Vaaman.
 
 Install OpenSSH server
-~~~~~~~~~~~~~~~~~~~~~~
+======================
 
 You can install both OpenSSH components on Windows devices using the **Windows Settings**.
 
@@ -352,7 +353,7 @@ To install the OpenSSH components, follow these steps:
 7. To start the service, click on **Start**.
 
 Verify OpenSSH server
-~~~~~~~~~~~~~~~~~~~~
+=====================
 
 Once installed, you can connect to the OpenSSH Server from a Windows device with the OpenSSH client installed.
 
@@ -374,7 +375,7 @@ Example:
     For Linux users, use the following command: ``ip a``.
 
 Accessing Vaaman through SSH
-````````````````````````````
+============================
 
 To access Vaaman via SSH, you can use either of the following commands:
 
@@ -441,15 +442,3 @@ To access Vaaman via SSH, you can use either of the following commands:
          In this mode, the bootrom code waits for the host to transmit the
          bootloader code through the USB-C port, load and run it.
        | :ref:`Learn more about maskrom mode <vaaman-maskrom-mode>`.
-
-.. seealso::
-
-    :ref:`faq`
-
-    :ref:`vaaman-applications`
-
-    :doc:`vaaman-linux/index`
-
-    :doc:`vaaman-fpga`
-
-    :ref:`downloads`

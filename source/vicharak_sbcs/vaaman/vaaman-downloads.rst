@@ -32,8 +32,6 @@ OS Images
 
         xz -d <image_name>.xz
 
-|
-
 .. seealso::
 
     How to flash the image to the board using
@@ -148,14 +146,3 @@ Step File
 
         7z x <image_name>.7z
 
-|
-
-.. seealso::
-
-    :ref:`Contributing to Vaaman <contributing>`
-
-    :ref:`Frequently Asked Questions <faq>`
-
-    :ref:`Vaaman FPGA Programming Guide <vaaman-fpga>`
-
-    :doc:`Vaaman Linux Guide <vaaman-linux/index>`

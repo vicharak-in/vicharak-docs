@@ -1,7 +1,7 @@
 :orphan:
 
 ############################
- Raspberry Pi Camera Module
+Raspberry Pi Camera Module
 ############################
 
 .. image:: ../../../_static/images/rk3399-vaaman/accessory-rpi-camera-module.webp
@@ -25,7 +25,6 @@ Pi Camera documentation
 Buy the `Raspberry Pi Camera Module v2
 <https://www.raspberrypi.com/products/camera-module-v2/>`_.
 
-|
 #######################
 Vaaman Camera Guide
 #######################
@@ -53,7 +52,7 @@ Pre-Requisites
 - FPC50 15 Pin 1mm Pitch Cable 
 
 Enable Overlays In Vaaman / Axon
-------------------------
+--------------------------------
 
 **Steps to follow for Configuration**
 
@@ -85,6 +84,7 @@ Enable Overlays In Vaaman / Axon
 
 Setup
 ------
+
 .. tab-set::
 
     .. tab-item:: Cheese Application
@@ -132,12 +132,10 @@ Setup
 
     .. tab-item:: Python Source
 
-        |
         **Introduction**
         
         This documentation provides instructions on how to run the Python to open the camera frame and capture an image using OpenCV.
         
-        |
         **Pre-Requisites**
         
        
@@ -162,7 +160,6 @@ Setup
                 sudo apt update
                 sudo apt-get install gedit
 
-        |    
         **Setup**
  
 
@@ -188,7 +185,6 @@ Setup
 
                         pip install opencv-python
         
-        |
         **Execution of Program**
 
         1. Open a terminal window(``Ctrl+Alt+T``).
@@ -226,7 +222,6 @@ Setup
            If you have multiple versions of Python installed, ensure you use ``python3`` to run the program for Python 3.x.
         
     
-        |
         **Expected Behavior**
 
 
@@ -247,7 +242,6 @@ Setup
         4. Press the key ``Q`` on your keyboard to exit the camera frame.
         
 
-        |
         **Troubleshooting**
         
 
