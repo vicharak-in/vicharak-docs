@@ -27,7 +27,7 @@ pip install pipenv
 > :warning: You can also directly use ./make.bat to setup virtualenv on your windows terminal. \
 > Skip the following steps below if you are using ./make.bat to setup virtualenv
 
-Use following command to setup python virtual environment for building **vaaman-doc**.
+Use following command to setup python virtual environment for building docs.
 
 ```bash
 python -m pipenv update
@@ -47,6 +47,6 @@ python -m pipenv shell
 
 ---
 
-After successfully following the setup you have proper environment setup to build vaaman-doc.
+After successfully following the setup you have proper environment setup to build vicharak-docs.
 
 Follow the [Editing Guide](./EDITING.md) for more information.

@@ -28,7 +28,7 @@ pip install pipenv
 
 ### Install the dependencies inside python virtual environment
 
-Use following command to setup python virtual environment for building **vaaman-doc**.
+Use following command to setup python virtual environment for building docs.
 
 ```bash
 pipenv update
@@ -44,6 +44,6 @@ pipenv shell
 
 ---
 
-After successfully following the setup you have proper environment setup to build vaaman-doc.
+After successfully following the setup you have proper environment setup to build vicharak-docs.
 
 Follow the [Editing Guide](./EDITING.md) for more information.

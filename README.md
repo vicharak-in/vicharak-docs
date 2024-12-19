@@ -1,6 +1,6 @@
 # Vicharak Vaaman Documentation
 
-![build and deploy](https://github.com/vicharak-in/vaaman-doc/actions/workflows/build_and_deploy.yml/badge.svg)
+![build and deploy](https://github.com/vicharak-in/vicharak-docs/actions/workflows/build_and_deploy.yml/badge.svg)
 
 reStructuredText/Markdown preferred documentation, generated using [Sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html).
 

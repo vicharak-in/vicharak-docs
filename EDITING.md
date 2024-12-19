@@ -1,16 +1,16 @@
-# How to edit or modify vaaman-doc
+# How to edit or modify the docs
 
 ## Cloning the repository
 
 Clone the fresh copy of this repository.
 ```
-git clone https://github.com/vicharak-in/vaaman-doc -b main
-cd vaaman-doc
+git clone https://github.com/vicharak-in/vicharak-docs -b main
+cd vicharak-docs
 ```
 
 If there already exists a local clone then do this instead
 ```
-cd <path/to/vaaman-doc>
+cd <path/to/vicharak-docs>
 git fetch origin main
 git checkout FETCH_HEAD
 ```
@@ -69,9 +69,9 @@ Some examples on how to write good commit messages:
 
 Good:
 ```
-vaaman-doc: Introduce documentation for fgpa write.
+vicharak-docs: Introduce documentation for fgpa write.
 README: Add usage documentation for windows users.
-vaaman-doc: linux: Document different vaaman kernel revisions.
+vicharak-docs: linux: Document different vaaman kernel revisions.
 ```
 
 Bad:
