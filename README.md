@@ -1,4 +1,4 @@
-# Vicharak Vaaman Documentation
+# Vicharak Documentation
 
 ![build and deploy](https://github.com/vicharak-in/vicharak-docs/actions/workflows/build_and_deploy.yml/badge.svg)
 
