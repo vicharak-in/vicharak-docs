@@ -85,12 +85,9 @@ or assigned to a GPIO at a time.
   as they are SARADC pins.
 - All pins, except those for power supply, are directly connected to the
   System-on-Chip (SoC).
-- Instructions to use UART2 as serial console can be found in
-  [Serial Console](#serial-console), and to disable it, refer to
-  [Vicharak Config Device tree overlays](#vicharak-config-overlays)
-  section.
-- `UART2` has a default baudrate of **115200bps**.
-
+- `UART2` has a default baudrate to **115200 bps**, Need to change baudrate to **1500000 bps**.
+  Here, you can find instructions to use UART2 in [Serial Console](#axon-linux-uart-serial-console), 
+  and to disable it, refer to [Vicharak Config Device tree overlays](#vicharak-config-overlays) section.
 :::
 
 <!-- TODO: FPGA LVDS guide -->
