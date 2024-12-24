@@ -30,9 +30,9 @@ The output will list all available network interfaces on your device and their c
 
 **Accessing Vaaman Remote Upload:**
 
-Once you have obtained the IP address of your device, open your preferred web browser. In the browser's address bar, enter the device's IP address followed by the port number 8085. For example:
+Once you have obtained the IP address of your device, open your preferred web browser. In the browser's address bar, enter the device's IP address followed by the port number 5000. For example:
 
-``http://192.168.29.11:8085``
+``http://192.168.29.11:5000``
 
 .. image:: ../../_static/images/login_page.webp
 
