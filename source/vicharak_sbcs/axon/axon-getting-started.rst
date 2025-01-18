@@ -16,27 +16,27 @@ What's in the box?
 1. **Axon**
     - Single-board computer optimized for high-performance computing and AI.
     - Powered by Rockchip RK3588 SoC (octa-core CPU: quad-core Cortex-A76 and quad-core Cortex-A55).
-    - 8GB LPDDR5 RAM, 32GB eMMC storage, 30-pin GPIO header.
-    - Pre-installed with Ubuntu 22 (Jammy).
+    - 8GB/16GB/32GB LPDDR4x RAM, 32GB eMMC storage, 30-pin GPIO header.
+    - Pre-installed with Ubuntu 22.04 (Jammy).
 
 2. **PD Cable**
     - Supplies power to Axon.
     - Ensures stable and efficient power delivery via USB-C with Power Delivery technology.
 
 3. **Wi-Fi and Bluetooth Antennas**
-    - Includes antennas for both Wi-Fi and Bluetooth connectivity.
+    - Includes custom made pcb antennas for both Wi-Fi ( 2.4 & 5Ghz ) and Bluetooth connectivity.
     - These antennas ensure greater signal range and reliable connectivity for Wi-Fi and Bluetooth devices.
 
 What else do you need?
 ======================
 
-**1. 12V/5A power adapter**
+**1. 12V PD power adapter ( 20-60W )**
 
-**2. Micro HDMI to HDMI cable or adapter**
+**2. Micro HDMI or Type-C DP cable to drive Display Monitor**
  
-**3. USB Keyboard and Mouse**
+**3. USB2.0 Keyboard and Mouse**
  
-**4. Monitor with HDMI input**
+**4. Monitor with HDMI/Type-C DP input**
 
 **5. USB-C to USB-A Male cable (optional)**
 
@@ -55,6 +55,14 @@ Axon OS Images
 
     :ref:`axon-downloads`
 
+Axon OS Credentials
+========================
+
+.. note::
+    Username : vicharak
+
+    Password : 12345
+
 Axon Button Guide
 =================
 
@@ -69,7 +77,7 @@ Axon Button Guide
 
 2. Power Button
     You can turn on Axon with the power button if it is currently off. When the cpu is powered off the red LED will on to
-    let you know that the board has power, If you tap the power button then white and blue LED will be on and start booting
+    let you know that the board has proper power supply ( 12 V ), If you press the power button ( for 1-2 seconds ) then white and blue LED will be on and start booting
     up with blinking white LED.
 
 3. Reset Button

@@ -14,5 +14,6 @@ Axon supports a wide variety of peripherals to expand its functionality and inte
    SPI <spi>
    USB <usb>
    I2S <audio>
-   MIPI DSI <display-interfaces>
-   MIPI CSI <camera-modules>
+   UART <uart>
+   PCI 2.0/PCI 3.0 <pci>
+

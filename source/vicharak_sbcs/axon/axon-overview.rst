@@ -100,4 +100,3 @@ The Axon Single Board Computer (SBC) offers a range of hardware features, includ
     :ref:`Getting Started  with Vicharak Axon <axon-getting-started>`
 
     :ref:`Downloads section <axon-downloads>`
-

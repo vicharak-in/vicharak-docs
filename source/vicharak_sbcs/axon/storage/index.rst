@@ -10,3 +10,4 @@ Axon provides a variety of storage options to suit different application needs, 
    Emmc <emmc>
    Nvme <nvme>
    Micro SD Card <microsd>
+   SATA <sata>
