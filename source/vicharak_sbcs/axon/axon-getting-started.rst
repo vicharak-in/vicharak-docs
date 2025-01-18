@@ -55,14 +55,6 @@ Axon OS Images
 
     :ref:`axon-downloads`
 
-Axon OS Credentials
-========================
-
-.. note::
-    Username : vicharak
-
-    Password : 12345
-
 Axon Button Guide
 =================
 
