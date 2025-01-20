@@ -9,4 +9,5 @@ Axon supports multiple camera interfaces to connect various types of image senso
    :maxdepth: 2
 
    HDMI RX  <camera-modules>
+   MIPI CSI <mipi>
    
