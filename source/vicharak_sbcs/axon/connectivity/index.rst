@@ -10,5 +10,5 @@ Axon offers a range of connectivity options to ensure seamless integration with 
    Bluetooth <bluetooth>
    Ethernet <ethernet>
    WiFi <wifi>
-   USB 3.1 OTG <commingsoon>
-   USB 2.0 <commingsoon>
+   USB 3.1 OTG <usbotg>
+   USB 2.0 <usb>
