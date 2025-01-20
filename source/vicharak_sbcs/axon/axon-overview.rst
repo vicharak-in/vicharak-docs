@@ -4,8 +4,9 @@ Overview
 Axon is designed to cater to a diverse audience, including but not limited to:
 
 **Software Developers:**
-    - **Leverage**: Octa-core CPU, multi-OS support
+    - **Leverage**: Octa-core CPU ( 4x, Arm Cortex A76 ( 2.4 Ghz ) & 4x, Arm Cortex A55 ), multi-OS support
     - **Ideal For**: Application development, performance optimization, AI-driven software
+    - **Cache**: 64KB L1 data & instruction cache ( seperate ), 512KB L2 Cache for Cortex A76 also 32KB L1 data & instruction cache ( seperate ) , 128KB L2 cache for A55
 
 **Researchers:**
     - **Leverage**: RK3588 SoC, robust NPU, extensive connectivity
@@ -36,8 +37,9 @@ Axon is designed to cater to a diverse audience, including but not limited to:
     - **Ideal For**: IoT projects, sensor integration, smart home solutions
 
 **Gaming and Entertainment:**
-    - **Leverage**: ARM Mali-G610 MP4 GPU
+    - **Leverage**: ARM Mali-G610 MC4 GPU
     - **Ideal For**: Superior gaming experience, multimedia playback
+    - **Drivers **: OpenGL ES 1.1, 2.0 and 3.2, OpenCL 2.2, Vulkan1.2 etc.
 
 Block Diagram
 -------------
