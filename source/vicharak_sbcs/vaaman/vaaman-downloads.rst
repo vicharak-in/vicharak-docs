@@ -17,7 +17,7 @@ OS Images
     - - Debian
       - `Bullseye 11 <http://downloads.vicharak.in/vicharak-vaaman/debian>`_
     - - Ubuntu
-      - `Focal 20.04 <http://downloads.vicharak.in/vicharak-vaaman/ubuntu>`_
+      - `Jammy Jellyfish 22.04.5 LTS <http://downloads.vicharak.in/vicharak-vaaman/ubuntu>`_
     - - Community Images
       - **Coming Soon**
 
