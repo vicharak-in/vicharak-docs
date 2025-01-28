@@ -124,8 +124,8 @@ Once the power is connected, the board will automatically turn on.
     | The board is designed to operate with a 12V power supply, and using a 5V power
     | input may lead to instability and potential damage.
 
-.. image:: ../../_static/images/rk3588-axon/axon-power-option.webp
-   :width: 50%
+.. image:: ../../_static/images/rk3588-axon/axon-power-details.webp
+   :width: 60%
 
 Axon is pre-installed with Ubuntu (``Jammy``) on its eMMC storage.
 So, when you power on the board, it will boot from the eMMC storage by default.

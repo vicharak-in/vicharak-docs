@@ -83,8 +83,8 @@ Turning the Board On
        | **Remove SD-card if inserted**
        | This ensures the board boots from the eMMC storage.
 
-.. image:: ../../_static/images/rk3399-vaaman/Power_option.webp
-   :width: 40%
+.. image:: ../../_static/images/rk3399-vaaman/vaaman-power-details.webp
+   :width: 60%
    :alt: Vaaman power connection
 
 Vaaman is pre-installed with Ubuntu 22 (``Jammy``) on its eMMC storage, so it will boot from the eMMC storage by default.
