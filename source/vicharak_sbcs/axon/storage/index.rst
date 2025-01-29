@@ -7,7 +7,7 @@ Axon provides a variety of storage options to suit different application needs, 
 .. toctree::
    :maxdepth: 1
    
-   EMMC 5.1 <emmc>
-   PCI 3.0 (NVMe M.2) <nvme>
+   eMMC 5.1 <emmc>
+   PCIe 3.0 (NVMe M.2) <nvme>
    Micro SD Card <microsd>
    SATA 3.0 <sata>

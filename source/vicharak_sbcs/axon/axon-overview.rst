@@ -61,7 +61,7 @@ The Axon Single Board Computer (SBC) offers a range of hardware features, includ
      - **Feature**
    * - Display
      - | 2 X HDMI2.1 (maximum support upto `8K@60fps`)
-       | 2 X DP1.4 (maximum support upto `8K@30fps`) multiplexed over Type C Alt Mode DisplyPort
+       | 2 X DP1.4a (maximum support upto `8K@30fps`) multiplexed over Type C Alt Mode DisplyPort
        | 2 X MIPI-DPHY TX (maximum support upto `4K@60fps`) 
        | 1 X HDMI-IN (maximum support upto `4K@60fps`), supports HDCP 2.3
    * - Audio
