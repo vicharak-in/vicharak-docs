@@ -1,5 +1,5 @@
 ####################################
-Display interfaces
+Display Interfaces
 ####################################
 
 Comming Soon
