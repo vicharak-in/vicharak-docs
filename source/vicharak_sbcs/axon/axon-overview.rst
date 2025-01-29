@@ -39,7 +39,7 @@ Axon is designed to cater to a diverse audience, including but not limited to:
 **Gaming and Entertainment:**
     - **Leverage**: ARM Mali-G610 MC4 GPU
     - **Ideal For**: Superior gaming experience, multimedia playback
-    - **Drivers **: OpenGL ES 1.1, 2.0 and 3.2, OpenCL 2.2, Vulkan1.2 etc.
+    - **Drivers**: OpenGL ES 1.1, 2.0 and 3.2, OpenCL 2.2, Vulkan1.2 etc.
 
 Block Diagram
 -------------
