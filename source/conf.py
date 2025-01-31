@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.abspath("_themes"))
 
 # General information about the project.
 project = "Vicharak"
-author = "Vicharak Computers LLP"
+author = "Vicharak Computers PVT LTD"
 copyright = f"{date.today().year}, {author}"
 version = "0.1"
 
