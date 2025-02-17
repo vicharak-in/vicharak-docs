@@ -9,6 +9,11 @@ This documentation provides detailed information about Periplex on the Vaaman bo
    :align: center
 
 .. toctree::
+   :glob:
+   :caption: Contents
+   :titlesonly:
 
-    Installation <install>
-    Usage <usage>
+   .. toctree::
+
+      Installation <install>
+      Usage <usage>
