@@ -32,7 +32,7 @@ Installation guide for Periplex
    - you can see the ``Enable Vaaman FPGA Communication`` overlay,  enable it, and save the settings.
 
    .. note::
-    - skip the step 3, if overlay is already enabled.
+     Skip the step 3, if overlay is already enabled.
 
 4. **Reboot the Board:**
 

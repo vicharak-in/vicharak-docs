@@ -10,7 +10,7 @@ Usage guide for Periplex
    - The ``periplex-sync`` command requires a ``<filename>.json`` configuration file.
 
    - ``<file_name>.json`` is your ``.json`` file defining the peripherals and pin configurations. 
-   - For example, if you need to configure 3 ``UART`` and 2 ``I2C`` devices, you can define the ``TX`` and ``RX`` pins for ``UART`` and the ``SCL`` and ``SDA`` pins for ``I2C`` like this:
+   - For example, if you need to configure  ``3 UART`` and  ``2 I2C`` devices, you can define the ``TX`` and ``RX`` pins for ``UART`` and the ``SCL`` and ``SDA`` pins for ``I2C`` like this:
    .. code-block:: json
         
         {
@@ -52,7 +52,7 @@ Usage guide for Periplex
             "i2s": []
         }
 
-   - Another example: if you need to configure 1 ``UART``, 1 ``I2C``, 1 ``GPIO``, 1 ``PWM``, and 1 ``SPI`` device, define each peripheral with its specific pins. For ``SPI``, the ``SLAVE`` parameter specifies the number of slave devices. If you set ``SLAVE`` to 2, you must define both ``SLAVE-0`` and ``SLAVE-1`` pins. If only one slave device is used, set ``SLAVE`` to 1 and define only the ``SLAVE-0`` pin.
+   - Another example: if you need to configure ``1 UART``, ``1 I2C``, ``1 GPIO``, ``1 PWM``, and ``1 SPI`` device, define each peripheral with its specific pins. For ``SPI``, the ``SLAVE`` parameter specifies the number of slave devices. If you set ``SLAVE`` to 2, you must define both ``SLAVE-0`` and ``SLAVE-1`` pins. If only one slave device is used, set ``SLAVE`` to 1 and define only the ``SLAVE-0`` pin.
    .. code-block:: json
         
         {
