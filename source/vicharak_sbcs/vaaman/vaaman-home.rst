@@ -37,6 +37,7 @@ that require both processing power and hardware customization.
    Vaaman Linux Documentation <vaaman-linux/index>
    FPGA  <vaaman-fpga/index>
    Vaaman Remote Upload Documentation <vaaman-remote-upload>
+   Periplex <vaaman-periplex/index>
    Frequently Asked Questions <vaaman-faq>
 
 .. note::
