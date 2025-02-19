@@ -126,21 +126,40 @@ Usage guide for Periplex
 
    .. raw:: html
 
-        <pre style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-        vicharak@vicharak:~$ ls /dev
-        autofs           drm_dp_aux0  hugepages    initctl  loop-control  mmcblk0p5    pts        stdin    tty16  tty27  tty38  tty49  tty6      ttyS0     usbmon6      vcs7   vcsu3           video-dec0
-        block            fb0          hwrng        input    mali0         mmcblk0p6    ram0       stdout   tty17  tty28  tty39  tty5   tty60     ubi_ctrl  v4l          vcsa   vcsu4           video-enc0
-        btrfs-control    fd           i2c-0        kmsg     mapper        mmcblk0p7    random     sw_sync  tty18  tty29  tty4   tty50  tty61     uhid      v4l-subdev0  vcsa1  vcsu5           watchdog
-        bus              full         i2c-1        log      media0        mmcblk0p8    rfkill     tty      tty19  tty3   tty40  tty51  tty62     uinput    v4l-subdev1  vcsa2  vcsu6           watchdog0
-        cec0             fuse         i2c-10       loop0    mem           mmcblk0rpmb  rga        tty0     tty2   tty30  tty41  tty52  tty63     urandom   v4l-subdev2  vcsa3  vcsu7           zero
-        char             gpiochip0    <span style="color:red;">i2c-11</span>       loop1    mmcblk0       mpp_service  rk_cec     tty1     tty20  tty31  tty42  tty53  tty7      usb-ffs   vcs          vcsa4  vendor_storage  zram0
-        console          gpiochip1    <span style="color:red;">i2c-12</span>       loop2    mmcblk0boot0  mqueue       rtc        tty10    tty21  tty32  tty43  tty54  tty8      usbmon0   vcs1         vcsa5  vhci
-        cpu_dma_latency  gpiochip2    i2c-4        loop3    mmcblk0boot1  net          rtc0       tty11    tty22  tty33  tty44  tty55  tty9      usbmon1   vcs2         vcsa6  video0
-        crypto           gpiochip3    i2c-7        loop4    mmcblk0p1     null         shm        tty12    tty23  tty34  tty45  tty56  ttyFIQ0   usbmon2   vcs3         vcsa7  video1
-        disk             gpiochip4    i2c-9        loop5    mmcblk0p2     periplex     snd        tty13    tty24  tty35  tty46  tty57  <span style="color:red;">ttyPERI0</span>  usbmon3   vcs4         vcsu   video2
-        dma_heap         gpiochip5    iep          loop6    mmcblk0p3     port         spidev0.0  tty14    tty25  tty36  tty47  tty58  <span style="color:red;">ttyPERI1</span>  usbmon4   vcs5         vcsu1  video3
-        dri              hdmi_hdcp1x  iio:device0  loop7    mmcblk0p4     ptmx         stderr     tty15    tty26  tty37  tty48  tty59  <span style="color:red;">ttyPERI2</span>  usbmon5   vcs6         vcsu2  video4
+        <pre style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; width: 75%; height: 650px; overflow: auto; white-space: pre-wrap;">
+            vicharak@vicharak:~$ ls /dev
+            block            gpiochip3     mmcblk0       tty0   tty30  tty60        vcs7
+            bus              gpiochip4     mmcblk0boot0  tty1   tty31  tty61        vcsa
+            char             gpiochip5     mmcblk0boot1  tty2   tty32  tty62        vcsa1
+            disk             hdmi_hdcp1x   mmcblk0p1     tty3   tty33  tty63        vcsa2
+            dma_heap         hwrng         mmcblk0p2     tty4   tty34  ttyFIQ0      vcsa3
+            dri              i2c-0         mmcblk0p3     tty5   tty35  <span style="color:red;">ttyPERI0</span>    vcsa4
+            fd               i2c-1         mmcblk0p4     tty6   tty36  <span style="color:red;">ttyPERI1</span>     vcsa5
+            hugepages        i2c-4         mmcblk0p5     tty7   tty37  <span style="color:red;">ttyPERI2</span>     vcsa6
+            input            i2c-7         mmcblk0p6     tty8   tty38  ttyS0        vcsa7
+            mapper           i2c-9         mmcblk0p7     tty9   tty39  ubi_ctrl     vcsu
+            mqueue           i2c-10        mmcblk0p8     tty10  tty40  uhid         vcsu1
+            net              <span style="color:red;">i2c-11</span>        mmcblk0rpmb   tty11  tty41  uinput       vcsu2
+            pts              <span style="color:red;">i2c-12</span>        mpp_service   tty12  tty42  urandom      vcsu3
+            shm              iep           null          tty13  tty43  usbmon0      vcsu4
+            snd              iio:device0   periplex      tty14  tty44  usbmon1      vcsu5
+            usb-ffs          initctl       port          tty15  tty45  usbmon2      vcsu6
+            v4l              kmsg          ptmx          tty16  tty46  usbmon3      vcsu7
+            autofs           log           ram0          tty17  tty47  usbmon4      vendor_storage
+            btrfs-control    loop-control  random        tty18  tty48  usbmon5      vhci
+            cec0             loop0         rfkill        tty19  tty49  usbmon6      video-dec0
+            console          loop1         rga           tty20  tty50  v4l-subdev0  video-enc0
+            cpu_dma_latency  loop2         rk_cec        tty21  tty51  v4l-subdev1  video0
+            crypto           loop3         rtc           tty22  tty52  v4l-subdev2  video1
+            drm_dp_aux0      loop4         rtc0          tty23  tty53  vcs          video2
+            fb0              loop5         spidev0.0     tty24  tty54  vcs1         video3
+            full             loop6         stderr        tty25  tty55  vcs2         video4
+            fuse             loop7         stdin         tty26  tty56  vcs3         watchdog
+            gpiochip0        mali0         stdout        tty27  tty57  vcs4         watchdog0
+            gpiochip1        media0        sw_sync       tty28  tty58  vcs5         zero
+            gpiochip2        mem           tty           tty29  tty59  vcs6         zram0
         </pre>
+
 
    .. tip::
         
