@@ -1,0 +1,212 @@
+{
+    "uart": [
+        {
+            "id": 0,
+            "TX": "GPIOT_RXP03",
+            "RX": "GPIOT_RXN03"
+        },
+        {
+            "id": 1,
+            "TX": "GPIOT_RXP08",
+            "RX": "GPIOT_RXN08"
+        },
+        {
+            "id": 2,
+            "TX": "GPIOT_RXN21",
+            "RX": "GPIOT_RXP21"
+        },
+        {
+            "id": 3,
+            "TX": "GPIOT_RXP18",
+            "RX": "GPIOT_RXN18"
+        },
+        {
+            "id": 4,
+            "TX": "GPIOT_RXP06",
+            "RX": "GPIOT_RXN06"
+        },
+        {
+            "id": 5,
+            "TX": "GPIOT_RXN01",
+            "RX": "GPIOT_RXP01"
+        },
+        {
+            "id": 6,
+            "TX": "GPIOT_RXP05",
+            "RX": "GPIOT_RXN05"
+        },
+        {
+            "id": 7,
+            "TX": "GPIOT_RXN20",
+            "RX": "GPIOT_RXP20"
+        },
+        {
+            "id": 8,
+            "TX": "GPIOT_RXP19",
+            "RX": "GPIOT_RXN19"
+        },
+        {
+            "id": 9,
+            "TX": "GPIOT_RXP02",
+            "RX": "GPIOT_RXN02"
+        },
+        {
+            "id": 10,
+            "TX": "GPIOT_RXP04",
+            "RX": "GPIOT_RXN04"
+        },
+        {
+            "id": 11,
+            "TX": "GPIOT_RXP07",
+            "RX": "GPIOT_RXN07"
+        },
+        {
+            "id": 12,
+            "TX": "GPIOT_RXP15",
+            "RX": "GPIOT_RXN15"
+        },
+        {
+            "id": 13,
+            "TX": "GPIOT_RXP16",
+            "RX": "GPIOT_RXN16"
+        },
+        {
+            "id": 14,
+            "TX": "GPIOT_RXP09",
+            "RX": "GPIOT_RXN09"
+        },
+        {
+            "id": 15,
+            "TX": "GPIOT_RXN17",
+            "RX": "GPIOT_RXP17"
+        },
+        {
+            "id": 16,
+            "TX": "GPIOT_RXP12",
+            "RX": "GPIOT_RXN12"
+        },
+        {
+            "id": 17,
+            "TX": "GPIOT_RXP14",
+            "RX": "GPIOT_RXN14"
+        },
+        {
+            "id": 18,
+            "TX": "GPIOT_RXP11",
+            "RX": "GPIOT_RXN11"
+        },
+        {
+            "id": 19,
+            "TX": "GPIOT_RXN13",
+            "RX": "GPIOT_RXP13"
+        },
+        {
+            "id": 20,
+            "TX": "GPIOB_TXN13",
+            "RX": "GPIOB_TXP13"
+        },
+        {
+            "id": 21,
+            "TX": "GPIOB_TXN02",
+            "RX": "GPIOB_TXP02"
+        },
+        {
+            "id": 22,
+            "TX": "GPIOB_TXN00",
+            "RX": "GPIOB_TXP00"
+        },
+        {
+            "id": 23,
+            "TX": "GPIOB_TXN01",
+            "RX": "GPIOB_TXP01"
+        },
+        {
+            "id": 24,
+            "TX": "GPIOB_TXN05",
+            "RX": "GPIOB_TXP05"
+        },
+        {
+            "id": 25,
+            "TX": "GPIOB_TXP03",
+            "RX": "GPIOB_TXN03"
+        },
+        {
+            "id": 26,
+            "TX": "GPIOB_TXP04",
+            "RX": "GPIOB_TXN04"
+        },
+        {
+            "id": 27,
+            "TX": "GPIOB_TXN06",
+            "RX": "GPIOB_TXP06"
+        },
+        {
+            "id": 28,
+            "TX": "GPIOB_TXN08",
+            "RX": "GPIOB_TXP08"
+        },
+        {
+            "id": 29,
+            "TX": "GPIOB_TXP07",
+            "RX": "GPIOB_TXN07"
+        },
+        {
+            "id": 30,
+            "TX": "GPIOB_TXN11",
+            "RX": "GPIOB_TXP11"
+        },
+        {
+            "id": 31,
+            "TX": "GPIOB_TXP15",
+            "RX": "GPIOB_TXN15"
+        },
+        {
+            "id": 32,
+            "TX": "GPIOB_TXP09",
+            "RX": "GPIOB_TXN09"
+        },
+        {
+            "id": 33,
+            "TX": "GPIOB_TXN10",
+            "RX": "GPIOB_TXP10"
+        },
+        {
+            "id": 34,
+            "TX": "GPIOB_TXN18",
+            "RX": "GPIOB_TXP18"
+        },
+        {
+            "id": 35,
+            "TX": "GPIOB_TXP12",
+            "RX": "GPIOB_TXN12"
+        },
+        {
+            "id": 36,
+            "TX": "GPIOB_TXN17",
+            "RX": "GPIOB_TXP17"
+        },
+        {
+            "id": 37,
+            "TX": "GPIOB_TXN16",
+            "RX": "GPIOB_TXP16"
+        },
+        {
+            "id": 38,
+            "TX": "GPIOB_TXN14",
+            "RX": "GPIOB_TXP14"
+        },
+        {
+            "id": 39,
+            "TX": "GPIOB_TXN19",
+            "RX": "GPIOB_TXP19"
+        }
+    ],
+    "i2c": [],
+    "gpio": [],
+    "pwm": [],
+    "ws": [],
+    "spi": [],
+    "onewire": [],
+    "can": [],
+    "i2s": []
+}

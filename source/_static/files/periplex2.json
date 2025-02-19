@@ -1,0 +1,50 @@
+{
+    "uart": [
+        {
+            "id": 0,
+            "TX": "GPIOT_RXP28",
+            "RX": "GPIOT_RXN28"
+        }
+    ],
+    "i2c": [
+        {
+            "id": 1,
+            "SCL": "GPIOL_73",
+            "SDA": "GPIOL_75"
+        }
+    ],
+    "gpio": [
+        {
+            "id": 2,
+            "GPIO-0": "GPIOR_168",
+            "GPIO-1": "GPIOL_17",
+            "GPIO-2": "GPIOL_20",
+            "GPIO-3": "GPIOL_18",
+            "GPIO-4": "GPIOR_187",
+            "GPIO-5": "GPIOL_24",
+            "GPIO-6": "GPIOL_66",
+            "GPIO-7": "GPIOL_62"
+        }
+    ],
+    "pwm": [
+        {
+            "id": 3,
+            "PWM": "GPIOT_RXN24"
+        }
+    ],
+    "ws": [],
+    "spi": [
+        {
+            "id": 4,
+            "SLAVE": 2,
+            "CLK-OUT": "GPIOR_173",
+            "MISO-IN": "GPIOR_174",
+            "MOSI-OUT": "GPIOT_RXN27",
+            "SLAVE-0": "GPIOT_RXP27",
+            "SLAVE-1": "GPIOL_63"
+        }
+    ],
+    "onewire": [],
+    "can": [],
+    "i2s": []
+}
