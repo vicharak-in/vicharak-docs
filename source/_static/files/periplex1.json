@@ -1,0 +1,38 @@
+{
+    "uart": [
+        {
+            "id": 0,
+            "TX": "GPIOT_RXP28",
+            "RX": "GPIOT_RXN28"
+        },
+        {
+            "id": 1,
+            "TX": "GPIOL_73",
+            "RX": "GPIOL_75"
+        },
+        {
+            "id": 2,
+            "TX": "GPIOR_173",
+            "RX": "GPIOL_72"
+        }
+    ],
+    "i2c": [
+        {
+            "id": 3,
+            "SCL": "GPIOT_RXP27",
+            "SDA": "GPIOT_RXP24"
+        },
+        {
+            "id": 4,
+            "SCL": "GPIOL_63",
+            "SDA": "GPIOT_RXN24"
+        }
+    ],
+    "gpio": [],
+    "pwm": [],
+    "ws": [],
+    "spi": [],
+    "onewire": [],
+    "can": [],
+    "i2s": []
+}

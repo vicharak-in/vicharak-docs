@@ -1,6 +1,18 @@
 Overview
 ========
 
+The main idea behind Vaaman is to pick the faster processor than all other SoC series FPGAs (mostly 4-core ARM Cortex-A53 ~ 1.5–1.8 GHz), while Vaaman is (6-core, Cortex-A72 and Cortex-A53, goes up to 2.0 GHz) and somewhat good FPGA, which offers hardened blocks for communication interface + a very good price that we can offer to consumers. Thousands of applications do not need high-end FPGAs, but they need extraordinary normal hardware, which can use both CPUs and FPGAs functionalities. We've designed Vaaman in a way that it does not compromise any functionality the other SBCs offer. It has everything: PCIe, SD Card, WiFi+BLE, Ethernet, USB, and a 40-PIN Raspberry Pi header. You can fit any Raspberry Pi HATs directly into Vaaman easily. So, Vaaman will offer everything that the current SBC ecosystem is offering as it is + it has the benefit of the FPGA world natively.
+
+Vaaman’s CPU ↔ FPGA: Bridging the Best of Both Worlds!
+------------------------------------------------------
+
+Communication link is something that we worked on extensively, as our main goal was not to compromise any interface for CPU and FPGA sides where it has to communicate with the outside world. PCIe is extremely important from the CPU side for many embedded applications, so we wanted to keep it aside, along with other interfaces like MIPI CSI, DSI, USB 3.0 and 2.0, and GPIOs. So what did we do? We chose the hardest routeto get it up. Efinix has a hard block of MIPI CSI, and Rockchip's RK3399 also had a hard block of camera and display interfaces. It was hard work—we had to tweak the Linux kernel and write wrapper drivers that drop display packets and use raw data packets natively. And that's it. We are naming this link as RAH Link. (https://github.com/vicharak-in/rah-bit).
+
+Write, Read, Done! Simplifying CPU ↔ FPGA Interaction
+-----------------------------------------------------
+
+Our another goal was to make it very simple to be accessed by both software and hardware front-end. We've written API-level drivers in C/C++ and Python, which make it very easy to communicate with it. Write APP_ID, data packets, and length—that's it. On the FPGA side, FIFOs! Write everything in FIFOs, and you can read it from there. Whether you want to convert it to APB, AHB, AXI, or simple mechanisms, it's completely up to you!
+
 Who is Vaaman For?
 ------------------
 
