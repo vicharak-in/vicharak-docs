@@ -25,6 +25,9 @@ Axon has **30-pin GPIO header pins** which can support multiple interfaces like 
 |             |             |             |             |              |          | SARADC_4 |<div class='orange'>27</div>  |<div class='orange'>28</div>  | SARADC_3 |         |                                              |              |              |            |             |
 |             |             |             |             |              |          | SARADC_1 |<div class='orange'>29</div>  |<div class='orange'>30</div>  | SARADC_2 |         |                                              |              |              |            |             |
 
+:::{note}
+You can find [ GPIO Number Translation: ](#axon-gpio-transaction) for Axon.
+:::
 
 Before going to configure GPIOs, Need to know some basics:
 
@@ -112,6 +115,14 @@ GPIO Chip = 2
             line  29:      unnamed       unused   input  active-high
             line  30:      unnamed       unused   input  active-high
             line  31:      unnamed       unused   input  active-high
+:::
+
+:::{note}
+If It shows `gpioinfo` not found, you need to install `gpiod`.
+
+sudo apt update
+
+sudo apt gpiod
 :::
 
 ### Using C Language
@@ -236,6 +247,8 @@ where, 14 is GPIO Line ( 78 - 64 )
 ### How to change Functionality of GPIO Pin Like, UART, I2C etc  ?
 
 For that, we will soon provide `overlay`, on `vicharak-config`.
+
+
 
 :::{seealso}
 https://en.wikipedia.org/wiki/General-purpose_input/output
