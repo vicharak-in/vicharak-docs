@@ -1,15 +1,18 @@
+===========
 Peripherals
 ===========
+
+Vaaman periplex supports a wide variety of peripherals to expand its functionality and integrate with additional hardware. Below is an overview of the key peripherals and their respective documentation:
 
 .. toctree::
    :maxdepth: 1
          
-   UART <periplex_uart.rst>
-   I2C <periplex_i2c.rst>
-   GPIO <periplex_gpio.rst>
-   PWM <periplex_pwm.rst>
-   WS <periplex_ws.rst>
-   SPI <periplex_spi.rst>
-   ONE-WIRE <periplex_onewire.rst>
-   CAN <periplex_can.rst>
-   I2S <periplex_i2s.rst>
+   UART <periplex_uart>
+   I2C <periplex_i2c>
+   GPIO <periplex_gpio>
+   PWM <periplex_pwm>
+   WS <periplex_ws>
+   SPI <periplex_spi>
+   ONE-WIRE <periplex_onewire>
+   CAN <periplex_can>
+   I2S <periplex_i2s>
