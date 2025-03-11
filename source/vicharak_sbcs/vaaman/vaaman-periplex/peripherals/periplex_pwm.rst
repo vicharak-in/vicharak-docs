@@ -138,6 +138,8 @@ Each PWM chip manages a PWM channel. For example, you want control ``pwmchip1``.
 
    - The **duty cycle** value must always be less than or equal to the **period** to ensure proper PWM operation.
 
+   - Ensure you have the correct permissions to access PWMs. You may need to run these commands with sudo.
+
 Example of using the PWM protocol
 ----------------------------------
 

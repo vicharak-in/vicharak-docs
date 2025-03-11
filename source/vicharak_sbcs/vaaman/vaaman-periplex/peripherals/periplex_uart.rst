@@ -163,7 +163,7 @@ FTDI USB-to-UART adapter is a popular tool for testing and debugging serial comm
       sudo apt-get install minicom
       sudo minicom -b 115200 -D /dev/ttyPERI0
 
-   - After opening minicom on both sides, simply type characters into minicom, and UART communication between Vaaman and your PC will be established using the FTDI USB-to-UART adapter.
+   - After opening minicom on both sides, simply type characters into minicom, and UART communication between Vaaman and your PC will be established using the FTDI USB-to-UART adapter, You can verify communication by typing some characters in the Minicom session open on your Vaaman board and checking if the data appears in the Minicom session open on your PC.
 
    .. tip::
       
