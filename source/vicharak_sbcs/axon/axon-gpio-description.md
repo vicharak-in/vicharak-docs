@@ -91,6 +91,7 @@ or assigned to a GPIO at a time.
 :::
 
 <!-- TODO: FPGA LVDS guide -->
+(axon-gpio-transaction)=
 
 ## GPIO Numbers translation
 

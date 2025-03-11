@@ -72,7 +72,7 @@ The Axon Single Board Computer (SBC) offers a range of hardware features, includ
        | 1 X Headphone input
        | 1 X Analog MIC input
    * - Wireless 
-     - 6252B-SR Integrated RTL8852BS  WiFi6 2.4GHz/5.8GHz dual-band and Bluetooth 5.2
+     - 6252B-SR Integrated RTL8852BS  WiFi6 2.4GHz/5GHz dual-band and Bluetooth 5.2
    * - Ethernet
      - 1 X RJ45, 10/100/1000Mbps(Realtek RTL8211F)
    * - Camera 
