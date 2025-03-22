@@ -6,16 +6,17 @@ UART
 
 .. variable
 
-.. _Axon GPIO HEADER: https://docs.vicharak.in/vicharak_sbcs/axon/axon-gpio-description/#axon-gpios-header
+.. _Axon GPIO Header: https://docs.vicharak.in/vicharak_sbcs/axon/axon-gpio-description/#axon-gpios-header
 
 Many embedded boards provide the flexibility to configure GPIO pins to function as UART interfaces, enabling communication between the board and peripheral devices such as sensors, displays, and computers.
 
 This guide explains how to configure GPIO pins as UART on Axon 30 Pins GPIO Header. By converting GPIO pins into UART transmit (TX) and receive (RX) pins, the board can be used for serial communication, expanding the range of connected devices. This configuration is useful when there is no dedicated UART hardware interface available or when additional UART ports are needed.
 
-Axon provides total 4 UARTs including one specific UART ( Pin 2 and Pin 4 ) for debugging on GPIO Header.
+Axon provides total **4** UARTs including one specific ``UART_2`` ( Pin 2 and Pin 4 ) for debugging on GPIO Header, Like
+``UART_1``, ``UART_4``, ``UART_6``.
 
 .. tip::
-    To get more information on `Axon GPIO HEADER`_. 
+    To get more information on `Axon GPIO Header`_. 
 
 How to use GPIO Pins as UART Protocol ?
 ----------------------------------------
@@ -81,8 +82,15 @@ How to use GPIO Pins as UART Protocol ?
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon V0.3                      │
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon V0.3                             │
     │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon V0.3                             │
+    │  [ ] Enable I2C1 on 30-Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable I2C2 on 30-Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable I2C5 on 30-Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable I2C7 on 30-Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable PWM0 on 30 Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon V0.3                                      │
+    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon V0.3                                      │
     │  [*] Enable UART1 on 30 Pin GPIO Header Axon V0.3                                        │
-    │  [ ] Enable UART6 on 30 Pin GPIO Header Axon V0.3                                        │
+    │  [ ] Enable UART4 on 30 Pin GPIO Header Axon V0.3                                        │
     │  [ ] Enable UART6 on 30 Pin GPIO Header Axon V0.3                                        │
     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon V0.3                                   │
     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon V0.3                                   │
@@ -94,7 +102,6 @@ How to use GPIO Pins as UART Protocol ?
     │                     <Ok>                         <Cancel>                                │
     │                                                                                          │
     └──────────────────────────────────────────────────────────────────────────────────────────┘
-
 
 6. To return back to terminal, press the ``Esc`` key until you exit from it.
 
