@@ -133,20 +133,20 @@ Example
    :header-rows: 1
    :class: feature-table
 
-   * - **Serial FTDI Pin**
+   * - **Serial (USB To UART Module) FTDI Pin**
      - **Header GPIO Pin**
      - **Schematic Name**
    * - GND
      - Pin 8
      - GND
-   * - RX
+   * - TX
      - Pin 10 (GPIO2_B6)
      - UART1_RX_M0
-   * - TX
-     - Pin 4 (GPIO0_B7)
+   * - RX
+     - Pin 12 (GPIO2_B7)
      - UART1_TX_M0 
-
         
+
 .. image:: /_static/images/rk3588-axon/axon-gpio-uart1.webp
     :width: 50%
 
