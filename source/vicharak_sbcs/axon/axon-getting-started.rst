@@ -259,10 +259,10 @@ Hardware Setup
    * - GND
      - Pin 6
      - GND
-   * - TX
+   * - RX
      - Pin 4 (GPIO0_B5)
      - UART2_TX_M0_DEBUG
-   * - RX
+   * - TX
      - Pin 2 (GPIO0_B6)
      - UART2_RX_M0_DEBUG
 
