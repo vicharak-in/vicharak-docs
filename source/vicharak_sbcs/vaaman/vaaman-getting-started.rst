@@ -238,10 +238,10 @@ Hardware Setup
    * - GND
      - Pin 6
      - GND
-   * - TX
+   * - RX
      - Pin 8 (GPIO4_C4)
      - UART2DBG_TX
-   * - RX
+   * - TX
      - Pin 10 (GPIO4_C3)
      - UART2DBG_RX
 
