@@ -404,25 +404,26 @@ To access Vaaman via SSH, you can use either of the following commands:
 .. tip::
     The default username is **"vicharak"** and the default password is **"12345"**.
 
-4. Set up automatic Wi-Fi connection on boot
---------------------------------------------
-
-1. Edit the ``/usr/lib/vicharak-config/conf.d/before.txt`` file.
-
-   - Add the following line:
-     ``
-     connect_wi-fi <network name> <password>
-     ``
-
-     Example:
-     ``
-     connect_wi-fi vicharak_5g vcaa_g123
-     ``
-
-2. Reboot the system.
-
-- **Vaaman Boot modes**
-
+..
+    4. Set up automatic Wi-Fi connection on boot
+    --------------------------------------------
+    
+    1. Edit the ``/usr/lib/vicharak-config/conf.d/before.txt`` file.
+    
+       - Add the following line:
+         ``
+         connect_wi-fi <network name> <password>
+         ``
+    
+         Example:
+         ``
+         connect_wi-fi vicharak_5g vcaa_g123
+         ``
+    
+    2. Reboot the system.
+    
+Vaaman Boot modes
+================
 
 .. list-table::
    :widths: 20 40

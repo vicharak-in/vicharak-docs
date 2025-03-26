@@ -305,28 +305,29 @@ Running the Serial Console Program
 
 .. include:: ../common/common-ssh.rst
 
-4. Set up automatic Wi-Fi connection on boot
---------------------------------------------
-
-In the following example, we will set up automatic Wi-Fi connection on boot
-for the **wlan0** interface. This will be useful if you are using a
-headless system. That means you will not need to connect a monitor, keyboard,
-or mouse to your system to connect to WiFi.
-
-**1. Edit the ** ``/usr/lib/vicharak-config/conf.d/before.txt`` ** file and add
-the following lines:**
-
-::
-
-    connect-wi-fi <network name> <password>
-
-Example:
-
-::
-
-    connect-wi-fi vicharak_5g vcaa_g123
-
-**2. Reboot the system.**
+..
+    4. Set up automatic Wi-Fi connection on boot
+    --------------------------------------------
+    
+    In the following example, we will set up automatic Wi-Fi connection on boot
+    for the **wlan0** interface. This will be useful if you are using a
+    headless system. That means you will not need to connect a monitor, keyboard,
+    or mouse to your system to connect to WiFi.
+    
+    **1. Edit the ** ``/usr/lib/vicharak-config/conf.d/before.txt`` ** file and add
+    the following lines:**
+    
+    ::
+    
+        connect-wi-fi <network name> <password>
+    
+    Example:
+    
+    ::
+    
+        connect-wi-fi vicharak_5g vcaa_g123
+    
+    **2. Reboot the system.**
 
 Axon Boot modes
 =================
