@@ -219,7 +219,11 @@ To access Vaaman through the serial interface, you will need:
 1. A computer with a serial terminal application installed, such as PuTTY or minicom.
 2. A USB to UART serial cable or adapter (e.g., FTDI or PL2303).
 3. A Micro USB or USB-C cable.
-4. A 4-pin jumper wire.
+4. A 3-pin jumper wire. ( Tx, Rx and GND )
+
+.. warning::
+
+    When you power off Vaaman, and want to turn on again make sure that you have disconnected ( FTDI / PL2303 ) UART from Vaaman.
 
 Hardware Setup
 --------------
@@ -238,10 +242,10 @@ Hardware Setup
    * - GND
      - Pin 6
      - GND
-   * - TX
+   * - RX
      - Pin 8 (GPIO4_C4)
      - UART2DBG_TX
-   * - RX
+   * - TX
      - Pin 10 (GPIO4_C3)
      - UART2DBG_RX
 

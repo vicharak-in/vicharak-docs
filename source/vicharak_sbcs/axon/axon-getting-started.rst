@@ -240,6 +240,11 @@ To access Axon through the serial interface, you will need the following:
   (such as PuTTY or minicom).
 - A USB to UART serial cable or adapter (such as FTDI or PL2303).
 - Micro USB or USB-C cable.
+- 3 Pin Jumper Wire ( Tx, Rx and GND )
+
+.. warning::
+
+    When UART (FTDI/PL2303) is connected to Axon, and Axon is poweroff. It requires to disconnect it from Axon, in order to turn on Axon Again.
 
 Hardware Setup
 ``````````````
@@ -259,10 +264,10 @@ Hardware Setup
    * - GND
      - Pin 6
      - GND
-   * - TX
+   * - RX
      - Pin 4 (GPIO0_B5)
      - UART2_TX_M0_DEBUG
-   * - RX
+   * - TX
      - Pin 2 (GPIO0_B6)
      - UART2_RX_M0_DEBUG
 
