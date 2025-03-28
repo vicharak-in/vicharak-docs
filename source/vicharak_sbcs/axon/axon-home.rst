@@ -25,6 +25,7 @@ The **Axon Board Computer** (SBC) is powered by rockchip's **RK3588**
    Display Interface  <display/index>
    Audio Interface <audio/index>
    Video Input interface  <video-input/index>
+   OS Configuration <axon-os-configuration/index>
    Frequently Asked Questions <axon-faq>
 
 
