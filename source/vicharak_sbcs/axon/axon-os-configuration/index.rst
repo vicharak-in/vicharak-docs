@@ -5,6 +5,7 @@ Axon OS Configuration
 .. toctree::
    :maxdepth: 1
 
-   Basic Details <basic>
+   OS Details <basic>
+   Set Hotspot <wifi-hotspot>
    Docker Setup <docker-setup>
    Update Package <update-package>
