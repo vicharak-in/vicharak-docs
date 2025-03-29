@@ -741,6 +741,43 @@ There will be a version string printed on the console during boot up.
 U-Boot 2023.11-af329214bf05-230427 #vicharak (Nov 11 2023 - 16:43:11 +0530)
 ```
 
+## Getting U-Boot from APT Source
+
+This section explains how to obtain U-Boot from APT sources and the additional features supported exclusively in these package builds.
+
+### Features Exclusive to APT U-Boot Packages
+- **HDMI Console & Bootmenu Support**: Users can access U-Boot logs, the console, and the bootmenu on a display connected with HDMI TX0.
+- **Keyboard Shortcuts**:
+  - **Ctrl + C**: Interrupts the boot process and drops the user into the U-Boot console.
+  - **Ctrl + Q**: Directly enters the bootmenu without booting the default OS.
+
+### Installation
+If you need to obtain U-Boot using the APT package manager, you can do so by running:
+
+```sh
+sudo apt update
+sudo apt install u-boot-rk3399-vaaman
+```
+
+To obtain source code for customization, use:
+
+```bash
+git clone https://github.com/vicharak-in/rockchip-linux-u-boot -b master
+```
+
+### Potential Issues & Troubleshooting
+1. **Keyboard Disconnected During U-Boot**
+   - Hot-plugging is not supported in U-boot, so if the keyboard is removed while inside U-Boot it will not reconnect automatically.
+   - Solution: A system reboot is required to detect the keyboard again.
+
+2. **No Display Output on HDMI**
+   - Ensure the HDMI cable is properly connected before powering on the device.
+   - Some monitors may take time to detect the signal; try switching HDMI ports or rebooting.
+
+3. **Bootmenu Not Appearing**
+   - Ensure the correct key combination (**Ctrl + Q**) is used during boot.
+   - If the system boots too quickly, try pressing the key earlier.
+
 :::{seealso}
 [How to build linux kernel](#build-linux-kernel)
 
