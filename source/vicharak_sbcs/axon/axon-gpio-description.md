@@ -87,7 +87,7 @@ or assigned to a GPIO at a time.
   System-on-Chip (SoC).
 - `UART2` has a default baudrate to **115200 bps**, Need to change baudrate to **1500000 bps**.
   Here, you can find instructions to use UART2 in [Serial Console](#axon-linux-uart-serial-console), 
-  and to disable it, refer to [Vicharak Config Device tree overlays](#vicharak-config-overlays) section.
+  and you can also use another UART provided on GPIO Pin, refer to [Vicharak Config Device tree  overlays](/vicharak_sbcs/axon/peripherals/uart) section.
 :::
 
 <!-- TODO: FPGA LVDS guide -->

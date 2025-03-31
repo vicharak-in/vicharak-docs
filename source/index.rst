@@ -44,7 +44,7 @@ applications including IoT, AI and multimedia processing.
    :glob:
    :caption: Contents
    :titlesonly:
-   :maxdepth: 3
+   :maxdepth: 4
 
    Vaaman SBC <vicharak_sbcs/vaaman/vaaman-home>
    Axon SBC <vicharak_sbcs/axon/axon-home>
