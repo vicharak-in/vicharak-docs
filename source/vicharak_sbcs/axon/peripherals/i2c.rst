@@ -6,6 +6,17 @@ I2C
 
 .. _Axon GPIO Header: https://docs.vicharak.in/vicharak_sbcs/axon/axon-gpio-description/#axon-gpios-header
 
+.. warning::
+
+    We recommend to use Vicharak 6.1 kernel and latest `Ubuntu 24.04 Noble Numbat
+    <https://downloads.vicharak.in/vicharak-axon/ubuntu/24_noble/>`_ , in order to support below overlays. Flash Image
+    using this `Documentation </vicharak_sbcs/axon/axon-linux/linux-usage-guide/rockchip-develop-guide>`_
+
+    .. code::
+
+        sudo apt update
+        sudo apt reinstall linux-image-6.1.75-axon linux-headers-6.1.75-axon
+
 Introduction
 ------------
 
@@ -82,7 +93,7 @@ How to use GPIO Pins as I2C Protocol ?
     └──────────────────────────────────────────────────────────────────────────────────────────┘
 
 
-5. Select overlays as per your requirement ``( UART1 / UART4 / UART6 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
+5. Select overlays as per your requirement ``( I2C1 / I2C2 / I2C5 / I2C7 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
 
 .. code-block:: console
 
