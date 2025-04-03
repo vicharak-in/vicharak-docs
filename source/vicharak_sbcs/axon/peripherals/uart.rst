@@ -8,6 +8,20 @@ UART
 
 .. _Axon GPIO Header: https://docs.vicharak.in/vicharak_sbcs/axon/axon-gpio-description/#axon-gpios-header
 
+.. warning::
+
+    We recommend to use Vicharak 6.1 kernel and latest `Ubuntu 24.04 Noble Numbat
+    <https://downloads.vicharak.in/vicharak-axon/ubuntu/24_noble/>`_ , in order to support below overlays. Flash Image
+    using this `Documentation </vicharak_sbcs/axon/axon-linux/linux-usage-guide/rockchip-develop-guide>`_
+
+    .. code::
+
+        sudo apt update
+        sudo apt reinstall linux-image-6.1.75-axon linux-headers-6.1.75-axon
+
+Introduction
+------------
+
 Many embedded boards provide the flexibility to configure GPIO pins to function as UART interfaces, enabling communication between the board and peripheral devices such as sensors, displays, and computers.
 
 This guide explains how to configure GPIO pins as UART on Axon 30 Pins GPIO Header. By converting GPIO pins into UART transmit (TX) and receive (RX) pins, the board can be used for serial communication, expanding the range of connected devices. This configuration is useful when there is no dedicated UART hardware interface available or when additional UART ports are needed.
