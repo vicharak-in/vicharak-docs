@@ -9,3 +9,4 @@ Axon OS Configuration
    Set Hotspot <wifi-hotspot>
    Docker Setup <docker-setup>
    Update Package <update-package>
+   Vicharak Config <vicharak-config/index>
