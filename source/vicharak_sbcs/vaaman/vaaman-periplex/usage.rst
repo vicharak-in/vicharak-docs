@@ -182,3 +182,7 @@ After reboot
     
     - If you need to configure ``40-UARTs`` devices, you can define the ``TX`` and ``RX`` pins for ``UARTs``.
     - For :download:`download JSON file </_static/files/periplex4.json>`
+
+.. note::
+
+    - If you want to test a new JSON configuration, it is mandatory to run the ``periplex-sync`` command again to apply your new configuration.
