@@ -500,7 +500,9 @@ This feature is fully supported only on the latest Linux kernels. We recommend u
 
 ```bash
 sudo apt update
+sudo apt install u-boot-menu
 sudo apt install linux-5.10.233-vaaman
+sudo reboot
 ```
 
 #### Accessing USB Tethering Controls
