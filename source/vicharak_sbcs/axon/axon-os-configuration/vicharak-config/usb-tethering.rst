@@ -28,7 +28,9 @@ This feature is fully supported only on the latest Linux kernel. We recommend up
     .. code::
 
         sudo apt update
-        sudo apt reinstall linux-image-6.1.75-axon linux-headers-6.1.75-axon
+        sudo apt install u-boot-menu
+        sudo apt install linux-image-6.1.75-axon linux-headers-6.1.75-axon
+        sudo reboot
 
 
 
