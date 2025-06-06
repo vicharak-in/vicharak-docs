@@ -76,7 +76,7 @@ The Vaaman Single Board Computer (SBC) offers a range of hardware features, incl
        | 1 x SPDIF
        | 1 x PWM
        | 1 x ADC
-       | 6 x GPIO
+       | 21 x GPIO
        | 2 x 5V DC
        | 2 x 3.3V power pin
    * - FPGA

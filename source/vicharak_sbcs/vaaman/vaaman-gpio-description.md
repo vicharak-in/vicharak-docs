@@ -11,7 +11,7 @@ header that provides flexible options for connecting and controlling external
 devices. Through software settings, you can configure these pins as either
 input or output, making them adaptable for various applications.
 
-Out of the 40 pins on the header, 27 are dedicated GPIO pins. These GPIO pins
+Out of the 40 pins on the header, 21 are dedicated GPIO pins. These GPIO pins
 can also be repurposed for SPI (Serial Peripheral Interface),
 UART (Universal Asynchronous Receiver-Transmitter), and
 I2C (Inter-Integrated Circuit) functions.
@@ -88,8 +88,8 @@ or assigned to a GPIO at a time.
 |             |           |     +5V      |          |  <div class='red'>19</div>   | <div class='black'>20</div> |          |                 GND                 |             |
 |             |           |     GND      |          | <div class='black'>21</div>  | <div class='green'>22</div> | GPIO4_D5 |                                     |     157     |
 |             |           |     +5V      |          |  <div class='red'>23</div>   | <div class='black'>24</div> |          |                 GND                 |             |
-|             |           |     GND      |          | <div class='black'>25</div>  | <div class='green'>26</div> |          |               ADC_IN0               |             |
-|     64      |           |   I2C2_SDA   | GPIO2_A0 |  <div class='blue'>27</div>  | <div class='blue'>28</div>  | GPIO2_A1 |              I2C2_CLK               |     65      |
+|             |           |     GND      |          | <div class='black'>25</div>  | <div class='blue'>26</div>  |          |               ADC_IN0               |             |
+|     64      |           |   I2C2_SDA   | GPIO2_A0 |  <div class='green'>27</div> | <div class='green'>28</div> | GPIO2_A1 |              I2C2_CLK               |     65      |
 |     74      | I2C6_SCL  |   SPI2_TXD   | GPIO2_B2 | <div class='green'>29</div>  | <div class='black'>30</div> |          |                 GND                 |             |
 |     73      | I2C6_SDA  |   SPI2_RXD   | GPIO2_B1 | <div class='green'>31</div>  | <div class='green'>32</div> | GPIO3_C0 |              SPDIF_TX               |     112     |
 |     76      |           |   SPI2_CSn   | GPIO2_B4 | <div class='green'>33</div>  | <div class='black'>34</div> |          |                 GND                 |             |
