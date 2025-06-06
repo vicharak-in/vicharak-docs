@@ -109,6 +109,10 @@ To access Vaaman SBC through the serial interface, A USB to UART serial cable or
 
 #### Serial Console Programs
 
+:::{note}
+The baud rate for Vaaman is 1500000
+:::
+
 :::::{tab-set}
 
 ::::{tab-item} GTK-Term (GUI)
