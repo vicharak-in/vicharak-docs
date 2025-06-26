@@ -16,3 +16,4 @@ Vaaman periplex supports a wide variety of peripherals to expand its functionali
    ONE-WIRE <periplex_onewire>
    CAN <periplex_can>
    I2S <periplex_i2s>
+   I2C-SLAVE <periplex_i2cslave>
