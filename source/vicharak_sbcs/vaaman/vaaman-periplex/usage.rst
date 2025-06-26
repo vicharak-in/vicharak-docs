@@ -77,7 +77,8 @@ Create the json file
         "spi": [],
         "onewire": [],
         "can": [],
-        "i2s": []
+        "i2s": [],
+        "i2cslave": []
     }
 
 .. note::
@@ -97,7 +98,8 @@ Create the json file
                 "spi": [],
                 "onewire": [],
                 "can": [],
-                "i2s": []
+                "i2s": [],
+                "i2cslave": []
             }
 
     4. Do not skip any peripherals. If a peripheral is not required, leave the brackets empty for that peripheral.   
