@@ -47,7 +47,8 @@ How to Generate PWM's on the Vaaman ?
             "spi": [],
             "onewire": [],
             "can": [],
-            "i2s": []
+            "i2s": [],
+            "i2cslave": []
          }
 
 2. **Run the periplex-sync command:**

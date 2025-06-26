@@ -59,7 +59,8 @@ How to Generate SPI's on the Vaaman ?
             ],
             "onewire": [],
             "can": [],
-            "i2s": []
+            "i2s": [],
+            "i2cslave": []
          }
 
 2. **Run the periplex-sync command:**
