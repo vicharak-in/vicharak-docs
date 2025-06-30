@@ -7,6 +7,31 @@ import sys
 from datetime import date
 from sphinxawesome_theme.postprocess import Icons
 
+from docutils import nodes
+from docutils.parsers.rst import roles
+
+def bgcolor_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    color, content = text.split(":", 1)
+    style = (
+        'display: inline-block; '
+        'width: 24px; '
+        'height: 24px; '
+        'line-height: 24px; '
+        'text-align: center; '
+        'vertical-align: middle; '
+        f'background-color: {color.strip()}; '
+        'color: white; '
+        'font-weight: bold; '
+        'font-family: monospace; '
+        'font-size: 12px; '
+        'margin: 2px; '
+        'box-sizing: border-box; '
+    )
+    node = nodes.raw('', f'<span style="{style}">{content.strip()}</span>', format='html')
+    return [node], []
+
+roles.register_canonical_role('bgcolor', bgcolor_role)
+
 sys.path.insert(0, os.path.abspath("_themes"))
 
 # General information about the project.
