@@ -14,6 +14,7 @@ and how to use it.
    :titlesonly:
 
    Rockchip DevelopTool Guide <rockchip-develop-guide>
+   How to Flash Raw Image into External Device <rockchip-raw-image>
    Axon GPIO Programming Guide <../../axon-gpio-description>
   
 ..
