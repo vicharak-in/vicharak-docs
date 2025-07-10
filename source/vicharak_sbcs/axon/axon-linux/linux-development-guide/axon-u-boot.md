@@ -2,6 +2,11 @@
 
 # U-Boot (Universal Boot Loader)
 
+:::{tip}
+U-boot Version : 1.1.12
+:::
+
+
 ## What actually is u-boot?
 
 U-Boot `Das U-Boot` is an open-source bootloader that can be used on various
