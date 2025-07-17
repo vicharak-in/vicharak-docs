@@ -1,13 +1,13 @@
 ==========================
-Axon Video Input Interface
+Axon Video Interface
 ==========================
 
 Axon supports multiple MIPI interfaces to connect various types of image sensors and cameras.
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
-   HDMI RX 2.0  <hdmirx>
-   MIPI Camera Interface 1.2/2.0 <mipi>
-  
+   Video Input Capabilities <video-input/index>
+   Video Encode/Decode Capabilities <video-encode-decode/index>
+ 
