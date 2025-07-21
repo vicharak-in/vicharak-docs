@@ -197,6 +197,9 @@ Default Login Credentials
 - Username: **vicharak**
 - Password: **12345**
 
+- To Go to into ``root`` user, Type ``su`` terminal and Default Password is ``root``.
+
+
 These credentials are used for initial login via any access method (HDMI, SSH, Serial Console).
 
 3. Using SSH
@@ -210,6 +213,10 @@ These credentials are used for initial login via any access method (HDMI, SSH, S
 2. Open a terminal on your computer.
 3. Use the following command to connect: **ssh vicharak@<Vaaman_IP_address>**
 4. Enter the default password **12345** when prompted.
+
+.. note::
+
+   To get access of ``root`` user through SSH, User need to do configuration in SSH manually.
 
 Preparation
 -----------

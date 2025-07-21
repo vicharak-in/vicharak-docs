@@ -422,6 +422,10 @@ Replace **"username"** with the appropriate username for Vaaman and **"pc-name"*
 actual PC name assigned to Vaaman on the network.
 :::
 
+:::{warning}
+To get access of ``root`` user through SSH, User need to do configuration in SSH manually.
+:::
+
 :::{seealso}
 [Flash individual images with Linux_Upgrade_Tool](#rockchip-upgrade-tool-misc)
 
