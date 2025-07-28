@@ -10,4 +10,5 @@ Axon OS Configuration
    Docker Setup <docker-setup>
    Update Package <update-package>
    Screen Sharing <screen-sharing>
+   Change Splash Screen/Logo <splash-screen>
    Vicharak Config <vicharak-config/index>
