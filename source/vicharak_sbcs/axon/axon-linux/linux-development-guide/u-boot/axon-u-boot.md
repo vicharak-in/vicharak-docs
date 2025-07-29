@@ -1,21 +1,9 @@
 (build-u-boot)=
 
-# U-Boot (Universal Boot Loader)
+# Updating U-Boot Version Using APT
 
 :::{tip}
 U-boot Version : 1.1.12
-:::
-
-
-## What actually is u-boot?
-
-U-Boot `Das U-Boot` is an open-source bootloader that can be used on various
-platforms such as ARM, X86, MIPS, RISC-V and many more.
-It is the Universal Boot Loader project and is actually used to boot the
-Linux kernel in your Vicharak board.
-
-:::{note}
-More information on u-boot can be found on [U-Boot Wikipedia](https://en.wikipedia.org/wiki/Das_U-Boot).
 :::
 
 ## Getting U-Boot from APT Source

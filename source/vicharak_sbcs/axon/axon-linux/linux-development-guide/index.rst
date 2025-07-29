@@ -23,9 +23,10 @@ computer board. It's like giving your computer its unique set of skills.
 
 .. toctree::
    :caption: Development Guide
+   :maxdepth: 3
    :titlesonly:
 
-   U-Boot <axon-u-boot>
+   u-boot/index
 
 ..
    Linux SDK <axon-linux-sdk>
