@@ -10,6 +10,7 @@
 
 .. toctree::
    :caption: List of Guides
+   :maxdepth: 4
    :titlesonly:
 
    linux-usage-guide/index
