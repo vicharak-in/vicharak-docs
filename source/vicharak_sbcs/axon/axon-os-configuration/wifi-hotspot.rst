@@ -1,3 +1,5 @@
+.. _wifi-hotspot:
+
 ##################
 Set WiFi hotspot
 ##################
