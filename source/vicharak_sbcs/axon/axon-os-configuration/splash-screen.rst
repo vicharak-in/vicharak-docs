@@ -113,13 +113,19 @@ Creating a Custom Theme
 
    - ``splash.png``: Your custom splash image.
 
-3. To Set theme:
+3. Register custom theme:
 
    .. code-block:: bash
 
-      sudo update-alternatives --config default.plymouth
+        sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/your-theme-name/your-theme-name.plymouth 100
 
-4. To apply in next boot, User need to update initramfs :
+4. To Set theme:
+
+   .. code-block:: bash
+
+     sudo update-alternatives --config default.plymouth
+
+5. To apply in next boot, User need to update initramfs :
 
    .. code-block:: bash
 
