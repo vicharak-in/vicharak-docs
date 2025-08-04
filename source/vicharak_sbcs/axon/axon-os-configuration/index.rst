@@ -11,4 +11,5 @@ Axon OS Configuration
    Update Package <update-package>
    Screen Sharing <screen-sharing>
    Change Splash Screen/Logo <splash-screen>
+   Tailscale Support <tailscale-support>
    Vicharak Config <vicharak-config/index>
