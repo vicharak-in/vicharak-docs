@@ -93,11 +93,34 @@ The Vaaman Single Board Computer (SBC) offers a range of hardware features, incl
        | 10, 20, 25, 30, 50, and 74.25 MHz oscillators for T120F324 PLL input.
        | 4 User LEDs on T120F324 bank 2F.
 
+Dimensions
+----------
+
+.. image:: /_static/images/rk3399-vaaman/Vaaman_Dimensions.webp
+   :width: 100%
+
+Physical Specifications
+--------
+
+.. list-table::
+   :widths: 10 50
+   :header-rows: 1
+   :class: feature-table
+
+   * - **Specifications**
+     - **Value**
+   * - Weight
+     - 60 grams
+   * - Length
+     - 85 mm
+   * - Breadth
+     - 85 mm
+   * - Height
+     - 20 mm
+   
 .. tip::
 
     For more information on the Vaaman GPIOs, see :ref:`vaaman-gpio-description`
-
-|
 
 .. seealso::
 
