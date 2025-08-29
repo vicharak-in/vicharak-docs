@@ -28,6 +28,17 @@ I2C is a multi-master, multi-slave, packet-switched, single-ended serial communi
 
 - Axon has **4** I2C's protocol on 30 Pins GPIO Header. Like, ``I2C1``, ``I2C2``, ``I2C5`` and ``I2C7`` 
 
+.. note::
+
+   Using I2C1, I2C2, or I2C5 on the header involves a trade-off. This is because these pins are multiplexed with other functionalities on the board.
+   The following peripherals will be unavailable when their corresponding I2C lines are in use:
+
+   - **I2C1**: This configuration disables **MIPI CSI0**, **NPU**, and **Type-C0 display**.
+
+   - **I2C2**: This configuration makes **MIPI DPHY RX0** and **TX0** unavailable.
+
+   - **I2C5**: This configuration makes **MIPI_DPHY RX1** and **TX1** unavailable.
+
 .. tip::
     To get more information on `Axon GPIO Header`_. 
 
