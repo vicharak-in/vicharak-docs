@@ -110,6 +110,7 @@ or assigned to a GPIO at a time.
   section.
 - Both `UART2` and `UART4` support a wide range of baud rates, including
   **115200bps, 500000bps, 1500000bps,** and more.
+- **Pin 8** and **pin 10** of the CPU are used by `UART2` and are not accessible to the user by default.
 :::
 
 ### FGPA Header
