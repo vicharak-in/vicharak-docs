@@ -9,14 +9,27 @@ Vaaman remote upload
 Introduction
 ==============
 
-Vaaman Remote Upload is a file uploading server application that enables users to remotely upload files to a device. It offers a user-friendly interface accessible through a web browser. Users can upload HEX files from their personal computers to the target device using this application. The process involves obtaining the device's IP address, accessing the application's login page, and then uploading files.
+Vaaman Remote Upload is a server application that allows users to remotely upload files to a device (Vaaman). It offers a user-friendly interface accessible through a web browser. Users can upload HEX files from their personal computers to the target device using this application. The process involves obtaining the device's IP address, accessing the application's login page, and then uploading files.
 
 Overall, Vaaman Remote Upload simplifies the process of transferring files to a device, making it a practical tool for remote file management and device programming.
 
+============
+Installation
+============
 
-=================
-Getting Started:
-=================
+Before installing Vaaman Remote Upload, make sure your device is connected to the internet, then run the following command in your terminal of the vaaman to install **vaaman-remote-upload**.
+
+.. code-block:: console
+
+   sudo apt update
+   sudo apt install vaaman-remote-upload
+
+.. note:: 
+   - The default image already includes the Vaaman Remote Upload application. If it is already installed, you don’t need to install it again using the above command.
+
+===============
+Getting Started
+===============
 
 
 **Obtaining the IP Address for Vaaman Remote Upload:**
