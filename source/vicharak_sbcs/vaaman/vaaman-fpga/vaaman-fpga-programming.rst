@@ -28,7 +28,7 @@
         
         2. Download the BIT file
         
-           Download the DEMO BIT file from the `Simple LED Blink Bit Demo <../../_static/files/sample_led_blink_t120_demo_bit.zip>`_
+           Download the DEMO BIT file from the `Simple LED Blink Bit Demo </_static/files/sample_led_blink_t120_demo_bit.zip>`_
         
            Unzip the downloaded file.
         
@@ -53,7 +53,7 @@
     .. tab-item:: Configure fpga from linux command
         
         - Download the HEX file
-        - Download the DEMO HEX file from `Simple LED Blink Hex Demo <../../_static/files/sample_led_blink_t120_demo_hex.zip>`_
+        - Download the DEMO HEX file from `Simple LED Blink Hex Demo </_static/files/sample_led_blink_t120_demo_hex.zip>`_
         - Unzip the downloaded file.
        
         - To program the FPGA from the command line, enter the command:
