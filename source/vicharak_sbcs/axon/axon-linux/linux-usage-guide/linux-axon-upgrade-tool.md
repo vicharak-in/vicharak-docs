@@ -14,6 +14,7 @@ flashing images onto their desired storage devices.
 
 ## How to use Linux Upgrade Tool
 
+(install-upgrade-tool)=
 ### Installing required system dependencies
 
 Linux Upgrade Tool requires the following dependencies to be installed on your Debian or Ubuntu system.
