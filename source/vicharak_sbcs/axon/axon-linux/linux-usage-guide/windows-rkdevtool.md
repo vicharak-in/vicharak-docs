@@ -4,6 +4,7 @@
 
 ## Pre-Requisites
 
+(usb-driver)=
 ### USB drivers installation
 
 Download the Rockchip [USB Drivers-Assistant](https://github.com/vicharak-in/rockchip-tools/raw/master/windows/DriverAssitant_v5.12.zip)
@@ -31,6 +32,7 @@ After the installation is complete, click on `OK` button to close the window.
 :width: 50%
 :::
 
+(rkdev-install)=
 ### RKDevTool Installation
 
 Download the Rockchip [RKDevTool](https://github.com/vicharak-in/rockchip-tools/raw/master/windows/RKDevTool_Release_v3.19.zip) and unpack it.
