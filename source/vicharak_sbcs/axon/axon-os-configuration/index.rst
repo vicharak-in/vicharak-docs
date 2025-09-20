@@ -13,3 +13,4 @@ Axon OS Configuration
    Change Splash Screen/Logo <splash-screen>
    Tailscale Support <tailscale-support>
    Vicharak Config <vicharak-config/index>
+   Vicharak Dao ( Remote Access For Vicharak Boards ) <vicharak-dao/index>
