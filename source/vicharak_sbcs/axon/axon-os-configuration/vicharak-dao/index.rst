@@ -2,7 +2,7 @@
 Vicharak-DAO : Remote Access for Vicharak Computers
 ######################################################
 
-.. note::
+.. warning::
 
    **Beta Version** : 1.1.0
 
@@ -42,7 +42,7 @@ Register Your Account
 ----------------------
 
 1. Open the `Vicharak-DAO Website <https://dao.vicharak.in/>`_ in your web browser.  
-2. Click **Sign Up** and register using your **Google** or **GitHub** account.
+2. **Register** using your **Google** or **GitHub** account.
 
 .. image:: /_static/images/dao-1.webp
    :width: 80%
@@ -56,6 +56,13 @@ Add Vicharak Device
 
 You can add your device using either **Token** or **Local Network**.
 
+
+.. warning::
+
+  **Token** : When Vicharak device is connected to Display Monitor (HDMI, Type-C DP etc. ) or SSH through internet.
+
+  **Local Network** : When Vicharak device and Host System both are on same network.
+
 |
 **Method 1: Add Using Token**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,12 +72,19 @@ You can add your device using either **Token** or **Local Network**.
 .. image:: /_static/images/dao-3.webp
    :width: 80%
 
+.. image:: /_static/images/dao-4.webp
+  :width: 80%
+
 .. note::
 
    Tokens let you add devices securely from **any network** —  
    the device and host computer **do not need to be on the same network**.
 
-2. Enter a name for your device.  
+2. Enter a name for your device.
+
+.. image:: /_static/images/dao-6.webp
+   :width: 80%
+
 3. A **token** will be generated for your device. Copy it.  
 
 .. image:: /_static/images/dao-5.webp
@@ -88,11 +102,20 @@ You can add your device using either **Token** or **Local Network**.
    :width: 80%
 
 2. A list of devices connected to the **same network** will appear.  
-3. Select your device and enter its configuration details.  
+
+.. image:: /_static/images/dao-10.webp
+   :width: 80%
+
+
+3. Select your device and enter its configuration details like custom device name for your reference, username and password.
+
+.. note::
+  Default credentials:
+   - **Username**: ``vicharak``
+   - **Password**: ``12345``
 
 .. image:: /_static/images/dao-11.webp
    :width: 80%
-
 
 ======================================================
 Steps to be Done on Vicharak Board
