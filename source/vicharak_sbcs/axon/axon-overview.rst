@@ -90,6 +90,25 @@ The Axon Single Board Computer (SBC) offers a range of hardware features, includ
    * - Real time clock 
      - RTC support via built-in battery interface
 
+Physical Information
+--------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - **Property**
+     - **Details**
+   * - Weight
+     - 69 g
+   * - Length
+     - 101.5 mm
+   * - Width
+     - 75 mm
+   * - Height
+     - 21.125 mm
+
+.. image:: ../../_static/images/rk3588-axon/axon-dimension.webp
+   :width: 75%
 
 .. tip::
 
