@@ -16,3 +16,4 @@ Explore other sytem
 
 
    Retro Pi <axon-other-system/retro-pi>
+   HomeAssistant Operating System <axon-other-system/homeos>
