@@ -16,11 +16,17 @@ Download Home Assistant OS
 
 `Home Assistant OS Axon image <https://downloads.vicharak.in/vicharak-axon/home-assistant-os/>`_ 
 
-----------------------------
-Flash the OS Image
-----------------------------
+-----------------------
+Flash Image in eMMC
+-----------------------
 
-To flash the downloaded image to an SD card, USB, or SSD:
+Follow this guide for flashing the image into eMMC:
+
+`Flashing Guide Using Linux_Upgrade_Tool (Linux) </vicharak_sbcs/axon/axon-linux/linux-usage-guide/linux-axon-upgrade-tool/#flash-raw-image-in-axon>`_
+
+-----------------------------------------------------------
+Flash Image in External Device Like, SD Card / USB
+-----------------------------------------------------------
 
 Option 1: Using Balena Etcher
 -------------------------------
@@ -52,18 +58,18 @@ Replace ``/dev/sdX`` with your target device (check with ``lsblk``).
 Boot Home Assistant OS
 ----------------------------
 
+.. danger::
+
+   Kindly, Attach **Ethernet** to device. It is mandatory to configure Home Assistant OS to boot properly.
+
 1. Insert the flashed media into Axon.
 2. Power on the device.
 3. Wait for the system to initialize. ( It might take 4-5 Minutes to configure ) 
-
-----------------------------
-Access Home Assistant
-----------------------------
+4. Access Home Assistant
 
 Once the device has booted and is connected to your local network:
 
 - Open a web browser on your computer.
-- Go to:
 
   .. code-block:: text
 
@@ -75,12 +81,18 @@ Once the device has booted and is connected to your local network:
 
      http://<DEVICE_IP>:8123
 
-.. image:: /_static/images/haos-1.webp
+
+You will be greeted with the **Home Assistant onboarding screen**.
+Follow the setup wizard to create your account and configure Home Assistant. It might take 20-25 minutes to configure.
+
+
+.. image:: /_static/images/haos-3.webp
    :width: 100%
 
+After Configuring Device setup, you will be redirected to **Dashboard** of the Home Assistand Operating System,
 
-You will be greeted with the **Home Assistant onboarding screen**.  
-Follow the setup wizard to create your account and configure Home Assistant.
+.. image:: /_static/images/haos-1.webp
+   :width: 100%
 
 ----------------------------
 Enable SSH Access
