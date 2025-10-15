@@ -107,14 +107,74 @@ Download IDB Success
 Download Firmware Start
 Download Image... (12%)
 ```
+:::{tip}
+For more guidance, Watch Tutorial video on [How To Flash Image in eMMC ?](https://www.youtube.com/watch?v=O40fGwKvf_c&ab_channel=Vicharak)
+:::
+
+
+### Flash RAW image in Axon
+
+1. Check whether device is in MaskRom Mode or not.
+
+```bash
+sudo ./upgrade_tool ld
+```
+Below, output will be shown.
+
+```bash
+List of rockusb connected(1)
+DevNo=1	Vid=0x2207,Pid=0x350b,LocationID=12	Mode=Maskrom	SerialNo=
+```
+
+2. [Download RK3588 SPL Loader](https://downloads.vicharak.in/vicharak-axon/rk3588_spl_loader_v1.14.113.bin)
+
+3. Flash SPL Loader using **db**.
+
+```bash
+sudo ./upgrade_tool db rk3588_spl_loader_v1.14.113.bin
+```
+
+4. Flash image using **wl** command.
+
+```bash
+sudo ./upgrade_tool wl 0 <Version_vicharak-axon-Kernel_Version_Date-ubuntu_version-raw.img>
+```
+
+You will see this type of process:
+
+```bash
+[sudo] password for vicharak:
+Loading firmware...
+Support Type:330C FW Ver:8.1.00 FW Time:2023-07-07 14:11:41
+Loader ver:1.1e Loader Time:2023-07-07 14:11:08
+Start to upgrade firmware...
+Download Boot Start
+Download Boot Success
+Wait For Maskrom Start
+Wait For Maskrom Success
+Test Device Start
+Test Device Success
+Check Chip Start
+Check Chip Success
+Get FlashInfo Start
+Get FlashInfo Success
+Prepare IDB Start
+Prepare IDB Success
+Download IDB Start
+Download IDB Success
+Download Firmware Start
+Download Image... (12%)
+```
+
+5. Reset Device using reset buttton on board or you can run below command.
+
+```bash
+sudo ./upgrade_tool rd
+```
 
 :::{note}
 Upon completion of the flashing process, the board will automatically reboot twice to install essential packages and apply necessary changes.
 Please allow a few minutes for the process to finalize.
-:::
-
-:::{tip}
-For more guidance, Watch Tutorial video on [How To Flash Image in eMMC ?](https://www.youtube.com/watch?v=O40fGwKvf_c&ab_channel=Vicharak)
 :::
 
 ### To Erase the flash
