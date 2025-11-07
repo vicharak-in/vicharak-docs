@@ -47,7 +47,7 @@ How to Generate UART's on the Vaaman ?
                      "RX": "GPIOR_183"
                }
             ],
-            "i2c": [],
+            "i2cmaster": [],
             "gpio": [],
             "pwm": [],
             "ws": [],
@@ -55,7 +55,9 @@ How to Generate UART's on the Vaaman ?
             "onewire": [],
             "can": [],
             "i2s": [],
-            "i2cslave": []
+            "i2cslave": [],
+            "jtag": [],
+            "swi": []
          }
 
 2. **Run the periplex-sync command:**
@@ -166,6 +168,8 @@ FTDI USB-to-UART adapter is a popular tool for testing and debugging serial comm
 
    - After opening minicom on both sides, simply type characters into minicom, and UART communication between Vaaman and your PC will be established using the FTDI USB-to-UART adapter, You can verify communication by typing some characters in the Minicom session open on your Vaaman board and checking if the data appears in the Minicom session open on your PC.
 
-   .. tip::
+.. Note::
       
-      - You can refer the `MINICOM docs`_.
+   - The Periplex UART implementation already includes full support for parity, data-width, and stop-bit configuration. It accommodates common parity modes (None, Odd, Even), supports data-widths ranging from 5 to 8 bits, and allows selection of either 1 or 2 stop bits.
+
+   - You can refer this `MINICOM docs`_.
