@@ -21,7 +21,7 @@ How to Generate CAN's on the Vaaman ?
 
          {
             "uart": [],
-            "i2c": [],
+            "i2cmaster": [],
             "gpio": [],
             "pwm": [],
             "ws": [],
@@ -55,7 +55,9 @@ How to Generate CAN's on the Vaaman ?
                }
             ],
             "i2s": [],
-            "i2cslave": []
+            "i2cslave": [],
+            "jtag": [],
+            "swi": []
          }
 
 2. **Run the periplex-sync command:**

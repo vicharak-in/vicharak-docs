@@ -18,7 +18,7 @@ How to Generate GPIO's on the Vaaman ?
 
       {
          "uart": [],
-         "i2c": [],
+         "i2cmaster": [],
          "gpio": [
             {
                   "id": 0,
@@ -82,7 +82,9 @@ How to Generate GPIO's on the Vaaman ?
          "onewire": [],
          "can": [],
          "i2s": [],
-         "i2cslave": []
+         "i2cslave": [],
+         "jtag": [],
+         "swi": []
       }
 
 2. **Run the periplex-sync command:**
