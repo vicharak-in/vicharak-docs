@@ -65,24 +65,29 @@ How to Generate I2C's on the Vaaman ?
 
      sudo periplex-sync -p device.json
 
-   - After successfully running of ``periplex-sync`` command, it will ask for the reboot. 
-
    .. note::
 
-        - While periplex-sync is running, it will prompt you to edit the periplex-dtso file. Press ``1`` to select ``Yes``. This option is useful when you want to customize the Device Tree Source Overlay (DTSO) file according to your requirements.
+    - During the periplex-sync process, you’ll be prompted to edit the periplex-dtso file. Press ``1`` for Yes, then press ``Enter`` to continue.
+
+    - The periplex-dtso file will open in your default text editor (usually ``vim`` or ``nano``), where you can modify it as needed.
+    
+    - For example, the default I2C clock speed provided in the DTSO is ``100 kHz``. If you want to change it to ``400 kHz``, you can update the ``clock-frequency`` property in the periplex-dtso file, If this property is not specified, the system will automatically use the default clock speed of ``100 kHz``.
+
+    - To set the I2C clock speed to ``400 kHz``, modify the periplex-dtso file as shown below:
         
-        - For example, the default I2C clock speed provided in the DTSO is ``100 kHz``. If you want to change it to ``400 kHz``, you can update the clock-frequency property in the periplex-dtso file, If this property is not specified, the system will automatically use the default clock speed of ``100 kHz``.
+    .. code-block::
 
-        - To set the I2C clock speed to ``400 kHz``, modify the periplex-dtso file as shown below:
-            
-        .. code-block::
+        periplex_i2c1: periplex-i2c1 {
+                status = "okay";
+                compatible = "vicharak,periplex-i2c";
+                periplex-id = <0>;
+                clock-frequency = <400000>;
+        };
 
-            periplex_i2c1: periplex-i2c1 {
-                    status = "okay";
-                    compatible = "vicharak,periplex-i2c";
-                    periplex-id = <0>;
-                    clock-frequency = <400000>;
-            };
+    
+   - After successfully running of ``periplex-sync`` command, it will ask for the reboot. 
+
+
 
 3. **Reboot the board:**
 
@@ -136,7 +141,7 @@ The Periplex platform dynamically generates ``I2C`` devices, which are accessibl
 
 These ``i2c-*`` device nodes allow users to communicate with I2C peripherals such as sensors, EEPROMs, and other slave devices connected to the I2C bus.
 
-using i2cset/i2cget 
+Using i2cset/i2cget 
 -------------------
 
 To use the i2cset, i2cget, and i2cdetect commands, you need to install the i2c-tools package. These tools are part of the i2c-utils package, which provides user-space tools for interacting with I2C devices via the Linux I2C subsystem.

@@ -19,7 +19,7 @@ How to Generate SPI's on the Vaaman ?
 
          {
             "uart": [],
-            "i2c": [],
+            "i2cmaster": [],
             "gpio": [],
             "pwm": [],
             "ws": [],
@@ -60,7 +60,9 @@ How to Generate SPI's on the Vaaman ?
             "onewire": [],
             "can": [],
             "i2s": [],
-            "i2cslave": []
+            "i2cslave": [],
+            "jtag": [],
+            "swi": []
          }
 
 2. **Run the periplex-sync command:**
@@ -71,9 +73,8 @@ How to Generate SPI's on the Vaaman ?
 
      sudo periplex-sync -p device.json
 
-   - After successfully running of ``periplex-sync`` command, It will ask for editing the ``periplex-dtso`` file, press ``1`` for ``yes`` 
-     and then press ``Enter`` to continue.
-   - This will open the ``periplex-dtso`` file in your default text editor (usually ``vim`` or ``nano``), you need to add the following content into it for create the ``4-SPI's`` chip:
+   - After successfully running of ``periplex-sync`` command, It will ask for editing the ``periplex-dtso`` file, press ``1`` for ``yes`` and then press ``Enter`` to continue.
+   - This will open the ``periplex-dtso`` file in your default text editor (usually ``vim`` or ``nano``), you need to add the following content into it for create the ``4-SPI's`` dev device:
 
    .. code-block::
 
