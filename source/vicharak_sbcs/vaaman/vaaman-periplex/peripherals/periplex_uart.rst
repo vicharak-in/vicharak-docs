@@ -5,14 +5,14 @@ PERIPLEX UART
 .. variable 
 .. _MINICOM docs: https://linux.die.net/man/1/minicom
  
-This section explains how to interact with the ``UART's`` device generated on Vaaman via Periplex.
+This section explains how to interact with the ``UART`` devices generated on Vaaman via Periplex.
 
-How to Generate UART's on the Vaaman ?
-======================================
+How to Generate UARTs on the Vaaman ?
+=====================================
 
 1. **Create the json file:**
 
-   - To generate ``5 UART's``, Your need to create a json file and copy the following content into it.
+   - To generate ``5 UART`` devices, Your need to create a json file and copy the following content into it.
 
    .. tip::
       - how to create the json configuration file for periplex, You can check this :doc:`Usage Guide <../usage>` 
@@ -62,7 +62,7 @@ How to Generate UART's on the Vaaman ?
 
 2. **Run the periplex-sync command:**
 
-   - For example, if the JSON configuration for ``5 UART's`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
+   - For example, if the JSON configuration for ``5 UART`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
 
    .. code-block::
 
@@ -73,7 +73,7 @@ How to Generate UART's on the Vaaman ?
 3. **Reboot the board:**
 
    - After rebooting, all configurations have been successfully applied.
-   - You will get the ``5-UART's`` devices generated through Periplex like this:
+   - You will get the ``5 UART`` devices generated through Periplex like this:
 
    .. raw:: html
 
@@ -108,7 +108,7 @@ How to Generate UART's on the Vaaman ?
             i2c-0            mmcblk0boot1  spidev0.0    tty28    tty52  usb-ffs   vcsa7
          </pre>
 
-How to interact with the generated UART's ?
+How to interact with the generated UARTs ?
 ===========================================
 
 The Periplex platform dynamically generates ``UART`` devices, which are accessible through device nodes such as:

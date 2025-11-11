@@ -3,14 +3,14 @@ PERIPLEX SPI
 ############
 
 
-This section explains how to interact with the ``SPI's`` chip generated on Vaaman via Periplex.
+This section explains how to interact with the ``SPI`` chips generated on Vaaman via Periplex.
 
-How to Generate SPI's on the Vaaman ?
+How to Generate SPIs on the Vaaman ?
 =====================================
 
 1. **Create the json file:**
 
-   - To generate ``4-SPI's`` chip, Your need to create a json file and copy the following content into it.
+   - To generate ``4 SPI`` chips, Your need to create a json file and copy the following content into it.
 
    .. tip::
       - how to create the json configuration file for periplex, You can check this :doc:`Usage Guide <../usage>` 
@@ -67,14 +67,14 @@ How to Generate SPI's on the Vaaman ?
 
 2. **Run the periplex-sync command:**
 
-   - For example, if the JSON configuration for ``4-SPI's`` chip is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
+   - For example, if the JSON configuration for ``4 SPI`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
 
    .. code-block::
 
      sudo periplex-sync -p device.json
 
    - After successfully running of ``periplex-sync`` command, It will ask for editing the ``periplex-dtso`` file, press ``1`` for ``yes`` and then press ``Enter`` to continue.
-   - This will open the ``periplex-dtso`` file in your default text editor (usually ``vim`` or ``nano``), you need to add the following content into it for create the ``4-SPI's`` dev device:
+   - This will open the ``periplex-dtso`` file in your default text editor (usually ``vim`` or ``nano``), you need to add the following content into it for create the ``4 SPI`` dev device:
 
    .. code-block::
 
@@ -142,7 +142,7 @@ How to Generate SPI's on the Vaaman ?
 3. **Reboot the board:**
 
    - After rebooting, all configurations have been successfully applied.
-   - You will get the ``4-SPI's`` chip generated through Periplex like this:
+   - You will get the ``4 SPI`` chips generated through Periplex like this:
 
    .. raw:: html
 
@@ -151,7 +151,7 @@ How to Generate SPI's on the Vaaman ?
          /dev/spidev0.0  <span style="color:red;">/dev/spidev1.0</span>  <span style="color:red;">/dev/spidev2.0</span>  <span style="color:red;">/dev/spidev3.0</span>  <span style="color:red;">/dev/spidev4.0</span>
       </pre>
 
-How to interact with the generated SPI's ?
+How to interact with the generated SPIs ?
 ===========================================
 
 The Periplex platform dynamically exposes SPI controllers as ``spidev`` devices, which can be accessed via paths like:

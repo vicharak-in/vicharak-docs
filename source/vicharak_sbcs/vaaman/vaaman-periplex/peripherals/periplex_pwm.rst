@@ -3,14 +3,14 @@ PERIPLEX PWM
 ############
 
 
-This section explains how to interact with the ``PWM's`` chip generated on Vaaman via Periplex.
+This section explains how to interact with the ``PWM`` chips generated on Vaaman via Periplex.
 
-How to Generate PWM's on the Vaaman ?
-=====================================
+How to Generate PWMs on the Vaaman ?
+====================================
 
 1. **Create the json file:**
 
-   - To generate ``5-PWM's`` chip, Your need to create a json file and copy the following content into it.
+   - To generate ``5 PWM`` chips, you need to create a JSON file and copy the following content into it.
 
    .. tip::
       - how to create the json configuration file for periplex, You can check this :doc:`Usage Guide <../usage>` 
@@ -55,7 +55,7 @@ How to Generate PWM's on the Vaaman ?
 
 2. **Run the periplex-sync command:**
 
-   - For example, if the JSON configuration for ``5-PWM's`` chip is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
+   - For example, if the JSON configuration for  ``5 PWM`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
 
    .. code-block::
 
@@ -66,7 +66,7 @@ How to Generate PWM's on the Vaaman ?
 3. **Reboot the board:**
 
    - After rebooting, all configurations have been successfully applied.
-   - You will get the ``5-PWM's`` chip generated through Periplex like this:
+   - You will get the ``5 PWM`` chips generated through Periplex like this:
 
    .. raw:: html
 
@@ -75,8 +75,8 @@ How to Generate PWM's on the Vaaman ?
          pwmchip0  <span style="color:red;">pwmchip1</span>  <span style="color:red;">pwmchip2</span>  <span style="color:red;">pwmchip3</span>  <span style="color:red;">pwmchip4</span>  <span style="color:red;">pwmchip5</span>
       </pre>
 
-How to interact with the generated PWM's ?
-===========================================
+How to interact with the generated PWMs ?
+=========================================
 
 The Periplex platform dynamically exposes PWM controllers as ``pwmchip`` devices, which can be accessed via paths like:
 
