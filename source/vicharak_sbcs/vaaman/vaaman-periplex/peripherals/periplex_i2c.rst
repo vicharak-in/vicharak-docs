@@ -2,14 +2,14 @@
 PERIPLEX I2C
 ############
 
-This section explains how to interact with the ``I2C's`` device generated on Vaaman via Periplex.
+This section explains how to interact with the ``I2C`` devices generated on Vaaman via Periplex.
 
-How to Generate I2C's on the Vaaman ?
-=====================================
+How to Generate I2Cs on the Vaaman ?
+====================================
 
 1. **Create the json file:**
 
-   - To generate ``5 I2C's``, Your need to create a json file and copy the following content into it. 
+   - To generate ``5 I2C`` devices, You need to create a json file and copy the following content into it. 
 
    .. tip::
       - how to create the json configuration file for periplex, You can check this :doc:`Usage Guide <../usage>` 
@@ -59,7 +59,7 @@ How to Generate I2C's on the Vaaman ?
 
 2. **Run the periplex-sync command:**
 
-   - For example, if the JSON configuration for ``5 I2C's`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
+   - For example, if the JSON configuration for ``5 I2C`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
 
    .. code-block::
 
@@ -87,12 +87,10 @@ How to Generate I2C's on the Vaaman ?
     
    - After successfully running of ``periplex-sync`` command, it will ask for the reboot. 
 
-
-
 3. **Reboot the board:**
 
    - After rebooting, all configurations have been successfully applied.
-   - You will get the ``5-I2C's`` devices generated through Periplex like this:
+   - You will get the ``5 I2C`` devices generated through Periplex like this:
     
    .. raw:: html
 
@@ -127,7 +125,7 @@ How to Generate I2C's on the Vaaman ?
             i2c-0            mapper        rk_cec        tty23      tty48  usb-ffs   vcsa7
         </pre>
 
-How to interact with the generated I2C's ?
+How to interact with the generated I2Cs ?
 ===========================================
 
 The Periplex platform dynamically generates ``I2C`` devices, which are accessible through device nodes such as:
@@ -139,7 +137,7 @@ The Periplex platform dynamically generates ``I2C`` devices, which are accessibl
    /dev/i2c-13
    ...
 
-These ``i2c-*`` device nodes allow users to communicate with I2C peripherals such as sensors, EEPROMs, and other slave devices connected to the I2C bus.
+These ``i2c-*`` devices nodes allow users to communicate with I2C peripherals such as sensors, EEPROMs, and other slave devices connected to the I2C bus.
 
 Using i2cset/i2cget 
 -------------------

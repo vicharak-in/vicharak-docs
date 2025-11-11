@@ -5,14 +5,14 @@ PERIPLEX CAN
 .. variable
 .. _Connection Reference: https://youtu.be/ZH_CCs12ptg?si=oH_NP-bzYvP39H-k
 
-This section explains how to interact with the CAN network interface nodes generated on Vaaman through Periplex.
+This section explains how to interact with the ``CAN`` network interface nodes generated on Vaaman through Periplex.
 
-How to Generate CAN's on the Vaaman ?
+How to Generate CANs on the Vaaman ?
 =====================================
 
 1. **Create the json file:**
 
-   - To generate ``5 CAN's``, Your need to create a json file and copy the following content into it. 
+   - To generate ``5 CAN`` nodes, Your need to create a json file and copy the following content into it. 
 
    .. tip::
       - how to create the json configuration file for periplex, You can check this :doc:`Usage Guide <../usage>` 
@@ -62,7 +62,7 @@ How to Generate CAN's on the Vaaman ?
 
 2. **Run the periplex-sync command:**
 
-   - For example, if the JSON configuration for ``5 CAN's`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
+   - For example, if the JSON configuration for ``5 CAN`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
 
    .. code-block::
 
@@ -73,7 +73,7 @@ How to Generate CAN's on the Vaaman ?
 3. **Reboot the board:**
 
    - After rebooting, all configurations have been successfully applied.
-   - You will get the 5 CAN's network interface node generated through Periplex like this:
+   - You will get the ``5 CAN`` network interface nodes generated through Periplex like this:
 
    .. raw:: html
 
@@ -82,7 +82,7 @@ How to Generate CAN's on the Vaaman ?
          <span style="color:red;">can0</span>  <span style="color:red;">can1</span>  <span style="color:red;">can2</span>  <span style="color:red;">can3</span>  <span style="color:red;">can4</span>  dummy0  eth0  lo  wlan0
       </pre>
 
-How to interact with the generated CAN's ?
+How to interact with the generated CANs ?
 ==========================================
 
 The Periplex platform dynamically generates ``CAN`` interfaces, which are accessible through device nodes such as:
@@ -202,3 +202,7 @@ In this setup, the ``HW-021`` acts as a physical layer transceiver, converting t
    - In the video, the presenter demonstrates CAN communication between two ``ESP32`` boards using ``HW-021`` transceivers.
 
    - For your setup, the same physical wiring concept applies — simply replace one of the ``ESP32`` boards with the ``Vaaman SBC``. The connection between the two ``HW-021`` modules (CANH to CANH, CANL to CANL) remains identical.
+
+.. Note::
+
+      - ``CAN-FD`` support is currently not available in the periplex-can driver. This feature is under active development and will be introduced in an upcoming release to provide extended data frame capabilities and improved performance.
