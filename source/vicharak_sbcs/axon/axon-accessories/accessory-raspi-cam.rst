@@ -8,7 +8,7 @@
    :width: 65%
    :align: center
 
-You can use the Raspberry Pi Camera Module ``v1`` and ``v2`` with the
+You can use the Raspberry Pi Camera Module ``v1`` with the
 Vicharak Axon. The ``raspi`` camera module is a small circuit board
 that connects to the CSI connector on the Axon and allows you to take
 photos and videos.
@@ -22,15 +22,20 @@ You can find more information about the camera module on the `Raspberry
 Pi Camera documentation
 <https://www.raspberrypi.com/documentation/accessories/camera.html>`_.
 
-Buy the `Raspberry Pi Camera Module v2
-<https://www.raspberrypi.com/products/camera-module-v2/>`_.
-
+|
 #######################
 Axon Camera Guide
 #######################
 
-1. Enable overlays options sutiable for your camera.
-2. You can setup camera using python source.
+1. You must require to update kernel by using below command.
+
+.. code-block::
+
+   sudo apt update
+   sudo apt upgrade
+
+2. Enable overlays options sutiable for your camera.
+3. You can setup camera using python source.
 
 Pre-Requisites
 ---------------
@@ -46,17 +51,59 @@ Enable Overlays In Axon
 .. image::  ./../../../_static/images/rk3588-axon/axon-camera-mipi-p.webp
     :width: 50%
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-pcb.webp
-    :width: 50%
+Camera Interface PCBs
+---------------------
+
+2 Lane Alpha PCB ( Rpi compatible )
+================================
+
+.. image::  ./../../../_static/images/rk3588-axon/axon-camera-alpha.webp
+    :width: 30%
 
 **Here, you can find which overlay should be turned on for each MIPI Connector.**
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-detail.webp
-    :width: 50%
+.. list-table::
+   :header-rows: 1
+   :widths: 15 15 15 15
+
+   * - **Interface on Vicharak board**
+     - **Lane option**
+     - **Vicharak camera PCB**
+     - **Turn on Overlay in Linux**
+
+   * - MIPI_CSIO
+     - 2 Lane
+     - α
+     - Alpha
+
+   * - MIPI_CSI1
+     - 2 Lane
+     - α
+     - Alpha
+
+   * - MIPI_DPHY_RX0
+     - 2 Lane
+     - α
+     - Alpha
+
+   * - MIPI_DPHY_RX1
+     - 2 Lane
+     - α
+     - Alpha
+
+   * - MIPI_CSIO
+
+       MIPI_CSI1
+
+       MIPI_DPHY_RX0
+
+       MIPI_DPHY_RX1
+     - 4 Lane
+     - α
+     - Alpha
 
 .. note::
-    In Above Table, Full Mode can support 4 Lane Camera whereas Split mode can support 2 Lane Camera.
-
+    In Above Table, **Alpha 4 lane PCB will be available soon**
 
 **Steps to follow for Configuration**
     
