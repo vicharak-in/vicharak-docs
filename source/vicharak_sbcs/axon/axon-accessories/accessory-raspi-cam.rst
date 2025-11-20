@@ -48,7 +48,7 @@ Pre-Requisites
 Enable Overlays In Axon 
 ------------------------
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-mipi-p.webp
+.. image::  /_static/images/rk3588-axon/axon-camera-mipi-p.webp
     :width: 50%
 
 Camera Interface PCBs
@@ -57,7 +57,7 @@ Camera Interface PCBs
 2 Lane Alpha PCB ( Rpi compatible )
 ================================
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-alpha.webp
+.. image::  /_static/images/rk3588-axon/axon-camera-alpha.webp
     :width: 30%
 
 **Here, you can find which overlay should be turned on for each MIPI Connector.**
@@ -71,39 +71,39 @@ Camera Interface PCBs
      - **Vicharak camera PCB**
      - **Turn on Overlay in Linux**
 
-   * - MIPI_CSIO
+   * - MIPI CSI0
      - 2 Lane
      - α
      - Alpha
 
-   * - MIPI_CSI1
+   * - MIPI CSI1
      - 2 Lane
      - α
      - Alpha
 
-   * - MIPI_DPHY_RX0
+   * - MIPI DPHY RX0
      - 2 Lane
      - α
      - Alpha
 
-   * - MIPI_DPHY_RX1
+   * - MIPI DPHY RX1
      - 2 Lane
      - α
      - Alpha
 
-   * - MIPI_CSIO
+   * - MIPI CSI0
 
-       MIPI_CSI1
+       MIPI CSI1
 
-       MIPI_DPHY_RX0
+       MIPI DPHY RX0
 
-       MIPI_DPHY_RX1
+       MIPI DPHY RX1
      - 4 Lane
      - α
      - Alpha
 
 .. note::
-    In Above Table, **Alpha 4 lane PCB will be available soon**
+    **Alpha 4 lane PCB will be available soon**
 
 **Steps to follow for Configuration**
     
@@ -113,17 +113,17 @@ Camera Interface PCBs
 
 3. Select ``Overlays`` options in it by pressing ``enter`` key.
            
-.. image:: ./../../../_static/images/rk3399-vaaman/Overlays_1.webp
+.. image:: /_static/images/rk3399-vaaman/Overlays_1.webp
                    :width: 50%
 
 4. You will see Warning Page, click on ``yes`` and select ``Manage Overlays`` options.
 
-.. image:: ./../../../_static/images/rk3399-vaaman/Overlays_2.webp
+.. image:: /_static/images/rk3399-vaaman/Overlays_2.webp
                    :width: 50%
     
 5. Select overlays as per your camera part number ``( OV5647 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
     
-.. image:: ./../../../_static/images/rk3588-axon/axon-overlay-list.webp
+.. image:: /_static/images/rk3588-axon/axon-overlay-list.webp
                    :width: 50%
     
 6. To return back to terminal, press the ``Esc`` key until you exit from it.
@@ -139,35 +139,35 @@ How to Attach Camera to Axon
 
 1. First, Connect Vicharak Flex Cable To Vicharak CAM PCB Connector.
  
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-start.gif
+.. image::  /_static/images/rk3588-axon/axon-camera-start.gif
     :width: 40%
 
 .. danger::
         Make sure to connect the Vicharak flex cable's AXON PCB side connector to the AXON board, and the display/camera side connector to the Vicharak CAM PCB.
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-2.gif
+.. image::  /_static/images/rk3588-axon/axon-camera-2.gif
     :width: 40%
 
 2. Attach Camera Module To FPC50 15 Pin 1mm Pitch Cable.
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-3.gif
+.. image::  /_static/images/rk3588-axon/axon-camera-3.gif
     :width: 40%
 
 3. Connect Camera To Vicharak CAM PCB Connector. 
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-4.gif
+.. image::  /_static/images/rk3588-axon/axon-camera-4.gif
     :width: 40%
 
    
 4. Connect Axon Side Vicharak Flex Cable to Axon.
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-5.gif
+.. image::  /_static/images/rk3588-axon/axon-camera-5.gif
     :width: 40%
 
 
 5. After Using Camera, User can remove camera using twizer.
 
-.. image::  ./../../../_static/images/rk3588-axon/axon-camera-6.gif
+.. image::  /_static/images/rk3588-axon/axon-camera-6.gif
     :width: 40%
 
 
@@ -308,17 +308,17 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
     
     3. Select ``Overlays`` options in it by pressing ``enter`` key.
            
-           .. image:: ./../../../_static/images/rk3399-vaaman/Overlays_1.webp
+           .. image:: /_static/images/rk3399-vaaman/Overlays_1.webp
                    :width: 50%
     
     4. You will see Warning Page, click on ``yes`` and select ``Manage Overlays`` options.
     
-       .. image:: ./../../../_static/images/rk3399-vaaman/Overlays_2.webp
+       .. image:: /_static/images/rk3399-vaaman/Overlays_2.webp
                    :width: 50%
     
     5. Select overlays as per your camera part number ``( OV5647 / IMX219 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
     
-       .. image:: ./../../../_static/images/rk3399-vaaman/Overlays_3.webp
+       .. image:: /_static/images/rk3399-vaaman/Overlays_3.webp
                    :width: 50%
     
     6. To return back to terminal, press the ``Esc`` key until you exit from it.
@@ -336,12 +336,12 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
     
             1. Attach the camera along with FPC50 15 Pin 1mm pitch cable to the CSI connector.
     
-                .. image:: ./../../../_static/images/rk3399-vaaman/Camera_guide_0.webp
+                .. image:: /_static/images/rk3399-vaaman/Camera_guide_0.webp
                     :width:  50%
             
             2. Open the Cheese application in your Ubuntu Linux operating system.
     
-                .. image:: ./../../../_static/images/rk3399-vaaman/Camera_1.webp
+                .. image:: /_static/images/rk3399-vaaman/Camera_1.webp
                    :width: 50%
     
             3. You will be shown Cheese camera interface.
@@ -350,16 +350,16 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
     
             5. Click on ``Preferences`` and select ``rkisp_mainpath`` in Device option.
     
-                .. image:: ./../../../_static/images/rk3399-vaaman/Camera_2.webp
+                .. image:: /_static/images/rk3399-vaaman/Camera_2.webp
                    :width: 50%
     
     
-                .. image:: ./../../../_static/images/rk3399-vaaman/Camera_3.webp
+                .. image:: /_static/images/rk3399-vaaman/Camera_3.webp
                    :width: 50%
     
             6. Click on a webcam button in the middle of the bottom panel, or press the ``spacebar`` key, to take the photo.
             
-                .. image:: ./../../../_static/images/rk3399-vaaman/Camera_4.webp
+                .. image:: /_static/images/rk3399-vaaman/Camera_4.webp
                    :width: 50%
     
             7. There will be a short countdown, followed by a flash, and the photo will appear in the photo stream.
@@ -413,7 +413,7 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
     
             1. Attach the camera along with FPC50 15 Pin 1mm pitch cable to the CSI connector.
              
-                .. image:: ./../../../_static/images/rk3399-vaaman/Camera_guide_0.webp
+                .. image:: /_static/images/rk3399-vaaman/Camera_guide_0.webp
                     :width:  50%
             
             2. Install Python if not already installed. You can download Python from the official website: `Python Downloads <https://www.python.org/downloads/>`__.
@@ -477,13 +477,13 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
     
             1. Upon running the program, the camera frame will open.
     
-               .. image:: ./../../../_static/images/rk3399-vaaman/python-script-camera-frame.webp
+               .. image:: /_static/images/rk3399-vaaman/python-script-camera-frame.webp
                   :alt: Image Description
                   :width: 650
             
             2. Press the ``Ctrl+S`` key on your keyboard to capture an image.
     
-               .. image:: ./../../../_static/images/rk3399-vaaman/python-script-save-image.webp
+               .. image:: /_static/images/rk3399-vaaman/python-script-save-image.webp
                   :alt: Image Description
                   :width: 650
     
