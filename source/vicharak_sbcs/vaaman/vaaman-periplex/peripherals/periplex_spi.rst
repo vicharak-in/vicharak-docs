@@ -3,14 +3,14 @@ PERIPLEX SPI
 ############
 
 
-This section explains how to interact with the ``SPI`` chips generated on Vaaman via Periplex.
+This section explains how to interact with the ``SPI`` devices generated on Vaaman via Periplex.
 
 How to Generate SPIs on the Vaaman ?
 =====================================
 
 1. **Create the json file:**
 
-   - To generate ``4 SPI`` chips, Your need to create a json file and copy the following content into it.
+   - To generate ``3 SPI`` devices, Your need to create a json file and copy the following content into it.
 
    .. tip::
       - how to create the json configuration file for periplex, You can check this :doc:`Usage Guide <../usage>` 
@@ -47,14 +47,6 @@ How to Generate SPIs on the Vaaman ?
                    "MOSI-OUT": "GPIOL_17",
                    "SLAVE-0": "GPIOL_20",
                    "CLK-OUT": "GPIOL_18"
-               },
-               {
-                   "id": 3,
-                   "SLAVE": 1,
-                   "MISO-IN": "GPIOR_187",
-                   "MOSI-OUT": "GPIOL_24",
-                   "SLAVE-0": "GPIOL_66",
-                   "CLK-OUT": "GPIOL_62"
                }
             ],
             "onewire": [],
@@ -67,15 +59,15 @@ How to Generate SPIs on the Vaaman ?
 
 2. **Run the periplex-sync command:**
 
-   - For example, if the JSON configuration for ``4 SPI`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
+   - For example, if the JSON configuration for ``3 SPI`` peripherals is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
 
    .. code-block::
 
      sudo periplex-sync -p device.json
 
    - After successfully running of ``periplex-sync`` command, It will ask for editing the ``periplex-dtso`` file, press ``1`` for ``yes`` and then press ``Enter`` to continue.
-   - This will open the ``periplex-dtso`` file in your default text editor (usually ``vim`` or ``nano``), you need to add the following content into it for create the ``4 SPI`` dev device:
-
+   - This will open the periplex-dtso file in your default text editor (usually ``vim`` or ``nano``).You now need to add the Device Tree content for your ``3 SPI`` peripherals. For example, if you want ``2 SPI device nodes`` and ``1 SPI Flash`` node, then add the following content inside the file:
+   
    .. code-block::
 
          //SPDX-License-Identifier: GPL-2.0+
@@ -88,49 +80,40 @@ How to Generate SPIs on the Vaaman ?
 
          &periplex{
 
-         	periplex_spi4: periplex-spi4 {
-         		status = "okay";
-         		compatible = "vicharak,periplex-spi";
-         		periplex-id = <3>;
-         	        spidev@0 {
-                                 compatible = "rockchip,spidev";
-                                 status = "okay";
-                                 reg = <0>;
-                                 spi-max-frequency = <25000000>;
-                         };
-         	};
          	periplex_spi3: periplex-spi3 {
          		status = "okay";
          		compatible = "vicharak,periplex-spi";
          		periplex-id = <2>;
-         		spidev@0 {
-                                 compatible = "rockchip,spidev";
-                                 status = "okay";
-                                 reg = <0>;
-                                 spi-max-frequency = <25000000>;
-                         };
+                        flash: spi-flash@0 {
+                                reg = <0>;
+                                #address-cells = <1>;
+                                #size-cells = <0>;
+                                compatible = "jedec,spi-nor";
+                                spi-max-frequency = <10000000>;
+                                status = "okay";
+                        };
          	};
          	periplex_spi2: periplex-spi2 {
          		status = "okay";
          		compatible = "vicharak,periplex-spi";
-         		periplex-id = <1>;
-         		spidev@0 {
-                                 compatible = "rockchip,spidev";
-                                 status = "okay";
-                                 reg = <0>;
-                                 spi-max-frequency = <25000000>;
-                         };
+         		periplex-id = <1>;         		
+                        spidev@0{
+                                compatible = "rockchip,spidev";
+                                status = "okay";
+                                reg = <0>;
+                                spi-max-frequency = <25000000>;
+                        };
          	};
          	periplex_spi1: periplex-spi1 {
          		status = "okay";
          		compatible = "vicharak,periplex-spi";
-         		periplex-id = <0>;
-         		spidev@0 {
-         		        compatible = "rockchip,spidev";
-         		        status = "okay";
-         		        reg = <0>;
-         		        spi-max-frequency = <25000000>;
-         		};
+         		periplex-id = <0>;                
+                        spidev@0{
+                                compatible = "rockchip,spidev";
+                                status = "okay";
+                                reg = <0>;
+                                spi-max-frequency = <25000000>;
+                        };
          	};
 
          };
@@ -142,29 +125,38 @@ How to Generate SPIs on the Vaaman ?
 3. **Reboot the board:**
 
    - After rebooting, all configurations have been successfully applied.
-   - You will get the ``4 SPI`` chips generated through Periplex like this:
+   - You will get the ``3 SPI`` peripherals generated through Periplex like this:
 
+   - You can see the generated ``2 spi device`` nodes:
    .. raw:: html
 
       <pre style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; width: 71%; height: 67px; overflow: auto; white-space: pre-wrap;">
          vicharak@vicharak:~$ ls /dev/spidev*
-         /dev/spidev0.0  <span style="color:red;">/dev/spidev1.0</span>  <span style="color:red;">/dev/spidev2.0</span>  <span style="color:red;">/dev/spidev3.0</span>  <span style="color:red;">/dev/spidev4.0</span>
+         /dev/spidev0.0  <span style="color:red;">/dev/spidev1.0</span>  <span style="color:red;">/dev/spidev2.0</span>  
+      </pre>
+
+   - Similarly, you will see the ``SPI Flash`` device created under the MTD subsystem:
+   .. raw:: html
+        
+      <pre style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; width: 71%; height: 67px; overflow: auto; white-space: pre-wrap;">
+         vicharak@vicharak:~$ ls /dev/mtd*
+          <span style="color:red;">/dev/mtd0</span> /dev/mtd0ro /dev/mtdblock0
       </pre>
 
 How to interact with the generated SPIs ?
 ===========================================
 
-The Periplex platform dynamically exposes SPI controllers as ``spidev`` devices, which can be accessed via paths like:
+The Periplex platform dynamically generates ``spidev`` devices and other ``SPI-based peripheral`` nodes at runtime., which can be accessed via paths like:
 
 .. code-block::
 
    /dev/spidev1.0
    /dev/spidev2.0
-   /dev/spidev3.0
+   /dev/mtd0
    ...
 
-Configuring and Controlling SPI's chip
---------------------------------------
+Operations on dev/spidevX.0 (SPI chips)
+-----------------------------------------
 
 Each SPI chip manages a SPI bus. For example, you want control ``spidev1.0``.
 
@@ -186,121 +178,69 @@ Each SPI chip manages a SPI bus. For example, you want control ``spidev1.0``.
 
    - Read data from the SPI device using ``readbytes()``.
 
-   - Transfer data (send and receive simultaneously) using xfer2().
+   - Transfer data (send and receive simultaneously) using ``xfer2()``.
 
 4. **Gracefully closes the SPI connection after operations:**
 
    - ``spi.close_connection()`` is used to safely close the SPI connection after all operations are completed.
 
-- Follow this python script to control the SPI chip:
+.. tip::
+    - Follow this python script to control the SPI device nodes :download:`python_script </_static/files/periplex_spi.py>`
 
-.. code-block:: python
 
-   #!/usr/bin/env python3
-   import spidev
-   import sys
+Operations on /dev/mtd0 (SPI Flash)
+-----------------------------------
 
-   class SimpleSPI:
-       def __init__(self, bus=1, device=0):
-           """Initialize SPI connection"""
-           self.spi = spidev.SpiDev()
-           self.bus = bus
-           self.device = device
+SPI Flash devices such as the ``W25Q128JV``, which appear as MTD (Memory Technology Device) nodes like:
 
-       def open_connection(self):
-           """Open SPI connection and configure settings"""
-           try:
-               self.spi.open(self.bus, self.device)
+1. **Opens the MTD Flash Device:**
+    
+   - Opens the MTD device located at ``/dev/mtd0`` using ``open()`` ioctl call for read and write operations.
+   .. code-block::
 
-               # Basic SPI configuration
-               self.spi.max_speed_hz = 25000000  # 25MHz
-               self.spi.mode = 0  # SPI Mode 0
-               self.spi.bits_per_word = 8
+       /dev/mtd0
 
-               print(f"SPI connection opened: /dev/spidev{self.bus}.{self.device}")
-               print(f"Speed: {self.spi.max_speed_hz} Hz, Mode: {self.spi.mode}")
-               return True
+2. **Reads Flash Device Information:**
 
-           except Exception as e:
-               print(f"Error opening SPI: {e}")
-               return False
+   - Use the ``MEMGETINFO`` ioctl to retrieve flash memory details such as total flash size, erase block size (``4 KB`` for ``W25Q128JV``), write size, and page size ``256 bytes``, These parameters determine the minimum amount of data that can be erased, written, or updated at a time.
 
-       def close_connection(self):
-           """Close SPI connection"""
-           if self.spi:
-               self.spi.close()
-               print("SPI connection closed")
+3. **Prepares 10,000 Bytes of Test Data:**
 
-       def write_data(self, data):
-           """Write data to SPI device"""
-           try:
-               if isinstance(data, int):
-                   data = [data]
+   - Generates a repeating pattern ``(0–255)``:
+   .. code-block::
 
-               print(f"Writing: {[hex(x) for x in data]}")
-               self.spi.writebytes(data)
-               return True
+        0x00, 0x01, 0x02, ... 0xFF, 0x00, 0x01 ...
 
-           except Exception as e:
-               print(f"Write error: {e}")
-               return False
+4. **Erases the Required Sectors:**
 
-       def read_data(self, length):
-           """Read data from SPI device"""
-           try:
-               data = self.spi.readbytes(length)
-               print(f"Read: {[hex(x) for x in data]}")
-               return data
+   - Since ``10000`` bytes > one ``4KB`` sector, the program erases:
+   - Sector 0 ``(0–4095)``
+   - Sector 1 ``(4096–8191)``
+   - Using the ioctl: ``MEMERASE``
+   - This ensures the flash is clean before writing.
 
-           except Exception as e:
-               print(f"Read error: {e}")
-               return None
+5. **Writes 10,000 Bytes to Flash (in 256-byte pages):**
 
-       def transfer_data(self, tx_data):
-           """Transfer data (simultaneous read/write)"""
-           try:
-               if isinstance(tx_data, int):
-                   tx_data = [tx_data]
+   - W25Q128JV allows ``256-byte`` page writes.
+   - The program writes data page-by-page:
+   - Automatically calculates how many bytes to write per loop.
+   - Uses ``write()`` system call.
+   - Adds ``1ms`` delay between writes to allow the flash to finish programming.
 
-               # Store original data before xfer2 call
-               tx_original = tx_data.copy()
+6. **Reads Back 10,000 Bytes:**
 
-               rx_data = self.spi.xfer2(tx_data)
-               print(f"TX: {[hex(x) for x in tx_original]} → RX: {[hex(x) for x in rx_data]}")
-               return rx_data
+   - Reads the same memory from offset ``0x00000000``.
+   - Reads in ``256-byte`` chunks.
+   - Stores results in a separate buffer.
 
-           except Exception as e:
-               print(f"Transfer error: {e}")
-               return None
+7. **Verifies Data Integrity:**
 
-   def main():
-       """Main function demonstrating basic SPI operations"""
-       print("Simple SPI Communication")
-       print("=" * 30)
+   - Compares each byte written vs. byte read
+   - Reports mismatches (first 10 only)
+   - If all bytes match:
+   .. code-block::
 
-       # Create SPI instance
-       spi = SimpleSPI(bus=1, device=0)  # /dev/spidev1.0
+        ✓ Perfect! All 10000 bytes verified successfully
 
-       # Open connection
-       if not spi.open_connection():
-           sys.exit(1)
-
-       try:
-           # Basic operations
-           print("\n--- Write Operation ---")
-           spi.write_data([0x01, 0x02, 0x03])
-
-           print("\n--- Read Operation ---")
-           spi.read_data(3)
-
-           print("\n--- Transfer Operation ---")
-           spi.transfer_data([0xAA, 0xBB, 0xCC])
-
-       except Exception as e:
-           print(f"Error: {e}")
-
-       finally:
-           spi.close_connection()
-
-   if __name__ == "__main__":
-       main()
+.. tip::
+    - Follow this c program to control the SPI-flash :download:`c_program </_static/files/periplex_spi.c>`
