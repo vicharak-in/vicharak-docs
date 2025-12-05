@@ -340,7 +340,7 @@ These modules automatically load when a compatible Intel WiFi Card is detected. 
 
       .. code-block:: console
 
-         vicharak@vicharak:~$ wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/iwlwifi-7260-17.ucode
+         vicharak@vicharak:~$ wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/intel/iwlwifi/iwlwifi-7260-17.ucode
          vicharak@vicharak:~$ sudo cp iwlwifi-7260-17.ucode /lib/firmware
       .. raw:: html
 
@@ -389,7 +389,7 @@ These modules automatically load when a compatible Intel WiFi Card is detected. 
 
       .. code-block:: console
 
-         vicharak@vicharak:~$ wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/{iwlwifi-ty-a0-gf-a0-72.ucode,iwlwifi-ty-a0-gf-a0.pnvm}
+         vicharak@vicharak:~$ wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/intel/iwlwifi/{iwlwifi-ty-a0-gf-a0-72.ucode,iwlwifi-ty-a0-gf-a0.pnvm}
          vicharak@vicharak:~$ sudo cp iwlwifi-ty-a0-gf-a0-72.ucode iwlwifi-ty-a0-gf-a0.pnvm /lib/firmware
       .. raw:: html
 
