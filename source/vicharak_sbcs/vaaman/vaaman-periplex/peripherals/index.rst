@@ -18,4 +18,4 @@ Vaaman periplex supports a wide variety of peripherals to expand its functionali
    I2S <periplex_i2s>
    I2C-SLAVE <periplex_i2cslave>
    JTAG <periplex_jtag>
-   SWI <periplex_swi>
+   DHT <periplex_dht>

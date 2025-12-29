@@ -54,7 +54,7 @@ How to Generate SPIs on the Vaaman ?
             "i2s": [],
             "i2cslave": [],
             "jtag": [],
-            "swi": []
+            "dht": []
          }
 
 2. **Run the periplex-sync command:**

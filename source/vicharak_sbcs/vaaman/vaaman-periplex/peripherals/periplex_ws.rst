@@ -73,7 +73,7 @@ How to Generate WS2812Bs on Vaaman ?
             "i2s": [],
             "i2cslave": [],
             "jtag": [],
-            "swi": []
+            "dht": []
          }
    
 2. **Run the periplex-sync command:**
