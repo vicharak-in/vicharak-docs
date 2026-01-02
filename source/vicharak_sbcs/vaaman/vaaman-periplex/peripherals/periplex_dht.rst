@@ -192,6 +192,12 @@ Example of using DHT device node
    vicharak@vicharak:~$gcc dht_read.c -o dht_read
    vicharak@vicharak:~$sudo ./dht_read /dev/dht-0
 
+- you will get the temperature and humidity data from the connected ``DHT`` sensor like this:
+
+.. code-block::
+
+   Humidity: 37 Temperature: 28.500000 C
+
 .. note::
     - Make sure to run the executable with ``sudo`` to have the necessary permissions to access the device nodes.
     - Ensure that the ``DHT`` sensor is properly connected to the specified GPIO pin corresponding to the ``DHT`` device node being accessed.
