@@ -14,8 +14,6 @@ OS Images
       - **Variant**
     - - Android
       - `Android 12.1 <http://downloads.vicharak.in/vicharak-vaaman/android/>`_
-    - - Debian
-      - `Bullseye 11 <http://downloads.vicharak.in/vicharak-vaaman/debian>`_
     - - Ubuntu
       - `Jammy Jellyfish 22.04.5 LTS <http://downloads.vicharak.in/vicharak-vaaman/ubuntu>`_
     - - Community Images
