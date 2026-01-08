@@ -144,219 +144,303 @@ Python script to control WS2812B LEDs
 
 - This is python code run into your vaaman board and start the Artnet server to get the data from xlights.
 
-.. code-block:: python
+.. code-block::
+	
+	import sys
+	import getopt
+	import socket
+	import logging
+	import pyrah
+	import os
+	import datetime
+	import time
+	import fcntl
+	import struct
+	import array
+	import signal
+	from threading import Thread
 
-      #!/usr/bin/python3 
+	# Configure logging
+	logging.basicConfig(
+		level=logging.INFO,
+		format='%(asctime)s - %(levelname)s - %(message)s'
+	)
 
-      import sys
-      import getopt
-      import socket
-      import logging
-      import signal
-      import pyrah
-      import os
-      import datetime
-      import time
-      import fcntl
-      import struct
-      import array
-      from threading import Thread
+	# Constants
+	PIXEL_BUNCH = 400
+	PERIPLEX_ID = 0
+	PUSH_DATA = (1 << 30) | (8 << 16) | (ord('a') << 8) | ord('b')
 
-      # Configure logging
-      logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-      # Constants
-      PIXEL_BUNCH = 400
-      PERIPLEX_ID = 0
-      PUSH_DATA = (1 << 30) | (8 << 16) | (ord('a') << 8) | ord('b')
-
-
-      class ArtNetServer:
-      """
-      ArtNet server to receive ArtNet packets and process them using specified peripherals.
-      """
-      def __init__(self, host='0.0.0.0', port=6454):
-            """
-            Initialize the ArtNet server.
-            :param host: Host IP address to bind the server
-            :param port: Port to bind the server
-            """
-            self.host = self.get_host_ip()
-            self.port = port
-            self.server_socket = None
-      
-      def get_host_ip(self):
-            """
-            Get host ip address
-            """
-            try:
-                  with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
-                  s.connect(("8.8.8.8", 80))
-                  ip = s.getsockname()[0]
-                  return ip
-            except Exception as e:
-                  logging.error(f"Error obtaining host IP: {e}")
-                  return '127.0.0.1'
-      
-      def start(self):
-            """
-            Start the ArtNet server and listen for incoming packets.
-            """
-            def signal_handler(sig, frame):
-                  logging.info("Keyboard interrupt received, shutting down server.")
-                  if self.server_socket:
-                  self.server_socket.close()
-                  sys.exit(0)
-            
-            signal.signal(signal.SIGINT, signal_handler)
-            
-            try:
-                  self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                  self.server_socket.bind((self.host, self.port))
-                  logging.info(f"ArtNet server listening on {self.host}:{self.port}")
-            except Exception as e:
-                  logging.error(f"Server error: {e}")
-      
-      def stop(self):
-            """
-            Stop the ArtNet server.
-            """
-            if self.server_socket:
-                  self.server_socket.close()
-      
-      def get_artnet_data(self):
-            """
-            Get the artnet data.
-            """
-            try:
-                  data, addr = self.server_socket.recvfrom(1024)
-                  return self.handle_packet(data, addr)
-            except Exception as e:
-                  logging.error(f"Server error: {e}")
-      
-      def handle_packet(self, data, addr):
-            if data[:8] == b'Art-Net\x00':
-                  opcode = data[8:10]
-                  if opcode == b'\x00\x50':
-                  return data
-                  else:
-                  logging.info(f"Unsupported opcode: {opcode}")
-            else:
-                  logging.warning(f"Received non-ArtNet packet from {addr}")
-            return -1
+	# Global dictionary to store device file descriptors
+	device_fds = {}
 
 
-      def set_matrix(argv):
-      """Parse command line arguments for matrix dimensions"""
-      arg_help = "{0} -r <rows> -c <col>".format(argv[0])
-      try:
-            opts, args = getopt.getopt(argv[1:], "h:r:c:", ["help", "rows=", "cols="])
-      except:
-            print(arg_help)
-            sys.exit(2)
-      
-      arg_rows = None
-      arg_cols = None
-      
-      for opt, arg in opts:
-            if opt in ("-h", "--help"):
-                  print(arg_help)
-                  sys.exit(2)
-            elif opt in ("-c", "--cols"):
-                  arg_cols = arg
-            elif opt in ("-r", "--rows"):
-                  arg_rows = arg
-      
-      try:
-            print('rows:', arg_rows)
-            print('cols:', arg_cols)
-            return int(arg_rows), int(arg_cols)
-      except:
-            print(arg_help)
-            sys.exit(2)
+	class ArtNetServer:
+		"""
+		ArtNet server to receive ArtNet packets and process them using specified peripherals.
+		"""
+
+		def __init__(self, host='0.0.0.0', port=6454):
+			"""
+			Initialize the ArtNet server.
+
+			:param host: Host IP address to bind the server
+			:param port: Port to bind the server
+			"""
+			self.host = self.get_host_ip()
+			self.port = port
+			self.server_socket = None
+
+		def get_host_ip(self):
+			"""
+			Get host IP address.
+			"""
+			try:
+				with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+					s.connect(("8.8.8.8", 80))
+					ip = s.getsockname()[0]
+				return ip
+			except Exception as e:
+				logging.error(f"Error obtaining host IP: {e}")
+				return '127.0.0.1'
+
+		def start(self):
+			"""
+			Start the ArtNet server and listen for incoming packets.
+			"""
+			try:
+				self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+				self.server_socket.bind((self.host, self.port))
+				logging.info(f"ArtNet server listening on {self.host}:{self.port}")
+			except Exception as e:
+				logging.error(f"Server error: {e}")
+				raise
+
+		def stop(self):
+			"""
+			Stop the ArtNet server.
+			"""
+			if self.server_socket:
+				self.server_socket.close()
+				logging.info("ArtNet server stopped")
+
+		def get_artnet_data(self):
+			"""
+			Receive ArtNet data.
+			"""
+			try:
+				data, addr = self.server_socket.recvfrom(1024)
+				return self.handle_packet(data, addr)
+			except Exception as e:
+				logging.error(f"Server error: {e}")
+				return None
+
+		def handle_packet(self, data, addr):
+			"""
+			Handle incoming ArtNet packets.
+			"""
+			if data[:8] == b'Art-Net\x00':
+				opcode = data[8:10]
+				if opcode == b'\x00\x50':
+					return data
+				else:
+					logging.info(f"Unsupported opcode: {opcode}")
+			else:
+				logging.warning(f"Received non-ArtNet packet from {addr}")
+
+			return None
 
 
-      def get_dmx_data(data):
-      """Extract DMX data from ArtNet packet"""
-      sequence = data[12]
-      physical = data[13]
-      universe = int.from_bytes(data[14:16], byteorder='little')
-      length = int.from_bytes(data[16:18], byteorder='big')
-      dmx_data = data[18:18+length]
-      return dmx_data
+	def set_matrix(argv):
+		"""
+		Parse command line arguments to set matrix dimensions.
+		"""
+		arg_help = f"{argv[0]} -r <rows> -c <cols>"
 
-      def send_to_ws2812b_device(row, data):
-      """Send data to specific WS2812B device based on row number"""
-      device_name = f"/dev/ws2812b-{row}"
-      try:
-            fd = os.open(device_name, os.O_RDWR)
-            arr = array.array('B', data)
-            packed = struct.pack('IIQ', len(data), 0, arr.buffer_info()[0])
-            result = fcntl.ioctl(fd, PUSH_DATA, packed)
-            os.close(fd)
-            return True
-      except (FileNotFoundError, PermissionError, OSError) as e:
-            print(f"Error sending to {device_name}: {e}")
-            return False
+		try:
+			opts, args = getopt.getopt(
+				argv[1:], "h:r:c:", ["help", "rows=", "cols="]
+			)
+		except getopt.GetoptError:
+			print(arg_help)
+			sys.exit(2)
+
+		arg_rows = None
+		arg_cols = None
+
+		for opt, arg in opts:
+			if opt in ("-h", "--help"):
+				print(arg_help)
+				sys.exit(0)
+			elif opt in ("-c", "--cols"):
+				arg_cols = arg
+			elif opt in ("-r", "--rows"):
+				arg_rows = arg
+
+		try:
+			print("rows:", arg_rows)
+			print("cols:", arg_cols)
+			return int(arg_rows), int(arg_cols)
+		except Exception:
+			print(arg_help)
+			sys.exit(2)
 
 
-      if __name__ == "__main__":
-      server = ArtNetServer()
+	def get_dmx_data(data):
+		"""
+		Extract DMX data from ArtNet packet.
+		"""
+		sequence = data[12]
+		physical = data[13]
+		universe = int.from_bytes(data[14:16], byteorder='little')
+		length = int.from_bytes(data[16:18], byteorder='big')
+		dmx_data = data[18:18 + length]
 
-      try:
-            rows, cols = set_matrix(sys.argv)
-            frame_buffer = []
+		logging.info(
+			f"ArtDMX packet: universe={universe}, length={length}, "
+			f"sequence={sequence}, physical={physical}"
+		)
 
-            try:
-                  server.start()
-                  while True:
-                  artnet_data = server.get_artnet_data()
-                  
-                  # Skip if invalid packet
-                  if artnet_data == -1:
-                        continue
-                  
-                  dmx_data = get_dmx_data(artnet_data)
-                  frame_buffer.extend(dmx_data)
-                  
-                  if (len(frame_buffer) >= (rows * cols * 3)):
-                        bytes_per_row = cols * 3
-                        bytes_per_led = 3
-                        
-                        for col in range(0, cols, PIXEL_BUNCH):
-                              print(f"Processing column:\n")
-                              if cols - col < PIXEL_BUNCH:
-                              pixels = cols - col
-                              else:
-                              pixels = PIXEL_BUNCH
+		return dmx_data
 
-                              start_led_bytes = col * 3
-                              
-                              for row in range(rows):
-                              # Extract data for this row and column range
-                              row_start = start_led_bytes + (row * cols * 3)
-                              row_data = frame_buffer[row_start:row_start + pixels * 3]
-                              
-                              print(f"Sending to ws2812b-{row}: {bytes(row_data).hex(' ')}")
-                              
-                              # Send data to corresponding WS2812B device
-                              send_to_ws2812b_device(row, bytes(row_data))
-                              
-                              # Update start position for next column chunk
-                              start_led_bytes = col * 3
 
-                        time.sleep(5/1000)
-                        frame_buffer = []
-                        
-            except Exception as e:
-                  print(f"Error in main loop: {e}")
+	def open_all_devices(rows):
+		"""
+		Open all WS2812B device files at startup.
+		"""
+		global device_fds
+		print("Opening all WS2812B devices...")
 
-      except Exception as e:
-            print(f"Error in initialization: {e}")
+		for row in range(rows):
+			device_name = f"/dev/ws2812b-{row}"
+			try:
+				fd = os.open(device_name, os.O_RDWR)
+				device_fds[row] = fd
+			except (FileNotFoundError, PermissionError, OSError) as e:
+				print(f"Error opening {device_name}: {e}")
+				close_all_devices()
+				raise RuntimeError(f"Failed to open device {device_name}")
 
-      finally:
-            print("Closing server")
-            server.stop()
+		print(f"All {rows} devices opened successfully")
+
+
+	def close_all_devices():
+		"""
+		Close all open WS2812B device files.
+		"""
+		global device_fds
+		print("Closing all WS2812B devices...")
+
+		for row, fd in device_fds.items():
+			try:
+				os.close(fd)
+			except OSError as e:
+				print(f"Error closing /dev/ws2812b-{row}: {e}")
+
+		device_fds.clear()
+		print("All devices closed")
+
+
+	def send_to_ws2812b_device(row, data):
+		"""
+		Send data to a specific WS2812B device using a pre-opened file descriptor.
+		"""
+		global device_fds
+
+		if row not in device_fds:
+			print(f"Error: Device ws2812b-{row} not opened")
+			return False
+
+		try:
+			fd = device_fds[row]
+			arr = array.array('B', data)
+			packed = struct.pack('IIQ', len(data), 0, arr.buffer_info()[0])
+			fcntl.ioctl(fd, PUSH_DATA, packed)
+			return True
+		except OSError as e:
+			print(f"Error sending to /dev/ws2812b-{row}: {e}")
+			return False
+
+
+	def signal_handler(sig, frame, server):
+		"""
+		Handle interrupt signals for graceful shutdown.
+		"""
+		print("\nReceived interrupt signal, shutting down...")
+		server.stop()
+		close_all_devices()
+		sys.exit(0)
+
+
+	if __name__ == "__main__":
+		server = ArtNetServer()
+
+		try:
+			rows, cols = set_matrix(sys.argv)
+
+			# Open all devices at startup
+			open_all_devices(rows)
+
+			frame_buffer = []
+
+			# Setup signal handler
+			signal.signal(
+				signal.SIGINT,
+				lambda sig, frame: signal_handler(sig, frame, server)
+			)
+
+			try:
+				server.start()
+				print("ArtNet LED Matrix Controller started. Press Ctrl+C to stop.")
+
+				while True:
+					artnet_data = server.get_artnet_data()
+					if artnet_data is None:
+						continue
+
+					dmx_data = get_dmx_data(artnet_data)
+					frame_buffer.extend(dmx_data)
+
+					if len(frame_buffer) >= (rows * cols * 3):
+						bytes_per_row = cols * 3
+
+						for col in range(0, cols, PIXEL_BUNCH):
+							print(f"Processing column batch starting at {col}")
+
+							pixels = min(PIXEL_BUNCH, cols - col)
+							start_led_bytes = col * 3
+
+							for row in range(rows):
+								row_start = start_led_bytes + (row * bytes_per_row)
+								row_data = frame_buffer[
+									row_start:row_start + (pixels * 3)
+								]
+
+								print(
+									f"Sending to ws2812b-{row}: "
+									f"{bytes(row_data).hex(' ')}"
+								)
+
+								send_to_ws2812b_device(row, bytes(row_data))
+
+						time.sleep(5 / 1000)
+						frame_buffer.clear()
+
+			except KeyboardInterrupt:
+				print("\nReceived Ctrl+C, shutting down...")
+			except Exception as e:
+				print(f"Error in main loop: {e}")
+				logging.error("Main loop error", exc_info=True)
+
+		except Exception as e:
+			print(f"Error during initialization: {e}")
+			logging.error("Initialization error", exc_info=True)
+
+		finally:
+			print("Cleaning up...")
+			server.stop()
+			close_all_devices()
+			print("Shutdown complete")
 
 
 - Run the Python script using the command below to launch the Art-Net server on the Vaaman board. Once the server starts successfully, the following output will be displayed :
