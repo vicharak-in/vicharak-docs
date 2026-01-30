@@ -2,14 +2,14 @@
 PERIPLEX I2C
 ############
 
-This section explains how to interact with the ``I2C's`` device generated on Vaaman via Periplex.
+This section explains how to interact with the ``I2C`` devices generated on Vaaman via Periplex.
 
-How to Generate I2C's on the Vaaman ?
-=====================================
+How to Generate I2Cs on the Vaaman ?
+====================================
 
 1. **Create the json file:**
 
-   - To generate ``5 I2C's``, Your need to create a json file and copy the following content into it. 
+   - To generate ``5 I2C`` devices, You need to create a json file and copy the following content into it. 
 
    .. tip::
       - how to create the json configuration file for periplex, You can check this :doc:`Usage Guide <../usage>` 
@@ -18,7 +18,7 @@ How to Generate I2C's on the Vaaman ?
 
          {
             "uart": [],
-            "i2c": [
+            "i2cmaster": [
                 {
                     "id": 0,
                     "SCL": "GPIOT_RXP28",
@@ -52,23 +52,45 @@ How to Generate I2C's on the Vaaman ?
             "onewire": [],
             "can": [],
             "i2s": [],
-            "i2cslave": []
+            "i2cslave": [],
+            "jtag": [],
+            "dht": []
          }
 
 2. **Run the periplex-sync command:**
 
-   - For example, if the JSON configuration for ``5 I2C's`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
+   - For example, if the JSON configuration for ``5 I2C`` is stored into the ``device.json`` file, the ``periplex-sync`` command would look like this:
 
    .. code-block::
 
      sudo periplex-sync -p device.json
 
+   .. note::
+
+    - During the periplex-sync process, you’ll be prompted to edit the periplex-dtso file. Press ``1`` for Yes, then press ``Enter`` to continue.
+
+    - The periplex-dtso file will open in your default text editor (usually ``vim`` or ``nano``), where you can modify it as needed.
+    
+    - For example, the default I2C clock speed provided in the DTSO is ``100 kHz``. If you want to change it to ``400 kHz``, you can update the ``clock-frequency`` property in the periplex-dtso file, If this property is not specified, the system will automatically use the default clock speed of ``100 kHz``.
+
+    - To set the I2C clock speed to ``400 kHz``, modify the periplex-dtso file as shown below:
+        
+    .. code-block::
+
+        periplex_i2c1: periplex-i2c1 {
+                status = "okay";
+                compatible = "vicharak,periplex-i2c";
+                periplex-id = <0>;
+                clock-frequency = <400000>;
+        };
+
+    
    - After successfully running of ``periplex-sync`` command, it will ask for the reboot. 
 
 3. **Reboot the board:**
 
    - After rebooting, all configurations have been successfully applied.
-   - You will get the ``5-I2C's`` devices generated through Periplex like this:
+   - You will get the ``5 I2C`` devices generated through Periplex like this:
     
    .. raw:: html
 
@@ -103,7 +125,7 @@ How to Generate I2C's on the Vaaman ?
             i2c-0            mapper        rk_cec        tty23      tty48  usb-ffs   vcsa7
         </pre>
 
-How to interact with the generated I2C's ?
+How to interact with the generated I2Cs ?
 ===========================================
 
 The Periplex platform dynamically generates ``I2C`` devices, which are accessible through device nodes such as:
@@ -115,10 +137,10 @@ The Periplex platform dynamically generates ``I2C`` devices, which are accessibl
    /dev/i2c-13
    ...
 
-These ``i2c-*`` device nodes allow users to communicate with I2C peripherals such as sensors, EEPROMs, and other slave devices connected to the I2C bus.
+These ``i2c-*`` devices nodes allow users to communicate with I2C peripherals such as sensors, EEPROMs, and other slave devices connected to the I2C bus.
 
-Simple set/get I2C values
--------------------------
+Using i2cset/i2cget 
+-------------------
 
 To use the i2cset, i2cget, and i2cdetect commands, you need to install the i2c-tools package. These tools are part of the i2c-utils package, which provides user-space tools for interacting with I2C devices via the Linux I2C subsystem.
 
@@ -190,6 +212,65 @@ To use the i2cset, i2cget, and i2cdetect commands, you need to install the i2c-t
 
         sudo i2cset -y 11 0x40 0x10 0x20
 
+Using i2ctransfer
+-----------------
+
+The ``i2ctransfer`` command is a powerful tool from the ``i2c-tools`` package that allows you to perform complex I2C transactions, such as combined write-read operations, multi-byte writes, and sequential reads. It communicates directly with the Linux I2C subsystem and is useful for interacting with I2C devices that require more advanced communication patterns.
+
+.. code-block::
+
+    sudo apt install i2c-tools
+
+1. **Basic Syntax of i2ctransfer**
+
+   The general format of the command is:
+
+   .. code-block::
+
+        i2ctransfer -y <bus_number> <operation>
+
+   An operation is defined as:
+
+   - ``w<count>@<device_address>`` → Write ``count`` bytes  
+   - ``r<count>@<device_address>`` → Read ``count`` bytes
+
+   You can combine multiple operations in a single transaction.
+
+2. **Example: Simple Write Operation**
+
+   To write 2 bytes (0x10 and 0x20) to a device at address ``0x40`` on I2C bus ``11``:
+
+   .. code-block::
+
+        sudo i2ctransfer -y 11 w2@0x40 0x10 0x20
+
+3. **Example: Simple Read Operation**
+
+   To read 4 bytes from a device at address ``0x40`` on bus ``11``:
+
+   .. code-block::
+
+        sudo i2ctransfer -y 11 r4@0x40
+
+4. **Example: Combined Write-Read Operation**
+
+   Many I2C devices require writing a register address before reading data.  
+   ``i2ctransfer`` can perform this in a single atomic transaction.
+
+   To write register address ``0x10`` and then read 2 bytes from device ``0x40`` on bus ``11``:
+
+   .. code-block::
+
+        sudo i2ctransfer -y 11 w1@0x40 0x10 r2@0x40
+
+5. **Example: Multi-Byte Register Read**
+
+   Some sensors use a 16-bit register address.  
+   Example: Write 2 bytes (0x01, 0x03) as the register index, then read 1 byte:
+
+   .. code-block::
+
+        sudo i2ctransfer -y 11 w2@0x36 0x01 0x03 r1@0x36
 
 .. note::
 

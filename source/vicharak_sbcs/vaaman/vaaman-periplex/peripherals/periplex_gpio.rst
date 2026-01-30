@@ -2,9 +2,9 @@
 PERIPLEX GPIO
 #############
 
-This section explains how to interact with the ``GPIO's`` controller generated on Vaaman via Periplex.
+This section explains how to interact with the ``GPIO`` controllers generated on Vaaman via Periplex.
 
-How to Generate GPIO's on the Vaaman ?
+How to Generate GPIOs on the Vaaman ?
 =====================================
 
 1. **Create the json file:**
@@ -18,7 +18,7 @@ How to Generate GPIO's on the Vaaman ?
 
       {
          "uart": [],
-         "i2c": [],
+         "i2cmaster": [],
          "gpio": [
             {
                   "id": 0,
@@ -82,7 +82,9 @@ How to Generate GPIO's on the Vaaman ?
          "onewire": [],
          "can": [],
          "i2s": [],
-         "i2cslave": []
+         "i2cslave": [],
+         "jtag": [],
+         "dht": []
       }
 
 2. **Run the periplex-sync command:**
@@ -98,7 +100,7 @@ How to Generate GPIO's on the Vaaman ?
 3. **Reboot the board:**
 
    - After rebooting, all configurations have been successfully applied.
-   - You will get the ``5-GPIO`` controller devices generated through Periplex like this:
+   - You will get the ``5 GPIO`` controller devices generated through Periplex like this:
 
    .. raw:: html
 
@@ -133,7 +135,7 @@ How to Generate GPIO's on the Vaaman ?
          <span style="color:red;">gpiochip8</span>        mapper        rk_cec        tty23      tty48  usb-ffs   vcsa7
       </pre>
 
-How to interact with the generated GPIO's ?
+How to interact with the generated GPIOs ?
 ===========================================
 
 The Periplex platform dynamically exposes GPIO controllers as ``gpiochip`` devices, which can be accessed via paths like:

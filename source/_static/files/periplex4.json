@@ -209,5 +209,7 @@
     "onewire": [],
     "can": [],
     "i2s": [],
-    "i2cslave": []
+    "i2cslave": [],
+    "jtag": [],
+    "dht": []
 }
