@@ -16,7 +16,7 @@
             "RX": "GPIOL_72"
         }
     ],
-    "i2c": [
+    "i2cmaster": [
         {
             "id": 3,
             "SCL": "GPIOT_RXP27",

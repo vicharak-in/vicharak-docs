@@ -201,7 +201,7 @@
             "RX": "GPIOB_TXP19"
         }
     ],
-    "i2c": [],
+    "i2cmaster": [],
     "gpio": [],
     "pwm": [],
     "ws": [],

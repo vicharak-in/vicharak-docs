@@ -77,9 +77,9 @@ How to Generate I2Cs on the Vaaman ?
         
     .. code-block::
 
-        periplex_i2c1: periplex-i2c1 {
+        periplex_i2cmaster1: periplex-i2cmaster1 {
                 status = "okay";
-                compatible = "vicharak,periplex-i2c";
+                compatible = "vicharak,periplex-i2cmaster";
                 periplex-id = <0>;
                 clock-frequency = <400000>;
         };
