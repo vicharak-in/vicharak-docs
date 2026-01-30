@@ -131,7 +131,7 @@
             "RX": "GPIOT_RXN09"
         }
     ],
-    "i2c": [
+    "i2cmaster": [
         {
             "id": 26,
             "SCL": "GPIOT_RXP17",
