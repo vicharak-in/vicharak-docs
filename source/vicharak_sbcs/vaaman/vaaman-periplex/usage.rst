@@ -80,7 +80,7 @@ Create the json file
         "i2s": [],
         "i2cslave": [],
         "jtag": [],
-        "swi": []
+        "dht": []
     }
 
 .. note::
@@ -103,7 +103,7 @@ Create the json file
                 "i2s": [],
                 "i2cslave": [],
                 "jtag": [],
-                "swi": []
+                "dht": []
             }
 
     4. Do not skip any peripherals. If a peripheral is not required, leave the brackets empty for that peripheral.   
