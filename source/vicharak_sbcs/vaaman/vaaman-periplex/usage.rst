@@ -59,7 +59,7 @@ Create the json file
                 "RX": "GPIOL_72"
             }
         ],
-        "i2c": [
+        "i2cmaster": [
             {
                 "id": 3,
                 "SCL": "GPIOT_RXP27",
@@ -93,7 +93,7 @@ Create the json file
         
             {
                 "uart": [],
-                "i2c": [],
+                "i2cmaster": [],
                 "gpio": [],
                 "pwm": [],
                 "ws": [],
