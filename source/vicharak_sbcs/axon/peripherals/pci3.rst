@@ -1,8 +1,9 @@
-##############
-PCIe 3.0
-##############
+###################
+PCIe 3.0(NVMe M.2)
+###################
 
-.. note::
+Overview
+--------
+The Vicharak-Axon board includes a dedicated M.2 expansion slot that supports NVMe solid-state drives using the PCI Express (PCIe) Gen 3 interface with four lanes (x4)
 
-   **Documentation coming soon!** 
-   This section will provide detailed information on how to configure and use I2C on Axon.
+`You can find about PCIe here (Vicharak Docs) <https://docs.vicharak.in/vicharak_sbcs/axon/storage/nvme/>`_
