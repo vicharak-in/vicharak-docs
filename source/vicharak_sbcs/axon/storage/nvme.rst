@@ -12,7 +12,7 @@ Specifications
 - Interface: PCIe 3.0 x4
 - Protocol: NVMe
 - Form factors supported: M-keyed NVMe drives (various lengths; 2230/2242/2260/2280 commonly supported), more detailed info is provided below
-- Software support: Linux kernel with NVMe enabled (kernel 5.x or newer recommended)
+- Software support: Linux kernel with NVMe enabled (kernel 5.10 and 6.1.75)
 
 Hardware installation notes
 ---------------------------
@@ -74,40 +74,6 @@ Form factors supported for PCIe
   - Supports SSD form factors: 2230, 2242, 2260, 2280
   - Direct PCIe lane routing (no onboard PCIe switch or SATA controller)
   - Passive adapter design
-
-
-Performance expectations
-------------------------
-
-.. list-table:: NVMe Performance Benchmark
-   :widths: 20 15 25 15 20
-   :header-rows: 1
-
-   * - Test Type
-     - Block Size
-     - Bandwidth
-     - IOPS
-     - Avg Latency
-   * - Sequential Read
-     - 1 MiB
-     - 1006 MiB/s (1055 MB/s)
-     - 1005
-     - 987 μs
-   * - Sequential Write
-     - 1 MiB
-     - 838 MiB/s (879 MB/s)
-     - 837
-     - 1.18 ms
-   * - Random Read
-     - 4 KiB
-     - 27.5 MiB/s (28.9 MB/s)
-     - 7044
-     - 136 μs
-   * - Random Write
-     - 4 KiB
-     - 44.6 MiB/s (46.8 MB/s)
-     - 11400
-     - 81 μs
 
 Troubleshooting
 ---------------
