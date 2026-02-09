@@ -11,19 +11,25 @@ Specifications
 --------------
 - Interface: PCIe 3.0 x4
 - Protocol: NVMe
-- Form factors supported: M-keyed NVMe drives (various lengths; 2230/2242/2260/2280 commonly supported), more detailed info is provided below
+- Form factors supported: M-keyed NVMe drives (natively: 2280 and various lengths with hats: 2230/2242/2260 supported), more detailed info is provided below
 - Software support: Linux kernel with NVMe enabled (kernel 5.10 and 6.1.75)
 
 Hardware installation notes
 ---------------------------
 - Ensure the board is powered off before handling.
 - Insert the NVMe drive into the M.2 socket at a ~30-degree angle, aligning the notch with the keying, then press down to seating position and secure with the mounting screw.
-- Use a heatsink or heat spreader(optional) if your drive is likely to sustain sustained write workloads to maintain performance and longevity.
+- Use a heatsink (optional) if your drive is likely to sustain sustained write workloads to maintain performance and longevity.
 - Re-seat if the drive is not detected after the initial insertion.
 - If you inserted the NVMe drive while the board is on, reboot the board if you can't detect the NVMe drive.
 
 Usage and management
 --------------------
+
+.. note::
+
+  The commands below assume the device is /dev/nvme0n1 and the partition is p1. Run lsblk to confirm your device.
+
+
 
 - Installing NVME Cli Tool
 
@@ -64,14 +70,15 @@ Form factors supported for PCIe
 .. image:: /_static/images/rk3588-axon/axon-pcie-2230-2242-2260-2280.webp
    :width: 10%
 
-- M.2 M-key PCIe Adapter Board
+- M.2 M-key PCIe Adapter Board(hat)
 
   This adapter board provides an M.2 M-key interface for connecting NVMe SSDs to the SBC via PCIe.
 
   **Features:**
 
   - M.2 M-key socket for NVMe (PCIe) SSDs
-  - Supports SSD form factors: 2230, 2242, 2260, 2280
+  - Form 2280 is directly supported natively on board
+  - Supports SSD form factors: 2230, 2242, 2260 through adapter board
   - Direct PCIe lane routing (no onboard PCIe switch or SATA controller)
   - Passive adapter design
 
