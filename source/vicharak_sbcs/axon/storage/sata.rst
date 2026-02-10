@@ -9,9 +9,7 @@ SATA
 Overview
 --------
 
-- The SATA interface on the vicharak-axon board is AHCI-compliant and exposed to the host operating system as standard storage devices (e.g., /dev/sdX).
-- Supported drives include 2.5" and 3.5" SATA HDDs and SSDs, powered by the board or an attached supply.
-- Additional power slots are also given besides the SATA slot of 5v and 12v for power supply.
+- The SATA interface on the vicharak-axon board is exposed to the host operating system as standard storage devices (e.g., /dev/sda or /sdX).
 - The interface is designed for straightforward data transfer, drive management, and typical OS-level tooling (partitioning, formatting, mounting, SMART monitoring).
 
 .. image:: /_static/images/rk3588-axon/axon-SATA.webp
@@ -20,32 +18,47 @@ Overview
 SATA connectors and power
 --------------------------
 
-- Data connector: standard 7-pin SATA data connector.
+The board provides a 16-pin SATA 3.0 connector that integrates both SATA data and power signals.
+
+- Data connector: standard 7-pin SATA data connector
 - Power connector: power slots are provided for 5v and 12v besides SATA slot
-- Cables: use proper SATA data and power cables.
 
 Getting started
 ---------------
 
-.. image:: /_static/images/rk3588-axon/axon-sataConnection.webp
+.. figure:: /_static/images/rk3588-axon/axon-sata-hat.webp
    :width: 70%
 
-- Prerequisites:
-  - A powered vicharak-axon board with an operating system installed that supports SATA/AHCI (Linux is demonstrated here).
-  - One SATA data cable and a suitable power source for connected drives.
+   Vicharak axon board connected with SATA expansion board/HAT
+
+.. note::
+
+    In the following commands, the SATA storage device is represented as /dev/sdX. Use the lsblk command to determine the correct device name assigned by the Linux system, and replace /dev/sdX accordingly before executing the commands.
+
+
 - Steps:
 
-  1) Connect a SATA drive to the board using a SATA data cable.
-  2) Connect the drive’s power via the SATA power connector from the board or the power supply.
-  3) Power on the board and boot into the operating system.
-  4) Confirm the OS detects the drive:
-     - Linux: run lsblk or dmesg | grep -i sata to verify /dev/sdX appears.
-  5) Partition and format the drive as needed:
+  1) Connect a SATA drive like a SATA HDD or SSD to the board using a Vicharak SATA expansion board or HAT with SATA data cable as shown in image above.
+  2) Power on the board and boot into the operating system.
+  3) Confirm the OS detects the drive:
+
+     .. code-block:: bash
+
+        lsblk
+        sudo dmesg | grep -i sata
+
+     to verify /dev/sdX (e.g., /dev/sda or /dev/sdb) appears.
+  4) Partition and format the drive as needed:
 
      - Create a partition table and partitions.
      - Create filesystems (e.g., ext4, xfs).
-  6) Mount the filesystem:
-     - Create a mount point and mount the new partition, e.g., sudo mount /dev/sdX1 /mnt/data.
+  5) Mount the filesystem:
+     - Create a mount point and mount the new partition:
+
+     .. code-block:: bash
+
+        sudo mkdir -p /mnt/data
+        sudo mount /dev/sdX1 /mnt/data
 
 Using Linux with the SATA interface
 ------------------------------------
