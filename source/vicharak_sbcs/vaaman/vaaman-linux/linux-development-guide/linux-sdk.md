@@ -240,6 +240,14 @@ This directory will contain:
 
 A **.wic image (SD Card)** (bootable disk image) and can direcly flashing using **dd** command or **Balena Etcher Tool**.
 
+**Default Credential :**
+
+```{note}
+Username : root
+
+Password : root
+```
+
 ### Building Android 12
 
 After successful syncing of the source, you are now ready to build the Linux SDK.
