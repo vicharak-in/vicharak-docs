@@ -66,37 +66,47 @@ Example output:
 
 .. code-block:: text
 
-   **** List of PLAYBACK Hardware Devices ****
-      card 0: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
+         vicharak@vicharak:~$ aplay -l
+    **** List of PLAYBACK Hardware Devices ****
+    card 0: rockchipes8388 [rockchip-es8388], device 0: dailink-multicodecs ES8323.3-0011-0 [dailink-multicodecs ES8323.3-0011-0]
       Subdevices: 1/1
       Subdevice #0: subdevice #0
-      card 1: rockchiphdmi1 [rockchip-hdmi1], device 0: rockchip-hdmi1 i2s-hifi-0 [rockchip-hdmi1 i2s-hifi-0]
+    card 1: rockchipdp0 [rockchip-dp0], device 0: rockchip-dp0 spdif-hifi-0 [rockchip-dp0 spdif-hifi-0]
       Subdevices: 1/1
       Subdevice #0: subdevice #0
-      card 2: rockchipes8388 [rockchip-es8388], device 0: dailink-multicodecs ES8323.3-0011-0 [dailink-multicodecs ES8323.3-0011-0]
+    card 2: rockchipdp1 [rockchip-dp1], device 0: rockchip-dp1 spdif-hifi-0 [rockchip-dp1 spdif-hifi-0]
+      Subdevices: 1/1
+      Subdevice #0: subdevice #0
+    card 3: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
+      Subdevices: 1/1
+      Subdevice #0: subdevice #0
+    card 4: rockchiphdmi1 [rockchip-hdmi1], device 0: rockchip-hdmi1 i2s-hifi-0 [rockchip-hdmi1 i2s-hifi-0]
       Subdevices: 1/1
       Subdevice #0: subdevice #0
 
+
+* See the chip name : **rockchipes8388** it contains **ES8388** which is an analog audio codec chip, which handles: audio
+* Note down the card and device number for this to be used in below commands
 
 Note the:
 
-* card number
-* device number
+* card number 
+* device number 
 
-In this example: ``card 2, device 0 → plughw:2,0``
+
 
 Step 2: Play Audio File
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Play an audio file using:
+Play an audio file using ( Note : Use the card and device number noted above, for eg: here hw:0,0 is used ):
 
 .. code-block:: bash
 
-   speaker-test -D hw:2,0 -c 2
+   speaker-test -D hw:0,0 -c 2
 
 .. code-block:: bash
 
-   aplay -D plughw:2,0 test.wav
+   aplay -D plughw:0,0 test.wav
 
 Parameter Explanation
 ,,,,,,,,,,,,,,,,,,,,,
@@ -107,7 +117,7 @@ Parameter Explanation
 
    * - Parameter
      - Meaning
-   * - ``-D plughw:2,0``
+   * - ``-D plughw:0,0``
      - Select playback device
    * - ``test.wav``
      - Audio file to play
@@ -124,7 +134,7 @@ Play a test tone or system sound:
 
 .. code-block:: bash
 
-   speaker-test -D plughw:2,0 -c 2 -t wav
+   speaker-test -D plughw:0,0 -c 2 -t wav
 
 Parameter Explanation
 ,,,,,,,,,,,,,,,,,,,,,
@@ -135,7 +145,7 @@ Parameter Explanation
 
    * - Parameter
      - Meaning
-   * - ``-D plughw:2,0``
+   * - ``-D plughw:0,0``
      - Playback device
    * - ``-c 2``
      - Stereo channels
@@ -162,7 +172,7 @@ Example:
 
 .. code-block:: bash
 
-   aplay -D plughw:2,0 -f S16_LE -r 16000 -c 1 test.wav
+   aplay -D plughw:0,0 -f S16_LE -r 16000 -c 1 test.wav
 
 Volume Control
 ^^^^^^^^^^^^^^
