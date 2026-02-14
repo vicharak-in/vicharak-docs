@@ -67,14 +67,23 @@ Example output:
 .. code-block:: text
 
    **** List of PLAYBACK Hardware Devices ****
-   card 0: Analog [Analog Device], device 0: DAC Playback
+      card 0: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
+      Subdevices: 1/1
+      Subdevice #0: subdevice #0
+      card 1: rockchiphdmi1 [rockchip-hdmi1], device 0: rockchip-hdmi1 i2s-hifi-0 [rockchip-hdmi1 i2s-hifi-0]
+      Subdevices: 1/1
+      Subdevice #0: subdevice #0
+      card 2: rockchipes8388 [rockchip-es8388], device 0: dailink-multicodecs ES8323.3-0011-0 [dailink-multicodecs ES8323.3-0011-0]
+      Subdevices: 1/1
+      Subdevice #0: subdevice #0
+
 
 Note the:
 
 * card number
 * device number
 
-In this example: ``card 0, device 0 → plughw:0,0``
+In this example: ``card 2, device 0 → plughw:2,0``
 
 Step 2: Play Audio File
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -83,7 +92,11 @@ Play an audio file using:
 
 .. code-block:: bash
 
-   aplay -D plughw:0,0 test.wav
+   speaker-test -D hw:2,0 -c 2
+
+.. code-block:: bash
+
+   aplay -D plughw:2,0 test.wav
 
 Parameter Explanation
 ,,,,,,,,,,,,,,,,,,,,,
@@ -94,7 +107,7 @@ Parameter Explanation
 
    * - Parameter
      - Meaning
-   * - ``-D plughw:0,0``
+   * - ``-D plughw:2,0``
      - Select playback device
    * - ``test.wav``
      - Audio file to play
@@ -111,7 +124,7 @@ Play a test tone or system sound:
 
 .. code-block:: bash
 
-   speaker-test -D plughw:0,0 -c 2 -t wav
+   speaker-test -D plughw:2,0 -c 2 -t wav
 
 Parameter Explanation
 ,,,,,,,,,,,,,,,,,,,,,
@@ -122,7 +135,7 @@ Parameter Explanation
 
    * - Parameter
      - Meaning
-   * - ``-D plughw:0,0``
+   * - ``-D plughw:2,0``
      - Playback device
    * - ``-c 2``
      - Stereo channels
@@ -149,7 +162,7 @@ Example:
 
 .. code-block:: bash
 
-   aplay -D plughw:0,0 -f S16_LE -r 16000 -c 1 test.wav
+   aplay -D plughw:2,0 -f S16_LE -r 16000 -c 1 test.wav
 
 Volume Control
 ^^^^^^^^^^^^^^
@@ -168,23 +181,7 @@ Use:
 
 Ensure output is not muted.
 
-Minimal Quick Start (Recommended for users)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: bash
-
-   aplay test.wav
-
-This uses the default configured audio output device.
-
-Recommended Playback Command
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: bash
-
-   aplay test.wav
-
----
+----
 
 Troubleshooting
 ===============
