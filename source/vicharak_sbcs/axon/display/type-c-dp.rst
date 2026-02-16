@@ -5,7 +5,7 @@ Type-C DP 1.4a
 .. image:: /_static/images/rk3588-axon/axon-dp.webp
    :width: 80%
 
-Axon provides 2 X multiplexed Type-C DisplayPort 1.4a interface for high-resolution display output with support for multiple displays and high video bandwidth. The DP connector on RK3588 is used for direct connections to DP-compatible displays, projectors, and USB-C docking stations.
+Axon provides 2x multiplexed Type-C DisplayPort 1.4a interface for high-resolution display output with support for multiple displays and high video bandwidth. The DP connector on RK3588 is used for direct connections to DP-compatible displays, projectors, and USB-C docking stations.
 
 Getting Started
 ---------------
@@ -13,14 +13,14 @@ Getting Started
 Prerequisites
 `````````````
 - Type-C DisplayPort 1.4a compatible display, or monitor
-- Vicharak PCB with DP connector support
+- Axon with DP connector
 - USB-C cable to your display port(HDMI , VGA , others) in your display
 
 How to use
 -----------
 1. Connect one end of your USB-C cable to axon board to the usb-ports shown in image
 2. Connect the other end of your USB-C cable to your display
-3. You should get the Vichrak configured display on your monitor
+3. You should get the Vichrak configured displayed on your monitor
 
 Configure DisplayPort and video mode
 `````````````````````````````````````
@@ -59,7 +59,7 @@ Key Information from Output
 - ``disconnected`` = Display not detected
 
 2. Auto-enable Display (Recommended)
-""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""
 
 Automatically enable the display with optimal settings:
 
@@ -68,7 +68,7 @@ Automatically enable the display with optimal settings:
    xrandr --output DP-2 --auto
 
 3. Set Custom Resolution and Refresh Rate
-"""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""
 
 .. note::
 
@@ -101,6 +101,105 @@ Common xrandr Parameters
      - Disable the display
    * - ``--scale <factor>``
      - Scale output (e.g., 1.0 for normal, 2.0 for 2x zoom)
+
+DP Connector-Split Mode
+------------------------
+Axon supports **DP connector-split mode**. When enabled, 2 USB-C DisplayPort connector can output split screen(50:50) to two external monitors . This feature behind the scene still uses same video port, so using this users can use more than 4 display screen on axon , if using all ports you can connect 6 screens. 
+
+Hardware Requirements
+`````````````````````
+
+To use DP connector-split mode, the following hardware is required:
+
+* Two USB Type-C to Display cable
+* Two external monitors
+After making the connection and booting the device follow below config guide
+
+Steps to follow for Configuration
+````````````````````````````````````````
+
+1. Open a terminal window (``Ctrl+Alt+T``).
+
+2. Run command ``sudo vicharak-config`` in it.
+
+3. Select ``Overlays`` options in it by pressing ``enter`` key.
+
+.. code-block:: console
+
+    ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────-───────────┐
+    │ Please select an option below:                                                           │
+    │                                                                                          │
+    │                                   System Maintanince                                     │
+    │                                       Hardware                                           │
+    │                                       Overlays                                           │
+    │                                     Connectivity                                         │
+    │                                   Advanced Options                                       │
+    │                                     User Settings                                        │
+    │                                     Localization                                         │
+    │                                         About                                            │
+    │                                                                                          │
+    │                      <Ok>                               <Cancel>                         │
+    │                                                                                          │
+    └──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+4. You will see Warning Page, click on ``yes`` and select ``Manage Overlays`` options.
+
+
+.. code-block:: console
+
+
+    ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
+    │ Configure Device Tree Overlay                                                            │
+    │                                                                                          │
+    │                                Manage overlays                                           │
+    │                                View overlay info                                         │
+    │                                Install 3rd party overlay                                 │
+    │                                Reset overlays                                            │
+    │                                                                                          │
+    │                                                                                          │
+    │                      <Ok>                               <Cancel>                         │
+    └──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+5. Select overlay **Enable DP connector-split mode Axon V0.3** by pressing ``spacebar`` on keyboard, then select ``Ok``.
+
+.. code-block:: console
+
+    ┌──────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+    │ Please select overlays:                                                                  │
+    │                                                                                                         │
+    │  [*] Enable DP connector-split mode Axon V0.3                                            │
+    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 Alpha Axon V0.3 [OFF]                     │
+    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 Alpha Axon V0.3 [OFF]                     │
+    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 Alpha Axon V0.3 [OFF]                     │
+    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 Alpha Axon V0.3 [OFF]                     │
+    │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Alpha Axon V0.3 [OFF]                 │
+    │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX1 Aplha Axon V0.3 [OFF]                 │
+    │  [ ] Enable I2C1 on 30-Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable I2C2 on 30-Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable I2C5 on 30-Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable I2C7 on 30-Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable PWM0 on 30 Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon V0.3                                      │
+    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon V0.3                                      │
+    │  [ ] Enable UART1 on 30 Pin GPIO Header Axon V0.3                                        │
+    │  [ ] Enable UART4 on 30 Pin GPIO Header Axon V0.3                                        │
+    │  [ ] Enable UART6 on 30 Pin GPIO Header Axon V0.3                                        │
+    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon V0.3                                   │
+    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon V0.3                                   │
+    │                                                                                          │
+    │                                                                                          │
+    │                                                                                          │
+    │                                                                                          │
+    │                     <Ok>                         <Cancel>                                │
+    │                                                                                          │
+    └──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+6. To return back to terminal, press the ``Esc`` key until you exit from it.
+
+7. In order to enable your configuration, Restart your computer or Run command ``sudo reboot`` in terminal.
 
 
 Troubleshooting
