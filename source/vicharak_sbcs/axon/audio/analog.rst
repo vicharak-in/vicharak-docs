@@ -10,12 +10,12 @@ The Analog MIC input on the Axon board provides a flexible interface for acousti
 Wiring and connectors
 ----------------------
 
-* For Single ended interface mic:
+* For Single ended mic:
 
   * Mic output → ANALOG_MIC pin (+)
   * Mic ground → GND (GPIO GND) on axon header
 
-* For Differential interface mic:
+* For Differential mic:
 
   * Mic output → ANALOG_MIC pin (+)
   * Mic ground → ANALOG_MIC pin (-)
