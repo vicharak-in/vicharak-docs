@@ -3,8 +3,6 @@
 Audio Interface
 ####################################
 
-Indepth docs coming soon.
-
 .. toctree::
    :maxdepth: 1
 
