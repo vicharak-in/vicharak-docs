@@ -19,4 +19,3 @@ Axon supports a wide variety of peripherals to expand its functionality and inte
    UART <uart>
    PCIe 2.0 <pci2>
    PCIe 3.0 <pci3>
-   SARADC <saradc>
