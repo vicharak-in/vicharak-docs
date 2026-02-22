@@ -14,3 +14,4 @@ Axon OS Configuration
    Tailscale Support <tailscale-support>
    Vicharak Config <vicharak-config/index>
    Vicharak Dao ( Remote Access For Vicharak Boards ) <vicharak-dao/index>
+   OBS Setup <obs-setup>
