@@ -1,10 +1,10 @@
 ROS2 (Robot Operating System)
 =============================
 
-The Robot Operating System (ROS) is a set of powerful open-source software libraries and tools that help developers build robotic applications. It provides device drivers, state-of-the-art algorithms, distributed communication, and developer tools that simplify robotics software development.
+The Robot Operating System (`ROS <https://www.ros.org/>`_) is a set of powerful open-source software libraries and tools that help developers build robotic applications. It provides device drivers, state-of-the-art algorithms, distributed communication, and developer tools that simplify robotics software development.
 
 .. image::  /_static/images/software/software-ros2-logo.webp
-    :width: 70%
+    :width: 80%
 
 ROS2 Support at Vicharak
 ------------------------
@@ -25,7 +25,7 @@ The objective is simple:
 
 .. note::
 
-   **Ubuntu & RHEL users:** ROS2 can be installed natively following official documentation on your systems. However, **vicharak-ros2** is recommended for other distros or if you don't want to manage dependency yourself, want simplified management, consistent and quick setup.
+   **Ubuntu users:** ROS2 can be installed natively following official documentation on your systems. However, **vicharak-ros2** is recommended for other distros or if you don't want to manage dependency yourself, want simplified management, consistent and quick setup.
 
 Why ROS2 on Vicharak SBCs?
 --------------------------
@@ -83,7 +83,7 @@ Install using .deb Package
 
    .. code-block:: bash
 
-      sudo apt install ./vicharak-ros2-all.deb
+      sudo apt install ./vicharak-ros2.deb
 
 3. Run the installer
 
@@ -111,16 +111,16 @@ Install using .deb Package
 
    This opens the configured ROS2 environment.
 
+6. Exit the ros2-shell
+
+   .. code-block:: bash
+
+      exit
+
 Uninstall
 ~~~~~~~~~
 
-1. Exit the ros2-shell
-
-.. code-block:: bash
-
-   exit
-
-2. Remove Vicharak-Ros2
+Remove Vicharak-Ros2
 
 .. code-block:: bash
 
