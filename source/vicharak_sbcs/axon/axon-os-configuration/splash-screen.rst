@@ -82,54 +82,66 @@ You may require to restart lightdm service to use GUI interface again.
 
    sudo update-initramfs -u
 
-Creating a Custom Theme
-=======================
 
-1. Create a new directory under ``/usr/share/plymouth/themes/your-theme-name/``
-2. Add the following files:
 
-   - ``your-theme-name.plymouth``:
+Change Splash Screen
+====================
 
-     .. code-block:: ini
+Follow the steps below to change the system splash screen using Plymouth.
 
-        [Plymouth Theme]
-        Name=Your Theme Name
-        Description=Custom Splash
-        ModuleName=script
+1. `Download the example theme <https://downloads.vicharak.in/vicharak-application/fedora-logo.zip>`_
 
-        [script]
-        ImageDir=/usr/share/plymouth/themes/your-theme-name
-        ScriptFile=/usr/share/plymouth/themes/your-theme-name/script.lua
-
-   - ``script.lua`` (minimal example):
-
-     .. code-block:: lua
-
-        -- Simple splash screen
-        image = Image("splash.png")
-        screen_width, screen_height = Window.GetSize()
-        image:Move((screen_width - image:GetWidth()) / 2, (screen_height - image:GetHeight()) / 2)
-        image:Show()
-
-   - ``splash.png``: Your custom splash image.
-
-3. Register custom theme:
+2. Extract the theme into the Plymouth themes directory and replace the logo
+   with your own logo if required.
 
    .. code-block:: bash
 
-        sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/your-theme-name/your-theme-name.plymouth 100
+      unzip <theme>.zip -d /usr/share/plymouth/themes/
 
-4. To Set theme:
+3. Register the theme using the following command:
 
    .. code-block:: bash
 
-     sudo update-alternatives --config default.plymouth
+      sudo update-alternatives --install \
+      /usr/share/plymouth/themes/default.plymouth default.plymouth \
+      /usr/share/plymouth/themes/fedora-logo/fedora-logo.plymouth 100
 
-5. To apply in next boot, User need to update initramfs :
+4. Select the default theme.
+
+   .. code-block:: bash
+
+      sudo update-alternatives --config default.plymouth
+
+   Example output:
+
+   .. code-block:: text
+
+      There are 10 choices for the alternative default.plymouth
+      (providing /usr/share/plymouth/themes/default.plymouth).
+
+        Selection    Path                                                                           Priority   Status
+      -----------------------------------------------------------------------------------------------
+        0            /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo-scale-2.plymouth   149       auto mode
+        1            /usr/share/plymouth/themes/avi/theme.conf                                       100       manual mode
+        2            /usr/share/plymouth/themes/bgrt/bgrt.plymouth                                   110       manual mode
+        3            /usr/share/plymouth/themes/eos-bgrt/eos-bgrt.plymouth                           100       manual mode
+      * 4            /usr/share/plymouth/themes/fedora-logo/fedora-logo.plymouth                     100       manual mode
+        5            /usr/share/plymouth/themes/logo-mac-style/logo-mac-style.plymouth               100       manual mode
+        6            /usr/share/plymouth/themes/spinner/spinner.plymouth                             70        manual mode
+        7            /usr/share/plymouth/themes/steamdeck/steamdeck.plymouth                         100       manual mode
+        8            /usr/share/plymouth/themes/test/test.plymouth                                   100       manual mode
+        9            /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo-scale-2.plymouth   149       manual mode
+        10           /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo.plymouth           100       manual mode
+
+   Select the corresponding number for the **Fedora theme**.
+
+5. Apply the changes for every boot by updating the initramfs:
 
    .. code-block:: bash
 
       sudo update-initramfs -u
+
+You can edit **fedora-logo.plymouth** according to use cases.
 
 Debugging Plymouth Issues
 =========================
