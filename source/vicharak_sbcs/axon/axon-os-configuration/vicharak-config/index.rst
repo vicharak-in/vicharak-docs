@@ -49,3 +49,4 @@ Vicharak Config TUI
 
    Board Backup <backup>
    USB Tethering <usb-tethering>
+   vicharak-update <vicharak-update>
