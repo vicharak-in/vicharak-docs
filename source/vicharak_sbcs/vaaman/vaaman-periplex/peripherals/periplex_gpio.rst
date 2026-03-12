@@ -156,7 +156,7 @@ To use the gpioset and gpioget commands, you need to install the libgpiod packag
 
 .. code-block::
 
-   sudo apt install libgpiod-utils
+   sudo apt install libgpiod-dev libgpiod2 gpiod
 
 Each ``gpiochip`` represents a bank of GPIO pins. For example, ``gpiochip6`` contains pins 1 to 8.
 
@@ -166,7 +166,7 @@ Each ``gpiochip`` represents a bank of GPIO pins. For example, ``gpiochip6`` con
 
    .. code-block::
 
-      gpioinfo
+      sudo gpioinfo
 
 2. **Setting GPIO Pin Values:**
 
@@ -174,7 +174,7 @@ Each ``gpiochip`` represents a bank of GPIO pins. For example, ``gpiochip6`` con
 
    .. code-block::
    
-         gpioset gpiochip6 <pin_number>=<value>
+         sudo gpioset gpiochip6 <pin_number>=<value>
 
    - ``<pin_number>``: The pin number (1 to 8).
    - ``<value>``:
@@ -185,19 +185,19 @@ Each ``gpiochip`` represents a bank of GPIO pins. For example, ``gpiochip6`` con
 
    .. code-block::
          
-      gpioset gpiochip6 1=0
+      sudo gpioset gpiochip6 1=0
 
    - For example, Set pin ``3`` to ``HIGH``:
 
    .. code-block::
 
-      gpioset gpiochip6 3=1
+      sudo gpioset gpiochip6 3=1
 
    - For example, Set multiple pins at once:
 
    .. code-block::
 
-      gpioset gpiochip6 2=1 4=0
+      sudo gpioset gpiochip6 2=1 4=0
 
 3. **Reading GPIO Pin Values**
 
@@ -205,13 +205,13 @@ Each ``gpiochip`` represents a bank of GPIO pins. For example, ``gpiochip6`` con
 
    .. code-block::
 
-      gpioget gpiochip6 <pin_number>
+      sudo gpioget gpiochip6 <pin_number>
 
    - For example, Get the value of pin ``5``:
 
    .. code-block::
 
-      gpioget gpiochip6 5
+      sudo gpioget gpiochip6 5
 
    - It will output either ``0`` (LOW) or ``1`` (HIGH).
 
