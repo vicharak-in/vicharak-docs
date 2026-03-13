@@ -50,6 +50,14 @@ applications including IoT, AI and multimedia processing.
    Axon SBC <vicharak_sbcs/axon/axon-home>
 
 .. toctree::
+   :titlesonly:
+   :caption: Software
+   :maxdepth: 5
+
+   Rockchip <vicharak_sbcs/software/rockchip/rockchip-home>
+   Qualcomm <vicharak_sbcs/software/qualcomm/qualcomm-home>
+
+.. toctree::
    :glob:
    :titlesonly:
    :caption: Downloads

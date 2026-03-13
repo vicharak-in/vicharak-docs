@@ -79,62 +79,6 @@ How to Attach Camera to Axon
 .. image::  /_static/images/rk3588-axon/axon-camera-6.gif
     :width: 40%
 
-Camera Interface PCBs
----------------------
-
-2 Lane Alpha PCB ( Rpi compatible )
-====================================
-
-.. image::  /_static/images/rk3588-axon/axon-camera-alpha.webp
-    :width: 30%
-
-Verify Camera Connection and Detection:
----------------------------------------
-
-1. Open a terminal by clicking ctrl+alt+t 
-
-2. Install v4l2 tools
-
-.. code-block:: bash
-
-   sudo apt install v4l-utils
-
-3. Check if the camera device is detected:
-
-.. code-block:: bash
-
-   v4l2-ctl --list-devices
-
-4. You should see output listing all the camera devices and sensors (look for rkisp_mainpath):
-
-.. code-block:: text
-
-   rkisp_mainpath (platform:rkisp0-vir0):
-       /dev/video22
-       /dev/video23
-       /dev/video24
-       /dev/video25
-       /dev/video26
-       /dev/video27
-       /dev/video28
-       /dev/media2
-
-   rkisp_mainpath (platform:rkisp1-vir0):
-       /dev/video31
-       /dev/video32
-       /dev/video33
-       /dev/video34
-       /dev/video35
-       /dev/video36
-       /dev/video37
-       /dev/media3
-
-.. note::
-
-    Here, the first device below rkisp_mainpath that is /dev/video22 and /dev/video31 are your camera devices. Similarly, your cameras will be listed here, note down the device name like video22 and video31.
-
-5. If you got the device name and number then it confirms that axon has detected the Camera. If it is not visible, check the connection and pins again.
-
 
 Enable Overlays In Axon 
 ------------------------
@@ -216,6 +160,61 @@ Enable Overlays In Axon
 .. danger::
    Make sure that whenever you are going to connect Camera, Device should be power off.
 
+Camera Interface PCBs
+---------------------
+
+2 Lane Alpha PCB ( Rpi compatible )
+====================================
+
+.. image::  /_static/images/rk3588-axon/axon-camera-alpha.webp
+    :width: 30%
+
+Verify Camera Connection and Detection:
+---------------------------------------
+
+1. Open a terminal by clicking ctrl+alt+t 
+
+2. Install v4l2 tools
+
+.. code-block:: bash
+
+   sudo apt install v4l-utils
+
+3. Check if the camera device is detected:
+
+.. code-block:: bash
+
+   v4l2-ctl --list-devices
+
+4. You should see output listing all the camera devices and sensors (look for rkisp_mainpath):
+
+.. code-block:: text
+
+   rkisp_mainpath (platform:rkisp0-vir0):
+       /dev/video22
+       /dev/video23
+       /dev/video24
+       /dev/video25
+       /dev/video26
+       /dev/video27
+       /dev/video28
+       /dev/media2
+
+   rkisp_mainpath (platform:rkisp1-vir0):
+       /dev/video31
+       /dev/video32
+       /dev/video33
+       /dev/video34
+       /dev/video35
+       /dev/video36
+       /dev/video37
+       /dev/media3
+
+.. note::
+
+    Here, the first device below rkisp_mainpath that is /dev/video22 and /dev/video31 are your camera devices. Similarly, your cameras will be listed here, note down the device name like video22 and video31.
+
+5. If you got the device name and number then it confirms that axon has detected the Camera. If it is not visible, check the connection and pins again.
 
 To use the camera(s):
 -----------------------------------------------------------------------
