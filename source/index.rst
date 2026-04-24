@@ -65,6 +65,13 @@ applications including IoT, AI and multimedia processing.
    Vaaman Accessories <vicharak_sbcs/vaaman/vaaman-accessories> 
    Axon Accessories <vicharak_sbcs/axon/axon-accessories>
 
+.. toctree::
+   :glob:
+   :caption: Explore Accessories
+   :titlesonly:
+
+   Vicharak Store <https://store.vicharak.in>
+
 .. note::
 
    We welcome feedback and bug reports through our `Support

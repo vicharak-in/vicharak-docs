@@ -50,3 +50,19 @@
        :shadow: md
 
        Active Cooling Heat-Sink For Processor
+
+    .. grid-item-card:: Axon SATA Adapter Board
+       :link: axon-accessories/axon-sata
+       :link-type: doc
+       :shadow: md
+
+       Axon SATA Adapter Board (V1.0 R0.3) for connecting SATA devices to Axon
+
+    .. grid-item-card:: Axon PCIe to Ethernet Expension Board
+       :link: axon-accessories/axon-ethernet
+       :link-type: doc
+       :shadow: md
+
+       Axon PCIe to Ethernet Expension Board (V1.0 R0.4) for network devices
+
+       **Coming Soon**
