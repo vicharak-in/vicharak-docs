@@ -15,7 +15,6 @@ Axon supports a wide variety of peripherals to expand its functionality and inte
    SPI <spi>
    USB 2.0 <usb2>
    USB 3.0 <usb3>
-   Audio <audio>
    PWM <pwm>
    UART <uart>
    PCIe 2.0 <pci2>
