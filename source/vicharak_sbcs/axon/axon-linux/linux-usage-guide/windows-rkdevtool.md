@@ -125,4 +125,4 @@ Flashing guide in SD Card(#
 
 **2. [Downloade Loader](https://downloads.vicharak.in/vicharak-axon/rk3588_spl_loader_v1.14.113.bin)**
 
-**3. [Download Video Guide and do follow same instruction](https://vicharak.in/files/Flash-All-Image.mp4.7z)**
+**3. [Download Video Guide and do follow same instruction](https://vicharak-files.vicharak.in/axon/Flash-All-Image.mp4.7z)**

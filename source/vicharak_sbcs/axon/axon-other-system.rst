@@ -18,3 +18,4 @@ Explore other sytem
    Retro Pi <axon-other-system/retro-pi>
    Home Assistant Operating System <axon-other-system/homeos>
    OpenWRT <axon-other-system/openwrt>
+   Xenomai <axon-other-system/xenomai>
