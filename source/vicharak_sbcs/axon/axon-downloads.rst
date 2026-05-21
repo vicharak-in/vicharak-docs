@@ -17,7 +17,9 @@ OS Images
     - - Debian
       - **Coming Soon**
     - - Ubuntu
-      - `Jammy 22.04 <https://downloads.vicharak.in/vicharak-axon/>`_
+      - `Jammy 22.04 <https://downloads.vicharak.in/vicharak-axon/ubuntu/22_jammy>`_
+    - - Ubuntu
+      - `Noble 24.04 <https://downloads.vicharak.in/vicharak-axon/ubuntu/24_noble>`_
     - - Community Images
       - **Coming Soon**
 

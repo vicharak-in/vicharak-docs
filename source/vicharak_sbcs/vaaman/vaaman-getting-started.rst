@@ -83,8 +83,8 @@ Turning the Board On
        | **Remove SD-card if inserted**
        | This ensures the board boots from the eMMC storage.
 
-.. image:: ../../_static/images/rk3399-vaaman/Power_option.webp
-   :width: 40%
+.. image:: ../../_static/images/rk3399-vaaman/vaaman-power-details.webp
+   :width: 60%
    :alt: Vaaman power connection
 
 Vaaman is pre-installed with Ubuntu 22 (``Jammy``) on its eMMC storage, so it will boot from the eMMC storage by default.
@@ -197,6 +197,9 @@ Default Login Credentials
 - Username: **vicharak**
 - Password: **12345**
 
+- To Go to into ``root`` user, Type ``su`` terminal and Default Password is ``root``.
+
+
 These credentials are used for initial login via any access method (HDMI, SSH, Serial Console).
 
 3. Using SSH
@@ -211,6 +214,10 @@ These credentials are used for initial login via any access method (HDMI, SSH, S
 3. Use the following command to connect: **ssh vicharak@<Vaaman_IP_address>**
 4. Enter the default password **12345** when prompted.
 
+.. note::
+
+   To get access of ``root`` user through SSH, User need to do configuration in SSH manually.
+
 Preparation
 -----------
 
@@ -219,7 +226,11 @@ To access Vaaman through the serial interface, you will need:
 1. A computer with a serial terminal application installed, such as PuTTY or minicom.
 2. A USB to UART serial cable or adapter (e.g., FTDI or PL2303).
 3. A Micro USB or USB-C cable.
-4. A 4-pin jumper wire.
+4. A 3-pin jumper wire. ( Tx, Rx and GND )
+
+.. warning::
+
+    When you power off Vaaman, and want to turn on again make sure that you have disconnected ( FTDI / PL2303 ) UART from Vaaman.
 
 Hardware Setup
 --------------
@@ -238,10 +249,10 @@ Hardware Setup
    * - GND
      - Pin 6
      - GND
-   * - TX
+   * - RX
      - Pin 8 (GPIO4_C4)
      - UART2DBG_TX
-   * - RX
+   * - TX
      - Pin 10 (GPIO4_C3)
      - UART2DBG_RX
 
@@ -400,25 +411,26 @@ To access Vaaman via SSH, you can use either of the following commands:
 .. tip::
     The default username is **"vicharak"** and the default password is **"12345"**.
 
-4. Set up automatic Wi-Fi connection on boot
---------------------------------------------
-
-1. Edit the ``/usr/lib/vicharak-config/conf.d/before.txt`` file.
-
-   - Add the following line:
-     ``
-     connect_wi-fi <network name> <password>
-     ``
-
-     Example:
-     ``
-     connect_wi-fi vicharak_5g vcaa_g123
-     ``
-
-2. Reboot the system.
-
-- **Vaaman Boot modes**
-
+..
+    4. Set up automatic Wi-Fi connection on boot
+    --------------------------------------------
+    
+    1. Edit the ``/usr/lib/vicharak-config/conf.d/before.txt`` file.
+    
+       - Add the following line:
+         ``
+         connect_wi-fi <network name> <password>
+         ``
+    
+         Example:
+         ``
+         connect_wi-fi vicharak_5g vcaa_g123
+         ``
+    
+    2. Reboot the system.
+    
+Vaaman Boot modes
+================
 
 .. list-table::
    :widths: 20 40

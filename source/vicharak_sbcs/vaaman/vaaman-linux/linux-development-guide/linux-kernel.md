@@ -66,7 +66,7 @@ sudo apt-get update
 
 sudo apt-get install build-essential python3 python-is-python3 libssl-dev \
 git-core gcc-arm-linux-gnueabihf u-boot-tools device-tree-compiler \
-gcc-aarch64-linux-gnu mtools parted pv bc bison flex gawk
+gcc-aarch64-linux-gnu mtools parted llvm clang pv bc bison flex gawk
 ```
 
 ### Getting the kernel source

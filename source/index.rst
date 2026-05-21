@@ -44,7 +44,7 @@ applications including IoT, AI and multimedia processing.
    :glob:
    :caption: Contents
    :titlesonly:
-   :maxdepth: 1
+   :maxdepth: 5
 
    Vaaman SBC <vicharak_sbcs/vaaman/vaaman-home>
    Axon SBC <vicharak_sbcs/axon/axon-home>
@@ -64,6 +64,13 @@ applications including IoT, AI and multimedia processing.
 
    Vaaman Accessories <vicharak_sbcs/vaaman/vaaman-accessories> 
    Axon Accessories <vicharak_sbcs/axon/axon-accessories>
+
+.. toctree::
+   :glob:
+   :caption: Explore Accessories
+   :titlesonly:
+
+   Vicharak Store <https://store.vicharak.in>
 
 .. note::
 

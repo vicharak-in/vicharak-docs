@@ -109,6 +109,10 @@ To access Vaaman SBC through the serial interface, A USB to UART serial cable or
 
 #### Serial Console Programs
 
+:::{note}
+The baud rate for Vaaman is 1500000
+:::
+
 :::::{tab-set}
 
 ::::{tab-item} GTK-Term (GUI)
@@ -416,6 +420,10 @@ ssh username@pc-name.local
 :::{tip}
 Replace **"username"** with the appropriate username for Vaaman and **"pc-name"** with the
 actual PC name assigned to Vaaman on the network.
+:::
+
+:::{warning}
+To get access of ``root`` user through SSH, User need to do configuration in SSH manually.
 :::
 
 :::{seealso}

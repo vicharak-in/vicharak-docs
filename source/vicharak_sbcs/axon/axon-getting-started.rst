@@ -16,27 +16,27 @@ What's in the box?
 1. **Axon**
     - Single-board computer optimized for high-performance computing and AI.
     - Powered by Rockchip RK3588 SoC (octa-core CPU: quad-core Cortex-A76 and quad-core Cortex-A55).
-    - 8GB LPDDR5 RAM, 32GB eMMC storage, 30-pin GPIO header.
-    - Pre-installed with Ubuntu 22 (Jammy).
+    - 8GB/16GB/32GB LPDDR4x RAM, 32GB eMMC storage, 30-pin GPIO header.
+    - Pre-installed with Ubuntu 22.04 (Jammy).
 
 2. **PD Cable**
     - Supplies power to Axon.
     - Ensures stable and efficient power delivery via USB-C with Power Delivery technology.
 
 3. **Wi-Fi and Bluetooth Antennas**
-    - Includes antennas for both Wi-Fi and Bluetooth connectivity.
+    - Includes custom made pcb antennas for both Wi-Fi ( 2.4 & 5Ghz ) and Bluetooth connectivity.
     - These antennas ensure greater signal range and reliable connectivity for Wi-Fi and Bluetooth devices.
 
 What else do you need?
 ======================
 
-**1. 12V/5A power adapter**
+**1. 12V PD power adapter ( 20-60W )**
 
-**2. Micro HDMI to HDMI cable or adapter**
+**2. Micro HDMI or Type-C DP cable to drive Display Monitor**
  
-**3. USB Keyboard and Mouse**
+**3. USB2.0 Keyboard and Mouse**
  
-**4. Monitor with HDMI input**
+**4. Monitor with HDMI/Type-C DP input**
 
 **5. USB-C to USB-A Male cable (optional)**
 
@@ -55,6 +55,15 @@ Axon OS Images
 
     :ref:`axon-downloads`
 
+Axon OS Credentials
+========================
+
+.. note::
+    Username : vicharak
+    Password : 12345
+
+- To Go to into ``root`` user, Type ``su`` terminal and Default Password is ``root``.
+
 Axon Button Guide
 =================
 
@@ -69,7 +78,7 @@ Axon Button Guide
 
 2. Power Button
     You can turn on Axon with the power button if it is currently off. When the cpu is powered off the red LED will on to
-    let you know that the board has power, If you tap the power button then white and blue LED will be on and start booting
+    let you know that the board has proper power supply ( 12 V ), If you press the power button ( for 1-2 seconds ) then white and blue LED will be on and start booting
     up with blinking white LED.
 
 3. Reset Button
@@ -116,8 +125,8 @@ Once the power is connected, the board will automatically turn on.
     | The board is designed to operate with a 12V power supply, and using a 5V power
     | input may lead to instability and potential damage.
 
-.. image:: ../../_static/images/rk3588-axon/axon-power-option.webp
-   :width: 50%
+.. image:: ../../_static/images/rk3588-axon/axon-power-details.webp
+   :width: 60%
 
 Axon is pre-installed with Ubuntu (``Jammy``) on its eMMC storage.
 So, when you power on the board, it will boot from the eMMC storage by default.
@@ -232,6 +241,11 @@ To access Axon through the serial interface, you will need the following:
   (such as PuTTY or minicom).
 - A USB to UART serial cable or adapter (such as FTDI or PL2303).
 - Micro USB or USB-C cable.
+- 3 Pin Jumper Wire ( Tx, Rx and GND )
+
+.. warning::
+
+    When UART (FTDI/PL2303) is connected to Axon, and Axon is poweroff. It requires to disconnect it from Axon, in order to turn on Axon Again.
 
 Hardware Setup
 ``````````````
@@ -251,10 +265,10 @@ Hardware Setup
    * - GND
      - Pin 6
      - GND
-   * - TX
+   * - RX
      - Pin 4 (GPIO0_B5)
      - UART2_TX_M0_DEBUG
-   * - RX
+   * - TX
      - Pin 2 (GPIO0_B6)
      - UART2_RX_M0_DEBUG
 
@@ -292,28 +306,29 @@ Running the Serial Console Program
 
 .. include:: ../common/common-ssh.rst
 
-4. Set up automatic Wi-Fi connection on boot
---------------------------------------------
-
-In the following example, we will set up automatic Wi-Fi connection on boot
-for the **wlan0** interface. This will be useful if you are using a
-headless system. That means you will not need to connect a monitor, keyboard,
-or mouse to your system to connect to WiFi.
-
-**1. Edit the ** ``/usr/lib/vicharak-config/conf.d/before.txt`` ** file and add
-the following lines:**
-
-::
-
-    connect-wi-fi <network name> <password>
-
-Example:
-
-::
-
-    connect-wi-fi vicharak_5g vcaa_g123
-
-**2. Reboot the system.**
+..
+    4. Set up automatic Wi-Fi connection on boot
+    --------------------------------------------
+    
+    In the following example, we will set up automatic Wi-Fi connection on boot
+    for the **wlan0** interface. This will be useful if you are using a
+    headless system. That means you will not need to connect a monitor, keyboard,
+    or mouse to your system to connect to WiFi.
+    
+    **1. Edit the ** ``/usr/lib/vicharak-config/conf.d/before.txt`` ** file and add
+    the following lines:**
+    
+    ::
+    
+        connect-wi-fi <network name> <password>
+    
+    Example:
+    
+    ::
+    
+        connect-wi-fi vicharak_5g vcaa_g123
+    
+    **2. Reboot the system.**
 
 Axon Boot modes
 =================

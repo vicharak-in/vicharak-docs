@@ -4,8 +4,9 @@ Overview
 Axon is designed to cater to a diverse audience, including but not limited to:
 
 **Software Developers:**
-    - **Leverage**: Octa-core CPU, multi-OS support
+    - **Leverage**: Octa-core CPU ( 4x, Arm Cortex A76 ( 2.4 Ghz ) & 4x, Arm Cortex A55 ), multi-OS support
     - **Ideal For**: Application development, performance optimization, AI-driven software
+    - **Cache**: 64KB L1 data & instruction cache ( seperate ), 512KB L2 Cache for Cortex A76 also 32KB L1 data & instruction cache ( seperate ) , 128KB L2 cache for A55
 
 **Researchers:**
     - **Leverage**: RK3588 SoC, robust NPU, extensive connectivity
@@ -36,8 +37,9 @@ Axon is designed to cater to a diverse audience, including but not limited to:
     - **Ideal For**: IoT projects, sensor integration, smart home solutions
 
 **Gaming and Entertainment:**
-    - **Leverage**: ARM Mali-G610 MP4 GPU
+    - **Leverage**: ARM Mali-G610 MC4 GPU
     - **Ideal For**: Superior gaming experience, multimedia playback
+    - **Drivers**: OpenGL ES 1.1, 2.0 and 3.2, OpenCL 2.2, Vulkan1.2 etc.
 
 Block Diagram
 -------------
@@ -59,7 +61,7 @@ The Axon Single Board Computer (SBC) offers a range of hardware features, includ
      - **Feature**
    * - Display
      - | 2 X HDMI2.1 (maximum support upto `8K@60fps`)
-       | 2 X DP1.4 (maximum support upto `8K@30fps`) multiplexed over Type C Alt Mode DisplyPort
+       | 2 X DP1.4a (maximum support upto `8K@30fps`) multiplexed over Type C Alt Mode DisplyPort
        | 2 X MIPI-DPHY TX (maximum support upto `4K@60fps`) 
        | 1 X HDMI-IN (maximum support upto `4K@60fps`), supports HDCP 2.3
    * - Audio
@@ -70,7 +72,7 @@ The Axon Single Board Computer (SBC) offers a range of hardware features, includ
        | 1 X Headphone input
        | 1 X Analog MIC input
    * - Wireless 
-     - 6252B-SR Integrated RTL8852BS  WiFi6 2.4GHz/5.8GHz dual-band and Bluetooth 5.2
+     - 6252B-SR Integrated RTL8852BS  WiFi6 2.4GHz/5GHz dual-band and Bluetooth 5.2
    * - Ethernet
      - 1 X RJ45, 10/100/1000Mbps(Realtek RTL8211F)
    * - Camera 
@@ -88,6 +90,25 @@ The Axon Single Board Computer (SBC) offers a range of hardware features, includ
    * - Real time clock 
      - RTC support via built-in battery interface
 
+Physical Information
+--------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - **Property**
+     - **Details**
+   * - Weight
+     - 69 g
+   * - Length
+     - 101.5 mm
+   * - Width
+     - 75 mm
+   * - Height
+     - 21.125 mm
+
+.. image:: ../../_static/images/rk3588-axon/axon-dimension.webp
+   :width: 75%
 
 .. tip::
 

@@ -11,7 +11,7 @@ header that provides flexible options for connecting and controlling external
 devices. Through software settings, you can configure these pins as either
 input or output, making them adaptable for various applications.
 
-Out of the 40 pins on the header, 27 are dedicated GPIO pins. These GPIO pins
+Out of the 40 pins on the header, 21 are dedicated GPIO pins. These GPIO pins
 can also be repurposed for SPI (Serial Peripheral Interface),
 UART (Universal Asynchronous Receiver-Transmitter), and
 I2C (Inter-Integrated Circuit) functions.
@@ -88,8 +88,8 @@ or assigned to a GPIO at a time.
 |             |           |     +5V      |          |  <div class='red'>19</div>   | <div class='black'>20</div> |          |                 GND                 |             |
 |             |           |     GND      |          | <div class='black'>21</div>  | <div class='green'>22</div> | GPIO4_D5 |                                     |     157     |
 |             |           |     +5V      |          |  <div class='red'>23</div>   | <div class='black'>24</div> |          |                 GND                 |             |
-|             |           |     GND      |          | <div class='black'>25</div>  | <div class='green'>26</div> |          |               ADC_IN0               |             |
-|     64      |           |   I2C2_SDA   | GPIO2_A0 |  <div class='blue'>27</div>  | <div class='blue'>28</div>  | GPIO2_A1 |              I2C2_CLK               |     65      |
+|             |           |     GND      |          | <div class='black'>25</div>  | <div class='blue'>26</div>  |          |               ADC_IN0               |             |
+|     64      |           |   I2C2_SDA   | GPIO2_A0 |  <div class='green'>27</div> | <div class='green'>28</div> | GPIO2_A1 |              I2C2_CLK               |     65      |
 |     74      | I2C6_SCL  |   SPI2_TXD   | GPIO2_B2 | <div class='green'>29</div>  | <div class='black'>30</div> |          |                 GND                 |             |
 |     73      | I2C6_SDA  |   SPI2_RXD   | GPIO2_B1 | <div class='green'>31</div>  | <div class='green'>32</div> | GPIO3_C0 |              SPDIF_TX               |     112     |
 |     76      |           |   SPI2_CSn   | GPIO2_B4 | <div class='green'>33</div>  | <div class='black'>34</div> |          |                 GND                 |             |
@@ -110,6 +110,7 @@ or assigned to a GPIO at a time.
   section.
 - Both `UART2` and `UART4` support a wide range of baud rates, including
   **115200bps, 500000bps, 1500000bps,** and more.
+- **Pin 8** and **pin 10** of the CPU are used by `UART2` and are not accessible to the user by default.
 :::
 
 ### FGPA Header
@@ -118,22 +119,22 @@ or assigned to a GPIO at a time.
 | :-------: | :----------: | :--------------------------: | :--------------------------: | :----------: | :-------: |
 |   +5.0V   |              |   <div class='red'>1</div>   | <div class='yellow'>2</div>  |              |   +3.3V   |
 |   +5.0V   |              |   <div class='red'>3</div>   | <div class='yellow'>4</div>  |              |   +3.3V   |
-| LVDS/GPIO | GPIOT_RX28_P |  <div class='green'>5</div>  |  <div class='green'>6</div>  | GPIOT_RX28_N | LVDS/GPIO |
-|   GPIO    |   GPIO_73    |  <div class='green'>7</div>  |  <div class='green'>8</div>  |   GPIO_75    |   GPIO    |
-|   GPIO    |   GPIO_173   |  <div class='green'>9</div>  | <div class='green'>10</div>  |   GPIO_72    |   GPIO    |
-|   GPIO    |   GPIO_174   | <div class='green'>11</div>  | <div class='green'>12</div>  |   GPIO_178   |   GPIO    |
-|    LED    |  USER_LEDS3  | <div class='orange'>13</div> | <div class='green'>14</div>  |   GPIO_183   |   GPIO    |
-|    LED    |  USER_LEDS2  | <div class='orange'>15</div> | <div class='orange'>16</div> |  USER_LED0   |    LED    |
-|   GPIO    |   GPIO_63    | <div class='green'>17</div>  | <div class='orange'>18</div> |  USER_LED1   |    LED    |
+| LVDS/GPIO |  GPIOT_RXP28 |  <div class='green'>5</div>  |  <div class='green'>6</div>  |  GPIOT_RXN28 | LVDS/GPIO |
+|   GPIO    |   GPIOL_73   |  <div class='green'>7</div>  |  <div class='green'>8</div>  |   GPIOL_75   |   GPIO    |
+|   GPIO    |   GPIOR_173  |  <div class='green'>9</div>  | <div class='green'>10</div>  |   GPIOL_72   |   GPIO    |
+|   GPIO    |   GPIOR_174  | <div class='green'>11</div>  | <div class='green'>12</div>  |   GPIOR_178  |   GPIO    |
+|    LED    |  GPIOT_RXN27 | <div class='orange'>13</div> | <div class='green'>14</div>  |   GPIOR_183  |   GPIO    |
+|    LED    |  GPIOT_RXP27 | <div class='orange'>15</div> | <div class='orange'>16</div> |  GPIOT_RXP24 |    LED    |
+|   GPIO    |   GPIOL_63   | <div class='green'>17</div>  | <div class='orange'>18</div> |  GPIOT_RXP24 |    LED    |
 |    GND    |              | <div class='black'>19</div>  | <div class='black'>20</div>  |              |    GND    |
 |    GND    |              | <div class='black'>21</div>  | <div class='black'>22</div>  |              |    GND    |
-| LVDS/GPIO | RX29_CLK2_N  |  <div class='blue'>23</div>  |  <div class='blue'>24</div>  | RX29_CLK2_P  | LVDS/GPIO |
-|    CDI    |     CDI6     |  <div class='blue'>25</div>  | <div class='black'>26</div>  |              |    GND    |
+| LVDS/GPIO |  GPIOT_RXN29 |  <div class='blue'>23</div>  |  <div class='blue'>24</div>  |  GPIOT_RXP29 | LVDS/GPIO |
+|    CDI    |   GPIOL_22   |  <div class='blue'>25</div>  | <div class='black'>26</div>  |              |    GND    |
 |    GND    |              | <div class='black'>27</div>  | <div class='black'>28</div>  |              |    GND    |
-|   GPIO    |   GPIO_168   | <div class='green'>29</div>  | <div class='green'>30</div>  |   GPIO_187   |   GPIO    |
-|   GPIO    |   GPIO_17    | <div class='green'>31</div>  |  <div class='blue'>32</div>  |     CDI7     |    CDI    |
-|    CDI    |     CDI5     |  <div class='blue'>33</div>  | <div class='green'>34</div>  |   GPIO_66    |   GPIO    |
-|    CDI    |     CDI4     |  <div class='blue'>35</div>  | <div class='green'>36</div>  |   GPIO_62    |   GPIO    |
+|   GPIO    |   GPIOR_168  | <div class='green'>29</div>  | <div class='green'>30</div>  |   GPIOR_187  |   GPIO    |
+|   GPIO    |   GPIOL_17   | <div class='green'>31</div>  |  <div class='blue'>32</div>  |   GPIOL_24   |    CDI    |
+|    CDI    |   GPIOL_20   |  <div class='blue'>33</div>  | <div class='green'>34</div>  |   GPIOL_66   |   GPIO    |
+|    CDI    |   GPIOL_18   |  <div class='blue'>35</div>  | <div class='green'>36</div>  |   GPIOL_62   |   GPIO    |
 |    GND    |              | <div class='black'>37</div>  | <div class='black'>38</div>  |              |    GND    |
 |   +3.3V   |              | <div class='yellow'>39</div> | <div class='yellow'>40</div> |              |   +3.3V   |
 
@@ -141,7 +142,7 @@ or assigned to a GPIO at a time.
 
 - The default function of pins marked in <span class="orange">orange</span> is
   specific to this board. For example, pin 13, 15, 16 and 16 are used as LEDs
-  and they cannot be used as GPIOs.
+  and they can be used as GPIOs or LVDS pins.
 - The pins layout from 29 to 40 follows the standard PMOD pinout. Check the
   [PMOD](https://reference.digilentinc.com/reference/pmod/pmod) page for more
   information.
