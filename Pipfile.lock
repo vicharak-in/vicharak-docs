@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "15f77d02d125596006725c5ad0c49c47dfb7ebadda938e9a765190f85af48750"
+            "sha256": "4dd6000990d845cefad0aaf4fe946ae4072a2e57e89e03de52cdb0f0ac134ffd"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -225,12 +225,12 @@
         },
         "linkify-it-py": {
             "hashes": [
-                "sha256:68cda27e162e9215c17d786649d1da0021a451bdc436ef9e0fa0ba5234b9b048",
-                "sha256:6bcbc417b0ac14323382aef5c5192c0075bf8a9d6b41820a2b66371eac6b6d79"
+                "sha256:0d252c1594ecba2ecedc444053db5d3a9b7ec1b0dd929c8f1d74dce89f86c05e",
+                "sha256:43360231720999c10e9328dc3691160e27a718e280673d444c38d7d3aaa3b98b"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.7'",
-            "version": "==2.0.3"
+            "markers": "python_version >= '3.10'",
+            "version": "==2.1.0"
         },
         "markdown-it-py": {
             "hashes": [
@@ -370,13 +370,13 @@
         },
         "pyenchant": {
             "hashes": [
-                "sha256:0314d162b7af83adc500f5aff850c91466129363ca8c4d79a8b8d99253346204",
-                "sha256:377a2aaafcb41f871c573c5b74e502dcc6ddba72a62deae7d36dc601a9fcad3d",
-                "sha256:960cbbf4ac99cf9c662308aa9a017ef23017dbea4c8c1e8329978ee4600b3f55",
-                "sha256:ee514d7adf8d0fe39d3a14088f5915953e7fb3bda35092e696fc38f78aabb8b8"
+                "sha256:04a5bd0e022ebe2e8c6d9e498ec3d650602e264ec5486e9c6a1b7f99c9507c49",
+                "sha256:1d55e075645a6edbb3c590fb42f9e02b4d455e4affe28a2227d5cb6d4868e626",
+                "sha256:3da00b1d01314d85aac733bb997415d7a3e875666dc81735ddcf320aa36b7a70",
+                "sha256:825288246b5debc9436f91967650974ef0d5636458502619e322c476f1283891"
             ],
-            "markers": "python_version >= '3.7'",
-            "version": "==3.3.0rc1"
+            "markers": "python_version >= '3.9'",
+            "version": "==3.3.0"
         },
         "pygments": {
             "hashes": [
@@ -506,12 +506,12 @@
         },
         "sphinx-tabs": {
             "hashes": [
-                "sha256:991ad4a424ff54119799ba1491701aa8130dd43509474aef45a81c42d889784d",
-                "sha256:c12d7a36fd413b369e9e9967a0a4015781b71a9c393575419834f19204bd1915"
+                "sha256:154be49de4d5c8249ea08c5d9bf88ca8f9c31e00a178305a93cbc33e000339e5",
+                "sha256:91dba1187e4c35fd37380a56ac228bbd54c6c649b2351829f3bf033718277537"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.7'",
-            "version": "==3.4.7"
+            "markers": "python_version >= '3.10'",
+            "version": "==3.5.0"
         },
         "sphinx-togglebutton": {
             "hashes": [
@@ -580,12 +580,12 @@
         },
         "sphinxcontrib-spelling": {
             "hashes": [
-                "sha256:21704857c1b5e26e06bb07d15927df41c9d7ecfc1843169ecd22cb59f24069ac",
-                "sha256:f0447b6413c78b613b916c7891e36be85a105d1919c99784c53dfea2d8f8040f"
+                "sha256:afbc7b8e93721ab88f12bdd39d848b92017b3763b9ed6226b4b0e54b06664fea",
+                "sha256:db8b3b2945683d49e87a8a5133d2b8ed4206cb593038b986ca8686a485f9980d"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.10'",
-            "version": "==8.0.1"
+            "version": "==8.0.2"
         },
         "typing-extensions": {
             "hashes": [
@@ -597,11 +597,11 @@
         },
         "uc-micro-py": {
             "hashes": [
-                "sha256:d321b92cff673ec58027c04015fcaa8bb1e005478643ff4a500882eaab88c48a",
-                "sha256:db1dffff340817673d7b466ec86114a9dc0e9d4d9b5ba229d9d60e5c12600cd5"
+                "sha256:3603a3859af53e5a39bc7677713c78ea6589ff188d70f4fee165db88e22b242c",
+                "sha256:c53691e495c8db60e16ffc4861a35469b0ba0821fe409a8a7a0a71864d33a811"
             ],
-            "markers": "python_version >= '3.7'",
-            "version": "==1.0.3"
+            "markers": "python_version >= '3.10'",
+            "version": "==2.0.0"
         },
         "urllib3": {
             "hashes": [
