@@ -370,13 +370,13 @@
         },
         "pyenchant": {
             "hashes": [
-                "sha256:0314d162b7af83adc500f5aff850c91466129363ca8c4d79a8b8d99253346204",
-                "sha256:377a2aaafcb41f871c573c5b74e502dcc6ddba72a62deae7d36dc601a9fcad3d",
-                "sha256:960cbbf4ac99cf9c662308aa9a017ef23017dbea4c8c1e8329978ee4600b3f55",
-                "sha256:ee514d7adf8d0fe39d3a14088f5915953e7fb3bda35092e696fc38f78aabb8b8"
+                "sha256:04a5bd0e022ebe2e8c6d9e498ec3d650602e264ec5486e9c6a1b7f99c9507c49",
+                "sha256:1d55e075645a6edbb3c590fb42f9e02b4d455e4affe28a2227d5cb6d4868e626",
+                "sha256:3da00b1d01314d85aac733bb997415d7a3e875666dc81735ddcf320aa36b7a70",
+                "sha256:825288246b5debc9436f91967650974ef0d5636458502619e322c476f1283891"
             ],
-            "markers": "python_version >= '3.7'",
-            "version": "==3.3.0rc1"
+            "markers": "python_version >= '3.9'",
+            "version": "==3.3.0"
         },
         "pygments": {
             "hashes": [
@@ -580,12 +580,12 @@
         },
         "sphinxcontrib-spelling": {
             "hashes": [
-                "sha256:21704857c1b5e26e06bb07d15927df41c9d7ecfc1843169ecd22cb59f24069ac",
-                "sha256:f0447b6413c78b613b916c7891e36be85a105d1919c99784c53dfea2d8f8040f"
+                "sha256:afbc7b8e93721ab88f12bdd39d848b92017b3763b9ed6226b4b0e54b06664fea",
+                "sha256:db8b3b2945683d49e87a8a5133d2b8ed4206cb593038b986ca8686a485f9980d"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.10'",
-            "version": "==8.0.1"
+            "version": "==8.0.2"
         },
         "typing-extensions": {
             "hashes": [
