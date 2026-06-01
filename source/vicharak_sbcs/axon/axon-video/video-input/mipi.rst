@@ -433,3 +433,93 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
  
  I2C Bus number is mentioned in Camera DTS node in device tree file
 
+.. _run-camera-live-stream-over-rtsp:
+
+Run Camera Live Stream over RTSP
+================================
+
+This section demonstrates how to stream a camera feed over the network using GStreamer and MediaMTX.
+
+Prerequisites
+-------------
+
+Install the required packages:
+
+.. code-block:: bash
+
+   sudo apt update
+
+   sudo apt install \
+       gstreamer1.0-tools \
+       gstreamer1.0-plugins-base \
+       gstreamer1.0-plugins-good \
+       gstreamer1.0-plugins-bad \
+       gstreamer1.0-plugins-ugly \
+       gstreamer1.0-libav \
+       v4l-utils \
+       ffmpeg
+
+Verify that the required GStreamer plugins are available:
+
+.. code-block:: bash
+
+   gst-inspect-1.0 mpph264enc
+   gst-inspect-1.0 rtspclientsink
+
+Install MediaMTX
+----------------
+
+Download the latest `Mediamtx relase <https://github.com/bluenviron/mediamtx/releases/>`__ for Linux ARM64:
+
+.. code-block:: bash
+
+   wget https://github.com/bluenviron/mediamtx/releases/download/<version>/mediamtx_<version>_linux_arm64.tar.gz
+
+   tar -xzf mediamtx_linux_arm64v8.tar.gz
+
+Start MediaMTX:
+
+.. code-block:: bash
+
+   ./mediamtx &
+
+By default, MediaMTX listens on:
+
+- RTSP: ``8554``
+- WebRTC: ``8889``
+
+Publish Camera Stream
+---------------------
+
+Replace ``<camera_device_number>`` with your camera device number.
+
+Examples:
+
+- ``/dev/video11``
+- ``/dev/video22``
+- ``/dev/video31``
+
+Run:
+
+.. code-block:: bash
+
+   gst-launch-1.0 -e \
+     v4l2src device=/dev/video<camera_device_number> io-mode=mmap ! \
+     videoscale ! \
+     video/x-raw,width=1280,height=720 ! \
+     mpph264enc bps=2000000 gop=15 ! \
+     h264parse config-interval=-1 ! \
+     rtspclientsink protocols=tcp location=rtsp://127.0.0.1:8554/cam
+
+View Stream Using FFplay
+------------------------
+
+From another machine on the same network, replace ``<axon_ip>`` with the IP address of the AXON board:
+
+.. code-block:: bash
+
+   ffplay \
+     -fflags nobuffer \
+     -flags low_delay \
+     -rtsp_transport tcp \
+     rtsp://<axon_ip>:8554/cam

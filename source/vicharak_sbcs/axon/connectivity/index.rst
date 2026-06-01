@@ -10,3 +10,4 @@ Axon offers a range of connectivity options to ensure seamless integration with 
    Bluetooth 5.2 <bluetooth>
    Ethernet <ethernet>
    WiFi 6 <wifi>
+   WiFi Direct <p2p>
