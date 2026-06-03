@@ -12,4 +12,5 @@ elements such as the bootloader, kernel, and rootfs.
 
    Vicharak Linux Configuration Utility <vicharak-config-tool>
    Vicharak APT Configuration Guide <vicharak-apt-config>
-..   Change U-Boot Logo <change-uboot-logo>
+   Change Boot Logo <change-boot-logo>
+..

@@ -236,9 +236,12 @@ After a successful build, the generated images can be found at:
 build/tmp/deploy/images/<MACHINE>/
 ```
 
+If you want to customise your build further and add a boot logo, refer to the
+[Yocto section of the boot logo page](../linux-configuration-guide/change-boot-logo.rst#yocto).
+
 This directory will contain:
 
-A **.wic image (SD Card)** (bootable disk image) and can direcly flashing using **dd** command or **Balena Etcher Tool**.
+A **.wic image (SD Card)** (bootable disk image) and can directly be flashed using **dd** command or **Balena Etcher Tool**.
 
 **Default Credential :**
 
