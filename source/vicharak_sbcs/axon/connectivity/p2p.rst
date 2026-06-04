@@ -27,7 +27,7 @@ In this guide, we will be setting up a connection between two Axons. The process
 WiFi P2P Setup
 ==============
 
-This guide establishes a direct WiFi P2P connection between two Axon boards.
+This guide establishes a direct WiFi P2P connection between two Axon boards. Make sure that you have the WiFi antenna connected to each board.
 
 .. note::
 
