@@ -322,7 +322,7 @@ Notes:
 To customise the boot logo in Yocto builds, refer to the
 [Yocto section of the boot logo page](change-boot-logo-yocto).
 
-#### 3. Adding custom kernel arguments
+#### 3. Adding custom kernel arguments (If booting from an SD Card)
 
 All kernel arguments are pulled from the `u-boot-update` script: [u-boot-update](https://github.com/vicharak-in/recipe-vicharak/blob/main/u-boot-update/u-boot-update).
 
