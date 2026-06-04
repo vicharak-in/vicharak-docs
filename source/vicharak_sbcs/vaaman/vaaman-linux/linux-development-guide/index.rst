@@ -39,4 +39,4 @@ Vaaman Linux Development!
 
    U-Boot <u-boot>
    Linux Kernel <linux-kernel>
-   Linux SDK <linux-sdk>
+   Linux SDK <linux-sdk/index>
