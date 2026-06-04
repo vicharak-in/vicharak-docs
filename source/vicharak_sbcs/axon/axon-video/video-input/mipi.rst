@@ -38,7 +38,6 @@ Pre-Requisites
 2. Ensure your axon is powred off before connecting the camera
 
 How to Attach Camera to Axon
-----------------------------
 
 1. First, Connect Vicharak Flex Cable To Vicharak CAM PCB Connector.
  
@@ -80,7 +79,6 @@ How to Attach Camera to Axon
     :width: 40%
 
 Camera Interface PCBs
----------------------
 
 2 Lane Alpha PCB ( Rpi compatible )
 ====================================
@@ -88,56 +86,7 @@ Camera Interface PCBs
 .. image::  /_static/images/rk3588-axon/axon-camera-alpha.webp
     :width: 30%
 
-Verify Camera Connection and Detection:
----------------------------------------
-
-1. Open a terminal by clicking ctrl+alt+t 
-
-2. Install v4l2 tools
-
-.. code-block:: bash
-
-   sudo apt install v4l-utils
-
-3. Check if the camera device is detected:
-
-.. code-block:: bash
-
-   v4l2-ctl --list-devices
-
-4. You should see output listing all the camera devices and sensors (look for rkisp_mainpath):
-
-.. code-block:: text
-
-   rkisp_mainpath (platform:rkisp0-vir0):
-       /dev/video22
-       /dev/video23
-       /dev/video24
-       /dev/video25
-       /dev/video26
-       /dev/video27
-       /dev/video28
-       /dev/media2
-
-   rkisp_mainpath (platform:rkisp1-vir0):
-       /dev/video31
-       /dev/video32
-       /dev/video33
-       /dev/video34
-       /dev/video35
-       /dev/video36
-       /dev/video37
-       /dev/media3
-
-.. note::
-
-    Here, the first device below rkisp_mainpath that is /dev/video22 and /dev/video31 are your camera devices. Similarly, your cameras will be listed here, note down the device name like video22 and video31.
-
-5. If you got the device name and number then it confirms that axon has detected the Camera. If it is not visible, check the connection and pins again.
-
-
 Enable Overlays In Axon 
-------------------------
 
 **Here, you can find which overlay should be turned on for each MIPI Connector.**
 
@@ -216,16 +165,60 @@ Enable Overlays In Axon
 .. danger::
    Make sure that whenever you are going to connect Camera, Device should be power off.
 
+Verify Camera Connection and Detection:
+
+1. Open a terminal by clicking ctrl+alt+t 
+
+2. Install v4l2 tools
+
+.. code-block:: bash
+
+   sudo apt install v4l-utils
+
+3. Check if the camera device is detected:
+
+.. code-block:: bash
+
+   v4l2-ctl --list-devices
+
+4. You should see output listing all the camera devices and sensors (look for rkisp_mainpath):
+
+.. code-block:: text
+
+   rkisp_mainpath (platform:rkisp0-vir0):
+       /dev/video22
+       /dev/video23
+       /dev/video24
+       /dev/video25
+       /dev/video26
+       /dev/video27
+       /dev/video28
+       /dev/media2
+
+   rkisp_mainpath (platform:rkisp1-vir0):
+       /dev/video31
+       /dev/video32
+       /dev/video33
+       /dev/video34
+       /dev/video35
+       /dev/video36
+       /dev/video37
+       /dev/media3
+
+.. note::
+
+    Here, the first device below rkisp_mainpath that is /dev/video22 and /dev/video31 are your camera devices. Similarly, your cameras will be listed here, note down the device name like video22 and video31.
+
+5. If you got the device name and number then it confirms that axon has detected the Camera. If it is not visible, check the connection and pins again.
 
 To use the camera(s):
------------------------------------------------------------------------
 
 .. Tip::
 
     Connect a monitor to axon to see the captured feed.
 
 Run Camera Using qV4l2 (GUI tool)
-==================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Step 1: Install the GUI tool (qv4l2) on RX Axon**
 
@@ -263,7 +256,7 @@ Click on start capturing
 
 
 Run camera live feed using ffmpeg
-=================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Install ffmpeg using ``sudo apt install ffmpeg``
 2. Find the camera device number and substitute in the below command
@@ -271,7 +264,7 @@ Run camera live feed using ffmpeg
 4. In case of multiple camera open a new terminal and run the same command with different device number
 
 Run Camera Using V4l2 Utility 
-===============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Use v4l2-ctl to capture camera frame data
 
@@ -315,7 +308,7 @@ Run Camera Using V4l2 Utility
 
 
 Run Camera Using Python Script
-==============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
 
@@ -340,7 +333,6 @@ for Debian-based systems (like Ubuntu):
            pip install opencv-python
             
 Setup
-------
 
 1. Open a terminal window(``Ctrl+Alt+T``).
 
@@ -425,7 +417,7 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
 
 - If you encounter any errors related to missing modules or libraries, ensure that Python and OpenCV are properly installed on your system.
 - If the camera frame does not open or the program does not behave as expected, check for any
-  errors in the terminal output and review your program for potential issues.
+    errors in the terminal output and review your program for potential issues.
 - Check Camera I2C address is detected or not.
 
 .. note::
@@ -441,7 +433,7 @@ Run Camera Live Stream over RTSP
 This section demonstrates how to stream a camera feed over the network using GStreamer and MediaMTX.
 
 Prerequisites
--------------
+^^^^^^^^^^^^^
 
 Install the required packages:
 
@@ -467,7 +459,7 @@ Verify that the required GStreamer plugins are available:
    gst-inspect-1.0 rtspclientsink
 
 Install MediaMTX
-----------------
+^^^^^^^^^^^^^^^^
 
 Download the latest `Mediamtx relase <https://github.com/bluenviron/mediamtx/releases/>`__ for Linux ARM64:
 
@@ -485,19 +477,14 @@ Start MediaMTX:
 
 By default, MediaMTX listens on:
 
-- RTSP: ``8554``
-- WebRTC: ``8889``
 
 Publish Camera Stream
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Replace ``<camera_device_number>`` with your camera device number.
 
 Examples:
 
-- ``/dev/video11``
-- ``/dev/video22``
-- ``/dev/video31``
 
 Run:
 
@@ -512,7 +499,7 @@ Run:
      rtspclientsink protocols=tcp location=rtsp://127.0.0.1:8554/cam
 
 View Stream Using FFplay
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 From another machine on the same network, replace ``<axon_ip>`` with the IP address of the AXON board:
 
