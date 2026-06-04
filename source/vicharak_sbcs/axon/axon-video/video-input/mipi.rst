@@ -430,7 +430,7 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
 Run Camera Live Stream over RTSP
 ================================
 
-This section demonstrates how to stream a camera feed over the network using GStreamer and MediaMTX.
+This section demonstrates how to stream a camera feed over the network using GStreamer and MediaMTX. Make sure you have the WiFi antenna connected to your board.
 
 Prerequisites
 ^^^^^^^^^^^^^
