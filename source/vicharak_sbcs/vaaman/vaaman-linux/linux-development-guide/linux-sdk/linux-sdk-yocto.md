@@ -201,6 +201,10 @@ Username : root
 Password : root
 ```
 
+#### 7. Flashing the firmware
+
+The generated `.wic` image is a complete disk image that can be flashed to SD card or eMMC. For flashing instructions, refer to the [Linux Usage Guide](../../linux-usage-guide/index).
+
 ### Creating patches for Yocto
 
 When you modify source (kernel, u-boot, or other components) outside Yocto,
