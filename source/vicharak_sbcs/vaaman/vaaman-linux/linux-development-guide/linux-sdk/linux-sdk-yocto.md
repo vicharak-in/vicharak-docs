@@ -48,9 +48,9 @@ branches for different releases of our supported Linux distributions and product
 
 Take a look at the following table to get the latest sources.
 
-| Manifest         | Tag                 | URL                                                                                |
+| Manifest         | Branch              | URL                                                                                |
 | ---------------- | ------------------- | ---------------------------------------------------------------------------------- |
-| Yocto Mickledore | -                   | https://github.com/vicharak-in/rockchip-linux-manifests/tree/master       |
+| Yocto Mickledore | Master              | https://github.com/vicharak-in/rockchip-linux-manifests/tree/master                |
 
 #### Cloning the source
 
@@ -201,11 +201,70 @@ Username : root
 Password : root
 ```
 
+(yocto-flashing-firmware)=
+
 #### 7. Flashing the firmware
 
-The generated `.wic` image is a complete disk image that can be flashed to SD card or eMMC. For flashing instructions, refer to the [Linux Usage Guide](../../linux-usage-guide/index).
+:::{important}
 
-### Creating patches for Yocto
+## Understanding Firmware Formats
+
+There are two primary types of firmware formats you'll encounter:
+
+1. **Raw Firmware:**
+   - **Description:** Raw Firmware is essentially a direct copy of your storage device, capturing every bit of data as is.
+   - **Flashing Tools:**
+     - _For SD Card:_
+       - **GUI Tools:**
+         - `SDCard Installer` (Linux/Windows/MacOS)
+         - `Balena Etcher` (Linux/Windows/MacOS)
+       - **CLI Tool:**
+         - `dd` (Linux)
+     - _For eMMC:_
+       - **GUI Tool:**
+         - `AndroidTool/RKDevTool` (Windows)
+       - **CLI Tools:**
+         - `upgrade_tool` (Linux/MacOS)
+         - `rkdeveloptool` (Linux)
+
+2. **RK Firmware:**
+   - **Description:** RK Firmware comes in Rockchip's proprietary format. Specific tools provided by Rockchip are used to flash this firmware onto eMMC or SD Card.
+   - **Flashing Tools:**
+     - _For SD Card:_
+       - **GUI Tool:**
+         - `SD Firmware Tool` (Windows)
+     - _For eMMC:_
+       - **GUI Tool:**
+         - `AndroidTool/RKDevTool` (Windows)
+       - **CLI Tool:**
+         - `upgrade_tool` (Linux)
+
+**Partition Image:**
+
+- **Description:** Partition Image refers to segmented images of different
+  parts of the firmware, such as boot.img, kernel.img, and system.img.
+  These components are assembled like pieces of a puzzle to form a complete Android system.
+
+- **Usage:**
+  - Place each specific image (e.g., kernel.img) into its corresponding
+    partition on the SD card or eMMC to construct the complete Android system.
+
+:::
+
+---
+
+```{seealso}
+[How to use Balena Etcher](../../../vaaman-sdcard-boot.rst)
+```
+
+```{admonition} More information
+For more information about the `Linux_Pack_Firmware` tool or how to flash
+firmware onto your board, please refer to the [Rockchip Development Guide](../../linux-usage-guide/rockchip-develop-guide.md)
+```
+
+### Modifying your Yocto image
+
+#### 1. Creating patches for Yocto
 
 When you modify source (kernel, u-boot, or other components) outside Yocto,
 generate a Git patch and add it to the appropriate BitBake recipe so Yocto can
@@ -248,11 +307,80 @@ bitbake <recipe> -f -c patch
 bitbake <recipe>
 ```
 
+6. Flash the updated image and boot the board. Refer to [Flashing the firmware](#yocto-flashing-firmware).
+
 Notes:
 - Use the actual recipe name (for example `linux-rockchip` or `u-boot-rockchip`).
 - If you produce multiple patches, list each one in `SRC_URI`.
 - Keep patch commit messages short and descriptive; follow your project's
   patch naming conventions if any.
 
+#### 2. Modifying boot logo
+
+To customise the boot logo in Yocto builds, refer to the
+[Yocto section of the boot logo page](change-boot-logo-yocto).
+
+#### 3. Adding custom kernel arguments
+
+All kernel arguments are pulled from the `u-boot-update` script:
+
+https://github.com/vicharak-in/recipe-vicharak/blob/main/u-boot-update/u-boot-update
+
+During the build process, this repository is fetched by:
+
+https://github.com/vicharak-in/meta-rockchip/blob/mickledore/recipes-vicharak/u-boot-update/u-boot-update.bb
+
+To add your own kernel arguments, follow these steps:
+
+1. Fork the repository:
+
+https://github.com/vicharak-in/recipe-vicharak
+
+2. Modify the kernel arguments in your fork:
+
+- Open `u-boot-update/u-boot-update`.
+- Near line `102`, locate the `APPEND` line and add your custom kernel arguments.
+
+Example:
+
+```bash
+APPEND=PARTUUID=${_PARTUUID} rootwait rw rootfstype=ext4 console=ttyS2,1500000n8
+```
+
+Save and commit your changes.
+
+3. Update the Yocto recipe in your layer:
+
+- Open `meta-rockchip/recipes-vicharak/u-boot-update/u-boot-update.bb`.
+- Replace Vicharak's repository URL with your fork.
+
+Example:
+
+```bitbake
+SRC_URI = "git://github.com/<your-username>/recipe-vicharak.git;branch=main;protocol=https"
+```
+
+If required, also update the branch name and `SRCREV`.
+
+4. Clean and rebuild `u-boot-update`:
+
+```bash
+bitbake u-boot-update -c cleanall
+bitbake u-boot-update -v
+```
+
+You can also rebuild your complete image if needed:
+
+```bash
+bitbake <your-image-name>
+```
+
+5. Flash and boot:
+
+Flash the generated image to your board and boot it. On first boot, the modified
+`u-boot-update` script will run automatically and apply your custom kernel
+arguments. Refer to [Flashing the firmware](#yocto-flashing-firmware).
+
+You can also achieve similar results by using patches instead of forking.
 
 
