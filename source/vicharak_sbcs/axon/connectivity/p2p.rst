@@ -10,6 +10,10 @@ Workflow
 A typical Wi-Fi network consists of multiple devices communicating through a central Access Point (AP). The AP is responsible for receiving and forwarding traffic, as well as handling routing, filtering, and other network functions. WiFi Direct removes the need for such an external device, and devices can negotiate amongst themselves. 
 In this guide, we will be setting up a connection between two Axons. The process will look roughly like so:
 
+.. image:: /_static/images/rk3588-axon/p2p_diagram.png
+    :width: 70%
+    :alt: P2P WiFi Direct Connection Workflow
+
 #. Discovery - Devices locate one another using probe requests.
 
 #. GO Negotiation - Devices negotiate which device will become the Group Owner (GO).
