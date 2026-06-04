@@ -170,6 +170,8 @@ If another init system is already configured, ensure it is removed or overridden
 
 
 
+(yocto-building-image)=
+
 #### 5. Building the Yocto image
 
 Once the environment and configuration are complete, start building the image using bitbake.
@@ -307,7 +309,7 @@ bitbake <recipe> -f -c patch
 bitbake <recipe>
 ```
 
-6. Flash the updated image and boot the board. Refer to [Flashing the firmware](#yocto-flashing-firmware).
+6. Build and flash the updated image and boot the board. See [Building the Yocto image](#yocto-building-image) for build steps and [Flashing the firmware](#yocto-flashing-firmware) for flashing instructions.
 
 Notes:
 - Use the actual recipe name (for example `linux-rockchip` or `u-boot-rockchip`).
@@ -322,19 +324,13 @@ To customise the boot logo in Yocto builds, refer to the
 
 #### 3. Adding custom kernel arguments
 
-All kernel arguments are pulled from the `u-boot-update` script:
+All kernel arguments are pulled from the `u-boot-update` script: [u-boot-update](https://github.com/vicharak-in/recipe-vicharak/blob/main/u-boot-update/u-boot-update).
 
-https://github.com/vicharak-in/recipe-vicharak/blob/main/u-boot-update/u-boot-update
-
-During the build process, this repository is fetched by:
-
-https://github.com/vicharak-in/meta-rockchip/blob/mickledore/recipes-vicharak/u-boot-update/u-boot-update.bb
+During the build process, this repository is fetched by the Yocto recipe: [u-boot-update.bb](https://github.com/vicharak-in/meta-rockchip/blob/mickledore/recipes-vicharak/u-boot-update/u-boot-update.bb).
 
 To add your own kernel arguments, follow these steps:
 
-1. Fork the repository:
-
-https://github.com/vicharak-in/recipe-vicharak
+1. Fork the repository: [recipe-vicharak](https://github.com/vicharak-in/recipe-vicharak)
 
 2. Modify the kernel arguments in your fork:
 
