@@ -21,6 +21,4 @@ In simpler terms, it's the maestro ensuring everything kicks off smoothly.
    :titlesonly:
 
    Update U-boot using APT <axon-u-boot>
-   Change U-boot Logo <u-boot-logo>
-
 .. _Wikipedia :  https://en.wikipedia.org/wiki/Das_U-Boot
