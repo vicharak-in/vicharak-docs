@@ -4,10 +4,6 @@ How to change Boot Logo
 This guide explains how to replace the default boot logo on Vaaman using
 the Yocto kernel build system and otherwise if not on Yocto.
 
-.. contents:: Contents
-   :local:
-   :depth: 3
-
 Preparing the logo
 ------------------
 

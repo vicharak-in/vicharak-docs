@@ -1,11 +1,7 @@
-Change Boot Logo
-===================
+Change Boot Logo on Ubuntu
+============================
 
 The ``boot`` partition of the file system, includes ``logo.bmp`` and ``logo_kernel.bmp``,  which appear on screen while booting Axon. Here are the instructions to change them:
-
-.. contents:: Contents
-  :local:
-  :depth: 2
 
 Preparing the logo
 ------------------
