@@ -42,34 +42,60 @@ Expected output:
 
    PC bitmap, Windows 3.x format, 640 x 272 x 24
 
+Notes:
+
+- ``logo.bmp`` is used by U-Boot (the bootloader) to display the early
+  boot logo.
+- ``logo_kernel.bmp`` is used by the Linux kernel when it initializes the
+  framebuffer later in the boot process.
+
+If you want the same image for both stages, copy the logo file over:
+
+.. code:: bash
+
+   sudo cp /boot/logo.bmp /boot/logo_kernel.bmp
+
+
 Manual kernel build method
 ---------------------------
 
-If you are not using Yocto, you can still replace the boot logo by
-directly modifying the kernel source and rebuilding the kernel.
+If you are not using Yocto, simply place the two BMP files on the boot partition (mounted
+at ``/boot``) and reboot.
 
-Clone the kernel repository:
-
-.. code:: bash
-
-   git clone https://github.com/vicharak-in/rockchip-linux-kernel.git
-
-Navigate to the repository:
+Copy the files to the boot partition:
 
 .. code:: bash
 
-   cd rockchip-linux-kernel
+   sudo cp logo.bmp /boot/
+   sudo cp logo_kernel.bmp /boot/
 
-Replace the following files with your custom logo:
+If you need to change the image size or scaling (for example to use a
+fullscreen logo), you will need to rebuild the kernel after making the
+required changes to the device tree (DTS). See the :ref:`fullscreen-logo-scaling`
+section below for the DTS changes, and :doc:`Linux Kernel Build <../linux-development-guide/linux-kernel>`
+for instructions on building and deploying a new kernel/DTB.
 
-- ``logo.bmp``
-- ``logo_kernel.bmp``
+Example `lsblk` showing a typical eMMC layout on Vaaman with ``/boot`` mounted:
 
-For detailed kernel build instructions, see :doc:`Linux Kernel Build <../linux-development-guide/linux-kernel>`.
+.. code:: bash
 
-Rebuild the kernel and install or flash the newly built kernel image and DTBs to the board
-using your preferred flashing or deployment method. To resize the image, you may need to edit the DTS
-(see :ref:`fullscreen-logo-scaling`).
+   vicharak@vicharak:~$ lsblk
+   NAME         MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+   mmcblk0      179:0    0 29.1G  0 disk 
+   ├─mmcblk0p1  179:1    0    4M  0 part 
+   ├─mmcblk0p2  179:2    0    4M  0 part 
+   ├─mmcblk0p3  179:3    0    4M  0 part 
+   ├─mmcblk0p4  179:4    0  512M  0 part /boot
+   ├─mmcblk0p5  179:5    0  128M  0 part 
+   ├─mmcblk0p6  179:6    0   32M  0 part 
+   ├─mmcblk0p7  179:7    0  256M  0 part /userdata
+   └─mmcblk0p8  179:8    0 28.1G  0 part /
+   mmcblk0boot0 179:32   0    4M  1 disk 
+   mmcblk0boot1 179:64   0    4M  1 disk 
+   zram0        254:0    0    0B  0 disk 
+
+
+
 
 .. _change-boot-logo-yocto:
 

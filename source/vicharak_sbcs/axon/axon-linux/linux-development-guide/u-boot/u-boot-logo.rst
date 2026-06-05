@@ -1,7 +1,58 @@
-Change U-boot Logo
+Change boot Logo
 ===================
 
-In ``boot`` partition of the File system, includes ``logo.bmp`` file which appears on screen while booting Vicharak board.
+The ``boot`` partition of the file system, includes ``logo.bmp`` and ``logo_kernel.bmp``,  which appear on screen while booting Axon. Here are the instructions to change them:
+
+Preparing the logo
+------------------
+
+The boot logo must follow these requirements:
+
+- BMP v3 format
+- 24-bit RGB colour depth
+- Recommended resolution: ``640x272``
+- Maximum safe framebuffer size: ``614400 bytes``
+
+.. warning::
+
+  Larger images or unsupported BMP formats may cause display failures,
+  DRM crashes, or IOMMU faults during boot.
+
+You can convert an image using ImageMagick:
+
+.. code:: bash
+
+  convert input.png \
+  -strip \
+  -resize 640x272\! \
+  -type TrueColor \
+  -depth 8 \
+  BMP3:logo.bmp
+
+Verify the generated image:
+
+.. code:: bash
+
+  file logo.bmp
+
+Expected output:
+
+.. code:: text
+
+  PC bitmap, Windows 3.x format, 640 x 272 x 24
+
+Notes:
+
+- ``logo.bmp`` is used by U-Boot (the bootloader) to display the early
+  boot logo.
+- ``logo_kernel.bmp`` is used by the Linux kernel when it initializes the
+  framebuffer later in the boot process.
+
+If you want the same image for both stages, copy the logo file over:
+
+.. code:: bash
+
+   sudo cp /boot/logo.bmp /boot/logo_kernel.bmp
 
 Run ``lsblk`` command to show boot partition.
 
@@ -15,8 +66,20 @@ Run ``lsblk`` command to show boot partition.
     ├─mmcblk0p5  179:5    0   256M  0 part /userdata
     └─mmcblk0p6  179:6    0  28.1G  0 part /
 
-User can change u-boot logo to replace ``logo.bmp`` file with their file.
+You can change the logo and replace ``logo.bmp``, ``logo_kernel.bmp`` files with your own files.
 
 .. warning::
 
    Make sure, you have to convert any logo file into ``.bmp`` format in order to apply.
+
+
+Copy the files to the boot partition:
+
+.. code:: bash
+
+    sudo cp logo.bmp /boot/
+    sudo cp logo_kernel.bmp /boot/
+
+If you need to change the image size or scaling you will have to rebuild
+the kernel after making the required DTS changes. See the :doc:`Linux Kernel Build <../../../../vaaman/vaaman-linux/linux-development-guide/linux-kernel>`
+guide and the Vaaman :ref:`Fullscreen logo scaling <fullscreen-logo-scaling>` section for details.
