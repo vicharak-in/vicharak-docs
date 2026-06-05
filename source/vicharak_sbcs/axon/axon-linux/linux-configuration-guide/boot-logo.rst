@@ -45,7 +45,7 @@ Expected output:
 
   PC bitmap, Windows 3.x format, 640 x 272 x 24
 
-.. important::
+.. tip::
 
    - ``logo.bmp`` is used by U-Boot (the bootloader) to display the early
      boot logo.

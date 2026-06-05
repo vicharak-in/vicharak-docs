@@ -46,7 +46,7 @@ Expected output:
 
    PC bitmap, Windows 3.x format, 640 x 272 x 24
 
-.. important::
+.. tip::
 
     - ``logo.bmp`` is used by U-Boot (the bootloader) to display the early
        boot logo.
@@ -60,7 +60,7 @@ If you want the same image for both stages, copy the logo file over:
    sudo cp /boot/logo.bmp /boot/logo_kernel.bmp
 
 
-Manual kernel build method
+On Ubuntu
 ---------------------------
 
 If you are not using Yocto, simply place the two BMP files on the boot partition (mounted
@@ -162,7 +162,7 @@ Applying the patch in Yocto
 For instructions on creating and adding patches to Yocto recipes, see the
 Yocto SDK guide: :doc:`Yocto SDK guide <../linux-development-guide/linux-sdk/linux-sdk-yocto>`
 
-Add the patch to the appropriate BitBake recipe (``meta-rockchip/recipes-bsp/u-boot/u-boot-rockchip.bb`` in our case):
+Add the patch to the appropriate BitBake recipe (``meta-rockchip/recipes-kernel/linux/linux-rockchip_5.10.bb`` in our case):
 
 .. code:: bitbake
 
