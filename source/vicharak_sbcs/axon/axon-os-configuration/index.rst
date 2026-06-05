@@ -15,3 +15,4 @@ Axon OS Configuration
    ROS2 (Robot Operating System) <ros2>
    Vicharak Config <vicharak-config/index>
    Vicharak Dao ( Remote Access For Vicharak Boards ) <vicharak-dao/index>
+   OBS Setup <obs-setup>
