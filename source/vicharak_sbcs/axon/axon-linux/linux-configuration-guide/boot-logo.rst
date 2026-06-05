@@ -3,6 +3,10 @@ Change Boot Logo
 
 The ``boot`` partition of the file system, includes ``logo.bmp`` and ``logo_kernel.bmp``,  which appear on screen while booting Axon. Here are the instructions to change them:
 
+.. contents:: Contents
+  :local:
+  :depth: 2
+
 Preparing the logo
 ------------------
 
@@ -41,12 +45,15 @@ Expected output:
 
   PC bitmap, Windows 3.x format, 640 x 272 x 24
 
-Notes:
+.. important::
 
-- ``logo.bmp`` is used by U-Boot (the bootloader) to display the early
-  boot logo.
-- ``logo_kernel.bmp`` is used by the Linux kernel when it initializes the
-  framebuffer later in the boot process.
+   - ``logo.bmp`` is used by U-Boot (the bootloader) to display the early
+     boot logo.
+   - ``logo_kernel.bmp`` is used by the Linux kernel when it initializes the
+     framebuffer later in the boot process.
+
+Copying to the boot partition
+-------------------------------
 
 If you want the same image for both stages, copy the logo file over:
 

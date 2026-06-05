@@ -4,6 +4,10 @@ How to change Boot Logo
 This guide explains how to replace the default boot logo on Vaaman using
 the Yocto kernel build system and otherwise if not on Yocto.
 
+.. contents:: Contents
+   :local:
+   :depth: 3
+
 Preparing the logo
 ------------------
 
@@ -42,12 +46,12 @@ Expected output:
 
    PC bitmap, Windows 3.x format, 640 x 272 x 24
 
-Notes:
+.. important::
 
-- ``logo.bmp`` is used by U-Boot (the bootloader) to display the early
-  boot logo.
-- ``logo_kernel.bmp`` is used by the Linux kernel when it initializes the
-  framebuffer later in the boot process.
+    - ``logo.bmp`` is used by U-Boot (the bootloader) to display the early
+       boot logo.
+    - ``logo_kernel.bmp`` is used by the Linux kernel when it initializes the
+       framebuffer later in the boot process.
 
 If you want the same image for both stages, copy the logo file over:
 
