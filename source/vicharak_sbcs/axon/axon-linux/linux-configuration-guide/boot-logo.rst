@@ -1,4 +1,4 @@
-Change boot Logo
+Change Boot Logo
 ===================
 
 The ``boot`` partition of the file system, includes ``logo.bmp`` and ``logo_kernel.bmp``,  which appear on screen while booting Axon. Here are the instructions to change them:
@@ -81,5 +81,5 @@ Copy the files to the boot partition:
     sudo cp logo_kernel.bmp /boot/
 
 If you need to change the image size or scaling you will have to rebuild
-the kernel after making the required DTS changes. See the :doc:`Linux Kernel Build <../../../../vaaman/vaaman-linux/linux-development-guide/linux-kernel>`
+the kernel after making the required DTS changes. See the :doc:`Linux Kernel Build <../../../vaaman/vaaman-linux/linux-development-guide/linux-kernel>`
 guide and the Vaaman :ref:`Fullscreen logo scaling <fullscreen-logo-scaling>` section for details.
