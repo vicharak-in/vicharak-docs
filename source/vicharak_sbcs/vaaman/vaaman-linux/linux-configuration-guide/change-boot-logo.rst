@@ -108,8 +108,19 @@ Here are the prerequisites for Yocto builds:
 - ``linux-rockchip`` kernel source available
 - Basic familiarity with Git and BitBake
 
+
 Replacing the logo
 ------------------
+
+Booting from SD card
+~~~~~~~~~~~~~~~~~~~~~
+
+Inside ``meta-rockchip/recipes-vicharak/psplash/files`` you'll find a
+``logo.png``. Replace it with your own logo and rebuild via Yocto; see the
+Linux SDK guide for building details: :doc:`Linux SDK <../linux-development-guide/linux-sdk>`. If you would like to add more customisations, please refer to psplash documentation.
+
+Booting from eMMC
+~~~~~~~~~~~~~~~~~
 
 Clone the kernel repository:
 
