@@ -193,6 +193,45 @@ sudo ./upgrade_tool ef V1.0_vicharak_axon-6.1-04032025-ubuntu-noble-emmc.img
 Firmware Image should be the same image which you have flashed in Axon eMMC. 
 :::
 
+### Data Recovery
+
+To recover data from your eMMC, you can use the `upgrade_tool rl <offset> <size> output.img` command. This command allows you to read a specific range of sectors from the eMMC and save it as an image file.
+
+1. **Calculate Offset and Size**:
+   Determine the offset and size of the partition you want to recover. The offset is where the partition starts, and the size is the number of sectors in the partition. This is the standard for Axon:
+
+   ```bash
+    Device           Start      End  Sectors  Size Type
+    /dev/mmcblk0p1   16384    24575     8192    4M Linux filesystem
+    /dev/mmcblk0p2   24576    32767     8192    4M Linux filesystem
+    /dev/mmcblk0p3   32768  1081343  1048576  512M Linux filesystem
+    /dev/mmcblk0p4 1081344  1671167   589824  288M Linux filesystem
+    /dev/mmcblk0p5 1671168  2195455   524288  256M Linux filesystem
+    /dev/mmcblk0p6 2195456 61071326 58875871 28.1G Linux filesystem
+   ```
+
+   The partition starts at sector `2195456` and has a size of `58875871`.
+
+3. **Run the Data Recovery Command**:
+   Use the `upgrade_tool rl <offset> <size> rootfs.img` command to read the partition data and save it as an image file. Replace `<offset>` and `<size>` with the actual values from your `lsblk` output.
+
+   ```bash
+    sudo ./upgrade_tool rl 0x218000 0x3826c9f rootfs.img
+   ```
+
+   This command will read the first partition (starting at sector `0x218000`) with a size of `0x3826c9f` and save it as `rootfs.img`.
+
+4. **Extract Data from the Image File (Optional)**:
+   You should now be able to mount this file and read the data.
+
+   ```bash
+   mkdir /mnt/recovery
+   sudo mount -o loop rootfs.img /mnt/recovery
+   ls /mnt/recovery
+   ```
+
+By following these steps, you should be able to recover data from your eMMC using `upgrade_tool`.
+
 ::::
 
 [comment]: < :::{seealso} >
