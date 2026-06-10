@@ -213,7 +213,7 @@ To recover data from your eMMC, you can use the `upgrade_tool rl <offset> <size>
    The partition starts at sector `2195456` and has a size of `58875871`.
 
 3. **Run the Data Recovery Command**:
-   Use the `upgrade_tool rl <offset> <size> rootfs.img` command to read the partition data and save it as an image file. Replace `<offset>` and `<size>` with the actual values from your `lsblk` output.
+   Use the `upgrade_tool rl <offset> <size> rootfs.img` command to read the partition data and save it as an image file. Replace `<offset>` and `<size>` with the actual values from your `fdisk` output.
 
    ```bash
     sudo ./upgrade_tool rl 0x218000 0x3826c9f rootfs.img
