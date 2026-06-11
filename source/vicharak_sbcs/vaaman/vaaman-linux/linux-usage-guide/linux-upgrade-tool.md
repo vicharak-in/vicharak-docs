@@ -283,7 +283,7 @@ Once the flash is complete, the board will reboot automatically.
 To recover data from your eMMC, you can use the `upgrade_tool rl <offset> <size> output.img` command. This command allows you to read a specific range of sectors from the eMMC and save it as an image file.
 
 1. **Calculate Offset and Size**:
-   Determine the offset and size of the partition you want to recover. The offset is where the partition starts, and the size is the number of sectors in the partition. This is the standard for Axon:
+   Determine the offset and size of the partition you want to recover. The offset is where the partition starts, and the size is the number of sectors in the partition. This is the standard for Vaaman:
 
    ```bash
    Device          Start      End  Sectors  Size Type
