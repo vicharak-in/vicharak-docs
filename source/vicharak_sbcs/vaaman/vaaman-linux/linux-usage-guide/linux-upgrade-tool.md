@@ -278,6 +278,47 @@ Once the flash is complete, the board will reboot automatically.
 
 :::
 
+## Data Recovery
+
+To recover data from your eMMC, you can use the `upgrade_tool rl <offset> <size> output.img` command. This command allows you to read a specific range of sectors from the eMMC and save it as an image file.
+
+1. **Calculate Offset and Size**:
+   Determine the offset and size of the partition you want to recover. The offset is where the partition starts, and the size is the number of sectors in the partition. This is the standard for Axon:
+
+   ```bash
+   Device          Start      End  Sectors  Size Type
+   /dev/mmcblk0p1  16384    24575     8192    4M unknown
+   /dev/mmcblk0p2  24576    32767     8192    4M unknown
+   /dev/mmcblk0p3  32768    40959     8192    4M unknown
+   /dev/mmcblk0p4  40960   303103   262144  128M unknown
+   /dev/mmcblk0p5 303104   368639    65536   32M unknown
+   /dev/mmcblk0p6 368640   434175    65536   32M unknown
+   /dev/mmcblk0p7 434176   958463   524288  256M unknown
+   /dev/mmcblk0p8 958464 61071326 60112863 28.7G unknown
+   ```
+
+   The partition starts at sector `958464` and has a size of `60112863`.
+
+3. **Run the Data Recovery Command**:
+   Use the `upgrade_tool rl <offset> <size> rootfs.img` command to read the partition data and save it as an image file. Replace `<offset>` and `<size>` with the actual values from your `fdisk` output.
+
+   ```bash
+    sudo ./upgrade_tool rl 0xEA000 0x3953FDF rootfs.img
+   ```
+
+   This command will read the first partition (starting at sector `0xEA000`) with a size of `0x3953FDF` and save it as `rootfs.img`.
+
+4. **Extract Data from the Image File (Optional)**:
+   You should now be able to mount this file and read the data.
+
+   ```bash
+   mkdir /mnt/recovery
+   sudo mount -o loop rootfs.img /mnt/recovery
+   ls /mnt/recovery
+   ```
+
+By following these steps, you should be able to recover data from your eMMC using `upgrade_tool`.
+
 :::{seealso}
 [Vaaman Linux starting guide](linux-start-guide.md)
 
