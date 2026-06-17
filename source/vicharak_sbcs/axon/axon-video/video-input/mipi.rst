@@ -38,7 +38,6 @@ Pre-Requisites
 2. Ensure your axon is powred off before connecting the camera
 
 How to Attach Camera to Axon
-----------------------------
 
 1. First, Connect Vicharak Flex Cable To Vicharak CAM PCB Connector.
  
@@ -80,7 +79,6 @@ How to Attach Camera to Axon
     :width: 40%
 
 Camera Interface PCBs
----------------------
 
 2 Lane Alpha PCB ( Rpi compatible )
 ====================================
@@ -89,7 +87,6 @@ Camera Interface PCBs
     :width: 30%
 
 Enable Overlays In Axon 
-------------------------
 
 **Here, you can find which overlay should be turned on for each MIPI Connector.**
 
@@ -169,7 +166,6 @@ Enable Overlays In Axon
    Make sure that whenever you are going to connect Camera, Device should be power off.
 
 Verify Camera Connection and Detection:
----------------------------------------
 
 1. Open a terminal by clicking ctrl+alt+t 
 
@@ -216,14 +212,13 @@ Verify Camera Connection and Detection:
 5. If you got the device name and number then it confirms that axon has detected the Camera. If it is not visible, check the connection and pins again.
 
 To use the camera(s):
------------------------------------------------------------------------
 
 .. Tip::
 
     Connect a monitor to axon to see the captured feed.
 
 Run Camera Using qV4l2 (GUI tool)
-==================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Step 1: Install the GUI tool (qv4l2) on RX Axon**
 
@@ -261,7 +256,7 @@ Click on start capturing
 
 
 Run camera live feed using ffmpeg
-=================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Install ffmpeg using ``sudo apt install ffmpeg``
 2. Find the camera device number and substitute in the below command
@@ -269,7 +264,7 @@ Run camera live feed using ffmpeg
 4. In case of multiple camera open a new terminal and run the same command with different device number
 
 Run Camera Using V4l2 Utility 
-===============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Use v4l2-ctl to capture camera frame data
 
@@ -313,7 +308,7 @@ Run Camera Using V4l2 Utility
 
 
 Run Camera Using Python Script
-==============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
 
@@ -338,7 +333,6 @@ for Debian-based systems (like Ubuntu):
            pip install opencv-python
             
 Setup
-------
 
 1. Open a terminal window(``Ctrl+Alt+T``).
 
@@ -423,7 +417,7 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
 
 - If you encounter any errors related to missing modules or libraries, ensure that Python and OpenCV are properly installed on your system.
 - If the camera frame does not open or the program does not behave as expected, check for any
-  errors in the terminal output and review your program for potential issues.
+    errors in the terminal output and review your program for potential issues.
 - Check Camera I2C address is detected or not.
 
 .. note::
@@ -431,3 +425,88 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
  
  I2C Bus number is mentioned in Camera DTS node in device tree file
 
+.. _run-camera-live-stream-over-rtsp:
+
+Run Camera Live Stream over RTSP
+================================
+
+This section demonstrates how to stream a camera feed over the network using GStreamer and MediaMTX. Make sure you have the WiFi antenna connected to your board.
+
+Prerequisites
+^^^^^^^^^^^^^
+
+Install the required packages:
+
+.. code-block:: bash
+
+   sudo apt update
+
+   sudo apt install \
+       gstreamer1.0-tools \
+       gstreamer1.0-plugins-base \
+       gstreamer1.0-plugins-good \
+       gstreamer1.0-plugins-bad \
+       gstreamer1.0-plugins-ugly \
+       gstreamer1.0-libav \
+       v4l-utils \
+       ffmpeg
+
+Verify that the required GStreamer plugins are available:
+
+.. code-block:: bash
+
+   gst-inspect-1.0 mpph264enc
+   gst-inspect-1.0 rtspclientsink
+
+Install MediaMTX
+^^^^^^^^^^^^^^^^
+
+Download the latest `Mediamtx relase <https://github.com/bluenviron/mediamtx/releases/>`__ for Linux ARM64:
+
+.. code-block:: bash
+
+   wget https://github.com/bluenviron/mediamtx/releases/download/<version>/mediamtx_<version>_linux_arm64.tar.gz
+
+   tar -xzf mediamtx_linux_arm64v8.tar.gz
+
+Start MediaMTX:
+
+.. code-block:: bash
+
+   ./mediamtx &
+
+By default, MediaMTX listens on:
+
+
+Publish Camera Stream
+^^^^^^^^^^^^^^^^^^^^^
+
+Replace ``<camera_device_number>`` with your camera device number.
+
+Examples:
+
+
+Run:
+
+.. code-block:: bash
+
+   gst-launch-1.0 -e \
+     v4l2src device=/dev/video<camera_device_number> io-mode=mmap ! \
+     videoscale ! \
+     video/x-raw,width=1280,height=720 ! \
+     mpph264enc bps=2000000 gop=15 ! \
+     h264parse config-interval=-1 ! \
+     rtspclientsink protocols=tcp location=rtsp://127.0.0.1:8554/cam
+
+View Stream Using FFplay
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+From another machine on the same network, replace ``<axon_ip>`` with the IP address of the AXON board:
+
+.. code-block:: bash
+
+   ffplay \
+     -fflags nobuffer \
+     -flags low_delay \
+     -rtsp_transport tcp \
+     rtsp://<axon_ip>:8554/cam
