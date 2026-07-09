@@ -12,7 +12,7 @@
 Welcome to Vicharak's documentation!
 ####################################
 
-Vicharak brings to you the powerful rk3399 based Vaaman and the highly advanced rk3588 based Axon single-board computers (SBCs).
+Vicharak brings to you the powerful rk3399 based Vaaman, the highly advanced rk3588 based Axon, and the efficient rk3576 based Axon Lite single-board computers (SBCs).
 Designed for both hobbyists and professionals, these SBCs offer unparalleled performance and versatility for a wide range of
 applications including IoT, AI and multimedia processing.
 
@@ -24,7 +24,11 @@ applications including IoT, AI and multimedia processing.
    :width: 100%
    :alt: axon top
 
-.. grid:: 1 1 2 2
+.. |axon_lite_top| image:: _static/images/rk3576-axon-lite/axon-lite-top.png
+   :width: 100%
+   :alt: axon lite top
+
+.. grid:: 1 1 3 3
 
     .. grid-item-card:: Vaaman SBC
        :link: vicharak_sbcs/vaaman/vaaman-home
@@ -40,6 +44,13 @@ applications including IoT, AI and multimedia processing.
 
        |axon_top|
 
+    .. grid-item-card:: Axon Lite SBC
+       :link: vicharak_sbcs/axon-lite/axon-lite-home
+       :link-type: doc
+       :shadow: md
+
+       |axon_lite_top|
+
 .. toctree::
    :glob:
    :caption: Contents
@@ -48,6 +59,7 @@ applications including IoT, AI and multimedia processing.
 
    Vaaman SBC <vicharak_sbcs/vaaman/vaaman-home>
    Axon SBC <vicharak_sbcs/axon/axon-home>
+   Axon Lite SBC <vicharak_sbcs/axon-lite/axon-lite-home>
 
 .. toctree::
    :glob:
@@ -56,6 +68,7 @@ applications including IoT, AI and multimedia processing.
 
    Vaaman Downloads <vicharak_sbcs/vaaman/vaaman-downloads>
    Axon Downloads <vicharak_sbcs/axon/axon-downloads>
+   Axon Lite Downloads <vicharak_sbcs/axon-lite/axon-lite-downloads>
 
 .. toctree::
    :glob:
@@ -64,6 +77,7 @@ applications including IoT, AI and multimedia processing.
 
    Vaaman Accessories <vicharak_sbcs/vaaman/vaaman-accessories> 
    Axon Accessories <vicharak_sbcs/axon/axon-accessories>
+   Axon Lite Accessories <vicharak_sbcs/axon-lite/axon-lite-accessories>
 
 .. toctree::
    :glob:
