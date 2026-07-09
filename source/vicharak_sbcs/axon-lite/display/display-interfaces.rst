@@ -15,12 +15,11 @@ Hardware Connection
 
 - The Axon Lite board provides:
 
-  - 2 × HDMI TX ports (HDMI TX0 and HDMI TX1)
-  - 1 × HDMI RX port
+  - 1 × micro HDMI 2.1 TX port
 
 - To connect a display:
 
-  1. Locate the HDMI TX port on the board (labeled **HDMI TX0** or **HDMI TX1**).
+  1. Locate the micro HDMI TX port on the board.
   2. Connect a **High Speed HDMI 2.1 cable** from the board to the display.
   3. Power on both the board and the display.
   4. Set the display input source to the corresponding HDMI port.

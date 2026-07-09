@@ -44,7 +44,7 @@ Axon Lite is designed to cater to a diverse audience, including but not limited 
 Block Diagram
 -------------
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-v2-blockdiagram.webp
+.. image:: ../../_static/images/rk3576-axon-lite/Axon-lite_Block_diagram.png
    :width: 100%
 
 Features
@@ -60,33 +60,29 @@ The Axon Lite Single Board Computer (SBC) offers a range of hardware features, i
    * - **Type**
      - **Feature**
    * - Display
-     - | 2 X HDMI2.1 (maximum support upto `8K@60fps`)
-       | 2 X DP1.4a (maximum support upto `8K@30fps`) multiplexed over Type C Alt Mode DisplyPort
-       | 2 X MIPI-DPHY TX (maximum support upto `4K@60fps`) 
-       | 1 X HDMI-IN (maximum support upto `4K@60fps`), supports HDCP 2.3
+     - | 1 X micro HDMI 2.1 TX
+       | 1 X TYPE-C Alt DisplayPort (4 lane)
+       | 1 X MIPI DSI (4 lane)
    * - Audio
-     - | 2 X Analog speaker output 
-       | 1 X Headphone stereo output
-       | 2 X HDMI audio output
-       | 2 X DP audio output
-       | 1 X Headphone input
-       | 1 X Analog MIC input
+     - | Audio Codec ES8316
+       | 1 X Audio Jack
+       | HDMI and DP audio output
    * - Wireless 
-     - 6252B-SR Integrated RTL8852BS  WiFi6 2.4GHz/5GHz dual-band and Bluetooth 5.2
+     - FG6252BSRB-03 WiFi 6 and Bluetooth 5.3 module
    * - Ethernet
-     - 1 X RJ45, 10/100/1000Mbps(Realtek RTL8211F)
+     - 1 X Gigabit Ethernet (PHY 1000M) with PoE support
    * - Camera 
-     - | 4 X MIPI CSI [2 lanes] / 2 X MIPI CSI [4 lanes]  (2.5 Gbps)
-       | 2 X MIPI DPHY RX [4 lane] (4.5 Gbps)
+     - | 1 X MIPI CSI [4 lanes]
+       | 4 X MIPI CSI [2 lanes]
    * - PCIE     
-     - | 1 X PCIE Gen 3 [4 lane] with NVMe M.2 M-key (8Gbps)
-       | 2 X PCIE Gen 2 [1 lane] with FPC (5Gbps)
+     - | PHY0: 1 X PCIE 2.0 (5GT/s) via B2B Connector
+       | PHY1: 1 X PCIE 2.1 (x1 lane) via B2B Connector for Daughter Board
    * - SATA
-     - | 1 X SATA3.0 [1 lane] with 22 pin standard connector
-       | 1 X SATA3.0 multiplexed with PCIe Gen2 FPC connector
+     - 1 X SATA 3.1 (6GT/s) via B2B Connector (multiplexed with PCIe 2.0)
    * - USB 
-     - | 2 X USB2.0,
-       | 2 X TYPE-C Alt DisplayPort   
+     - | 1 X USB Host 2.0 (via CH334F HUB)
+       | 1 X TYPE-C Alt DisplayPort
+       | USB 3.0 via Daughter Board
    * - Real time clock 
      - RTC support via built-in battery interface
 

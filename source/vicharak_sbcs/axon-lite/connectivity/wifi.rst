@@ -5,13 +5,13 @@ Wi-Fi
 .. image:: /_static/images/rk3576-axon-lite/axon-lite-wifi-bt.webp
    :width: 80%
 
-Vicharak Axon Lite comes with a 6252B-SR Integrated RTL8852BS WiFi6 2.4GHz/5GHz dual-band and Antenna is connected to the board via a U.FL connector. The antenna can support WiFi 2.4Ghz, 5GHz, 5.8Ghz antenna and is compatible with 802.11 b/g/n Wi-Fi.
+Vicharak Axon Lite comes with a FG6252BSRB-03 WiFi 6 2.4GHz/5GHz dual-band module and Antenna is connected to the board via a U.FL connector. The antenna can support WiFi 2.4Ghz, 5GHz, 5.8Ghz antenna and is compatible with 802.11 b/g/n Wi-Fi.
 
 .. image:: /_static/images/rk3576-axon-lite/accessory-wifi-antenna.webp
    :width: 30%
 
 .. danger:: 
-    Kindly, attached Antenna on Wifi U.FL connector as mentioned in above picture.
+    Kindly, attach the combined Wi-Fi and Bluetooth Antenna on the U.FL connector as mentioned in the above picture.
 
 This document explains how to connect to a Wi-Fi network on a Linux system using command-line tools. It covers the following methods:
 

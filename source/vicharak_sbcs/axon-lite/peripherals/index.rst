@@ -18,4 +18,3 @@ Axon Lite supports a wide variety of peripherals to expand its functionality and
    PWM <pwm>
    UART <uart>
    PCIe 2.0 <pci2>
-   PCIe 3.0 <pci3>

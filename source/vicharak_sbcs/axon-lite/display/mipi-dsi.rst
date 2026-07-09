@@ -98,7 +98,7 @@ Steps to follow for Configuration
     └──────────────────────────────────────────────────────────────────────────────────────────┘
 
 
-5. Select overlays as per your connection of MIPI Display of connector **Tx0 / Tx1** by pressing ``spacebar`` on keyboard, then select ``Ok``.
+5. Select overlays as per your connection of MIPI Display of connector **Tx0** by pressing ``spacebar`` on keyboard, then select ``Ok``.
 
 .. code-block:: console
 
@@ -123,7 +123,6 @@ Steps to follow for Configuration
     │  [ ] Enable UART4 on 30 Pin GPIO Header Axon Lite V0.3                                        │
     │  [ ] Enable UART6 on 30 Pin GPIO Header Axon Lite V0.3                                        │
     │  [*] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
-    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon Lite V0.3                                   │
     │                                                                                          │
     │                                                                                          │
     │                                                                                          │
@@ -171,7 +170,7 @@ Verify after reboot
 Troubleshooting
 ````````````````
 - If **dmesg** reports inability to initialize DSI, verify:
-  - TX0 / TX1 wiring and connector integrity
+  - TX0 wiring and connector integrity
   - Correct overlay name and that the overlay is loaded
   - Kernel supports the specific MIPI Display
 - If the display remains dark, check that a valid panel/bridge device is registered and that the framebuffer is assigned (fb0, fb1, etc.)

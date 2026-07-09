@@ -6,8 +6,8 @@ Bluetooth
 .. image:: /_static/images/rk3576-axon-lite/axon-lite-wifi-bt.webp
    :width: 80%
 
-The Axon Lite SBC includes an integrated Bluetooth 5.2 interface based on the
-**Realtek RTL8852BS** chipset (module: 6252B-SR).  
+The Axon Lite SBC includes an integrated Bluetooth 5.3 interface based on the
+**FG6252BSRB-03** module.  
 Bluetooth is used for connecting wireless peripherals such as keyboards,
 mice, audio devices, and sensors.
 
@@ -15,14 +15,14 @@ mice, audio devices, and sensors.
    :width: 30%
 
 .. danger:: 
-    Kindly, attached Antenna on Bluetooth U.FL connector as mentioned in above picture.
+    Kindly, attach the combined Wi-Fi and Bluetooth Antenna on the U.FL connector as mentioned in the above picture.
 
 
 Hardware Details
 ----------------
 
-- **Chipset**: Realtek RTL8852BS
-- **Bluetooth Version**: Bluetooth 5.2 / BLE
+- **Module**: FG6252BSRB-03
+- **Bluetooth Version**: Bluetooth 5.3 / BLE
 - **Host Interface**: UART
 
 Linux Support

@@ -18,7 +18,7 @@ Overview
 SATA connectors and power
 --------------------------
 
-The board provides a 16-pin SATA 3.0 connector that integrates both SATA data and power signals.
+The board provides a 16-pin SATA 3.1 connector that integrates both SATA data and power signals.
 
 - Data connector: Pins 01 - 07
 - Power connector: Pins 08 - 16

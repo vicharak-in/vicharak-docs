@@ -89,29 +89,27 @@ How to use GPIO Pins as UART Protocol ?
     ┌──────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
     │ Please select overlays:                                                                  │
     │                                                                                          │
-    │  [ ] Enable DP connector-split mode Axon Lite V0.3                                            │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D0,1 dphy1 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D2,3 dphy2 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D0,1 dphy4 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon Lite V0.3                             │
-    │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon Lite V0.3                             │
-    │  [ ] Enable I2C1 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C2 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C5 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C7 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM0 on 30 Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [*] Enable UART1 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART4 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART6 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
-    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon Lite V0.3                                   │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
+    │  [ ] Enable PWM2_CH2_M3 on 30 Pin GPIO Header Axon Lite V0.1                             │
+    │  [ ] Enable PWM2_CH3_M3 on 30 Pin GPIO Header Axon Lite V0.1                             │
+    │  [ ] Enable PWM2_CH4_M2 on 30 Pin GPIO Header Axon Lite V0.1                             │
+    │  [ ] Enable PWM2_CH5_M2 on 30 Pin GPIO Header Axon Lite V0.1                             │
+    │  [ ] Enable PWM2_CH6_M3 on 30 Pin GPIO Header Axon Lite V0.1                             │
+    │  [ ] Enable PWM2_CH7_M3 on 30 Pin GPIO Header Axon Lite V0.1                             │
+    │  [ ] Enable Sata0 support on Combo PHY 0 on Axon Lite V0.1                               │
+    │  [ ] Enable Sata1 support on Combo PHY 1 on Axon Lite V0.1                               │
+    │  [ ] Enable UART5 on 30 Pin GPIO Header Axon Lite V0.1                                   │
+    │  [ ] Enable USB3.0 support on Combo PHY 1 on Axon Lite V0.1                              │
+    │  [ ] Enable can3m3 on 30 Pin GPIO Header Axon Lite V0.1                                  │
+    │  [ ] Enable sai0 on 30 Pin GPIO Header Axon Lite V0.1                                    │
+    │  [ ] Enable sai1m1 on 30 Pin GPIO Header Axon Lite V0.1                                  │
+    │  [ ] Enable sai3m2 on 30 Pin GPIO Header Axon Lite V0.1                                  │
+    │  [ ] Enable spi1 on 30 Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable spi3 on 30 Pin GPIO Header axon-lite V0.1                                    │
+    │  [ ] Enable spi3m0 on 30 Pin GPIO Header Axon Lite V0.1                                  │
+    │  [ ] Enable uart7 on 30 Pin GPIO Header Axon Lite V0.1                                   │
+    │  [ ] Enable uart8m0 on 30 Pin GPIO Header Axon Lite V0.1                                 │
+    │  [ ] Enable uart8m1 on 30 Pin GPIO Header Axon Lite V0.1                                 │
+    │  [ ] Enable uart8m2 on 30 Pin GPIO Header Axon Lite V0.1                                 │
     │                                                                                          │
     │                     <Ok>                         <Cancel>                                │
     │                                                                                          │
