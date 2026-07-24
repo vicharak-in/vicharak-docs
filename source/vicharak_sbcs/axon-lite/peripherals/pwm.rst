@@ -118,12 +118,12 @@ How to use GPIO Pins as PWM Protocol ?
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon Lite V0.3                      │
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon Lite V0.3                             │
     │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon Lite V0.3                             │
-    │  [ ] Enable UART1 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART6 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART6 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable PWM0 on 30 Pin GPIO Header Axon Lite V0.3                                         │
-    │  [*] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable PWM1_M1 on 30 Pin GPIO Header Axon Lite V0.3                                      │
+    │  [ ] Enable UART1 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable PWM0 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [*] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+    │  [ ] Enable PWM1_M1 on 40-Pin GPIO Header Axon Lite V0.3                                      │
     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon Lite V0.3                                   │
     │                                                                                          │

@@ -99,5 +99,5 @@ Technical Details
 -----------------
 
 - **IP Address:** Axon Lite (USB device): ``10.42.0.1``, Host (PC): typically ``10.42.0.2``
-- **iptables Rules:** Automatically configured to allow NAT routing from USB (``usb0``) to Ethernet (``eth0``)
+- **iptables Rules:** Automatically configured to allow NAT routing from USB (``usb0``) to Ethernet (``end0``)
 - **IP Forwarding:** Automatically enabled during tethering

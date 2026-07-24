@@ -26,18 +26,11 @@ I2C is a multi-master, multi-slave, packet-switched, single-ended serial communi
     
     - SDA (Serial Data Line): Transfers the data.
 
-- Axon Lite has **4** I2C's protocol on 30 Pins GPIO Header. Like, ``I2C1``, ``I2C2``, ``I2C5`` and ``I2C7`` 
+- Axon Lite has **4** I2C's protocol on 40-Pin GPIO Header. Like, ``I2C3``, ``I2C4``, ``I2C7`` and ``I2C9`` 
 
 .. note::
 
-   Using I2C1, I2C2, or I2C5 on the header involves a trade-off. This is because these pins are multiplexed with other functionalities on the board.
-   The following peripherals will be unavailable when their corresponding I2C lines are in use:
-
-   - **I2C1**: This configuration disables **MIPI CSI0**, **NPU**, and **Type-C0 display**.
-
-   - **I2C2**: This configuration makes **MIPI DPHY RX0** and **TX0** unavailable.
-
-   - **I2C5**: This configuration makes **MIPI_DPHY RX1** and **TX1** unavailable.
+   Using these I2C pins on the header involves a trade-off, as these pins are multiplexed with other functionalities on the board (e.g., SPI, UART, PWM).
 
 .. tip::
     To get more information on `Axon Lite GPIO Header`_. 
@@ -104,7 +97,7 @@ How to use GPIO Pins as I2C Protocol ?
     └──────────────────────────────────────────────────────────────────────────────────────────┘
 
 
-5. Select overlays as per your requirement ``( I2C1 / I2C2 / I2C5 / I2C7 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
+5. Select overlays as per your requirement ``( I2C3 / I2C4 / I2C7 / I2C9 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
 
 .. code-block:: console
 
@@ -118,16 +111,16 @@ How to use GPIO Pins as I2C Protocol ?
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon Lite V0.3                      │
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon Lite V0.3                             │
     │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon Lite V0.3                             │
-    │  [*] Enable I2C1 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C2 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C5 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C7 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM0 on 30 Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable UART1 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART4 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART6 on 30 Pin GPIO Header Axon Lite V0.3                                        │
+    │  [*] Enable I2C3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C4 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C7 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C9 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable PWM0 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+    │  [ ] Enable UART1 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable UART4 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon Lite V0.3                                   │
     │                                                                                          │
@@ -155,7 +148,7 @@ Now, you can see ``I2C`` devices, which are accessible through device nodes such
    ls -l /dev/i2c-*
 
 
-If you have turned on ``I2C1`` then you can get device like this ``/dev/i2c-1``.
+If you have turned on ``I2C3`` then you can get device like this ``/dev/i2c-3``.
 
 These ``i2c-*`` device nodes allow users to communicate with I2C peripherals such as sensors, EEPROMs, and other slave devices connected to the I2C bus.
 
@@ -176,7 +169,7 @@ To use the i2cset, i2cget, and i2cdetect commands, you need to install the i2c-t
     
         i2cdetect -l
 
-   -  In ``i2c-*``, where * represents an ``I2C`` bus number. For example, ``i2c-1`` can communicate with multiple devices, each identified by a unique 7-bit or 10-bit address.
+   -  In ``i2c-*``, where * represents an ``I2C`` bus number. For example, ``i2c-3`` can communicate with multiple devices, each identified by a unique 7-bit or 10-bit address.
 
 2. **Detect I2C Devices on a Bus:**
 

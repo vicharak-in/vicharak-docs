@@ -9,7 +9,7 @@ Hardware Required
 ------------------
 
 - Camera ( OV5647  or any other RPI supported camera)
-- Vicharak Flex Cable 30 Pin 0.4mm Pitch Cable (Golden Color)
+- Vicharak Flex Cable 40-Pin 0.4mm Pitch Cable (Golden Color)
 - Vicharak Camera PCB 
 - FPC50 15 Pin 1mm Pitch Cable
 

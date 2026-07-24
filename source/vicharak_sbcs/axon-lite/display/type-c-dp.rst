@@ -38,13 +38,13 @@ Example output:
 
 .. code-block:: text
 
-   Screen 0: minimum 320 x 200, current 1280 x 1024, maximum 16384 x 16384
+   Screen 0: minimum 320 x 200, current 1920 x 1080, maximum 16384 x 16384
    HDMI-1 disconnected (normal left inverted right x axis y axis)
    HDMI-2 disconnected (normal left inverted right x axis y axis)
    DP-1 disconnected (normal left inverted right x axis y axis)
-   DP-2 connected 1280x1024+0+0 (normal left inverted right x axis y axis) 376mm x 301mm
-      1280x1024     60.02*+  75.02
-      1152x864      75.00
+   DP-2 connected 1920x1080+0+0 (normal left inverted right x axis y axis) 376mm x 301mm
+      1920x1080     60.00*+  120.00
+      1280x1024     60.02
       1024x768      75.03    60.00
       800x600       75.00    68.32
       640x480       75.00    59.94
@@ -78,7 +78,7 @@ Manually configure display resolution and refresh rate:
 
 .. code-block:: bash
 
-   xrandr --output DP-2 --mode 1280x1024 --rate 60
+   xrandr --output DP-2 --mode 1920x1080 --rate 60
 
 Common xrandr Parameters
 ,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -92,7 +92,7 @@ Common xrandr Parameters
    * - ``--output <name>``
      - Display output name (DP-1, DP-2, HDMI-1, etc.)
    * - ``--mode <resolution>``
-     - Resolution in format WIDTHxHEIGHT (e.g., 1280x1024)
+     - Resolution in format WIDTHxHEIGHT (e.g., 1920x1080)
    * - ``--rate <frequency>``
      - Refresh rate in Hz (e.g., 60)
    * - ``--auto``

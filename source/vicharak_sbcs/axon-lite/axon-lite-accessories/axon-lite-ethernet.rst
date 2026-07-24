@@ -17,7 +17,7 @@ Specifications
 
 - Connector: Dual 2.5GbE RJ45 Ethernet ports
 - Interface: PCIe 2.0 (×2 lanes)
-- FPC Cable: 30 Pin
+- FPC Cable: 40-Pin
 
 Applications:
 --------------

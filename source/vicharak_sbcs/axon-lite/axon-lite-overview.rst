@@ -13,7 +13,7 @@ Axon Lite is designed to cater to a diverse audience, including but not limited 
     - **Ideal For**: Custom algorithms, experiments, AI and machine learning prototyping
 
 **Hardware Designers:**
-    - **Leverage**: 30-pin GPIO header, multiple interfaces
+    - **Leverage**: 40-Pin GPIO header, multiple interfaces
     - **Ideal For**: Developing, testing, and rapid prototyping of hardware designs
 
 **Hobbyist Users:**
@@ -25,7 +25,7 @@ Axon Lite is designed to cater to a diverse audience, including but not limited 
     - **Ideal For**: Machine learning applications, computer vision tasks
 
 **Multimedia Professionals:**
-    - **Leverage**: High-definition video, dual HDMI, USB-C for 8K output
+    - **Leverage**: High-definition video, HDMI for 4K output, MIPI DSI for up to 2K output, USB-C DP for 1080p
     - **Ideal For**: Video editing, streaming, digital signage
 
 **Educators and Students:**
@@ -37,7 +37,7 @@ Axon Lite is designed to cater to a diverse audience, including but not limited 
     - **Ideal For**: IoT projects, sensor integration, smart home solutions
 
 **Gaming and Entertainment:**
-    - **Leverage**: ARM Mali-G610 MC4 GPU
+    - **Leverage**: ARM Mali-G52 MC3 GPU
     - **Ideal For**: Superior gaming experience, multimedia playback
     - **Drivers**: OpenGL ES 1.1, 2.0 and 3.2, OpenCL 2.2, Vulkan1.2 etc.
 
@@ -97,13 +97,13 @@ Physical Information
    * - Weight
      - 69 g
    * - Length
-     - 101.5 mm
+     - 93 mm
    * - Width
      - 75 mm
    * - Height
      - 21.125 mm
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-dimension.webp
+.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-dimension.png
    :width: 75%
 
 .. tip::

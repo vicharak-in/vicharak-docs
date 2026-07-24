@@ -16,7 +16,7 @@ What's in the box?
 1. **Axon Lite**
     - Single-board computer optimized for high-performance computing and AI.
     - Powered by Rockchip RK3576 SoC (octa-core CPU: quad-core Cortex-A76 and quad-core Cortex-A55).
-    - 4GB/6GB LPDDR5 RAM, 32GB eMMC storage, 30-pin GPIO header.
+    - 4GB/6GB LPDDR5 RAM, 32GB eMMC storage, 40-Pin GPIO header.
     - Pre-installed with Ubuntu 22.04 (Jammy).
 
 2. **PD Cable**

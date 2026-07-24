@@ -25,7 +25,7 @@ Linux Support
 The Ethernet interface is supported by the Linux kernel using the standard
 Realtek PHY driver. No additional out-of-tree drivers are required.
 
-The network interface usually appears as ``eth0`` or ``end1`` depending on
+The network interface usually appears as ``end0`` or ``end1`` depending on
 the Linux distribution.
 
 Basic Linux Commands
@@ -44,7 +44,7 @@ Check IP address assigned to Ethernet:
 
 .. code-block:: bash
 
-   ip addr show eth0
+   ip addr show end0
 
 Bring Interface Up or Down
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -53,13 +53,13 @@ Bring the Ethernet interface up:
 
 .. code-block:: bash
 
-   sudo ip link set eth0 up
+   sudo ip link set end0 up
 
 Bring the Ethernet interface down:
 
 .. code-block:: bash
 
-   sudo ip link set eth0 down
+   sudo ip link set end0 down
 
 Check Link Status and Speed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -74,7 +74,7 @@ Check link status and negotiated speed:
 
 .. code-block:: bash
 
-   ethtool eth0
+   ethtool end0
 
 Expected output includes link state and speed, for example::
 

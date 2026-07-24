@@ -94,7 +94,7 @@ This command converts an encoded video to a raw video. Use the ``ffprobe`` comma
        compatible_brands: isomiso2mp41
        encoder         : Lavf58.76.100
      Duration: 00:03:08.96, start: 0.000000, bitrate: 4476 kb/s
-     Stream #0:0[0x1](und): Video: hevc (Main) (hvc1 / 0x31637668), yuv420p(tv, bt709, progressive), 7680x3252 [SAR 1:1 DAR 640:271], 4473 kb/s, 25 fps, 25 tbr, 12800 tbn (default)
+     Stream #0:0[0x1](und): Video: hevc (Main) (hvc1 / 0x31637668), yuv420p(tv, bt709, progressive), 3840x2160 [SAR 1:1 DAR 16:9], 4473 kb/s, 25 fps, 25 tbr, 12800 tbn (default)
        Metadata:
          handler_name    : ISO Media file produced by Google Inc.
          vendor_id       : [0][0][0][0]
@@ -107,7 +107,7 @@ We get the following information from the ``ffprobe`` command:
 
    **Encoding Method**, HEVC
    **Pixel Format**, yuv420p
-   **Resolution**, 7680x3252
+   **Resolution**, 3840x2160
    **Video Bitrate**, 4473 kb/s
    **Frame Rate**, 25 fps
 

@@ -24,13 +24,13 @@ devices like sensors, displays, and memory devices. Typically, SPI involves dedi
 Slave In), MISO (Master In Slave Out), SCLK (Serial Clock), and SS (Slave Select).
 In Axon Lite, general-purpose I/O (GPIO) pins can be repurposed to function as SPI pins.
 
-Axon Lite provides **1** ``SPI1`` ( Pin 17, 18, 19 and Pin 20 ) on GPIO Header.
+Axon Lite provides **1** ``SPI3`` ( Pin 19, 21, 23 and Pin 24 ) on GPIO Header.
 
 .. tip::
     To get more information on `Axon Lite GPIO Header`_.
 
 
-Make Simple spidev1.0 device
+Make Simple spidev3.0 device
 ----------------------------
 
 How to use GPIO Pins as SPI Protocol ?
@@ -83,7 +83,7 @@ How to use GPIO Pins as SPI Protocol ?
 
 
 
-5. Select overlays ``( SPI1 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
+5. Select overlays ``( SPI3 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
 
 .. code-block:: console
 
@@ -97,17 +97,17 @@ How to use GPIO Pins as SPI Protocol ?
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon Lite V0.3                      │
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon Lite V0.3                             │
     │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon Lite V0.3                             │
-    │  [ ] Enable I2C1 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C2 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C5 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C7 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM0 on 30 Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [*] Enable SPI1 on 30 Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable UART1 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART4 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART6 on 30 Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable I2C3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C4 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C7 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C9 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable PWM0 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+    │  [*] Enable SPI3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable UART1 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable UART4 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon Lite V0.3                                   │
     │                                                                                          │
@@ -133,7 +133,7 @@ Check generated Device
 
         ls -l /dev/spidev*
 
-You will find ``/dev/spidev1.0`` device is created in ``/dev`` directory.
+You will find ``/dev/spidev3.0`` device is created in ``/dev`` directory.
 
 ENC28J60 Ethernet Controller with SPI Support
 ---------------------------------------------
@@ -159,19 +159,19 @@ Physical Connection
    * - **ENC28J60 Pin**
      - **Axon Lite Header GPIO Pin**
    * - GND
-     - Pin 8
+     - Pin 14
    * - 3.3V
-     - Pin 14 
+     - Pin 17
    * - SO ( Slave Out )
-     - Pin 17 ( GPIO1_D0 )
+     - Pin 21 ( GPIO3_D5 )
    * - SI ( Slave In )
-     - Pin 18 ( GPIO1_D1 )
+     - Pin 19 ( GPIO3_D6 )
    * - CS ( Chip select )
-     - Pin 19 ( GPIO1_D3 )
+     - Pin 24 ( GPIO3_D7 )
    * - SCK ( Clock )
-     - Pin 20 ( GPIO1_D2 )
+     - Pin 23 ( GPIO3_D4 )
    * - INT ( Interrupt )
-     - Pin 23 ( GPIO1_B3 )
+     - Pin 22 ( GPIO2_B4 )
 
 Turn on overlay
 ===============
@@ -237,18 +237,18 @@ Turn on overlay
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon Lite V0.3                      │
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon Lite V0.3                             │
     │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon Lite V0.3                             │
-    │  [ ] Enable I2C1 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C2 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C5 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C7 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM0 on 30 Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable SPI1 on 30 Pin GPIO Header Axon Lite V0.3                                         │
-    │  [*] Enable SPI1 ENC28J60 Ethernet Controller support on 30 Pin GPIO Header Axon Lite V0.3    │
-    │  [ ] Enable UART1 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART4 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART6 on 30 Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable I2C3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C4 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C7 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C9 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable PWM0 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+    │  [ ] Enable SPI3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [*] Enable SPI3 ENC28J60 Ethernet Controller support on 40-Pin GPIO Header Axon Lite V0.3    │
+    │  [ ] Enable UART1 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable UART4 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon Lite V0.3                                   │
     │                                                                                          │

@@ -2,9 +2,9 @@
 Display Interfaces
 ####################################
 
-Axon Lite supports up to 4 independent displays simultaneously using the RK3576 display subsystem.
+Axon Lite supports up to 3 independent displays simultaneously using the RK3576 display subsystem.
 
-The RK3576 contains four internal display controllers called Video Ports (VP0, VP1, VP2, VP3). Each Video Port can drive one display output independently. Therefore, a maximum of four independent displays can be active at the same time.
+The RK3576 contains three internal display controllers called Video Ports (VP0, VP1, VP2). Each Video Port can drive one display output independently.
 
 Physical display connectors on the board are mapped internally to these Video Ports through various display interfaces such as HDMI, DisplayPort, and MIPI-DSI.
 
@@ -18,34 +18,25 @@ Video Ports Specifications
 | Video    | Max Output Resolution          |
 | Port     |                                |
 +==========+================================+
-| VP0      | 7680×4320 @ 60Hz              |
+| VP0      | 3840x2160 @ 120Hz (4K)         |
 +----------+--------------------------------+
-| VP1      | 4096×4320 @ 60Hz              |
+| VP1      | 2560x1600 @ 60Hz (2K)          |
 +----------+--------------------------------+
-| VP2      | 4096×4320 @ 60Hz              |
-+----------+--------------------------------+
-| VP3      | 2048×1080 @ 60Hz              |
+| VP2      | 1920x1080 @ 60Hz (1080p)       |
 +----------+--------------------------------+
 
 Available Display Interface Ports on Axon Lite
-=========================================
+==============================================
 
-Axon Lite exposes multiple physical display interface ports. These connectors are internally mapped to the four Video Ports.
+Axon Lite exposes three physical display interface ports:
+
+1. micro HDMI TX
+2. Type-C DP (USB-C)
+3. MIPI DSI
 
 .. note::
 
-   Although six physical display connectors are available, only four independent displays can be active simultaneously due to the hardware limitation of four Video Ports.
-
-   Any combination of up to four display interface ports can be used simultaneously.
-
-Available display interface ports:
-
-1. HDMI TX0
-2. HDMI TX1
-3. MIPI-DPHY TX0
-4. MIPI-DPHY TX1
-5. Type-C1/DP (USB-C)
-6. Type-C0/DP (USB-C)
+   In the current configuration, we are giving **VP2** to **DP0** (Type-C DisplayPort), thus limiting its maximum output resolution to **1920x1080 @ 60Hz**.
 
 Detailed documentation for each interface is provided below:
 

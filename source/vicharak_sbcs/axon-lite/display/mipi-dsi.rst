@@ -16,7 +16,7 @@ Prerequisites
 - MIPI DSI Display
 - Configure Kernel and make overlays according to MIPI-DSI Display
 - Vicharak PCB For DSI Display
-- Vicharak Flex Cable 30 Pin 0.4mm Pitch Cable (Golden Color)
+- Vicharak Flex Cable 40-Pin 0.4mm Pitch Cable (Golden Color)
 - Make sure, You have installed latest kernel, If not. Please run command below.
 
 .. code-block::
@@ -112,16 +112,16 @@ Steps to follow for Configuration
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 Alpha Axon Lite V0.3 [OFF]                     │
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Alpha Axon Lite V0.3 [OFF]                 │
     │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX1 Aplha Axon Lite V0.3 [OFF]                 │
-    │  [ ] Enable I2C1 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C2 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C5 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C7 on 30-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM0 on 30 Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable UART1 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART4 on 30 Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART6 on 30 Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable I2C3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C4 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C7 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable I2C9 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable PWM0 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+    │  [ ] Enable UART1 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable UART4 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+    │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
     │  [*] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
     │                                                                                          │
     │                                                                                          │
