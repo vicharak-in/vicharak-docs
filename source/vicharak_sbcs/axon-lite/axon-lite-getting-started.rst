@@ -266,11 +266,11 @@ Hardware Setup
      - Pin 6
      - GND
    * - RX
-     - Pin 4 (GPIO0_B5)
-     - UART2_TX_M0_DEBUG
+     - Pin 8
+     - UART0_TX_M0
    * - TX
-     - Pin 2 (GPIO0_B6)
-     - UART2_RX_M0_DEBUG
+     - Pin 10
+     - UART0_RX_M0
 
 .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-serial-uart-pins.webp
    :width: 50%
