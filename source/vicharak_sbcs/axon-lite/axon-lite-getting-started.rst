@@ -67,24 +67,19 @@ Axon Lite OS Credentials
 Axon Lite Button Guide
 =================
 
-.. image::  ../../_static/images/rk3576-axon-lite/axon-lite-button-guide.webp
-    :width: 50%
+.. image::  ../../_static/images/rk3576-axon-lite/axon-lite-button-guide.png
+    :width: 70%
 
 
-1. Recovery Button
-    Recovery Button mainly for Android OS to help you boot in recovery mode by holding it down when you apply power to
-    Axon Lite. If you don’t have Android OS installed on your machine then it probably does nothing.
-    It also works as Volume Up Button in both Android and Linux System.
-
-2. Power Button
+1. Power Button
     You can turn on Axon Lite with the power button if it is currently off. When the cpu is powered off the red LED will on to
     let you know that the board has proper power supply ( 12 V ), If you press the power button ( for 1-2 seconds ) then white and blue LED will be on and start booting
     up with blinking white LED.
 
-3. Reset Button
+2. Reset Button
     You can reboot Axon Lite by pressing reset button.
 
-4. Boot Button
+3. Boot Button
     Boot button mainly to get Axon Lite into MaskRom Mode.
 
 .. note::
