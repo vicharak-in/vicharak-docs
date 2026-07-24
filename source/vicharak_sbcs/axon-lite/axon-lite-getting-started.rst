@@ -199,14 +199,14 @@ connect the Axon Lite to your computer using the USB-C port.
 1. Using Micro HDMI port
 -------------------------
 
-Axon Lite is equipped with two **micro HDMI ports**, which allows for easy
+Axon Lite is equipped with a **micro HDMI port**, which allows for easy
 connection to a display. By using a micro HDMI to HDMI cable or adapter, users
 can connect Axon Lite to a monitor or TV with an HDMI input.
 
 This enables direct visual access to the graphical user interface (GUI) or
 command-line interface (CLI) on the connected display.
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-hdmi.webp
+.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-hdmi.png
     :width: 50%
 
 Connect the Micro HDMI to HDMI cable to the Axon Lite and the monitor.
