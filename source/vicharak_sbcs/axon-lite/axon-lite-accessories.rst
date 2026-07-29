@@ -58,11 +58,29 @@
 
        Axon Lite SATA Adapter Board (V1.0 R0.3) for connecting SATA devices to Axon Lite
 
-    .. grid-item-card:: Axon Lite PCIe to Ethernet Expension Board
-       :link: axon-lite-accessories/axon-lite-ethernet
+    .. grid-item-card:: Axon Lite Dual Ethernet HAT
+       :link: axon-lite-accessories/axon-lite-dual-ethernet
        :link-type: doc
        :shadow: md
 
-       Axon Lite PCIe to Ethernet Expension Board (V1.0 R0.4) for network devices
+       Dual Ethernet Expansion HAT for Axon Lite PCIe Port
+
+       **Coming Soon**
+
+    .. grid-item-card:: Axon Lite Ethernet and Dual USB3 HAT
+       :link: axon-lite-accessories/axon-lite-ethernet-usb3
+       :link-type: doc
+       :shadow: md
+
+       Ethernet and Dual USB 3.0 Hub HAT for Axon Lite PCIe Port
+
+       **Coming Soon**
+
+    .. grid-item-card:: Axon Lite Quadruple USB3 Hub HAT
+       :link: axon-lite-accessories/axon-lite-quad-usb3
+       :link-type: doc
+       :shadow: md
+
+       Quadruple USB 3.0 Hub HAT for Axon Lite PCIe Port
 
        **Coming Soon**
