@@ -13,11 +13,11 @@ OS Images
     - - **Operating System**
       - **Variant**
     - - Debian
+      - `Trixie 13 <https://downloads.vicharak.in/vicharak-axon-lite/debian/13_trixie>`_
+    - - Ubuntu
       - **Coming Soon**
     - - Ubuntu
-      - `Jammy 22.04 <https://downloads.vicharak.in/vicharak-axon-lite/ubuntu/22_jammy>`_
-    - - Ubuntu
-      - `Noble 24.04 <https://downloads.vicharak.in/vicharak-axon-lite/ubuntu/24_noble>`_
+      - **Coming Soon**
     - - Community Images
       - **Coming Soon**
 
