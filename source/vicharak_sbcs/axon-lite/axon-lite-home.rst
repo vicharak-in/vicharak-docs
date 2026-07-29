@@ -39,6 +39,7 @@ The **Axon Lite Computer** (SBC) is powered by rockchip's **RK3576**
    Audio Interface <audio/index>
    Video Interface  <axon-lite-video/index>
    OS Configuration <axon-lite-os-configuration/index>
+   Other System <axon-lite-other-system>
    Frequently Asked Questions <axon-lite-faq>
 
 
