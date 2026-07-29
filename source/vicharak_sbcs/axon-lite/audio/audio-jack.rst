@@ -44,19 +44,10 @@ In Axon Lite, you will be shown below audio devices :
 
    vicharak@vicharak:~$ aplay -l
     **** List of PLAYBACK Hardware Devices ****
-    card 0: rockchipes8388 [rockchip-es8388], device 0: dailink-multicodecs ES8323 HiFi-0 [dailink-multicodecs ES8323 HiFi-0]
+    card 0: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
       Subdevices: 1/1
       Subdevice #0: subdevice #0
-    card 1: rockchipdp0 [rockchip-dp0], device 0: rockchip-dp0 spdif-hifi-0 [rockchip-dp0 spdif-hifi-0]
-      Subdevices: 1/1
-      Subdevice #0: subdevice #0
-    card 2: rockchipdp1 [rockchip-dp1], device 0: rockchip-dp1 spdif-hifi-0 [rockchip-dp1 spdif-hifi-0]
-      Subdevices: 1/1
-      Subdevice #0: subdevice #0
-    card 3: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
-      Subdevices: 1/1
-      Subdevice #0: subdevice #0
-    card 4: rockchiphdmi1 [rockchip-hdmi1], device 0: rockchip-hdmi1 i2s-hifi-0 [rockchip-hdmi1 i2s-hifi-0]
+    card 1: rockchipes8388 [rockchip-es8388], device 0: dailink-multicodecs ES8323 HiFi-0 [dailink-multicodecs ES8323 HiFi-0]
       Subdevices: 1/1
       Subdevice #0: subdevice #0
 
