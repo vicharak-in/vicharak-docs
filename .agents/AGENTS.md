@@ -6,12 +6,14 @@ Whenever making modifications to the documentation (e.g. updating `.rst` or `.md
    pipenv update
    pipenv run make html -j $(nproc --all)
    ```
-2. Host the compiled HTML locally on a background web server (or verify the existing one is still running and serving the updated files) so the user can preview the changes:
+2. Host the compiled HTML locally on a background web server. **Note: Always run the Python HTTP server with BypassSandbox set to true (unsandboxed), otherwise the host browser cannot access the port.**
    ```bash
    cd _build/html
    python3 -m http.server 8000
    ```
 3. Always inform the user that the recompilation is complete and they can preview the site at `http://localhost:8000`.
+
+**Note: Ensure you stop hosting, rebuild, and rehost after each change.**
 
 <RULE>
 # Scope Restriction
