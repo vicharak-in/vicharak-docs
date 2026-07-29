@@ -1,6 +1,6 @@
 .. _axon-lite-downloads:
 
-__AXON LITE_LITE_SPACE__ Downloads
+Axon Lite Downloads
 ===================
 
 OS Images
