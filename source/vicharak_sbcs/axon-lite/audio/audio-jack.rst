@@ -1,7 +1,7 @@
 3.5 mm Audio Jack
 ==================
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-audio-jack.webp
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-audio-jack.png
    :width: 80%
 
 The 3.5 mm audio jack on axon-lite-based RK3576 Rockchip SBCs running Linux provides analog stereo output and, where supported by the hardware, a microphone input. 
