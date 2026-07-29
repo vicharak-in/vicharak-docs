@@ -12,7 +12,7 @@ Ubuntu
 --------
 
 - 22.04 ( Jammy )
-- 24.04 ( Noble Numbat ) 
+- 13 ( Trixie ) 
 
 Flavour
 -------

@@ -15,7 +15,7 @@ This document provides instructions for flashing OS images to supported storage 
 Ensure the correct device path (e.g., `/dev/sdX`, `/dev/nvme0n1`) is used to avoid overwriting important data.
 :::
 
-[Download Raw Image](https://downloads.vicharak.in/vicharak-axon-lite/ubuntu/24_noble/)
+[Download Raw Image](https://downloads.vicharak.in/vicharak-axon-lite/debian/13_trixie/)
 
 :::{note}
 Raw image can be used on SD Card, NVMe, and USB Storage Media devices.

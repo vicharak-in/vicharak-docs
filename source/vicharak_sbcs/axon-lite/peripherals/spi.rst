@@ -7,8 +7,8 @@ SPI
 
 .. warning::
 
-    We recommend to use Vicharak 6.1 kernel and latest `Ubuntu 24.04 Noble Numbat
-    <https://downloads.vicharak.in/vicharak-axon-lite/ubuntu/24_noble/>`_ , in order to support below overlays. Flash Image
+    We recommend to use Vicharak 6.1 kernel and latest `Debian 13 trixie
+    <https://downloads.vicharak.in/vicharak-axon-lite/debian/13_trixie/>`_ , in order to support below overlays. Flash Image
     using this `Documentation </vicharak_sbcs/axon-lite/axon-lite-linux/linux-usage-guide/rockchip-develop-guide>`_
 
     .. code::
