@@ -4,7 +4,7 @@ Customizing Splash Screen/Logo in Linux
 
 This document provides a step-by-step guide to changing the boot splash screen using **Plymouth**, a graphical boot animation and logger used in many Linux distributions.
 
-.. image:: /_static/images/ubuntu-mate-logo.webp
+.. image:: /_static/images/debian-mate-logo.webp
 
 Requirements
 ============
@@ -14,7 +14,7 @@ Ensure the following packages are installed:
 - plymouth
 - plymouth-themes
 
-On Debian/Ubuntu-based systems:
+On Debian/Debian-based systems:
 
 .. code-block:: bash
   
@@ -33,8 +33,8 @@ Set plymouth theme using command
     sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/space-sunrise/space-sunrise.plymouth 100
 
 .. note::
-   The command of plymouth-set-default-theme is a Debian command and not used in Ubuntu. 
-   Ubuntu uses ``sudo update-alternatives --config default.plymouth`` to set the default Plymouth theme.
+   The command of plymouth-set-default-theme is a Debian command and not used in Debian. 
+   Debian uses ``sudo update-alternatives --config default.plymouth`` to set the default Plymouth theme.
 
 3. Then you run the --config option so that you can choose the new Plymouth theme:
 
@@ -51,12 +51,12 @@ Below output, you can show :
   
     Selection    Path                                                                           Priority   Status
   ------------------------------------------------------------
-    0            /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo.plymouth           150       auto mode
+    0            /usr/share/plymouth/themes/debian-mate-logo/debian-mate-logo.plymouth           150       auto mode
     1            /usr/share/plymouth/themes/bgrt/bgrt.plymouth                                   110       manual mode
     2            /usr/share/plymouth/themes/spinner/spinner.plymouth                             70        manual mode
-    3            /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo-scale-2.plymouth   149       manual mode
-    4            /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo.plymouth           150       manual mode
-  * 5            /usr/share/plymouth/themes/vortex-ubuntu/vortex-ubuntu.plymouth                 100       manual mode
+    3            /usr/share/plymouth/themes/debian-mate-logo/debian-mate-logo-scale-2.plymouth   149       manual mode
+    4            /usr/share/plymouth/themes/debian-mate-logo/debian-mate-logo.plymouth           150       manual mode
+  * 5            /usr/share/plymouth/themes/vortex-debian/vortex-debian.plymouth                 100       manual mode
   
   Press <enter> to keep the current choice[*], or type selection number:
 
@@ -121,7 +121,7 @@ Follow the steps below to change the system splash screen using Plymouth.
 
         Selection    Path                                                                           Priority   Status
       -----------------------------------------------------------------------------------------------
-        0            /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo-scale-2.plymouth   149       auto mode
+        0            /usr/share/plymouth/themes/debian-mate-logo/debian-mate-logo-scale-2.plymouth   149       auto mode
         1            /usr/share/plymouth/themes/avi/theme.conf                                       100       manual mode
         2            /usr/share/plymouth/themes/bgrt/bgrt.plymouth                                   110       manual mode
         3            /usr/share/plymouth/themes/eos-bgrt/eos-bgrt.plymouth                           100       manual mode
@@ -130,8 +130,8 @@ Follow the steps below to change the system splash screen using Plymouth.
         6            /usr/share/plymouth/themes/spinner/spinner.plymouth                             70        manual mode
         7            /usr/share/plymouth/themes/steamdeck/steamdeck.plymouth                         100       manual mode
         8            /usr/share/plymouth/themes/test/test.plymouth                                   100       manual mode
-        9            /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo-scale-2.plymouth   149       manual mode
-        10           /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo.plymouth           100       manual mode
+        9            /usr/share/plymouth/themes/debian-mate-logo/debian-mate-logo-scale-2.plymouth   149       manual mode
+        10           /usr/share/plymouth/themes/debian-mate-logo/debian-mate-logo.plymouth           100       manual mode
 
    Select the corresponding number for the **Fedora theme**.
 

@@ -2,7 +2,7 @@
 
 # Vicharak Linux Start Guide
 
-Vicharak provides multiple Linux distributions for Axon Lite SBC such as Debian, Ubuntu, etc. This guide will help you get started with Vicharak Linux systems.
+Vicharak provides multiple Linux distributions for Axon Lite SBC such as Debian, Debian, etc. This guide will help you get started with Vicharak Linux systems.
 
 ## System Management
 
@@ -19,7 +19,7 @@ Vicharak provides multiple Linux distributions for Axon Lite SBC such as Debian,
   - Written using shell scripts
   - Allows configuration and setup of the Linux system
   - Provides a **TUI** interface
-  - Supported on Debian-based systems (Debian buster/bullseye, Ubuntu focal/jammy, Armbian)
+  - Supported on Debian-based systems (Debian buster/bullseye, Debian focal/trixie, Armbian)
 - Usage:
   - Run `sudo vicharak-config` to start the tool
 
@@ -79,7 +79,7 @@ Vicharak provides multiple Linux distributions for Axon Lite SBC such as Debian,
 
 You can install GTK-Term by executing the following command:
 
-|       Debian/Ubuntu        |           Fedora           |        Arch Linux        |
+|       Debian/Debian        |           Fedora           |        Arch Linux        |
 |----------------------------|----------------------------|--------------------------|
 | `sudo apt update`          | `sudo dnf update`          | `sudo pacman -Syu`       |
 | `sudo apt install gtkterm` | `sudo dnf install gtkterm` | `sudo pacman -S gtkterm` |
@@ -118,7 +118,7 @@ sudo gtkterm
     sudo apt install minicom
     ```
 - **Package Names on Different Distributions:**
-  | Debian/Ubuntu             | Fedora                    | Arch Linux                |
+  | Debian/Debian             | Fedora                    | Arch Linux                |
   |---------------------------|---------------------------|---------------------------|
   | `sudo apt update`         | `sudo dnf update`         | `sudo pacman -Syu`        |
   | `sudo apt install minicom`| `sudo dnf install minicom`| `sudo pacman -S minicom`  |
@@ -277,14 +277,14 @@ Getting Started with Axon Lite [**Using SSH**](../../axon-lite-getting-started.r
 
 This guide will cover the installation of default `openssh-server`.
 
-|           Debian/Ubuntu           |              Fedora               |        Arch Linux        |
+|           Debian/Debian           |              Fedora               |        Arch Linux        |
 | :-------------------------------: | :-------------------------------: | :----------------------: |
 |         `sudo apt update`         |         `sudo dnf update`         |    `sudo pacman -Syu`    |
 | `sudo apt install openssh-client` | `sudo dnf install openssh-client` | `sudo pacman -S openssh` |
 
 ### SSH Server installation
 
-|           Debian/Ubuntu           |              Fedora               |        Arch Linux        |
+|           Debian/Debian           |              Fedora               |        Arch Linux        |
 | :-------------------------------: | :-------------------------------: | :----------------------: |
 |         `sudo apt update`         |         `sudo dnf update`         |    `sudo pacman -Syu`    |
 | `sudo apt install openssh-server` | `sudo dnf install openssh-server` | `sudo pacman -S openssh` |
@@ -323,7 +323,7 @@ sudo netstat -tulpn | grep ssh
 
 You can install **Avahi-daemon** using the following commands:
 
-|          Debian/Ubuntu          |             Fedora              |       Arch Linux       |
+|          Debian/Debian          |             Fedora              |       Arch Linux       |
 | :-----------------------------: | :-----------------------------: | :--------------------: |
 |        `sudo apt update`        |        `sudo dnf update`        |   `sudo pacman -Syu`   |
 | `sudo apt install avahi-daemon` | `sudo dnf install avahi-daemon` | `sudo pacman -S avahi` |

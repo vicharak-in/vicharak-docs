@@ -17,7 +17,7 @@ What's in the box?
     - Single-board computer optimized for high-performance computing and AI.
     - Powered by Rockchip RK3576 SoC (octa-core CPU: quad-core Cortex-A76 and quad-core Cortex-A55).
     - 4GB/6GB LPDDR5 RAM, 32GB eMMC storage, 40-Pin GPIO header.
-    - Pre-installed with Ubuntu 22.04 (Jammy).
+    - Pre-installed with Debian 13 (Trixie).
 
 2. **PD Cable**
     - Supplies power to Axon Lite.
@@ -93,7 +93,7 @@ Getting Started with eMMC
 Turning board on
 ----------------
 
-Axon Lite comes pre-loaded with **Ubuntu** (``Jammy``) operating system on
+Axon Lite comes pre-loaded with **Debian** (``Trixie``) operating system on
 its ``eMMC`` (embedded MultiMediaCard) storage, and it offers support for
 ``SD-card`` boot mode.
 
@@ -106,7 +106,7 @@ it will initiate the boot process from it. In the absence of an SD-card,
 the default boot destination becomes the eMMC storage.
 
 For the purpose of this guide, we will focus on the ``eMMC`` storage and the
-pre-installed ``Ubuntu (Jammy)``, omitting detailed instructions for
+pre-installed ``Debian (Trixie)``, omitting detailed instructions for
 ``SD-card`` boot configurations.
 
 Connect the PD cable to the Axon Lite board and the PD adapter to the power socket.
@@ -123,7 +123,7 @@ Once the power is connected, the board will automatically turn on.
 .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-details.webp
    :width: 60%
 
-Axon Lite is pre-installed with Ubuntu (``Jammy``) on its eMMC storage.
+Axon Lite is pre-installed with Debian (``Trixie``) on its eMMC storage.
 So, when you power on the board, it will boot from the eMMC storage by default.
 
 .. warning::

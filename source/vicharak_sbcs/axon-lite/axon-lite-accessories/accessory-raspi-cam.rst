@@ -214,7 +214,7 @@ Run Camera Using Python Script
  
 1. Install Python if not already installed. You can download Python from the official website: `Python Downloads <https://www.python.org/downloads/>`__.
     
-for Debian-based systems (like Ubuntu):   
+for Debian-based systems (like Debian):   
 
 .. code-block::
 
@@ -224,7 +224,7 @@ for Debian-based systems (like Ubuntu):
 
 2. Install the OpenCV library using pip
             
-for Debian-based systems (like Ubuntu):
+for Debian-based systems (like Debian):
 
 .. code-block::
 
@@ -339,7 +339,7 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
                 .. image:: /_static/images/rk3399-vaaman/Camera_guide_0.webp
                     :width:  50%
             
-            2. Open the Cheese application in your Ubuntu Linux operating system.
+            2. Open the Cheese application in your Debian Linux operating system.
     
                 .. image:: /_static/images/rk3399-vaaman/Camera_1.webp
                    :width: 50%
@@ -418,7 +418,7 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
             
             2. Install Python if not already installed. You can download Python from the official website: `Python Downloads <https://www.python.org/downloads/>`__.
     
-                 for Debian-based systems (like Ubuntu):   
+                 for Debian-based systems (like Debian):   
     
                  .. code-block::
     
@@ -427,7 +427,7 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
             
             3. Install the OpenCV library using pip
             
-                 for Debian-based systems (like Ubuntu):
+                 for Debian-based systems (like Debian):
                  
                  .. code-block::
     

@@ -321,7 +321,7 @@ Run Camera Using Python Script
  
 1. Install Python if not already installed. You can download Python from the official website: `Python Downloads <https://www.python.org/downloads/>`__.
     
-for Debian-based systems (like Ubuntu): 
+for Debian-based systems (like Debian): 
 
 .. code-block::
 
@@ -331,7 +331,7 @@ for Debian-based systems (like Ubuntu):
 
 2. Install the OpenCV library using pip
             
-for Debian-based systems (like Ubuntu):
+for Debian-based systems (like Debian):
 
 .. code-block::
 

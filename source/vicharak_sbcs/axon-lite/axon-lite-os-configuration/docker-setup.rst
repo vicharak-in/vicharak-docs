@@ -24,7 +24,7 @@ Installing Docker
 
 To install Docker, follow the official installation guide:
 
-`Install Docker on Ubuntu <https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository>`_
+`Install Docker on Debian <https://docs.docker.com/engine/install/debian/#install-using-the-repository>`_
 
 This guide will walk you through:
     - Adding the official Docker repository  

@@ -11,13 +11,25 @@ header that provides flexible options for connecting and controlling external
 devices. Through software settings, you can configure these pins as either
 input or output, making them adaptable for various applications.
 
-Out of the 40 pins on the header, 9 are dedicated GPIO pins. These GPIO pins
-can also be repurposed for SPI (Serial Peripheral Interface),
-UART (Universal Asynchronous Receiver-Transmitter), PWM (Pulse Width Modulation) and
-I2C (Inter-Integrated Circuit) functions.
+Out of the 40 pins on the header, 27 are dedicated GPIO pins. These GPIO pins 
+can be used as digital inputs or outputs to control or read from external 
+hardware. 
 
-This versatility opens up a wide array of possibilities for interfacing with
-different components and facilitating communication with other devices.
+The remaining pins are dedicated to other functions, such as: 
+- Power supply (3.3V and 5V) 
+- Ground (GND) 
+- Specific interfaces (I2C, SPI, UART, PWM, etc.) 
+- ADC (Analog-to-Digital Converter) inputs 
+- DAC (Digital-to-Analog Converter) outputs 
+- I2S (Inter-IC Sound) 
+- CAN (Controller Area Network) 
+- eDP (Embedded DisplayPort) 
+- PCIe (Peripheral Component Interconnect Express) 
+- MIPI CSI/DSI 
+- USB 
+- Debug headers 
+- UART debug (Pin 8 and 10) 
+- Buttons (Power, Reset, Recovery, Maskrom)
 
 <!-- TODO: Update Vicharak config to be suitable for Axon Lite -->
 ## GPIO Voltage Level

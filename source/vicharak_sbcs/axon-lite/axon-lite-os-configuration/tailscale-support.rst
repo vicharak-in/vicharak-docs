@@ -24,7 +24,7 @@ This guide explains how to install, configure, and manage Tailscale on Linux sys
 Prerequisites
 -------------
 
-- A Linux-based system (Debian, Ubuntu)
+- A Linux-based system (Debian, Debian)
 - Root privileges (sudo)
 - An active internet connection
 - A `Tailscale account <https://tailscale.com>`_

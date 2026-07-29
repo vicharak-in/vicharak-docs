@@ -94,7 +94,7 @@ Update your apt repository caches after setting up the repositories.
 
     sudo apt update
 
-ROS 2 packages are built on frequently updated Ubuntu systems. It is always recommended that you ensure your system is up to date before installing new packages.
+ROS 2 packages are built on frequently updated Debian systems. It is always recommended that you ensure your system is up to date before installing new packages.
 
 .. code-block:: bash
 
@@ -102,9 +102,9 @@ ROS 2 packages are built on frequently updated Ubuntu systems. It is always reco
 
 .. warning::
 
-    Due to early updates in Ubuntu 22.04 it is important that systemd and udev-related packages are updated before installing ROS 2. The installation of ROS 2's dependencies on a freshly installed system without upgrading can trigger the removal of critical system packages.
+    Due to early updates in Debian 22.04 it is important that systemd and udev-related packages are updated before installing ROS 2. The installation of ROS 2's dependencies on a freshly installed system without upgrading can trigger the removal of critical system packages.
 
-    Please refer to `ros2/ros2#1272 <https://github.com/ros2/ros2/issues/1272>`_ and `Launchpad #1974196 <https://bugs.launchpad.net/ubuntu/+bug/1974196>`_ for more information.
+    Please refer to `ros2/ros2#1272 <https://github.com/ros2/ros2/issues/1272>`_ and `Launchpad #1974196 <https://bugs.launchpad.net/debian/+bug/1974196>`_ for more information.
 
 Installation Variants
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -113,7 +113,7 @@ Choose your installation variant based on your needs:
 
 .. tip::
 
-    Check your Ubuntu version by running the command : cat /etc/os-release , to make your choice
+    Check your Debian version by running the command : cat /etc/os-release , to make your choice
 
 .. note::
 
@@ -123,12 +123,12 @@ Choose your installation variant based on your needs:
    :header-rows: 1
    :widths: 15 15 25 45
 
-   * - Ubuntu Version
+   * - Debian Version
      - ROS 2 Version
      - Installation Type
      - Installation Command & Description
 
-   * - Ubuntu 22.04 (Jammy)
+   * - Debian 13 (Trixie)
      - Humble
      - **ROS-Base Install** (Recommended)
      - Communication libraries, message packages, command line tools.
@@ -137,7 +137,7 @@ Choose your installation variant based on your needs:
        
            sudo apt install ros-humble-ros-base
 
-   * - Ubuntu 24.04 (Noble)
+   * - Debian 24.04 (Noble)
      - Jazzy
      - **ROS-Base Install** (Recommended)
      - Communication libraries, message packages, command line tools.
@@ -146,7 +146,7 @@ Choose your installation variant based on your needs:
        
            sudo apt install ros-jazzy-ros-base
 
-   * - Ubuntu 22.04 (Jammy)
+   * - Debian 13 (Trixie)
      - Humble
      - **ROS-Core**
      - Minimal core packages only.
@@ -155,7 +155,7 @@ Choose your installation variant based on your needs:
        
            sudo apt install ros-humble-ros-core
 
-   * - Ubuntu 24.04 (Noble)
+   * - Debian 24.04 (Noble)
      - Jazzy
      - **ROS-Core**
      - Minimal core packages only.
@@ -164,7 +164,7 @@ Choose your installation variant based on your needs:
        
            sudo apt install ros-jazzy-ros-core
 
-   * - Ubuntu 22.04 (Jammy)
+   * - Debian 13 (Trixie)
      - Humble
      - **Development Tools**
      - Compilers and other tools to build ROS packages.
@@ -173,7 +173,7 @@ Choose your installation variant based on your needs:
        
            sudo apt install ros-dev-tools
 
-   * - Ubuntu 24.04 (Noble)
+   * - Debian 24.04 (Noble)
      - Jazzy
      - **Development Tools**
      - Compilers and other tools to build ROS packages.

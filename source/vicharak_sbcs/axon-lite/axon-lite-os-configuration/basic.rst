@@ -8,10 +8,10 @@ Version
 
 Axon Lite Images, available on `Axon Lite Image <https://downloads.vicharak.in/vicharak-axon-lite/>`_
 
-Ubuntu
+Debian
 --------
 
-- 22.04 ( Jammy )
+- 13 ( Trixie )
 - 13 ( Trixie ) 
 
 Flavour

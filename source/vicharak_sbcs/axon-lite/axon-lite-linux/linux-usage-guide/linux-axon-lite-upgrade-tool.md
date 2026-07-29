@@ -17,7 +17,7 @@ flashing images onto their desired storage devices.
 (install-upgrade-tool)=
 ### Installing required system dependencies
 
-Linux Upgrade Tool requires the following dependencies to be installed on your Debian or Ubuntu system.
+Linux Upgrade Tool requires the following dependencies to be installed on your Debian or Debian system.
 
 ```bash
 sudo apt-get install libudev-dev libusb-1.0-0-dev
@@ -27,7 +27,7 @@ sudo apt-get install libudev-dev libusb-1.0-0-dev
 
 For other Linux distributions, please refer to the following table for the equivalent package names.
 
-|  Debian/Ubuntu   |    Fedora    | Arch Linux |
+|  Debian/Debian   |    Fedora    | Arch Linux |
 | :--------------: | :----------: | :--------: |
 |   libudev-dev    |              |            |
 | libusb-1.0-0-dev | libusb-devel |   libusb   |
@@ -79,7 +79,7 @@ sudo ./upgrade_tool uf <Firmware_Image>.img
 Example:
 
 ```bash
-sudo ./upgrade_tool uf V1.0_vicharak_axon-lite-6.1-04032025-ubuntu-noble-emmc.img
+sudo ./upgrade_tool uf V1.0_vicharak_axon-lite-6.1-04032025-debian-noble-emmc.img
 ```
 
 You will see this type of process: 
@@ -137,7 +137,7 @@ sudo ./upgrade_tool db rk3576_spl_loader_v1.09.108.bin
 4. Flash image using **wl** command.
 
 ```bash
-sudo ./upgrade_tool wl 0 <Version_vicharak-axon-lite-Kernel_Version_Date-ubuntu_version-raw.img>
+sudo ./upgrade_tool wl 0 <Version_vicharak-axon-lite-Kernel_Version_Date-debian_version-raw.img>
 ```
 
 You will see this type of process:
@@ -186,7 +186,7 @@ sudo ./upgrade_tool ef <Firmware_Image>
 Example:
 
 ```bash
-sudo ./upgrade_tool ef V1.0_vicharak_axon-lite-6.1-04032025-ubuntu-noble-emmc.img
+sudo ./upgrade_tool ef V1.0_vicharak_axon-lite-6.1-04032025-debian-noble-emmc.img
 ```
 
 :::{warning}

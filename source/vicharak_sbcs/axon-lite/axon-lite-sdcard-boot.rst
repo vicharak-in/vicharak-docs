@@ -29,7 +29,7 @@ Using a suitable file system (such as FAT32 or EXT4) format the SD-card.
     .. tab-item:: Linux
 
         .. tab-set::
-            .. tab-item:: Ubuntu Disks (GUI)
+            .. tab-item:: Debian Disks (GUI)
 
                 1. Insert the **SD-card** into your computer. Use USB-to-SD adapter if required.
 

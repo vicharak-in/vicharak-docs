@@ -1,4 +1,4 @@
-Change Boot Logo on Ubuntu
+Change Boot Logo on Debian
 ============================
 
 The ``boot`` partition of the file system, includes ``logo.bmp`` and ``logo_kernel.bmp``,  which appear on screen while booting Axon Lite. Here are the instructions to change them:
