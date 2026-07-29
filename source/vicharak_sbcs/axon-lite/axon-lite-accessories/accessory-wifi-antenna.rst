@@ -4,7 +4,7 @@
  Wi-Fi and Bluetooth Antenna
 #############################
 
-.. image:: ../../../_static/images/rk3576-axon-lite/accessory-wifi-antenna.webp
+.. image:: /_static/images/rk3576-axon-lite/accessory-wifi-antenna.webp
    :width: 50%
    :align: center
 
