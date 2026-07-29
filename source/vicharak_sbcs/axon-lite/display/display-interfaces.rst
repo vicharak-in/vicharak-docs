@@ -5,7 +5,7 @@ HDMI TX
 HDMI 2.1 TX Port on Axon Lite Vicharak Board
 =======================================
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-hdmi1.webp
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-hdmi.webp
    :width: 74%
 
 The Axon Lite board provides HDMI 2.1 TX ports for connecting external displays such as monitors, TVs, or projectors.
