@@ -2,7 +2,7 @@
 Type-C DP 1.4a
 ##################
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-dp.webp
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-dp.png
    :width: 80%
 
 Axon Lite provides a Type-C DisplayPort 1.4a interface for high-resolution display output with support for high video bandwidth. The DP connector on RK3576 is used for direct connections to DP-compatible displays, projectors, and USB-C docking stations.
