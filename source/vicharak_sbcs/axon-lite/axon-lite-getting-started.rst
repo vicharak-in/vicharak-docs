@@ -67,7 +67,7 @@ Axon Lite OS Credentials
 Axon Lite Button Guide
 =================
 
-.. image::  ../../_static/images/rk3576-axon-lite/axon-lite-button-guide.png
+.. image::  ../../_static/images/rk3576-axon-lite/axon-lite-button-guide.webp
     :width: 70%
 
 
@@ -137,7 +137,7 @@ immediate visual indicator of the board's power status. This LED signifies that
 the Axon Lite is receiving power, and its illumination provides users with a
 tangible confirmation of the successful power connection.
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-led.png
+.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-led.webp
     :width: 50%
 
 Verify the status LED
@@ -148,7 +148,7 @@ the completion of the booting process. This visual cue assures users that the
 Axon Lite has successfully booted from its storage medium and is ready for further
 configuration.
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-leds.png
+.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-leds.webp
     :width: 50%
 
 .. warning::
@@ -201,7 +201,7 @@ can connect Axon Lite to a monitor or TV with an HDMI input.
 This enables direct visual access to the graphical user interface (GUI) or
 command-line interface (CLI) on the connected display.
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-hdmi.png
+.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-hdmi.webp
     :width: 50%
 
 Connect the Micro HDMI to HDMI cable to the Axon Lite and the monitor.

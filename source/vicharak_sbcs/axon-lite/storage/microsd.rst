@@ -2,7 +2,7 @@
 Micro SD Card
 #############
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-SDCard.png
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-SDCard.webp
    :width: 80%
 
 The Micro SD Card slot on the vicharak-axon-lite board provides non-volatile storage for the system, user data, logs, and optional bootable images. Cards are accessed through the board’s SD host interface and are powered from the board’s 3.3 V rail. Use high-quality, reputable microSD cards to ensure reliable operation.

@@ -3,7 +3,7 @@
 Bluetooth
 ##############
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-wifi-bt.png
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-wifi-bt.webp
    :width: 80%
 
 The Axon Lite SBC includes an integrated Bluetooth 5.3 interface based on the

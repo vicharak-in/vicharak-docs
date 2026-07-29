@@ -2,7 +2,7 @@
 Ethernet
 #############
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-ethernet.png
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-ethernet.webp
    :width: 60%
 
 The Axon Lite SBC provides a single Gigabit Ethernet interface for wired network

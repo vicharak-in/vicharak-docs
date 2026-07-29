@@ -2,7 +2,7 @@
 Wi-Fi
 ##############
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-wifi-bt.png
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-wifi-bt.webp
    :width: 80%
 
 Vicharak Axon Lite comes with a FG6252BSRB-03 WiFi 6 2.4GHz/5GHz dual-band module and Antenna is connected to the board via a U.FL connector. The antenna can support WiFi 2.4Ghz, 5GHz, 5.8Ghz antenna and is compatible with 802.11 b/g/n Wi-Fi.

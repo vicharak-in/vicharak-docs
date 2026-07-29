@@ -72,7 +72,7 @@ Modular NVMe/SATA Connector (PCIe 0)
 
 The Axon Lite features a dedicated modular connector mapped to **PCIe 0** (Combo PHY 0). This is designed for high-speed storage devices.
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-pcie-nvme.png
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-pcie-nvme.webp
     :width: 80%
 
 Swappable PCIe Modular Port (PCIe 1)
@@ -80,7 +80,7 @@ Swappable PCIe Modular Port (PCIe 1)
 
 For expansion, **PCIe 1** (Combo PHY 1) is routed to a modular port that supports swappable HAT modules. 
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-pcie-hat.png
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-pcie-hat.webp
     :width: 80%
 
 Various HATs can be mounted on this connector to expand the board's capabilities, including:

@@ -7,7 +7,7 @@ USB 2.0
 
 Axon Lite has two USB **2.0 port** ( **480 Mbps** ). This guide explains how to use and inspect USB 2.0 interfaces on a Linux system.
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-usb2.png
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-usb2.webp
    :width: 74%
 
 Basic Utilities and Commands

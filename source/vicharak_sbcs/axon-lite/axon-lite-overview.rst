@@ -44,7 +44,7 @@ Axon Lite is designed to cater to a diverse audience, including but not limited 
 Block Diagram
 -------------
 
-.. image:: ../../_static/images/rk3576-axon-lite/Axon-lite_Block_diagram.png
+.. image:: ../../_static/images/rk3576-axon-lite/Axon-lite_Block_diagram.webp
    :width: 100%
 
 Features
@@ -103,7 +103,7 @@ Physical Information
    * - Height
      - 21.125 mm
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-dimension.png
+.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-dimension.webp
    :width: 75%
 
 .. tip::
