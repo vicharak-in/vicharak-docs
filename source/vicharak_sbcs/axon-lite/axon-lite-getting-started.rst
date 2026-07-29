@@ -137,7 +137,7 @@ immediate visual indicator of the board's power status. This LED signifies that
 the Axon Lite is receiving power, and its illumination provides users with a
 tangible confirmation of the successful power connection.
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-led.webp
+.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-led.png
     :width: 50%
 
 Verify the status LED
@@ -148,7 +148,7 @@ the completion of the booting process. This visual cue assures users that the
 Axon Lite has successfully booted from its storage medium and is ready for further
 configuration.
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-leds.webp
+.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-leds.png
     :width: 50%
 
 .. warning::
