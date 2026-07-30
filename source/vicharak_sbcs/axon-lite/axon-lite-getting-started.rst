@@ -67,7 +67,7 @@ Axon Lite OS Credentials
 Axon Lite Button Guide
 =================
 
-.. image::  ../../_static/images/rk3576-axon-lite/axon-lite-button-guide.webp
+.. image::  ../../_static/images/rk3576-axon-lite/axon-lite-keys-guide.webp
     :width: 70%
 
 
