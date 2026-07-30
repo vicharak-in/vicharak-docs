@@ -109,6 +109,10 @@ html_css_files = [
     "css/fonts.css",
     "css/custom.css",
 ]
+# JS files to include
+html_js_files = [
+    "js/clarity.js",
+]
 # Theme options
 html_theme_options = {
     # sphinxawesome_theme options
