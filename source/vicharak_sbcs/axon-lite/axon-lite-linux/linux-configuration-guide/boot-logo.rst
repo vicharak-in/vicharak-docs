@@ -61,13 +61,9 @@ Run ``lsblk`` command to show boot partition.
 
 .. code-block:: bash
 
-     mmcblk0      179:0    0  29.1G  0 disk
-    ├─mmcblk0p1  179:1    0     4M  0 part
-    ├─mmcblk0p2  179:2    0     4M  0 part
-    ├─mmcblk0p3  179:3    0   512M  0 part /boot
-    ├─mmcblk0p4  179:4    0   288M  0 part
-    ├─mmcblk0p5  179:5    0   256M  0 part /userdata
-    └─mmcblk0p6  179:6    0  28.1G  0 part /
+    mmcblk0      179:0    0  58.2G  0 disk 
+    ├─mmcblk0p1  179:1    0   256M  0 part /boot
+    └─mmcblk0p2  179:2    0    58G  0 part /
 
 You can change the logo and replace ``logo.bmp``, ``logo_kernel.bmp`` files with your own files.
 
