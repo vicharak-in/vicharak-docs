@@ -22,12 +22,7 @@ Introduction
 
 PWM stands for Pulse Width Modulation, a technique used to control the amount of power delivered to a device. PWM generates a digital signal that switches between high (on) and low (off) at a consistent frequency. The key characteristic of PWM is the "duty cycle," which represents the percentage of time the signal remains high in one cycle.
 
-- Axon Lite has total **2** PWMs like, ``PWM0`` and ``PWM1``
-
-.. warning::
-
-    PWM1 can be configured on 2 pins GPIO0_C0 and GPIO1_D3 but with different Mux 0 and 1 accordingly. You can only use
-    any one at once.
+- Axon Lite has PWMs like, ``PWM2``
 
 
 .. tip::
