@@ -98,7 +98,7 @@ source_suffix = [".rst", ".md"]
 
 # Set templates and exclude patterns
 templates_path = ["_templates"]
-exclude_patterns = ["_build"]
+exclude_patterns = ["_build", "vicharak_sbcs/axon-lite/axon-lite-linux/linux-development-guide"]
 
 # HTML settings
 html_theme = "sphinxawesome_theme"

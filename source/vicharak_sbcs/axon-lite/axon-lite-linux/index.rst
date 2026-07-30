@@ -14,6 +14,5 @@
    :titlesonly:
 
    linux-usage-guide/index
-   linux-development-guide/index
    linux-configuration-guide/index
 ..
