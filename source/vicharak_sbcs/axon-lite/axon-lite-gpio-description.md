@@ -11,7 +11,7 @@ header that provides flexible options for connecting and controlling external
 devices. Through software settings, you can configure these pins as either
 input or output, making them adaptable for various applications.
 
-Out of the 40 pins on the header, 27 are dedicated GPIO pins. These GPIO pins 
+Out of the 40 pins on the header, 26 are dedicated GPIO pins. These GPIO pins 
 can be used as digital inputs or outputs to control or read from external 
 hardware. 
 
@@ -45,7 +45,7 @@ voltage level of Axon Lite GPIOs.
   - Voltage Level
 
 -
-  - UART debug (Pin 2 and 4)
+  - UART debug (Pin 8 and 10)
   - 3.3V
 
 -
@@ -77,7 +77,7 @@ or assigned to a GPIO at a time.
 | 129 |  |  |  |  |  | I2C7_SDA_M2 | UART3_RX_M1 |  | GPIO4_A1 | <div class='green'>3</div> | <div class='red'>4</div> |  | 5V |  |  |  |  |  |  |  |  |
 | 128 |  |  |  |  |  | I2C7_SCL_M2 | UART3_TX_M1 |  | GPIO4_A0 | <div class='green'>5</div> | <div class='black'>6</div> |  | GND |  |  |  |  |  |  |  |  |
 | 77 |  |  |  | SAI0_MCLK_M0 |  |  | UART7_RTSN_M0 |  | GPIO2_B5 | <div class='green'>7</div> | <div class='orange'>8</div> | Debug |  | UART0_TX_M0 |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  | GND |  | <div class='black'>9</div> | <div class='green'>10</div> |  |  | UART0_RX_M0 |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  | GND |  | <div class='black'>9</div> | <div class='orange'>10</div> |  |  | UART0_RX_M0 |  |  |  |  |  |  |  |
 | 112 |  |  |  | SAI1_SDO3_M1 |  | I2C4_SCL_M3 | UART2_TX_M2 / UART3_RTSN_M1 |  | GPIO3_C0 | <div class='green'>11</div> | <div class='green'>12</div> | GPIO3_A0 |  | UART3_TC_M0 | I2C7_SCL_M1 | SPI3_CLK_M0 | SAI3_SCLK_M2 |  |  |  | 96 |
 | 111 |  |  |  | SAI1_SDI0_M1 |  | I2C4_SDA_M3 | UART2_RX_M2 / UART3_CTSN_M1 |  | GPIO3_B7 | <div class='green'>13</div> | <div class='black'>14</div> |  | GND |  |  |  |  |  |  |  |  |
 | 71 |  |  |  | SAI0_SDO1_M0 |  | I2C4_SDA_M2 | UART8_RX_M1 |  | GPIO2_A7 | <div class='green'>15</div> | <div class='green'>16</div> | GPIO0_C1 |  | UART8_TX_M2 | I2C0_SCL_M1 |  |  |  | I3C0_SCL_M0 |  | 17 |

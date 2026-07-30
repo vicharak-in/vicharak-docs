@@ -15,14 +15,14 @@
        :link-type: doc
        :shadow: md
 
-       Power Delivery (PD) Cable for __AXON LITE_LITE_SPACE__
+       Power Delivery (PD) Cable for Axon Lite
 
     .. grid-item-card:: Wi-Fi and Bluetooth Antenna
        :link: axon-lite-accessories/accessory-wifi-antenna
        :link-type: doc
        :shadow: md
 
-       Wi-Fi and Bluetooth Antenna for __AXON LITE_LITE_SPACE__
+       Wi-Fi and Bluetooth Antenna for Axon Lite
 ..
     .. grid-item-card:: Heat-Sink
        :link: accessory-heatsink
