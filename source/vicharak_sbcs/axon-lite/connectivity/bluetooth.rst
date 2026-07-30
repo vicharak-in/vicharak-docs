@@ -6,8 +6,8 @@ Bluetooth
 .. image:: /_static/images/rk3576-axon-lite/axon-lite-wifi-bt.webp
    :width: 80%
 
-The Axon Lite SBC includes an integrated Bluetooth 5.3 interface based on the
-**FG6252BSRB-03** module.  
+The Axon Lite SBC includes an integrated Bluetooth 5.2 interface based on the
+**RTL8852BS** module.  
 Bluetooth is used for connecting wireless peripherals such as keyboards,
 mice, audio devices, and sensors.
 
@@ -22,7 +22,7 @@ Hardware Details
 ----------------
 
 - **Module**: FG6252BSRB-03
-- **Bluetooth Version**: Bluetooth 5.3 / BLE
+- **Bluetooth Version**: Bluetooth 5.2 / BLE
 - **Host Interface**: UART
 
 Linux Support
