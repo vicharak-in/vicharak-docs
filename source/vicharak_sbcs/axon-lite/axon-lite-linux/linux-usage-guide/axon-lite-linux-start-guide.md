@@ -59,8 +59,8 @@ Vicharak provides multiple Linux distributions for Axon Lite SBC such as Debian,
 
 | **Serial FTDI Pin** | **Header GPIO Pin**    | **Schematic Name** |
 |---------------------|------------------------|--------------------|
-| RX                  | Pin 2 (GPIO0_B5)       | UART2_RX_M0_DEBUG  |
-| TX                  | Pin 4 (GPIO0_B6)       | UART2_TX_M0_DEBUG  |
+| RX                  | Pin 10 (GPIO0_B5)       | UART0_RX_M0_DEBUG  |
+| TX                  | Pin 8 (GPIO0_B6)       | UART0_TX_M0_DEBUG  |
 | GND                 | Pin 6                  | GND                |
 
 :::{image} ../../../../_static/images/rk3576-axon-lite/axon-lite-serial-uart-pins.webp

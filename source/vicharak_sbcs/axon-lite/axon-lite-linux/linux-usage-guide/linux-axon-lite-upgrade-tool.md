@@ -45,72 +45,6 @@ git clone https://github.com/vicharak-in/Linux_Upgrade_Tool
 
 ---
 
-### Flash eMMC image in Axon Lite 
-
-:::{tip}
-**MaskROM mode** is a special mode that allows the board to be flashed with new firmware.
-:::
-
-To get the board into MaskROM mode, follow the steps below:
-
-1. Connect the board to your computer using a **USB-C** cable.
-
-2. To get Axon Lite in MaskRom Mode, Need to press reset button 2-3 times while holding boot button.
- 
- [Watch Video tutorial to get Board in MaskRom
-    Mode](https://youtu.be/rW-R1MJhBGA?si=25YRNOFCT8KS9C31)
-
-3. Confirm that the board is in MaskROM mode by running the following command:
-
-:::{card} sudo ./upgrade_tool ld
-
-```bash
-List of rockusb connected(1)
-DevNo=1	Vid=0x2207,Pid=0x350b,LocationID=12	Mode=Maskrom	SerialNo=
-```
-:::
-
-4. Using `uf` command, you can flash firmware in eMMC.
-
-```bash
-sudo ./upgrade_tool uf <Firmware_Image>.img
-```
-
-Example:
-
-```bash
-sudo ./upgrade_tool uf V1.0_vicharak_axon-lite-6.1-04032025-debian-noble-emmc.img
-```
-
-You will see this type of process: 
-
-```bash
-[sudo] password for vicharak:
-Loading firmware...
-Support Type:330C FW Ver:8.1.00 FW Time:2023-07-07 14:11:41
-Loader ver:1.1e Loader Time:2023-07-07 14:11:08
-Start to upgrade firmware...
-Download Boot Start
-Download Boot Success
-Wait For Maskrom Start
-Wait For Maskrom Success
-Test Device Start
-Test Device Success
-Check Chip Start
-Check Chip Success
-Get FlashInfo Start
-Get FlashInfo Success
-Prepare IDB Start
-Prepare IDB Success
-Download IDB Start
-Download IDB Success
-Download Firmware Start
-Download Image... (12%)
-```
-:::{tip}
-For more guidance, Watch Tutorial video on [How To Flash Image in eMMC ?](https://www.youtube.com/watch?v=O40fGwKvf_c&ab_channel=Vicharak)
-:::
-
 
 ### Flash RAW image in Axon Lite
 
@@ -202,12 +136,8 @@ To recover data from your eMMC, you can use the `upgrade_tool rl <offset> <size>
 
    ```bash
     Device           Start      End  Sectors  Size Type
-    /dev/mmcblk0p1   16384    24575     8192    4M Linux filesystem
-    /dev/mmcblk0p2   24576    32767     8192    4M Linux filesystem
-    /dev/mmcblk0p3   32768  1081343  1048576  512M Linux filesystem
-    /dev/mmcblk0p4 1081344  1671167   589824  288M Linux filesystem
-    /dev/mmcblk0p5 1671168  2195455   524288  256M Linux filesystem
-    /dev/mmcblk0p6 2195456 61071326 58875871 28.1G Linux filesystem
+    /dev/mmcblk0p1  32768    557055    524288  256M Linux extended boot
+    /dev/mmcblk0p2 557056 122142656 121585601   58G Linux root (ARM-64)
    ```
 
    The partition starts at sector `2195456` and has a size of `58875871`.

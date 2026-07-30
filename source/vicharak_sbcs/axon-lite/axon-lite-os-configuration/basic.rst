@@ -12,12 +12,11 @@ Debian
 --------
 
 - 13 ( Trixie )
-- 13 ( Trixie ) 
 
 Flavour
 -------
 
-- Mate
+- KDE
 
 File System
 -----------

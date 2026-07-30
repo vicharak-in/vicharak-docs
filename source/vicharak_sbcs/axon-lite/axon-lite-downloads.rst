@@ -14,9 +14,7 @@ OS Images
       - **Variant**
     - - Debian
       - `Trixie 13 <https://downloads.vicharak.in/vicharak-axon-lite/debian/13_trixie>`_
-    - - Debian
-      - **Coming Soon**
-    - - Debian
+    - - Ubuntu
       - **Coming Soon**
     - - Community Images
       - **Coming Soon**

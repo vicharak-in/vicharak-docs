@@ -76,43 +76,6 @@ message, then you need to put the Axon Lite board in the `Loader Mode` or `Maskr
 Refer to the [How to enter Maskrom Mode](https://www.youtube.com/watch?v=rW-R1MJhBGA&ab_channel=Vicharak) for more details.
 :::
 
-## Flash eMMC Image to Axon Lite board
-
-Once the Axon Lite board is booted into **Maskrom mode**, you can flash the **eMMC image** to the board.
-
-:::{image} ../../\../../_static/images/windows-rkdevtool-upgrade-firmware-not-selected.webp
-:width: 78%
-:::
-
-**1. Click on the `Upgrade Firmware` button from the top bar and select the `firmware` option.**
-
-:::{image} ../../\../../_static/images/windows-rkdevtool-upgrade-firmware-selected.webp
-:width: 78%
-:::
-
-**2. Select the `firmware` file from the `firmware` folder.**
-
-:::{tip}
-You can get the latest firmware from the [Axon Lite Downloads](#axon-lite-downloads) page.
-:::
-
-**3. Click on the `Upgrade` button to start the flashing process.**
-
-:::{image} ../../\../../_static/images/windows-rkdevtool-upgrade-firmware-success.webp
-:width: 78%
-:::
-
-**4. Wait for the flashing process to complete.**
-
-:::{note}
-Upon completion of the flashing process, the board will automatically reboot twice to install essential packages and apply necessary changes.
-Please allow a few minutes for the process to finalize.
-:::
-
-:::{tip}
-If you need for guidance, Watch Tutorial on [How to flash eMMC image using Windows RKDevTool ?](https://www.youtube.com/watch?v=O40fGwKvf_c&t=3s&ab_channel=Vicharak)
-:::
-
 ## Flash RAW Image in eMMC to Axon Lite Board
 
 :::{tip}

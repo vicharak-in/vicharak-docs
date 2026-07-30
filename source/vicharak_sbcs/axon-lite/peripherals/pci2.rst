@@ -128,10 +128,10 @@ The ``lspci`` command can be used to check whether the PCIe device has completed
 .. code-block:: console
 
     vicharak@vicharak:~$ lspci
-    0000:00:00.0 PCI bridge: Rockchip Electronics Co., Ltd RK3576 (rev 01)
-    0000:01:00.0 Non-Volatile memory controller: Silicon Motion, Inc. Device 2261
-    0001:10:00.0 PCI bridge: Rockchip Electronics Co., Ltd RK3576 (rev 01)
-    0001:11:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 15)
+    00:00.0 PCI bridge: Rockchip Electronics Co., Ltd RK3576 (rev 01)
+    01:00.0 Non-Volatile memory controller: YEESTOR Microelectronics Co., Ltd GDRAMARS GMT1000 NVMe SSD (DRAM-less) (rev 01)
+    20:00.0 PCI bridge: Rockchip Electronics Co., Ltd RK3576 (rev 01)
+    21:00.0 USB controller: VIA Technologies, Inc. VL805/806 xHCI USB 3.0 Controller (rev 01)
 
 
 The ``dmesg | grep pcie`` command can be used to debug whether the PCIe link has been correctly initialized. The output shown below denotes successful initialization of PCIe Links for both controllers.
