@@ -85,12 +85,8 @@ Example output:
 
 ```
 Device          Start     End     Sectors   Size Type
-/dev/<device>1   16384    24575     8192     4M  Linux filesystem
-/dev/<device>2   24576    32767     8192     4M  Linux filesystem
-/dev/<device>3   32768  1081343  1048576   512M  Linux filesystem
-/dev/<device>4 1081344  1671167   589824   288M  Linux filesystem
-/dev/<device>5 1671168  2195455   524288   256M  Linux filesystem
-/dev/<device>6 2195456 13420510 11225055   5.4G  Linux filesystem
+/dev/mmcblk0p1  32768    557055    524288  256M Linux extended boot
+/dev/mmcblk0p2 557056 122142656 121585601   58G Linux root (ARM-64)
 ```
 
 #### Check Root Filesystem with `fsck`
