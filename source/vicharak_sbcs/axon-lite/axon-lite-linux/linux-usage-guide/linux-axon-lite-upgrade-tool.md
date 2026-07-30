@@ -140,13 +140,13 @@ To recover data from your eMMC, you can use the `upgrade_tool rl <offset> <size>
     /dev/mmcblk0p2 557056 122142656 121585601   58G Linux root (ARM-64)
    ```
 
-   The partition starts at sector `2195456` and has a size of `58875871`.
+   The partition starts at sector `557056` and has a size of `121585601`.
 
 3. **Run the Data Recovery Command**:
    Use the `upgrade_tool rl <offset> <size> rootfs.img` command to read the partition data and save it as an image file. Replace `<offset>` and `<size>` with the actual values from your `fdisk` output.
 
    ```bash
-    sudo ./upgrade_tool rl 0x218000 0x3826c9f rootfs.img
+    sudo ./upgrade_tool rl 0x88000 0x3826c9f rootfs.img
    ```
 
    This command will read the first partition (starting at sector `0x218000`) with a size of `0x3826c9f` and save it as `rootfs.img`.
