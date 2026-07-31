@@ -8,4 +8,4 @@ Axon Lite supports multiple MIPI interfaces to connect various types of image se
 .. toctree::
    :maxdepth: 4
 
-   Video Input Capabilities <video-input/index>
+..   Video Input Capabilities <video-input/index>

@@ -37,13 +37,6 @@
 
 .. grid:: 1 1 2 2
 
-    .. grid-item-card:: Raspberry Pi Camera Module
-       :link: axon-lite-accessories/accessory-raspi-cam
-       :link-type: doc
-       :shadow: md
-
-       OV5647 Camera Module for Axon Lite
-
     .. grid-item-card:: Axon Lite SATA Adapter Board
        :link: axon-lite-accessories/axon-lite-sata
        :link-type: doc
