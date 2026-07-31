@@ -5,8 +5,6 @@ RTC
 The Axon Lite SBC includes a hardware Real-Time Clock (RTC) based on the **HYM8563** chip.
 This RTC allows the system to keep accurate time even when the main power is turned off and preserves system time across reboots and power cycles.
 
-.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-rtc.webp
-.. :width: 74%
 
 Specification
 --------------
@@ -20,8 +18,8 @@ Hardware Details
 
 - RTC Chip: HYM8563
 
-.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-rtc-connector.webp
-.. :width: 34%
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-rtc.webp
+   :width: 50%
 
 
 Reference/Buy RTC
