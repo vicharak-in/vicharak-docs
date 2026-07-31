@@ -61,28 +61,33 @@ or assigned to a GPIO at a time.
 
 ### Axon Lite GPIOs Header
 
-| GPIO number | Function7 | Function6 | Function5 | Function4 | Function3 | Function2 | Function1 | PWR/GND | GPIO | Pin# | Pin# | GPIO | PWR/GND | Function1 | Function2 | Function3 | Function4 | Function5 | Function6 | Function7 | GPIO number |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|  |  |  |  |  |  |  |  | 3.3V |  | <div class='red'>1</div> | <div class='red'>2</div> |  | 5V |  |  |  |  |  |  |  |  |
-| 129 |  |  |  |  |  | I2C7_SDA_M2 | UART3_RX_M1 |  | GPIO4_A1 | <div class='green'>3</div> | <div class='red'>4</div> |  | 5V |  |  |  |  |  |  |  |  |
-| 128 |  |  |  |  |  | I2C7_SCL_M2 | UART3_TX_M1 |  | GPIO4_A0 | <div class='green'>5</div> | <div class='black'>6</div> |  | GND |  |  |  |  |  |  |  |  |
-| 77 |  |  |  | SAI0_MCLK_M0 |  |  | UART7_RTSN_M0 |  | GPIO2_B5 | <div class='green'>7</div> | <div class='orange'>8</div> | Debug |  | UART0_TX_M0 |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  | GND |  | <div class='black'>9</div> | <div class='orange'>10</div> |  |  | UART0_RX_M0 |  |  |  |  |  |  |  |
-| 112 |  |  |  | SAI1_SDO3_M1 |  | I2C4_SCL_M3 | UART2_TX_M2 / UART3_RTSN_M1 |  | GPIO3_C0 | <div class='green'>11</div> | <div class='green'>12</div> | GPIO3_A0 |  | UART3_TC_M0 | I2C7_SCL_M1 | SPI3_CLK_M0 | SAI3_SCLK_M2 |  |  |  | 96 |
-| 111 |  |  |  | SAI1_SDI0_M1 |  | I2C4_SDA_M3 | UART2_RX_M2 / UART3_CTSN_M1 |  | GPIO3_B7 | <div class='green'>13</div> | <div class='black'>14</div> |  | GND |  |  |  |  |  |  |  |  |
-| 71 |  |  |  | SAI0_SDO1_M0 |  | I2C4_SDA_M2 | UART8_RX_M1 |  | GPIO2_A7 | <div class='green'>15</div> | <div class='green'>16</div> | GPIO0_C1 |  | UART8_TX_M2 | I2C0_SCL_M1 |  |  |  | I3C0_SCL_M0 |  | 17 |
-|  |  |  |  |  |  |  |  | 3.3V |  | <div class='red'>17</div> | <div class='green'>18</div> | GPIO0_C2 |  | UART8_RX_M2 | I2C0_SDA_M1 |  |  |  | I3C0_SDA_M0 |  | 18 |
-| 126 |  |  | PWM2_CH6_M3 | SAI1_SDI3_M1 | SPI3_MOSI_M1 |  | UART5_CTSN_M0 |  | GPIO3_D6 | <div class='green'>19</div> | <div class='black'>20</div> |  | GND |  |  |  |  |  |  |  |  |
-| 125 |  |  |  | SAI1_SDI2_M1 | SPI3_MISO_M1 | I2C3_SDA_M2 | UART5_TX_M0 |  | GPIO3_D5 | <div class='green'>21</div> | <div class='green'>22</div> | GPIO2_B4 |  | UART7_CTSN_M0 |  |  | SAI0_SDI3_M0 |  |  |  | 76 |
-| 124 |  |  |  | SAI1_SDI1_M1 | SPI3_CLK_M1 | I2C3_SCL_M2 | UART5_RX_M0 |  | GPIO3_D4 | <div class='green'>23</div> | <div class='green'>24</div> | GPIO3_D7 |  | UART5_RTSN_M0 |  | SPI3_CSN1_M1 |  | PWM2_CH7_M3 |  |  | 127 |
-|  |  |  |  |  |  |  |  | GND |  | <div class='black'>25</div> | <div class='green'>26</div> | GPIO2_A6 |  | UART8_TX_M1 | I2C4_SCL_M2 |  | SAI0_SDO0_M0 |  |  |  | 70 |
-| 117 |  |  | PWM2_CH2_M3 | SAI1_SDO0_M1 | SPI1_MISO_M2 |  | UART8_RX_M0 |  | GPIO3_C5 | <div class='green'>27</div> | <div class='green'>28</div> | GPIO2_B6 |  | UART7_TX_M0 / UART8_RTSN_M1 | I2C8_SCL_M2 |  | SAI0_SCLK_M0 |  |  |  | 78 |
-| 118 |  |  |  | SAI1_LRCK_M1 | SPI1_MOSI_M2 |  | UART8_TX_M0 |  | GPIO3_C6 | <div class='green'>29</div> | <div class='black'>30</div> |  | GND |  |  |  |  |  |  |  |  |
-| 119 |  |  |  | SAI1_SCLK_M1 | SPI1_CLK_M2 |  | UART8_RTSN_M0 |  | GPIO3_C7 | <div class='green'>31</div> | <div class='green'>32</div> | GPIO2_D5 |  | UART6_CTSN_M1 | I2C9_SCL_M2 |  |  | PWM2_CH5_M2 |  |  | 93 |
-| 120 |  |  | PWM2_CH3_M3 | SAI1_MCLK_M1 | SPI1_CSN0_M2 |  | UART8_CTSN_M0 |  | GPIO3_D0 | <div class='green'>33</div> | <div class='black'>34</div> |  | GND |  |  |  |  |  |  |  |  |
-| 97 |  |  |  | SAI3_LRCK_M2 | SPI3_MOSI_M0 | I2C7_SDA_M1 | UART3_RX_M0 |  | GPIO3_A1 | <div class='green'>35</div> | <div class='green'>36</div> | GPIO2_D4 |  |  | I2C9_SDA_M2 |  |  | PWM2_CH4_M2 |  |  | 92 |
-| 79 |  |  |  | SAI0_LRCK_M0 |  | I2C8_SDA_M2 | UART7_RX_M0 / UART8_CTSN_M1 |  | GPIO2_B7 | <div class='green'>37</div> | <div class='green'>38</div> | GPIO3_A3 |  | UART3_RTSN_M0 |  | SPI3_CSN0_M0 | SAI3_SDI_M2 |  |  | CAN_RX_M3 | 99 |
-|  |  |  |  |  |  |  |  | GND |  | <div class='black'>39</div> | <div class='green'>40</div> | GPIO3_A2 |  | UART3_CTSN_M0 |  | SPI3_MISO_M0 | SAI3_SDO_M2 |  |  | CAN_TX_M3 | 98 |
+<div style="font-size: 11px; overflow-x: auto;">
+
+| GPIO number | Function5 | Function4 | Function3 | Function2 | Function1 | PWR/GND | GPIO | Pin# | Pin# | GPIO | PWR/GND | Function1 | Function2 | Function3 | Function4 | Function5 | Function6 | Function7 | GPIO number |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|  |  |  |  |  |  | 3.3V |  | <div class='red'>1</div> | <div class='red'>2</div> |  | 5V |  |  |  |  |  |  |  |  |
+| 129 |  |  |  | I2C7_SDA_M2 | UART3_RX_M1 |  | GPIO4_A1 | <div class='green'>3</div> | <div class='red'>4</div> |  | 5V |  |  |  |  |  |  |  |  |
+| 128 |  |  |  | I2C7_SCL_M2 | UART3_TX_M1 |  | GPIO4_A0 | <div class='green'>5</div> | <div class='black'>6</div> |  | GND |  |  |  |  |  |  |  |  |
+| 77 |  | SAI0_MCLK_M0 |  |  | UART7_RTSN_M0 |  | GPIO2_B5 | <div class='green'>7</div> | <div class='orange'>8</div> | Debug |  | UART0_TX_M0 |  |  |  |  |  |  |  |
+|  |  |  |  |  |  | GND |  | <div class='black'>9</div> | <div class='orange'>10</div> |  |  | UART0_RX_M0 |  |  |  |  |  |  |  |
+| 112 |  | SAI1_SDO3_M1 |  | I2C4_SCL_M3 | UART2_TX_M2 / UART3_RTSN_M1 |  | GPIO3_C0 | <div class='green'>11</div> | <div class='green'>12</div> | GPIO3_A0 |  | UART3_TC_M0 | I2C7_SCL_M1 | SPI3_CLK_M0 | SAI3_SCLK_M2 |  |  |  | 96 |
+| 111 |  | SAI1_SDI0_M1 |  | I2C4_SDA_M3 | UART2_RX_M2 / UART3_CTSN_M1 |  | GPIO3_B7 | <div class='green'>13</div> | <div class='black'>14</div> |  | GND |  |  |  |  |  |  |  |  |
+| 71 |  | SAI0_SDO1_M0 |  | I2C4_SDA_M2 | UART8_RX_M1 |  | GPIO2_A7 | <div class='green'>15</div> | <div class='green'>16</div> | GPIO0_C1 |  | UART8_TX_M2 | I2C0_SCL_M1 |  |  |  | I3C0_SCL_M0 |  | 17 |
+|  |  |  |  |  |  | 3.3V |  | <div class='red'>17</div> | <div class='green'>18</div> | GPIO0_C2 |  | UART8_RX_M2 | I2C0_SDA_M1 |  |  |  | I3C0_SDA_M0 |  | 18 |
+| 126 | PWM2_CH6_M3 | SAI1_SDI3_M1 | SPI3_MOSI_M1 |  | UART5_CTSN_M0 |  | GPIO3_D6 | <div class='green'>19</div> | <div class='black'>20</div> |  | GND |  |  |  |  |  |  |  |  |
+| 125 |  | SAI1_SDI2_M1 | SPI3_MISO_M1 | I2C3_SDA_M2 | UART5_TX_M0 |  | GPIO3_D5 | <div class='green'>21</div> | <div class='green'>22</div> | GPIO2_B4 |  | UART7_CTSN_M0 |  |  | SAI0_SDI3_M0 |  |  |  | 76 |
+| 124 |  | SAI1_SDI1_M1 | SPI3_CLK_M1 | I2C3_SCL_M2 | UART5_RX_M0 |  | GPIO3_D4 | <div class='green'>23</div> | <div class='green'>24</div> | GPIO3_D7 |  | UART5_RTSN_M0 |  | SPI3_CSN1_M1 |  | PWM2_CH7_M3 |  |  | 127 |
+|  |  |  |  |  |  | GND |  | <div class='black'>25</div> | <div class='green'>26</div> | GPIO2_A6 |  | UART8_TX_M1 | I2C4_SCL_M2 |  | SAI0_SDO0_M0 |  |  |  | 70 |
+| 117 | PWM2_CH2_M3 | SAI1_SDO0_M1 | SPI1_MISO_M2 |  | UART8_RX_M0 |  | GPIO3_C5 | <div class='green'>27</div> | <div class='green'>28</div> | GPIO2_B6 |  | UART7_TX_M0 / UART8_RTSN_M1 | I2C8_SCL_M2 |  | SAI0_SCLK_M0 |  |  |  | 78 |
+| 118 |  | SAI1_LRCK_M1 | SPI1_MOSI_M2 |  | UART8_TX_M0 |  | GPIO3_C6 | <div class='green'>29</div> | <div class='black'>30</div> |  | GND |  |  |  |  |  |  |  |  |
+| 119 |  | SAI1_SCLK_M1 | SPI1_CLK_M2 |  | UART8_RTSN_M0 |  | GPIO3_C7 | <div class='green'>31</div> | <div class='green'>32</div> | GPIO2_D5 |  | UART6_CTSN_M1 | I2C9_SCL_M2 |  |  | PWM2_CH5_M2 |  |  | 93 |
+| 120 | PWM2_CH3_M3 | SAI1_MCLK_M1 | SPI1_CSN0_M2 |  | UART8_CTSN_M0 |  | GPIO3_D0 | <div class='green'>33</div> | <div class='black'>34</div> |  | GND |  |  |  |  |  |  |  |  |
+| 97 |  | SAI3_LRCK_M2 | SPI3_MOSI_M0 | I2C7_SDA_M1 | UART3_RX_M0 |  | GPIO3_A1 | <div class='green'>35</div> | <div class='green'>36</div> | GPIO2_D4 |  |  | I2C9_SDA_M2 |  |  | PWM2_CH4_M2 |  |  | 92 |
+| 79 |  | SAI0_LRCK_M0 |  | I2C8_SDA_M2 | UART7_RX_M0 / UART8_CTSN_M1 |  | GPIO2_B7 | <div class='green'>37</div> | <div class='green'>38</div> | GPIO3_A3 |  | UART3_RTSN_M0 |  | SPI3_CSN0_M0 | SAI3_SDI_M2 |  |  | CAN_RX_M3 | 99 |
+|  |  |  |  |  |  | GND |  | <div class='black'>39</div> | <div class='green'>40</div> | GPIO3_A2 |  | UART3_CTSN_M0 |  | SPI3_MISO_M0 | SAI3_SDO_M2 |  |  | CAN_TX_M3 | 98 |
+
+</div>
+
 
 <!-- TODO: Update Vicharak config and serial console suitable for Axon Lite -->
 :::{note}
