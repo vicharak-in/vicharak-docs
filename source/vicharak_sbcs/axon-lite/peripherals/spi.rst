@@ -30,267 +30,267 @@ Axon Lite provides **1** ``SPI3`` ( Pin 19, 21, 23 and Pin 24 ) on GPIO Header.
     To get more information on `Axon Lite GPIO Header`_.
 
 
-Make Simple spidev3.0 device
-----------------------------
-
-How to use GPIO Pins as SPI Protocol ?
-======================================
-
-**Steps to follow for Configuration**
-
-1. Open a terminal window (``Ctrl+Alt+T``).
-
-2. Run command ``sudo vicharak-config`` in it.
-
-3. Select ``Overlays`` options in it by pressing ``enter`` key.
-
-.. code-block:: console
-
-    ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────-───────────┐
-    │ Please select an option below:                                                           │
-    │                                                                                          │
-    │                                   System Maintanince                                     │
-    │                                       Hardware                                           │
-    │                                       Overlays                                           │
-    │                                     Connectivity                                         │
-    │                                   Advanced Options                                       │
-    │                                     User Settings                                        │
-    │                                     Localization                                         │
-    │                                         About                                            │
-    │                                                                                          │
-    │                      <Ok>                               <Cancel>                         │
-    │                                                                                          │
-    └──────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-4. You will see Warning Page, click on ``yes`` and select ``Manage Overlays`` options.
-
-
-.. code-block:: console
-
-
-    ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
-    │ Configure Device Tree Overlay                                                            │
-    │                                                                                          │
-    │                                Manage overlays                                           │
-    │                                View overlay info                                         │
-    │                                Install 3rd party overlay                                 │
-    │                                Reset overlays                                            │
-    │                                                                                          │
-    │                                                                                          │
-    │                      <Ok>                               <Cancel>                         │
-    └──────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-
-5. Select overlays ``( SPI3 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
-
-.. code-block:: console
-
-    ┌──────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
-    │ Please select overlays:                                                                  │
-    │                                                                                          │
-    │  [ ] Enable DP connector-split mode Axon Lite V0.3                                            │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D0,1 dphy1 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D2,3 dphy2 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D0,1 dphy4 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon Lite V0.3                             │
-    │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon Lite V0.3                             │
-    │  [ ] Enable I2C3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C4 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C7 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C9 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM0 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
-    │  [*] Enable SPI3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable UART1 on 40-Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART4 on 40-Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
-    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon Lite V0.3                                   │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                     <Ok>                         <Cancel>                                │
-    │                                                                                          │
-    └──────────────────────────────────────────────────────────────────────────────────────────┘
-
-6. To return back to terminal, press the ``Esc`` key until you exit from it.
-
-7. In order to enable your configuration, Restart your computer or Run command ``sudo reboot`` in terminal.
-
-Check generated Device
-======================
-
-1. Open terminal. ( ``Ctrl + Alt + t`` )
-2. Run below command :
-
-.. code::
-
-        ls -l /dev/spidev*
-
-You will find ``/dev/spidev3.0`` device is created in ``/dev`` directory.
-
-ENC28J60 Ethernet Controller with SPI Support
----------------------------------------------
-
-The ENC28J60 is a standalone Ethernet controller with an SPI (Serial Peripheral Interface) bus, designed by Microchip Technology. It is widely used to provide Ethernet connectivity to microcontrollers and embedded systems that do not have built-in Ethernet capabilities.
-
-.. tip::
-
-    You can get more details from `ENC28J60 Datasheet <https://ww1.microchip.com/downloads/en/DeviceDoc/39662a.pdf>`_
-
-
-.. image:: /_static/images/ENC28J60.webp
-    :width: 50%
-
-Physical Connection
-====================
-
-.. list-table::
-   :widths: 20 40
-   :header-rows: 1
-   :class: feature-table
-
-   * - **ENC28J60 Pin**
-     - **Axon Lite Header GPIO Pin**
-   * - GND
-     - Pin 14
-   * - 3.3V
-     - Pin 17
-   * - SO ( Slave Out )
-     - Pin 21 ( GPIO3_D5 )
-   * - SI ( Slave In )
-     - Pin 19 ( GPIO3_D6 )
-   * - CS ( Chip select )
-     - Pin 24 ( GPIO3_D7 )
-   * - SCK ( Clock )
-     - Pin 23 ( GPIO3_D4 )
-   * - INT ( Interrupt )
-     - Pin 22 ( GPIO2_B4 )
-
-Turn on overlay
-===============
-
-**Steps to follow for Configuration**
-
-1. Open a terminal window (``Ctrl+Alt+T``).
-
-2. Run command ``sudo vicharak-config`` in it.
-
-3. Select ``Overlays`` options in it by pressing ``enter`` key.
-
-.. code-block:: console
-
-    ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────-───────────┐
-    │ Please select an option below:                                                           │
-    │                                                                                          │
-    │                                   System Maintanince                                     │
-    │                                       Hardware                                           │
-    │                                       Overlays                                           │
-    │                                     Connectivity                                         │
-    │                                   Advanced Options                                       │
-    │                                     User Settings                                        │
-    │                                     Localization                                         │
-    │                                         About                                            │
-    │                                                                                          │
-    │                      <Ok>                               <Cancel>                         │
-    │                                                                                          │
-    └──────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-4. You will see Warning Page, click on ``yes`` and select ``Manage Overlays`` options.
-
-
-.. code-block:: console
-
-
-    ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
-    │ Configure Device Tree Overlay                                                            │
-    │                                                                                          │
-    │                                Manage overlays                                           │
-    │                                View overlay info                                         │
-    │                                Install 3rd party overlay                                 │
-    │                                Reset overlays                                            │
-    │                                                                                          │
-    │                                                                                          │
-    │                      <Ok>                               <Cancel>                         │
-    └──────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-
-5. Select overlay of ``( ENC28J60 Ethernet Controller With SPI )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
-
-.. code-block:: console
-
-    ┌──────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
-    │ Please select overlays:                                                                  │
-    │                                                                                          │
-    │  [ ] Enable DP connector-split mode Axon Lite V0.3                                            │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D0,1 dphy1 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D2,3 dphy2 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D0,1 dphy4 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon Lite V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon Lite V0.3                             │
-    │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon Lite V0.3                             │
-    │  [ ] Enable I2C3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C4 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C7 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C9 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM0 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable SPI3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [*] Enable SPI3 ENC28J60 Ethernet Controller support on 40-Pin GPIO Header Axon Lite V0.3    │
-    │  [ ] Enable UART1 on 40-Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART4 on 40-Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
-    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon Lite V0.3                                   │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                     <Ok>                         <Cancel>                                │
-    │                                                                                          │
-    └──────────────────────────────────────────────────────────────────────────────────────────┘
-
-6. To return back to terminal, press the ``Esc`` key until you exit from it.
-
-7. In order to enable your configuration, Restart your computer or Run command ``sudo reboot`` in terminal.
-
-Check ethernet interface
-========================
-
-You can get one more interface other than default ethernet interface. As in our case, ``eth1`` is generated.
-
-.. code::
-
-    vicharak@vicharak:~$ ip a
-    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-        inet 127.0.0.1/8 scope host lo
-           valid_lft forever preferred_lft forever
-        inet6 ::1/128 scope host noprefixroute
-           valid_lft forever preferred_lft forever
-    2: dummy0: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 1000
-        link/ether 52:71:ea:c2:44:2c brd ff:ff:ff:ff:ff:ff
-    3: end1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
-        link/ether 6e:21:27:df:96:f8 brd ff:ff:ff:ff:ff:ff
-    4: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
-        link/ether 52:3b:9c:26:d3:c4 brd ff:ff:ff:ff:ff:ff
-        inet 192.168.1.46/24 brd 192.168.1.255 scope global dynamic noprefixroute eth1
-           valid_lft 86177sec preferred_lft 86177sec
-        inet6 2401:4900:1f3f:e774:bed3:3a12:c3c4:9a5f/64 scope global temporary dynamic
-           valid_lft 84992sec preferred_lft 84992sec
-        inet6 2401:4900:1f3f:e774:9b4:6c9d:8709:8f9f/64 scope global dynamic mngtmpaddr noprefixroute
-           valid_lft 84992sec preferred_lft 84992sec
-        inet6 fe80::10a3:96a7:93bb:9554/64 scope link noprefixroute
-           valid_lft forever preferred_lft forever
-    5: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
-        link/ether 40:f4:c9:94:85:18 brd ff:ff:ff:ff:ff:ff
+.. Make Simple spidev3.0 device
+.. ----------------------------
+.. 
+.. How to use GPIO Pins as SPI Protocol ?
+.. ======================================
+.. 
+.. **Steps to follow for Configuration**
+.. 
+.. 1. Open a terminal window (``Ctrl+Alt+T``).
+.. 
+.. 2. Run command ``sudo vicharak-config`` in it.
+.. 
+.. 3. Select ``Overlays`` options in it by pressing ``enter`` key.
+.. 
+.. .. code-block:: console
+.. 
+..     ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────-───────────┐
+..     │ Please select an option below:                                                           │
+..     │                                                                                          │
+..     │                                   System Maintanince                                     │
+..     │                                       Hardware                                           │
+..     │                                       Overlays                                           │
+..     │                                     Connectivity                                         │
+..     │                                   Advanced Options                                       │
+..     │                                     User Settings                                        │
+..     │                                     Localization                                         │
+..     │                                         About                                            │
+..     │                                                                                          │
+..     │                      <Ok>                               <Cancel>                         │
+..     │                                                                                          │
+..     └──────────────────────────────────────────────────────────────────────────────────────────┘
+.. 
+.. 
+.. 4. You will see Warning Page, click on ``yes`` and select ``Manage Overlays`` options.
+.. 
+.. 
+.. .. code-block:: console
+.. 
+.. 
+..     ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
+..     │ Configure Device Tree Overlay                                                            │
+..     │                                                                                          │
+..     │                                Manage overlays                                           │
+..     │                                View overlay info                                         │
+..     │                                Install 3rd party overlay                                 │
+..     │                                Reset overlays                                            │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                      <Ok>                               <Cancel>                         │
+..     └──────────────────────────────────────────────────────────────────────────────────────────┘
+.. 
+.. 
+.. 
+.. 5. Select overlays ``( SPI3 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
+.. 
+.. .. code-block:: console
+.. 
+..     ┌──────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+..     │ Please select overlays:                                                                  │
+..     │                                                                                          │
+..     │  [ ] Enable DP connector-split mode Axon Lite V0.3                                            │
+..     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D0,1 dphy1 Axon Lite V0.3                      │
+..     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D2,3 dphy2 Axon Lite V0.3                      │
+..     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D0,1 dphy4 Axon Lite V0.3                      │
+..     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon Lite V0.3                      │
+..     │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon Lite V0.3                             │
+..     │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon Lite V0.3                             │
+..     │  [ ] Enable I2C3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable I2C4 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable I2C7 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable I2C9 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable PWM0 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+..     │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+..     │  [*] Enable SPI3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable UART1 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+..     │  [ ] Enable UART4 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+..     │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+..     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
+..     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon Lite V0.3                                   │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                     <Ok>                         <Cancel>                                │
+..     │                                                                                          │
+..     └──────────────────────────────────────────────────────────────────────────────────────────┘
+.. 
+.. 6. To return back to terminal, press the ``Esc`` key until you exit from it.
+.. 
+.. 7. In order to enable your configuration, Restart your computer or Run command ``sudo reboot`` in terminal.
+.. 
+.. Check generated Device
+.. ======================
+.. 
+.. 1. Open terminal. ( ``Ctrl + Alt + t`` )
+.. 2. Run below command :
+.. 
+.. .. code::
+.. 
+..         ls -l /dev/spidev*
+.. 
+.. You will find ``/dev/spidev3.0`` device is created in ``/dev`` directory.
+.. 
+.. ENC28J60 Ethernet Controller with SPI Support
+.. ---------------------------------------------
+.. 
+.. The ENC28J60 is a standalone Ethernet controller with an SPI (Serial Peripheral Interface) bus, designed by Microchip Technology. It is widely used to provide Ethernet connectivity to microcontrollers and embedded systems that do not have built-in Ethernet capabilities.
+.. 
+.. .. tip::
+.. 
+..     You can get more details from `ENC28J60 Datasheet <https://ww1.microchip.com/downloads/en/DeviceDoc/39662a.pdf>`_
+.. 
+.. 
+.. .. image:: /_static/images/ENC28J60.webp
+..     :width: 50%
+.. 
+.. Physical Connection
+.. ====================
+.. 
+.. .. list-table::
+..    :widths: 20 40
+..    :header-rows: 1
+..    :class: feature-table
+.. 
+..    * - **ENC28J60 Pin**
+..      - **Axon Lite Header GPIO Pin**
+..    * - GND
+..      - Pin 14
+..    * - 3.3V
+..      - Pin 17
+..    * - SO ( Slave Out )
+..      - Pin 21 ( GPIO3_D5 )
+..    * - SI ( Slave In )
+..      - Pin 19 ( GPIO3_D6 )
+..    * - CS ( Chip select )
+..      - Pin 24 ( GPIO3_D7 )
+..    * - SCK ( Clock )
+..      - Pin 23 ( GPIO3_D4 )
+..    * - INT ( Interrupt )
+..      - Pin 22 ( GPIO2_B4 )
+.. 
+.. Turn on overlay
+.. ===============
+.. 
+.. **Steps to follow for Configuration**
+.. 
+.. 1. Open a terminal window (``Ctrl+Alt+T``).
+.. 
+.. 2. Run command ``sudo vicharak-config`` in it.
+.. 
+.. 3. Select ``Overlays`` options in it by pressing ``enter`` key.
+.. 
+.. .. code-block:: console
+.. 
+..     ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────-───────────┐
+..     │ Please select an option below:                                                           │
+..     │                                                                                          │
+..     │                                   System Maintanince                                     │
+..     │                                       Hardware                                           │
+..     │                                       Overlays                                           │
+..     │                                     Connectivity                                         │
+..     │                                   Advanced Options                                       │
+..     │                                     User Settings                                        │
+..     │                                     Localization                                         │
+..     │                                         About                                            │
+..     │                                                                                          │
+..     │                      <Ok>                               <Cancel>                         │
+..     │                                                                                          │
+..     └──────────────────────────────────────────────────────────────────────────────────────────┘
+.. 
+.. 
+.. 4. You will see Warning Page, click on ``yes`` and select ``Manage Overlays`` options.
+.. 
+.. 
+.. .. code-block:: console
+.. 
+.. 
+..     ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
+..     │ Configure Device Tree Overlay                                                            │
+..     │                                                                                          │
+..     │                                Manage overlays                                           │
+..     │                                View overlay info                                         │
+..     │                                Install 3rd party overlay                                 │
+..     │                                Reset overlays                                            │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                      <Ok>                               <Cancel>                         │
+..     └──────────────────────────────────────────────────────────────────────────────────────────┘
+.. 
+.. 
+.. 
+.. 5. Select overlay of ``( ENC28J60 Ethernet Controller With SPI )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
+.. 
+.. .. code-block:: console
+.. 
+..     ┌──────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+..     │ Please select overlays:                                                                  │
+..     │                                                                                          │
+..     │  [ ] Enable DP connector-split mode Axon Lite V0.3                                            │
+..     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D0,1 dphy1 Axon Lite V0.3                      │
+..     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D2,3 dphy2 Axon Lite V0.3                      │
+..     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D0,1 dphy4 Axon Lite V0.3                      │
+..     │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon Lite V0.3                      │
+..     │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon Lite V0.3                             │
+..     │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon Lite V0.3                             │
+..     │  [ ] Enable I2C3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable I2C4 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable I2C7 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable I2C9 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable PWM0 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+..     │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
+..     │  [ ] Enable SPI3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
+..     │  [*] Enable SPI3 ENC28J60 Ethernet Controller support on 40-Pin GPIO Header Axon Lite V0.3    │
+..     │  [ ] Enable UART1 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+..     │  [ ] Enable UART4 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+..     │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
+..     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
+..     │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon Lite V0.3                                   │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                     <Ok>                         <Cancel>                                │
+..     │                                                                                          │
+..     └──────────────────────────────────────────────────────────────────────────────────────────┘
+.. 
+.. 6. To return back to terminal, press the ``Esc`` key until you exit from it.
+.. 
+.. 7. In order to enable your configuration, Restart your computer or Run command ``sudo reboot`` in terminal.
+.. 
+.. Check ethernet interface
+.. ========================
+.. 
+.. You can get one more interface other than default ethernet interface. As in our case, ``eth1`` is generated.
+.. 
+.. .. code::
+.. 
+..     vicharak@vicharak:~$ ip a
+..     1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+..         link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+..         inet 127.0.0.1/8 scope host lo
+..            valid_lft forever preferred_lft forever
+..         inet6 ::1/128 scope host noprefixroute
+..            valid_lft forever preferred_lft forever
+..     2: dummy0: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 1000
+..         link/ether 52:71:ea:c2:44:2c brd ff:ff:ff:ff:ff:ff
+..     3: end1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+..         link/ether 6e:21:27:df:96:f8 brd ff:ff:ff:ff:ff:ff
+..     4: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+..         link/ether 52:3b:9c:26:d3:c4 brd ff:ff:ff:ff:ff:ff
+..         inet 192.168.1.46/24 brd 192.168.1.255 scope global dynamic noprefixroute eth1
+..            valid_lft 86177sec preferred_lft 86177sec
+..         inet6 2401:4900:1f3f:e774:bed3:3a12:c3c4:9a5f/64 scope global temporary dynamic
+..            valid_lft 84992sec preferred_lft 84992sec
+..         inet6 2401:4900:1f3f:e774:9b4:6c9d:8709:8f9f/64 scope global dynamic mngtmpaddr noprefixroute
+..            valid_lft 84992sec preferred_lft 84992sec
+..         inet6 fe80::10a3:96a7:93bb:9554/64 scope link noprefixroute
+..            valid_lft forever preferred_lft forever
+..     5: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+..         link/ether 40:f4:c9:94:85:18 brd ff:ff:ff:ff:ff:ff
