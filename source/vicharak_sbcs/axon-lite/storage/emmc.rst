@@ -2,6 +2,9 @@
 eMMC
 #############
 
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-emmc.webp
+   :width: 80%
+
 The Vicharak-Axon Lite board exposes an eMMC 5.1 device connected to the SoC's MMC controller. It offers three capacity options: 32GB / 64GB / 128GB. The interface provides persistent storage for the operating system, user data, and diagnostics. eMMC 5.1 offers reliable multi-block read/write, boot partitions, and compatibility with standard MMC/SDHCI stacks in modern Linux kernels.
 
 Hardware interface and pinout
