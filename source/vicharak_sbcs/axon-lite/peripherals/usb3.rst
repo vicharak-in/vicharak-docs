@@ -10,7 +10,7 @@ This guide explains how to use and inspect the Type-C USB 3.1 Gen1 interface on 
 
 .. important::
 
-   Axon Lite supports 4 extra USB 3.0 outputs using our Quadruple USB 3.0 Hub HAT module!
+   Axon Lite supports 4 extra USB 3.0 outputs using our :doc:`Quadruple USB 3.0 Hub HAT <../axon-lite-accessories/axon-lite-quad-usb3>` module!
 
 Basic Utilities and Commands
 ============================
