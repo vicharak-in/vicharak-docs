@@ -44,12 +44,12 @@
 
        OV5647 Camera Module for Axon Lite
        
-    .. grid-item-card:: Active Heat-Sink 
-       :link: axon-lite-accessories/fan
-       :link-type: doc
-       :shadow: md
-
-       Active Cooling Heat-Sink For Processor
+..  .. grid-item-card:: Active Heat-Sink 
+..     :link: axon-lite-accessories/fan
+..     :link-type: doc
+..     :shadow: md
+..
+..     Active Cooling Heat-Sink For Processor
 
     .. grid-item-card:: Axon Lite SATA Adapter Board
        :link: axon-lite-accessories/axon-lite-sata
