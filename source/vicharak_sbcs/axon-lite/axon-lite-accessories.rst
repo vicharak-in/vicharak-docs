@@ -68,5 +68,3 @@
        :shadow: md
 
        Quadruple USB 3.0 Hub HAT for Axon Lite PCIe Port
-
-       **Coming Soon**
