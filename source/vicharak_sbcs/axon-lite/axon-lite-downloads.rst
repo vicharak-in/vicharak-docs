@@ -34,7 +34,10 @@ OS Images
 
 .. seealso::
 
-    `How to flash the image to the board using Rockchip Tool </vicharak_sbcs/vaaman/vaaman-linux/linux-usage-guide/rockchip-develop-guide>`_
+    How to flash the image to the board using
+    :doc:`axon-lite-linux/linux-usage-guide/rockchip-develop-guide`
+
+    Also check :doc:`axon-lite-linux/linux-usage-guide/axon-lite-linux-start-guide`
 
 
 OS Utilities
