@@ -51,8 +51,6 @@
 
        Dual Ethernet Expansion HAT for Axon Lite PCIe Port
 
-       **Coming Soon**
-
     .. grid-item-card:: Axon Lite Ethernet and Dual USB3 HAT
        :link: axon-lite-accessories/axon-lite-ethernet-usb3
        :link-type: doc
