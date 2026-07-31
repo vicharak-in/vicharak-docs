@@ -58,8 +58,6 @@
 
        Ethernet and Dual USB 3.0 Hub HAT for Axon Lite PCIe Port
 
-       **Coming Soon**
-
     .. grid-item-card:: Axon Lite Quadruple USB3 Hub HAT
        :link: axon-lite-accessories/axon-lite-quad-usb3
        :link-type: doc
