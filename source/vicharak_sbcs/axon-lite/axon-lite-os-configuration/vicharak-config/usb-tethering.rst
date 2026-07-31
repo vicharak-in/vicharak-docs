@@ -1,3 +1,5 @@
+:orphan:
+
 USB Tethering – Usage Guide
 ===========================
 

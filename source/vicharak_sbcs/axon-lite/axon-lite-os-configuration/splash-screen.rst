@@ -1,3 +1,5 @@
+:orphan:
+
 ===================================
 Customizing Splash Screen/Logo in Linux
 ===================================

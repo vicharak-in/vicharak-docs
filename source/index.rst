@@ -24,7 +24,7 @@ applications including IoT, AI and multimedia processing.
    :width: 100%
    :alt: axon top
 
-.. |axon_lite_top| image:: _static/images/rk3576-axon-lite/axon-lite-top.png
+.. |axon_lite_top| image:: _static/images/rk3576-axon-lite/axon-lite-top.webp
    :width: 100%
    :alt: axon lite top
 

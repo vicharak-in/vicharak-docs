@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 (axon-lite-linux-start-guide)=
 
 # Vicharak Linux Start Guide

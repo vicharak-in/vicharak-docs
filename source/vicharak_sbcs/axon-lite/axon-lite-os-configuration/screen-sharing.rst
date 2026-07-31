@@ -1,3 +1,5 @@
+:orphan:
+
 ##############################
 Screen Sharing on Axon Lite via X2Go
 ##############################
