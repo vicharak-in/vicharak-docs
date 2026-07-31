@@ -2,8 +2,8 @@
 USB 3.1 Gen1
 #############
 
-Axon Lite board includes two USB Type-C ports, each supporting USB 3.1 Gen 1 (5 Gbps) and DisplayPort output.
-This guide explains how to use and inspect Type-C USB 3.1 Gen1 interfaces on a Linux system. 
+Axon Lite board includes one USB Type-C port, supporting USB 3.1 Gen 1 (5 Gbps) and DisplayPort output.
+This guide explains how to use and inspect the Type-C USB 3.1 Gen1 interface on a Linux system. 
 
 .. image:: /_static/images/rk3576-axon-lite/axon-lite-usb3.webp
    :width: 80%
@@ -79,8 +79,8 @@ Go into ``root`` user by running ``su`` command. Default root password is ``root
 
 It gives you on which mode usb port act as.
 
-- If user has connected pendrive to Axon Lite on Type-C0 Port, it acts as ``host`` mode.
-- If user has connected Axon Lite to Host pc on Type-C0 Port, it acts as ``device`` mode.
+- If user has connected pendrive to Axon Lite on the Type-C Port, it acts as ``host`` mode.
+- If user has connected Axon Lite to Host pc on the Type-C Port, it acts as ``device`` mode.
 
 USB Command Reference
 =====================
