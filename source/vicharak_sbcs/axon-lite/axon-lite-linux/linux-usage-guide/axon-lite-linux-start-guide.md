@@ -25,20 +25,6 @@ Vicharak provides multiple Linux distributions for Axon Lite SBC such as Debian,
 
 > **Tip:** Refer to [**Vicharak config tool guide**](#) for more detailed information.
 
-### Set Up Automatic Wi-Fi Connection on Boot
-
-- For the **wlan0** interface (useful for headless systems):
-  1. Edit the `/userdata/before.txt` file
-  2. Add the following lines:
-     ```text
-     connect-wi-fi <network name> <password>
-     ```
-     Example:
-     ```text
-     connect-wi-fi my-wifi-network my-wifi-password
-     ```
-  3. Reboot the system.
-
 ## Debugging
 
 (axon-lite-linux-uart-serial-console)=

@@ -4,9 +4,9 @@
 Axon Lite SATA Adapter
 ######################
 
-.. image:: ../../../_static/images/rk3576-axon-lite/axon-lite-hat-sata.webp
-   :width: 30%
-   :align: center
+.. .. image:: ../../../_static/images/rk3576-axon-lite/axon-lite-hat-sata.webp
+.. :width: 30%
+.. :align: center
 
 .. note::
 

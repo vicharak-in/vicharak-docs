@@ -254,8 +254,8 @@ After writing the image to the SD-card, follow these steps to boot from the SD-c
 
 2. Insert the **SD-card** into your Axon Lite SBC.
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-sdcard-boot.webp
-   :width: 45%
+.. .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-sdcard-boot.webp
+.. :width: 45%
 
 |
 
@@ -267,5 +267,5 @@ Once the power is connected, the board will automatically turn on.
 .. danger::
     12V Power Input only! Do not use 5V power input.
 
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-option.webp
-   :width: 45%
+.. .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-option.webp
+.. :width: 45%

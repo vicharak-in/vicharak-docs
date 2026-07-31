@@ -48,6 +48,10 @@ git clone https://github.com/vicharak-in/Linux_Upgrade_Tool
 
 ### Flash RAW image in Axon Lite
 
+Raw Images are versatile and complete filesystem blocks that can be flsahed onto a pendrive, 
+an SD-Card,a flash drive, as well as nvme SSD or any other medium to boot onto.
+As long as the firmware(U-Boot) supports the medium, entire OS can be kept on it.
+
 1. Check whether device is in MaskRom Mode or not.
 
 ```bash
@@ -57,7 +61,7 @@ Below, output will be shown.
 
 ```bash
 List of rockusb connected(1)
-DevNo=1	Vid=0x2207,Pid=0x350b,LocationID=12	Mode=Maskrom	SerialNo=
+DevNo=1	Vid=0x2207,Pid=0x350e,LocationID=13	Mode=Maskrom	SerialNo=
 ```
 
 2. [Download RK3576 SPL Loader](https://downloads.vicharak.in/vicharak-axon-lite/rk3576_spl_loader_v1.09.108.bin)

@@ -19,17 +19,7 @@ The remaining pins are dedicated to other functions, such as:
 - Power supply (3.3V and 5V) 
 - Ground (GND) 
 - Specific interfaces (I2C, SPI, UART, PWM, etc.) 
-- ADC (Analog-to-Digital Converter) inputs 
-- DAC (Digital-to-Analog Converter) outputs 
-- I2S (Inter-IC Sound) 
-- CAN (Controller Area Network) 
-- eDP (Embedded DisplayPort) 
-- PCIe (Peripheral Component Interconnect Express) 
-- MIPI CSI/DSI 
-- USB 
-- Debug headers 
 - UART debug (Pin 8 and 10) 
-- Buttons (Power, Reset, Recovery, Maskrom)
 
 <!-- TODO: Update Vicharak config to be suitable for Axon Lite -->
 ## GPIO Voltage Level

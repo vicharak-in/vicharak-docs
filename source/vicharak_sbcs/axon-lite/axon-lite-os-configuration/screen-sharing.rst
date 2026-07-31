@@ -36,7 +36,7 @@ Configuring Desktop Sharing
 
       x2goclient 
 
-   .. image:: /_static/images/rk3576-axon-lite/x2go-client-setup.webp
+   .. .. image:: /_static/images/rk3576-axon-lite/x2go-client-setup.webp
 
 2. Enter Below things :
 
@@ -48,8 +48,8 @@ Configuring Desktop Sharing
 
 3. You can new session is created on right side. Just click on it and enter default password ``12345`` for ``vicharak`` user.
 
-   .. image:: /_static/images/rk3576-axon-lite/x2go-client-gui.webp
-     :width: 60%
+   .. .. image:: /_static/images/rk3576-axon-lite/x2go-client-gui.webp
+   .. :width: 60%
 
 4. You can see the GUI Screen on a new box.
 

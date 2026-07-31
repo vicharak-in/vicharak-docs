@@ -2,8 +2,8 @@
 MIPI Camera Interface 
 ######################
 
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-multiCam.webp
-    :width: 65%
+.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-multiCam.webp
+.. :width: 65%
 
 Hardware Required
 ------------------
@@ -42,24 +42,24 @@ How to Attach Camera to Axon Lite
 
 1. First, Connect Vicharak Flex Cable To Vicharak CAM PCB Connector.
  
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-start.gif
-    :width: 40%
+.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-start.gif
+.. :width: 40%
 
 .. danger::
         Make sure to connect the Vicharak flex cable's AXON LITE PCB side connector to the AXON LITE board, and the display/camera side connector to the Vicharak CAM PCB.
 
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-2.gif
-    :width: 40%
+.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-2.gif
+.. :width: 40%
 
 2. Attach Camera Module To FPC50 15 Pin 1mm Pitch Cable.
 
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-3.gif
-    :width: 40%
+.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-3.gif
+.. :width: 40%
 
 3. Connect Camera To Vicharak CAM PCB Connector. 
 
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-4.gif
-    :width: 40%
+.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-4.gif
+.. :width: 40%
 
 4. Connect Axon Lite Side Vicharak Flex Cable to Axon Lite.
 
@@ -67,17 +67,17 @@ How to Attach Camera to Axon Lite
 
    Note down the pin names where yor are connecting the camera. Accordingly overlay needs to be selected.
 
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-mipi-p.webp
-    :width: 50%
+.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-mipi-p.webp
+.. :width: 50%
 
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-5.gif
-    :width: 40%
+.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-5.gif
+.. :width: 40%
 
 
 5. After Using Camera, User can remove camera using twizer.
 
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-6.gif
-    :width: 40%
+.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-6.gif
+.. :width: 40%
 
 Camera Interface PCBs
 ---------------------
@@ -85,8 +85,8 @@ Camera Interface PCBs
 2 Lane Alpha PCB ( Rpi compatible )
 ====================================
 
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-alpha.webp
-    :width: 30%
+.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-alpha.webp
+.. :width: 30%
 
 Enable Overlays In Axon Lite 
 ------------------------
@@ -158,8 +158,8 @@ Enable Overlays In Axon Lite
 
     If you want to connect multiple cameras, check which Sensor your camera is using from your camera docs like OV5647 or IMX519 and the ports to which it is connected like CSI0/CSI1 or dphy RX0/RX1 on axon-lite. Then select the overlay according to it. 
     
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-overlay-list.webp
-                   :width: 50%
+.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-overlay-list.webp
+.. :width: 50%
     
 6. To return back to terminal, press the ``Esc`` key until you exit from it.
 
@@ -241,20 +241,20 @@ Run Camera Using qV4l2 (GUI tool)
 
 1. Click on Open Devices on top-left corner
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera03.webp
-           :width: 65%
+.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera03.webp
+.. :width: 65%
 
 2. Select the device name from here like video22 or video31 from the menu (You can get device name by running ``v4l2-ctl --list-devices``)
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera01.webp
-            :width: 65%
+.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera01.webp
+.. :width: 65%
 
 **Step 4: Start the camera**
 
 Click on start capturing
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera02.webp
-           :width: 65%
+.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera02.webp
+.. :width: 65%
 
 .. tip::
     If you have connected multiple camera devices to axon-lite, open multiple qV4l2 windows in the same way and select different camera device name. Using this you can use all the MIPI ports.

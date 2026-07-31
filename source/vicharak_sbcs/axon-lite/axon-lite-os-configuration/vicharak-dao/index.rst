@@ -10,8 +10,8 @@ Through `Vicharak-Dao <https://dao.vicharak.in/>`_, users can connect and enable
 It lets you access the command-line interface of your device directly from your web browser, making remote management quick and reliable.  
 Using **WebRTC**, it ensures real-time, low-latency, and secure communication between your device and browser.
 
-.. image:: /_static/images/rk3576-axon-lite/vicharak-dao-axon-lite1.webp
-   :width: 98%
+.. .. image:: /_static/images/rk3576-axon-lite/vicharak-dao-axon-lite1.webp
+.. :width: 98%
 
 
 Prerequisites

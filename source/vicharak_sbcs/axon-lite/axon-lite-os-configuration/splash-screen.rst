@@ -4,7 +4,7 @@ Customizing Splash Screen/Logo in Linux
 
 This document provides a step-by-step guide to changing the boot splash screen using **Plymouth**, a graphical boot animation and logger used in many Linux distributions.
 
-.. image:: /_static/images/debian-mate-logo.webp
+.. .. image:: /_static/images/debian-mate-logo.webp
 
 Requirements
 ============

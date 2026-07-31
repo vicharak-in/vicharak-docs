@@ -4,9 +4,9 @@
 Active Heat Sink
 ###########################################
 
-.. image:: ../../../_static/images/rk3576-axon-lite/axon-lite-fan.webp
-   :width: 40%
-   :align: center
+.. .. image:: ../../../_static/images/rk3576-axon-lite/axon-lite-fan.webp
+.. :width: 40%
+.. :align: center
 
 After removing the protective film from the heatsink, install it on processor, immediately without touching the contact surface, ensuring proper alignment and even pressure for optimal thermal performance.
 

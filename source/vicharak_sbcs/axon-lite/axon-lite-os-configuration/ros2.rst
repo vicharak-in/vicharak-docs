@@ -4,8 +4,8 @@ ROS2 (Robot Operating System)
 
 The Robot Operating System (ROS) is a set of powerful open-source software libraries and tools that help developers build robotic applications. It provides device drivers, state-of-the-art algorithms, distributed communication, and developer tools that simplify robotics software development.
 
-.. image:: /_static/images/rk3576-axon-lite/software-ros-logo.webp
-   :width: 100%
+.. .. image:: /_static/images/rk3576-axon-lite/software-ros-logo.webp
+.. :width: 100%
 
 Why ROS2 on Vicharak SBCs?
 ==========================

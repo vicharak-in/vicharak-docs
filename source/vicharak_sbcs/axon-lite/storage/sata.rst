@@ -12,8 +12,8 @@ Overview
 - The SATA interface on the vicharak-axon-lite board is exposed to the host operating system as standard storage devices (e.g., /dev/sda or /sdX).
 - The interface is designed for straightforward data transfer, drive management, and typical OS-level tooling (partitioning, formatting, mounting, SMART monitoring).
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-SATA.webp
-   :width: 70%
+.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-SATA.webp
+.. :width: 70%
 
 SATA connectors and power
 --------------------------
@@ -51,10 +51,10 @@ The board provides a 16-pin SATA 3.1 connector that integrates both SATA data an
 Getting started
 ---------------
 
-.. figure:: /_static/images/rk3576-axon-lite/axon-lite-sata-hat.webp
-   :width: 70%
+.. .. figure:: /_static/images/rk3576-axon-lite/axon-lite-sata-hat.webp
+.. :width: 70%
 
-   Vicharak axon-lite board connected with SATA expansion board/HAT
+.. Vicharak axon-lite board connected with SATA expansion board/HAT
 
 .. note::
 

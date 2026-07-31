@@ -159,8 +159,8 @@ Example
      - UART1_TX_M0 
         
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-gpio-uart1.webp
-    :width: 50%
+.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-gpio-uart1.webp
+.. :width: 50%
 
 
 Running the Serial Console Program
@@ -187,8 +187,8 @@ Running the Serial Console Program
         - Select the serial port number and configure the serial parameters as
           shown in the image below.
 
-        .. image:: /_static/images/rk3576-axon-lite/axon-lite-gpio-uart-gtkterm.webp
-            :width: 50%
+        .. .. image:: /_static/images/rk3576-axon-lite/axon-lite-gpio-uart-gtkterm.webp
+        .. :width: 50%
 
         3. Click on the **OK** button to open the serial console.
 

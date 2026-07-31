@@ -2,8 +2,8 @@
 MIPI DSI
 ##################
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-dsi.webp
-   :width: 80%
+.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-dsi.webp
+.. :width: 80%
 
 Axon Lite provides a MIPI-DSI host controller and multiple DSI lanes; a display panel is driven by a DSI bridge/panel driver with appropriate timing, format, and polarity settings. In standard configurations, TX0 on RK3576 is used for direct or bridged DSI connections to Waveshare or compatible panels.
 
@@ -140,8 +140,8 @@ Steps to follow for Configuration
 Verify after reboot
 ````````````````````
 
-.. image:: /_static/images/rk3576-axon-lite/axon-lite-dsi-waveshare.webp
-   :width: 35%
+.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-dsi-waveshare.webp
+.. :width: 35%
 
 
 - **xrandr** will be shown all supported resolution by DSI Display.
