@@ -47,6 +47,4 @@ Vicharak Config TUI
    :maxdepth: 1
    :caption: Available Feature
 
-   Board Backup <backup>
-   USB Tethering <usb-tethering>
    vicharak-update <vicharak-update>
