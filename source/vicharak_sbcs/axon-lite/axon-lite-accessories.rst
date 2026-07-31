@@ -37,12 +37,7 @@
 
 .. grid:: 1 1 2 2
 
-    .. grid-item-card:: Axon Lite SATA Adapter Board
-       :link: axon-lite-accessories/axon-lite-sata
-       :link-type: doc
-       :shadow: md
 
-       Axon Lite SATA Adapter Board (V1.0 R0.3) for connecting SATA devices to Axon Lite
 
     .. grid-item-card:: Axon Lite Dual Ethernet HAT
        :link: axon-lite-accessories/axon-lite-dual-ethernet

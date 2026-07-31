@@ -9,4 +9,3 @@ Below are the available storage options:
    
    eMMC 5.1 <emmc>
    Micro SD Card <microsd>
-   SATA 3.1 <sata>
