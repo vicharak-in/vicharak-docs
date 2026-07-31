@@ -5,6 +5,10 @@ Ethernet
 .. image:: /_static/images/rk3576-axon-lite/axon-lite-ethernet.webp
    :width: 60%
 
+.. important::
+
+   Axon Lite supports 2 extra Gigabit Ethernet ports via our Dual Gigabit Ethernet HAT module!
+
 The Axon Lite SBC provides a single Gigabit Ethernet interface for wired network
 connectivity using a standard RJ45 connector.
 

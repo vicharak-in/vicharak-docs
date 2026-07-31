@@ -24,6 +24,9 @@ PWM stands for Pulse Width Modulation, a technique used to control the amount of
 
 - Axon Lite has PWMs like, ``PWM2``
 
+.. important::
+
+    Axon Lite supports up to 6 PWM pin outputs on its 40-pin GPIO header!
 
 .. tip::
     To get more information on `Axon Lite GPIO Header`_. 

@@ -8,6 +8,10 @@ This guide explains how to use and inspect the Type-C USB 3.1 Gen1 interface on 
 .. image:: /_static/images/rk3576-axon-lite/axon-lite-usb3.webp
    :width: 80%
 
+.. important::
+
+   Axon Lite supports 4 extra USB 3.0 outputs using our Quadruple USB 3.0 Hub HAT module!
+
 Basic Utilities and Commands
 ============================
 
