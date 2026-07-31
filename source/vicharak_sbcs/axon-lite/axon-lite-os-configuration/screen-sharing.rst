@@ -44,7 +44,7 @@ Configuring Desktop Sharing
 
    - Login : e.g., ``vicharak``
 
-   - Select Session Type : ``mate``
+   - Select Session Type : ``kde``
 
 3. You can new session is created on right side. Just click on it and enter default password ``12345`` for ``vicharak`` user.
 

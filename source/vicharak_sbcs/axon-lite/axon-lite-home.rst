@@ -52,7 +52,7 @@ The **Axon Lite Computer** (SBC) is powered by rockchip's **RK3576**
 
 .. toctree::
    :glob:
-   :caption: Accessorie
+   :caption: Accessories
    :titlesonly:
 
    Axon Lite Accessories <axon-lite-accessories>

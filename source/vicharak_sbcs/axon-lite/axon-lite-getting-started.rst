@@ -60,6 +60,7 @@ Axon Lite OS Credentials
 
 .. note::
     Username : vicharak
+    
     Password : 12345
 
 - To Go to into ``root`` user, Type ``su`` terminal and Default Password is ``root``.

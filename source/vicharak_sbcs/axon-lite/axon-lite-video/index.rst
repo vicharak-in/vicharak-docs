@@ -9,5 +9,3 @@ Axon Lite supports multiple MIPI interfaces to connect various types of image se
    :maxdepth: 4
 
    Video Input Capabilities <video-input/index>
-   Video Encode/Decode Capabilities <video-encode-decode/index>
- 
