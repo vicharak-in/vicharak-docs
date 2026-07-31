@@ -7,3 +7,5 @@ Audio Interface
    :maxdepth: 1
 
    Audio Jack <audio-jack>
+   Speakers <speaker>
+   Analog MIC <analog>
