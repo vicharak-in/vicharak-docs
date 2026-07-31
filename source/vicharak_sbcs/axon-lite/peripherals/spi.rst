@@ -24,7 +24,7 @@ devices like sensors, displays, and memory devices. Typically, SPI involves dedi
 Slave In), MISO (Master In Slave Out), SCLK (Serial Clock), and SS (Slave Select).
 In Axon Lite, general-purpose I/O (GPIO) pins can be repurposed to function as SPI pins.
 
-Axon Lite provides **1** ``SPI3`` ( Pin 19, 21, 23 and Pin 24 ) on GPIO Header.
+Axon Lite provides **2** SPI protocols (``SPI1`` and ``SPI3``) on the GPIO Header.
 
 .. tip::
     To get more information on `Axon Lite GPIO Header`_.

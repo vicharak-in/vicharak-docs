@@ -26,8 +26,7 @@ Many embedded boards provide the flexibility to configure GPIO pins to function 
 
 This guide explains how to configure GPIO pins as UART on Axon Lite 40-Pins GPIO Header. By converting GPIO pins into UART transmit (TX) and receive (RX) pins, the board can be used for serial communication, expanding the range of connected devices. This configuration is useful when there is no dedicated UART hardware interface available or when additional UART ports are needed.
 
-Axon Lite provides total **4** UARTs including one specific ``UART_2`` ( Pin 2 and Pin 4 ) for debugging on GPIO Header, Like
-``UART_1``, ``UART_4``, ``UART_6``.
+Axon Lite provides a total of **6** UARTs, including one specific ``UART0`` (Pin 8 and Pin 10) for debugging on the GPIO Header, and others like ``UART2``, ``UART3``, ``UART5``, ``UART7``, and ``UART8``.
 
 .. tip::
     To get more information on `Axon Lite GPIO Header`_. 

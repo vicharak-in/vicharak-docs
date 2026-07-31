@@ -22,7 +22,7 @@ Introduction
 
 PWM stands for Pulse Width Modulation, a technique used to control the amount of power delivered to a device. PWM generates a digital signal that switches between high (on) and low (off) at a consistent frequency. The key characteristic of PWM is the "duty cycle," which represents the percentage of time the signal remains high in one cycle.
 
-- Axon Lite has PWMs like, ``PWM2``
+- Axon Lite has PWMs like ``PWM2`` (Channels 2, 3, 4, 5, 6, 7).
 
 .. important::
 

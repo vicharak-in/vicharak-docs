@@ -26,7 +26,7 @@ I2C is a multi-master, multi-slave, packet-switched, single-ended serial communi
     
     - SDA (Serial Data Line): Transfers the data.
 
-- Axon Lite has **4** I2C's protocol on 40-Pin GPIO Header. Like, ``I2C3``, ``I2C4``, ``I2C7`` and ``I2C9`` 
+- Axon Lite has **6** I2C protocols on the 40-Pin GPIO Header: ``I2C0``, ``I2C3``, ``I2C4``, ``I2C7``, ``I2C8``, and ``I2C9``.
 
 .. note::
 
