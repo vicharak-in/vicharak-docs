@@ -19,23 +19,23 @@ The same dedicated Type-C PD port can also accept a 5V power source.
 .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-5v-power.webp
     :width: 60%
 
-3. Power Over Ethernet (PoE)
+3. Type-C/DP Port Power
+-----------------------
+The standard Type-C/DP port can also be used to power the board with a standard PD adapter.
+
+.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-typeC-power.webp
+    :width: 60%
+
+4. Power Over Ethernet (PoE)
 ----------------------------
 Axon Lite supports Power over Ethernet (PoE), allowing you to deliver both data and power over a single Ethernet cable. This is highly useful for deployments where electrical outlets are scarce, such as remote camera installations, IoT gateways, and headless servers.
 
 .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-over-ethernet.webp
     :width: 60%
 
-4. Battery Power
+5. Battery Power
 ----------------
 For portable or backup power applications, the board features a 3.7V battery connector.
 
 .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-battery-power.webp
-    :width: 60%
-
-5. Type-C/DP Port Power
------------------------
-The standard Type-C/DP port can also be used to power the board with a standard PD adapter.
-
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-typeC-power.webp
     :width: 60%
