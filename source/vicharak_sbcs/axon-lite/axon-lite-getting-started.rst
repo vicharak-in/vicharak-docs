@@ -110,16 +110,9 @@ For the purpose of this guide, we will focus on the ``eMMC`` storage and the
 pre-installed ``Debian (Trixie)``, omitting detailed instructions for
 ``SD-card`` boot configurations.
 
-Connect the PD cable to the Axon Lite board and the PD adapter to the power socket.
-Once the power is connected, the board will automatically turn on.
+Connect a compatible power adapter to the Axon Lite board. Once the power is connected, the board will automatically turn on.
 
-.. danger::
-    |
-    | **12V Power Input only! Do not use 5V power input.**
-    |
-    | Using a 12V power input is crucial for the proper functioning of the Axon Lite.
-    | The board is designed to operate with a 12V power supply, and using a 5V power
-    | input may lead to instability and potential damage.
+For a comprehensive list of all supported power methods, including 12V PD, 5V, Battery, and PoE, please see the :ref:`axon-lite-power-sources` page.
 
 .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-details.webp
    :width: 60%

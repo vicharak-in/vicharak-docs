@@ -31,6 +31,7 @@ The **Axon Lite Computer** (SBC) is powered by rockchip's **RK3576**
 
    Overview <axon-lite-overview>
    Getting Started <axon-lite-getting-started>
+   Power Sources <power-sources>
    Axon Lite Linux Documentation <axon-lite-linux/index>
    Connectivity <connectivity/index>
    Storage <storage/index>
