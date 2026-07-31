@@ -6,7 +6,7 @@ PCIe 2.1
 .. warning::
 
     We recommend using Vicharak 6.1 kernel and latest `Debian 13 trixie
-    <https://downloads.vicharak.in/vicharak-axon-lite/debian/13_trixie/>`_ in order to support the overlays below. Flash Image using this `Documentation </vicharak_sbcs/axon-lite/axon-lite-linux/linux-usage-guide/rockchip-develop-guide>`_
+    <https://downloads.vicharak.in/vicharak-axon-lite/debian/13_trixie/>`_ in order to support the overlays below. Flash Image using this :doc:`Documentation </vicharak_sbcs/axon-lite/axon-lite-linux/linux-usage-guide/rockchip-develop-guide>`
 
     .. code::
 
@@ -107,8 +107,10 @@ To use PCIe, you must ensure that no other overlays (such as SATA or USB 3.0) ar
 2. Run command ``sudo vicharak-config`` in it.
 3. Select ``Overlays`` options in it by pressing ``enter`` key.
 4. You will see a Warning Page, click on ``yes`` and select ``Manage Overlays`` option.
-5. Identify which Combo PHY your device is connected to. 
+5. Identify which Combo PHY your device is connected to.
+
    - For **Combo PHY 0** (NVMe/SATA port), ensure SATA overlays for PHY 0 are disabled if you intend to use PCIe (NVMe).
+
    - For **Combo PHY 1** (HAT port), ensure USB 3.0 and SATA overlays for PHY 1 are disabled if you intend to use a PCIe HAT.
 
 6. To return back to terminal, keep pressing the ``Esc`` key until you exit from it.

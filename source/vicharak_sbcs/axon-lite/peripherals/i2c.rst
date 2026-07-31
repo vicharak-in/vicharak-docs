@@ -10,7 +10,7 @@ I2C
 
     We recommend to use Vicharak 6.1 kernel and latest `Debian 13 trixie
     <https://downloads.vicharak.in/vicharak-axon-lite/debian/13_trixie/>`_ , in order to support below overlays. Flash Image
-    using this `Documentation </vicharak_sbcs/axon-lite/axon-lite-linux/linux-usage-guide/rockchip-develop-guide>`_
+    using this :doc:`Documentation </vicharak_sbcs/axon-lite/axon-lite-linux/linux-usage-guide/rockchip-develop-guide>`
 
     .. code::
 
