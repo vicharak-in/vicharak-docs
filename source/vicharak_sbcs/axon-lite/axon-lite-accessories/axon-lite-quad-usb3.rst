@@ -4,6 +4,9 @@
 Axon Lite Quadruple USB 3.0 Hub HAT
 #####################################
 
+.. warning::
+   This accessory is coming soon.
+
 .. image:: /_static/images/rk3576-axon-lite/axon-lite-quad-usb.webp
    :width: 70%
    :align: center

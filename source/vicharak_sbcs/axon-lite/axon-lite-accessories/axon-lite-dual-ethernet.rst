@@ -4,6 +4,9 @@
 Axon Lite Dual Ethernet HAT
 ################################
 
+.. warning::
+   This accessory is coming soon.
+
 .. image:: /_static/images/rk3576-axon-lite/axon-lite-dual-ethernet.webp
    :width: 70%
    :align: center

@@ -4,6 +4,9 @@
 Axon Lite Ethernet and Dual USB 3.0 HAT
 #######################################
 
+.. warning::
+   This accessory is coming soon.
+
 .. image:: /_static/images/rk3576-axon-lite/axon-lite-ethernet-usb3.webp
    :width: 70%
    :align: center
