@@ -6,14 +6,12 @@ Whenever making modifications to the documentation (e.g. updating `.rst` or `.md
    pipenv update
    pipenv run make html -j $(nproc --all)
    ```
-2. Host the compiled HTML locally on a background web server. **Note: Always run the Python HTTP server with BypassSandbox set to true (unsandboxed), otherwise the host browser cannot access the port.**
+2. Host the compiled HTML locally on a persistent background web server. **Use a persistent terminal (RunPersistent=true) with BypassSandbox=true** for this:
    ```bash
-   cd _build/html
-   python3 -m http.server 8000
+   python3 -m http.server 8000 -d _build/html
    ```
-3. Always inform the user that the recompilation is complete and they can preview the site at `http://localhost:8000`.
-
-**Note: Ensure you stop hosting, rebuild, and rehost after each change.**
+3. When making subsequent changes, **do not kill the server**. Instead, simply run `pipenv run make clean && pipenv run make html -j $(nproc --all)` in a standard command to rebuild the files. The persistent server will automatically serve the newly generated files.
+4. Always inform the user that the recompilation is complete and they can preview the site at `http://localhost:8000`.
 
 <RULE>
 # Scope Restriction
