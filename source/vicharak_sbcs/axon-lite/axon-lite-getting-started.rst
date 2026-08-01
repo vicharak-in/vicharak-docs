@@ -16,7 +16,7 @@ What's in the box?
 1. **Axon Lite**
     - Single-board computer optimized for high-performance computing and AI.
     - Powered by Rockchip RK3576 SoC (octa-core CPU: quad-core Cortex-A76 and quad-core Cortex-A55).
-    - 4GB/6GB LPDDR5 RAM, 32GB eMMC storage, 40-Pin GPIO header.
+    - 2GB/4GB/8GB LPDDR5 RAM, 32GB eMMC storage, 40-Pin GPIO: header.
     - Pre-installed with Debian 13 (Trixie).
 
 2. **PD Cable**
