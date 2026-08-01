@@ -15,25 +15,25 @@ Set SSID and Password
 
 .. code::
 
-    sudo nmcli device wifi hotspot ifname wlan0 con-name Axon LiteHost ssid Axon LiteHost password 12345678
+    sudo nmcli device wifi hotspot ifname wlan0 con-name Axon-Lite-Host ssid Axon-Lite-Host password 12345678
 
 Sets the Wi-Fi security method to use WPA-PSK (Wi-Fi Protected Access Pre-Shared Key )
 --------------------------------------------------------------------------------------
 
 .. code::
 
-    sudo nmcli connection modify Axon LiteHost 802-11-wireless-security.key-mgmt wpa-psk
+    sudo nmcli connection modify Axon-Lite-Host 802-11-wireless-security.key-mgmt wpa-psk
 
 Set a static IPv4 address
 -------------------------
 
 .. code::
     
-    sudo nmcli connection modify Axon LiteHost ipv4.addresses 10.9.8.7/24
+    sudo nmcli connection modify Axon-Lite-Host ipv4.addresses 10.9.8.7/24
 
 Brings up the network connection
 --------------------------------
 
 .. code::
 
-    sudo nmcli connection up Axon LiteHost
+    sudo nmcli connection up Axon-Lite-Host
