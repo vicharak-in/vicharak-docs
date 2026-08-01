@@ -1,7 +1,10 @@
 .. _axon-lite-power-sources:
 
+Power Sources
+=============
+
 Power Rating
-============
+------------
 
 .. important::
 
@@ -9,9 +12,6 @@ Power Rating
    - **Recommended Power:** 10W (5V @ 2A or 12V @ 0.83A)
    
    If you are connecting all peripherals, such as Cameras, Displays, USB, HDMI, PCIe etc. the power requirement will range between **15W-25W** (up to 5V @ 5A or 12V @ 2.1A). This is necessary when the board is running at full load.
-
-Power Sources
-=============
 
 The Axon Lite board offers multiple versatile power options to suit various use cases. Below are the 5 supported power sources:
 
