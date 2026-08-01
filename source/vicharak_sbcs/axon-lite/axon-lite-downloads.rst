@@ -76,7 +76,7 @@ Axon Lite Pin-outs Guide
 ---------------------
 .. TODO: Add link for Axon Lite 3D File
 
-`Download Pinouts </_static/files/axon-lite_V0.3_Pinout_Guide.pdf>`_
+`Download Pinouts </_static/files/axon_lite_V0.2_Pinout.pdf>`_
 
 Mechanical Information
 ----------------------
