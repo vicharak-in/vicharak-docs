@@ -64,12 +64,12 @@ List of rockusb connected(1)
 DevNo=1	Vid=0x2207,Pid=0x350e,LocationID=13	Mode=Maskrom	SerialNo=
 ```
 
-2. [Download RK3576 SPL Loader](https://downloads.vicharak.in/vicharak-axon-lite/rk3576_spl_loader_v1.09.108.bin)
+2. [Download RK3576 SPL Loader](https://downloads.vicharak.in/vicharak-axon-lite/rk3576_spl_loader_v1.12.108.bin)
 
 3. Flash SPL Loader using **db**.
 
 ```bash
-sudo ./upgrade_tool db rk3576_spl_loader_v1.09.108.bin
+sudo ./upgrade_tool db rk3576_spl_loader_v1.12.108.bin
 ```
 
 4. Flash image using **wl** command.
