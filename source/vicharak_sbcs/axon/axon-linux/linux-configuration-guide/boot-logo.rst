@@ -84,5 +84,5 @@ Copy the files to the boot partition:
     sudo cp logo_kernel.bmp /boot/
 
 If you need to change the image size or scaling you will have to rebuild
-the kernel after making the required DTS changes. See the :doc:`Linux Kernel Build <../../../vaaman/vaaman-linux/linux-development-guide/linux-kernel>`
+the kernel after making the required DTS changes. See the :doc:`Linux Kernel Build <../linux-development-guide/linux-kernel>`
 guide and the Vaaman :ref:`Fullscreen logo scaling <fullscreen-logo-scaling>` section for details.
