@@ -1,0 +1,87 @@
+.. _axon-mini-linux-qdl-tool:
+
+#################
+Linux QDL Tool
+#################
+
+This guide explains how to install the Qualcomm Device Loader (QDL) on Linux
+and flash a raw eMMC image to Axon Mini.
+
+Download QDL Tool
+=================
+
+Download the Linux QDL package:
+
+`Qualcomm Device Loader (Linux) <https://softwarecenter.qualcomm.com/catalog/item/Qualcomm_Device_Loader?osArch=X86&osDist=Debian&osType=Linux&version=2.7.1>`_
+
+Extract the archive:
+
+.. code-block:: console
+
+   unzip QDL_2.7.1_Linux_x64.zip
+
+Make the ``qdl`` binary executable:
+
+.. code-block:: console
+
+   cd QDL_2.7.1_Linux_x64
+   chmod +x ./qdl
+
+Flash Raw Image to eMMC
+=======================
+
+1. Download the Debian eMMC image package (with XML flashing files) from
+   :ref:`axon-mini-downloads`.
+
+2. Extract the image package and enter the directory:
+
+.. code-block:: console
+
+   tar -xvf V1.0_vicharak_axon-mini_7.1_02122024-debian-emmc.tar.gz
+   cd V1.0_vicharak_axon-mini_7.1_02122024-debian-emmc
+
+3. Put Axon Mini into **EDL mode** (see :ref:`axon-mini-qdl-tool-guide`).
+
+4. Flash the image using QDL:
+
+.. code-block:: console
+
+   sudo <qdl_tool_path>/QDL_2.7.1_Linux_x64/qdl -s emmc --allow-fusing prog_firehose_ddr.elf rawprogram*.xml patch*.xml
+
+Example:
+
+.. code-block:: console
+
+   vicharak@vicharak:~/Downloads/V1.0_vicharak_axon-mini_7.1_02122024-debian-emmc$ sudo ~/QDL_2.7.1_Linux_x64/qdl -s emmc --allow-fusing prog_firehose_ddr.elf rawprogram*.xml patch*.xml
+
+Expected output (abbreviated):
+
+.. code-block:: console
+
+   Waiting for EDL device
+   Flashing device (PID 0x9008, serial: 2E5ABDDD)
+   Sahara: sending prog_firehose_ddr.elf (1044480 bytes)
+   waiting for Firehose programmer...
+   flashed "PrimaryGPT" successfully
+   flashed "xbl_a" successfully
+   flashed "xbl_b" successfully
+   ...
+   flashed "system" successfully
+   flashed "PrimaryGPT" successfully
+   flashed "BackupGPT" successfully
+   26 patches applied
+   partition 0 is now bootable
+
+.. note::
+
+   ``-s emmc`` selects eMMC as the target storage device.
+
+   UFS flashing will be documented separately.
+
+5. After a successful flash, disconnect power, then power on the board normally
+   (without holding the EDL button).
+
+.. warning::
+
+   Do not interrupt flashing once it has started. Wait until you see
+   ``partition 0 is now bootable``.
