@@ -98,7 +98,7 @@ source_suffix = [".rst", ".md"]
 
 # Set templates and exclude patterns
 templates_path = ["_templates"]
-exclude_patterns = ["_build"]
+exclude_patterns = ["_build", "vicharak_sbcs/axon-lite/axon-lite-linux/linux-development-guide", "vicharak_sbcs/axon-lite/axon-lite-linux/linux-configuration-guide", "vicharak_sbcs/axon-lite/axon-lite-accessories/fan.rst"]
 
 # HTML settings
 html_theme = "sphinxawesome_theme"
@@ -108,6 +108,10 @@ html_title = "Vicharak"
 html_css_files = [
     "css/fonts.css",
     "css/custom.css",
+]
+# JS files to include
+html_js_files = [
+    "js/clarity.js",
 ]
 # Theme options
 html_theme_options = {
