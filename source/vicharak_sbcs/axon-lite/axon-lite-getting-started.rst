@@ -13,19 +13,11 @@ started with Axon Lite.
 What's in the box?
 ==================
 
-1. **Axon Lite**
+**Axon Lite**
     - Single-board computer optimized for high-performance computing and AI.
     - Powered by Rockchip RK3576 SoC (octa-core CPU: quad-core Cortex-A76 and quad-core Cortex-A55).
     - 2GB/4GB/8GB LPDDR5 RAM, 32GB eMMC storage, 40-Pin GPIO: header.
     - Pre-installed with Debian 13 (Trixie).
-
-2. **PD Cable**
-    - Supplies power to Axon Lite.
-    - Ensures stable and efficient power delivery via USB-C with Power Delivery technology.
-
-3. **Wi-Fi and Bluetooth Antennas**
-    - Includes custom made pcb antennas for both Wi-Fi ( 2.4 & 5Ghz ) and Bluetooth connectivity.
-    - These antennas ensure greater signal range and reliable connectivity for Wi-Fi and Bluetooth devices.
 
 What else do you need?
 ======================
