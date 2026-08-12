@@ -22,7 +22,7 @@ What's in the box?
 What else do you need?
 ======================
 
-**1. Compatible Power Source (see :ref:`axon-lite-power-sources`)**
+**1. Compatible Power Source** (see :ref:`axon-lite-power-sources`)
 
 **2. Micro HDMI or Type-C DP cable to drive Display Monitor**
  
