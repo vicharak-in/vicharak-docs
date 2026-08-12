@@ -4,26 +4,11 @@
  Axon Lite Accessories
 ####################
  
-************************
- In the box accessories
-************************
-.. TODO: Add respective Links
-.. grid:: 1 1 2 2
-
-    .. grid-item-card:: Power Delivery (PD) PD Cable
-       :link: ../common/common-accessories/pd-cable
-       :link-type: doc
-       :shadow: md
-
-       Power Delivery (PD) Cable for Axon Lite
-
 **********************
  Optional Accessories
 **********************
 
 .. grid:: 1 1 2 2
-
-
 
     .. grid-item-card:: Axon Lite Dual Ethernet HAT
        :link: axon-lite-accessories/axon-lite-dual-ethernet
