@@ -8,7 +8,6 @@ Axon OS Configuration
    OS Details <basic>
    Set Hotspot <wifi-hotspot>
    Docker Setup <docker-setup>
-   Update Package <update-package>
    Screen Sharing <screen-sharing>
    Change Splash Screen/Logo <splash-screen>
    Tailscale Support <tailscale-support>
