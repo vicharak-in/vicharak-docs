@@ -208,6 +208,15 @@ Write LBA OK.
 
 :::
 
+
+
+:::{note}
+
+  You can download Vaaman images from: [**Vaaman Downloads**](https://downloads.vicharak.in/vicharak-vaaman/)
+
+:::
+
+
 ### Reboot the device
 
 :::{card} sudo ./upgrade_tool rd
