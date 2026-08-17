@@ -140,6 +140,10 @@ sudo ./upgrade_tool db rk3588_spl_loader_v1.14.113.bin
 sudo ./upgrade_tool wl 0 <Version_vicharak-axon-Kernel_Version_Date-ubuntu_version-raw.img>
 ```
 
+:::{note}
+You can download Axon raw and eMMC images from here : https://downloads.vicharak.in/vicharak-axon/
+:::
+
 You will see this type of process:
 
 ```bash
