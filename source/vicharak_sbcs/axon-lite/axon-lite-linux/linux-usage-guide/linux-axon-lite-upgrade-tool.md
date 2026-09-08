@@ -78,6 +78,10 @@ sudo ./upgrade_tool db rk3576_spl_loader_v1.12.108.bin
 sudo ./upgrade_tool wl 0 <Version_vicharak-axon-lite-Kernel_Version_Date-debian_version-raw.img>
 ```
 
+:::{note}
+You can download Axon Lite raw and eMMC images from: https://downloads.vicharak.in/vicharak-axon-lite/debian/
+:::
+
 You will see this type of process:
 
 ```bash

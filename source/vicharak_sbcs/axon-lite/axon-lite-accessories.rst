@@ -4,40 +4,11 @@
  Axon Lite Accessories
 ####################
  
-************************
- In the box accessories
-************************
-.. TODO: Add respective Links
-.. grid:: 1 1 2 2
-
-    .. grid-item-card:: Power Delivery (PD) PD Cable
-       :link: ../common/common-accessories/pd-cable
-       :link-type: doc
-       :shadow: md
-
-       Power Delivery (PD) Cable for Axon Lite
-
-    .. grid-item-card:: Wi-Fi and Bluetooth Antenna
-       :link: axon-lite-accessories/accessory-wifi-antenna
-       :link-type: doc
-       :shadow: md
-
-       Wi-Fi and Bluetooth Antenna for Axon Lite
-..
-    .. grid-item-card:: Heat-Sink
-       :link: accessory-heatsink
-       :link-type: doc
-       :shadow: md
-..
-       Heat-Sink for Axon Lite
-
 **********************
  Optional Accessories
 **********************
 
 .. grid:: 1 1 2 2
-
-
 
     .. grid-item-card:: Axon Lite Dual Ethernet HAT
        :link: axon-lite-accessories/axon-lite-dual-ethernet

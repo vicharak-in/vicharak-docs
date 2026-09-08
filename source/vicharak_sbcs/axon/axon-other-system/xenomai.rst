@@ -9,7 +9,7 @@ Follow these steps sequentially to set up your real-time development environment
 .. tip::
      
      - Xenomai Version : **3.2.x**
-     - Vichara Kernel  : **6.1.75-axon**
+     - Vicharak Kernel  : **6.1.75**
  	
 ------------------------------------------------------------
 Prerequisites & Requirements
@@ -44,8 +44,8 @@ Clone the official Vicharak Linux Kernel repository, targeting the designated ``
 .. code-block:: bash
 
     # Clone the repository with the specified branch
-    git clone -b 6.1-xenomai https://github.com/vicharak-in/rockchip-linux-kernel.git
-    cd rockchip-linux-kernel
+    git clone -b 6.1-xenomai https://github.com/vicharak-in/vicharak-linux-kernel.git
+    cd vicharak-linux-kernel
 
     # Initialize and update all embedded git submodules
     git submodule update --init
@@ -108,12 +108,20 @@ Alternatively, you can use ``wget``:
 Step 4: Configure the Kernel with Xenomai
 =========================================
 
+Go to cloned **xenomai** folder and Run below command to integrate xenomai to Vicharak Kernel 6.1.75 Version.
+
+.. code-block:: bash
+
+	./scripts/prepare-kernel.sh --arch=arm64 --linux=../
+
 Navigate back to the kernel repository, initialize the default configuration for the **Axon** hardware profile, and enable Xenomai kernel options via the interactive menu configuration utility.
 
 .. code-block:: bash
 
     # Return to the kernel root directory
-    cd rockchip-linux-kernel
+    cd vicharak-linux-kernel
+
+.. code-block:: bash
 
     # Launch the interactive configuration wizard
     ./vicharak/build.sh -l
@@ -142,27 +150,14 @@ Navigate to **General setup --->** and apply the following parameters:
     
     *   Set to: ``Preemptible Kernel (Low-Latency Desktop)`` --> ``(X) Low-Latency Desktop``
 
-*   **Local version - append to kernel release**
-    
-    *   Set to: ``-xenomai`` or ``-xeno-3.2.1``
-
 *   **Timers subsystem**
     
     *   ``[*] High Resolution Timer Support`` (Enable)
 
-**Processor Type and Features**
-
-Navigate to **Processor type and features --->** and configure as follows:
-
-*   **Processor family**
+Navigate to **Kernel Features --->**
     
-    *   Set to: ``(X) Core 2/newer Xeon``
-    *   *Note: If "cat /proc/cpuinfo | grep family" returns 6, set as Generic; otherwise, on devices like Raspberry Pi, this may return nothing.*
-
-*   **Multi-core scheduler support**
-    
-    *   ``[*] Multi-core scheduler support`` (Enable/Disable depending on your hardware strategy, typically enabled for x86 multi-core architectures)
-    *   ``[ ] CPU core priorities scheduler support`` (Disable)
+*   ``[*] Multi-core scheduler support`` (Enable/Disable depending on your hardware strategy, typically enabled for x86 multi-core architectures)
+*   ``[ ] CPU core priorities scheduler support`` (Disable)
 
 **Xenomai / Cobalt Settings**
 
@@ -184,7 +179,7 @@ Maximum number of POSIX timers per process       256            **512**
 
 **Drivers & RTnet Configuration**
 
-Navigate to **Drivers ---> RTnet --->**:
+Navigate to **Drivers ---> RTnet --->**
 
 *   ``[*] RTnet, TCP/IP socket interface`` (Enable)
 *   **Drivers --->**
@@ -197,11 +192,11 @@ Navigate to **Drivers ---> RTnet --->**:
     
     *   ``<M> Real-Time Capturing Support`` (Set as Module)
 
-**Power Management and ACPI Options**
+**Power Management**
 
 Real-time performance is severely degraded by dynamic power state changes. Disable them entirely.
 
-Navigate to **Power management and ACPI options --->**:
+Navigate to **Power management options --->**
 
 *   **CPU Frequency scaling --->**
     
@@ -223,18 +218,6 @@ Dynamic memory operations cause non-deterministic latencies. Navigate to **Memor
 *   ``[ ] Transparent Hugepage Support``
 *   ``[ ] Allow for memory compaction``
 *   ``[ ] Page migration``
-
-**Device Drivers & Virtualization Guardrails**
-
-Disable guest/virtualization drivers that can cause unpredictable timing drops.
-
-*   **Microsoft Hyper-V guest support --->**
-    
-    *   ``< > Microsoft Hyper-V client drivers`` (Disable)
-
-*   **Device Drivers --->**
-    
-    *   ``[ ] Unisys visorbus driver`` (Disable)
 
 .. note::
    After setting these options, save your configuration file in ``out/.config``.

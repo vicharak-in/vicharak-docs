@@ -1,4 +1,4 @@
-(build-u-boot)=
+(axon-u-boot-apt)=
 
 # Updating U-Boot Version Using APT
 

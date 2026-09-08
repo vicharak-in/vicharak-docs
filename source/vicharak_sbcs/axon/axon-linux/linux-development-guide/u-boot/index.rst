@@ -20,5 +20,7 @@ In simpler terms, it's the maestro ensuring everything kicks off smoothly.
    :maxdepth: 3
    :titlesonly:
 
+   Build U-Boot from source <build-u-boot>
    Update U-boot using APT <axon-u-boot>
+
 .. _Wikipedia :  https://en.wikipedia.org/wiki/Das_U-Boot

@@ -27,7 +27,7 @@ computer board. It's like giving your computer its unique set of skills.
    :titlesonly:
 
    u-boot/index
+   Linux Kernel <linux-kernel>
 
 ..
    Linux SDK <axon-linux-sdk>
-   Linux Kernel <axon-linux-kernel>
