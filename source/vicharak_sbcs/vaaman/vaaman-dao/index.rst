@@ -7,22 +7,30 @@ Through `Vicharak-Dao <https://dao.vicharak.in/>`_, users can connect and enable
 It lets you access the command-line interface of your device directly from your web browser, making remote management quick and reliable.  
 Using **WebRTC**, it ensures real-time, low-latency, and secure communication between your device and browser.
 
-.. image:: /_static/images/rk3588-axon/vicharak-dao-axon1.webp
-   :width: 98%
-
 
 Prerequisites
 ==============
 
-Before you begin, ensure that your Vicharak Board is:
+Before you begin, ensure that your Vaaman Board is:
 
 - Connected to the Internet via **Wi-Fi** or **Ethernet**
 
 
-Install Vicharak-DAO on Vicharak Board
-=======================================
+Install Vicharak-DAO on Vaaman Board
+======================================
 
-On your Vicharak Board, update your system and install **Vicharak-DAO** using:
+.. important::
+
+   The Vaaman board requires a **specific version of xvfb** before installing Vicharak-DAO.
+   Installing the generic ``xvfb`` package will cause **display flickering issues**.
+
+   Run this command first:
+
+   .. code-block:: bash
+
+      sudo apt install xvfb=2:1.20.13-1ubuntu1~20.04.2
+
+On your Vaaman Board, update your system and install **Vicharak-DAO** using:
 
 .. code-block:: bash
 
@@ -125,11 +133,11 @@ If you used the **Token** method on the website, you now need to add that token 
 
 .. note::
 
-   You can access your Vicharak Board using:  
+   You can access your Vaaman Board using:  
 
-   - **Micro HDMI** — Ports Tx0 or Tx1  
-   - **Serial Console** — See `Documentation <https://docs.vicharak.in/vicharak_sbcs/axon/axon-getting-started/#using-serial-console>`_ (Baudrate: 1500000)  
-   - **SSH** — See `Documentation <https://docs.vicharak.in/vicharak_sbcs/axon/axon-getting-started/#using-ssh>`_ (``vicharak@<IP>``) — both devices must be on the **same network**.  
+   - **HDMI** — Connect a display via HDMI  
+   - **Serial Console** — See `Documentation <https://docs.vicharak.in/vicharak_sbcs/vaaman/vaaman-getting-started/#using-serial-console>`_ (Baudrate: 1500000)  
+   - **SSH** — See `Documentation <https://docs.vicharak.in/vicharak_sbcs/vaaman/vaaman-getting-started/#using-ssh>`_ (``vicharak@<IP>``) — both devices must be on the **same network**.  
 
    Default credentials:  
    - **Username**: ``vicharak``  
