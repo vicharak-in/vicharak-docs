@@ -104,7 +104,7 @@ pre-installed ``Debian (Trixie)``, omitting detailed instructions for
 
 Connect a compatible power adapter to the Axon Lite board. Once the power is connected, the board will automatically turn on.
 
-For a comprehensive list of all supported power methods, including 12V PD, 5V, Battery, and PoE, please see the :ref:`axon-lite-power-sources` page.
+For a comprehensive list of all supported power methods, including 12V PD, Battery, and PoE, please see the :ref:`axon-lite-power-sources` page.
 
 .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-details.webp
    :width: 60%
