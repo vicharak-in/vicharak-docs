@@ -38,6 +38,7 @@ that require both processing power and hardware customization.
    FPGA  <vaaman-fpga/index>
    Vaaman Remote Upload Documentation <vaaman-remote-upload>
    Periplex <vaaman-periplex/index>
+   Vicharak-DAO <vaaman-dao/index>
    Frequently Asked Questions <vaaman-faq>
 
 .. note::
