@@ -78,6 +78,11 @@ Axon Lite Pin-outs Guide
 
 `Download Pinouts </_static/files/axon_lite_V0.2_Pinout.pdf>`_
 
+Axon Lite Step File
+--------------------
+
+`Download Step File </_static/files/Axon_Lite_Step_File.tar.gz>`_
+
 Mechanical Information
 ----------------------
 .. TODO: Update weight
