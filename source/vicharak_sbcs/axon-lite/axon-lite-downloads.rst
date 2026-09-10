@@ -74,7 +74,6 @@ SoC Documents
 
 Axon Lite Pin-outs Guide
 ---------------------
-.. TODO: Add link for Axon Lite 3D File
 
 `Download Pinouts </_static/files/axon_lite_V0.2_Pinout.pdf>`_
 
@@ -93,6 +92,24 @@ Mechanical Information
       - 69 grams
     - - Mounting holes
       - 4x M2.5 holes for easy installation
+
+Step File
+---------
+
+**Axon Lite Board 3D File**
+
+`Download File </_static/files/AXON_LITE_3D_file_V0.2.step.7z>`_
+
+.. note::
+
+    The step file is compressed using 7zip. You can use `7zip <https://www.7-zip.org/>`_ or
+    `WinRAR <https://www.win-rar.com/>`_ to extract the file.
+
+    For **Linux**, you can use the following command to extract the file:
+
+    .. code-block:: console
+
+        7z x <file_name>.7z
 
 |
 
