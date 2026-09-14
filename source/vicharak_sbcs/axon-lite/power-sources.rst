@@ -32,10 +32,3 @@ Axon Lite supports Power over Ethernet (PoE), allowing you to deliver both data 
 
 .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-power-over-ethernet.webp
     :width: 60%
-
-3. Battery Power
-----------------
-For portable or backup power applications, the board features a 3.7V battery connector.
-
-.. image:: ../../_static/images/rk3576-axon-lite/axon-lite-battery-power.webp
-    :width: 60%
