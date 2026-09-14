@@ -4,9 +4,8 @@ Overview
 Axon Lite is designed to cater to a diverse audience, including but not limited to:
 
 **Software Developers:**
-    - **Leverage**: Octa-core CPU ( 4x, Arm Cortex A76 ( 2.4 Ghz ) & 4x, Arm Cortex A55 ), multi-OS support
+    - **Leverage**: Octa-core CPU ( 4x, Arm Cortex A72 ( 2.2 GHz ) & 4x, Arm Cortex A53 ( 1.8 GHz ) ), multi-OS support
     - **Ideal For**: Application development, performance optimization, AI-driven software
-    - **Cache**: 64KB L1 data & instruction cache ( seperate ), 512KB L2 Cache for Cortex A76 also 32KB L1 data & instruction cache ( seperate ) , 128KB L2 cache for A55
 
 **Researchers:**
     - **Leverage**: RK3576 SoC, robust NPU, extensive connectivity
