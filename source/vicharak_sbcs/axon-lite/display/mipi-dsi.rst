@@ -16,7 +16,7 @@ Prerequisites
 - MIPI DSI Display
 - Configure Kernel and make overlays according to MIPI-DSI Display
 - Vicharak PCB For DSI Display
-- Vicharak Flex Cable 40-Pin 0.4mm Pitch Cable (Golden Color)
+- Vicharak Flex Cable 22-Pin 0.4mm Pitch Cable (Golden Color)
 - Make sure, You have installed latest kernel, If not. Please run command below.
 
 .. code-block::
@@ -102,35 +102,34 @@ Steps to follow for Configuration
 
 .. code-block:: console
 
-    ┌──────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
-    │ Please select overlays:                                                                  │
-    │                                                                                                         │
-    │  [ ] Enable DP connector-split mode Axon Lite V0.3                                            │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 Alpha Axon Lite V0.3 [OFF]                     │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 Alpha Axon Lite V0.3 [OFF]                     │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 Alpha Axon Lite V0.3 [OFF]                     │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 Alpha Axon Lite V0.3 [OFF]                     │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Alpha Axon Lite V0.3 [OFF]                 │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX1 Aplha Axon Lite V0.3 [OFF]                 │
-    │  [ ] Enable I2C3 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C4 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C7 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable I2C9 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM0 on 40-Pin GPIO Header Axon Lite V0.3                                         │
-    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable PWM1_M0 on 40-Pin GPIO Header Axon Lite V0.3                                      │
-    │  [ ] Enable UART1 on 40-Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART4 on 40-Pin GPIO Header Axon Lite V0.3                                        │
-    │  [ ] Enable UART6 on 40-Pin GPIO Header Axon Lite V0.3                                        │
-    │  [*] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon Lite V0.3                                   │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                     <Ok>                         <Cancel>                                │
-    │                                                                                          │
-    └──────────────────────────────────────────────────────────────────────────────────────────┘
-
+┌───────────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
+│ Please select overlays:                                                                      │                                                                                             │
+│  [ ] Enable IMX219 camera on R-Pi connector / DCPHY RX0 (Axon Lite V0.2)                     │
+│  [ ] Enable IMX415 camera on CSI connector (Axon Lite V0.2)                                  │
+│  [ ] Enable IMX415 camera on R-Pi connector / DCPHY RX0 (Axon Lite V0.2)                     │
+│  [*] Enable MIPI DSI Waveshare Panel on Axon Lite V0.2                                       │
+│  [ ] Enable PWM2_CH2_M3 on 30 Pin GPIO Header Axon Lite V0.2                                 │
+│  [ ] Enable PWM2_CH4_M2 on 30 Pin GPIO Header Axon Lite V0.2                                 │
+│  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 connector (Axon Lite V0.2)                    │
+│  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI2 connector (Axon Lite V0.2)                    │
+│  [ ] Enable Sata0 support on Combo PHY 0 on Axon Lite V0.2                                   │
+│  [ ] Enable Sata1 support on Combo PHY 1 on Axon Lite V0.2                                   │
+│  [ ] Enable U-FL antenna (Axon Lite V0.2)                                                    │
+│  [ ] Enable UART3m0 on 30 Pin GPIO Header Axon Lite V0.2                                     │
+│  [ ] Enable UART3m1 on 30 Pin GPIO Header Axon Lite V0.2                                     │
+│  [ ] Enable UART5m0 on 30 Pin GPIO Header Axon Lite V0.2                                     │
+│  [ ] Enable USB3.0 support on Combo PHY 1 on Axon Lite V0.2                                  │
+│  [ ] Enable can3m3 on 30 Pin GPIO Header Axon Lite V0.2                                      │
+│  [ ] Enable sai0 on 30 Pin GPIO Header Axon Lite V0.2                                        │
+│  [ ] Enable sai1m1 on 30 Pin GPIO Header Axon Lite V0.2                                      │
+│  [ ] Enable sai3m2 on 30 Pin GPIO Header Axon Lite V0.2                                      │
+│  [ ] Enable spi1 on 30 Pin GPIO Header Axon V0.3                                             │
+│  [ ] Enable spi3 on 30 Pin GPIO Header axon-lite V0.2                                        │
+│  [ ] Enable uart7 on 30 Pin GPIO Header Axon Lite V0.2                                       │
+│  [ ] Enable uart8m0 on 30 Pin GPIO Header Axon Lite V0.2                                     │
+│  [ ] Enable uart8m1 on 30 Pin GPIO Header Axon Lite V0.2                                     │
+│  [ ] Enable uart8m2 on 30 Pin GPIO Header Axon Lite V0.2                                     │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 6. To return back to terminal, press the ``Esc`` key until you exit from it.
 
