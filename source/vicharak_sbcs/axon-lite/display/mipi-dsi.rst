@@ -102,34 +102,34 @@ Steps to follow for Configuration
 
 .. code-block:: console
 
-┌───────────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
-│ Please select overlays:                                                                      │                                                                                             │
-│  [ ] Enable IMX219 camera on R-Pi connector / DCPHY RX0 (Axon Lite V0.2)                     │
-│  [ ] Enable IMX415 camera on CSI connector (Axon Lite V0.2)                                  │
-│  [ ] Enable IMX415 camera on R-Pi connector / DCPHY RX0 (Axon Lite V0.2)                     │
-│  [*] Enable MIPI DSI Waveshare 4 Inch Panel on Axon Lite V0.2                                │
-│  [ ] Enable PWM2_CH2_M3 on 30 Pin GPIO Header Axon Lite V0.2                                 │
-│  [ ] Enable PWM2_CH4_M2 on 30 Pin GPIO Header Axon Lite V0.2                                 │
-│  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 connector (Axon Lite V0.2)                    │
-│  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI2 connector (Axon Lite V0.2)                    │
-│  [ ] Enable Sata0 support on Combo PHY 0 on Axon Lite V0.2                                   │
-│  [ ] Enable Sata1 support on Combo PHY 1 on Axon Lite V0.2                                   │
-│  [ ] Enable U-FL antenna (Axon Lite V0.2)                                                    │
-│  [ ] Enable UART3m0 on 30 Pin GPIO Header Axon Lite V0.2                                     │
-│  [ ] Enable UART3m1 on 30 Pin GPIO Header Axon Lite V0.2                                     │
-│  [ ] Enable UART5m0 on 30 Pin GPIO Header Axon Lite V0.2                                     │
-│  [ ] Enable USB3.0 support on Combo PHY 1 on Axon Lite V0.2                                  │
-│  [ ] Enable can3m3 on 30 Pin GPIO Header Axon Lite V0.2                                      │
-│  [ ] Enable sai0 on 30 Pin GPIO Header Axon Lite V0.2                                        │
-│  [ ] Enable sai1m1 on 30 Pin GPIO Header Axon Lite V0.2                                      │
-│  [ ] Enable sai3m2 on 30 Pin GPIO Header Axon Lite V0.2                                      │
-│  [ ] Enable spi1 on 30 Pin GPIO Header Axon V0.3                                             │
-│  [ ] Enable spi3 on 30 Pin GPIO Header axon-lite V0.2                                        │
-│  [ ] Enable uart7 on 30 Pin GPIO Header Axon Lite V0.2                                       │
-│  [ ] Enable uart8m0 on 30 Pin GPIO Header Axon Lite V0.2                                     │
-│  [ ] Enable uart8m1 on 30 Pin GPIO Header Axon Lite V0.2                                     │
-│  [ ] Enable uart8m2 on 30 Pin GPIO Header Axon Lite V0.2                                     │
-└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+    ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
+    │  [ ] Enable IMX219 camera on R-Pi connector / DCPHY RX0 (Axon Lite V0.2)                 │
+    │  [ ] Enable IMX415 camera on CSI connector (Axon Lite V0.2)                              │
+    │  [ ] Enable IMX415 camera on R-Pi connector / DCPHY RX0 (Axon Lite V0.2)                 │
+    │  [*] Enable MIPI DSI Waveshare 4 Inch Panel on Axon Lite V0.2                            │
+    │  [ ] Enable PWM2_CH2_M3 on 30 Pin GPIO Header Axon Lite V0.2                             │
+    │  [ ] Enable PWM2_CH4_M2 on 30 Pin GPIO Header Axon Lite V0.2                             │
+    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 connector (Axon Lite V0.2)                │
+    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI2 connector (Axon Lite V0.2)                │
+    │  [ ] Enable Sata0 support on Combo PHY 0 on Axon Lite V0.2                               │
+    │  [ ] Enable Sata1 support on Combo PHY 1 on Axon Lite V0.2                               │
+    │  [ ] Enable U-FL antenna (Axon Lite V0.2)                                                │
+    │  [ ] Enable UART3m0 on 30 Pin GPIO Header Axon Lite V0.2                                 │
+    │  [ ] Enable UART3m1 on 30 Pin GPIO Header Axon Lite V0.2                                 │
+    │  [ ] Enable UART5m0 on 30 Pin GPIO Header Axon Lite V0.2                                 │
+    │  [ ] Enable USB3.0 support on Combo PHY 1 on Axon Lite V0.2                              │
+    │  [ ] Enable can3m3 on 30 Pin GPIO Header Axon Lite V0.2                                  │
+    │  [ ] Enable sai0 on 30 Pin GPIO Header Axon Lite V0.2                                    │
+    │  [ ] Enable sai1m1 on 30 Pin GPIO Header Axon Lite V0.2                                  │
+    │  [ ] Enable sai3m2 on 30 Pin GPIO Header Axon Lite V0.2                                  │
+    │  [ ] Enable spi1 on 30 Pin GPIO Header Axon V0.3                                         │
+    │  [ ] Enable spi3 on 30 Pin GPIO Header axon-lite V0.2                                    │
+    │  [ ] Enable uart7 on 30 Pin GPIO Header Axon Lite V0.2                                   │
+    │  [ ] Enable uart8m0 on 30 Pin GPIO Header Axon Lite V0.2                                 │
+    │  [ ] Enable uart8m1 on 30 Pin GPIO Header Axon Lite V0.2                                 │
+    │  [ ] Enable uart8m2 on 30 Pin GPIO Header Axon Lite V0.2                                 │
+    └──────────────────────────────────────────────────────────────────────────────────────────┘
 
 6. To return back to terminal, press the ``Esc`` key until you exit from it.
 
