@@ -7,45 +7,6 @@ Block Diagram
 .. image:: ../../_static/images/rk3576-axon-lite/Axon-lite_Block_diagram.webp
    :width: 100%
 
-Axon Lite is designed to cater to a diverse audience, including but not limited to:
-
-**Software Developers:**
-    - **Leverage**: Octa-core CPU ( 4x, Arm Cortex A72 ( 2.2 GHz ) & 4x, Arm Cortex A53 ( 1.8 GHz ) ), multi-OS support
-    - **Ideal For**: Application development, performance optimization, AI-driven software
-
-**Researchers:**
-    - **Leverage**: RK3576 SoC, robust NPU, extensive connectivity
-    - **Ideal For**: Custom algorithms, experiments, AI and machine learning prototyping
-
-**Hardware Designers:**
-    - **Leverage**: 40-Pin GPIO header, multiple interfaces
-    - **Ideal For**: Developing, testing, and rapid prototyping of hardware designs
-
-**Hobbyist Users:**
-    - **Leverage**: Versatile interfaces, compact design
-    - **Ideal For**: Robotics, home automation, multimedia centers, DIY electronics
-
-**AI and Machine Learning Enthusiasts:**
-    - **Leverage**: 6 TOPS NPU, major deep learning frameworks support
-    - **Ideal For**: Machine learning applications, computer vision tasks
-
-**Multimedia Professionals:**
-    - **Leverage**: High-definition video, HDMI for 4K output, MIPI DSI for up to 2K output, USB-C DP for 1080p
-    - **Ideal For**: Video editing, streaming, digital signage
-
-**Educators and Students:**
-    - **Leverage**: Hands-on learning tool
-    - **Ideal For**: Teaching computing technologies, programming, hardware-software integration
-
-**IoT Implementers:**
-    - **Leverage**: WiFi 6, Bluetooth 5.2, peripheral interfaces
-    - **Ideal For**: IoT projects, sensor integration, smart home solutions
-
-**Gaming and Entertainment:**
-    - **Leverage**: ARM Mali-G52 MC3 GPU
-    - **Ideal For**: Superior gaming experience, multimedia playback
-    - **Drivers**: OpenGL ES 1.1, 2.0 and 3.2, OpenCL 2.2, Vulkan1.2 etc.
-
 Features
 --------
 
@@ -104,6 +65,45 @@ Physical Information
 
 .. image:: ../../_static/images/rk3576-axon-lite/axon-lite-dimension.webp
    :width: 75%
+
+Axon Lite is designed to cater to a diverse audience, including but not limited to:
+
+**Software Developers:**
+    - **Leverage**: Octa-core CPU ( 4x, Arm Cortex A72 ( 2.2 GHz ) & 4x, Arm Cortex A53 ( 1.8 GHz ) ), multi-OS support
+    - **Ideal For**: Application development, performance optimization, AI-driven software
+
+**Researchers:**
+    - **Leverage**: RK3576 SoC, robust NPU, extensive connectivity
+    - **Ideal For**: Custom algorithms, experiments, AI and machine learning prototyping
+
+**Hardware Designers:**
+    - **Leverage**: 40-Pin GPIO header, multiple interfaces
+    - **Ideal For**: Developing, testing, and rapid prototyping of hardware designs
+
+**Hobbyist Users:**
+    - **Leverage**: Versatile interfaces, compact design
+    - **Ideal For**: Robotics, home automation, multimedia centers, DIY electronics
+
+**AI and Machine Learning Enthusiasts:**
+    - **Leverage**: 6 TOPS NPU, major deep learning frameworks support
+    - **Ideal For**: Machine learning applications, computer vision tasks
+
+**Multimedia Professionals:**
+    - **Leverage**: High-definition video, HDMI for 4K output, MIPI DSI for up to 2K output, USB-C DP for 1080p
+    - **Ideal For**: Video editing, streaming, digital signage
+
+**Educators and Students:**
+    - **Leverage**: Hands-on learning tool
+    - **Ideal For**: Teaching computing technologies, programming, hardware-software integration
+
+**IoT Implementers:**
+    - **Leverage**: WiFi 6, Bluetooth 5.2, peripheral interfaces
+    - **Ideal For**: IoT projects, sensor integration, smart home solutions
+
+**Gaming and Entertainment:**
+    - **Leverage**: ARM Mali-G52 MC3 GPU
+    - **Ideal For**: Superior gaming experience, multimedia playback
+    - **Drivers**: OpenGL ES 1.1, 2.0 and 3.2, OpenCL 2.2, Vulkan1.2 etc.
 
 .. tip::
 
