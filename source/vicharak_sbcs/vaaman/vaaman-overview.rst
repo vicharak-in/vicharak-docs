@@ -19,23 +19,6 @@ Write, Read, Done! Simplifying CPU ↔ FPGA Interaction
 
 Our another goal was to make it very simple to be accessed by both software and hardware front-end. We've written API-level drivers in C/C++ and Python, which make it very easy to communicate with it. Write APP_ID, data packets, and length—that's it. On the FPGA side, FIFOs! Write everything in FIFOs, and you can read it from there. Whether you want to convert it to APB, AHB, AXI, or simple mechanisms, it's completely up to you!
 
-Who is Vaaman For?
-------------------
-
-Vaaman is useful to a wide range of users, these include but are not limited to:
-
-**Software Developers**:
-    A significant portion of the user base consists of software developers who utilize the SBC's FPGA capabilities to optimize software performance, accelerate computations, and explore hardware acceleration.
-
-**Researchers**:
-    Vaaman with its FPGA attracts researchers who leverage its potential for implementing custom algorithms, conducting experiments, and prototyping novel solutions. The FPGA serves as a valuable tool for their research endeavors.
-
-**Hardware Designers**:
-    The SBC appeals to hardware designers as it provides a platform for developing and testing hardware designs. They can use the FPGA to prototype and verify their designs efficiently, enabling rapid iterations.
-
-**Hobbyist Users**:
-    The SBC also attracts ordinary users with an interest in tinkering and learning about cutting-edge technologies. They can utilize the SBC's versatility for various projects such as robotics, home automation, and DIY electronics.
-
 Features
 --------
 
@@ -117,6 +100,25 @@ Physical Specifications
      - 85 mm
    * - Height
      - 20 mm
+
+
+The purpose of Vaaman
+---------------------
+
+Vaaman is useful to a wide range of users, these include but are not limited to:
+
+**Software Developers**:
+    A significant portion of the user base consists of software developers who utilize the SBC's FPGA capabilities to optimize software performance, accelerate computations, and explore hardware acceleration.
+
+**Researchers**:
+    Vaaman with its FPGA attracts researchers who leverage its potential for implementing custom algorithms, conducting experiments, and prototyping novel solutions. The FPGA serves as a valuable tool for their research endeavors.
+
+**Hardware Designers**:
+    The SBC appeals to hardware designers as it provides a platform for developing and testing hardware designs. They can use the FPGA to prototype and verify their designs efficiently, enabling rapid iterations.
+
+**Hobbyist Users**:
+    The SBC also attracts ordinary users with an interest in tinkering and learning about cutting-edge technologies. They can utilize the SBC's versatility for various projects such as robotics, home automation, and DIY electronics.
+
    
 .. tip::
 
