@@ -1,6 +1,12 @@
 Overview
 ========
 
+Block Diagram
+-------------
+
+.. image:: ../../_static/images/rk3576-axon-lite/Axon-lite_Block_diagram.webp
+   :width: 100%
+
 Axon Lite is designed to cater to a diverse audience, including but not limited to:
 
 **Software Developers:**
@@ -39,12 +45,6 @@ Axon Lite is designed to cater to a diverse audience, including but not limited 
     - **Leverage**: ARM Mali-G52 MC3 GPU
     - **Ideal For**: Superior gaming experience, multimedia playback
     - **Drivers**: OpenGL ES 1.1, 2.0 and 3.2, OpenCL 2.2, Vulkan1.2 etc.
-
-Block Diagram
--------------
-
-.. image:: ../../_static/images/rk3576-axon-lite/Axon-lite_Block_diagram.webp
-   :width: 100%
 
 Features
 --------

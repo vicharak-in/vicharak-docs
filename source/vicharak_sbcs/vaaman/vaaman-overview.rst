@@ -1,6 +1,12 @@
 Overview
 ========
 
+Block Diagram
+-------------
+
+.. image:: /_static/images/rk3399-vaaman/block_diagram.webp
+   :width: 100%
+
 The main idea behind Vaaman is to pick the faster processor than all other SoC series FPGAs (mostly 4-core ARM Cortex-A53 ~ 1.5–1.8 GHz), while Vaaman is (6-core, Cortex-A72 and Cortex-A53, goes up to 2.0 GHz) and somewhat good FPGA, which offers hardened blocks for communication interface + a very good price that we can offer to consumers. Thousands of applications do not need high-end FPGAs, but they need extraordinary normal hardware, which can use both CPUs and FPGAs functionalities. We've designed Vaaman in a way that it does not compromise any functionality the other SBCs offer. It has everything: PCIe, SD Card, WiFi+BLE, Ethernet, USB, and a 40-PIN Raspberry Pi header. You can fit any Raspberry Pi HATs directly into Vaaman easily. So, Vaaman will offer everything that the current SBC ecosystem is offering as it is + it has the benefit of the FPGA world natively.
 
 Vaaman’s CPU ↔ FPGA: Bridging the Best of Both Worlds!
@@ -29,12 +35,6 @@ Vaaman is useful to a wide range of users, these include but are not limited to:
 
 **Hobbyist Users**:
     The SBC also attracts ordinary users with an interest in tinkering and learning about cutting-edge technologies. They can utilize the SBC's versatility for various projects such as robotics, home automation, and DIY electronics.
-
-Block Diagram
--------------
-
-.. image:: /_static/images/rk3399-vaaman/block_diagram.webp
-   :width: 100%
 
 Features
 --------

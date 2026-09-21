@@ -23,7 +23,7 @@ The remaining pins are dedicated to other functions, such as:
 
 <!-- TODO: Update Vicharak config to be suitable for Axon Lite -->
 ## GPIO Voltage Level
-RK3576 SoC has three multiple GPIO voltage levels. Below table shows the
+RK3576 SoC GPIO has standard 3.3V voltage levels. Below table shows the
 voltage level of Axon Lite GPIOs.
 
 :::{list-table}
@@ -37,10 +37,6 @@ voltage level of Axon Lite GPIOs.
 -
   - UART debug (Pin 8 and 10)
   - 3.3V
-
--
-  - SARADC
-  - 1.8V
 
 -
   - Other GPIOs
