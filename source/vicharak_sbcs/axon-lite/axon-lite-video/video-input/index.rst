@@ -1,8 +1,6 @@
-:orphan:
-
-==========================
+===============================
 Axon Lite Video Input Interface
-==========================
+===============================
 
 Axon Lite supports multiple MIPI interfaces to connect various types of image sensors and cameras.
 
