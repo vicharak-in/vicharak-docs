@@ -11,7 +11,7 @@ Hardware Required
 - Camera ( OV5647  or any other RPI supported camera)
 - Vicharak Flex Cable 40-Pin 0.4mm Pitch Cable (Golden Color)
 - Vicharak Camera PCB 
-- FPC50 15 Pin 1mm Pitch Cable
+- Raspberry Pi 22 Pin 0.5mm Camera Cable
 
 Steps to follow 
 ----------------
@@ -79,9 +79,6 @@ How to Attach Camera to Axon Lite
 
 5. After Using Camera, User can remove camera using twizer.
 
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-6.gif
-    :width: 40%
-
 Camera Interface PCBs
 ---------------------
 
@@ -102,42 +99,29 @@ Enable Overlays In Axon Lite
 
    * - **Interface on Vicharak board**
      - **Lane option**
-     - **Vicharak camera PCB**
+     - **Connector type**
      - **Turn on Overlay in Linux**
 
-   * - MIPI CSI0
-     - 2 Lane
-     - α
-     - Alpha
-
-   * - MIPI CSI1
-     - 2 Lane
-     - α
-     - Alpha
-
-   * - MIPI DPHY RX0
-     - 2 Lane
-     - α
-     - Alpha
-
-   * - MIPI DPHY RX1
-     - 2 Lane
-     - α
-     - Alpha
-
-   * - MIPI CSI0
-
-       MIPI CSI1
-
-       MIPI DPHY RX0
-
-       MIPI DPHY RX1
+   * - MIPI CSI0 RX
      - 4 Lane
-     - α
+     - 22 Pin 0.5mm RasPi
+     - RPi
+
+   * - MIPI CSI1 & CSI2
+     - 2/4 Lane
+     - Vicharak α Cam PCB
+     - Alpha
+
+   * - MIPI CSI3 & CSI4
+     - 2/4 Lane
+     - Vicharak α Cam PCB
      - Alpha
 
 .. note::
     **Alpha 4 lane PCB will be available soon**
+
+.. important::
+   **CSI-1/CSI-3 are 4 Lane, CSI-2/CSI-4 are 2 Lane. CSI-1/2 cannot work simultaneously, similarly CSI-3/4 cannot work at the same time**
 
 **Steps to follow for Configuration**
     
@@ -159,7 +143,7 @@ Enable Overlays In Axon Lite
 
 .. note::
 
-    If you want to connect multiple cameras, check which Sensor your camera is using from your camera docs like OV5647 or IMX519 and the ports to which it is connected like CSI0/CSI1 or dphy RX0/RX1 on axon-lite. Then select the overlay according to it. 
+    If you want to connect multiple cameras, check which Sensor your camera is using from your camera docs like OV5647 or IMX519 and the ports to which it is connected like CSI0/CSI1/CSI3 on axon-lite. Then select the overlay according to it.
     
 .. image:: /_static/images/rk3576-axon-lite/axon-lite-overlay-list.webp
                    :width: 50%
