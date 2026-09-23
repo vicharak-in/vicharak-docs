@@ -28,17 +28,20 @@ Pre-Requisites
    sudo apt update
    sudo apt upgrade
 
+.. important::
+    The ``ffmpeg-rockchip`` package replaces the standard ``ffmpeg`` package from the Debian servers. It is specifically optimized for Rockchip hardware to leverage hardware-accelerated video processing on Axon Lite.
+
 2. Install ffmpeg and v4l2 tools
 
 .. code-block::
 
-    sudo apt install ffmpeg
+    sudo apt install ffmpeg-rockchip
     sudo apt install v4l-utils
 
 2. Ensure your axon-lite is powred off before connecting the camera
 
 How to Attach Camera to Axon Lite
-----------------------------
+---------------------------------
 
 1. First, Connect Vicharak Flex Cable To Vicharak CAM PCB Connector.
  
@@ -89,7 +92,7 @@ Camera Interface PCBs
     :width: 30%
 
 Enable Overlays In Axon Lite 
-------------------------
+----------------------------
 
 **Here, you can find which overlay should be turned on for each MIPI Connector.**
 
@@ -263,7 +266,7 @@ Click on start capturing
 Run camera live feed using ffmpeg
 =================================
 
-1. Install ffmpeg using ``sudo apt install ffmpeg``
+1. Install ffmpeg using ``sudo apt install ffmpeg-rockchip``
 2. Find the camera device number and substitute in the below command
 3. Run ``ffplay -f v4l2 -pixel_format nv12 -video_size 1920x1080 /dev/video<camera_device_number>``
 4. In case of multiple camera open a new terminal and run the same command with different device number
@@ -431,7 +434,7 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
  
  I2C Bus number is mentioned in Camera DTS node in device tree file
 
-.. _run-camera-live-stream-over-rtsp:
+.. _axon-lite-run-camera-live-stream-over-rtsp:
 
 Run Camera Live Stream over RTSP
 ================================
@@ -455,7 +458,7 @@ Install the required packages:
        gstreamer1.0-plugins-ugly \
        gstreamer1.0-libav \
        v4l-utils \
-       ffmpeg
+       ffmpeg-rockchip
 
 Verify that the required GStreamer plugins are available:
 
