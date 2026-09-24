@@ -2,16 +2,26 @@
 MIPI Camera Interface 
 ######################
 
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-multiCam.webp
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-mipi-p.webp
+    :width: 80%
+
+The Axon Lite SBC includes 5 CSI Interfaces onboard, namely 
+**CSI0,** **CSI1/2** and **CSI3/4**.
+CSI1 and CSI2 share the physical connector, similarly, CSI3 and CSI4 share their
+physical connectors.
+
+
+MIPI CSI0
+==========
+
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-csi0.webp
     :width: 65%
 
 Hardware Required
 ------------------
 
 - Camera ( OV5647  or any other RPI supported camera)
-- Vicharak Flex Cable 40-Pin 0.4mm Pitch Cable (Golden Color)
-- Vicharak Camera PCB 
-- Raspberry Pi 22 Pin 0.5mm Camera Cable
+- Raspberry Pi 22 Pin 0.5mm pitch Camera Cable / Raspberry Pi 5 FPC Camera Cable 22-pin 0.5mm to 15-pin 1mm
 
 Steps to follow 
 ----------------
@@ -38,54 +48,87 @@ Pre-Requisites
     sudo apt install ffmpeg-rockchip
     sudo apt install v4l-utils
 
-2. Ensure your axon-lite is powred off before connecting the camera
+3. Ensure your axon-lite is powered off before connecting the camera
 
-How to Attach Camera to Axon Lite
----------------------------------
+How to Attach Camera to Axon Lite (CSI 0)
+-----------------------------------------
 
-1. First, Connect Vicharak Flex Cable To Vicharak CAM PCB Connector.
+1. First, connect the Raspberry Pi 22 Pin 0.5mm Camera Cable to your camera module.
  
 .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-start.gif
     :width: 40%
 
 .. danger::
-        Make sure to connect the Vicharak flex cable's AXON LITE PCB side connector to the AXON LITE board, and the display/camera side connector to the Vicharak CAM PCB.
+        Make sure the contacts of the cable are facing the correct direction relative to the connector on the camera.
 
 .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-2.gif
     :width: 40%
 
-2. Attach Camera Module To FPC50 15 Pin 1mm Pitch Cable.
+2. Secure the connection on the camera module side.
 
 .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-3.gif
     :width: 40%
 
-3. Connect Camera To Vicharak CAM PCB Connector. 
+3. Next, prepare the MIPI CSI0 port on the Axon Lite board. 
 
 .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-4.gif
     :width: 40%
 
-4. Connect Axon Lite Side Vicharak Flex Cable to Axon Lite.
+4. Connect the other end of the 22 Pin Camera Cable directly to the MIPI CSI0 port on the Axon Lite.
 
 .. note::
-
-   Note down the pin names where yor are connecting the camera. Accordingly overlay needs to be selected.
-
-.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-mipi-p.webp
-    :width: 50%
+   Note down the pin names where you are connecting the camera. Accordingly overlay needs to be selected.
 
 .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-5.gif
     :width: 40%
 
-
 5. After Using Camera, User can remove camera using twizer.
 
+
+MIPI CSI-1/2 and CSI-3/4
+========================
+
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-csi1234.webp
+    :width: 65%
+
+Hardware Required
+------------------
+
+- Camera ( OV5647  or any other RPI supported camera)
+- Vicharak Flex Cable 40-Pin 0.4mm Pitch Cable (Golden Color)
+- FPC50 15 Pin 1mm Pitch Cable
+- Vicharak Camera PCB 
+
+Steps to follow 
+----------------
+1. Connect the hardware
+2. Configure the overlays
+3. Run Camera
+
+Pre-Requisites
+--------------
+Please ensure you have completed the prerequisites (updating the kernel and installing ``ffmpeg-rockchip``/``v4l-utils``) as described in the previous section. Ensure your board is powered off.
+
+How to Attach Camera to Axon Lite (CSI-1/2 and CSI-3/4)
+-------------------------------------------------------
+
+1. Connect the Vicharak Flex Cable (40-Pin 0.4mm Pitch) to the MIPI port on the Axon Lite board.
+2. Connect the other end of the Vicharak Flex Cable to the Vicharak Camera PCB.
+3. Attach your camera module to the Vicharak Camera PCB.
+
+.. danger::
+        Make Pure to connect the Vicharak flex cable's AXON LITE PCB side connector to the AXON LITE board, and the display/camera side connector to the Vicharak CAM PCB.
+
+.. note::
+   Note down the pin names where you are connecting the camera. Accordingly overlay needs to be selected.
+
 Camera Interface PCBs
----------------------
+=====================
 
-2 Lane Alpha PCB ( Rpi compatible )
-====================================
+Alpha PCB ( Raspberry Pi compatible )
+-------------------------------------
 
-.. image::  /_static/images/rk3576-axon-lite/axon-camera-alpha.webp
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-alpha.webp
     :width: 30%
 
 Enable Overlays In Axon Lite 
