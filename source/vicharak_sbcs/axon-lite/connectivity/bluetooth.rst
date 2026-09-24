@@ -14,8 +14,9 @@ mice, audio devices, and sensors.
 .. image:: /_static/images/rk3576-axon-lite/accessory-wifi-antenna.webp
    :width: 30%
 
-.. danger:: 
-    Kindly, attach the combined Wi-Fi and Bluetooth Antenna on the U.FL connector as mentioned in the above picture.
+.. important::
+
+   Axon Lite by default doesn't need an external antenna, the onboard virtual antenna is enough for most cases. To use the external antenna via UFL connector, enable it in vicharak-config -> overlays -> Manage Overlays -> Enable UFL antenna, then reboot and attach the antenna.
 
 
 Hardware Details

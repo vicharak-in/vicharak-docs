@@ -2,16 +2,26 @@
 MIPI Camera Interface 
 ######################
 
-.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-multiCam.webp
-.. :width: 65%
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-mipi-p.webp
+    :width: 80%
+
+The Axon Lite SBC includes 5 CSI Interfaces onboard, namely 
+**CSI0,** **CSI1/2** and **CSI3/4**.
+CSI1 and CSI2 share the physical connector, similarly, CSI3 and CSI4 share their
+physical connectors.
+
+
+MIPI CSI0
+==========
+
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-csi0.webp
+    :width: 65%
 
 Hardware Required
 ------------------
 
 - Camera ( OV5647  or any other RPI supported camera)
-- Vicharak Flex Cable 40-Pin 0.4mm Pitch Cable (Golden Color)
-- Vicharak Camera PCB 
-- FPC50 15 Pin 1mm Pitch Cable
+- Raspberry Pi 22 Pin 0.5mm pitch Camera Cable / Raspberry Pi 5 FPC Camera Cable 22-pin 0.5mm to 15-pin 1mm
 
 Steps to follow 
 ----------------
@@ -28,68 +38,101 @@ Pre-Requisites
    sudo apt update
    sudo apt upgrade
 
+.. important::
+    The ``ffmpeg-rockchip`` package replaces the standard ``ffmpeg`` package from the Debian servers. It is specifically optimized for Rockchip hardware to leverage hardware-accelerated video processing on Axon Lite.
+
 2. Install ffmpeg and v4l2 tools
 
 .. code-block::
 
-    sudo apt install ffmpeg
+    sudo apt install ffmpeg-rockchip
     sudo apt install v4l-utils
 
-2. Ensure your axon-lite is powred off before connecting the camera
+3. Ensure your axon-lite is powered off before connecting the camera
 
-How to Attach Camera to Axon Lite
-----------------------------
+How to Attach Camera to Axon Lite (CSI 0)
+-----------------------------------------
 
-1. First, Connect Vicharak Flex Cable To Vicharak CAM PCB Connector.
+1. First, connect the Raspberry Pi 22 Pin 0.5mm Camera Cable to your camera module.
  
-.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-start.gif
-.. :width: 40%
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-start.gif
+    :width: 40%
 
 .. danger::
-        Make sure to connect the Vicharak flex cable's AXON LITE PCB side connector to the AXON LITE board, and the display/camera side connector to the Vicharak CAM PCB.
+        Make sure the contacts of the cable are facing the correct direction relative to the connector on the camera.
 
-.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-2.gif
-.. :width: 40%
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-2.gif
+    :width: 40%
 
-2. Attach Camera Module To FPC50 15 Pin 1mm Pitch Cable.
+2. Secure the connection on the camera module side.
 
-.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-3.gif
-.. :width: 40%
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-3.gif
+    :width: 40%
 
-3. Connect Camera To Vicharak CAM PCB Connector. 
+3. Next, prepare the MIPI CSI0 port on the Axon Lite board. 
 
-.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-4.gif
-.. :width: 40%
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-4.gif
+    :width: 40%
 
-4. Connect Axon Lite Side Vicharak Flex Cable to Axon Lite.
+4. Connect the other end of the 22 Pin Camera Cable directly to the MIPI CSI0 port on the Axon Lite.
 
 .. note::
+   Note down the pin names where you are connecting the camera. Accordingly overlay needs to be selected.
 
-   Note down the pin names where yor are connecting the camera. Accordingly overlay needs to be selected.
-
-.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-mipi-p.webp
-.. :width: 50%
-
-.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-5.gif
-.. :width: 40%
-
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-5.gif
+    :width: 40%
 
 5. After Using Camera, User can remove camera using twizer.
 
-.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-6.gif
-.. :width: 40%
+
+MIPI CSI-1/2 and CSI-3/4
+========================
+
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-csi1234.webp
+    :width: 65%
+
+Hardware Required
+------------------
+
+- Camera ( OV5647  or any other RPI supported camera)
+- Vicharak Flex Cable 40-Pin 0.4mm Pitch Cable (Golden Color)
+- FPC50 15 Pin 1mm Pitch Cable
+- Vicharak Camera PCB 
+
+Steps to follow 
+----------------
+1. Connect the hardware
+2. Configure the overlays
+3. Run Camera
+
+Pre-Requisites
+--------------
+Please ensure you have completed the prerequisites (updating the kernel and installing ``ffmpeg-rockchip``/``v4l-utils``) as described in the previous section. Ensure your board is powered off.
+
+How to Attach Camera to Axon Lite (CSI-1/2 and CSI-3/4)
+-------------------------------------------------------
+
+1. Connect the Vicharak Flex Cable (40-Pin 0.4mm Pitch) to the MIPI port on the Axon Lite board.
+2. Connect the other end of the Vicharak Flex Cable to the Vicharak Camera PCB.
+3. Attach your camera module to the Vicharak Camera PCB.
+
+.. danger::
+        Make Pure to connect the Vicharak flex cable's AXON LITE PCB side connector to the AXON LITE board, and the display/camera side connector to the Vicharak CAM PCB.
+
+.. note::
+   Note down the pin names where you are connecting the camera. Accordingly overlay needs to be selected.
 
 Camera Interface PCBs
----------------------
+=====================
 
-2 Lane Alpha PCB ( Rpi compatible )
-====================================
+Alpha PCB ( Raspberry Pi compatible )
+-------------------------------------
 
-.. .. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-alpha.webp
-.. :width: 30%
+.. image::  /_static/images/rk3576-axon-lite/axon-lite-camera-alpha.webp
+    :width: 30%
 
 Enable Overlays In Axon Lite 
-------------------------
+----------------------------
 
 **Here, you can find which overlay should be turned on for each MIPI Connector.**
 
@@ -99,42 +142,29 @@ Enable Overlays In Axon Lite
 
    * - **Interface on Vicharak board**
      - **Lane option**
-     - **Vicharak camera PCB**
+     - **Connector type**
      - **Turn on Overlay in Linux**
 
-   * - MIPI CSI0
-     - 2 Lane
-     - α
-     - Alpha
-
-   * - MIPI CSI1
-     - 2 Lane
-     - α
-     - Alpha
-
-   * - MIPI DPHY RX0
-     - 2 Lane
-     - α
-     - Alpha
-
-   * - MIPI DPHY RX1
-     - 2 Lane
-     - α
-     - Alpha
-
-   * - MIPI CSI0
-
-       MIPI CSI1
-
-       MIPI DPHY RX0
-
-       MIPI DPHY RX1
+   * - MIPI CSI0 RX
      - 4 Lane
-     - α
+     - 22 Pin 0.5mm RasPi
+     - RPi
+
+   * - MIPI CSI1 & CSI2
+     - 2/4 Lane
+     - Vicharak α Cam PCB
+     - Alpha
+
+   * - MIPI CSI3 & CSI4
+     - 2/4 Lane
+     - Vicharak α Cam PCB
      - Alpha
 
 .. note::
     **Alpha 4 lane PCB will be available soon**
+
+.. important::
+   **CSI-1/CSI-3 are 4 Lane, CSI-2/CSI-4 are 2 Lane. CSI-1/2 cannot work simultaneously, similarly CSI-3/4 cannot work at the same time**
 
 **Steps to follow for Configuration**
     
@@ -144,22 +174,22 @@ Enable Overlays In Axon Lite
 
 3. Select ``Overlays`` options in it by pressing ``enter`` key.
            
-.. image:: /_static/images/rk3399-vaaman/Overlays_1.webp
+.. image:: /_static/images/rk3576-axon-lite/Overlays_1.webp
                    :width: 50%
 
 4. You will see Warning Page, click on ``yes`` and select ``Manage Overlays`` options.
 
-.. image:: /_static/images/rk3399-vaaman/Overlays_2.webp
+.. image:: /_static/images/rk3576-axon-lite/Overlays_2.webp
                    :width: 50%
     
 5. Select overlays as per your camera sensor ``( OV5647 )`` and port to which it is connected ``( CSI0 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
 
 .. note::
 
-    If you want to connect multiple cameras, check which Sensor your camera is using from your camera docs like OV5647 or IMX519 and the ports to which it is connected like CSI0/CSI1 or dphy RX0/RX1 on axon-lite. Then select the overlay according to it. 
+    If you want to connect multiple cameras, check which Sensor your camera is using from your camera docs like OV5647 or IMX519 and the ports to which it is connected like CSI0/CSI1/CSI3 on axon-lite. Then select the overlay according to it.
     
-.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-overlay-list.webp
-.. :width: 50%
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-overlay-list.webp
+                   :width: 50%
     
 6. To return back to terminal, press the ``Esc`` key until you exit from it.
 
@@ -241,20 +271,20 @@ Run Camera Using qV4l2 (GUI tool)
 
 1. Click on Open Devices on top-left corner
 
-.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera03.webp
-.. :width: 65%
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera03.webp
+           :width: 65%
 
 2. Select the device name from here like video22 or video31 from the menu (You can get device name by running ``v4l2-ctl --list-devices``)
 
-.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera01.webp
-.. :width: 65%
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera01.webp
+            :width: 65%
 
 **Step 4: Start the camera**
 
 Click on start capturing
 
-.. .. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera02.webp
-.. :width: 65%
+.. image:: /_static/images/rk3576-axon-lite/axon-lite-mipi-camera02.webp
+           :width: 65%
 
 .. tip::
     If you have connected multiple camera devices to axon-lite, open multiple qV4l2 windows in the same way and select different camera device name. Using this you can use all the MIPI ports.
@@ -263,7 +293,7 @@ Click on start capturing
 Run camera live feed using ffmpeg
 =================================
 
-1. Install ffmpeg using ``sudo apt install ffmpeg``
+1. Install ffmpeg using ``sudo apt install ffmpeg-rockchip``
 2. Find the camera device number and substitute in the below command
 3. Run ``ffplay -f v4l2 -pixel_format nv12 -video_size 1920x1080 /dev/video<camera_device_number>``
 4. In case of multiple camera open a new terminal and run the same command with different device number
@@ -430,4 +460,95 @@ If you have multiple versions of Python installed, ensure you use ``python3`` to
     sudo i2cdetect -y <i2c_bus_number>
  
  I2C Bus number is mentioned in Camera DTS node in device tree file
+
+.. _axon-lite-run-camera-live-stream-over-rtsp:
+
+Run Camera Live Stream over RTSP
+================================
+
+This section demonstrates how to stream a camera feed over the network using GStreamer and MediaMTX.
+
+Prerequisites
+-------------
+
+Install the required packages:
+
+.. code-block:: bash
+
+   sudo apt update
+
+   sudo apt install \
+       gstreamer1.0-tools \
+       gstreamer1.0-plugins-base \
+       gstreamer1.0-plugins-good \
+       gstreamer1.0-plugins-bad \
+       gstreamer1.0-plugins-ugly \
+       gstreamer1.0-libav \
+       v4l-utils \
+       ffmpeg-rockchip
+
+Verify that the required GStreamer plugins are available:
+
+.. code-block:: bash
+
+   gst-inspect-1.0 mpph264enc
+   gst-inspect-1.0 rtspclientsink
+
+Install MediaMTX
+----------------
+
+Download the latest `Mediamtx relase <https://github.com/bluenviron/mediamtx/releases/>`__ for Linux ARM64:
+
+.. code-block:: bash
+
+   wget https://github.com/bluenviron/mediamtx/releases/download/<version>/mediamtx_<version>_linux_arm64.tar.gz
+
+   tar -xzf mediamtx_linux_arm64v8.tar.gz
+
+Start MediaMTX:
+
+.. code-block:: bash
+
+   ./mediamtx &
+
+By default, MediaMTX listens on:
+
+- RTSP: ``8554``
+- WebRTC: ``8889``
+
+Publish Camera Stream
+---------------------
+
+Replace ``<camera_device_number>`` with your camera device number.
+
+Examples:
+
+- ``/dev/video11``
+- ``/dev/video22``
+- ``/dev/video31``
+
+Run:
+
+.. code-block:: bash
+
+   gst-launch-1.0 -e \
+     v4l2src device=/dev/video<camera_device_number> io-mode=mmap ! \
+     videoscale ! \
+     video/x-raw,width=1280,height=720 ! \
+     mpph264enc bps=2000000 gop=15 ! \
+     h264parse config-interval=-1 ! \
+     rtspclientsink protocols=tcp location=rtsp://127.0.0.1:8554/cam
+
+View Stream Using FFplay
+------------------------
+
+From another machine on the same network, replace ``<axon_lite_ip>`` with the IP address of the AXON LITE board:
+
+.. code-block:: bash
+
+   ffplay \
+     -fflags nobuffer \
+     -flags low_delay \
+     -rtsp_transport tcp \
+     rtsp://<axon_lite_ip>:8554/cam
 
