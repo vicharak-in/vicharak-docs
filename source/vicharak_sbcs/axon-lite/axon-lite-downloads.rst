@@ -15,7 +15,7 @@ OS Images
     - - Debian
       - `Trixie 13 <https://downloads.vicharak.in/vicharak-axon-lite/debian/13_trixie>`_
     - - Ubuntu
-      - **Coming Soon**
+      - `Ubuntu 24 <https://downloads.vicharak.in/vicharak-axon-lite/ubuntu/24_noble>`_
     - - Community Images
       - **Coming Soon**
 
@@ -73,7 +73,7 @@ SoC Documents
       - `GitHub <https://github.com/vicharak-in/rockchip-docs>`_
 
 Axon Lite Pin-outs Guide
----------------------
+------------------------
 `Download Pinouts </_static/files/axon_lite_V0.2_Pinout.pdf>`_
 
 Step File
