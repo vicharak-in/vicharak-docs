@@ -19,62 +19,64 @@ How to Generate WS2812Bs on Vaaman ?
       - how to create the json configuration file for periplex, You can check this :doc:`Usage Guide <../usage>` 
 
    .. code-block:: json
-
-         {
-            "uart": [],
-            "i2cmaster": [],
-            "gpio": [],
-            "pwm": [],
-            "ws": [
-               {
-                     "id": 0,
-                     "WS": "GPIOT_RXP28"
-               },
-               {
-                     "id": 1,
-                     "WS": "GPIOT_RXN28"
-               },
-               {
-                     "id": 2,
-                     "WS": "GPIOL_73"
-               },
-               {
-                     "id": 3,
-                     "WS": "GPIOL_75"
-               },
-               {
-                     "id": 4,
-                     "WS": "GPIOR_173"
-               },
-               {
-                     "id": 5,
-                     "WS": "GPIOL_72"
-               },
-               {
-                     "id": 6,
-                     "WS": "GPIOR_174"
-               },
-               {
-                     "id": 7,
-                     "WS": "GPIOR_178"
-               },
-               {
-                     "id": 8,
-                     "WS": "GPIOT_RXN27"
-               },
-               {
-                     "id": 9,
-                     "WS": "GPIOR_183"
-               }
-            ],
-            "spi": [],
-            "onewire": [],
-            "can": [],
-            "i2s": [],
-            "i2cslave": [],
-            "jtag": [],
-            "dht": []
-         }
+	
+	    
+    {
+        "DRAM_STATUS": "NO",
+        "uart": [],
+        "i2cmaster": [],
+        "gpio": [],
+        "pwm": [],
+        "ws": [
+           {
+              "id": 0,
+              "WS": "GPIOT_RXP28"
+           },
+           {
+              "id": 1,
+              "WS": "GPIOT_RXN28"
+           },
+           {
+              "id": 2,
+              "WS": "GPIOL_73"
+           },
+           {
+              "id": 3,
+              "WS": "GPIOL_75"
+           },
+           {
+              "id": 4,
+              "WS": "GPIOR_173"
+           },
+           {
+              "id": 5,
+              "WS": "GPIOL_72"
+           },
+           {
+              "id": 6,
+              "WS": "GPIOR_174"
+           },
+           {
+              "id": 7,
+              "WS": "GPIOR_178"
+           },
+           {
+              "id": 8,
+              "WS": "GPIOT_RXN27"
+           },
+           {
+              "id": 9,
+              "WS": "GPIOR_183"
+           }
+        ],
+        "spi": [],
+        "onewire": [],
+        "can": [],
+        "i2s": [],
+        "i2cslave": [],
+        "jtag": [],
+        "dht": []
+    }
    
 2. **Run the periplex-sync command:**
 

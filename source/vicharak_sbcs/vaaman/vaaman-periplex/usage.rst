@@ -42,6 +42,7 @@ Create the json file
 .. code-block:: json
     
     {
+        "DRAM_STATUS": "NO",
         "uart": [
             {
                 "id": 0,
@@ -87,11 +88,12 @@ Create the json file
 
     1. Increase the ``id`` parameter by 1 sequentially. Gaps in the ``id`` sequence are not allowed, and id should start from 0. For example, if you have 3 UARTs and 2 I2Cs, the UARTs should have ids 0, 1, and 2, and the I2Cs should have ids 3 and 4.
     2. Duplicate pins are not allowed, for example, each pin (e.g., ``GPIOT_RXP28``) can only be assigned once.
-    3. Ensure the ``JSON`` file has the following sequence of peripheral's:
+    3. Ensure the ``JSON`` file has the following sequence of peripheral's and Set ``DRAM_STATUS`` to ``NO`` to skip DRAM configuration or ``YES`` to include it.
 
     .. code-block:: json
         
             {
+                "DRAM_STATUS": "NO",
                 "uart": [],
                 "i2cmaster": [],
                 "gpio": [],

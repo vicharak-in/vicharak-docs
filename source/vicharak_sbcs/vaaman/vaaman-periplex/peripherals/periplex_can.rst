@@ -20,6 +20,7 @@ How to Generate CANs on the Vaaman ?
    .. code-block:: json
 
          {
+            "DRAM_STATUS": "NO",
             "uart": [],
             "i2cmaster": [],
             "gpio": [],

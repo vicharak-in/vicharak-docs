@@ -17,6 +17,7 @@ How to Generate I2Cs on the Vaaman ?
    .. code-block:: json
 
          {
+            "DRAM_STATUS": "NO",
             "uart": [],
             "i2cmaster": [
                 {
