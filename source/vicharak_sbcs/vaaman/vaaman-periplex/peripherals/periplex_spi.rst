@@ -28,6 +28,7 @@ How to Generate SPIs on the Vaaman ?
                {
                   "id": 0,
                   "SLAVE": 1,
+                  "MODE": 1,
                   "MISO-IN": "GPIOT_RXP28",
                   "MOSI-OUT": "GPIOL_73",
                   "SLAVE-0": "GPIOR_173",
@@ -36,6 +37,7 @@ How to Generate SPIs on the Vaaman ?
                {
                    "id": 1,
                    "SLAVE": 1,
+                   "MODE": 2,
                    "MISO-IN": "GPIOT_RXN28",
                    "MOSI-OUT": "GPIOL_75",
                    "SLAVE-0": "GPIOL_72",
@@ -44,6 +46,7 @@ How to Generate SPIs on the Vaaman ?
                {
                    "id": 2,
                    "SLAVE": 1,
+                   "MODE": 4,
                    "MISO-IN": "GPIOR_168",
                    "MOSI-OUT": "GPIOL_17",
                    "SLAVE-0": "GPIOL_20",
@@ -57,6 +60,15 @@ How to Generate SPIs on the Vaaman ?
             "jtag": [],
             "dht": []
          }
+
+   .. Note::
+
+      - The MODE parameter can be set to ``1, 2, 4, 8`` based on the SPI device requirements. 
+          Supported modes:
+	         - For Single: "MODE": 1
+	         - For Dual: "MODE": 2
+	         - For Quad: "MODE": 4
+	         - For Octa: "MODE": 8
 
 2. **Run the periplex-sync command:**
 
