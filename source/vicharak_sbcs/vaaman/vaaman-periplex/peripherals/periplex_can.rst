@@ -20,6 +20,7 @@ How to Generate CANs on the Vaaman ?
    .. code-block:: json
 
          {
+            "DRAM_STATUS": "NO",
             "uart": [],
             "i2cmaster": [],
             "gpio": [],
@@ -182,6 +183,20 @@ These tools provide user-space utilities for interacting with CAN interfaces via
          sudo candump can0,7E8:7FF
 
       - ``7E8:7FF`` means show only messages with ID ``0x7E8``.
+
+5. **Bringing Down a CAN Interface:** 
+
+   - To bring down a CAN interface, use the following command:
+   .. code-block::
+
+      sudo ip link set <interface> down
+
+   - Example:
+      - to bring down ``can0``, you would run:
+
+      .. code-block::
+
+         sudo ip link set can0 down
 
 Example of using the CAN protocol
 ---------------------------------

@@ -20,6 +20,7 @@ How to Generate UARTs on the Vaaman ?
    .. code-block:: json
 
          {
+            "DRAM_STATUS": "NO",
             "uart": [
                {
                      "id": 0,

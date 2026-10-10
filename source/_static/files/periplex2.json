@@ -1,4 +1,5 @@
 {
+    "DRAM_STATUS": "NO",
     "uart": [
         {
             "id": 0,
@@ -37,6 +38,7 @@
         {
             "id": 4,
             "SLAVE": 2,
+            "MODE": 1,
             "CLK-OUT": "GPIOR_173",
             "MISO-IN": "GPIOR_174",
             "MOSI-OUT": "GPIOT_RXN27",

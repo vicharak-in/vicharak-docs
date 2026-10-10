@@ -21,6 +21,7 @@ How to Generate ONE-WIREs on Vaaman ?
    .. code-block:: json
 
          {
+            "DRAM_STATUS": "NO",
             "uart": [],
             "i2cmaster": [],
             "gpio": [],
