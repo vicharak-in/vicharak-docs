@@ -1,0 +1,11 @@
+==========================
+Axon Lite Video Interface
+==========================
+
+Axon Lite supports multiple MIPI interfaces to connect various types of image sensors and cameras.
+
+
+.. toctree::
+   :maxdepth: 4
+
+..   Video Input Capabilities <video-input/index>

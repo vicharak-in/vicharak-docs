@@ -1,0 +1,236 @@
+
+##############
+UART
+##############
+
+
+.. variable
+
+.. _Axon Lite GPIO Header: https://docs.vicharak.in/vicharak_sbcs/axon-lite/axon-lite-gpio-description/#axon-lite-gpios-header
+
+.. warning::
+
+    We recommend to use Vicharak 6.1 kernel and latest `Debian 13 trixie
+    <https://downloads.vicharak.in/vicharak-axon-lite/debian/13_trixie/>`_ , in order to support below overlays. Flash Image
+    using this :doc:`Documentation </vicharak_sbcs/axon-lite/axon-lite-linux/linux-usage-guide/rockchip-develop-guide>`
+
+    .. code::
+
+        sudo apt update
+        sudo apt reinstall linux-image-6.1.75-axon-lite linux-headers-6.1.75-axon-lite
+
+Introduction
+------------
+
+Many embedded boards provide the flexibility to configure GPIO pins to function as UART interfaces, enabling communication between the board and peripheral devices such as sensors, displays, and computers.
+
+This guide explains how to configure GPIO pins as UART on Axon Lite 40-Pins GPIO Header. By converting GPIO pins into UART transmit (TX) and receive (RX) pins, the board can be used for serial communication, expanding the range of connected devices. This configuration is useful when there is no dedicated UART hardware interface available or when additional UART ports are needed.
+
+Axon Lite provides a total of **6** UARTs, including one specific ``UART0`` (Pin 8 and Pin 10) for debugging on the GPIO Header, and others like ``UART2``, ``UART3``, ``UART5``, ``UART7``, and ``UART8``.
+
+.. tip::
+    To get more information on `Axon Lite GPIO Header`_. 
+
+.. How to use GPIO Pins as UART Protocol ?
+.. ----------------------------------------
+.. 
+.. **Steps to follow for Configuration**
+.. 
+.. 1. Open a terminal window (``Ctrl+Alt+T``).
+.. 
+.. 2. Run command ``sudo vicharak-config`` in it.
+.. 
+.. 3. Select ``Overlays`` options in it by pressing ``enter`` key.
+.. 
+.. .. code-block:: console
+.. 
+..     ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────-───────────┐
+..     │ Please select an option below:                                                           │
+..     │                                                                                          │
+..     │                                   System Maintanince                                     │
+..     │                                       Hardware                                           │
+..     │                                       Overlays                                           │
+..     │                                     Connectivity                                         │
+..     │                                   Advanced Options                                       │
+..     │                                     User Settings                                        │
+..     │                                     Localization                                         │
+..     │                                         About                                            │
+..     │                                                                                          │
+..     │                      <Ok>                               <Cancel>                         │
+..     │                                                                                          │
+..     └──────────────────────────────────────────────────────────────────────────────────────────┘
+.. 
+.. 
+.. 4. You will see Warning Page, click on ``yes`` and select ``Manage Overlays`` options.
+.. 
+.. 
+.. .. code-block:: console
+.. 
+.. 
+..     ┌───────────────────────────────────┤ VICHARAK_CONFIG ├────────────────────────────────────┐
+..     │ Configure Device Tree Overlay                                                            │
+..     │                                                                                          │
+..     │                                Manage overlays                                           │
+..     │                                View overlay info                                         │
+..     │                                Install 3rd party overlay                                 │
+..     │                                Reset overlays                                            │
+..     │                                                                                          │
+..     │                                                                                          │
+..     │                      <Ok>                               <Cancel>                         │
+..     └──────────────────────────────────────────────────────────────────────────────────────────┘
+.. 
+.. 
+.. 
+.. 5. Select overlays as per your requirement ``( UART1 / UART4 / UART6 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
+.. 
+.. .. code-block:: console
+.. 
+..     ┌──────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
+..     │ Please select overlays:                                                                  │
+..     │                                                                                          │
+..     │  [ ] Enable PWM2_CH2_M3 on 40-Pin GPIO Header Axon Lite V0.1                             │
+..     │  [ ] Enable PWM2_CH3_M3 on 40-Pin GPIO Header Axon Lite V0.1                             │
+..     │  [ ] Enable PWM2_CH4_M2 on 40-Pin GPIO Header Axon Lite V0.1                             │
+..     │  [ ] Enable PWM2_CH5_M2 on 40-Pin GPIO Header Axon Lite V0.1                             │
+..     │  [ ] Enable PWM2_CH6_M3 on 40-Pin GPIO Header Axon Lite V0.1                             │
+..     │  [ ] Enable PWM2_CH7_M3 on 40-Pin GPIO Header Axon Lite V0.1                             │
+..     │  [ ] Enable Sata0 support on Combo PHY 0 on Axon Lite V0.1                               │
+..     │  [ ] Enable Sata1 support on Combo PHY 1 on Axon Lite V0.1                               │
+..     │  [ ] Enable UART5 on 40-Pin GPIO Header Axon Lite V0.1                                   │
+..     │  [ ] Enable USB3.0 support on Combo PHY 1 on Axon Lite V0.1                              │
+..     │  [ ] Enable can3m3 on 40-Pin GPIO Header Axon Lite V0.1                                  │
+..     │  [ ] Enable sai0 on 40-Pin GPIO Header Axon Lite V0.1                                    │
+..     │  [ ] Enable sai1m1 on 40-Pin GPIO Header Axon Lite V0.1                                  │
+..     │  [ ] Enable sai3m2 on 40-Pin GPIO Header Axon Lite V0.1                                  │
+..     │  [ ] Enable spi1 on 40-Pin GPIO Header Axon V0.3                                         │
+..     │  [ ] Enable spi3 on 40-Pin GPIO Header axon-lite V0.1                                    │
+..     │  [ ] Enable spi3m0 on 40-Pin GPIO Header Axon Lite V0.1                                  │
+..     │  [ ] Enable uart7 on 40-Pin GPIO Header Axon Lite V0.1                                   │
+..     │  [ ] Enable uart8m0 on 40-Pin GPIO Header Axon Lite V0.1                                 │
+..     │  [ ] Enable uart8m1 on 40-Pin GPIO Header Axon Lite V0.1                                 │
+..     │  [ ] Enable uart8m2 on 40-Pin GPIO Header Axon Lite V0.1                                 │
+..     │                                                                                          │
+..     │                     <Ok>                         <Cancel>                                │
+..     │                                                                                          │
+..     └──────────────────────────────────────────────────────────────────────────────────────────┘
+.. 
+.. 6. To return back to terminal, press the ``Esc`` key until you exit from it.
+.. 
+.. 7. In order to enable your configuration, Restart your computer or Run command ``sudo reboot`` in terminal.
+.. 
+.. How to check tty serial device ?
+.. --------------------------------
+.. 
+.. 1. Open terminal. ( ``Ctrl + Alt + t`` )
+.. 2. Run below command :
+.. 
+.. .. code::
+.. 
+..     ls -l /dev/ttyS*
+.. 
+.. If you have turned on ``UART1`` then device ``/dev/ttyS1`` will be generated.
+.. 
+.. .. note::
+..     /dev/ttyS9 device is specific for bluetooth, you can find another devices.
+.. 
+.. 
+.. Example
+.. -----------
+.. 
+.. **UART 1 Configuration**
+.. 
+.. .. list-table::
+..    :widths: 20 40 130
+..    :header-rows: 1
+..    :class: feature-table
+.. 
+..    * - **Serial (USB To UART Module) FTDI Pin**
+..      - **Header GPIO Pin**
+..      - **Schematic Name**
+..    * - GND
+..      - Pin 8
+..      - GND
+..    * - TX
+..      - Pin 10 (GPIO2_B6)
+..      - UART1_RX_M0
+..    * - RX
+..      - Pin 12 (GPIO2_B7)
+..      - UART1_TX_M0 
+.. 
+.. 
+.. .. .. image:: /_static/images/rk3576-axon-lite/axon-lite-gpio-uart1.webp
+.. .. :width: 50%
+.. 
+.. 
+.. Running the Serial Console Program
+.. -------
+.. 
+.. .. tab-set::
+.. 
+..     .. tab-item:: Linux GTK-TERM (GUI)
+.. 
+..         1. Install GTK-Term 
+.. 
+..         .. code-block::
+.. 
+..             sudo apt update
+..             sudo apt install gtkterm
+.. 
+..         2. Open the GTK-Term program and configure the serial parameters.
+.. 
+..         .. code-block::
+.. 
+..             sudo gtkterm
+.. 
+..         - On the **Configuration** menu, click on **Port**.
+..         - Select the serial port number and configure the serial parameters as
+..           shown in the image below.
+.. 
+..         .. .. image:: /_static/images/rk3576-axon-lite/axon-lite-gpio-uart-gtkterm.webp
+..         .. :width: 50%
+.. 
+..         3. Click on the **OK** button to open the serial console.
+.. 
+..         4. You will now be able to access the serial console.
+.. 
+..         .. note::
+..             Set Port and Baudrate according to peripheral requirement. 
+.. 
+..     .. tab-item:: Minicom ( CLI )
+.. 
+..         1. Install Minicom 
+.. 
+..         .. code-block::
+.. 
+..             sudo apt update
+..             sudo apt install minicom
+.. 
+..         2. Open Minicom
+.. 
+..         .. code-block::
+.. 
+..             sudo minicom -b <BaudRate> -D /dev/ttyS<UART_DEVICE_NUMBER>
+.. 
+..         .. note::
+.. 
+..             -b is for Baud Rate.
+.. 
+..             -D is for UART tty device.
+.. 
+..             To Close Minicom Type, ``Ctrl + A`` then ``z``, And Press ``q`` and Select ``Enter``.
+.. 
+.. 
+..     .. tab-item:: WINDOWS - PuTTY (GUI)
+.. 
+..             1. Download and install the `PuTTY <https://www.putty.org/>`_ program.
+.. 
+..             2. Open the PuTTY program and configure the serial parameters as shown in the image below.
+.. 
+..             .. image:: /_static/images/Putty_step.webp
+..                :width: 50%
+.. 
+..             3. Click on the **Open** button to open the serial console.
+.. 
+..             4. You will now be able to access the serial console.
+.. 
+.. 
