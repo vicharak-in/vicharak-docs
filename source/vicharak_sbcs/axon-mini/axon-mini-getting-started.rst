@@ -14,7 +14,7 @@ What's in the box?
 1. **Axon Mini**
     - Single-board computer optimized for high-performance computing and AI.
     - Powered by Qualcomm Dragonwing QCS6490 SoC (octa-core Qualcomm® Kryo™ 670 CPU).
-    - 8GB/16GB LPDDR5 RAM, 32GB eMMC storage, 40-Pin GPIO header.
+    - 4GB LPDDR5 RAM, 32GB eMMC storage, 40-Pin GPIO header.
     - Pre-installed with Debian 13 (Trixie).
 
 What else do you need?

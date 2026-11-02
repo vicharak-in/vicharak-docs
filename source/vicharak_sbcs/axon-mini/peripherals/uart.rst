@@ -86,39 +86,6 @@ How to use GPIO Pins as UART Protocol ?
 
 5. Select overlays as per your requirement ``( UART1 / UART4 / UART6 )`` by pressing ``spacebar`` on keyboard, then select ``Ok``.
 
-.. code-block:: console
-
-    ┌──────────────────────────────────┤ VICHARAK_CONFIG ├─────────────────────────────────────┐
-    │ Please select overlays:                                                                  │
-    │                                                                                          │
-    │  [ ] Enable DP connector-split mode Axon V0.3                                            │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D0,1 dphy1 Axon V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI0 D2,3 dphy2 Axon V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D0,1 dphy4 Axon V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on CSI1 D2,3 dphy5 Axon V0.3                      │
-    │  [ ] Enable RasPi Camera V1.3 (OV5647) on dphy RX0 Axon V0.3                             │
-    │  [ ] Enable RasPi camera V1.3 (OV5647) on dphy RX1 Axon V0.3                             │
-    │  [ ] Enable I2C1 on 30-Pin GPIO Header Axon V0.3                                         │
-    │  [ ] Enable I2C2 on 30-Pin GPIO Header Axon V0.3                                         │
-    │  [ ] Enable I2C5 on 30-Pin GPIO Header Axon V0.3                                         │
-    │  [ ] Enable I2C7 on 30-Pin GPIO Header Axon V0.3                                         │
-    │  [ ] Enable PWM0 on 30 Pin GPIO Header Axon V0.3                                         │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon V0.3                                      │
-    │  [ ] Enable PWM1_M0 on 30 Pin GPIO Header Axon V0.3                                      │
-    │  [*] Enable UART1 on 30 Pin GPIO Header Axon V0.3                                        │
-    │  [ ] Enable UART4 on 30 Pin GPIO Header Axon V0.3                                        │
-    │  [ ] Enable UART6 on 30 Pin GPIO Header Axon V0.3                                        │
-    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX0 Axon V0.3                                   │
-    │  [ ] Enable Waveshare 4inch DSI LCD DPHY TX1 Axon V0.3                                   │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                                                                                          │
-    │                     <Ok>                         <Cancel>                                │
-    │                                                                                          │
-    └──────────────────────────────────────────────────────────────────────────────────────────┘
-
 6. To return back to terminal, press the ``Esc`` key until you exit from it.
 
 7. In order to enable your configuration, Restart your computer or Run command ``sudo reboot`` in terminal.

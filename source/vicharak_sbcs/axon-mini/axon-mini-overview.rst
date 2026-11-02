@@ -23,7 +23,7 @@ The Axon Mini Single Board Computer (SBC) offers a range of hardware features, i
        | Kryo Gold: 3x high-performance cores at 2.4 GHz
        | Kryo Silver: 4x low-power cores at 1.9 GHz
    * - Memory
-     - 8 GB / 16 GB LPDDR5-3200 MHz SDRAM
+     - 4 GB LPDDR5-3200 MHz SDRAM
    * - Storage
      - | Onboard 32 GB high-speed eMMC 5.1
        | Modular UFS 3.1 storage module (via 2x 30-pin B2B connector)
