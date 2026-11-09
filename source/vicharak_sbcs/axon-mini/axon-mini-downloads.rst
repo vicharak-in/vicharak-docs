@@ -65,6 +65,10 @@ SoC Documents
     - - Qualcomm SoC and BSP Documents
       - `GitHub <https://github.com/vicharak-in/soc-docs/tree/v2>`_
 
+Axon Mini Pin-outs Guide
+------------------------
+`Download Pinouts </_static/files/axon_mini_V0.2_Pinout_Guide.pdf>`_
+
 Mechanical Information
 ----------------------
 .. list-table::

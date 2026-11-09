@@ -2,6 +2,9 @@
 Bluetooth
 ##############
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-wifi-bt.webp
+   :width: 80%
+
 The Axon Mini SBC includes an integrated Bluetooth 5.3 interface based on the
 **AP6276S** module.
 Bluetooth is used for connecting wireless peripherals such as keyboards,

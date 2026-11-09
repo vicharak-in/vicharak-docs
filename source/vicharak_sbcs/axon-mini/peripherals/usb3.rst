@@ -5,6 +5,9 @@ USB 3.1 Gen1
 Axon Mini board includes one USB Type-C port, supporting USB 3.1 Gen 1 (5 Gbps) and DisplayPort output.
 This guide explains how to use and inspect the Type-C USB 3.1 Gen1 interface on a Linux system.
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-usb3-typec-dp.webp
+   :width: 80%
+
 .. important::
 
    Axon Mini supports extra USB 3.0 outputs using our :doc:`Quadruple USB 3.0 Hub HAT <../axon-mini-accessories/axon-mini-quad-usb3>` and :doc:`Ethernet and Dual USB 3.0 Hub HAT <../axon-mini-accessories/axon-mini-ethernet-usb3>` modules!

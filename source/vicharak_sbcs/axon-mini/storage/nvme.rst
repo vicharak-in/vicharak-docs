@@ -4,6 +4,9 @@ PCIe 3.0
 
 The Vicharak-Axon Mini board includes a modular PCIe connector that supports NVMe solid-state drives using the PCI Express (PCIe) Gen 3 interface with one lane (x1).
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-pcie-nvme.webp
+   :width: 80%
+
 Specifications
 --------------
 - Interface: PCIe 3.0 x1

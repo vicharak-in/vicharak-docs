@@ -2,10 +2,8 @@
 Type-C DP 1.4
 ##################
 
-.. TODO: Add Axon Mini Type-C DP image
-..
-   .. image:: /_static/images/qcs6490-axon-mini/axon-mini-dp.webp
-      :width: 80%
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-usb3-typec-dp.webp
+   :width: 80%
 
 Axon Mini provides a Type-C DisplayPort 1.4 interface for high-resolution display output with high video bandwidth. The DP connector on QCS6490 is used for direct connections to DP-compatible displays, projectors, and USB-C docking stations.
 

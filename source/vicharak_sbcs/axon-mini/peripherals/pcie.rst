@@ -77,10 +77,8 @@ Axon Mini features a dedicated modular connector mapped to **PCIe 0**. This is
 designed for high-speed storage devices such as NVMe SSDs (and SATA where the
 module/adapter supports it).
 
-.. TODO: Add Axon Mini PCIe NVMe/SATA connector image
-..
-   .. image:: /_static/images/qcs6490-axon-mini/axon-mini-pcie-nvme.webp
-       :width: 80%
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-pcie-nvme.webp
+   :width: 80%
 
 Swappable PCIe Modular Port (PCIe 1)
 ====================================
@@ -88,10 +86,8 @@ Swappable PCIe Modular Port (PCIe 1)
 For expansion, **PCIe 1** is routed to a modular port that supports swappable
 HAT modules.
 
-.. TODO: Add Axon Mini PCIe HAT port image
-..
-   .. image:: /_static/images/qcs6490-axon-mini/axon-mini-pcie-hat.webp
-       :width: 80%
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-pcie-hat.webp
+   :width: 80%
 
 Various HATs can be mounted on this connector to expand the board's capabilities, including:
 
