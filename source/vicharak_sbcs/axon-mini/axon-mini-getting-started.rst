@@ -58,25 +58,25 @@ Axon Mini OS Credentials
 Axon Mini Button Guide
 ======================
 
-.. image:: /_static/images/qcs6490-axon-mini/axon-mini-power-key.webp
-   :width: 70%
-
 1. Power Button
     You can turn on Axon Mini with the power button if it is currently off. When the board is powered off the red LED will on to
     let you know that the board has proper power supply. If you press the power button ( for 2-3 seconds ) then the board will start booting
     up.
 
-.. image:: /_static/images/qcs6490-axon-mini/axon-mini-reset-key.webp
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-power-key.webp
    :width: 70%
 
 2. Reset Button
     You can reboot Axon Mini by pressing reset button.
 
-.. image:: /_static/images/qcs6490-axon-mini/axon-mini-edl-key.webp
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-reset-key.webp
    :width: 70%
 
 3. EDL Button
     EDL button is used to put Axon Mini into Emergency Download (EDL) Mode for firmware flashing and recovery.
+
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-edl-key.webp
+   :width: 70%
 
 .. note::
     | *To get Axon Mini into EDL Mode*, connect the power supply, hold the EDL button, then press the power button for 2-3 seconds while still holding EDL, then release the EDL button.
@@ -236,18 +236,22 @@ Hardware Setup
 2. Connect the serial cable or adapter to Axon Mini.
 
 .. list-table::
-   :widths: 30 70
+   :widths: 20 40 130
    :header-rows: 1
    :class: feature-table
 
    * - **Serial FTDI Pin**
+     - **Header GPIO Pin**
      - **Schematic Name**
-   * - GND
-     - GND
-   * - RX
-     - DBG_UART_TX
    * - TX
+     - Pin 10
      - DBG_UART_RX
+   * - RX
+     - Pin 8
+     - DBG_UART_TX
+   * - GND
+     - Pin 6
+     - GND
 
 .. image:: /_static/images/qcs6490-axon-mini/axon-mini-debug-uart-jtag.webp
    :width: 50%

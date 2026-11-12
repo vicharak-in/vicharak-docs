@@ -47,11 +47,11 @@ Vicharak provides Linux distributions for Axon Mini SBC such as Debian. This gui
 1. Connect the USB to UART serial cable or adapter to your computer.
 2. Connect the serial cable or adapter to the Axon Mini SBC.
 
-| **Serial FTDI Pin** | **Schematic Name** |
-|---------------------|--------------------|
-| GND                 | GND                |
-| RX                  | DBG_UART_TX        |
-| TX                  | DBG_UART_RX        |
+| **Serial FTDI Pin** | **Header GPIO Pin** | **Schematic Name** |
+|---------------------|---------------------|--------------------|
+| TX                  | Pin 10              | DBG_UART_RX        |
+| RX                  | Pin 8               | DBG_UART_TX        |
+| GND                 | Pin 6               | GND                |
 
 <!-- TODO: Add Axon Mini serial UART pins image -->
 
