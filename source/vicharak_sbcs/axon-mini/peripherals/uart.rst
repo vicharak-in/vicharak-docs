@@ -25,10 +25,10 @@ Many embedded boards provide the flexibility to configure GPIO pins to function 
 This guide explains how to configure GPIO pins as UART on the Axon Mini **40-pin GPIO Header** and **30-pin GPIO FPC Connector**. By converting GPIO pins into UART transmit (TX) and receive (RX) pins, the board can be used for serial communication, expanding the range of connected devices. This configuration is useful when there is no dedicated UART hardware interface available or when additional UART ports are needed.
 
 Axon Mini provides a total of **8** UARTs, plus one dedicated ``DBG UART``
-for debugging, and an ``LPI UART`` for low-power use cases.
+for debugging.
 
 - **40-pin GPIO Header:** ``UART_9``, ``UART_10``, ``UART_11``, ``UART_12``, ``UART_14``, ``UART_15``
-- **30-pin GPIO FPC Connector:** ``UART_6``, ``UART_8``, and ``LPI_UART``
+- **30-pin GPIO FPC Connector:** ``UART_6``, ``UART_8``
 
 .. tip::
     For pinouts, see the :ref:`40-pin GPIO Header <40-pin-gpio-header>`
@@ -199,17 +199,3 @@ Running the Serial Console Program
             3. Click on the **Open** button to open the serial console.
     
             4. You will now be able to access the serial console.
-    
-    
-LPI (Low Power Island) UART Interface usage
----------------------------------------------
-
-The LPI (Low Power Island) is a dedicated low-power domain on the QCS6490 SoC,
-separate from the main application processor (AP) power domain. It is owned
-by the CDSP (Compute DSP) on QCS6490 and provides UART connectivity that
-remains available for low-power/always-on peripherals without requiring the
-main AP to be active.
-
-On Axon Mini **30-pin GPIO FPC Connector**, 1 LPI UART interface is available:
-
-- ``LPI_UART`` on GPIO Pin (163, 164, 165, 166): shared/muxed with LPI I2C1 and LPI SPI on the same pins
