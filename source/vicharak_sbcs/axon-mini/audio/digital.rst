@@ -2,7 +2,8 @@
 Digital Mic
 #################
 
-.. TODO: Add Axon Mini digital mic connector / DMIC image
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-dmic.webp
+   :width: 80%
 
 The Digital Mic (DMIC) input on the Axon Mini board provides a digital
 microphone interface for low-noise voice capture. Axon Mini supports
