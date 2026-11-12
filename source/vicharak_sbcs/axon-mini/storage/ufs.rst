@@ -5,6 +5,10 @@ UFS 3.1
 .. warning::
    This accessory/storage option is coming soon.
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-ufs.webp
+   :width: 70%
+   :align: center
+
 The Vicharak-Axon Mini board includes a modular UFS connector that supports
 UFS 3.1 storage modules. See
 :doc:`UFS 3.1 Storage Module <../axon-mini-accessories/axon-mini-ufs>`
@@ -16,8 +20,6 @@ filesystem media for the operating system. The interface utilizes the UFS
 protocol over a MIPI M-PHY link, offering robust data transfer, dedicated boot
 partitions, and native compatibility with standard SCSI/UFS stacks in modern
 Linux kernels where it is exposed as a standard block device.
-
-.. TODO: Add Hardware image for UFS with the Connectors name Power and Signal Connectors.
 
 .. note::
    Connect the UFS storage module while Axon Mini is powered off to avoid any damage.

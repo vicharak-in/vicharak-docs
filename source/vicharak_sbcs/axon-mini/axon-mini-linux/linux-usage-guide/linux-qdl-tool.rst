@@ -35,9 +35,10 @@ Entering EDL Mode
 Before flashing, put Axon Mini into EDL mode:
 
 1. Power off the board (or disconnect power).
-2. Hold the **EDL** button.
-3. Connect / apply power while holding EDL.
-4. Release the EDL button.
+2. Connect / apply the power supply.
+3. Hold the **EDL** button.
+4. Press the **power button** for 2-3 seconds while still holding EDL.
+5. Release the EDL button.
 
 The board should enumerate as a Qualcomm download device (**PID ``0x9008``**).
 

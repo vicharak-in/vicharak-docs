@@ -2,6 +2,9 @@
 Wi-Fi
 ##############
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-wifi-bt.webp
+   :width: 80%
+
 Vicharak-Axon Mini comes with an integrated AMPAK **AP6276S** Wi‑Fi 6E (2.4 GHz / 5 GHz / 6 GHz) and Bluetooth 5.3 module. The antenna connects to the board via a U.FL connector (with onboard virtual antenna / RF switch support).
 
 This document explains how to connect to a Wi-Fi network on a Linux system using command-line tools:

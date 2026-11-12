@@ -22,15 +22,12 @@ devices like sensors, displays, and memory devices. Typically, SPI involves dedi
 Slave In), MISO (Master In Slave Out), SCLK (Serial Clock), and SS (Slave Select).
 In Axon Mini, general-purpose I/O (GPIO) pins can be repurposed to function as SPI pins.
 
-Axon Mini provides a total of **4** SPI interfaces on the **40-pin GPIO Header**,
-plus **1** LPI SPI (Low Power Island SPI) interface on the **30-pin GPIO FPC Connector**.
+Axon Mini provides a total of **4** SPI interfaces on the **40-pin GPIO Header**.
 
 - **40-pin GPIO Header:** ``SPI8``, ``SPI9``, ``SPI12``, ``SPI14``
-- **30-pin GPIO FPC Connector:** ``LPI_SPI``
 
 .. tip::
-    For pinouts, see the :ref:`40-pin GPIO Header <40-pin-gpio-header>`
-    and :ref:`30-pin GPIO FPC Connector <30-pin-gpio-fpc-connector>`.
+    For pinouts, see the :ref:`40-pin GPIO Header <40-pin-gpio-header>`.
 
 
 Make Simple spidev1.0 device
@@ -103,16 +100,3 @@ Check generated Device
         ls -l /dev/spidev*
 
 You will find ``/dev/spidev1.0`` device is created in ``/dev`` directory.
-
-LPI (Low Power Island) SPI Interface usage
----------------------------------------------
-
-The LPI (Low Power Island) is a dedicated low-power domain on the QCS6490 SoC,
-separate from the main application processor (AP) power domain. It is owned
-by the CDSP (Compute DSP) on QCS6490 and provides a sensor-core SPI interface
-that remains available for low-power/always-on peripherals without requiring
-the main AP to be active.
-
-On Axon Mini **30-pin GPIO FPC Connector**, 1 LPI SPI interface is available:
-
-- ``LPI_SPI`` on GPIO Pin (163, 164, 165, 166): shared/muxed with LPI I2C1 and LPI UART on the same pins

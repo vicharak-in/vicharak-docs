@@ -2,6 +2,9 @@
 eMMC
 #############
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-emmc.webp
+   :width: 80%
+
 The Vicharak-Axon Mini board exposes an onboard eMMC 5.1 device connected to the QCS6490 MMC controller (32 GB). The interface provides persistent storage for the operating system, user data, and diagnostics. eMMC 5.1 offers reliable multi-block read/write, boot partitions, and compatibility with standard MMC/SDHCI stacks in modern Linux kernels.
 
 Hardware interface and pinout

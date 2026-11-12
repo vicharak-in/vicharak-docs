@@ -58,25 +58,28 @@ Axon Mini OS Credentials
 Axon Mini Button Guide
 ======================
 
-.. TODO: Add Axon Mini keys/button guide image
-..
-   .. image::  ../../_static/images/qcs6490-axon-mini/axon-mini-keys-guide.webp
-       :width: 70%
-
-
 1. Power Button
     You can turn on Axon Mini with the power button if it is currently off. When the board is powered off the red LED will on to
-    let you know that the board has proper power supply. If you press the power button ( for 1-2 seconds ) then the board will start booting
+    let you know that the board has proper power supply. If you press the power button ( for 2-3 seconds ) then the board will start booting
     up.
+
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-power-key.webp
+   :width: 70%
 
 2. Reset Button
     You can reboot Axon Mini by pressing reset button.
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-reset-key.webp
+   :width: 70%
+
 3. EDL Button
     EDL button is used to put Axon Mini into Emergency Download (EDL) Mode for firmware flashing and recovery.
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-edl-key.webp
+   :width: 70%
+
 .. note::
-    | *To get Axon Mini into EDL Mode*, hold the EDL button while powering on / connecting power to the board, then release the EDL button.
+    | *To get Axon Mini into EDL Mode*, connect the power supply, hold the EDL button, then press the power button for 2-3 seconds while still holding EDL, then release the EDL button.
     | The board will enter Emergency Download Mode (also known as Qualcomm 9008 / QDL mode).
 
 Getting Started with eMMC
@@ -96,14 +99,12 @@ For the purpose of this guide, we will focus on the ``eMMC`` storage and the
 pre-installed ``Debian (Trixie)``. For UFS boot, see the Available Boot Modes
 section below.
 
-Connect a compatible power adapter to the Axon Mini board. Once the power is connected, the board will automatically turn on.
+Connect a compatible power adapter to the Axon Mini board. Once the power is connected, press the power button for 2-3 seconds and the board will turn on.
 
 Power the board with a 12V adapter on the dedicated Type-C PD port. See :ref:`axon-mini-power-sources` for the power rating.
 
-.. TODO: Add Axon Mini power details image
-..
-   .. image:: ../../_static/images/qcs6490-axon-mini/axon-mini-power-details.webp
-      :width: 60%
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-typec-power.webp
+   :width: 60%
 
 Axon Mini is pre-installed with Debian (``Trixie``) on its eMMC storage.
 So, when you power on the board, it will boot from the eMMC storage by default.
@@ -116,10 +117,8 @@ immediate visual indicator of the board's power status. This LED signifies that
 the Axon Mini is receiving power, and its illumination provides users with a
 tangible confirmation of the successful power connection.
 
-.. TODO: Add Axon Mini power LED image
-..
-   .. image:: ../../_static/images/qcs6490-axon-mini/axon-mini-power-led.webp
-       :width: 50%
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-led.webp
+   :width: 50%
 
 Verify the status LED
 ---------------------
@@ -129,10 +128,8 @@ the completion of the booting process. This visual cue assures users that the
 Axon Mini has successfully booted from its storage medium and is ready for further
 configuration.
 
-.. TODO: Add Axon Mini status LED image
-..
-   .. image:: ../../_static/images/qcs6490-axon-mini/axon-mini-leds.webp
-       :width: 50%
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-led.webp
+   :width: 50%
 
 .. warning::
    |
@@ -153,11 +150,9 @@ Follow the **Getting Started with eMMC** section above.
 Booting from UFS
 ----------------
 
-.. TODO: Add Axon Mini UFS boot guide
+To boot from UFS, flash the UFS image first, then power on the board:
 
-To boot from UFS, please follow the guide below.
-
-    .. TODO: Link Axon Mini UFS boot document here
+    :ref:`Flashing Image to UFS <axon-mini-flash-image-ufs>`
 
 How to access your Axon Mini board ?
 ====================================
@@ -187,10 +182,8 @@ can connect Axon Mini to a monitor or TV with an HDMI input.
 This enables direct visual access to the graphical user interface (GUI) or
 command-line interface (CLI) on the connected display.
 
-.. TODO: Add Axon Mini HDMI image
-..
-   .. image:: ../../_static/images/qcs6490-axon-mini/axon-mini-hdmi.webp
-       :width: 50%
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-hdmi.webp
+   :width: 50%
 
 Connect the HDMI cable to the Axon Mini and the monitor.
 Once the cable is connected, the Axon Mini will automatically detect the
@@ -250,20 +243,18 @@ Hardware Setup
    * - **Serial FTDI Pin**
      - **Header GPIO Pin**
      - **Schematic Name**
+   * - TX
+     - Pin 10
+     - DBG_UART_RX
+   * - RX
+     - Pin 8
+     - DBG_UART_TX
    * - GND
      - Pin 6
      - GND
-   * - RX
-     - Pin 8
-     - UART12_TX
-   * - TX
-     - Pin 10
-     - UART12_RX
 
-.. TODO: Add Axon Mini serial UART pins image
-..
-   .. image:: ../../_static/images/qcs6490-axon-mini/axon-mini-serial-uart-pins.webp
-      :width: 50%
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-debug-uart-jtag.webp
+   :width: 50%
 
 .. note::
     When accessing Axon Mini through the serial interface, it is important to

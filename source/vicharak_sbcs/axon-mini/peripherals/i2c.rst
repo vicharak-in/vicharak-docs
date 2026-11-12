@@ -25,11 +25,9 @@ I2C is a multi-master, multi-slave, packet-switched, single-ended serial communi
     
     - SDA (Serial Data Line): Transfers the data.
 
-Axon Mini provides a total of **6** I2C interfaces on the **40-pin GPIO Header**,
-plus **2** LPI I2C (Low Power Island I2C) interfaces on the **30-pin GPIO FPC Connector**.
+Axon Mini provides a total of **6** I2C interfaces on the **40-pin GPIO Header**.
 
 - **40-pin GPIO Header:** ``I2C0``, ``I2C8``, ``I2C9``, ``I2C10``, ``I2C12``, ``I2C14``
-- **30-pin GPIO FPC Connector:** ``LPI_I2C0``, ``LPI_I2C1``
 
 .. note::
 
@@ -38,8 +36,7 @@ plus **2** LPI I2C (Low Power Island I2C) interfaces on the **30-pin GPIO FPC Co
     GPIO-header I2C does not conflict with CSI camera operation.
 
 .. tip::
-    For pinouts, see the :ref:`40-pin GPIO Header <40-pin-gpio-header>`
-    and :ref:`30-pin GPIO FPC Connector <30-pin-gpio-fpc-connector>`.
+    For pinouts, see the :ref:`40-pin GPIO Header <40-pin-gpio-header>`.
 
 
 Key features of I2C include:
@@ -160,18 +157,3 @@ To use the i2cset, i2cget, and i2cdetect commands, you need to install the i2c-t
         sudo i2cdetect -y 1
    
    - The output shows a grid with device addresses. Devices are listed by their 7-bit addresses.
-
-LPI (Low Power Island) I2C Interface usage
--------------------------------------------
-
-The LPI (Low Power Island) is a dedicated low-power domain on the QCS6490 SoC,
-separate from the main application processor (AP) power domain. It hosts a
-sensor-core QUP interface that stays active independent of AP sleep states,
-allowing continuous sensor data acquisition (IMU, pressure, magnetometer, etc.)
-with minimal power draw. On QCS6490, this domain is owned and controlled by
-the CDSP (Compute DSP), which also performs the sensor-hub role.
-
-On Axon Mini **30-pin GPIO FPC Connector**, 2 LPI I2C interfaces are available:
-
-- ``LPI_I2C0`` on GPIO Pin (161, 162)
-- ``LPI_I2C1`` on GPIO Pin (163, 164): shared/muxed with LPI SPI and LPI UART on the same pins

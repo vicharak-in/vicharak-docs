@@ -49,8 +49,8 @@ Vicharak provides Linux distributions for Axon Mini SBC such as Debian. This gui
 
 | **Serial FTDI Pin** | **Header GPIO Pin** | **Schematic Name** |
 |---------------------|---------------------|--------------------|
-| RX                  | Pin 8               | UART12_TX          |
-| TX                  | Pin 10              | UART12_RX          |
+| TX                  | Pin 10              | DBG_UART_RX        |
+| RX                  | Pin 8               | DBG_UART_TX        |
 | GND                 | Pin 6               | GND                |
 
 <!-- TODO: Add Axon Mini serial UART pins image -->

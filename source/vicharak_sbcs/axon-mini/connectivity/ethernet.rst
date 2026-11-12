@@ -13,6 +13,9 @@ Ethernet
 These modules connect to the swappable PCIe HAT port (**PCIe 1**) and give
 Axon Mini wired Gigabit Ethernet connectivity.
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-pcie-hat.webp
+   :width: 80%
+
 Supported Ethernet Expansion HATs
 ---------------------------------
 

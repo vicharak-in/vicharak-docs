@@ -9,6 +9,11 @@ It also has a **30-pin GPIO FPC Connector**.
 
 ### 40-pin GPIO Header
 
+```{image} /_static/images/qcs6490-axon-mini/axon-mini-gpio40.webp
+:alt: Axon Mini 40-pin GPIO header
+:width: 65%
+```
+
 <div style="font-size: 11px; overflow-x: auto;">
 
 | GPIO number | Function4 | Function3  | Function2  | Function1  | PWD/GND | GPIO     | Pin#                       | Pin#                       | GPIO    | PWD/GND | Function1  | Function2  | Function3  | Function4 | GPIO number |
@@ -43,6 +48,11 @@ You can find [ GPIO Number Translation: ](#axon-mini-gpio-transaction) for Axon 
 (30-pin-gpio-fpc-connector)=
 
 ### 30-pin GPIO FPC Connector
+
+```{image} /_static/images/qcs6490-axon-mini/axon-mini-gpio30.webp
+:alt: Axon Mini 30-pin GPIO FPC connector
+:width: 65%
+```
 
 | GPIO number | Function4    | Function3    | Function2    | Function1      | GPIO     | Pin#                       | Pin#                       | GPIO    | Function1   | Function2 | Function3 | GPIO number |
 | :---------: | :----------: | :----------: | :----------: | :------------: | :------: | :------------------------: | :------------------------: | :-----: | :---------: | :-------: | :-------: | :---------: |

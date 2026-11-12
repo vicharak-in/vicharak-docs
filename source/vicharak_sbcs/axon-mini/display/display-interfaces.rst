@@ -5,6 +5,9 @@ HDMI TX
 HDMI 2.1 TX Port on Axon Mini Board
 ====================================
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-hdmi.webp
+   :width: 74%
+
 The Axon Mini board provides an HDMI 2.1 TX port for connecting external displays such as monitors, TVs, or projectors.
 
 Hardware Connection

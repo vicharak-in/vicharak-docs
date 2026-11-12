@@ -2,7 +2,8 @@
 Speakers
 #################
 
-.. TODO: Add Axon Mini speaker connector image
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-speaker.webp
+   :width: 80%
 
 Axon Mini provides **2 × speaker** outputs. Users can connect a broad range of
 speakers to the board for stereo analog playback through the onboard audio path.
@@ -63,36 +64,12 @@ Install if needed:
 
    sudo apt install alsa-utils
 
-Step 1: Identify the Speaker Device
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-List available playback devices:
-
 .. code-block:: bash
 
    aplay -l
-
-Example:
-
-.. code-block:: text
-
-   vicharak@axon-mini:~$ aplay -l
-   **** List of PLAYBACK Hardware Devices ****
-   ...
-
-* Note the card and device number for the onboard speaker / codec path.
-* Use those values in the commands below (example uses ``hw:0,0`` / ``plughw:0,0``).
-
-Step 2: Play Audio File
-^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: bash
-
-   speaker-test -D hw:0,0 -c 2
-
-.. code-block:: bash
-
-   aplay -D plughw:0,0 test.wav
+   speaker-test -D plughw:0,0 -c 2 -t wav
+   aplay -D plughw:0,0 /usr/share/sounds/alsa/Front_Left.wav
+   aplay -D plughw:0,0 /usr/share/sounds/alsa/Front_Right.wav
 
 Parameter Explanation
 ,,,,,,,,,,,,,,,,,,,,,
@@ -105,32 +82,6 @@ Parameter Explanation
      - Meaning
    * - ``-D plughw:0,0``
      - Select playback device
-   * - ``test.wav``
-     - Audio file to play
-
-Step 3: Verify Playback
-^^^^^^^^^^^^^^^^^^^^^^^
-
-You should hear audio from the connected speakers.
-
-Step 4: Test Speaker with Built-in Sound
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: bash
-
-   speaker-test -D plughw:0,0 -c 2 -t wav
-
-Parameter Explanation
-,,,,,,,,,,,,,,,,,,,,,
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 60
-
-   * - Parameter
-     - Meaning
-   * - ``-D plughw:0,0``
-     - Playback device
    * - ``-c 2``
      - Stereo channels
    * - ``-t wav``
@@ -151,12 +102,6 @@ ALSA supports:
 * 16-bit PCM
 * Mono or Stereo
 * Various sample rates (16 kHz, 44.1 kHz, 48 kHz)
-
-Example:
-
-.. code-block:: bash
-
-   aplay -D plughw:0,0 -f S16_LE -r 16000 -c 1 test.wav
 
 Volume Control
 ^^^^^^^^^^^^^^

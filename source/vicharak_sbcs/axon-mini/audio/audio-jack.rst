@@ -1,7 +1,8 @@
 3.5 mm Audio Jack
 ==================
 
-.. TODO: Add Axon Mini audio jack image
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-audio-jack.webp
+   :width: 80%
 
 The 3.5 mm audio jack on Axon Mini (QCS6490) provides analog stereo output and,
 where supported by the hardware, a microphone input.
@@ -22,64 +23,32 @@ Prerequisites
 - Root access
 - ALSA utilities installed (``alsa-utils``)
 
-Verification and testing
-
-1. Identify audio devices
+Headphone jack (3.5 mm)
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
-   arecord -l
    aplay -l
+   arecord -l
+   aplay -D plughw:0,0 /usr/share/sounds/alsa/Front_Center.wav
+   speaker-test -D plughw:0,0 -c 2 -t wav
 
-Example:
-
-.. code-block:: bash
-
-   vicharak@axon-mini:~$ arecord -l
-   **** List of CAPTURE Hardware Devices ****
-   ...
+Headset mic (jack)
+^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
-   vicharak@axon-mini:~$ aplay -l
-   **** List of PLAYBACK Hardware Devices ****
-   ...
+   arecord -D hw:0,0 -f cd -d 5 /tmp/test.wav
+   aplay -D plughw:0,0 /tmp/test.wav
 
-2. Determine the target card/PCM for the 3.5 mm jack.
-
-- Review the output from the commands above to locate the card corresponding to
-  the onboard audio codec / headphone path.
-- If multiple cards are present, select the one associated with the jack output.
-
-3. Test playback
+Volume
+^^^^^^
 
 .. code-block:: bash
 
-   aplay -D hw:0,0 /usr/share/sounds/alsa/Front_Center.wav
-
-- ``aplay`` is an ALSA tool designed to play raw audio and basic WAV files. It
-  does not have a built-in MP3 decoder.
-- If you hear audio, the playback path is functioning for the selected card.
-- Replace ``hw:0,0`` with the card/device from your ``aplay -l`` output.
-
-4. Test recording (if a microphone input is available on the jack)
-
-.. code-block:: bash
-
-   arecord -D hw:0,0 -f cd -d 5 test.wav
-   aplay test.wav
-
-- If you hear playback of the recorded sample, the mic path is functioning.
-
-5. Adjust volume and mute settings
-
-.. code-block:: bash
-
-   sudo apt-get install -y alsa-utils
    alsamixer
 
-- In the interactive interface, select the correct sound card (``F6``) and ensure
-  Master/Headphone/Output are unmuted and at an audible level.
+- Press ``F6`` to select the sound card, then unmute **Headphone** / **Output** / **Master**.
 
 6. To play an **.mp3** file, use a program that can decode MP3s.
 

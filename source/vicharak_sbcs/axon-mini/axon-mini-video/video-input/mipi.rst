@@ -11,6 +11,12 @@ Camera
 - **4 X MIPI CSI [4 lanes]** at **2.5 Gbps per lane** via **30-pin B2B**
 - **1 X MIPI CSI [4 lanes]** at **2.5 Gbps per lane** via **22-pin FPC**
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-mipi-csi1-4.webp
+   :width: 80%
+
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-mipi-csi0.webp
+   :width: 80%
+
 Hardware Required
 ------------------
 

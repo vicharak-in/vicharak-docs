@@ -2,6 +2,9 @@
 MIPI DSI
 ##################
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-mipi-dsi.webp
+   :width: 80%
+
 Axon Mini provides a MIPI-DSI host controller on the Qualcomm **QCS6490**; a
 display panel is driven by a DSI bridge/panel driver with appropriate timing,
 format, and polarity settings. In standard configurations, **DSI0** on QCS6490

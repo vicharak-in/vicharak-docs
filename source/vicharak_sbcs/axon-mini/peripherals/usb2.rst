@@ -7,6 +7,9 @@ USB 2.0
 
 Axon Mini has two USB **2.0 port** ( **480 Mbps** ). This guide explains how to use and inspect USB 2.0 interfaces on a Linux system.
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-usb2.webp
+   :width: 74%
+
 Basic Utilities and Commands
 ============================
 

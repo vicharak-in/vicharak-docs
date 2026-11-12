@@ -19,6 +19,9 @@ The Axon Mini board is powered through the dedicated Type-C PD port using a 12V 
 ----------------------------------------------
 You can power the board using a 12V adapter through the dedicated Type-C PD port.
 
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-typec-power.webp
+   :width: 80%
+
 - **Minimum Power:** 10W
 - **Recommended Power:** 15W
 - **Maximum Power:** 30W

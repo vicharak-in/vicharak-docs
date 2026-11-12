@@ -6,7 +6,7 @@ OS Details
 Version
 =======
 
-Axon Mini Images, available on `Axon Mini Image <https://downloads.vicharak.in/vicharak-axon-mini/>`_
+Axon Mini Images, available on Axon Mini Image
 
 Debian
 --------
