@@ -83,6 +83,10 @@ Step File
 
 `Download File </_static/files/AXON_LITE_3D_file_V0.2.step.7z>`_
 
+**Axon Lite Board 3D Enclouser File**
+
+`Download File 3D Enclouser </_static/files/AXON_LITE_3D_CASE.zip>`_
+
 .. note::
 
     The step file is compressed using 7zip. You can use `7zip <https://www.7-zip.org/>`_ or
