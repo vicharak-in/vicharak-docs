@@ -63,6 +63,49 @@ git add source/
 git commit
 ```
 
+## Live preview with auto-reload (hot reloading)
+
+Instead of running `make html` and refreshing the browser manually after every change,
+you can use **sphinx-autobuild**. It watches the **source/** directory, rebuilds the
+documentation whenever a file is saved, and automatically reloads your browser tab.
+
+**1. Install sphinx-autobuild (inside the pipenv environment)**
+
+```bash
+pipenv install --dev sphinx-autobuild
+```
+
+**2. Start the live-reload server**
+
+**For Linux users**
+
+```bash
+pipenv run sphinx-autobuild source _build/html --port 8001
+```
+
+Wait until you get the build succeeded.
+
+**For Windows users**
+
+```bash
+python -m pipenv run sphinx-autobuild source _build/html --port 8001
+```
+
+**3. Open the live preview**
+
+Open <http://127.0.0.1:8001> in your browser.
+
+> :information_source: **Notes**
+>
+> - Change the port, if something is using the port 8001 already
+> - The **first build can take several minutes** on a large doc set, but subsequent
+>   rebuilds are fast because only changed files are rebuilt.
+> - Keep the server running while you edit. Every time you save a `.rst` or `.md`
+>   file, the rebuild triggers automatically and the browser tab refreshes on its own.
+> - Stop the server with `Ctrl+C`.
+> - The live preview writes to `_build/html`, same as `make html`, so always run a
+>   final `make html` before committing to make sure the full build passes.
+
 **While committing make sure to write a well described commit message and commit title.**
 
 Some examples on how to write good commit messages:
