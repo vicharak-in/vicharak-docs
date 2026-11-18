@@ -21,30 +21,38 @@ The Axon Lite Single Board Computer (SBC) offers a range of hardware features, i
      - **Feature**
    * - Display
      - | 1 X micro HDMI 2.1 TX
-       | 1 X TYPE-C Alt DisplayPort (4 lane)
-       | 1 X MIPI DSI (4 lane)
+       | 1 X USB Type-C (DisplayPort 1.4 Alt Mode, 4-lane)
+       | 1 X MIPI DSI (4-lane)
    * - Audio
      - | Audio Codec ES8316
        | 1 X Audio Jack
        | HDMI and DP audio output
-   * - Wireless 
-     - FG6252BSRB-03 WiFi 6 and Bluetooth 5.3 module
+   * - Wireless
+     - FG6252BSRB-03 Wi-Fi 6 and Bluetooth 5.2 module
    * - Ethernet
      - 1 X Gigabit Ethernet (PHY 1000M) with PoE support
-   * - Camera 
+   * - Camera
      - | 1 X MIPI CSI [4 lanes]
        | 4 X MIPI CSI [2 lanes]
-   * - PCIE     
-     - | PHY0: 1 X PCIE 2.0 (5GT/s) via B2B Connector
-       | PHY1: 1 X PCIE 2.1 (x1 lane) via B2B Connector for Daughter Board
+   * - PCIe
+     - | PHY0: 1 X PCIe 2.1 (1-lane, 5GT/s) via B2B Connector
+       | PHY1: 1 X PCIe 2.1 (1-lane, 5GT/s) via B2B Connector for Daughter Board
    * - SATA
-     - 1 X SATA 3.1 (6GT/s) via B2B Connector (multiplexed with PCIe 2.0)
-   * - USB 
-     - | 1 X USB Host 2.0 (via CH334F HUB)
-       | 1 X TYPE-C Alt DisplayPort
+     - 1 X SATA 3.1 (6Gbps) via B2B Connector (multiplexed with PCIe 2.1 PHY0)
+   * - USB
+     - | 1 X USB 2.0 Host (via CH334F HUB)
+       | 1 X USB 3.2 Gen 1 Type-C (with DP Alt Mode)
        | USB 3.0 via Daughter Board
-   * - Real time clock 
+   * - Real time clock
      - RTC support via built-in battery interface
+   * - Video Decoder
+     - | H.265 / HEVC, VP9, AVS2, AV1 up to 8K@30fps or 4K@120fps
+       | H.264 / AVC, H.264 MVC up to 4K@60fps
+   * - Video Encoder
+     - | H.264 / AVC, H.265 / HEVC up to 4K@60fps
+   * - JPEG / MJPEG
+     - | JPEG Encoder/Decoder up to 65520x65520
+       | MJPEG up to 4K@60fps
 
 Physical Information
 --------------------
