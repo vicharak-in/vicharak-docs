@@ -20,35 +20,44 @@ The Axon Single Board Computer (SBC) offers a range of hardware features, includ
    * - **Type**
      - **Feature**
    * - Display
-     - | 2 X HDMI2.1 (maximum support upto `8K@60fps`)
-       | 2 X DP1.4a (maximum support upto `8K@30fps`) multiplexed over Type C Alt Mode DisplyPort
-       | 2 X MIPI-DPHY TX (maximum support upto `4K@60fps`) 
-       | 1 X HDMI-IN (maximum support upto `4K@60fps`), supports HDCP 2.3
+     - | 2 X HDMI 2.1 TX (maximum support up to `8K@60fps`)
+       | 2 X DP 1.4a (maximum support up to `8K@30fps`) multiplexed over Type-C DisplayPort Alt Mode
+       | 2 X MIPI-DSI D-PHY TX (maximum support up to `4K@60fps`)
+       | 1 X HDMI 2.0 RX / HDMI-IN (maximum support up to `4K@60fps`), supports HDCP 2.2 / 1.4
    * - Audio
-     - | 2 X Analog speaker output 
+     - | 2 X Analog speaker output
        | 1 X Headphone stereo output
        | 2 X HDMI audio output
        | 2 X DP audio output
        | 1 X Headphone input
        | 1 X Analog MIC input
-   * - Wireless 
-     - 6252B-SR Integrated RTL8852BS  WiFi6 2.4GHz/5GHz dual-band and Bluetooth 5.2
+   * - Wireless
+     - Fn-Link 6252B-SR (RTL8852BS) Wi-Fi 6 (2.4GHz/5GHz dual-band) and Bluetooth 5.2
    * - Ethernet
-     - 1 X RJ45, 10/100/1000Mbps(Realtek RTL8211F)
-   * - Camera 
-     - | 4 X MIPI CSI [2 lanes] / 2 X MIPI CSI [4 lanes]  (2.5 Gbps)
-       | 2 X MIPI DPHY RX [4 lane] (4.5 Gbps)
-   * - PCIE     
-     - | 1 X PCIE Gen 3 [4 lane] with NVMe M.2 M-key (8Gbps)
-       | 2 X PCIE Gen 2 [1 lane] with FPC (5Gbps)
+     - 1 X RJ45, 10/100/1000Mbps (Realtek RTL8211F)
+   * - Camera
+     - | 4 X MIPI CSI D-PHY [2 lanes] / 2 X MIPI CSI D-PHY [4 lanes] (2.5 Gbps per lane)
+       | 2 X MIPI D/C-PHY RX [4-lane D-PHY / 3-trio C-PHY] (4.5 Gbps per lane)
+   * - PCIe
+     - | 1 X PCIe 3.0 [4-lane] with NVMe M.2 M-Key (8 GT/s)
+       | 2 X PCIe 2.1 [1-lane] via FPC connector (5 GT/s)
    * - SATA
-     - | 1 X SATA3.0 [1 lane] with 22 pin standard connector
-       | 1 X SATA3.0 multiplexed with PCIe Gen2 FPC connector
-   * - USB 
-     - | 2 X USB2.0,
-       | 2 X TYPE-C Alt DisplayPort   
-   * - Real time clock 
+     - | 1 X SATA 3.0 [1-lane] with 22-pin standard connector (6 Gbps)
+       | 1 X SATA 3.0 multiplexed with PCIe 2.1 FPC connector (6 Gbps)
+   * - USB
+     - | 2 X USB 2.0 Host
+       | 2 X USB 3.1 Gen 1 Type-C (with DisplayPort 1.4a Alt Mode)
+   * - Real time clock
      - RTC support via built-in battery interface
+   * - Video Decoder
+     - | H.265 / HEVC, VP9, AVS2 up to `8K@60fps`
+       | H.264 / AVC, H.264 MVC up to `8K@30fps`
+       | AV1 up to `4K@60fps`
+   * - Video Encoder
+     - | H.264 / AVC, H.265 / HEVC up to `8K@30fps`
+   * - JPEG / MJPEG
+     - | JPEG Decoder up to 65536x65536 (1080p@280fps)
+       | JPEG Encoder up to 8192x8192 (MJPEG supported)
 
 Physical Information
 --------------------
