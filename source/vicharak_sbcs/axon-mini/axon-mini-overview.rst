@@ -4,7 +4,10 @@ Overview
 ========
 
 The **Axon Mini Computer** (SBC) is powered by Qualcomm's **QCS6490**.
-
+Block Diagram
+-------------
+.. image:: /_static/images/qcs6490-axon-mini/axon-mini-block-diagram.webp
+   :width: 100%
 Features
 --------
 
