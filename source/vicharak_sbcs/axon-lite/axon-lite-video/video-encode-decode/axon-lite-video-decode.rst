@@ -39,7 +39,7 @@ Basic FFmpeg Commands
 1. List available decoders
 --------------------------
 
-This command lists all available Rockchip MPP-based hardware decoders. On Axon Lite, supported decoders include H.263, H.264, H.265 (HEVC), MJPEG, VP8 and VP9. 
+This command lists all available Rockchip MPP-based hardware decoders. On Axon Lite, supported decoders include  H.264, H.265 (HEVC), MJPEG and VP9. 
 
 .. note::
 
@@ -52,14 +52,9 @@ This command lists all available Rockchip MPP-based hardware decoders. On Axon L
 .. code-block:: console
 
     V..... av1_rkmpp            Rockchip MPP AV1 decoder (codec av1)
-    V..... h263_rkmpp           Rockchip MPP H263 decoder (codec h263)
     V..... h264_rkmpp           Rockchip MPP H264 decoder (codec h264)
     V..... hevc_rkmpp           Rockchip MPP HEVC decoder (codec hevc)
     V..... mjpeg_rkmpp          Rockchip MPP MJPEG decoder (codec mjpeg)
-    V..... mpeg1_rkmpp          Rockchip MPP MPEG1VIDEO decoder (codec mpeg1video)
-    V..... mpeg2_rkmpp          Rockchip MPP MPEG2VIDEO decoder (codec mpeg2video)
-    V..... mpeg4_rkmpp          Rockchip MPP MPEG4 decoder (codec mpeg4)
-    V..... vp8_rkmpp            Rockchip MPP VP8 decoder (codec vp8)
     V..... vp9_rkmpp            Rockchip MPP VP9 decoder (codec vp9)
 
 **2. Check available options for a decoder**
